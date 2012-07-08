@@ -2,7 +2,7 @@ lib = File.expand_path('../lib', __FILE__)
 $:.unshift(lib) unless $:.include?(lib)
 
 Gem::Specification.new do |gem|
-  gem.version       = '0.0.1.alpha'
+  gem.version       = '0.0.2.alpha'
   gem.authors       = ["Seth Vargo"]
   gem.email         = ["svargo@customink.com"]
   gem.description   = %q{Easily mock out ohai data}
