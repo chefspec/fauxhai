@@ -76,7 +76,7 @@ end
 The `node` block variable allows you to set any Ohai attribute on the mock that you want. This provides an easy way to manage your environments. If you find that you are overridding attributes like OS or platform, you should see the section on Contributing.
 
 ### Fetching
-Alternatively, if you do not want to mock the data, Fauxhai provides a `fetch` mechanism for collecting "real" ohai data from a remote server or local file. Maybe you want to test against the fully-replicated environment for a front-facing server in your pool:
+Alternatively, if you do not want to mock the data, Fauxhai provides a `fetch` mechanism for collecting "real" ohai data from a remote server or local file. Maybe you want to test against the fully-replicated environment for a front-facing server in your pool. Just pass in the `url` option instead of a `platform`:
 
 ```ruby
 require 'chefspec'
