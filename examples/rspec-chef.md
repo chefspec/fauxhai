@@ -45,7 +45,7 @@ Fetching a Remote Box
 ---------------------
 ```ruby
 describe 'foo::bar' do
-  let(:json_attributes) { Fauxhai.mock(url:'server01.example.com' }
+  let(:json_attributes) { Fauxhai.fetch(host:'server01.example.com' }
 end
 ```
 
@@ -54,7 +54,7 @@ Fetching a Remote Box with custom Ruby Version
 ```ruby
 describe 'foo::bar' do
   let(:json_attributes) do
-    Fauxhai.mock(url:'server01.example.com') do |node|
+    Fauxhai.fetch(host:'server01.example.com') do |node|
       node['languages']['ruby']['version'] = 'ree'
     end
   end

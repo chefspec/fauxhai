@@ -48,7 +48,7 @@ require 'chefspec'
 
 describe 'awesome_cookbook::default' do
   before do
-    Fauxhai.mock(url:'server01.example.com')
+    Fauxhai.fetch(host:'server01.example.com')
   end
 end
 ```
@@ -60,7 +60,7 @@ require 'chefspec'
 
 describe 'awesome_cookbook::default' do
   before do
-    Fauxhai.mock(url:'server01.example.com') do |node|
+    Fauxhai.fetch(host:'server01.example.com') do |node|
       node['languages']['ruby']['version'] = 'ree'
     end
   end

@@ -1,7 +1,7 @@
 require 'json'
 
 module Fauxhai
-  class Mock
+  class Mocker
     def initialize(options = {}, &override_attributes)
       @options = options
 

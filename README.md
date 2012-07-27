@@ -26,7 +26,7 @@ require 'chefspec'
 
 describe 'awesome_cookbook::default' do
   before do
-    Fauxhai.mock(url:'server01.example.com')
+    Fauxhai.fetch(host:'server01.example.com')
   end
 
   it 'should install awesome' do
@@ -78,12 +78,16 @@ The `node` block variable allows you to set any Ohai attribute on the mock that 
 ### Fetching
 Alternatively, if you do not want to mock the data, Fauxhai provides a `fetch` mechanism for collecting "real" ohai data from a remote server or local file. Maybe you want to test against the fully-replicated environment for a front-facing server in your pool. Just pass in the `url` option instead of a `platform`:
 
+The `fetch` method supports all the same options as the Net-SSH command, such as `:user`, `:password`, `:key_file`, etc.
+
+The `fetch` method will cache the JSON file in a temporary path on your local machine. Similar to gems like VCR, this allows fauxhai to use the cached copy, making your test suite run faster. You can optionally force a cache miss by passing the `:force_cache_miss => true` option to the `fetch` initializer. **Because this is real data, there may be a security concern. Secure your laptop accordingly.**
+
 ```ruby
 require 'chefspec'
 
 describe 'awesome_cookbook::default' do
   before do
-    Fauxhai.mock(url:'server01.example.com')
+    Fauxhai.fetch(host:'server01.example.com')
   end
 
   it 'should install awesome' do
@@ -103,7 +107,7 @@ require 'chefspec'
 
 describe 'awesome_cookbook::default' do
   before do
-    Fauxhai.mock(url:'server01.example.com') do |node|
+    Fauxhai.fetch(host:'server01.example.com') do |node|
       node['languages']['ruby']['version'] = 'ree'
     end
   end
