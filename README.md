@@ -145,14 +145,15 @@ Fauxhai is community-maintained and updated. Aside from the initial files, all o
         Windows XP                  add_windows_xp
 
     **Q:** Is there a reason for this super-specific naming convention?
+
     **A:** No, but it helps in tracking problems and analyzing pull requests. Ultimately it just ensures your pull request is merged as quickly as possible.
 
-8. Create a new json file in `fauxhai/[os]/[version].json` (e.g. `fauxhai/ubuntu/12_04.json`)
+8. Create a new json file in `fauxhai/platforms/[os]/[version].json` (e.g. `fauxhai/platforms/ubuntu/12.04.json`)
 9. Copy-paste the contents of the file from `Step 4` into this file and save
 10. Verify the installation was successful by doing the following:
 
         irb -rubygems -rfauxhai
-        Fauxhai.mock('[os]', '[version') # e.g. Fauxhai.mock('ubuntu', '12.04')
+        Fauxhai.mock('platform: [os], version:  [version]') # e.g. Fauxhai.mock(platform:'ubuntu', version:'12.04')
 
     As long as that does not throw an error, you're good to go!
 
