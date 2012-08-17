@@ -11,7 +11,7 @@ module Fauxhai
       if defined?(ChefSpec)
         data = @data
         ::ChefSpec::ChefRunner.send :define_method, :fake_ohai do |ohai|
-          data.each_pair do |attribute,value|
+          data.each_pair do |attribute, value|
             ohai[attribute] = value
           end
         end
