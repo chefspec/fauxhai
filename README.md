@@ -119,6 +119,29 @@ describe 'awesome_cookbook::default' do
 end
 ```
 
+Testing Multiple Versions
+-------------------------
+It's a common use case to test multiple version of the same operating system. Here's a simple example to get your started. This is more rspec-related that fauxhai related, but here ya go:
+
+```ruby
+require 'chefspec'
+
+describe 'awesome_cookbook::default' do
+  ['12.04', '11.06', '10.04'].each do |version|
+    context "on Ubuntu #{version}" do
+      before do
+        Fauxhai.mock(platform: 'ubuntu', version: version)
+      end
+
+      it 'should install awesome' do
+        @runner = ChefSpec::ChefRunner.new.converge('tmpreaper::default')
+        @runner.should install_package 'awesome'
+      end
+    end
+  end
+end
+```
+
 Contributing
 ------------
 Fauxhai is community-maintained and updated. Aside from the initial files, all of the ohai system mocks have been created by the community. If you have a system that you think would benefit the community, here's how you get it into [fauxhai](https://github.com/customink/fauxhai):
