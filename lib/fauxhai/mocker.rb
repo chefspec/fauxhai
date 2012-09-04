@@ -1,4 +1,5 @@
 require 'json'
+require 'httparty'
 
 module Fauxhai
   class Mocker
@@ -52,8 +53,16 @@ module Fauxhai
 
         if File.exists?(filepath)
           JSON.parse( File.read(filepath) )
-        else
-          raise Fauxhai::Exception::InvalidVersion.new("Could not find version #{@options[:version]} in any of the sources!")
+        elsif
+          # Try loading from github (in case someone submitted a PR with a new file, but we haven't
+          # yet updated the gem version). Cache the response locally so it's faster next time.
+          response = HTTParty.get("https://raw.github.com/customink/fauxhai/master/lib/fauxhai/platforms/#{platform}/#{version}.json")
+          if response.code == 200
+            File.open(filepath, 'w'){ |f| f.write(response.body) }
+            return JSON.parse(response.body)
+          else
+            raise Fauxhai::Exception::InvalidVersion.new("Could not find version #{@options[:version]} in any of the sources!")
+          end
         end
       end.call
     end
