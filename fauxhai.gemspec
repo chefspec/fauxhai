@@ -18,4 +18,6 @@ Gem::Specification.new do |gem|
   gem.add_runtime_dependency 'chef'
   gem.add_runtime_dependency 'httparty'
   gem.add_runtime_dependency 'net-ssh'
+
+  gem.add_development_dependency 'rake'
 end
