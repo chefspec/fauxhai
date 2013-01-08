@@ -3,13 +3,24 @@ require 'httparty'
 
 module Fauxhai
   class Mocker
+    # @return [Hash] The raw ohai data for the given Mock
+    attr_reader :data
+
+    # Create a new Ohai Mock with fauxhai.
+    #
+    # @param [Hash] options
+    #   the options for the mocker
+    # @option options [String] :platform
+    #   the platform to mock
+    # @option options [String] :version
+    #   the version of the platform to mock
     def initialize(options = {}, &override_attributes)
       @options = options
 
       @data = fauxhai_data
       yield(@data) if block_given?
 
-      if defined?(ChefSpec)
+      if defined?(::ChefSpec) && ::ChefSpec::VERSION < '0.9.0'
         data = @data
         ::ChefSpec::ChefRunner.send :define_method, :fake_ohai do |ohai|
           data.each_pair do |attribute, value|
@@ -19,13 +30,6 @@ module Fauxhai
       end
 
       @data
-    end
-
-    # Return the given `@data` attribute as a Ruby hash instead of a JSON object
-    #
-    # @return [Hash] the `@data` represented as a Ruby hash
-    def to_hash(*args)
-      @data.to_hash(*args)
     end
 
     private
