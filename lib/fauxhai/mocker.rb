@@ -20,7 +20,7 @@ module Fauxhai
       @data = fauxhai_data
       yield(@data) if block_given?
 
-      if defined?(::ChefSpec) && ::ChefSpec::VERSION < '0.9.0'
+      if defined?(::ChefSpec) && ::ChefSpec::VERSION <= '0.9.0'
         data = @data
         ::ChefSpec::ChefRunner.send :define_method, :fake_ohai do |ohai|
           data.each_pair do |attribute, value|
