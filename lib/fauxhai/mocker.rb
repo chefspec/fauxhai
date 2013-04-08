@@ -14,6 +14,8 @@ module Fauxhai
     #   the platform to mock
     # @option options [String] :version
     #   the version of the platform to mock
+    # @option options [String] :path
+    #   the path to a local JSON file
     def initialize(options = {}, &override_attributes)
       @options = options
 
@@ -53,7 +55,13 @@ module Fauxhai
 
     def fauxhai_data
       @fauxhai_data ||= lambda do
-        filepath = File.join(platform_path, "#{version}.json")
+        # If a path option was specified, use it
+        if @options[:path]
+          filepath = File.expand_path(@options[:path])
+          raise Fauxhai::Exception::InvalidPlatform, "You specified a path to a JSON file on the local system that does not exist: '#{filepath}'" unless File.exists?(filepath)
+        else
+          filepath = File.join(platform_path, "#{version}.json")
+        end
 
         if File.exists?(filepath)
           JSON.parse( File.read(filepath) )

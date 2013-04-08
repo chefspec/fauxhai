@@ -9,7 +9,7 @@ require 'chefspec'
 
 describe 'awesome_cookbook::default' do
   before do
-    Fauxhai.mock(platform:'ubuntu', version:'12.04')
+    Fauxhai.mock(platform: 'ubuntu', version: '12.04')
   end
 
   it 'should install awesome' do
@@ -26,7 +26,7 @@ require 'chefspec'
 
 describe 'awesome_cookbook::default' do
   before do
-    Fauxhai.fetch(host:'server01.example.com')
+    Fauxhai.fetch(host: 'server01.example.com')
   end
 
   it 'should install awesome' do
@@ -61,7 +61,7 @@ require 'chefspec'
 
 describe 'awesome_cookbook::default' do
   before do
-    Fauxhai.mock(platform:'ubuntu', version:'12.04') do |node|
+    Fauxhai.mock(platform: 'ubuntu', version: '12.04') do |node|
       node['languages']['ruby']['version'] = 'ree'
     end
   end
@@ -87,7 +87,7 @@ require 'chefspec'
 
 describe 'awesome_cookbook::default' do
   before do
-    Fauxhai.fetch(host:'server01.example.com')
+    Fauxhai.fetch(host: 'server01.example.com')
   end
 
   it 'should install awesome' do
@@ -107,7 +107,7 @@ require 'chefspec'
 
 describe 'awesome_cookbook::default' do
   before do
-    Fauxhai.fetch(host:'server01.example.com') do |node|
+    Fauxhai.fetch(host: 'server01.example.com') do |node|
       node['languages']['ruby']['version'] = 'ree'
     end
   end
@@ -115,6 +115,34 @@ describe 'awesome_cookbook::default' do
   it 'should install awesome' do
     @runner = ChefSpec::ChefRunner.new.converge('tmpreaper::default')
     @runner.should install_package 'awesome'
+  end
+end
+```
+
+### Fixturing
+If you want to use fauxhai as "fixture" data, you can store real JSON in your project and use the `:path` option:
+
+```ruby
+require 'chefspec'
+
+describe 'awesome_cookbook::default' do
+  before do
+    Fauxhai.mock(path: 'fixtures/my_node.json')
+  end
+end
+```
+
+### Overriding + Fixturing
+You can also change specific attributes in your fixture:
+
+```ruby
+require 'chefspec'
+
+describe 'awesome_cookbook::default' do
+  before do
+    Fauxhai.mock(path: 'fixtures/my_node.json') do |node|
+      node['languages']['ruby']['version'] = 'ree'
+    end
   end
 end
 ```
@@ -176,7 +204,7 @@ Fauxhai is community-maintained and updated. Aside from the initial files, all o
 10. Verify the installation was successful by doing the following:
 
         irb -rubygems -rfauxhai
-        Fauxhai.mock('platform: [os], version:  [version]') # e.g. Fauxhai.mock(platform:'ubuntu', version:'12.04')
+        Fauxhai.mock('platform: [os], version:  [version]') # e.g. Fauxhai.mock(platform: 'ubuntu', version: '12.04')
 
     As long as that does not throw an error, you're good to go!
 
