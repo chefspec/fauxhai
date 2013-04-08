@@ -2,9 +2,9 @@ lib = File.expand_path('../lib', __FILE__)
 $:.unshift(lib) unless $:.include?(lib)
 
 Gem::Specification.new do |gem|
-  gem.version       = '0.1.1'
+  gem.version       = '1.0.0.rc1'
   gem.authors       = ['Seth Vargo']
-  gem.email         = ['svargo@customink.com']
+  gem.email         = ['sethvargo@gmail.com']
   gem.description   = %q{Easily mock out ohai data}
   gem.summary       = %q{Fauxhai provides an easy way to mock out your ohai data for testing with chefspec!}
   gem.homepage      = 'https://github.com/customink/fauxhai'
