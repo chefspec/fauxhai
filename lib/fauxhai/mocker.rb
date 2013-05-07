@@ -35,18 +35,6 @@ module Fauxhai
     end
 
     private
-    def default_version
-      @default_version ||= lambda do
-        filename = Dir["#{platform_path}/*.json"].sort.pop
-
-        if filename
-          filename.split('/').last.gsub(/\.json/, '')
-        else
-          raise Fauxhai::Exception::NoDefaultVersion.new('Could not detect default version!')
-        end
-      end.call
-    end
-
     def fauxhai_data
       @fauxhai_data ||= lambda do
         # If a path option was specified, use it
@@ -67,7 +55,7 @@ module Fauxhai
             File.open(filepath, 'w'){ |f| f.write(response.body) }
             return JSON.parse(response.body)
           else
-            raise Fauxhai::Exception::InvalidVersion.new("Could not find version #{@options[:version]} in any of the sources!")
+            raise Fauxhai::Exception::InvalidPlatform.new("Could not find platform '#{platform}/#{version}' in any of the sources!")
           end
         end
       end.call
@@ -78,17 +66,17 @@ module Fauxhai
     end
 
     def platform_path
-      @platform_path ||= lambda do
-        if path = File.join(Fauxhai.root, 'lib', 'fauxhai', 'platforms', platform)
-          path
-        else
-          raise Fauxhai::Exception::InvalidPlatform.new('Platform not found!')
-        end
-      end.call
+      File.join(Fauxhai.root, 'lib', 'fauxhai', 'platforms', platform)
     end
 
     def version
-      @version ||= @options[:version] || default_version
+      @options[:version] ||= lambda do
+        if platform == 'chefspec'
+          '0.6.1'
+        else
+          raise Fauxhai::Exception::InvalidVersion.new("Platform version not specified")
+        end
+      end.call
     end
   end
 end
