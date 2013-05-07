@@ -55,7 +55,7 @@ module Fauxhai
             File.open(filepath, 'w'){ |f| f.write(response.body) }
             return JSON.parse(response.body)
           else
-            raise Fauxhai::Exception::InvalidVersion.new("Could not find version #{@options[:version]} in any of the sources!")
+            raise Fauxhai::Exception::InvalidPlatform.new("Could not find platform '#{platform}/#{version}' in any of the sources!")
           end
         end
       end.call
@@ -66,13 +66,7 @@ module Fauxhai
     end
 
     def platform_path
-      @platform_path ||= lambda do
-        if path = File.join(Fauxhai.root, 'lib', 'fauxhai', 'platforms', platform)
-          path
-        else
-          raise Fauxhai::Exception::InvalidPlatform.new('Platform not found!')
-        end
-      end.call
+      File.join(Fauxhai.root, 'lib', 'fauxhai', 'platforms', platform)
     end
 
     def version
