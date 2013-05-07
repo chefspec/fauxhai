@@ -40,7 +40,10 @@ module Fauxhai
         # If a path option was specified, use it
         if @options[:path]
           filepath = File.expand_path(@options[:path])
-          raise Fauxhai::Exception::InvalidPlatform, "You specified a path to a JSON file on the local system that does not exist: '#{filepath}'" unless File.exists?(filepath)
+
+          unless File.exists?(filepath)
+            raise Fauxhai::Exception::InvalidPlatform.new("You specified a path to a JSON file on the local system that does not exist: '#{filepath}'")
+          end
         else
           filepath = File.join(platform_path, "#{version}.json")
         end
@@ -70,13 +73,11 @@ module Fauxhai
     end
 
     def version
-      @options[:version] ||= lambda do
-        if platform == 'chefspec'
-          '0.6.1'
-        else
-          raise Fauxhai::Exception::InvalidVersion.new("Platform version not specified")
-        end
-      end.call
+      @options[:version] ||= chefspec_version || raise Fauxhai::Exception::InvalidVersion.new('Platform version not specified')
+    end
+
+    def chefspec_version
+      platform == 'chefspec' ? '0.6.1' : nil
     end
   end
 end
