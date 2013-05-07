@@ -37,18 +37,12 @@ module Fauxhai
     private
     def default_version
       @default_version ||= lambda do
-        default_filepath = File.join(platform_path, 'default.json')
+        filename = Dir["#{platform_path}/*.json"].sort.pop
 
-        if File.exists?(default_filepath)
-          JSON.parse( File.read(default_filepath) )['version']
+        if filename
+          filename.split('/').last.gsub(/\.json/, '')
         else
-          filename = Dir["#{platform_path}/*.json"].sort.pop
-
-          if filename
-            filename.split('/').last.gsub(/\.json/, '')
-          else
-            raise Fauxhai::Exception::NoDefaultVersion.new('Could not detect default version!')
-          end
+          raise Fauxhai::Exception::NoDefaultVersion.new('Could not detect default version!')
         end
       end.call
     end
