@@ -73,7 +73,7 @@ module Fauxhai
     end
 
     def version
-      @options[:version] ||= chefspec_version || raise Fauxhai::Exception::InvalidVersion.new('Platform version not specified')
+      @options[:version] ||= chefspec_version || raise(Fauxhai::Exception::InvalidVersion.new('Platform version not specified'))
     end
 
     def chefspec_version
