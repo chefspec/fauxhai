@@ -199,7 +199,7 @@ Fauxhai is community-maintained and updated. Aside from the initial files, all o
 
     **A:** No, but it helps in tracking problems and analyzing pull requests. Ultimately it just ensures your pull request is merged as quickly as possible.
 
-8. Create a new json file in `fauxhai/platforms/[os]/[version].json` (e.g. `fauxhai/platforms/ubuntu/12.04.json`)
+8. Create a new json file in `lib/fauxhai/platforms/[os]/[version].json` (e.g. `lib/fauxhai/platforms/ubuntu/12.04.json`)
 9. Copy-paste the contents of the file from `Step 4` into this file and save
 10. Verify the installation was successful by doing the following:
 
