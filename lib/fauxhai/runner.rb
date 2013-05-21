@@ -1,4 +1,3 @@
-require 'chef'
 require 'ohai'
 
 module Fauxhai

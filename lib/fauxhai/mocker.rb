@@ -1,5 +1,6 @@
-require 'json'
 require 'httparty'
+require 'json'
+require 'pathname'
 
 module Fauxhai
   class Mocker
@@ -53,8 +54,13 @@ module Fauxhai
         elsif
           # Try loading from github (in case someone submitted a PR with a new file, but we haven't
           # yet updated the gem version). Cache the response locally so it's faster next time.
-          response = HTTParty.get("https://raw.github.com/customink/fauxhai/master/lib/fauxhai/platforms/#{platform}/#{version}.json")
-          if response.code == 200
+          url = "https://raw.github.com/customink/fauxhai/master/lib/fauxhai/platforms/#{platform}/#{version}.json"
+          response = HTTParty.get(url)
+
+          if response.code.to_i == 200
+            path = Pathname.new(filepath)
+            FileUtils.mkdir_p(path.dirname)
+
             File.open(filepath, 'w'){ |f| f.write(response.body) }
             return JSON.parse(response.body)
           else
