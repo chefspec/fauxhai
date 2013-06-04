@@ -1,7 +1,13 @@
 Fauxhai Changelog
 =================
 
-v1.0.1
+v1.1.1
+------
+Released 2013-06-03
+
+- Add new LSB release information([@pschultz][], [#32][])
+
+v1.1.0
 ------
 Released: 2013-05-21
 
@@ -31,7 +37,9 @@ Released: 2013-05-09
 [#26]: https://github.com/customink/fauxhai/issues/26
 [#29]: https://github.com/customink/fauxhai/issues/29
 [#30]: https://github.com/customink/fauxhai/issues/30
+[#32]: https://github.com/customink/fauxhai/issues/32
 [@anujbiyani]: https://github.com/anujbiyani
 [@mapleoin]: https://github.com/mapleoin
 [@sax]: https://github.com/sax
 [@tmatilai]: https://github.com/tmatilai
+[@pschultz]: https://github.com/pschultz
