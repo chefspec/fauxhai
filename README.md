@@ -209,3 +209,5 @@ Fauxhai is community-maintained and updated. Aside from the initial files, all o
     As long as that does not throw an error, you're good to go!
 
 11. Submit a pull request on github
+
+**Note:** I do *not* need to release a new version of Fauxhai for your changes to be pulled and used. Unless you are updating an existing platform, Fauxhai will automatically pull new versions from GitHub via HTTP automatically and cache them.
