@@ -153,6 +153,18 @@ module Fauxhai
           'gem_bin' => gem_bin,
           'gems_dir' => gems_dir,
           'ruby_bin' => ruby_bin,
+        }),
+        'perl' => @system.data['languages']['perl'].merge({
+          'archname' => archname,
+          'version' => version,
+        }),
+        'php' => @system.data['languages']['php'].merge({
+          'builddate' => builddate,
+          'version' => version,
+        }),
+        'python' => @system.data['languages']['python'].merge({
+          'builddate' => builddate,
+          'version' => version,
         })
       }
     end
