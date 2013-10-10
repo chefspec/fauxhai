@@ -178,7 +178,7 @@ Fauxhai is community-maintained and updated. Aside from the initial files, all o
 2. Install chef, ohai, and fauxhai
 3. Run the following at the command line:
 
-        sudo fauxhai > /tmp/fauxhai.json
+        sudo fauxhai | sed '/ WARN: /D' > /tmp/fauxhai.json
 
 4. This will create a file `/tmp/fauxhai.json`
 5. Copy the contents of this file to your local development machine (using scp or sftp, for example)
