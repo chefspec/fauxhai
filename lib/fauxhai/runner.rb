@@ -223,6 +223,7 @@ module Fauxhai
         'dmi',
         'filesystem',
         'kernel',
+        'lsb',
         'ohai_time',
         'os',
         'os_version',
