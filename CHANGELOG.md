@@ -1,6 +1,13 @@
 Fauxhai Changelog
 =================
 
+v2.0.0
+------
+Released 2013-11-06
+
+- Remove dependency on HTTParty
+- Require Ruby 1.9
+
 v1.1.1
 ------
 Released 2013-06-03
