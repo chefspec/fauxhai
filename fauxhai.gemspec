@@ -10,6 +10,8 @@ Gem::Specification.new do |spec|
   spec.summary       = %q{Fauxhai provides an easy way to mock out your ohai data for testing with chefspec!}
   spec.homepage      = 'https://github.com/customink/fauxhai'
 
+  spec.required_ruby_version = '>= 1.9'
+
   spec.files         = `git ls-files`.split($\)
   spec.executables   = spec.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
