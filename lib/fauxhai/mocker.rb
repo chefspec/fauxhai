@@ -1,9 +1,12 @@
-require 'httparty'
 require 'json'
+require 'net/http'
 require 'pathname'
 
 module Fauxhai
   class Mocker
+    # The base URL for the GitHub project (raw)
+    RAW_BASE = 'https://raw.github.com/customink/fauxhai/master'
+
     # @return [Hash] The raw ohai data for the given Mock
     attr_reader :data
 
@@ -54,8 +57,7 @@ module Fauxhai
         elsif
           # Try loading from github (in case someone submitted a PR with a new file, but we haven't
           # yet updated the gem version). Cache the response locally so it's faster next time.
-          url = "https://raw.github.com/customink/fauxhai/master/lib/fauxhai/platforms/#{platform}/#{version}.json"
-          response = HTTParty.get(url)
+          response = get("#{RAW_BASE}/lib/fauxhai/platforms/#{platform}/#{version}.json")
 
           if response.code.to_i == 200
             path = Pathname.new(filepath)
@@ -84,6 +86,15 @@ module Fauxhai
 
     def chefspec_version
       platform == 'chefspec' ? '0.6.1' : nil
+    end
+
+    def get(url)
+      url = URI.parse(url)
+      http = Net::HTTP.new(url.host, url.port)
+      http.use_ssl = true
+
+      request = Net::HTTP::Get.new(url.path)
+      http.start { |http| http.request(request) }
     end
   end
 end
