@@ -3,7 +3,7 @@ $:.unshift(lib) unless $:.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = 'fauxhai'
-  spec.version       = '2.0.0'
+  spec.version       = '2.0.1'
   spec.authors       = ['Seth Vargo']
   spec.email         = ['sethvargo@gmail.com']
   spec.description   = %q{Easily mock out ohai data}

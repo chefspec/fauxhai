@@ -1,6 +1,12 @@
 Fauxhai Changelog
 =================
 
+v2.0.1
+------
+Released 2013-12-12
+
+- Fix critical error on networking interfaces ([@benbytheway][], [#51][])
+
 v2.0.0
 ------
 Released 2013-11-06
@@ -12,7 +18,7 @@ v1.1.1
 ------
 Released 2013-06-03
 
-- Add new LSB release information([@pschultz][], [#32][])
+- Add new LSB release information ([@pschultz][], [#32][])
 
 v1.1.0
 ------
@@ -45,8 +51,10 @@ Released: 2013-05-09
 [#29]: https://github.com/customink/fauxhai/issues/29
 [#30]: https://github.com/customink/fauxhai/issues/30
 [#32]: https://github.com/customink/fauxhai/issues/32
+[#51]: https://github.com/customink/fauxhai/issues/51
 [@anujbiyani]: https://github.com/anujbiyani
+[@benbytheway]: https://github.com/benbytheway
 [@mapleoin]: https://github.com/mapleoin
+[@pschultz]: https://github.com/pschultz
 [@sax]: https://github.com/sax
 [@tmatilai]: https://github.com/tmatilai
-[@pschultz]: https://github.com/pschultz
