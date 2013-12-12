@@ -6,39 +6,42 @@
   "platform": "centos",
   "domain": "local",
   "network": {
-    "eth0": {
-      "arp": {
-        "10.0.0.1": "fe:ff:ff:ff:ff:ff"
-      },
-      "encapsulation": "Ethernet",
-      "flags": [
-        "BROADCAST",
-        "MULTICAST",
-        "UP",
-        "LOWER_UP"
-      ],
-      "routes": {
-        "10.0.0.0/255": {
-          "scope": "link",
-          "src": "10.0.0.2"
-        }
-      },
-      "type": "eth",
-      "addresses": {
-        "10.0.0.2": {
-          "scope": "Global",
-          "broadcast": "10.0.0.255",
-          "netmask": "255.255.255.0",
-          "prefixlen": "23",
-          "family": "inet"
-        }
-      },
-      "mtu": "1500",
-      "state": "up",
-      "number": "0"
+    "interfaces": {
+      "eth0": {
+        "arp": {
+          "10.0.0.1": "fe:ff:ff:ff:ff:ff"
+        },
+        "encapsulation": "Ethernet",
+        "flags": [
+          "BROADCAST",
+          "MULTICAST",
+          "UP",
+          "LOWER_UP"
+        ],
+        "routes": {
+          "10.0.0.0/255": {
+            "scope": "link",
+            "src": "10.0.0.2"
+          }
+        },
+        "type": "eth",
+        "addresses": {
+          "10.0.0.2": {
+            "scope": "Global",
+            "broadcast": "10.0.0.255",
+            "netmask": "255.255.255.0",
+            "prefixlen": "23",
+            "family": "inet"
+          }
+        },
+        "mtu": "1500",
+        "state": "up",
+        "number": "0"
+      }
     },
     "default_interface": "eth0",
-    "default_gateway": "10.0.0.1"
+    "default_gateway": "10.0.0.1",
+    "settings": {}
   },
   "platform_family": "rhel",
   "kernel": {

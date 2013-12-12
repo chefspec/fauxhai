@@ -165,31 +165,34 @@ module Fauxhai
       {
         'default_gateway' => default_gateway,
         'default_interface' => default_interface,
-        'eth0' => {
-          'addresses' => {
-            '10.0.0.2' => {
-              'broadcast' => '10.0.0.255',
-              'family' => 'inet',
-              'netmask' => '255.255.255.0',
-              'prefixlen' => '23',
-              'scope' => 'Global'
-            }
-          },
-          'arp' => {
-            '10.0.0.1' => 'fe:ff:ff:ff:ff:ff'
-          },
-          'encapsulation' => 'Ethernet',
-          'flags' => ['BROADCAST', 'MULTICAST', 'UP', 'LOWER_UP'],
-          'mtu' => '1500',
-          'number' => '0',
-          'routes' => {
-            '10.0.0.0/255' => {
-              'scope' => 'link',
-              'src' => '10.0.0.2'
-            }
-          },
-          'state' => 'up',
-          'type' => 'eth'
+        'settings' => {},
+        'interfaces' => {
+          'eth0' => {
+            'addresses' => {
+              '10.0.0.2' => {
+                'broadcast' => '10.0.0.255',
+                'family' => 'inet',
+                'netmask' => '255.255.255.0',
+                'prefixlen' => '23',
+                'scope' => 'Global'
+              }
+            },
+            'arp' => {
+              '10.0.0.1' => 'fe:ff:ff:ff:ff:ff'
+            },
+            'encapsulation' => 'Ethernet',
+            'flags' => ['BROADCAST', 'MULTICAST', 'UP', 'LOWER_UP'],
+            'mtu' => '1500',
+            'number' => '0',
+            'routes' => {
+              '10.0.0.0/255' => {
+                'scope' => 'link',
+                'src' => '10.0.0.2'
+              }
+            },
+            'state' => 'up',
+            'type' => 'eth'
+          }
         }
       }
     end

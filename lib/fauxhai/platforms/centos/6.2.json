@@ -494,39 +494,42 @@
   "domain": "local",
   "os": "linux",
   "network": {
-    "eth0": {
-      "flags": [
-        "BROADCAST",
-        "MULTICAST",
-        "UP",
-        "LOWER_UP"
-      ],
-      "number": "0",
-      "addresses": {
-        "10.0.0.2": {
-          "netmask": "255.255.255.0",
-          "scope": "Global",
-          "broadcast": "10.0.0.255",
-          "prefixlen": "23",
-          "family": "inet"
-        }
-      },
-      "mtu": "1500",
-      "routes": {
-        "10.0.0.0/255": {
-          "scope": "link",
-          "src": "10.0.0.2"
-        }
-      },
-      "type": "eth",
-      "arp": {
-        "10.0.0.1": "fe:ff:ff:ff:ff:ff"
-      },
-      "encapsulation": "Ethernet",
-      "state": "up"
+    "interfaces": {
+      "eth0": {
+        "flags": [
+          "BROADCAST",
+          "MULTICAST",
+          "UP",
+          "LOWER_UP"
+        ],
+        "number": "0",
+        "addresses": {
+          "10.0.0.2": {
+            "netmask": "255.255.255.0",
+            "scope": "Global",
+            "broadcast": "10.0.0.255",
+            "prefixlen": "23",
+            "family": "inet"
+          }
+        },
+        "mtu": "1500",
+        "routes": {
+          "10.0.0.0/255": {
+            "scope": "link",
+            "src": "10.0.0.2"
+          }
+        },
+        "type": "eth",
+        "arp": {
+          "10.0.0.1": "fe:ff:ff:ff:ff:ff"
+        },
+        "encapsulation": "Ethernet",
+        "state": "up"
+      }
     },
     "default_interface": "eth0",
-    "default_gateway": "10.0.0.1"
+    "default_gateway": "10.0.0.1",
+    "settings": {}
   },
   "chef_packages": {
     "ohai": {
