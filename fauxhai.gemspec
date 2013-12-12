@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.description   = %q{Easily mock out ohai data}
   spec.summary       = %q{Fauxhai provides an easy way to mock out your ohai data for testing with chefspec!}
   spec.homepage      = 'https://github.com/customink/fauxhai'
-  s.license          = 'MIT'
+  spec.license       = 'MIT'
 
   spec.required_ruby_version = '>= 1.9'
 
