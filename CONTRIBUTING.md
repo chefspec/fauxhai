@@ -37,8 +37,8 @@ Fauxhai is community-maintained and updated. Aside from the initial files, all o
 9. Copy-paste the contents of the file from `Step 4` into this file and save
 10. Verify the installation was successful by doing the following:
 
-        irb -rubygems -rfauxhai
-        Fauxhai.mock('platform: [os], version:  [version]') # e.g. Fauxhai.mock(platform: 'ubuntu', version: '12.04')
+        bundle console
+        Fauxhai.mock(platform: '[os]', version: '[version]') # e.g. Fauxhai.mock(platform: 'ubuntu', version: '12.04')
 
     As long as that does not throw an error, you're good to go!
 
