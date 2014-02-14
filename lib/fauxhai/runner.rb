@@ -20,7 +20,8 @@ module Fauxhai
         'macaddress' => macaddress,
         'network' => network,
         'uptime' => uptime,
-        'uptime_seconds' => uptime_seconds
+        'uptime_seconds' => uptime_seconds,
+        'cpu' => cpu
       )
 
       puts JSON.pretty_generate(result)
@@ -214,6 +215,13 @@ module Fauxhai
 
     def uptime_seconds
       2646450
+    end
+
+    def cpu
+      {
+        'real' => 1,
+        'total' => 1
+      }
     end
 
     # Whitelist attributes are attributes that we *actually* want from the node. Other attributes are
