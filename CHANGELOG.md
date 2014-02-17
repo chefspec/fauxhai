@@ -1,6 +1,10 @@
 Fauxhai Changelog
 =================
 
+v2.1.0
+------
+- Add CPU stanza information to all platforms
+
 v2.0.1
 ------
 Released 2013-12-12
