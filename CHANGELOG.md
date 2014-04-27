@@ -1,6 +1,12 @@
 Fauxhai Changelog
 =================
 
+v2.1.2
+------
+- Fix an issue when Chef is not installed on the system
+- Add basic --version and --help flags
+- Use fauxhai/version
+
 v2.1.1
 ------
 - Switch to OpenURI (#99)
