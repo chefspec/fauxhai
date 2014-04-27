@@ -1,6 +1,6 @@
 require 'json'
-require 'net/http'
 require 'pathname'
+require 'open-uri'
 
 module Fauxhai
   class Mocker
@@ -57,14 +57,15 @@ module Fauxhai
         elsif
           # Try loading from github (in case someone submitted a PR with a new file, but we haven't
           # yet updated the gem version). Cache the response locally so it's faster next time.
-          response = get("#{RAW_BASE}/lib/fauxhai/platforms/#{platform}/#{version}.json")
+          response = open("#{RAW_BASE}/lib/fauxhai/platforms/#{platform}/#{version}.json")
 
-          if response.code.to_i == 200
+          if response.status.first.to_i == 200
+            response_body = response.read
             path = Pathname.new(filepath)
             FileUtils.mkdir_p(path.dirname)
 
-            File.open(filepath, 'w'){ |f| f.write(response.body) }
-            return JSON.parse(response.body)
+            File.open(filepath, 'w'){ |f| f.write(response_body) }
+            return JSON.parse(response_body)
           else
             raise Fauxhai::Exception::InvalidPlatform.new("Could not find platform '#{platform}/#{version}' in any of the sources!")
           end
@@ -86,15 +87,6 @@ module Fauxhai
 
     def chefspec_version
       platform == 'chefspec' ? '0.6.1' : nil
-    end
-
-    def get(url)
-      url = URI.parse(url)
-      http = Net::HTTP.new(url.host, url.port)
-      http.use_ssl = true
-
-      request = Net::HTTP::Get.new(url.path)
-      http.start { |http| http.request(request) }
     end
   end
 end
