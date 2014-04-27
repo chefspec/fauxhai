@@ -1,6 +1,10 @@
 Fauxhai Changelog
 =================
 
+v2.1.1
+------
+- Switch to OpenURI (#99)
+
 v2.1.0
 ------
 - Add CPU stanza information to all platforms
