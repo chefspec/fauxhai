@@ -1,9 +1,10 @@
 lib = File.expand_path('../lib', __FILE__)
 $:.unshift(lib) unless $:.include?(lib)
+require 'fauxhai/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'fauxhai'
-  spec.version       = '2.1.1'
+  spec.version       = Fauxhai::VERSION
   spec.authors       = ['Seth Vargo']
   spec.email         = ['sethvargo@gmail.com']
   spec.description   = %q{Easily mock out ohai data}

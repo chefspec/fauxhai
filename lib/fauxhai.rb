@@ -2,6 +2,7 @@ module Fauxhai
   require 'fauxhai/exception'
   require 'fauxhai/fetcher'
   require 'fauxhai/mocker'
+  require 'fauxhai/version'
 
   def self.root
     @@root ||= File.expand_path('../../', __FILE__)
