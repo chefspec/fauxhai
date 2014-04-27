@@ -33,6 +33,8 @@ module Fauxhai
     end
 
     def chef_packages
+      return {} if @system.data['chef_packages'].nil?
+
       chef_version = @system.data['chef_packages']['chef']['version']
       ohai_version = @system.data['chef_packages']['ohai']['version']
 
