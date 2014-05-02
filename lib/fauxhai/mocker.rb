@@ -57,7 +57,11 @@ module Fauxhai
         elsif
           # Try loading from github (in case someone submitted a PR with a new file, but we haven't
           # yet updated the gem version). Cache the response locally so it's faster next time.
-          response = open("#{RAW_BASE}/lib/fauxhai/platforms/#{platform}/#{version}.json")
+          begin
+            response = open("#{RAW_BASE}/lib/fauxhai/platforms/#{platform}/#{version}.json")
+          rescue OpenURI::HTTPError
+            raise Fauxhai::Exception::InvalidPlatform.new("Could not find platform '#{platform}/#{version}' in any of the sources!")
+          end
 
           if response.status.first.to_i == 200
             response_body = response.read
