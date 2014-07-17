@@ -21,7 +21,8 @@ module Fauxhai
         'network' => network,
         'uptime' => uptime,
         'uptime_seconds' => uptime_seconds,
-        'cpu' => cpu
+        'cpu' => cpu,
+        'memory' => memory
       )
 
       puts JSON.pretty_generate(result)
@@ -223,6 +224,12 @@ module Fauxhai
       {
         'real' => 1,
         'total' => 1
+      }
+    end
+
+    def memory
+      {
+        'total' => '1024MB'
       }
     end
 
