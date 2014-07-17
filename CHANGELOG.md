@@ -1,6 +1,11 @@
 Fauxhai Changelog
 =================
 
+v2.2.0
+------
+- Fix an issue where OpenURI's error was not caught properly
+- Add `memory` output to Fauxhai
+
 v2.1.2
 ------
 - Fix an issue when Chef is not installed on the system
