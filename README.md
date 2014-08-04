@@ -2,8 +2,6 @@ Fauxhai
 =======
 Fauxhai is a gem for mocking out [ohai](https://github.com/opscode/ohai) data in your chef testing. Fauxhai is community supported, so we need **your help** to populate our dataset. Here's an example for testing my "awesome_cookbook" on Ubuntu:
 
-Fauxhai finally stable! Pull Requests are still welcome though :)
-
 ```ruby
 require 'chefspec'
 
