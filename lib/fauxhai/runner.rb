@@ -36,18 +36,24 @@ module Fauxhai
     def chef_packages
       return {} if @system.data['chef_packages'].nil?
 
-      chef_version = @system.data['chef_packages']['chef']['version']
-      ohai_version = @system.data['chef_packages']['ohai']['version']
+      unless @system.data['chef_packages']['chef'].nil?
+        chef_version = @system.data['chef_packages']['chef']['version']
+        chef_block = "'chef' => {
+          'version' => chef_version,
+          'chef_root' => [gems_dir, \"chef-#{chef_version}\", 'lib'].join('/')
+        },"
+      end
+      unless @system.data['chef_packages']['ohai'].nil?
+        ohai_version = @system.data['chef_packages']['ohai']['version']
+        ohai_block = "'ohai' => {
+          'version' => ohai_version,
+          'ohai_root' => [gems_dir, \"ohai-#{ohai_version}\", 'lib', 'ohai'].join('/')
+        }"
+     end
 
       {
-        'chef' => {
-          'version' => chef_version,
-          'chef_root' => [gems_dir, "chef-#{chef_version}", 'lib'].join('/')
-        },
-        'ohai' => {
-          'version' => ohai_version,
-          'ohai_root' => [gems_dir, "ohai-#{ohai_version}", 'lib', 'ohai'].join('/')
-        }
+        #{chef_block}
+        #{ohai_block}
       }
     end
 
