@@ -14,7 +14,7 @@ Fauxhai is community-maintained and updated. Aside from the initial files, all o
 
         fauxhai > C:\SomePath\fauxhai.json
 
-4. This will create a file `fauxhai.json` at the specified path. As with any tool, inspect the contents of the file before continuing.
+4. This will create a file `fauxhai.json` at the specified path. As with any tool, inspect the contents of the file before continuing
 5. Copy the contents of this file to your local development machine (using scp or sftp, for example)
 6. Clone and `bundle` this repo:
 
@@ -22,7 +22,7 @@ Fauxhai is community-maintained and updated. Aside from the initial files, all o
         cd fauxhai
         bundle
 
-7. Create a new branch named `add_[platform]_[version]` (e.g. `add_ubuntu_12_04`) without dashes and dots replaced with underscores. Be sure to use the official version number, not a package name (e.g. '12_04', not 'precise') if avaliable:
+7. Create a new branch named `add_[platform]_[version]` (e.g. `add_ubuntu_12_04`) without dashes and dots replaced with underscores. Be sure to use the official version number, not a package name (e.g. '12_04', not 'precise') if available:
 
         Ubuntu Precise, 12.04       add_ubuntu_12_04
         Ubuntu Lucid, 11.5          add_ubuntu_11_5
@@ -31,7 +31,7 @@ Fauxhai is community-maintained and updated. Aside from the initial files, all o
 
     **Q:** Is there a reason for this super-specific naming convention?
 
-    **A:** No, but it helps in tracking problems and analyzing pull requests. Ultimately it just ensures your pull request is merged as quickly as possible.
+    **A:** No, but it helps in tracking problems and analyzing pull requests. Ultimately it just ensures your pull request is merged as quickly as possible
 
 8. Create a new json file in `lib/fauxhai/platforms/[os]/[version].json` (e.g. `lib/fauxhai/platforms/ubuntu/12.04.json`)
 9. Copy-paste the contents of the file from `Step 4` into this file and save
@@ -44,4 +44,4 @@ Fauxhai is community-maintained and updated. Aside from the initial files, all o
 
 11. Submit a pull request on github
 
-**Note:** I do *not* need to release a new version of Fauxhai for your changes to be pulled and used. Unless you are updating an existing platform, Fauxhai will automatically pull new versions from GitHub via HTTP automatically and cache them.
+**Note:** I do *not* need to release a new version of Fauxhai for your changes to be pulled and used. Unless you are updating an existing platform, Fauxhai will automatically pull new versions from GitHub via HTTP and cache them.
