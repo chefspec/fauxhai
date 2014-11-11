@@ -157,7 +157,8 @@ module Fauxhai
           'gem_bin' => gem_bin,
           'gems_dir' => gems_dir,
           'ruby_bin' => ruby_bin,
-        })
+        }),
+        'powershell' => @system.data['languages']['powershell']
       }
     end
 
