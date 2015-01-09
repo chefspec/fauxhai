@@ -36,19 +36,22 @@ module Fauxhai
     def chef_packages
       return {} if @system.data['chef_packages'].nil?
 
-      chef_version = @system.data['chef_packages']['chef']['version']
-      ohai_version = @system.data['chef_packages']['ohai']['version']
+      package_map = Hash.new
 
-      {
-        'chef' => {
-          'version' => chef_version,
-          'chef_root' => [gems_dir, "chef-#{chef_version}", 'lib'].join('/')
-        },
-        'ohai' => {
+      unless @system.data['chef_packages']['chef'].nil?
+        chef_version = @system.data['chef_packages']['chef']['version']
+        package_map['chef'] = { 'version' => chef_version,
+          'chef_root' => [gems_dir, "chef-#{chef_version}", 'lib'].join('/') }
+      end
+      unless @system.data['chef_packages']['ohai'].nil?
+        ohai_version = @system.data['chef_packages']['ohai']['version']
+        package_map['ohai'] = {
           'version' => ohai_version,
           'ohai_root' => [gems_dir, "ohai-#{ohai_version}", 'lib', 'ohai'].join('/')
         }
-      }
+      end
+
+      package_map
     end
 
     def counters
