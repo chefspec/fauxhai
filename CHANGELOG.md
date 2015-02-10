@@ -1,6 +1,10 @@
 Fauxhai Changelog
 =================
 
+v2.3.0
+------
+- Annual release to add new versions bundled in the gem automatically ([#133][])
+
 v2.2.0
 ------
 - Fix an issue where OpenURI's error was not caught properly
@@ -71,6 +75,7 @@ Released: 2013-05-09
 [#30]: https://github.com/customink/fauxhai/issues/30
 [#32]: https://github.com/customink/fauxhai/issues/32
 [#51]: https://github.com/customink/fauxhai/issues/51
+[#133]: https://github.com/customink/fauxhai/issues/133
 [@anujbiyani]: https://github.com/anujbiyani
 [@benbytheway]: https://github.com/benbytheway
 [@mapleoin]: https://github.com/mapleoin
