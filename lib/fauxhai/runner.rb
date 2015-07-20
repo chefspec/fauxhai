@@ -1,4 +1,5 @@
 require 'ohai'
+require 'ohai/plugins/chef'
 
 module Fauxhai
   class Runner
