@@ -16,9 +16,9 @@ Fauxhai is community-maintained and updated. Aside from the initial files, all o
 
 4. This will create a file `fauxhai.json` at the specified path. As with any tool, inspect the contents of the file before continuing
 5. Copy the contents of this file to your local development machine (using scp or sftp, for example)
-6. Clone and `bundle` this repo:
+6. Fork, clone and `bundle`:
 
-        git clone git@github.com:customink/fauxhai.git
+        git clone https://github.com/<your username>/fauxhai.git
         cd fauxhai
         bundle
 
