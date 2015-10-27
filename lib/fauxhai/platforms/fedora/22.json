@@ -1,111 +1,34 @@
 {
-  "kernel": {
-    "name": "Linux",
-    "release": "4.0.4-301.fc22.x86_64",
-    "version": "#1 SMP Thu May 21 13:10:33 UTC 2015",
-    "machine": "x86_64",
-    "os": "GNU/Linux",
-    "modules": {
-      "ppdev": {
-        "size": "20480",
-        "refcount": "0"
-      },
-      "serio_raw": {
-        "size": "16384",
-        "refcount": "0"
-      },
-      "i2c_piix4": {
-        "size": "24576",
-        "refcount": "0"
-      },
-      "e1000": {
-        "size": "139264",
-        "refcount": "0"
-      },
-      "iosf_mbi": {
-        "size": "16384",
-        "refcount": "0"
-      },
-      "parport_pc": {
-        "size": "28672",
-        "refcount": "0"
-      },
-      "parport": {
-        "size": "40960",
-        "refcount": "2"
-      },
-      "video": {
-        "size": "24576",
-        "refcount": "0"
-      },
-      "acpi_cpufreq": {
-        "size": "20480",
-        "refcount": "0"
-      },
-      "nfsd": {
-        "size": "331776",
-        "refcount": "1"
-      },
-      "auth_rpcgss": {
-        "size": "65536",
-        "refcount": "1"
-      },
-      "nfs_acl": {
-        "size": "16384",
-        "refcount": "1"
-      },
-      "lockd": {
-        "size": "94208",
-        "refcount": "1"
-      },
-      "grace": {
-        "size": "16384",
-        "refcount": "2"
-      },
-      "sunrpc": {
-        "size": "311296",
-        "refcount": "7"
-      },
-      "ata_generic": {
-        "size": "16384",
-        "refcount": "0"
-      },
-      "pata_acpi": {
-        "size": "16384",
-        "refcount": "0"
-      }
-    }
-  },
   "filesystem": {
     "devtmpfs": {
-      "kb_size": "242940",
+      "kb_size": "498072",
       "kb_used": "0",
-      "kb_available": "242940",
+      "kb_available": "498072",
       "percent_used": "0%",
       "mount": "/dev",
-      "total_inodes": "60735",
-      "inodes_used": "309",
-      "inodes_available": "60426",
+      "total_inodes": "124518",
+      "inodes_used": "348",
+      "inodes_available": "124170",
       "inodes_percent_used": "1%",
       "fs_type": "devtmpfs",
       "mount_options": [
         "rw",
         "nosuid",
         "seclabel",
-        "size=242940k",
-        "nr_inodes=60735",
+        "size=498072k",
+        "nr_inodes=124518",
         "mode=755"
       ]
     },
     "tmpfs": {
-      "kb_size": "50132",
+      "kb_size": "101736",
       "kb_used": "0",
-      "kb_available": "50132",
+      "kb_available": "101736",
       "percent_used": "0%",
-      "mount": "/run/user/1000",
-      "total_inodes": "62664",
+      "mount": "/run/user/0",
+      "total_inodes": "127166",
       "inodes_used": "4",
-      "inodes_available": "62660",
+      "inodes_available": "127162",
       "inodes_percent_used": "1%",
       "fs_type": "tmpfs",
       "mount_options": [
@@ -114,36 +37,36 @@
         "nodev",
         "relatime",
         "seclabel",
-        "size=50132k",
-        "mode=700",
-        "uid=1000",
-        "gid=1000"
+        "size=101736k",
+        "mode=700"
       ]
     },
-    "/dev/mapper/vg_vagrant-lv_root": {
-      "kb_size": "39572896",
-      "kb_used": "1058576",
-      "kb_available": "36481068",
-      "percent_used": "3%",
+    "/dev/mapper/fedora-root": {
+      "kb_size": "7022592",
+      "kb_used": "1517044",
+      "kb_available": "5505548",
+      "percent_used": "22%",
       "mount": "/",
-      "total_inodes": "2523136",
-      "inodes_used": "38673",
-      "inodes_available": "2484463",
-      "inodes_percent_used": "2%",
-      "fs_type": "ext4",
+      "total_inodes": "7032832",
+      "inodes_used": "66461",
+      "inodes_available": "6966371",
+      "inodes_percent_used": "1%",
+      "fs_type": "xfs",
       "mount_options": [
         "rw",
         "relatime",
         "seclabel",
-        "data=ordered"
+        "attr2",
+        "inode64",
+        "noquota"
       ],
-      "uuid": "6693f9d4-89b4-458a-affe-0fb8d0b5cef9"
+      "uuid": "049a5686-8acb-4c2d-b572-e532000e0271"
     },
     "/dev/sda1": {
       "kb_size": "487652",
-      "kb_used": "75775",
-      "kb_available": "382181",
-      "percent_used": "17%",
+      "kb_used": "94285",
+      "kb_available": "363671",
+      "percent_used": "21%",
       "mount": "/boot",
       "total_inodes": "128016",
       "inodes_used": "336",
@@ -156,7 +79,7 @@
         "seclabel",
         "data=ordered"
       ],
-      "uuid": "b25fca88-1872-4d94-909d-83cddcc83186"
+      "uuid": "5d221dec-2612-4617-a230-3e6180407a8d"
     },
     "sysfs": {
       "mount": "/sys",
@@ -207,7 +130,7 @@
       ]
     },
     "cgroup": {
-      "mount": "/sys/fs/cgroup/memory",
+      "mount": "/sys/fs/cgroup/freezer",
       "fs_type": "cgroup",
       "mount_options": [
         "rw",
@@ -215,7 +138,7 @@
         "nodev",
         "noexec",
         "relatime",
-        "memory"
+        "freezer"
       ]
     },
     "pstore": {
@@ -252,7 +175,7 @@
       "mount_options": [
         "rw",
         "relatime",
-        "fd=29",
+        "fd=34",
         "pgrp=1",
         "timeout=300",
         "minproto=5",
@@ -305,17 +228,258 @@
     },
     "/dev/sda2": {
       "fs_type": "LVM2_member",
-      "uuid": "dfEcIR-0Kaf-2HC1-cDjE-7UQb-gPAK-AeNjdV"
+      "uuid": "E7N1N2-q4Au-kCDe-1s2j-U06h-B7BY-WDYvnq"
     },
-    "/dev/mapper/vg_vagrant-lv_swap": {
+    "/dev/mapper/fedora-swap": {
       "fs_type": "swap",
-      "uuid": "b87fa559-4f5d-4549-985a-0580eb4a0a35"
+      "uuid": "0c37a0fb-8a32-4ffd-be59-9062994e2e96"
     }
+  },
+  "kernel": {
+    "name": "Linux",
+    "release": "4.0.4-301.fc22.x86_64",
+    "version": "#1 SMP Thu May 21 13:10:33 UTC 2015",
+    "machine": "x86_64",
+    "os": "GNU/Linux",
+    "modules": {
+      "ip6t_rpfilter": {
+        "size": "16384",
+        "refcount": "1"
+      },
+      "ip6t_REJECT": {
+        "size": "16384",
+        "refcount": "2"
+      },
+      "nf_reject_ipv6": {
+        "size": "16384",
+        "refcount": "1"
+      },
+      "xt_conntrack": {
+        "size": "16384",
+        "refcount": "13"
+      },
+      "ebtable_nat": {
+        "size": "16384",
+        "refcount": "0"
+      },
+      "ebtable_broute": {
+        "size": "16384",
+        "refcount": "0"
+      },
+      "bridge": {
+        "size": "114688",
+        "refcount": "1"
+      },
+      "stp": {
+        "size": "16384",
+        "refcount": "1"
+      },
+      "llc": {
+        "size": "16384",
+        "refcount": "2"
+      },
+      "ebtable_filter": {
+        "size": "16384",
+        "refcount": "0"
+      },
+      "ebtables": {
+        "size": "32768",
+        "refcount": "3"
+      },
+      "ip6table_nat": {
+        "size": "16384",
+        "refcount": "1"
+      },
+      "nf_conntrack_ipv6": {
+        "size": "20480",
+        "refcount": "8"
+      },
+      "nf_defrag_ipv6": {
+        "size": "36864",
+        "refcount": "1"
+      },
+      "nf_nat_ipv6": {
+        "size": "16384",
+        "refcount": "1"
+      },
+      "ip6table_mangle": {
+        "size": "16384",
+        "refcount": "1"
+      },
+      "ip6table_security": {
+        "size": "16384",
+        "refcount": "1"
+      },
+      "ip6table_raw": {
+        "size": "16384",
+        "refcount": "1"
+      },
+      "ip6table_filter": {
+        "size": "16384",
+        "refcount": "1"
+      },
+      "ip6_tables": {
+        "size": "28672",
+        "refcount": "5"
+      },
+      "iptable_nat": {
+        "size": "16384",
+        "refcount": "1"
+      },
+      "nf_conntrack_ipv4": {
+        "size": "16384",
+        "refcount": "7"
+      },
+      "nf_defrag_ipv4": {
+        "size": "16384",
+        "refcount": "1"
+      },
+      "nf_nat_ipv4": {
+        "size": "16384",
+        "refcount": "1"
+      },
+      "nf_nat": {
+        "size": "28672",
+        "refcount": "2"
+      },
+      "nf_conntrack": {
+        "size": "106496",
+        "refcount": "6"
+      },
+      "iptable_mangle": {
+        "size": "16384",
+        "refcount": "1"
+      },
+      "iptable_security": {
+        "size": "16384",
+        "refcount": "1"
+      },
+      "iptable_raw": {
+        "size": "16384",
+        "refcount": "1"
+      },
+      "crct10dif_pclmul": {
+        "size": "16384",
+        "refcount": "0"
+      },
+      "crc32_pclmul": {
+        "size": "16384",
+        "refcount": "0"
+      },
+      "ghash_clmulni_intel": {
+        "size": "16384",
+        "refcount": "0"
+      },
+      "ppdev": {
+        "size": "20480",
+        "refcount": "0"
+      },
+      "snd_intel8x0": {
+        "size": "40960",
+        "refcount": "0"
+      },
+      "snd_ac97_codec": {
+        "size": "135168",
+        "refcount": "1"
+      },
+      "ac97_bus": {
+        "size": "16384",
+        "refcount": "1"
+      },
+      "snd_pcm": {
+        "size": "114688",
+        "refcount": "2"
+      },
+      "snd_timer": {
+        "size": "32768",
+        "refcount": "1"
+      },
+      "i2c_piix4": {
+        "size": "24576",
+        "refcount": "0"
+      },
+      "serio_raw": {
+        "size": "16384",
+        "refcount": "0"
+      },
+      "snd": {
+        "size": "77824",
+        "refcount": "4"
+      },
+      "parport_pc": {
+        "size": "28672",
+        "refcount": "0"
+      },
+      "parport": {
+        "size": "40960",
+        "refcount": "2"
+      },
+      "soundcore": {
+        "size": "16384",
+        "refcount": "1"
+      },
+      "video": {
+        "size": "24576",
+        "refcount": "0"
+      },
+      "acpi_cpufreq": {
+        "size": "20480",
+        "refcount": "0"
+      },
+      "nfsd": {
+        "size": "331776",
+        "refcount": "1"
+      },
+      "auth_rpcgss": {
+        "size": "65536",
+        "refcount": "1"
+      },
+      "nfs_acl": {
+        "size": "16384",
+        "refcount": "1"
+      },
+      "lockd": {
+        "size": "94208",
+        "refcount": "1"
+      },
+      "grace": {
+        "size": "16384",
+        "refcount": "2"
+      },
+      "sunrpc": {
+        "size": "311296",
+        "refcount": "7"
+      },
+      "xfs": {
+        "size": "925696",
+        "refcount": "1"
+      },
+      "libcrc32c": {
+        "size": "16384",
+        "refcount": "1"
+      },
+      "crc32c_intel": {
+        "size": "24576",
+        "refcount": "1"
+      },
+      "e1000": {
+        "size": "139264",
+        "refcount": "0"
+      },
+      "ata_generic": {
+        "size": "16384",
+        "refcount": "0"
+      },
+      "pata_acpi": {
+        "size": "16384",
+        "refcount": "0"
+      }
+    }
+  },
+  "lsb": {
   },
   "os": "linux",
   "os_version": "4.0.4-301.fc22.x86_64",
-  "lsb": {
-  },
   "platform": "fedora",
   "platform_version": "22",
   "platform_family": "fedora",
@@ -323,8 +487,142 @@
     "ps": "ps -ef"
   },
   "dmi": {
+    "dmidecode_version": "2.12",
+    "smbios_version": "2.5",
+    "structures": {
+      "count": "10",
+      "size": "449"
+    },
+    "table_location": "0x000E1000",
+    "bios": {
+      "all_records": [
+        {
+          "record_id": "0x0000",
+          "size": "0",
+          "application_identifier": "BIOS Information",
+          "Vendor": "innotek GmbH",
+          "Version": "VirtualBox",
+          "Release Date": "12/01/2006",
+          "Address": "0xE0000",
+          "Runtime Size": "128 kB",
+          "ROM Size": "128 kB",
+          "Characteristics": {
+            "ISA is supported": null,
+            "PCI is supported": null,
+            "Boot from CD is supported": null,
+            "Selectable boot is supported": null,
+            "8042 keyboard services are supported (int 9h)": null,
+            "CGA/mono video services are supported (int 10h)": null,
+            "ACPI is supported": null
+          }
+        }
+      ],
+      "vendor": "innotek GmbH",
+      "version": "VirtualBox",
+      "release_date": "12/01/2006",
+      "address": "0xE0000",
+      "runtime_size": "128 kB",
+      "rom_size": "128 kB"
+    },
+    "system": {
+      "all_records": [
+        {
+          "record_id": "0x0001",
+          "size": "1",
+          "application_identifier": "System Information",
+          "Manufacturer": "innotek GmbH",
+          "Product Name": "VirtualBox",
+          "Version": "1.2",
+          "Serial Number": "0",
+          "UUID": "D5F3278A-A815-4EE8-B2EF-20D45531B7EF",
+          "Wake-up Type": "Power Switch",
+          "SKU Number": "Not Specified",
+          "Family": "Virtual Machine"
+        }
+      ],
+      "manufacturer": "innotek GmbH",
+      "product_name": "VirtualBox",
+      "version": "1.2",
+      "serial_number": "0",
+      "uuid": "D5F3278A-A815-4EE8-B2EF-20D45531B7EF",
+      "wake_up_type": "Power Switch",
+      "sku_number": "Not Specified",
+      "family": "Virtual Machine"
+    },
+    "base_board": {
+      "all_records": [
+        {
+          "record_id": "0x0008",
+          "size": "2",
+          "application_identifier": "Base Board Information",
+          "Manufacturer": "Oracle Corporation",
+          "Product Name": "VirtualBox",
+          "Version": "1.2",
+          "Serial Number": "0",
+          "Asset Tag": "Not Specified",
+          "Features": {
+            "Board is a hosting board": null
+          },
+          "Location In Chassis": "Not Specified",
+          "Chassis Handle": "0x0003",
+          "Type": "Motherboard",
+          "Contained Object Handles": "0"
+        }
+      ],
+      "manufacturer": "Oracle Corporation",
+      "product_name": "VirtualBox",
+      "version": "1.2",
+      "serial_number": "0",
+      "asset_tag": "Not Specified",
+      "location_in_chassis": "Not Specified",
+      "chassis_handle": "0x0003",
+      "type": "Motherboard",
+      "contained_object_handles": "0"
+    },
+    "chassis": {
+      "all_records": [
+        {
+          "record_id": "0x0003",
+          "size": "3",
+          "application_identifier": "Chassis Information",
+          "Manufacturer": "Oracle Corporation",
+          "Type": "Other",
+          "Lock": "Not Present",
+          "Version": "Not Specified",
+          "Serial Number": "Not Specified",
+          "Asset Tag": "Not Specified",
+          "Boot-up State": "Safe",
+          "Power Supply State": "Safe",
+          "Thermal State": "Safe",
+          "Security Status": "None"
+        }
+      ],
+      "manufacturer": "Oracle Corporation",
+      "type": "Other",
+      "lock": "Not Present",
+      "version": "Not Specified",
+      "serial_number": "Not Specified",
+      "asset_tag": "Not Specified",
+      "boot_up_state": "Safe",
+      "power_supply_state": "Safe",
+      "thermal_state": "Safe",
+      "security_status": "None"
+    },
+    "oem_strings": {
+      "all_records": [
+        {
+          "record_id": "0x0002",
+          "size": "11",
+          "application_identifier": "OEM Strings",
+          "String 1": "vboxVer_5.0.6",
+          "String 2": "vboxRev_103037"
+        }
+      ],
+      "string_1": "vboxVer_5.0.6",
+      "string_2": "vboxRev_103037"
+    }
   },
-  "ohai_time": 1434146213.682304,
+  "ohai_time": 1445967719.7771075,
   "languages": {
     "ruby": {
       "bin_dir": "/usr/local/bin",
@@ -336,12 +634,12 @@
   },
   "chef_packages": {
     "chef": {
-      "version": "12.3.0",
-      "chef_root": "/usr/local/gems/chef-12.3.0/lib"
+      "version": "12.5.1",
+      "chef_root": "/usr/local/gems/chef-12.5.1/lib"
     },
     "ohai": {
-      "version": "8.3.0",
-      "ohai_root": "/usr/local/gems/ohai-8.3.0/lib/ohai"
+      "version": "8.7.0",
+      "ohai_root": "/usr/local/gems/ohai-8.7.0/lib/ohai"
     }
   },
   "counters": {
