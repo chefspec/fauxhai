@@ -25,7 +25,7 @@ Fauxhai is community-maintained and updated. Aside from the initial files, all o
 7. Create a new branch named `add_[platform]_[version]` (e.g. `add_ubuntu_12_04`) without dashes and dots replaced with underscores. Be sure to use the official version number, not a package name (e.g. '12_04', not 'precise') if available:
 
         Ubuntu Precise, 12.04       add_ubuntu_12_04
-        Ubuntu Lucid, 11.5          add_ubuntu_11_5
+        Ubuntu Lucid, 10.04          add_ubuntu_10_04
         OSX Lion, 10.7.4            add_osx_10_7_4
         Windows XP                  add_windows_xp
 
