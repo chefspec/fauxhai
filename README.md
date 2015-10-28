@@ -1,6 +1,6 @@
 Fauxhai
 =======
-Fauxhai is a gem for mocking out [ohai](https://github.com/opscode/ohai) data in your chef testing. Fauxhai is community supported, so we need **your help** to populate our dataset. Here's an example for testing my "awesome_cookbook" on Ubuntu:
+Fauxhai is a gem for mocking out [ohai](https://github.com/chef/ohai) data in your chef testing. Fauxhai is community supported, so we need **your help** to populate our dataset. Here's an example for testing my "awesome_cookbook" on Ubuntu:
 
 ```ruby
 require 'chefspec'
@@ -34,7 +34,7 @@ describe 'awesome_cookbook::default' do
 end
 ```
 
-Fauxhai supports [ChefSpec](https://github.com/acrmp/chefspec) and [rspec-chef](https://github.com/calavera/rspec-chef). In order to prevent polluting the README, only ChefSpec examples will be provided. However, there is an extensive README for each testing framework in the [examples](https://github.com/customink/fauxhai/tree/master/examples) directory.
+Fauxhai supports [ChefSpec](https://github.com/sethvargo/chefspec) and [rspec-chef](https://github.com/calavera/rspec-chef). In order to prevent polluting the README, only ChefSpec examples will be provided. However, there is an extensive README for each testing framework in the [examples](https://github.com/customink/fauxhai/tree/master/examples) directory.
 
 Important Note
 --------------
@@ -153,7 +153,7 @@ It's a common use case to test multiple version of the same operating system. He
 require 'chefspec'
 
 describe 'awesome_cookbook::default' do
-  ['12.04', '11.06', '10.04'].each do |version|
+  ['12.04', '11.04', '10.04'].each do |version|
     context "on Ubuntu #{version}" do
       before do
         Fauxhai.mock(platform: 'ubuntu', version: version)
