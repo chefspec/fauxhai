@@ -1,4 +1,7 @@
 # Fauxhai Changelog
+## v3.0.1
+- Change dependency for Chef and Ohai to a development dependency. The previous dependency on Chef 12 prevented Fauxhai from working with Chefspec on pre-12 Chef releases.
+
 ## v3.0.0
 - Regenerated json files for all currently supported versions of Ubuntu, CentOS, FreeBSD, Debian, Fedora, and OpenSUSE. This new data is generated with Ohai output from Ohai 8.7.0 in Chef 12.5.1. This data is more accurate for mocking out current Chef setups, but is changed from the previous Fauxhai 2.3.0 release. If you relied on specific mocked data this may require updating your specs.
 
