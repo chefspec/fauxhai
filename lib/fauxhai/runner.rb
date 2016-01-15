@@ -253,7 +253,9 @@ module Fauxhai
         'platform',
         'platform_version',
         'platform_build',
-        'platform_family'
+        'platform_family',
+        'init_package',
+        'root_group'
       ]
     end
   end
