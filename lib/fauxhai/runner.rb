@@ -225,7 +225,8 @@ module Fauxhai
     def cpu
       {
         'real' => 1,
-        'total' => 1
+        'total' => 1,
+        'cores' => 1
       }
     end
 
