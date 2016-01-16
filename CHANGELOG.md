@@ -1,4 +1,13 @@
 # Fauxhai Changelog
+
+## UNRELEASED
+- Added collection of root_group, init_package, and cpu cores to the runner
+- Added root_group to existing Linux systems
+- Added Fedora 23, OpenSuse Leap 42.1, and CentOS 7.2.1511
+- Fixed malformed JSON in the Windows 2012 output
+- Updated the runner and existing platform files to represent total memory in kB not MB as the default for Ohai has been changed on Windows / Linux
+- Added cpu cores to all existing platform files
+
 ## v3.0.1
 - Change dependency for Chef and Ohai to a development dependency. The previous dependency on Chef 12 prevented Fauxhai from working with Chefspec on pre-12 Chef releases.
 
