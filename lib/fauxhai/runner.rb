@@ -232,7 +232,7 @@ module Fauxhai
 
     def memory
       {
-        'total' => '1024MB'
+        'total' => '1048576kB'
       }
     end
 
