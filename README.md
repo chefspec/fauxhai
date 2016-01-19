@@ -1,5 +1,4 @@
-Fauxhai
-=======
+# Fauxhai
 Fauxhai is a gem for mocking out [ohai](https://github.com/chef/ohai) data in your chef testing. Fauxhai is community supported, so we need **your help** to populate our dataset. Here's an example for testing my "awesome_cookbook" on Ubuntu:
 
 ```ruby
@@ -36,10 +35,8 @@ end
 
 Fauxhai supports [ChefSpec](https://github.com/sethvargo/chefspec) and [rspec-chef](https://github.com/calavera/rspec-chef). In order to prevent polluting the README, only ChefSpec examples will be provided. However, there is an extensive README for each testing framework in the [examples](https://github.com/customink/fauxhai/tree/master/examples) directory.
 
-Important Note
---------------
+## Important Note
 Fauxhai ships with a command line tool - `fauxhai`. This is **not** the same as Fauxhai.mock. Running `fauxhai` on a machine effectively runs `ohai`, but then sanitizes the data, removing/replacing things like:
-
 - users
 - ssh keys
 - usernames in paths
@@ -47,8 +44,7 @@ Fauxhai ships with a command line tool - `fauxhai`. This is **not** the same as 
 
 `fauxhai` should only be used by developers wishing to submit a new json file.
 
-Usage
------
+## Usage
 Fauxhai provides a bunch of default attributes so that you don't need to mock out your entire infastructure to write a simple test. That being said, not all configurations will suit your needs. Because of that, Fauxhai provides two ways to configure your mocks:
 
 ### Overriding
@@ -145,8 +141,7 @@ describe 'awesome_cookbook::default' do
 end
 ```
 
-Testing Multiple Versions
--------------------------
+## Testing Multiple Versions
 It's a common use case to test multiple version of the same operating system. Here's a simple example to get your started. This is more rspec-related that fauxhai related, but here ya go:
 
 ```ruby
@@ -168,6 +163,5 @@ describe 'awesome_cookbook::default' do
 end
 ```
 
-Contributing
-------------
+## Contributing
 See [CONTRIBUTING.md](https://github.com/customink/fauxhai/blob/master/CONTRIBUTING.md).
