@@ -1,4 +1,7 @@
 # Fauxhai
+[![Build Status Master](https://travis-ci.org/customink/fauxhai.svg?branch=master)](https://travis-ci.org/customink/fauxhai)
+[![Gem Version](https://badge.fury.io/rb/fauxhai.svg)](https://badge.fury.io/rb/fauxhai)
+
 Fauxhai is a gem for mocking out [ohai](https://github.com/chef/ohai) data in your chef testing. Fauxhai is community supported, so we need **your help** to populate our dataset. Here's an example for testing my "awesome_cookbook" on Ubuntu:
 
 ```ruby
