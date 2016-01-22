@@ -23,8 +23,7 @@ module Fauxhai
     # @option options [String] :edge
     #   whether to try loading from Github 
     def initialize(options = {}, &override_attributes)
-      @options = options
-      @options[:edge] = true 
+      @options = { edge: true }.merge(options)
 
       @data = fauxhai_data
       yield(@data) if block_given?
