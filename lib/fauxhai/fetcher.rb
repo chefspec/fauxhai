@@ -15,7 +15,7 @@ module Fauxhai
         end
 
         # cache this data so we do not have to SSH again
-        File.open(cache_file, 'w+'){ |f| f.write(@data.to_json) }
+        File.open(cache_file, 'w+') { |f| f.write(@data.to_json) }
       end
 
       yield(@data) if block_given?
@@ -23,7 +23,7 @@ module Fauxhai
       if defined?(ChefSpec)
         data = @data
         ::ChefSpec::ChefRunner.send :define_method, :fake_ohai do |ohai|
-          data.each_pair do |attribute,value|
+          data.each_pair do |attribute, value|
             ohai[attribute] = value
           end
         end
@@ -37,7 +37,7 @@ module Fauxhai
     end
 
     def cached?
-      File.exists?(cache_file)
+      File.exist?(cache_file)
     end
 
     def cache_key
@@ -64,6 +64,7 @@ module Fauxhai
     end
 
     private
+
     def host
       @host ||= begin
         raise ArgumentError, ':host is a required option for Fauxhai.fetch' unless @options[:host]

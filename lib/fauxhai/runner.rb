@@ -7,7 +7,7 @@ module Fauxhai
       @system = Ohai::System.new
       @system.all_plugins
 
-      result = @system.data.dup.delete_if{|k,v| !whitelist_attributes.include?(k)}.merge(
+      result = @system.data.dup.delete_if { |k, v| !whitelist_attributes.include?(k) }.merge(
         'languages' => languages,
         'chef_packages' => chef_packages,
         'counters' => counters,
@@ -30,6 +30,7 @@ module Fauxhai
     end
 
     private
+
     def bin_dir
       '/usr/local/bin'
     end
@@ -153,12 +154,10 @@ module Fauxhai
 
     def languages
       {
-        'ruby' => @system.data['languages']['ruby'].merge({
-          'bin_dir' => bin_dir,
-          'gem_bin' => gem_bin,
-          'gems_dir' => gems_dir,
-          'ruby_bin' => ruby_bin,
-        }),
+        'ruby' => @system.data['languages']['ruby'].merge('bin_dir' => bin_dir,
+                                                          'gem_bin' => gem_bin,
+                                                          'gems_dir' => gems_dir,
+                                                          'ruby_bin' => ruby_bin),
         'powershell' => @system.data['languages']['powershell']
       }
     end
@@ -187,7 +186,7 @@ module Fauxhai
               '10.0.0.1' => 'fe:ff:ff:ff:ff:ff'
             },
             'encapsulation' => 'Ethernet',
-            'flags' => ['BROADCAST', 'MULTICAST', 'UP', 'LOWER_UP'],
+            'flags' => %w(BROADCAST MULTICAST UP LOWER_UP),
             'mtu' => '1500',
             'number' => '0',
             'routes' => {
@@ -241,22 +240,21 @@ module Fauxhai
     #
     # @return [Array] - the key of whitelisted attributes
     def whitelist_attributes
-      [
-        'command',
-        'dmi',
-        'filesystem',
-        'kernel',
-        'lsb',
-        'ohai_time',
-        'os',
-        'os_version',
-        'platform',
-        'platform_version',
-        'platform_build',
-        'platform_family',
-        'init_package',
-        'root_group'
-      ]
+      %w(
+        command
+        dmi
+        filesystem
+        kernel
+        lsb
+        ohai_time
+        os
+        os_version
+        platform
+        platform_version
+        platform_build
+        platform_family
+        init_package
+        root_group)
     end
   end
 end
