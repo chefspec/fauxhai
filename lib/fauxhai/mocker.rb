@@ -39,20 +39,21 @@ module Fauxhai
     end
 
     private
+
     def fauxhai_data
       @fauxhai_data ||= lambda do
         # If a path option was specified, use it
         if @options[:path]
           filepath = File.expand_path(@options[:path])
 
-          unless File.exists?(filepath)
+          unless File.exist?(filepath)
             raise Fauxhai::Exception::InvalidPlatform.new("You specified a path to a JSON file on the local system that does not exist: '#{filepath}'")
           end
         else
           filepath = File.join(platform_path, "#{version}.json")
         end
 
-        if File.exists?(filepath)
+        if File.exist?(filepath)
           JSON.parse( File.read(filepath) )
         elsif
           # Try loading from github (in case someone submitted a PR with a new file, but we haven't
@@ -68,7 +69,7 @@ module Fauxhai
             path = Pathname.new(filepath)
             FileUtils.mkdir_p(path.dirname)
 
-            File.open(filepath, 'w'){ |f| f.write(response_body) }
+            File.open(filepath, 'w') { |f| f.write(response_body) }
             return JSON.parse(response_body)
           else
             raise Fauxhai::Exception::InvalidPlatform.new("Could not find platform '#{platform}/#{version}' in any of the sources!")
