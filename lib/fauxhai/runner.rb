@@ -44,11 +44,11 @@ module Fauxhai
       {
         'chef' => {
           'version' => chef_version,
-          'chef_root' => [gems_dir, "chef-#{chef_version}", 'lib'].join('/')
+          'chef_root' => ['/opt/chef/embedded/lib/ruby/gems/2.1.0/gems', "chef-#{chef_version}", 'lib'].join('/')
         },
         'ohai' => {
           'version' => ohai_version,
-          'ohai_root' => [gems_dir, "ohai-#{ohai_version}", 'lib', 'ohai'].join('/')
+          'ohai_root' => ['/opt/chef/embedded/lib/ruby/gems/2.1.0/gems', "ohai-#{ohai_version}", 'lib', 'ohai'].join('/')
         }
       }
     end
