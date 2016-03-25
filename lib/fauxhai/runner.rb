@@ -238,9 +238,7 @@ module Fauxhai
 
     def virtualization
       {
-        'systems' => {},
-        'system' => nil,
-        'role' => nil
+        'systems' => {}
       }
     end
 
