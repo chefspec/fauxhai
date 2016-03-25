@@ -23,7 +23,8 @@ module Fauxhai
         'uptime' => uptime,
         'uptime_seconds' => uptime_seconds,
         'cpu' => cpu,
-        'memory' => memory
+        'memory' => memory,
+        'virtualization' => virtualization
       )
 
       puts JSON.pretty_generate(result)
@@ -232,6 +233,12 @@ module Fauxhai
     def memory
       {
         'total' => '1048576kB'
+      }
+    end
+
+    def virtualization
+      {
+        'systems' => {}
       }
     end
 
