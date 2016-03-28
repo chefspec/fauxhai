@@ -1,4 +1,12 @@
 # Fauxhai Changelog
+
+## v3.2.0
+- Updated OS X 10.11 to include root_group and kernel processor information
+- Recaptured Solaris 5.11 with the latest Ohai
+- Updated CPU attributes and fixed memory to be in kB on Solaris 5.10
+- Added node['virtualization']['systems'] = {} to the runner and updated data in existing dumps
+- Updated the runner to mock out chef_packages install paths using Omnibus paths not gem install paths and added it to existing dumps.
+
 ## v3.1.0
 - Added collection of root_group, init_package, and cpu cores to the runner
 - Added root_group to existing Linux systems
