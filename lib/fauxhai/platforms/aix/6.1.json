@@ -1,81 +1,87 @@
 {
   "filesystem": {
-    "/dev/hd4": {
-      "kb_size": "786432",
-      "kb_used": "494912",
-      "kb_available": "291520",
-      "percent_used": "63%",
+    "Global:/": {
+      "kb_size": "524288",
+      "kb_used": "45648",
+      "kb_available": "478640",
+      "percent_used": "9%",
       "mount": "/",
       "fs_type": "jfs2",
-      "mount_options": "rw,log=/dev/hd8"
+      "mount_options": [
+        "rw",
+        "log=NULL"
+      ]
     },
-    "/dev/hd2": {
-      "kb_size": "12320768",
-      "kb_used": "9411384",
-      "kb_available": "2909384",
-      "percent_used": "77%",
-      "mount": "/usr",
-      "fs_type": "jfs2",
-      "mount_options": "rw,log=/dev/hd8"
-    },
-    "/dev/hd9var": {
-      "kb_size": "2621440",
-      "kb_used": "259688",
-      "kb_available": "2361752",
-      "percent_used": "10%",
-      "mount": "/var",
-      "fs_type": "jfs2",
-      "mount_options": "rw,log=/dev/hd8"
-    },
-    "/dev/hd3": {
-      "kb_size": "2621440",
-      "kb_used": "17304",
-      "kb_available": "2604136",
+    "Global:/home": {
+      "kb_size": "2097152",
+      "kb_used": "16224",
+      "kb_available": "2080928",
       "percent_used": "1%",
-      "mount": "/tmp",
-      "fs_type": "jfs2",
-      "mount_options": "rw,log=/dev/hd8"
-    },
-    "/dev/hd1": {
-      "kb_size": "2359296",
-      "kb_used": "229168",
-      "kb_available": "2130128",
-      "percent_used": "10%",
       "mount": "/home",
       "fs_type": "jfs2",
-      "mount_options": "rw,log=/dev/hd8"
+      "mount_options": [
+        "rw",
+        "log=NULL"
+      ]
     },
-    "/dev/hd11admin": {
-      "kb_size": "262144",
-      "kb_used": "760",
-      "kb_available": "261384",
-      "percent_used": "1%",
-      "mount": "/admin",
-      "fs_type": "jfs2",
-      "mount_options": "rw,log=/dev/hd8"
-    },
-    "/dev/hd10opt": {
-      "kb_size": "3407872",
-      "kb_used": "1417400",
-      "kb_available": "1990472",
-      "percent_used": "42%",
+    "Global:/opt": {
+      "kb_size": "5242880",
+      "kb_used": "1503444",
+      "kb_available": "3739436",
+      "percent_used": "29%",
       "mount": "/opt",
       "fs_type": "jfs2",
-      "mount_options": "rw,log=/dev/hd8"
+      "mount_options": [
+        "rw",
+        "log=NULL"
+      ]
     },
-    "192.168.1.11:/stage/middleware": {
-      "kb_size": "314572800",
-      "kb_used": "225814136",
-      "kb_available": "88758664",
-      "percent_used": "72%",
-      "mount": "/stage/middleware",
-      "fs_type": "nfs3",
-      "mount_options": "ro,bg,hard,intr,sec=sys"
-    },
-    "/proc": {
+    "Global:/proc": {
+      "kb_size": "-",
+      "kb_used": "-",
+      "kb_available": "-",
+      "percent_used": "-",
       "mount": "/proc",
-      "fs_type": "procfs",
-      "mount_options": "rw"
+      "fs_type": "namefs",
+      "mount_options": [
+        "rw"
+      ]
+    },
+    "Global:/tmp": {
+      "kb_size": "1048576",
+      "kb_used": "377624",
+      "kb_available": "670952",
+      "percent_used": "37%",
+      "mount": "/tmp",
+      "fs_type": "jfs2",
+      "mount_options": [
+        "rw",
+        "log=NULL"
+      ]
+    },
+    "Global:/usr": {
+      "kb_size": "5242880",
+      "kb_used": "2440104",
+      "kb_available": "2802776",
+      "percent_used": "47%",
+      "mount": "/usr",
+      "fs_type": "jfs2",
+      "mount_options": [
+        "rw",
+        "log=NULL"
+      ]
+    },
+    "Global:/var": {
+      "kb_size": "524288",
+      "kb_used": "75988",
+      "kb_available": "448300",
+      "percent_used": "15%",
+      "mount": "/var",
+      "fs_type": "jfs2",
+      "mount_options": [
+        "rw",
+        "log=NULL"
+      ]
     }
   },
   "kernel": {
@@ -83,115 +89,136 @@
     "release": "1",
     "version": "6",
     "machine": "powerpc",
+    "bits": "64",
     "modules": {
-      "/usr/lib/drivers/if_en": {
+      "/usr/lib/drivers/trcdd": {
         "text": {
-          "address": "4b50000",
-          "size": "20000"
+          "address": "f1000000c0440000",
+          "size": "22000"
         },
         "data": {
-          "address": "4b60000",
-          "size": "bd8"
+          "address": "f1000000c044b000",
+          "size": "160b0"
+        }
+      },
+      "/usr/lib/drivers/cluster": {
+        "text": {
+          "address": "f1000000c03c9000",
+          "size": "77000"
+        },
+        "data": {
+          "address": "f1000000c0421000",
+          "size": "1ecac"
         }
       },
       "/usr/lib/drivers/random": {
         "text": {
-          "address": "f1000000c028c000",
+          "address": "f1000000c03a9000",
           "size": "20000"
         },
         "data": {
-          "address": "f1000000c0294000",
+          "address": "f1000000c03b1000",
           "size": "17148"
         }
       },
       "/usr/lib/drivers/nfs.ext": {
         "text": {
-          "address": "4920000",
+          "address": "4950000",
           "size": "220000"
         },
         "data": {
-          "address": "4ad0000",
+          "address": "4b00000",
           "size": "65700"
         }
       },
       "/usr/lib/drivers/krpc.ext": {
         "text": {
-          "address": "48c0000",
+          "address": "48e0000",
           "size": "60000"
         },
         "data": {
-          "address": "4910000",
+          "address": "4930000",
           "size": "dbe8"
         }
       },
       "/usr/lib/drivers/nfs_kdes.ext": {
         "text": {
-          "address": "f1000000c028a000",
+          "address": "f1000000c03a7000",
           "size": "2000"
         },
         "data": {
-          "address": "f1000000c028b000",
+          "address": "f1000000c03a8000",
           "size": "d0"
         }
       },
       "/usr/lib/drivers/posix_aiopin": {
         "text": {
-          "address": "4890000",
+          "address": "48c0000",
           "size": "20000"
         },
         "data": {
-          "address": "48a0000",
+          "address": "48d0000",
           "size": "8990"
         }
       },
       "/usr/lib/drivers/posix_aio.ext": {
         "text": {
-          "address": "4870000",
+          "address": "48a0000",
           "size": "20000"
         },
         "data": {
-          "address": "4880000",
+          "address": "48b0000",
           "size": "e80"
         }
       },
       "/usr/lib/drivers/aiopin": {
         "text": {
-          "address": "4850000",
+          "address": "4880000",
           "size": "20000"
         },
         "data": {
-          "address": "4860000",
+          "address": "4890000",
           "size": "8910"
         }
       },
       "/usr/lib/drivers/aio.ext": {
+        "text": {
+          "address": "4860000",
+          "size": "20000"
+        },
+        "data": {
+          "address": "4870000",
+          "size": "1198"
+        }
+      },
+      "/usr/lib/drivers/smt_loadpin": {
+        "text": {
+          "address": "f1000000c03a5000",
+          "size": "2000"
+        },
+        "data": {
+          "address": "f1000000c03a6000",
+          "size": "78"
+        }
+      },
+      "/usr/lib/drivers/smt_load": {
+        "text": {
+          "address": "f1000000c039d000",
+          "size": "6000"
+        },
+        "data": {
+          "address": "f1000000c03a2000",
+          "size": "698"
+        }
+      },
+      "/usr/lib/drivers/perfvmmstat": {
         "text": {
           "address": "4830000",
           "size": "20000"
         },
         "data": {
           "address": "4840000",
-          "size": "1198"
-        }
-      },
-      "/usr/lib/drivers/smt_loadpin": {
-        "text": {
-          "address": "f1000000c0288000",
-          "size": "2000"
-        },
-        "data": {
-          "address": "f1000000c0289000",
-          "size": "78"
-        }
-      },
-      "/usr/lib/drivers/smt_load": {
-        "text": {
-          "address": "f1000000c0280000",
-          "size": "6000"
-        },
-        "data": {
-          "address": "f1000000c0285000",
-          "size": "698"
+          "size": "9f0"
         }
       },
       "/usr/pmapi/etc/pmsvcs": {
@@ -204,34 +231,34 @@
           "size": "334c"
         }
       },
-      "/usr/lib/drivers/perfvmmstat": {
+      "/usr/lib/perf/perfstat": {
         "text": {
           "address": "47b0000",
-          "size": "20000"
+          "size": "30000"
         },
         "data": {
-          "address": "47c0000",
-          "size": "9f0"
+          "address": "47d0000",
+          "size": "f14"
         }
       },
       "/usr/lib/drivers/ptydd": {
         "text": {
-          "address": "f1000000c0264000",
+          "address": "f1000000c0381000",
           "size": "1c000"
         },
         "data": {
-          "address": "f1000000c027d000",
+          "address": "f1000000c039a000",
           "size": "2154"
         }
       },
-      "/usr/lib/perf/perfstat": {
+      "/usr/lib/drivers/if_en": {
         "text": {
           "address": "4780000",
-          "size": "30000"
+          "size": "20000"
         },
         "data": {
-          "address": "47a0000",
-          "size": "f14"
+          "address": "4790000",
+          "size": "bd8"
         }
       },
       "/usr/lib/drivers/netinet": {
@@ -242,6 +269,16 @@
         "data": {
           "address": "4630000",
           "size": "14b8c0"
+        }
+      },
+      "/usr/lib/drivers/pkcs11": {
+        "text": {
+          "address": "f1000000c0264000",
+          "size": "11d000"
+        },
+        "data": {
+          "address": "f1000000c032f000",
+          "size": "50e58"
         }
       },
       "/usr/lib/drivers/crypto/clickext": {
@@ -537,33 +574,45 @@
     }
   },
   "os": "aix",
-  "os_version": "1",
+  "os_version": "6",
   "platform": "aix",
   "platform_version": "6.1",
   "platform_family": "aix",
+  "dmi": {
+  },
   "command": {
     "ps": "ps -ef"
   },
-  "dmi": {
-
-  },
-  "ohai_time": 1411621630.957907,
+  "ohai_time": 1459361828.044256,
+  "root_group": "system",
   "languages": {
     "ruby": {
+      "platform": "powerpc-aix6.1.0.0",
+      "version": "2.1.5",
+      "release_date": "2014-11-13",
+      "target": "powerpc-ibm-aix6.1.0.0",
+      "target_cpu": "powerpc",
+      "target_vendor": "ibm",
+      "target_os": "aix6.1.0.0",
+      "host": "powerpc-ibm-aix6.1.0.0",
+      "host_cpu": "powerpc",
+      "host_os": "aix6.1.0.0",
+      "host_vendor": "ibm",
       "bin_dir": "/usr/local/bin",
-      "gem_bin": "/usr/local/bin/gem",
+      "ruby_bin": "/usr/local/bin/ruby",
       "gems_dir": "/usr/local/gems",
-      "ruby_bin": "/usr/local/bin/ruby"
-    }
+      "gem_bin": "/usr/local/bin/gem"
+    },
+    "powershell": null
   },
   "chef_packages": {
     "chef": {
-      "version": "12.0.0.alpha.0",
-      "chef_root": "/opt/chef/embedded/lib/ruby/gems/2.1.0/gems/chef-12.0.0.alpha.0/lib"
+      "version": "12.2.1",
+      "chef_root": "/opt/chef/embedded/lib/ruby/gems/2.1.0/gems/chef-12.2.1/lib"
     },
     "ohai": {
-      "version": "7.2.0",
-      "ohai_root": "/opt/chef/embedded/lib/ruby/gems/2.1.0/gems/ohai-7.2.0/lib/ohai"
+      "version": "8.13.0",
+      "ohai_root": "/opt/chef/embedded/lib/ruby/gems/2.1.0/gems/ohai-8.13.0/lib/ohai"
     }
   },
   "counters": {
@@ -629,7 +678,6 @@
     "default_gateway": "10.0.0.1",
     "default_interface": "eth0",
     "settings": {
-
     },
     "interfaces": {
       "eth0": {
