@@ -1,5 +1,8 @@
 # Fauxhai Changelog
 
+## v3.3.0
+- Updated AIX with latest Ohai data
+
 ## v3.2.0
 - Updated OS X 10.11 to include root_group and kernel processor information
 - Recaptured Solaris 5.11 with the latest Ohai
