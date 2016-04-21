@@ -1,5 +1,8 @@
 # Fauxhai Changelog
 
+## v3.4.0
+- Added Ubuntu 16.04, Debian 8.4, FreeBSD 10.3, and OmniOS r151018
+
 ## v3.3.0
 - Updated AIX with latest Ohai data
 
