@@ -5,7 +5,7 @@ require 'open-uri'
 module Fauxhai
   class Mocker
     # The base URL for the GitHub project (raw)
-    RAW_BASE = 'https://raw.github.com/customink/fauxhai/master'
+    RAW_BASE = 'https://raw.githubusercontent.com/customink/fauxhai/master'
 
     # @return [Hash] The raw ohai data for the given Mock
     attr_reader :data
