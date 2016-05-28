@@ -1,5 +1,12 @@
 # Fauxhai Changelog
 
+## v3.5.0
+- Fauxhai now requires at least Ruby 2.0
+- Added CentOS 6.8, Arch 4.5.4-1-ARCH, Debian 7.10, Gentoo 2.2
+- Fixed the naming and bad JSON in Amazon 2016.03
+- Updated the raw Github URL to Github's recommended URL
+- Fixed the Rake task to properly fail if JSON files fail to validate
+
 ## v3.4.0
 - Added Ubuntu 16.04, Debian 8.4, FreeBSD 10.3, and OmniOS r151018
 
