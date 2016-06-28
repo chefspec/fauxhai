@@ -715,7 +715,6 @@
     "ps": "ps -ef"
   },
   "dmi": {
-
   },
   "ohai_time": 1414047561.936486,
   "languages": {
@@ -810,7 +809,6 @@
     "default_gateway": "10.0.0.1",
     "default_interface": "eth0",
     "settings": {
-
     },
     "interfaces": {
       "eth0": {
@@ -835,12 +833,15 @@
         ],
         "mtu": "1500",
         "number": "0",
-        "routes": {
-          "10.0.0.0/255": {
+        "routes": [
+          {
+            "destination": "10.0.0.0/24",
+            "family": "inet",
             "scope": "link",
+            "proto": "kernel",
             "src": "10.0.0.2"
           }
-        },
+        ],
         "state": "up",
         "type": "eth"
       }

@@ -1605,7 +1605,8 @@
   "network": {
     "default_gateway": "10.0.0.1",
     "default_interface": "net0",
-    "settings": {},
+    "settings": {
+    },
     "interfaces": {
       "net0": {
         "addresses": {
@@ -1630,12 +1631,15 @@
         ],
         "mtu": "1500",
         "number": "0",
-        "routes": {
-          "10.0.0.0/255": {
+        "routes": [
+          {
+            "destination": "10.0.0.0/24",
+            "family": "inet",
             "scope": "link",
+            "proto": "kernel",
             "src": "10.0.0.2"
           }
-        },
+        ],
         "state": "up",
         "type": "net"
       }
