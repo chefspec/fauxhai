@@ -3,7 +3,6 @@
     "ps": "ps -ef"
   },
   "dmi": {
-
   },
   "kernel": {
     "name": "Linux",
@@ -155,7 +154,6 @@
     }
   },
   "lsb": {
-
   },
   "os": "linux",
   "os_version": "3.10.5-1-ARCH",
@@ -474,7 +472,6 @@
     "default_gateway": "10.0.0.1",
     "default_interface": "eth0",
     "settings": {
-
     },
     "interfaces": {
       "eth0": {
@@ -483,7 +480,7 @@
             "broadcast": "10.0.0.255",
             "family": "inet",
             "netmask": "255.255.255.0",
-            "prefixlen": "23",
+            "prefixlen": "24",
             "scope": "Global"
           }
         },
@@ -499,12 +496,15 @@
         ],
         "mtu": "1500",
         "number": "0",
-        "routes": {
-          "10.0.0.0/255": {
+        "routes": [
+          {
+            "destination": "10.0.0.0/24",
+            "family": "inet",
             "scope": "link",
+            "proto": "kernel",
             "src": "10.0.0.2"
           }
-        },
+        ],
         "state": "up",
         "type": "eth"
       }
