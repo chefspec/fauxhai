@@ -173,13 +173,13 @@ module Fauxhai
         'default_interface' => default_interface,
         'settings' => {},
         'interfaces' => {
-          'eth0' => {
+          "#{default_interface}" => {
             'addresses' => {
-              '10.0.0.2' => {
+              "#{ipaddress}" => {
                 'broadcast' => '10.0.0.255',
                 'family' => 'inet',
                 'netmask' => '255.255.255.0',
-                'prefixlen' => '23',
+                'prefixlen' => '24',
                 'scope' => 'Global'
               }
             },
@@ -190,12 +190,15 @@ module Fauxhai
             'flags' => %w(BROADCAST MULTICAST UP LOWER_UP),
             'mtu' => '1500',
             'number' => '0',
-            'routes' => {
-              '10.0.0.0/255' => {
+            'routes' => [
+              {
+                'destination' => '10.0.0.0/24',
+                'family' => 'inet',
                 'scope' => 'link',
-                'src' => '10.0.0.2'
-              }
-            },
+                'proto' => 'kernel',
+                'src' => ipaddress,
+              },
+            ],
             'state' => 'up',
             'type' => 'eth'
           }
