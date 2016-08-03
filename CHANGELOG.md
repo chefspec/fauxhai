@@ -1,5 +1,10 @@
 # Fauxhai Changelog
 
+## v3.7.0
+
+- Fauxhai now requires at least Ruby 2.1.0
+- Added Raspbian 8.0
+
 ## v3.6.0
 
 - Generate proper data for Windows hosts
