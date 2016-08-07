@@ -1,5 +1,12 @@
 # Fauxhai Changelog
 
+## v3.8.0
+
+- Added init_package attribute to existing CentOS/Oracle/Ubuntu/Debian platforms
+- Added Debian 8.5
+- Added Fedora 24
+- Added Oracle Linux 5.8, 6.8, and regenerated 7.2 on VirtualBox to match others
+
 ## v3.7.0
 
 - Fauxhai now requires at least Ruby 2.1.0
