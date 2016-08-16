@@ -79,7 +79,10 @@ module Fauxhai
     end
 
     def platform
-      @options[:platform] ||= 'chefspec'
+      @options[:platform] ||= begin
+                                @using_default_platform = true
+                                'ubuntu'
+                              end
     end
 
     def platform_path
@@ -87,11 +90,13 @@ module Fauxhai
     end
 
     def version
-      @options[:version] ||= chefspec_version || raise(Fauxhai::Exception::InvalidVersion.new('Platform version not specified'))
-    end
-
-    def chefspec_version
-      platform == 'chefspec' ? '0.6.1' : nil
+      @options[:version] ||= begin
+                               if @using_default_platform
+                                 '16.04'
+                               else
+                                 raise(Fauxhai::Exception::InvalidVersion.new('Platform version not specified'))
+                               end
+                             end
     end
   end
 end
