@@ -1,5 +1,14 @@
 # Fauxhai Changelog
 
+## v3.9.0
+
+- Added a new deprecation warning when someone doesn't provide a platform to mock. Previously we silently returned the Chefspec platform, which is probably not what anyone wanted / expected.
+- Added macOS 10.12
+- Added Redhat 7.2
+- Added Suse 12.1 and 11.4
+- Added Windows 7
+- Regenerated Windows 8, 8.1, and 10
+
 ## v3.8.0
 
 - Added init_package attribute to existing CentOS/Oracle/Ubuntu/Debian platforms
