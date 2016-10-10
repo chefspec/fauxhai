@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = 'https://github.com/customink/fauxhai'
   spec.license       = 'MIT'
 
-  spec.required_ruby_version = '>= 2.1'
+  spec.required_ruby_version = '>= 2.2.2'
 
   spec.files         = `git ls-files`.split($\)
   spec.executables   = spec.files.grep(%r{^bin/}).map { |f| File.basename(f) }
