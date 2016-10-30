@@ -1,9 +1,17 @@
 # Fauxhai Changelog
 
+## v3.10.0
+
+- Added macOS 10.12
+- Added Amazon 2016.09
+- Added FreeBSD 11.0
+- Added Debian 8.6
+- Require Ruby 2.2.2 or later
+- Add init_package attribute to OpenSuse 13.2
+
 ## v3.9.0
 
 - Added a new deprecation warning when someone doesn't provide a platform to mock. Previously we silently returned the Chefspec platform, which is probably not what anyone wanted / expected.
-- Added macOS 10.12
 - Added Redhat 7.2
 - Added Suse 12.1 and 11.4
 - Added Windows 7
