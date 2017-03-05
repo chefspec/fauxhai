@@ -1,33 +1,33 @@
 {
   "filesystem": {
     "devtmpfs": {
-      "kb_size": "501460",
+      "kb_size": "501416",
       "kb_used": "0",
-      "kb_available": "501460",
+      "kb_available": "501416",
       "percent_used": "0%",
       "mount": "/dev",
-      "total_inodes": "125365",
-      "inodes_used": "430",
-      "inodes_available": "124935",
+      "total_inodes": "125354",
+      "inodes_used": "425",
+      "inodes_available": "124929",
       "inodes_percent_used": "1%",
       "fs_type": "devtmpfs",
       "mount_options": [
         "rw",
         "nosuid",
-        "size=501460k",
-        "nr_inodes=125365",
+        "size=501416k",
+        "nr_inodes=125354",
         "mode=755"
       ]
     },
     "tmpfs": {
-      "kb_size": "508556",
+      "kb_size": "508536",
       "kb_used": "0",
-      "kb_available": "508556",
+      "kb_available": "508536",
       "percent_used": "0%",
       "mount": "/sys/fs/cgroup",
-      "total_inodes": "127139",
+      "total_inodes": "127134",
       "inodes_used": "15",
-      "inodes_available": "127124",
+      "inodes_available": "127119",
       "inodes_percent_used": "1%",
       "fs_type": "tmpfs",
       "mount_options": [
@@ -40,18 +40,19 @@
     },
     "/dev/sda2": {
       "kb_size": "8960000",
-      "kb_used": "1502360",
-      "kb_available": "7305128",
+      "kb_used": "1567884",
+      "kb_available": "7228596",
       "percent_used": "18%",
-      "mount": "/boot/grub2/i386-pc",
+      "mount": "/var/log",
       "fs_type": "btrfs",
       "mount_options": [
         "rw",
         "relatime",
         "space_cache",
-        "subvolid=258",
-        "subvol=/@/boot/grub2/i386-pc"
-      ]
+        "subvolid=272",
+        "subvol=/@/var/log"
+      ],
+      "uuid": "64caf506-4cc0-4c6d-8efa-dd706f7b3e70"
     },
     "sysfs": {
       "mount": "/sys",
@@ -128,7 +129,7 @@
       "mount_options": [
         "rw",
         "relatime",
-        "fd=30",
+        "fd=29",
         "pgrp=1",
         "timeout=300",
         "minproto=5",
@@ -159,26 +160,46 @@
         "rw",
         "relatime"
       ]
+    },
+    "tracefs": {
+      "mount": "/sys/kernel/debug/tracing",
+      "fs_type": "tracefs",
+      "mount_options": [
+        "rw",
+        "relatime"
+      ]
+    },
+    "/dev/sda1": {
+      "fs_type": "swap",
+      "uuid": "800fa313-d964-4a1d-945c-125ade17132e"
+    },
+    "/dev/sr0": {
+      "fs_type": "iso9660",
+      "uuid": "2015-10-29-21-20-38-00",
+      "label": "openSUSE-Leap-42.1-NET-x86_64026"
     }
   },
   "kernel": {
     "name": "Linux",
-    "release": "4.1.13-5-default",
-    "version": "#1 SMP PREEMPT Thu Nov 26 16:35:17 UTC 2015 (49475c3)",
+    "release": "4.1.38-50-default",
+    "version": "#1 SMP PREEMPT Sun Feb 19 14:35:48 UTC 2017 (6b4d8cb)",
     "machine": "x86_64",
+    "processor": "x86_64",
     "os": "GNU/Linux",
     "modules": {
       "af_packet": {
-        "size": "40960",
+        "size": "45056",
         "refcount": "0"
       },
       "vboxsf": {
         "size": "49152",
-        "refcount": "0"
+        "refcount": "0",
+        "version": "5.0.32_SUSE r112930"
       },
       "iscsi_ibft": {
         "size": "16384",
-        "refcount": "0"
+        "refcount": "0",
+        "version": "0.5.0"
       },
       "iscsi_boot_sysfs": {
         "size": "16384",
@@ -192,17 +213,9 @@
         "size": "16384",
         "refcount": "0"
       },
-      "snd_intel8x0": {
-        "size": "45056",
-        "refcount": "0"
-      },
       "aesni_intel": {
         "size": "176128",
         "refcount": "0"
-      },
-      "snd_ac97_codec": {
-        "size": "143360",
-        "refcount": "1"
       },
       "aes_x86_64": {
         "size": "20480",
@@ -220,53 +233,58 @@
         "size": "16384",
         "refcount": "1"
       },
-      "snd_pcm": {
-        "size": "135168",
-        "refcount": "2"
-      },
       "ablk_helper": {
         "size": "16384",
         "refcount": "1"
-      },
-      "cryptd": {
-        "size": "20480",
-        "refcount": "2"
-      },
-      "snd_timer": {
-        "size": "36864",
-        "refcount": "1"
-      },
-      "serio_raw": {
-        "size": "16384",
-        "refcount": "0"
-      },
-      "pcspkr": {
-        "size": "16384",
-        "refcount": "0"
       },
       "ppdev": {
         "size": "20480",
         "refcount": "0"
       },
-      "snd": {
-        "size": "94208",
-        "refcount": "4"
+      "cryptd": {
+        "size": "20480",
+        "refcount": "2"
       },
-      "e1000": {
-        "size": "143360",
+      "8250_fintek": {
+        "size": "16384",
         "refcount": "0"
       },
-      "joydev": {
+      "acpi_cpufreq": {
         "size": "20480",
+        "refcount": "0"
+      },
+      "parport_pc": {
+        "size": "49152",
         "refcount": "0"
       },
       "i2c_piix4": {
         "size": "24576",
         "refcount": "0"
       },
-      "8250_fintek": {
-        "size": "16384",
+      "e1000": {
+        "size": "143360",
+        "refcount": "0",
+        "version": "7.3.21-k8-NAPI"
+      },
+      "snd_intel8x0": {
+        "size": "45056",
         "refcount": "0"
+      },
+      "snd_ac97_codec": {
+        "size": "143360",
+        "refcount": "1"
+      },
+      "snd_pcm": {
+        "size": "139264",
+        "refcount": "2"
+      },
+      "snd_timer": {
+        "size": "36864",
+        "refcount": "1"
+      },
+      "snd": {
+        "size": "94208",
+        "refcount": "4"
       },
       "soundcore": {
         "size": "16384",
@@ -276,28 +294,24 @@
         "size": "16384",
         "refcount": "1"
       },
-      "parport_pc": {
-        "size": "49152",
-        "refcount": "0"
-      },
-      "acpi_cpufreq": {
-        "size": "20480",
-        "refcount": "0"
-      },
-      "ac": {
-        "size": "16384",
-        "refcount": "0"
-      },
       "parport": {
         "size": "49152",
         "refcount": "2"
       },
-      "video": {
-        "size": "32768",
+      "serio_raw": {
+        "size": "16384",
         "refcount": "0"
       },
-      "battery": {
+      "joydev": {
+        "size": "20480",
+        "refcount": "0"
+      },
+      "pcspkr": {
         "size": "16384",
+        "refcount": "0"
+      },
+      "video": {
+        "size": "32768",
         "refcount": "0"
       },
       "processor": {
@@ -305,6 +319,14 @@
         "refcount": "1"
       },
       "button": {
+        "size": "16384",
+        "refcount": "0"
+      },
+      "battery": {
+        "size": "16384",
+        "refcount": "0"
+      },
+      "ac": {
         "size": "16384",
         "refcount": "0"
       },
@@ -317,7 +339,7 @@
         "refcount": "0"
       },
       "btrfs": {
-        "size": "1073152",
+        "size": "1105920",
         "refcount": "1"
       },
       "xor": {
@@ -334,19 +356,42 @@
       },
       "ata_generic": {
         "size": "16384",
-        "refcount": "0"
+        "refcount": "0",
+        "version": "0.2.15"
       },
       "raid6_pq": {
         "size": "110592",
         "refcount": "1"
       },
-      "ata_piix": {
-        "size": "36864",
-        "refcount": "0"
+      "vboxvideo": {
+        "size": "57344",
+        "refcount": "1",
+        "version": "5.0.32_SUSE r112930"
+      },
+      "syscopyarea": {
+        "size": "16384",
+        "refcount": "1"
+      },
+      "sysfillrect": {
+        "size": "16384",
+        "refcount": "1"
+      },
+      "sysimgblt": {
+        "size": "16384",
+        "refcount": "1"
+      },
+      "drm_kms_helper": {
+        "size": "139264",
+        "refcount": "1"
       },
       "crc32c_intel": {
         "size": "24576",
         "refcount": "1"
+      },
+      "ata_piix": {
+        "size": "36864",
+        "refcount": "0",
+        "version": "2.13"
       },
       "ohci_pci": {
         "size": "16384",
@@ -359,6 +404,14 @@
       "ohci_hcd": {
         "size": "53248",
         "refcount": "1"
+      },
+      "ttm": {
+        "size": "106496",
+        "refcount": "1"
+      },
+      "drm": {
+        "size": "385024",
+        "refcount": "4"
       },
       "ehci_hcd": {
         "size": "81920",
@@ -373,37 +426,31 @@
         "refcount": "1"
       },
       "vboxguest": {
-        "size": "299008",
-        "refcount": "2"
-      },
-      "vboxvideo": {
-        "size": "16384",
-        "refcount": "0"
-      },
-      "drm": {
-        "size": "385024",
-        "refcount": "2"
+        "size": "294912",
+        "refcount": "3",
+        "version": "5.0.32_SUSE r112930"
       },
       "sg": {
         "size": "40960",
-        "refcount": "0"
+        "refcount": "0",
+        "version": "3.5.36"
       }
     }
   },
+  "os": "linux",
+  "os_version": "4.1.38-50-default",
   "lsb": {
   },
-  "os": "linux",
-  "os_version": "4.1.13-5-default",
   "platform_version": "42.1",
-  "platform": "opensuse",
+  "platform": "opensuseleap",
   "platform_family": "suse",
+  "dmi": {
+  },
   "command": {
     "ps": "ps -ef"
   },
-  "dmi": {
-  },
   "init_package": "systemd",
-  "ohai_time": 1452980023.685689,
+  "ohai_time": 1488686458.342658,
   "root_group": "root",
   "languages": {
     "ruby": {
@@ -427,12 +474,12 @@
   },
   "chef_packages": {
     "chef": {
-      "version": "12.6.0",
-      "chef_root": "/opt/chef/embedded/lib/ruby/gems/2.1.0/gems/chef-12.6.0/lib"
+      "version": "12.19.36",
+      "chef_root": "/opt/chef/embedded/lib/ruby/gems/2.1.0/gems/chef-12.19.36/lib"
     },
     "ohai": {
-      "version": "8.8.1",
-      "ohai_root": "/opt/chef/embedded/lib/ruby/gems/2.1.0/gems/ohai-8.8.1/lib/ohai"
+      "version": "8.23.0",
+      "ohai_root": "/opt/chef/embedded/lib/ruby/gems/2.1.0/gems/ohai-8.23.0/lib/ohai"
     }
   },
   "counters": {
