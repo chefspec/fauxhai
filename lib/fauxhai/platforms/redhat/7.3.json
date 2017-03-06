@@ -1,15 +1,15 @@
 {
   "filesystem": {
     "/dev/mapper/rhel-root": {
-      "kb_size": "8869888",
-      "kb_used": "1096428",
-      "kb_available": "7773460",
-      "percent_used": "13%",
+      "kb_size": "8374272",
+      "kb_used": "1202244",
+      "kb_available": "7172028",
+      "percent_used": "15%",
       "mount": "/",
-      "total_inodes": "8880128",
-      "inodes_used": "40816",
-      "inodes_available": "8839312",
-      "inodes_percent_used": "1%",
+      "total_inodes": "4192256",
+      "inodes_used": "42874",
+      "inodes_available": "4149382",
+      "inodes_percent_used": "2%",
       "fs_type": "xfs",
       "mount_options": [
         "rw",
@@ -19,37 +19,37 @@
         "inode64",
         "noquota"
       ],
-      "uuid": "b4643bec-868f-4f7a-be3d-5648290ebfe1"
+      "uuid": "3d3ec3d8-4410-4f4d-8a47-dadb900350d0"
     },
     "devtmpfs": {
-      "kb_size": "498164",
+      "kb_size": "497472",
       "kb_used": "0",
-      "kb_available": "498164",
+      "kb_available": "497472",
       "percent_used": "0%",
       "mount": "/dev",
-      "total_inodes": "124541",
-      "inodes_used": "343",
-      "inodes_available": "124198",
+      "total_inodes": "124368",
+      "inodes_used": "344",
+      "inodes_available": "124024",
       "inodes_percent_used": "1%",
       "fs_type": "devtmpfs",
       "mount_options": [
         "rw",
         "nosuid",
         "seclabel",
-        "size=498164k",
-        "nr_inodes=124541",
+        "size=497472k",
+        "nr_inodes=124368",
         "mode=755"
       ]
     },
     "tmpfs": {
-      "kb_size": "101688",
+      "kb_size": "101648",
       "kb_used": "0",
-      "kb_available": "101688",
+      "kb_available": "101648",
       "percent_used": "0%",
       "mount": "/run/user/0",
-      "total_inodes": "127107",
+      "total_inodes": "127059",
       "inodes_used": "1",
-      "inodes_available": "127106",
+      "inodes_available": "127058",
       "inodes_percent_used": "1%",
       "fs_type": "tmpfs",
       "mount_options": [
@@ -58,19 +58,19 @@
         "nodev",
         "relatime",
         "seclabel",
-        "size=101688k",
+        "size=101648k",
         "mode=700"
       ]
     },
     "/dev/sda1": {
-      "kb_size": "508588",
-      "kb_used": "126400",
-      "kb_available": "382188",
-      "percent_used": "25%",
+      "kb_size": "1038336",
+      "kb_used": "140692",
+      "kb_available": "897644",
+      "percent_used": "14%",
       "mount": "/boot",
-      "total_inodes": "512000",
+      "total_inodes": "524288",
       "inodes_used": "328",
-      "inodes_available": "511672",
+      "inodes_available": "523960",
       "inodes_percent_used": "1%",
       "fs_type": "xfs",
       "mount_options": [
@@ -81,7 +81,7 @@
         "inode64",
         "noquota"
       ],
-      "uuid": "f53c5e6f-8431-4f7e-8d67-fb48b6e7c51c"
+      "uuid": "4c1a0217-cd83-4af7-999c-575984803bca"
     },
     "sysfs": {
       "mount": "/sys",
@@ -132,7 +132,7 @@
       ]
     },
     "cgroup": {
-      "mount": "/sys/fs/cgroup/net_cls",
+      "mount": "/sys/fs/cgroup/blkio",
       "fs_type": "cgroup",
       "mount_options": [
         "rw",
@@ -140,7 +140,7 @@
         "nodev",
         "noexec",
         "relatime",
-        "net_cls"
+        "blkio"
       ]
     },
     "pstore": {
@@ -176,7 +176,7 @@
       "mount_options": [
         "rw",
         "relatime",
-        "fd=25",
+        "fd=26",
         "pgrp=1",
         "timeout=300",
         "minproto=5",
@@ -184,13 +184,12 @@
         "direct"
       ]
     },
-    "mqueue": {
-      "mount": "/dev/mqueue",
-      "fs_type": "mqueue",
+    "debugfs": {
+      "mount": "/sys/kernel/debug",
+      "fs_type": "debugfs",
       "mount_options": [
         "rw",
-        "relatime",
-        "seclabel"
+        "relatime"
       ]
     },
     "hugetlbfs": {
@@ -202,21 +201,22 @@
         "seclabel"
       ]
     },
-    "debugfs": {
-      "mount": "/sys/kernel/debug",
-      "fs_type": "debugfs",
+    "mqueue": {
+      "mount": "/dev/mqueue",
+      "fs_type": "mqueue",
       "mount_options": [
         "rw",
-        "relatime"
+        "relatime",
+        "seclabel"
       ]
     },
     "/dev/sda2": {
       "fs_type": "LVM2_member",
-      "uuid": "usndgw-1VFb-dR7P-HNQC-wn9h-YsI9-yHJ4LS"
+      "uuid": "YedQy7-p2hb-4WOb-GA9z-H4Fj-l3jr-F460wX"
     },
     "/dev/mapper/rhel-swap": {
       "fs_type": "swap",
-      "uuid": "24eff99e-1908-42d6-b153-d4d0c1a197b1"
+      "uuid": "52d40d82-6f07-45ea-8670-7aa2c47d7d89"
     },
     "rootfs": {
       "mount": "/",
@@ -228,38 +228,54 @@
   },
   "kernel": {
     "name": "Linux",
-    "release": "3.10.0-327.el7.x86_64",
-    "version": "#1 SMP Thu Oct 29 17:29:29 EDT 2015",
+    "release": "3.10.0-514.el7.x86_64",
+    "version": "#1 SMP Wed Oct 19 11:24:13 EDT 2016",
     "machine": "x86_64",
     "processor": "x86_64",
     "os": "GNU/Linux",
     "modules": {
       "ip6t_rpfilter": {
-        "size": "12546",
+        "size": "12595",
         "refcount": "1"
-      },
-      "ip6t_REJECT": {
-        "size": "12939",
-        "refcount": "2"
       },
       "ipt_REJECT": {
         "size": "12541",
         "refcount": "2"
       },
+      "nf_reject_ipv4": {
+        "size": "13373",
+        "refcount": "1"
+      },
+      "ip6t_REJECT": {
+        "size": "12625",
+        "refcount": "2"
+      },
+      "nf_reject_ipv6": {
+        "size": "13717",
+        "refcount": "1"
+      },
       "xt_conntrack": {
         "size": "12760",
-        "refcount": "7"
+        "refcount": "11"
+      },
+      "ip_set": {
+        "size": "36439",
+        "refcount": "0"
+      },
+      "nfnetlink": {
+        "size": "14696",
+        "refcount": "1"
       },
       "ebtable_nat": {
         "size": "12807",
-        "refcount": "0"
+        "refcount": "1"
       },
       "ebtable_broute": {
         "size": "12731",
-        "refcount": "0"
+        "refcount": "1"
       },
       "bridge": {
-        "size": "119562",
+        "size": "107106",
         "refcount": "1",
         "version": "2.3"
       },
@@ -271,24 +287,16 @@
         "size": "14552",
         "refcount": "2"
       },
-      "ebtable_filter": {
-        "size": "12827",
-        "refcount": "0"
-      },
-      "ebtables": {
-        "size": "30913",
-        "refcount": "3"
-      },
       "ip6table_nat": {
         "size": "12864",
         "refcount": "1"
       },
       "nf_conntrack_ipv6": {
-        "size": "18738",
-        "refcount": "5"
+        "size": "18894",
+        "refcount": "7"
       },
       "nf_defrag_ipv6": {
-        "size": "34768",
+        "size": "35104",
         "refcount": "1"
       },
       "nf_nat_ipv6": {
@@ -307,21 +315,13 @@
         "size": "12683",
         "refcount": "1"
       },
-      "ip6table_filter": {
-        "size": "12815",
-        "refcount": "1"
-      },
-      "ip6_tables": {
-        "size": "27025",
-        "refcount": "5"
-      },
       "iptable_nat": {
         "size": "12875",
         "refcount": "1"
       },
       "nf_conntrack_ipv4": {
-        "size": "14862",
-        "refcount": "4"
+        "size": "19108",
+        "refcount": "6"
       },
       "nf_defrag_ipv4": {
         "size": "12729",
@@ -332,11 +332,11 @@
         "refcount": "1"
       },
       "nf_nat": {
-        "size": "26146",
+        "size": "26147",
         "refcount": "2"
       },
       "nf_conntrack": {
-        "size": "105745",
+        "size": "111302",
         "refcount": "6"
       },
       "iptable_mangle": {
@@ -351,58 +351,106 @@
         "size": "12678",
         "refcount": "1"
       },
+      "ebtable_filter": {
+        "size": "12827",
+        "refcount": "1"
+      },
+      "ebtables": {
+        "size": "35009",
+        "refcount": "3"
+      },
+      "ip6table_filter": {
+        "size": "12815",
+        "refcount": "1"
+      },
+      "ip6_tables": {
+        "size": "26901",
+        "refcount": "5"
+      },
       "iptable_filter": {
         "size": "12810",
         "refcount": "1"
       },
-      "crc32_pclmul": {
-        "size": "13113",
+      "intel_powerclamp": {
+        "size": "14419",
         "refcount": "0"
       },
       "snd_intel8x0": {
         "size": "38274",
         "refcount": "0"
       },
-      "ghash_clmulni_intel": {
-        "size": "13259",
+      "ppdev": {
+        "size": "17671",
         "refcount": "0"
       },
       "snd_ac97_codec": {
         "size": "130605",
         "refcount": "1"
       },
-      "aesni_intel": {
-        "size": "69884",
-        "refcount": "0"
-      },
-      "ppdev": {
-        "size": "17671",
-        "refcount": "0"
-      },
       "ac97_bus": {
         "size": "12730",
         "refcount": "1"
       },
-      "lrw": {
-        "size": "13286",
-        "refcount": "1"
-      },
-      "sg": {
-        "size": "40721",
-        "refcount": "0",
-        "version": "3.5.36"
-      },
       "snd_seq": {
-        "size": "66691",
+        "size": "66747",
         "refcount": "0"
       },
       "snd_seq_device": {
         "size": "14356",
         "refcount": "1"
       },
+      "pcspkr": {
+        "size": "12718",
+        "refcount": "0"
+      },
+      "snd_pcm": {
+        "size": "106416",
+        "refcount": "2"
+      },
+      "snd_timer": {
+        "size": "29819",
+        "refcount": "2"
+      },
+      "snd": {
+        "size": "83432",
+        "refcount": "6"
+      },
+      "soundcore": {
+        "size": "15047",
+        "refcount": "1"
+      },
+      "iosf_mbi": {
+        "size": "13523",
+        "refcount": "0"
+      },
+      "crc32_pclmul": {
+        "size": "13113",
+        "refcount": "0"
+      },
+      "ghash_clmulni_intel": {
+        "size": "13259",
+        "refcount": "0"
+      },
+      "sg": {
+        "size": "40721",
+        "refcount": "0",
+        "version": "3.5.36"
+      },
+      "aesni_intel": {
+        "size": "69884",
+        "refcount": "0"
+      },
+      "lrw": {
+        "size": "13286",
+        "refcount": "1"
+      },
       "gf128mul": {
         "size": "14951",
         "refcount": "1"
+      },
+      "i2c_piix4": {
+        "size": "22106",
+        "refcount": "0"
       },
       "glue_helper": {
         "size": "13990",
@@ -412,13 +460,13 @@
         "size": "13597",
         "refcount": "1"
       },
+      "i2c_core": {
+        "size": "40756",
+        "refcount": "1"
+      },
       "cryptd": {
         "size": "20359",
         "refcount": "3"
-      },
-      "pcspkr": {
-        "size": "12718",
-        "refcount": "0"
       },
       "parport_pc": {
         "size": "28165",
@@ -428,40 +476,16 @@
         "size": "42348",
         "refcount": "2"
       },
-      "snd_pcm": {
-        "size": "105835",
-        "refcount": "2"
-      },
-      "snd_timer": {
-        "size": "29639",
-        "refcount": "2"
-      },
-      "snd": {
-        "size": "83425",
-        "refcount": "6"
-      },
-      "soundcore": {
-        "size": "15047",
-        "refcount": "1"
-      },
       "video": {
         "size": "24400",
         "refcount": "0"
       },
-      "i2c_piix4": {
-        "size": "22106",
-        "refcount": "0"
-      },
-      "i2c_core": {
-        "size": "40582",
-        "refcount": "1"
-      },
       "ip_tables": {
-        "size": "27240",
+        "size": "27115",
         "refcount": "5"
       },
       "xfs": {
-        "size": "939662",
+        "size": "985426",
         "refcount": "2"
       },
       "libcrc32c": {
@@ -469,7 +493,7 @@
         "refcount": "1"
       },
       "sd_mod": {
-        "size": "45497",
+        "size": "46322",
         "refcount": "3"
       },
       "crc_t10dif": {
@@ -504,12 +528,12 @@
         "version": "2.13"
       },
       "ahci": {
-        "size": "29907",
+        "size": "34042",
         "refcount": "2",
         "version": "3.0"
       },
       "libahci": {
-        "size": "32031",
+        "size": "31992",
         "refcount": "1"
       },
       "crct10dif_pclmul": {
@@ -520,6 +544,11 @@
         "size": "12595",
         "refcount": "3"
       },
+      "e1000": {
+        "size": "137544",
+        "refcount": "0",
+        "version": "7.3.21-k8-NAPI"
+      },
       "crc32c_intel": {
         "size": "22079",
         "refcount": "1"
@@ -528,15 +557,15 @@
         "size": "13462",
         "refcount": "0"
       },
-      "e1000": {
-        "size": "149323",
-        "refcount": "0",
-        "version": "7.3.21-k8-NAPI"
-      },
       "libata": {
-        "size": "218730",
+        "size": "247095",
         "refcount": "5",
         "version": "3.00"
+      },
+      "fjes": {
+        "size": "32197",
+        "refcount": "0",
+        "version": "1.1"
       },
       "dm_mirror": {
         "size": "22135",
@@ -551,20 +580,20 @@
         "refcount": "2"
       },
       "dm_mod": {
-        "size": "113292",
+        "size": "114430",
         "refcount": "8"
       }
     }
   },
   "os": "linux",
-  "os_version": "3.10.0-327.el7.x86_64",
+  "os_version": "3.10.0-514.el7.x86_64",
   "lsb": {
   },
   "platform": "redhat",
-  "platform_version": "7.2",
+  "platform_version": "7.3",
   "platform_family": "rhel",
   "dmi": {
-    "dmidecode_version": "2.12",
+    "dmidecode_version": "3.0",
     "smbios_version": "2.5",
     "structures": {
       "count": "10",
@@ -611,7 +640,7 @@
           "Product Name": "VirtualBox",
           "Version": "1.2",
           "Serial Number": "0",
-          "UUID": "F43ED604-2668-4A0B-83FB-1FBE8AEBA9FC",
+          "UUID": "01BD146B-9FED-442C-B888-CBEA666C6BB3",
           "Wake-up Type": "Power Switch",
           "SKU Number": "Not Specified",
           "Family": "Virtual Machine"
@@ -621,7 +650,7 @@
       "product_name": "VirtualBox",
       "version": "1.2",
       "serial_number": "0",
-      "uuid": "F43ED604-2668-4A0B-83FB-1FBE8AEBA9FC",
+      "uuid": "01BD146B-9FED-442C-B888-CBEA666C6BB3",
       "wake_up_type": "Power Switch",
       "sku_number": "Not Specified",
       "family": "Virtual Machine"
@@ -703,7 +732,7 @@
     "ps": "ps -ef"
   },
   "init_package": "systemd",
-  "ohai_time": 1488741427.203411,
+  "ohai_time": 1488822306.1447937,
   "root_group": "root",
   "languages": {
     "ruby": {
