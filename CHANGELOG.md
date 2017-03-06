@@ -1,5 +1,44 @@
 # Fauxhai Changelog
 
+## v4.0.0 (2017-03-06)
+
+### New Platform Data
+
+- openSUSE 42.2
+- Redhat 7.3
+- Debian 8.7
+- CentOS 7.3.1611
+- Fedora 25
+- Arch 4.9.11-1-ARCH
+- Suse Enterprise 12.2
+
+### Updated Platform Data
+
+These platforms have been redumped using Chef 12.19 to get the latest Ohai data
+
+- openSUSE 42.1
+- CentOS 6.8
+- FreeBSD 10.3 / 11.0
+- Redhat 6.6 / 6.7 / 6.8 / 7.0 / 7.1 / 7.2
+- Suse Enterprise 12.0
+- Ubuntu 14.04 / 16.04
+- Debian 7.11
+
+### Removed Platform Data
+
+The following platforms were removed as they were long ago EOL'd by their maintainers and in most cases they were dumped with Chef 10/11 data that is no longer valid.
+
+- Arch 3.10.5-1-ARCH
+- Debian 6.0.5
+- Debian jessie/stretch which were also incorrectly named as sid
+- Fedora 18 / 19 / 20
+- FreeBSD 8.4 / 9.1 / 9.2 / 10.0
+- Gentoo 2.1
+- macOS 10.6.8 / 10.7.4 / 10.8.2
+- omniOS 151002 / 151006 / 151008
+- Suse Enterprise 11.1 / 11.2
+- Ubuntu 10.04 / 13.04 / 13.10 / 14.10
+
 ## v3.10.0
 
 - Added macOS 10.12
