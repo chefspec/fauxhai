@@ -20,3 +20,19 @@ namespace :validate do
     puts 'JSON files validated'
   end
 end
+
+namespace :documentation do
+  desc 'Update the PLATFORMS.md file with a list of all platforms'
+  task :update_platforms do
+    File.delete('PLATFORMS.md') if File.exist?('PLATFORMS.md')
+    f = File.new('PLATFORMS.md', 'w')
+    f.write "## Fauxhai Platforms\n\nThis file lists each platform known to Fauxhai and the available versions for each of those platforms. See the ChefSpec documentation for mocking out platforms and platform versions within ChefSpec.\n"
+    Dir.glob('./lib/fauxhai/platforms/**') do |platform_path|
+      f.write "\n### #{platform_path.split('/')[-1]}\n\n"
+      Dir.glob(File.join(platform_path, '**.json')).each do |version_path|
+        f.write "  - #{version_path.split('/')[-1].chomp('.json')}\n"
+      end
+    end
+    f.close
+  end
+end
