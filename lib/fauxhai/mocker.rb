@@ -80,7 +80,7 @@ module Fauxhai
 
     def platform
       @options[:platform] ||= begin
-                                STDERR.puts "WARNING: you must specify a platform and platform_version to your ChefSpec Runner and/or Fauxhai constructor, in the future omitting these will become a hard error"
+                                STDERR.puts "WARNING: you must specify a 'platform' and 'version' to your ChefSpec Runner and/or Fauxhai constructor, in the future omitting these will become a hard error"
                                 'chefspec'
                               end
     end
