@@ -1,5 +1,10 @@
 # Fauxhai Changelog
 
+## v4.0.1 (2017-03-09)
+
+- Added a new platforms.md file in this repo that lists all current platforms and versions available. This is generated with a new Rake task
+- Updated the error text received when no platform/version is specified to be more clear what fields are missing
+
 ## v4.0.0 (2017-03-06)
 
 ### New Platform Data
