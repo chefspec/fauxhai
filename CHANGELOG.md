@@ -1,5 +1,9 @@
 # Fauxhai Changelog
 
+## v4.0.2 (2017-03-20)
+
+- Link to the platforms.md file in the platform not found exception messages
+
 ## v4.0.1 (2017-03-09)
 
 - Added a new platforms.md file in this repo that lists all current platforms and versions available. This is generated with a new Rake task
