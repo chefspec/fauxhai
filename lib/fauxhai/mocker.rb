@@ -7,6 +7,9 @@ module Fauxhai
     # The base URL for the GitHub project (raw)
     RAW_BASE = 'https://raw.githubusercontent.com/customink/fauxhai/master'
 
+    # A message about where to find a list of platforms
+    PLATFORM_LIST_MESSAGE = "A list of available platforms is available at https://github.com/customink/fauxhai/blob/master/PLATFORMS.md".freeze
+
     # @return [Hash] The raw ohai data for the given Mock
     attr_reader :data
 
@@ -61,7 +64,7 @@ module Fauxhai
           begin
             response = open("#{RAW_BASE}/lib/fauxhai/platforms/#{platform}/#{version}.json")
           rescue OpenURI::HTTPError
-            raise Fauxhai::Exception::InvalidPlatform.new("Could not find platform '#{platform}/#{version}' in any of the sources!")
+            raise Fauxhai::Exception::InvalidPlatform.new("Could not find platform '#{platform}/#{version}' in any of the sources! #{PLATFORM_LIST_MESSAGE}")
           end
 
           if response.status.first.to_i == 200
@@ -72,7 +75,7 @@ module Fauxhai
             File.open(filepath, 'w') { |f| f.write(response_body) }
             return JSON.parse(response_body)
           else
-            raise Fauxhai::Exception::InvalidPlatform.new("Could not find platform '#{platform}/#{version}' in any of the sources!")
+            raise Fauxhai::Exception::InvalidPlatform.new("Could not find platform '#{platform}/#{version}' in any of the sources! #{PLATFORM_LIST_MESSAGE}")
           end
         end
       end.call
@@ -80,7 +83,7 @@ module Fauxhai
 
     def platform
       @options[:platform] ||= begin
-                                STDERR.puts "WARNING: you must specify a 'platform' and 'version' to your ChefSpec Runner and/or Fauxhai constructor, in the future omitting these will become a hard error"
+                                STDERR.puts "WARNING: you must specify a 'platform' and 'version' to your ChefSpec Runner and/or Fauxhai constructor, in the future omitting these will become a hard error. #{PLATFORM_LIST_MESSAGE}"
                                 'chefspec'
                               end
     end
@@ -90,7 +93,7 @@ module Fauxhai
     end
 
     def version
-      @options[:version] ||= chefspec_version || raise(Fauxhai::Exception::InvalidVersion.new('Platform version not specified'))
+      @options[:version] ||= chefspec_version || raise(Fauxhai::Exception::InvalidVersion.new("Platform version not specified. #{PLATFORM_LIST_MESSAGE}"))
     end
 
     def chefspec_version
