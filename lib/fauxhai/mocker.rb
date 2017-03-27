@@ -23,7 +23,7 @@ module Fauxhai
     #   the version of the platform to mock
     # @option options [String] :path
     #   the path to a local JSON file
-    # @option options [String] :github_fetching
+    # @option options [Bool] :github_fetching
     #   whether to try loading from Github
     def initialize(options = {}, &override_attributes)
       @options = { github_fetching: true }.merge(options)
@@ -80,8 +80,7 @@ module Fauxhai
             raise Fauxhai::Exception::InvalidPlatform.new("Could not find platform '#{platform}/#{version}' in any of the sources! #{PLATFORM_LIST_MESSAGE}")
           end
         else
-          raise Fauxhai::Exception::InvalidPlatform.new("Could not find platform '#{platform}/#{version}' in any of the s
-ources!")
+          raise Fauxhai::Exception::InvalidPlatform.new("Could not find platform '#{platform}/#{version}' in any of the sources!")
         end
       end.call
     end
