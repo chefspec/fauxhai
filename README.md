@@ -154,6 +154,20 @@ describe 'awesome_cookbook::default' do
 end
 ```
 
+### Disabling Fetching from Github
+
+On environments that does not have access to the internet, you can disable fetching fauxhai data from github as follow:
+
+```ruby
+require 'chefspec'
+
+describe 'awesome_cookbook::default' do
+  before do
+    Fauxhai.mock(platform: 'ubuntu', version: '12.04', github_fetching: false)
+  end
+end
+```
+
 ## Testing Multiple Versions
 
 It's a common use case to test multiple version of the same operating system. Here's a simple example to get your started. This is more rspec-related that fauxhai related, but here ya go:
