@@ -1,5 +1,9 @@
 # Fauxhai Changelog
 
+## v4.1.0 (2017-03-27)
+
+- Add a new config option "github_fetching" that disables fetching platform mocks from Github
+
 ## v4.0.2 (2017-03-20)
 
 - Link to the platforms.md file in the platform not found exception messages
