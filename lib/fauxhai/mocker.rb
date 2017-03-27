@@ -23,10 +23,10 @@ module Fauxhai
     #   the version of the platform to mock
     # @option options [String] :path
     #   the path to a local JSON file
-    # @option options [String] :edge
-    #   whether to try loading from Github 
+    # @option options [String] :github_fetching
+    #   whether to try loading from Github
     def initialize(options = {}, &override_attributes)
-      @options = { edge: true }.merge(options)
+      @options = { github_fetching: true }.merge(options)
 
       @data = fauxhai_data
       yield(@data) if block_given?
@@ -60,7 +60,7 @@ module Fauxhai
 
         if File.exist?(filepath)
           JSON.parse( File.read(filepath) )
-        elsif !@options[:edge]
+        elsif !@options[:github_fetching]
           # Try loading from github (in case someone submitted a PR with a new file, but we haven't
           # yet updated the gem version). Cache the response locally so it's faster next time.
           begin
@@ -81,7 +81,7 @@ module Fauxhai
           end
         else
           raise Fauxhai::Exception::InvalidPlatform.new("Could not find platform '#{platform}/#{version}' in any of the s
-ources!") 
+ources!")
         end
       end.call
     end
