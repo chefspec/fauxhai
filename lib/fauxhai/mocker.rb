@@ -60,7 +60,7 @@ module Fauxhai
 
         if File.exist?(filepath)
           JSON.parse( File.read(filepath) )
-        elsif !@options[:github_fetching]
+        elsif @options[:github_fetching]
           # Try loading from github (in case someone submitted a PR with a new file, but we haven't
           # yet updated the gem version). Cache the response locally so it's faster next time.
           begin
@@ -80,7 +80,7 @@ module Fauxhai
             raise Fauxhai::Exception::InvalidPlatform.new("Could not find platform '#{platform}/#{version}' in any of the sources! #{PLATFORM_LIST_MESSAGE}")
           end
         else
-          raise Fauxhai::Exception::InvalidPlatform.new("Could not find platform '#{platform}/#{version}' in any of the sources!")
+          raise Fauxhai::Exception::InvalidPlatform.new("Could not find platform '#{platform}/#{version}' in any of the sources! #{PLATFORM_LIST_MESSAGE}")
         end
       end.call
     end
