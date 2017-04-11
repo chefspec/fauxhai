@@ -66,7 +66,7 @@ module Fauxhai
           begin
             response = open("#{RAW_BASE}/lib/fauxhai/platforms/#{platform}/#{version}.json")
           rescue OpenURI::HTTPError
-            raise Fauxhai::Exception::InvalidPlatform.new("Could not find platform '#{platform}/#{version}' in any of the sources! #{PLATFORM_LIST_MESSAGE}")
+            raise Fauxhai::Exception::InvalidPlatform.new("Could not find platform '#{platform}/#{version}' on the local disk and an HTTP error was encountered when fetching from Github. #{PLATFORM_LIST_MESSAGE}")
           end
 
           if response.status.first.to_i == 200
@@ -77,10 +77,10 @@ module Fauxhai
             File.open(filepath, 'w') { |f| f.write(response_body) }
             return JSON.parse(response_body)
           else
-            raise Fauxhai::Exception::InvalidPlatform.new("Could not find platform '#{platform}/#{version}' in any of the sources! #{PLATFORM_LIST_MESSAGE}")
+            raise Fauxhai::Exception::InvalidPlatform.new("Could not find platform '#{platform}/#{version}' on the local disk and an Github fetching returned http error code #{response.status.first.to_i}! #{PLATFORM_LIST_MESSAGE}")
           end
         else
-          raise Fauxhai::Exception::InvalidPlatform.new("Could not find platform '#{platform}/#{version}' in any of the sources! #{PLATFORM_LIST_MESSAGE}")
+          raise Fauxhai::Exception::InvalidPlatform.new("Could not find platform '#{platform}/#{version}' on the local disk and Github fetching is disabled! #{PLATFORM_LIST_MESSAGE}")
         end
       end.call
     end
