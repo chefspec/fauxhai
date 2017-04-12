@@ -176,7 +176,7 @@ It's a common use case to test multiple version of the same operating system. He
 require 'chefspec'
 
 describe 'awesome_cookbook::default' do
-  ['12.04', '11.04', '10.04'].each do |version|
+  ['14.04', '16.04'].each do |version|
     context "on Ubuntu #{version}" do
       before do
         Fauxhai.mock(platform: 'ubuntu', version: version)
