@@ -25,29 +25,17 @@ This file lists each platform known to Fauxhai and the available versions for ea
 
 ### centos
 
-  - 5.0
-  - 5.1
   - 5.10
   - 5.11
-  - 5.2
-  - 5.3
-  - 5.4
-  - 5.5
-  - 5.6
   - 5.7
   - 5.8
   - 5.9
-  - 6.0
-  - 6.1
-  - 6.2
-  - 6.3
   - 6.4
   - 6.5
   - 6.6
   - 6.7
   - 6.8
   - 7.0.1406
-  - 7.0
   - 7.1.1503
   - 7.2.1511
   - 7.3.1611
@@ -83,7 +71,6 @@ This file lists each platform known to Fauxhai and the available versions for ea
 
 ### fedora
 
-  - 21
   - 22
   - 23
   - 24
@@ -127,7 +114,6 @@ This file lists each platform known to Fauxhai and the available versions for ea
 
 ### opensuse
 
-  - 12.3
   - 13.1
   - 13.2
   - 42.1
@@ -151,14 +137,9 @@ This file lists each platform known to Fauxhai and the available versions for ea
 ### redhat
 
   - 5.10
-  - 5.6
   - 5.7
   - 5.8
   - 5.9
-  - 6.0
-  - 6.1
-  - 6.2
-  - 6.3
   - 6.4
   - 6.5
   - 6.6
