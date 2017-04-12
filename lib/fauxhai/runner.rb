@@ -33,7 +33,8 @@ module Fauxhai
         'uptime_seconds' => uptime_seconds,
         'cpu' => cpu,
         'memory' => memory,
-        'virtualization' => virtualization
+        'virtualization' => virtualization,
+        'time' => time
       )
 
       puts JSON.pretty_generate(result)

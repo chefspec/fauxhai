@@ -14,11 +14,11 @@ module Fauxhai
         {
           'chef' => {
             'version' => chef_version,
-            'chef_root' => ['/opt/chef/embedded/lib/ruby/gems/2.1.0/gems', "chef-#{chef_version}", 'lib'].join('/')
+            'chef_root' => ['/opt/chef/embedded/lib/ruby/gems/2.4.0/gems', "chef-#{chef_version}", 'lib'].join('/')
           },
           'ohai' => {
             'version' => ohai_version,
-            'ohai_root' => ['/opt/chef/embedded/lib/ruby/gems/2.1.0/gems', "ohai-#{ohai_version}", 'lib', 'ohai'].join('/')
+            'ohai_root' => ['/opt/chef/embedded/lib/ruby/gems/2.4.0/gems', "ohai-#{ohai_version}", 'lib', 'ohai'].join('/')
           }
         }
       end
@@ -214,6 +214,12 @@ module Fauxhai
         }
       end
 
+      def time
+        {
+          'timezone' => 'GMT'
+        }
+      end
+
       # Whitelist attributes are attributes that we *actually* want from the node. Other attributes are
       # either ignored or overridden, but we ensure these are returned with the command.
       #
@@ -233,7 +239,10 @@ module Fauxhai
           platform_build
           platform_family
           init_package
-          root_group)
+          root_group
+          shard_seed
+          shells
+        )
       end
     end
   end
