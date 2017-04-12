@@ -49,7 +49,7 @@ Fauxhai ships with a command line tool - `fauxhai`. This is **not** the same as 
 
 ## Platform and Versions
 
-For a complete list of platforms and versions available for mocking via Fauxhai see [PLATFORMS.MD](https://github.com/sethvargo/chefspec/blob/master/README.md) in this repository.
+For a complete list of platforms and versions available for mocking via Fauxhai see [PLATFORMS.MD](https://github.com/customink/fauxhai/blob/master/PLATFORMS.md) in this repository.
 
 ## Usage
 
