@@ -40,7 +40,7 @@ module Fauxhai
         'time' => time
       )
 
-      puts JSON.pretty_generate(result)
+      puts JSON.pretty_generate(result.sort.to_h)
     end
   end
 end
