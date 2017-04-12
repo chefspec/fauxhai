@@ -5,10 +5,10 @@ require 'open-uri'
 module Fauxhai
   class Mocker
     # The base URL for the GitHub project (raw)
-    RAW_BASE = 'https://raw.githubusercontent.com/customink/fauxhai/master'
+    RAW_BASE = 'https://raw.githubusercontent.com/customink/fauxhai/master'.freeze
 
     # A message about where to find a list of platforms
-    PLATFORM_LIST_MESSAGE = "A list of available platforms is available at https://github.com/customink/fauxhai/blob/master/PLATFORMS.md".freeze
+    PLATFORM_LIST_MESSAGE = 'A list of available platforms is available at https://github.com/customink/fauxhai/blob/master/PLATFORMS.md'.freeze
 
     # @return [Hash] The raw ohai data for the given Mock
     attr_reader :data
@@ -50,7 +50,7 @@ module Fauxhai
         end
 
         if File.exist?(filepath)
-          JSON.parse( File.read(filepath) )
+          JSON.parse(File.read(filepath))
         elsif @options[:github_fetching]
           # Try loading from github (in case someone submitted a PR with a new file, but we haven't
           # yet updated the gem version). Cache the response locally so it's faster next time.

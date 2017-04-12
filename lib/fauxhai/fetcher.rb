@@ -45,7 +45,7 @@ module Fauxhai
     end
 
     def cache_file
-      File.expand_path( File.join(Fauxhai.root, 'tmp', cache_key) )
+      File.expand_path(File.join(Fauxhai.root, 'tmp', cache_key))
     end
 
     def force_cache_miss?
