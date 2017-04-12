@@ -14,12 +14,12 @@ module Fauxhai
         {
           'chef' => {
             'version' => chef_version,
-            'chef_root' => ['/opt/chef/embedded/lib/ruby/gems/2.4.0/gems', "chef-#{chef_version}", 'lib'].join('/')
+            'chef_root' => ['/opt/chef/embedded/lib/ruby/gems/2.4.0/gems', "chef-#{chef_version}", 'lib'].join('/'),
           },
           'ohai' => {
             'version' => ohai_version,
-            'ohai_root' => ['/opt/chef/embedded/lib/ruby/gems/2.4.0/gems', "ohai-#{ohai_version}", 'lib', 'ohai'].join('/')
-          }
+            'ohai_root' => ['/opt/chef/embedded/lib/ruby/gems/2.4.0/gems', "ohai-#{ohai_version}", 'lib', 'ohai'].join('/'),
+          },
         }
       end
 
@@ -27,30 +27,48 @@ module Fauxhai
         {
           'network' => {
             'interfaces' => {
+              'lo' => {
+                'tx' => {
+                  'queuelen' => '1',
+                  'bytes' =>  0,
+                  'packets' =>  0,
+                  'errors' =>  0,
+                  'drop' =>  0,
+                  'carrier' => 0,
+                  'collisions' => 0,
+                },
+                'rx' =>  {
+                  'bytes' => 0,
+                  'packets' => 0,
+                  'errors' => 0,
+                  'drop' => 0,
+                  'overrun' => 0,
+                },
+              },
               'eth0' => {
                 'rx' => {
-                  'bytes' => '0',
-                  'packets' => '0',
-                  'errors' => '0',
+                  'bytes' => 0,
+                  'packets' => 0,
+                  'errors' => 0,
                   'drop' => 0,
                   'overrun' => 0,
                   'frame' => 0,
                   'compressed' => 0,
-                  'multicast' => 0
+                  'multicast' => 0,
                 },
                 'tx' => {
-                  'bytes' => '342',
-                  'packets' => '0',
-                  'errors' => '0',
+                  'bytes' => 0,
+                  'packets' => 0,
+                  'errors' => 0,
                   'drop' => 0,
                   'overrun' => 0,
-                  'collisions' => '0',
+                  'collisions' => 0,
                   'carrier' => 0,
-                  'compressed' => 0
-                }
-              }
-            }
-          }
+                  'compressed' => 0,
+                },
+              },
+            },
+          },
         }
       end
 
@@ -78,17 +96,17 @@ module Fauxhai
               'gid' => 0,
               'uid' => 0,
               'shell' => '/bin/bash',
-              'gecos' => 'Fauxhai'
-            }
+              'gecos' => 'Fauxhai',
+            },
           },
           'group' => {
             'fauxhai' => {
               'gid' => 0,
               'members' => [
-                'fauxhai'
-              ]
-            }
-          }
+                'fauxhai',
+              ],
+            },
+          },
         }
       end
 
@@ -118,7 +136,7 @@ module Fauxhai
 
       def keys
         {
-          'ssh' => ssh
+          'ssh' => ssh,
         }
       end
 
@@ -128,7 +146,7 @@ module Fauxhai
                                                             'gem_bin' => gem_bin,
                                                             'gems_dir' => gems_dir,
                                                             'ruby_bin' => ruby_bin),
-          'powershell' => @system.data['languages']['powershell']
+          'powershell' => @system.data['languages']['powershell'],
         }
       end
 
@@ -138,28 +156,65 @@ module Fauxhai
 
       def network
         {
-          'default_gateway' => default_gateway,
-          'default_interface' => default_interface,
-          'settings' => {},
           'interfaces' => {
-            "#{default_interface}" => {
+            'lo' => {
+              'mtu' => '65536',
+              'flags' => %w(LOOPBACK UP LOWER_UP),
+              'encapsulation' => 'Loopback',
               'addresses' => {
-                "#{ipaddress}" => {
-                  'broadcast' => '10.0.0.255',
+                '127.0.0.1' => {
                   'family' => 'inet',
-                  'netmask' => '255.255.255.0',
-                  'prefixlen' => '24',
-                  'scope' => 'Global'
-                }
+                  'prefixlen' => '8',
+                  'netmask' => '255.0.0.0',
+                  'scope' => 'Node',
+                  'ip_scope' => 'LOOPBACK',
+                },
+                '::1' => {
+                  'family' => 'inet6',
+                  'prefixlen' => '128',
+                  'scope' => 'Node',
+                  'tags' => [],
+                  'ip_scope' => 'LINK LOCAL LOOPBACK',
+                },
               },
-              'arp' => {
-                '10.0.0.1' => 'fe:ff:ff:ff:ff:ff'
-              },
-              'encapsulation' => 'Ethernet',
-              'flags' => %w(BROADCAST MULTICAST UP LOWER_UP),
-              'mtu' => '1500',
+              'state' => 'unknown',
+            },
+            default_interface.to_s => {
+              'type' => default_interface.chop,
               'number' => '0',
+              'mtu' => '1500',
+              'flags' => %w(BROADCAST MULTICAST UP LOWER_UP),
+              'encapsulation' => 'Ethernet',
+              'addresses' => {
+                macaddress.to_s => {
+                  'family' => 'lladdr',
+                },
+                ipaddress.to_s => {
+                  'family' => 'inet',
+                  'prefixlen' => '24',
+                  'netmask' => '255.255.255.0',
+                  'broadcast' => '10.0.0.255',
+                  'scope' => 'Global',
+                  'ip_scope' => 'RFC1918 PRIVATE',
+                },
+                'fe80::11:1111:1111:1111' => {
+                  'family' => 'inet6',
+                  'prefixlen' => '64',
+                  'scope' => 'Link',
+                  'tags' => [],
+                  'ip_scope' => 'LINK LOCAL UNICAST',
+                },
+              },
+              'state' => 'up',
+              'arp' => {
+                '10.0.0.1' => 'fe:ff:ff:ff:ff:ff',
+              },
               'routes' => [
+                {
+                  'destination' => 'default',
+                  'family' => 'inet',
+                  'via' => default_gateway,
+                },
                 {
                   'destination' => '10.0.0.0/24',
                   'family' => 'inet',
@@ -167,11 +222,18 @@ module Fauxhai
                   'proto' => 'kernel',
                   'src' => ipaddress,
                 },
+                {
+                  'destination' => 'fe80::/64',
+                  'family' => 'inet6',
+                  'metric' => '256',
+                  'proto' => 'kernel',
+                },
               ],
-              'state' => 'up',
-              'type' => 'eth'
-            }
-          }
+              'ring_params' => {},
+            },
+          },
+          'default_interface' => default_interface,
+          'default_gateway' => default_gateway,
         }
       end
 
@@ -181,8 +243,8 @@ module Fauxhai
 
       def ssh
         {
-          'host_dsa_public' => File.read( File.join(Fauxhai.root, 'lib', 'fauxhai', 'keys', 'id_dsa.pub') ).strip,
-          'host_rsa_public' => File.read( File.join(Fauxhai.root, 'lib', 'fauxhai', 'keys', 'id_rsa.pub') ).strip
+          'host_dsa_public' => File.read(File.join(Fauxhai.root, 'lib', 'fauxhai', 'keys', 'id_dsa.pub')).strip,
+          'host_rsa_public' => File.read(File.join(Fauxhai.root, 'lib', 'fauxhai', 'keys', 'id_rsa.pub')).strip,
         }
       end
 
@@ -198,25 +260,25 @@ module Fauxhai
         {
           'real' => 1,
           'total' => 1,
-          'cores' => 1
+          'cores' => 1,
         }
       end
 
       def memory
         {
-          'total' => '1048576kB'
+          'total' => '1048576kB',
         }
       end
 
       def virtualization
         {
-          'systems' => {}
+          'systems' => {},
         }
       end
 
       def time
         {
-          'timezone' => 'GMT'
+          'timezone' => 'GMT',
         }
       end
 
@@ -226,19 +288,22 @@ module Fauxhai
       # @return [Array] - the key of whitelisted attributes
       def whitelist_attributes
         %w(
+          block_device
           command
           dmi
           filesystem
+          fips
+          init_package
           kernel
           lsb
           ohai_time
           os
           os_version
+          packages
           platform
           platform_version
           platform_build
           platform_family
-          init_package
           root_group
           shard_seed
           shells

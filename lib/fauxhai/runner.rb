@@ -24,6 +24,7 @@ module Fauxhai
         'domain' => domain,
         'etc' => etc,
         'hostname' => hostname,
+        'machinename' => hostname,
         'fqdn' => fqdn,
         'ipaddress' => ipaddress,
         'keys' => keys,
@@ -31,13 +32,15 @@ module Fauxhai
         'network' => network,
         'uptime' => uptime,
         'uptime_seconds' => uptime_seconds,
+        'idle' => uptime,
+        'idletime_seconds' => uptime_seconds,
         'cpu' => cpu,
         'memory' => memory,
         'virtualization' => virtualization,
         'time' => time
       )
 
-      puts JSON.pretty_generate(result)
+      puts JSON.pretty_generate(result.sort.to_h)
     end
   end
 end
