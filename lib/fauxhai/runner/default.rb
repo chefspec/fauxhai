@@ -45,7 +45,7 @@ module Fauxhai
                   'overrun' => 0,
                 },
               },
-              'eth0' => {
+              default_interface.to_s => {
                 'rx' => {
                   'bytes' => 0,
                   'packets' => 0,
@@ -81,7 +81,16 @@ module Fauxhai
       end
 
       def default_interface
-        'eth0'
+        case @system.data['platform_family']
+        when 'mac_os_x'
+          'en0'
+        when /bsd/
+          'em0'
+        when 'arch', 'fedora'
+          'enp0s3'
+        else
+          'eth0'
+        end
       end
 
       def domain
