@@ -5,10 +5,10 @@ require 'open-uri'
 module Fauxhai
   class Mocker
     # The base URL for the GitHub project (raw)
-    RAW_BASE = 'https://raw.githubusercontent.com/customink/fauxhai/master'.freeze
+    RAW_BASE = 'https://raw.githubusercontent.com/chefspec/fauxhai/master'.freeze
 
     # A message about where to find a list of platforms
-    PLATFORM_LIST_MESSAGE = 'A list of available platforms is available at https://github.com/customink/fauxhai/blob/master/PLATFORMS.md'.freeze
+    PLATFORM_LIST_MESSAGE = 'A list of available platforms is available at https://github.com/chefspec/fauxhai/blob/master/PLATFORMS.md'.freeze
 
     # @return [Hash] The raw ohai data for the given Mock
     attr_reader :data

@@ -1,6 +1,6 @@
 # Fauxhai
 
-[![Build Status Master](https://travis-ci.org/customink/fauxhai.svg?branch=master)](https://travis-ci.org/customink/fauxhai) [![Gem Version](https://badge.fury.io/rb/fauxhai.svg)](https://badge.fury.io/rb/fauxhai)
+[![Build Status Master](https://travis-ci.org/chefspec/fauxhai.svg?branch=master)](https://travis-ci.org/chefspec/fauxhai) [![Gem Version](https://badge.fury.io/rb/fauxhai.svg)](https://badge.fury.io/rb/fauxhai)
 
 Fauxhai is a gem for mocking out [ohai](https://github.com/chef/ohai) data in your chef testing. Fauxhai is community supported, so we need **your help** to populate our dataset. Here's an example for testing my "awesome_cookbook" on Ubuntu 16.04:
 
@@ -49,7 +49,7 @@ Fauxhai ships with a command line tool - `fauxhai`. This is **not** the same as 
 
 ## Platform and Versions
 
-For a complete list of platforms and versions available for mocking via Fauxhai see [PLATFORMS.MD](https://github.com/customink/fauxhai/blob/master/PLATFORMS.md) in this repository.
+For a complete list of platforms and versions available for mocking via Fauxhai see [PLATFORMS.MD](https://github.com/chefspec/fauxhai/blob/master/PLATFORMS.md) in this repository.
 
 ## Usage
 
@@ -193,4 +193,4 @@ end
 
 ## Contributing
 
-See [CONTRIBUTING.md](https://github.com/customink/fauxhai/blob/master/CONTRIBUTING.md).
+See [CONTRIBUTING.md](https://github.com/chefspec/fauxhai/blob/master/CONTRIBUTING.md).
