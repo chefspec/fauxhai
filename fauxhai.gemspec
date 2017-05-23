@@ -21,7 +21,7 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency 'net-ssh'
 
-  spec.add_development_dependency 'chef', '~> 12.0'
-  spec.add_development_dependency 'ohai', '~> 8.5'
+  spec.add_development_dependency 'chef', '>= 12.0'
+  spec.add_development_dependency 'ohai', '>= 8.5'
   spec.add_development_dependency 'rake'
 end
