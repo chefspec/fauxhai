@@ -18,7 +18,6 @@ module Fauxhai
 
       result = @system.data.dup.delete_if { |k, v| !whitelist_attributes.include?(k) }.merge(
         'languages' => languages,
-        'chef_packages' => chef_packages,
         'counters' => counters,
         'current_user' => current_user,
         'domain' => domain,
