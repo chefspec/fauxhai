@@ -284,6 +284,7 @@ module Fauxhai
           command
           dmi
           filesystem
+          filesystem2
           fips
           init_package
           kernel
