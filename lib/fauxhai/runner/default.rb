@@ -5,24 +5,6 @@ module Fauxhai
         '/usr/local/bin'
       end
 
-      def chef_packages
-        return {} if @system.data['chef_packages'].nil?
-
-        chef_version = @system.data['chef_packages']['chef']['version']
-        ohai_version = @system.data['chef_packages']['ohai']['version']
-
-        {
-          'chef' => {
-            'version' => chef_version,
-            'chef_root' => ['/opt/chef/embedded/lib/ruby/gems/2.4.0/gems', "chef-#{chef_version}", 'lib'].join('/'),
-          },
-          'ohai' => {
-            'version' => ohai_version,
-            'ohai_root' => ['/opt/chef/embedded/lib/ruby/gems/2.4.0/gems', "ohai-#{ohai_version}", 'lib', 'ohai'].join('/'),
-          },
-        }
-      end
-
       def counters
         {
           'network' => {
@@ -298,6 +280,7 @@ module Fauxhai
       def whitelist_attributes
         %w(
           block_device
+          chef_packages
           command
           dmi
           filesystem
