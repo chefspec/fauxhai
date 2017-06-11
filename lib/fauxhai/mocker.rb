@@ -50,7 +50,7 @@ module Fauxhai
         end
 
         if File.exist?(filepath)
-          JSON.parse(File.read(filepath))
+          parse_and_validate(File.read(filepath))
         elsif @options[:github_fetching]
           # Try loading from github (in case someone submitted a PR with a new file, but we haven't
           # yet updated the gem version). Cache the response locally so it's faster next time.
@@ -66,7 +66,7 @@ module Fauxhai
             FileUtils.mkdir_p(path.dirname)
 
             File.open(filepath, 'w') { |f| f.write(response_body) }
-            return JSON.parse(response_body)
+            return parse_and_validate(response_body)
           else
             raise Fauxhai::Exception::InvalidPlatform.new("Could not find platform '#{platform}/#{version}' on the local disk and an Github fetching returned http error code #{response.status.first.to_i}! #{PLATFORM_LIST_MESSAGE}")
           end
@@ -74,6 +74,17 @@ module Fauxhai
           raise Fauxhai::Exception::InvalidPlatform.new("Could not find platform '#{platform}/#{version}' on the local disk and Github fetching is disabled! #{PLATFORM_LIST_MESSAGE}")
         end
       end.call
+    end
+
+    # As major releases of Ohai ship it's difficult and sometimes impossible
+    # to regenerate all fauxhai data. This allows us to deprecate old releases
+    # and eventually remove them while giving end users ample warning.
+    def parse_and_validate(unparsed_data)
+      parsed_data = JSON.parse(unparsed_data)
+      if parsed_data['deprecated']
+        STDERR.puts "WARNING: Fauxhai platform data for #{parsed_data['platform']} #{parsed_data['platform_version']} is deprecated and will be removed from a future release. #{PLATFORM_LIST_MESSAGE}"
+      end
+      parsed_data
     end
 
     def platform
