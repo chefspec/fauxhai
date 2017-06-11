@@ -30,7 +30,11 @@ namespace :documentation do
     Dir.glob('./lib/fauxhai/platforms/**') do |platform_path|
       f.write "\n### #{platform_path.split('/')[-1]}\n\n"
       Dir.glob(File.join(platform_path, '**.json')).each do |version_path|
-        f.write "  - #{version_path.split('/')[-1].chomp('.json')}\n"
+        # skip anything marked as deprecated
+        data = JSON.parse(File.read(version_path))
+        unless data['deprecated']
+          f.write "  - #{version_path.split('/')[-1].chomp('.json')}\n"
+        end
       end
     end
     f.close
