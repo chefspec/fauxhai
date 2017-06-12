@@ -77,7 +77,7 @@ This file lists each platform known to Fauxhai and the available versions for ea
 ### mac_os_x
 
   - 10.10
-  - 10.11.1
+  - 10.11
   - 10.12
 
 ### nexus
@@ -149,4 +149,3 @@ This file lists each platform known to Fauxhai and the available versions for ea
   - 2012R2
   - 7
   - 8.1
-  - 8
