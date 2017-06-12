@@ -1,61 +1,69 @@
 {
-  "filesystem": {
-    "/dev/ada0s1a": {
-      "kb_size": "15225340",
-      "kb_used": "2054368",
-      "kb_available": "11952948",
-      "percent_used": "15%",
-      "mount": "/",
-      "inodes_used": "226910",
-      "inodes_available": "1779488",
-      "total_inodes": "2006398",
-      "inodes_percent_used": "11",
-      "fs_type": "ufs",
-      "mount_options": [
-        "local",
-        "journaled soft-updates"
-      ]
+  "chef_packages": {
+    "chef": {
+      "version": "13.1.31",
+      "chef_root": "/opt/chef/embedded/lib/ruby/gems/2.4.0/gems/chef-13.1.31/lib"
     },
-    "devfs": {
-      "kb_size": "1",
-      "kb_used": "1",
-      "kb_available": "0",
-      "percent_used": "100%",
-      "mount": "/dev",
-      "inodes_used": "0",
-      "inodes_available": "0",
-      "total_inodes": "0",
-      "inodes_percent_used": "100",
-      "fs_type": "devfs",
-      "mount_options": [
-        "local",
-        "multilabel"
-      ]
+    "ohai": {
+      "version": "13.1.0",
+      "ohai_root": "/opt/chef/embedded/lib/ruby/gems/2.4.0/gems/ohai-13.1.0/lib/ohai"
     }
   },
-  "kernel": {
-    "name": "FreeBSD",
-    "release": "11.0-RELEASE-p1",
-    "version": "FreeBSD 11.0-RELEASE-p1 #0 r306420: Thu Sep 29 01:43:23 UTC 2016     root@releng2.nyi.freebsd.org:/usr/obj/usr/src/sys/GENERIC ",
-    "machine": "amd64",
-    "processor": "amd64",
-    "os": "FreeBSD",
-    "ident": "GENERIC",
-    "securelevel": [
-      "kern.securelevel: -1"
-    ],
-    "modules": {
-      "kernel": {
-        "size": "1fa7c38",
-        "refcount": "1"
+  "command": {
+    "ps": "ps -axww"
+  },
+  "counters": {
+    "network": {
+      "interfaces": {
+        "lo": {
+          "tx": {
+            "queuelen": "1",
+            "bytes": 0,
+            "packets": 0,
+            "errors": 0,
+            "drop": 0,
+            "carrier": 0,
+            "collisions": 0
+          },
+          "rx": {
+            "bytes": 0,
+            "packets": 0,
+            "errors": 0,
+            "drop": 0,
+            "overrun": 0
+          }
+        },
+        "em0": {
+          "rx": {
+            "bytes": 0,
+            "packets": 0,
+            "errors": 0,
+            "drop": 0,
+            "overrun": 0,
+            "frame": 0,
+            "compressed": 0,
+            "multicast": 0
+          },
+          "tx": {
+            "bytes": 0,
+            "packets": 0,
+            "errors": 0,
+            "drop": 0,
+            "overrun": 0,
+            "collisions": 0,
+            "carrier": 0,
+            "compressed": 0
+          }
+        }
       }
     }
   },
-  "os": "freebsd",
-  "os_version": "1100122",
-  "platform": "freebsd",
-  "platform_version": "11.0-RELEASE-p1",
-  "platform_family": "freebsd",
+  "cpu": {
+    "real": 1,
+    "total": 1,
+    "cores": 1
+  },
+  "current_user": "fauxhai",
   "dmi": {
     "dmidecode_version": "3.0",
     "smbios_version": "2.5",
@@ -104,7 +112,7 @@
           "Product Name": "VirtualBox",
           "Version": "1.2",
           "Serial Number": "0",
-          "UUID": "7E76E37C-DC59-4756-8551-1183E24547E1",
+          "UUID": "04F5CCB7-7D0E-4DEA-8E9B-DE64C9613A4B",
           "Wake-up Type": "Power Switch",
           "SKU Number": "Not Specified",
           "Family": "Virtual Machine"
@@ -114,7 +122,7 @@
       "product_name": "VirtualBox",
       "version": "1.2",
       "serial_number": "0",
-      "uuid": "7E76E37C-DC59-4756-8551-1183E24547E1",
+      "uuid": "04F5CCB7-7D0E-4DEA-8E9B-DE64C9613A4B",
       "wake_up_type": "Power Switch",
       "sku_number": "Not Specified",
       "family": "Virtual Machine"
@@ -184,67 +192,14 @@
           "record_id": "0x0002",
           "size": "11",
           "application_identifier": "OEM Strings",
-          "String 1": "vboxVer_5.1.14",
-          "String 2": "vboxRev_112924"
+          "String 1": "vboxVer_5.1.22",
+          "String 2": "vboxRev_115126"
         }
       ],
-      "string_1": "vboxVer_5.1.14",
-      "string_2": "vboxRev_112924"
+      "string_1": "vboxVer_5.1.22",
+      "string_2": "vboxRev_115126"
     }
   },
-  "command": {
-    "ps": "ps -axww"
-  },
-  "ohai_time": 1488666178.5748897,
-  "root_group": "wheel",
-  "languages": {
-    "ruby": {
-      "bin_dir": "/usr/local/bin",
-      "gem_bin": "/usr/local/bin/gem",
-      "gems_dir": "/usr/local/gems",
-      "ruby_bin": "/usr/local/bin/ruby"
-    },
-    "powershell": null
-  },
-  "chef_packages": {
-    "chef": {
-      "version": "12.19.36",
-      "chef_root": "/opt/chef/embedded/lib/ruby/gems/2.1.0/gems/chef-12.19.36/lib"
-    },
-    "ohai": {
-      "version": "8.23.0",
-      "ohai_root": "/opt/chef/embedded/lib/ruby/gems/2.1.0/gems/ohai-8.23.0/lib/ohai"
-    }
-  },
-  "counters": {
-    "network": {
-      "interfaces": {
-        "eth0": {
-          "rx": {
-            "bytes": "0",
-            "packets": "0",
-            "errors": "0",
-            "drop": 0,
-            "overrun": 0,
-            "frame": 0,
-            "compressed": 0,
-            "multicast": 0
-          },
-          "tx": {
-            "bytes": "342",
-            "packets": "0",
-            "errors": "0",
-            "drop": 0,
-            "overrun": 0,
-            "collisions": "0",
-            "carrier": 0,
-            "compressed": 0
-          }
-        }
-      }
-    }
-  },
-  "current_user": "fauxhai",
   "domain": "local",
   "etc": {
     "passwd": {
@@ -265,68 +220,246 @@
       }
     }
   },
-  "hostname": "Fauxhai",
+  "filesystem": {
+    "/dev/ada0s1a": {
+      "kb_size": "15225340",
+      "kb_used": "1847896",
+      "kb_available": "12159420",
+      "percent_used": "13%",
+      "mount": "/",
+      "inodes_used": "212523",
+      "inodes_available": "1793875",
+      "total_inodes": "2006398",
+      "inodes_percent_used": "11",
+      "fs_type": "ufs",
+      "mount_options": [
+        "local",
+        "journaled soft-updates"
+      ]
+    },
+    "devfs": {
+      "kb_size": "1",
+      "kb_used": "1",
+      "kb_available": "0",
+      "percent_used": "100%",
+      "mount": "/dev",
+      "inodes_used": "0",
+      "inodes_available": "0",
+      "total_inodes": "0",
+      "inodes_percent_used": "100",
+      "fs_type": "devfs",
+      "mount_options": [
+        "local",
+        "multilabel"
+      ]
+    }
+  },
   "fqdn": "fauxhai.local",
+  "hostname": "Fauxhai",
+  "idle": "30 days 15 hours 07 minutes 30 seconds",
+  "idletime_seconds": 2646450,
   "ipaddress": "10.0.0.2",
+  "kernel": {
+    "name": "FreeBSD",
+    "release": "11.0-RELEASE-p1",
+    "version": "FreeBSD 11.0-RELEASE-p1 #0 r306420: Thu Sep 29 01:43:23 UTC 2016     root@releng2.nyi.freebsd.org:/usr/obj/usr/src/sys/GENERIC ",
+    "machine": "amd64",
+    "processor": "amd64",
+    "os": "FreeBSD",
+    "ident": "GENERIC",
+    "securelevel": [
+      "kern.securelevel: -1"
+    ],
+    "modules": {
+      "kernel": {
+        "size": "1fa7c38",
+        "refcount": "1"
+      }
+    }
+  },
   "keys": {
     "ssh": {
       "host_dsa_public": "ssh-dss AAAAB3NzaC1kc3MAAACBAJFo9BLAw4WKEs5hgipk5m423FzBsDXCZSMcC9ca/om/1VYzMqImixGe3uICDzNFUWxFoLJTQAOccyzo6MXZiQqwWJDLFi5qOSr6w2XcMyE+zd4wOyMoDiVM5fizmG8K3FzrqvGjwBcHcBdOQnavSijoj38DN25J9zhrid5BY4WlAAAAFQDxXrCyG52XCzn3FV4ej38wJBkomQAAAIBovGPJ4mP2P6BK8lHl0PPbktwQbWlpJ13oz6REJFDVcUi7vV26bX/BjQX+ohzZQzljdz1SpUbPc/8nuA4darYkVh91eBi307EN8IdxRHj2eBgp/ZG4yshIebG3WHrwJD/xUjjZ1MRfyDT1ermVi4LvjjPgWDxLZnPpMaR6S1nzgQAAAIEAj0Vd6DCWslvlsZ8+N53HWsqPi3gnx35JoLPz9Z2epkKIKqmEHav+93G3hdfztVa4I4t3phoPniQchYryF5+RNg8hqxKzjNtrIqUYCeuf2NJrksNsH7OZygPHZpqt4kTuwAGZxjxEGfAI0y8DhkU2ntp2LnzRnWH106BQBCmcXwo= fauxhai.local",
       "host_rsa_public": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCtLCeqtqr/HbnORckw1ukdLhpfGoOPFi5/esKEokzTqq1gsgQ2V8emmyjfq1i6XXfRtSBxkdlHv/GWdP5wBTuE2G85MzBkVSQPvmwQN8lX/JMPEEtKXkeOo0o92/PiSmvY4eRsdF0mw40Uvg7jtE3f3fxj497kzh5fKtkrHnF4x9gXCbVdr3FqXJfggR5IJwAxToerbK7x/uRS+7YuZI9Pip3tt14nv9ezwXcuGb/tvjWOZINiFl8izVIFKi7sxfTX09p4NgamxRS7TD2Yd0jT8nEoF9UZTsgXcJ1kDSx7N7NxFfNfP6rCdOGRRz4gUhXtsUjG/XkxPeCwZ7A9VnOD fauxhai.local"
     }
   },
-  "macaddress": "11:11:11:11:11:11",
-  "network": {
-    "default_gateway": "10.0.0.1",
-    "default_interface": "eth0",
-    "settings": {
+  "languages": {
+    "ruby": {
+      "platform": "amd64-freebsd11",
+      "version": "2.3.3",
+      "release_date": "2016-11-21",
+      "target": "amd64-portbld-freebsd11",
+      "target_cpu": "amd64",
+      "target_vendor": "portbld",
+      "target_os": "freebsd11",
+      "host": "amd64-portbld-freebsd11",
+      "host_cpu": "amd64",
+      "host_os": "freebsd11",
+      "host_vendor": "portbld",
+      "bin_dir": "/usr/local/bin",
+      "ruby_bin": "/usr/local/bin/ruby",
+      "gems_dir": "/usr/local/gems",
+      "gem_bin": "/usr/local/bin/gem"
     },
+    "powershell": null
+  },
+  "macaddress": "11:11:11:11:11:11",
+  "machinename": "Fauxhai",
+  "memory": {
+    "total": "1048576kB"
+  },
+  "network": {
     "interfaces": {
-      "eth0": {
+      "lo": {
+        "mtu": "65536",
+        "flags": [
+          "LOOPBACK",
+          "UP",
+          "LOWER_UP"
+        ],
+        "encapsulation": "Loopback",
         "addresses": {
-          "10.0.0.2": {
-            "broadcast": "10.0.0.255",
+          "127.0.0.1": {
             "family": "inet",
-            "netmask": "255.255.255.0",
-            "prefixlen": "24",
-            "scope": "Global"
+            "prefixlen": "8",
+            "netmask": "255.0.0.0",
+            "scope": "Node",
+            "ip_scope": "LOOPBACK"
+          },
+          "::1": {
+            "family": "inet6",
+            "prefixlen": "128",
+            "scope": "Node",
+            "tags": [
+
+            ],
+            "ip_scope": "LINK LOCAL LOOPBACK"
           }
         },
-        "arp": {
-          "10.0.0.1": "fe:ff:ff:ff:ff:ff"
-        },
-        "encapsulation": "Ethernet",
+        "state": "unknown"
+      },
+      "em0": {
+        "type": "em",
+        "number": "0",
+        "mtu": "1500",
         "flags": [
           "BROADCAST",
           "MULTICAST",
           "UP",
           "LOWER_UP"
         ],
-        "mtu": "1500",
-        "number": "0",
+        "encapsulation": "Ethernet",
+        "addresses": {
+          "11:11:11:11:11:11": {
+            "family": "lladdr"
+          },
+          "10.0.0.2": {
+            "family": "inet",
+            "prefixlen": "24",
+            "netmask": "255.255.255.0",
+            "broadcast": "10.0.0.255",
+            "scope": "Global",
+            "ip_scope": "RFC1918 PRIVATE"
+          },
+          "fe80::11:1111:1111:1111": {
+            "family": "inet6",
+            "prefixlen": "64",
+            "scope": "Link",
+            "tags": [
+
+            ],
+            "ip_scope": "LINK LOCAL UNICAST"
+          }
+        },
+        "state": "up",
+        "arp": {
+          "10.0.0.1": "fe:ff:ff:ff:ff:ff"
+        },
         "routes": [
+          {
+            "destination": "default",
+            "family": "inet",
+            "via": "10.0.0.1"
+          },
           {
             "destination": "10.0.0.0/24",
             "family": "inet",
             "scope": "link",
             "proto": "kernel",
             "src": "10.0.0.2"
+          },
+          {
+            "destination": "fe80::/64",
+            "family": "inet6",
+            "metric": "256",
+            "proto": "kernel"
           }
         ],
-        "state": "up",
-        "type": "eth"
+        "ring_params": {
+        }
       }
+    },
+    "default_interface": "em0",
+    "default_gateway": "10.0.0.1"
+  },
+  "ohai_time": 1497291286.7386656,
+  "os": "freebsd",
+  "os_version": "1100122",
+  "packages": {
+    "ca_root_nss": {
+      "version": "3.30.2"
+    },
+    "curl": {
+      "version": "7.54.0"
+    },
+    "dmidecode": {
+      "version": "3.0"
+    },
+    "gettext-runtime": {
+      "version": "0.19.8.1_1"
+    },
+    "indexinfo": {
+      "version": "0.2.6"
+    },
+    "libedit": {
+      "version": "3.1.20150325_2,1"
+    },
+    "libffi": {
+      "version": "3.2.1"
+    },
+    "libnghttp2": {
+      "version": "1.21.0"
+    },
+    "libyaml": {
+      "version": "0.1.6_2"
+    },
+    "pkg": {
+      "version": "1.10.1"
+    },
+    "ruby": {
+      "version": "2.3.3_2,1"
+    },
+    "ruby23-gems": {
+      "version": "2.6.12"
+    },
+    "sudo": {
+      "version": "1.8.20p1"
     }
+  },
+  "platform": "freebsd",
+  "platform_family": "freebsd",
+  "platform_version": "11.0-RELEASE-p1",
+  "root_group": "wheel",
+  "shells": [
+    "/bin/sh",
+    "/bin/csh",
+    "/bin/tcsh"
+  ],
+  "time": {
+    "timezone": "GMT"
   },
   "uptime": "30 days 15 hours 07 minutes 30 seconds",
   "uptime_seconds": 2646450,
-  "cpu": {
-    "real": 1,
-    "total": 1,
-    "cores": 1
-  },
-  "memory": {
-    "total": "1048576kB"
-  },
   "virtualization": {
     "systems": {
     }
