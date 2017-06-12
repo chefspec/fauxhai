@@ -25,6 +25,7 @@ This file lists each platform known to Fauxhai and the available versions for ea
 
 ### centos
 
+  - 5.10
   - 5.11
   - 6.7
   - 6.8
