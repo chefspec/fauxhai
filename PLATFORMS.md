@@ -21,7 +21,7 @@ This file lists each platform known to Fauxhai and the available versions for ea
 
 ### arch
 
-  - 4.9.11-1-ARCH
+  - 4.10.13-1-ARCH
 
 ### centos
 
