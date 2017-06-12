@@ -69,6 +69,10 @@ This file lists each platform known to Fauxhai and the available versions for ea
 
   - 6.0.0.14I
 
+### linuxmint
+
+  - 18.1
+
 ### mac_os_x
 
   - 10.10
