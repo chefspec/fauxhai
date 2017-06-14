@@ -50,7 +50,7 @@ This file lists each platform known to Fauxhai and the available versions for ea
 
 ### dragonfly4
 
-  - 4.2-RELEASE
+  - 4.8-RELEASE
 
 ### fedora
 
