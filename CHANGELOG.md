@@ -1,5 +1,64 @@
 # Fauxhai Changelog
 
+## v5.0.0 (2017-06-12)
+
+- Added new platform data:
+
+  - `Arch` 4.10.13-1-ARCH
+  - `Amazon` Linux 2017.03
+  - `CentOS` 6.9
+  - `ClearOS` 7.0
+  - `Debian` 8.8
+  - `Linux Mint` 18.1
+
+- Regenerated multiple platform data files to include Ohai 13 data, better mocked network data, and additional Ohai plugin data that is now whitelisted:
+
+  - `Amazon Linux`
+  - `CentOS`
+  - `Debian`
+  - `Fedora`
+  - `macOS`
+  - `openSUSE`
+  - `Solaris`
+  - `Ubuntu`
+  - `Windows`
+
+- Added a new system to allow deprecating old Fauxhai platform data with a warning shown during ChefSpec. This will allow us to deprecate data for platforms which have been marked End of Life by their maintainers. The following platforms have been marked as deprecated, but will continue to function until they are removed at a future date:
+
+  - `Arch`: 4.5.4-1-ARCH, 4.9.11-1-ARCH
+  - `CentOS`: 5.0, 5.1, 5.2, 5.3, 5.3, 5.4, 5.5, 5.6, 5.7, 5.8, 5.9, 6.0, 6.1, 6.2, 6.3, 6.4, 6.5, 6.6, 7.0, 7.0.1406, 7.1.1503
+  - `Debian`: 7.2, 7.4, 7.5, 7.6, 7.7, 7.8, 7.9, 8.0, 8.1, 8.2, 8.4, 8.5, 8.6
+  - `Fedora`: 21, 22, 23
+  - `FreeBSD`: 9.3, 10.1, 10.2
+  - `MacOS`: 10.9.2, 10.11.1 (replaced by 10.11)
+  - `omnios`: 151014
+  - `openSUSE`: 12.3, 13.1
+  - `oracle`: 5.8, 6.5, 6.6, 7.0, 7.1
+  - `redhat`: 5.6, 5.7, 5.8, 6.0, 6.1, 6.2, 6.3, 6.4, 6.5, 6.6, 7.0, 7.1
+  - `smartos`: joyent_20130111T180733Z
+  - `suse`: 11.3, 12.0
+  - `ubuntu`: 12.04, 15.04, 15.10
+  - `windows`: 2003R2, 8
+
+- Data provided by the chef_packages will no longer be mocked, but instead the actual Ohai data will be used. This corrects incorrect paths to the Chef/Ohai binaries on many platforms
+- Update the chef/ohai dependencies to allow for Chef/Ohai 13
+- Improve the mocked Network data to return more platform appropriate network information.
+- Whitelisted additional Ohai plugins to provide better mocked data
+
+  - idletime_seconds
+  - idle
+  - machinename
+  - packages
+  - fips
+  - block_device
+  - time
+  - shard_seed
+  - shells
+
+- Remove backwards compatibility with ChefSpec < 0.9.0 which was released 5 years ago
+- Improve error messages when the platform data cannot be fetched remotely
+- Fix the logic for enabling / disabling the Github fetching being backwards
+
 ## v4.1.0 (2017-03-27)
 
 - Add a new config option "github_fetching" that disables fetching platform mocks from Github
