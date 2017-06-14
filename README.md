@@ -19,7 +19,7 @@ describe 'awesome_cookbook::default' do
 end
 ```
 
-Alternatively, you can pull "real" ohai data from an existing server:
+Alternatively, you can pull "real" Ohai data from an existing server:
 
 ```ruby
 require 'chefspec'
@@ -57,7 +57,7 @@ Fauxhai provides a bunch of default attributes so that you don't need to mock ou
 
 ### Overriding
 
-`Fauxhai.mock` will also accept a block with override attributes that are merged with all the default attributes. For example, the default Ubutnu 12.04 mock uses `Ruby 1.9.3`. Maybe your system is using `ree`, and you want to verify that the cookbooks work with that data as well:
+`Fauxhai.mock` will also accept a block with override attributes that are merged with all the default attributes. For example, the default Ubuntu 12.04 mock uses `Ruby 1.9.3`. Maybe your system is using `ree`, and you want to verify that the cookbooks work with that data as well:
 
 ```ruby
 require 'chefspec'
@@ -76,15 +76,15 @@ describe 'awesome_cookbook::default' do
 end
 ```
 
-The `node` block variable allows you to set any Ohai attribute on the mock that you want. This provides an easy way to manage your environments. If you find that you are overridding attributes like OS or platform, you should see the section on Contributing.
+The `node` block variable allows you to set any Ohai attribute on the mock that you want. This provides an easy way to manage your environments. If you find that you are overriding attributes like OS or platform, you should see the section on Contributing.
 
 ### Fetching
 
-Alternatively, if you do not want to mock the data, Fauxhai provides a `fetch` mechanism for collecting "real" ohai data from a remote server or local file. Maybe you want to test against the fully-replicated environment for a front-facing server in your pool. Just pass in the `url` option instead of a `platform`:
+Alternatively, if you do not want to mock the data, Fauxhai provides a `fetch` mechanism for collecting "real" Ohai data from a remote server or local file. Maybe you want to test against the fully-replicated environment for a front-facing server in your pool. Just pass in the `url` option instead of a `platform`:
 
 The `fetch` method supports all the same options as the Net-SSH command, such as `:user`, `:password`, `:key_file`, etc.
 
-The `fetch` method will cache the JSON file in a temporary path on your local machine. Similar to gems like VCR, this allows fauxhai to use the cached copy, making your test suite run faster. You can optionally force a cache miss by passing the `:force_cache_miss => true` option to the `fetch` initializer. **Because this is real data, there may be a security concern. Secure your laptop accordingly.**
+The `fetch` method will cache the JSON file in a temporary path on your local machine. Similar to gems like VCR, this allows Fauxhai to use the cached copy, making your test suite run faster. You can optionally force a cache miss by passing the `:force_cache_miss => true` option to the `fetch` initializer. **Because this is real data, there may be a security concern. Secure your laptop accordingly.**
 
 ```ruby
 require 'chefspec'
@@ -101,7 +101,7 @@ describe 'awesome_cookbook::default' do
 end
 ```
 
-This will ssh into the machine (you must have authorization to run `sudo ohai` on that machine), download a copy of the ohai output, and optionally cache that data inside the test directory (speeding up future tests).
+This will ssh into the machine (you must have authorization to run `sudo ohai` on that machine), download a copy of the Ohai output, and optionally cache that data inside the test directory (speeding up future tests).
 
 ### Overriding + Fetching
 
@@ -126,7 +126,7 @@ end
 
 ### Fixturing
 
-If you want to use fauxhai as "fixture" data, you can store real JSON in your project and use the `:path` option:
+If you want to use Fauxhai as "fixture" data, you can store real JSON in your project and use the `:path` option:
 
 ```ruby
 require 'chefspec'
@@ -156,7 +156,7 @@ end
 
 ### Disabling Fetching from Github
 
-On environments that does not have access to the internet, you can disable fetching fauxhai data from github as follow:
+On environments that does not have access to the internet, you can disable fetching Fauxhai data from GitHub as follow:
 
 ```ruby
 require 'chefspec'
@@ -170,7 +170,7 @@ end
 
 ## Testing Multiple Versions
 
-It's a common use case to test multiple version of the same operating system. Here's a simple example to get your started. This is more rspec-related that fauxhai related, but here ya go:
+It's a common use case to test multiple version of the same operating system. Here's a simple example to get your started. This is more rspec-related that Fauxhai related, but here ya go:
 
 ```ruby
 require 'chefspec'
