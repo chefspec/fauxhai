@@ -117,10 +117,6 @@ This file lists each platform known to Fauxhai and the available versions for ea
   - 7.2
   - 7.3
 
-### slackware
-
-  - 14.1
-
 ### smartos
 
   - 5.11
