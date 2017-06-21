@@ -1,5 +1,22 @@
 # Fauxhai Changelog
 
+## v5.1.0 (2017-06-20)
+
+- Added new platform data:
+
+  - `Oracle Linux` 5.11, 6.9, 7.3
+  - `Debian` 9.0
+  - `DragonflyBSD` 4.8-RELEASE
+
+- Platform versions updated for Chef 13:
+
+  - `Oracle Linux` 5.10, 6.8, 7.2
+  - `SUSE Enterprise Linux` 12.1, 12.2
+
+- Newly deprecated platform versions:
+
+  - `DragonflyBSD` 4.2-RELEASE
+
 ## v5.0.0 (2017-06-12)
 
 - Added new platform data:
