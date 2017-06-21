@@ -28,12 +28,19 @@ namespace :documentation do
     f = File.new('PLATFORMS.md', 'w')
     f.write "## Fauxhai Platforms\n\nThis file lists each platform known to Fauxhai and the available versions for each of those platforms. See the ChefSpec documentation for mocking out platforms and platform versions within ChefSpec.\n"
     Dir.glob('./lib/fauxhai/platforms/**') do |platform_path|
-      f.write "\n### #{platform_path.split('/')[-1]}\n\n"
+      versions = []
       Dir.glob(File.join(platform_path, '**.json')).each do |version_path|
         # skip anything marked as deprecated
         data = JSON.parse(File.read(version_path))
         unless data['deprecated']
-          f.write "  - #{version_path.split('/')[-1].chomp('.json')}\n"
+          versions << version_path.split('/')[-1].chomp('.json')
+        end
+      end
+      # make sure there are any non-deprecated platforms before writing out the header
+      unless versions.empty?
+        f.write "\n### #{platform_path.split('/')[-1]}\n\n"
+        versions.each do |v|
+          f.write "  - #{v}\n"
         end
       end
     end
