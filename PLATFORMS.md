@@ -47,6 +47,7 @@ This file lists each platform known to Fauxhai and the available versions for ea
   - 7.11
   - 8.7
   - 8.8
+  - 9.0
 
 ### dragonfly4
 
@@ -101,8 +102,11 @@ This file lists each platform known to Fauxhai and the available versions for ea
 ### oracle
 
   - 5.10
+  - 5.11
   - 6.8
+  - 6.9
   - 7.2
+  - 7.3
 
 ### raspbian
 
