@@ -65,7 +65,7 @@ This file lists each platform known to Fauxhai and the available versions for ea
 
 ### gentoo
 
-  - 2.2
+  - 4.9.6-gentoo-r1
 
 ### ios_xr
 
@@ -89,10 +89,6 @@ This file lists each platform known to Fauxhai and the available versions for ea
 
   - 151018
 
-### openbsd
-
-  - 5.4
-
 ### opensuse
 
   - 13.2
@@ -115,9 +111,9 @@ This file lists each platform known to Fauxhai and the available versions for ea
 ### redhat
 
   - 5.10
-  - 5.9
-  - 6.7
+  - 5.11
   - 6.8
+  - 6.9
   - 7.2
   - 7.3
 
