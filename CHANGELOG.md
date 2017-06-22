@@ -1,5 +1,25 @@
 # Fauxhai Changelog
 
+## v5.2.0 (2017-06-21)
+
+- Added new platform data:
+
+  - `Redhat` 5.11, 6.9
+  - `Gentoo` 4.9.6-gentoo-r1
+
+- Platform versions updated for Chef 13:
+
+  - `Solaris` 5.10
+  - `Redhat` 5.10, 6.8, 7.2, 7.3
+  - `SUSE Enterprise Linux` 11.4
+
+- Newly deprecated platform versions:
+
+  - `Gentoo` 4.2
+  - `openBSD` 5.4
+  - `Redhat` 5.9, 6.7
+  - `Slackware` 14.1
+
 ## v5.1.0 (2017-06-20)
 
 - Added new platform data:
