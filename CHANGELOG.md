@@ -1,5 +1,15 @@
 # Fauxhai Changelog
 
+## v5.3.0 (2017-07-31)
+
+- Added new platform data:
+
+  - `Debian` 8.9, 9.1
+  - `FreeBSD` 11.1
+  - `Fedora` 26
+  - `Windows` 2016
+  - `openSUSE` 42.3
+
 ## v5.2.0 (2017-06-21)
 
 - Added new platform data:
