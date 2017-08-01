@@ -47,7 +47,9 @@ This file lists each platform known to Fauxhai and the available versions for ea
   - 7.11
   - 8.7
   - 8.8
+  - 8.9
   - 9.0
+  - 9.1
 
 ### dragonfly4
 
@@ -57,11 +59,13 @@ This file lists each platform known to Fauxhai and the available versions for ea
 
   - 24
   - 25
+  - 26
 
 ### freebsd
 
   - 10.3
   - 11.0
+  - 11.1
 
 ### gentoo
 
@@ -94,6 +98,7 @@ This file lists each platform known to Fauxhai and the available versions for ea
   - 13.2
   - 42.1
   - 42.2
+  - 42.3
 
 ### oracle
 
@@ -143,5 +148,6 @@ This file lists each platform known to Fauxhai and the available versions for ea
   - 2008R2
   - 2012
   - 2012R2
+  - 2016
   - 7
   - 8.1
