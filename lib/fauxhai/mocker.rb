@@ -82,7 +82,7 @@ module Fauxhai
     def parse_and_validate(unparsed_data)
       parsed_data = JSON.parse(unparsed_data)
       if parsed_data['deprecated']
-        STDERR.puts "WARNING: Fauxhai platform data for #{parsed_data['platform']} #{parsed_data['platform_version']} is deprecated and will be removed from a future release. #{PLATFORM_LIST_MESSAGE}"
+        STDERR.puts "WARNING: Fauxhai platform data for #{parsed_data['platform']} #{parsed_data['platform_version']} is deprecated and will be removed in the 6.0 release 3/2018. #{PLATFORM_LIST_MESSAGE}"
       end
       parsed_data
     end
