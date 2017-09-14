@@ -136,6 +136,7 @@ This file lists each platform known to Fauxhai and the available versions for ea
   - 11.4
   - 12.1
   - 12.2
+  - 12.3
 
 ### ubuntu
 
