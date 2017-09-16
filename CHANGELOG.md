@@ -1,5 +1,16 @@
 # Fauxhai Changelog
 
+## v5.4.0 (2017-09-15)
+
+- Set the date for the removal of all deprecated platform data to 3/2018 to coincide with ChefDK 3.0
+- Removed several non-critical files from the Gemfile to slim the package size down sligthly
+- Added new platform data:
+
+  - `Redhat` 7.4
+  - `Oracle` 7.4
+  - `SUSE Enterprise Linux` 12.3 (aka 12 SP3)
+  - `CentOS` 7.4
+
 ## v5.3.0 (2017-07-31)
 
 - Added new platform data:
