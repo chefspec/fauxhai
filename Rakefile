@@ -2,7 +2,7 @@
 require 'bundler/gem_tasks'
 require 'json'
 
-task :default => ['validate:json']
+task :default => ['validate:json', 'spec']
 
 namespace :validate do
   desc 'Validate mock platform data is valid JSON'
@@ -47,3 +47,6 @@ namespace :documentation do
     f.close
   end
 end
+
+require 'rspec/core/rake_task'
+RSpec::Core::RakeTask.new(:spec)
