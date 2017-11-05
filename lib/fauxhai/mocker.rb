@@ -87,7 +87,7 @@ module Fauxhai
 
     def platform
       @options[:platform] ||= begin
-                                STDERR.puts "WARNING: you must specify a 'platform' and 'version' to your ChefSpec Runner and/or Fauxhai constructor, in the future omitting these will become a hard error. #{PLATFORM_LIST_MESSAGE}"
+                                STDERR.puts "WARNING: you must specify a 'platform' for your ChefSpec Runner and/or Fauxhai constructor, in the future omitting these will become a hard error. #{PLATFORM_LIST_MESSAGE}"
                                 'chefspec'
                               end
     end
@@ -97,11 +97,22 @@ module Fauxhai
     end
 
     def version
-      @options[:version] ||= chefspec_version || raise(Fauxhai::Exception::InvalidVersion.new("Platform version not specified. #{PLATFORM_LIST_MESSAGE}"))
+      @options[:version] ||= begin
+        # Get a list of all versions.
+        versions = Dir[File.join(platform_path, '*.json')].map {|path| File.basename(path, '.json') }
+        # Check if this is an unknown platform.
+        if versions.empty?
+          raise Fauxhai::Exception::InvalidPlatform.new("Platform #{platform} not known. #{PLATFORM_LIST_MESSAGE}")
+        end
+        # Take the highest version available. Treat R like a separator because Windows.
+        begin
+          versions.max_by {|ver| Gem::Version.create(ver.gsub(/r/i, '.')) }
+        rescue ArgumentError
+          # Welp, do something stable.
+          versions.max
+        end
+      end
     end
 
-    def chefspec_version
-      platform == 'chefspec' ? '0.6.1' : nil
-    end
   end
 end
