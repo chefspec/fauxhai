@@ -30,8 +30,6 @@ module Fauxhai
 
       @data = fauxhai_data
       yield(@data) if block_given?
-
-      @data
     end
 
     private
