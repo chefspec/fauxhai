@@ -1,9 +1,17 @@
 # Fauxhai Changelog
 
+## v5.5.0 (2017-11-07)
+
+- Added new platform data:
+
+  - `Debian` 9.2
+  - `macOS` 10.13
+  - `Amazon Linux` 2017.09
+
 ## v5.4.0 (2017-09-15)
 
 - Set the date for the removal of all deprecated platform data to 3/2018 to coincide with ChefDK 3.0
-- Removed several non-critical files from the Gemfile to slim the package size down sligthly
+- Removed several non-critical files from the Gemfile to slim the package size down slightly
 - Added new platform data:
 
   - `Redhat` 7.4
@@ -99,8 +107,11 @@
   - `windows`: 2003R2, 8
 
 - Data provided by the chef_packages will no longer be mocked, but instead the actual Ohai data will be used. This corrects incorrect paths to the Chef/Ohai binaries on many platforms
+
 - Update the chef/ohai dependencies to allow for Chef/Ohai 13
+
 - Improve the mocked Network data to return more platform appropriate network information.
+
 - Whitelisted additional Ohai plugins to provide better mocked data
 
   - idletime_seconds
@@ -114,7 +125,9 @@
   - shells
 
 - Remove backwards compatibility with ChefSpec < 0.9.0 which was released 5 years ago
+
 - Improve error messages when the platform data cannot be fetched remotely
+
 - Fix the logic for enabling / disabling the Github fetching being backwards
 
 ## v4.1.0 (2017-03-27)
