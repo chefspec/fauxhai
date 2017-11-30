@@ -18,6 +18,7 @@ This file lists each platform known to Fauxhai and the available versions for ea
   - 2016.03
   - 2016.09
   - 2017.03
+  - 2017.09
 
 ### arch
 
@@ -51,6 +52,7 @@ This file lists each platform known to Fauxhai and the available versions for ea
   - 8.9
   - 9.0
   - 9.1
+  - 9.2
 
 ### dragonfly4
 
@@ -85,6 +87,7 @@ This file lists each platform known to Fauxhai and the available versions for ea
   - 10.10
   - 10.11
   - 10.12
+  - 10.13
 
 ### nexus
 
