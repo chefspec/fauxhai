@@ -35,10 +35,6 @@ This file lists each platform known to Fauxhai and the available versions for ea
   - 7.3.1611
   - 7.4.1708
 
-### chefspec
-
-  - 0.6.1
-
 ### clearos
 
   - 7.0
