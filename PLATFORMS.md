@@ -43,12 +43,14 @@ This file lists each platform known to Fauxhai and the available versions for ea
 
   - 7.10
   - 7.11
+  - 8.10
   - 8.7
   - 8.8
   - 8.9
   - 9.0
   - 9.1
   - 9.2
+  - 9.3
 
 ### dragonfly4
 
@@ -59,10 +61,12 @@ This file lists each platform known to Fauxhai and the available versions for ea
   - 24
   - 25
   - 26
+  - 27
 
 ### freebsd
 
   - 10.3
+  - 10.4
   - 11.0
   - 11.1
 
