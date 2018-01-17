@@ -1,5 +1,12 @@
 # Fauxhai Changelog
 
+## v5.6.0 (2018-01-17)
+
+- Add new platform data:
+  - `Debian` 9.3, 8.10
+  - `Fedora` 27
+  - `FreeBSD` 10.4
+
 ## v5.5.0 (2017-11-07)
 
 - Added new platform data:
