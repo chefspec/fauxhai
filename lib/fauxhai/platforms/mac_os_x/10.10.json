@@ -1,12 +1,12 @@
 {
   "chef_packages": {
     "chef": {
-      "version": "13.1.31",
-      "chef_root": "/opt/chef/embedded/lib/ruby/gems/2.4.0/gems/chef-13.1.31/lib"
+      "chef_root": "/opt/chef/embedded/lib/ruby/gems/2.4.0/gems/chef-13.1.31/lib",
+      "version": "13.1.31"
     },
     "ohai": {
-      "version": "13.1.0",
-      "ohai_root": "/opt/chef/embedded/lib/ruby/gems/2.4.0/gems/ohai-13.1.0/lib/ohai"
+      "ohai_root": "/opt/chef/embedded/lib/ruby/gems/2.4.0/gems/ohai-13.1.0/lib/ohai",
+      "version": "13.1.0"
     }
   },
   "command": {
@@ -15,68 +15,58 @@
   "counters": {
     "network": {
       "interfaces": {
-        "lo": {
-          "tx": {
-            "queuelen": "1",
-            "bytes": 0,
-            "packets": 0,
-            "errors": 0,
-            "drop": 0,
-            "carrier": 0,
-            "collisions": 0
-          },
-          "rx": {
-            "bytes": 0,
-            "packets": 0,
-            "errors": 0,
-            "drop": 0,
-            "overrun": 0
-          }
-        },
         "en0": {
           "rx": {
             "bytes": 0,
-            "packets": 0,
-            "errors": 0,
-            "drop": 0,
-            "overrun": 0,
-            "frame": 0,
             "compressed": 0,
-            "multicast": 0
+            "drop": 0,
+            "errors": 0,
+            "frame": 0,
+            "multicast": 0,
+            "overrun": 0,
+            "packets": 0
           },
           "tx": {
             "bytes": 0,
-            "packets": 0,
-            "errors": 0,
-            "drop": 0,
-            "overrun": 0,
-            "collisions": 0,
             "carrier": 0,
-            "compressed": 0
+            "collisions": 0,
+            "compressed": 0,
+            "drop": 0,
+            "errors": 0,
+            "overrun": 0,
+            "packets": 0
+          }
+        },
+        "lo": {
+          "rx": {
+            "bytes": 0,
+            "drop": 0,
+            "errors": 0,
+            "overrun": 0,
+            "packets": 0
+          },
+          "tx": {
+            "bytes": 0,
+            "carrier": 0,
+            "collisions": 0,
+            "drop": 0,
+            "errors": 0,
+            "packets": 0,
+            "queuelen": "1"
           }
         }
       }
     }
   },
   "cpu": {
+    "cores": 1,
     "real": 1,
-    "total": 1,
-    "cores": 1
+    "total": 1
   },
   "current_user": "fauxhai",
-  "dmi": {
-  },
+  "dmi": {},
   "domain": "local",
   "etc": {
-    "passwd": {
-      "fauxhai": {
-        "dir": "/home/fauxhai",
-        "gid": 0,
-        "uid": 0,
-        "shell": "/bin/bash",
-        "gecos": "Fauxhai"
-      }
-    },
     "group": {
       "fauxhai": {
         "gid": 0,
@@ -84,59 +74,66 @@
           "fauxhai"
         ]
       }
+    },
+    "passwd": {
+      "fauxhai": {
+        "dir": "/home/fauxhai",
+        "gecos": "Fauxhai",
+        "gid": 0,
+        "shell": "/bin/bash",
+        "uid": 0
+      }
     }
   },
   "filesystem": {
     "by_device": {
       "/dev/disk0s2": {
         "block_size": 512,
+        "fs_type": "hfs",
+        "inodes_available": "8044016",
+        "inodes_percent_used": "22%",
+        "inodes_used": "2231840",
+        "kb_available": "32176064",
         "kb_size": "41103432",
         "kb_used": "8671368",
-        "kb_available": "32176064",
-        "percent_used": "22%",
-        "inodes_used": "2231840",
-        "inodes_available": "8044016",
-        "total_inodes": "10275856",
-        "inodes_percent_used": "22%",
-        "fs_type": "hfs",
         "mount_options": [
           "local",
           "journaled"
         ],
         "mounts": [
           "/"
-        ]
+        ],
+        "percent_used": "22%",
+        "total_inodes": "10275856"
       },
       "devfs": {
         "block_size": 512,
+        "fs_type": "devfs",
+        "inodes_available": "0",
+        "inodes_percent_used": "100%",
+        "inodes_used": "616",
+        "kb_available": "0",
         "kb_size": "177",
         "kb_used": "177",
-        "kb_available": "0",
-        "percent_used": "100%",
-        "inodes_used": "616",
-        "inodes_available": "0",
-        "total_inodes": "616",
-        "inodes_percent_used": "100%",
-        "fs_type": "devfs",
         "mount_options": [
           "local",
           "nobrowse"
         ],
         "mounts": [
           "/dev"
-        ]
+        ],
+        "percent_used": "100%",
+        "total_inodes": "616"
       },
       "map -hosts": {
         "block_size": 512,
+        "fs_type": "autofs",
+        "inodes_available": "0",
+        "inodes_percent_used": "100%",
+        "inodes_used": "0",
+        "kb_available": "0",
         "kb_size": "0",
         "kb_used": "0",
-        "kb_available": "0",
-        "percent_used": "100%",
-        "inodes_used": "0",
-        "inodes_available": "0",
-        "total_inodes": "0",
-        "inodes_percent_used": "100%",
-        "fs_type": "autofs",
         "mount_options": [
           "nosuid",
           "automounted",
@@ -144,180 +141,182 @@
         ],
         "mounts": [
           "/net"
-        ]
+        ],
+        "percent_used": "100%",
+        "total_inodes": "0"
       },
       "map auto_home": {
         "block_size": 512,
+        "fs_type": "autofs",
+        "inodes_available": "0",
+        "inodes_percent_used": "100%",
+        "inodes_used": "0",
+        "kb_available": "0",
         "kb_size": "0",
         "kb_used": "0",
-        "kb_available": "0",
-        "percent_used": "100%",
-        "inodes_used": "0",
-        "inodes_available": "0",
-        "total_inodes": "0",
-        "inodes_percent_used": "100%",
-        "fs_type": "autofs",
         "mount_options": [
           "automounted",
           "nobrowse"
         ],
         "mounts": [
           "/home"
-        ]
+        ],
+        "percent_used": "100%",
+        "total_inodes": "0"
       }
     },
     "by_mountpoint": {
       "/": {
         "block_size": 512,
+        "devices": [
+          "/dev/disk0s2"
+        ],
+        "fs_type": "hfs",
+        "inodes_available": "8044016",
+        "inodes_percent_used": "22%",
+        "inodes_used": "2231840",
+        "kb_available": "32176064",
         "kb_size": "41103432",
         "kb_used": "8671368",
-        "kb_available": "32176064",
-        "percent_used": "22%",
-        "inodes_used": "2231840",
-        "inodes_available": "8044016",
-        "total_inodes": "10275856",
-        "inodes_percent_used": "22%",
-        "fs_type": "hfs",
         "mount_options": [
           "local",
           "journaled"
         ],
-        "devices": [
-          "/dev/disk0s2"
-        ]
+        "percent_used": "22%",
+        "total_inodes": "10275856"
       },
       "/dev": {
         "block_size": 512,
+        "devices": [
+          "devfs"
+        ],
+        "fs_type": "devfs",
+        "inodes_available": "0",
+        "inodes_percent_used": "100%",
+        "inodes_used": "616",
+        "kb_available": "0",
         "kb_size": "177",
         "kb_used": "177",
-        "kb_available": "0",
-        "percent_used": "100%",
-        "inodes_used": "616",
-        "inodes_available": "0",
-        "total_inodes": "616",
-        "inodes_percent_used": "100%",
-        "fs_type": "devfs",
         "mount_options": [
           "local",
           "nobrowse"
         ],
+        "percent_used": "100%",
+        "total_inodes": "616"
+      },
+      "/home": {
+        "block_size": 512,
         "devices": [
-          "devfs"
-        ]
+          "map auto_home"
+        ],
+        "fs_type": "autofs",
+        "inodes_available": "0",
+        "inodes_percent_used": "100%",
+        "inodes_used": "0",
+        "kb_available": "0",
+        "kb_size": "0",
+        "kb_used": "0",
+        "mount_options": [
+          "automounted",
+          "nobrowse"
+        ],
+        "percent_used": "100%",
+        "total_inodes": "0"
       },
       "/net": {
         "block_size": 512,
+        "devices": [
+          "map -hosts"
+        ],
+        "fs_type": "autofs",
+        "inodes_available": "0",
+        "inodes_percent_used": "100%",
+        "inodes_used": "0",
+        "kb_available": "0",
         "kb_size": "0",
         "kb_used": "0",
-        "kb_available": "0",
-        "percent_used": "100%",
-        "inodes_used": "0",
-        "inodes_available": "0",
-        "total_inodes": "0",
-        "inodes_percent_used": "100%",
-        "fs_type": "autofs",
         "mount_options": [
           "nosuid",
           "automounted",
           "nobrowse"
         ],
-        "devices": [
-          "map -hosts"
-        ]
-      },
-      "/home": {
-        "block_size": 512,
-        "kb_size": "0",
-        "kb_used": "0",
-        "kb_available": "0",
         "percent_used": "100%",
-        "inodes_used": "0",
-        "inodes_available": "0",
-        "total_inodes": "0",
-        "inodes_percent_used": "100%",
-        "fs_type": "autofs",
-        "mount_options": [
-          "automounted",
-          "nobrowse"
-        ],
-        "devices": [
-          "map auto_home"
-        ]
+        "total_inodes": "0"
       }
     },
     "by_pair": {
       "/dev/disk0s2,/": {
         "block_size": 512,
         "device": "/dev/disk0s2",
+        "fs_type": "hfs",
+        "inodes_available": "8044016",
+        "inodes_percent_used": "22%",
+        "inodes_used": "2231840",
+        "kb_available": "32176064",
         "kb_size": "41103432",
         "kb_used": "8671368",
-        "kb_available": "32176064",
-        "percent_used": "22%",
-        "inodes_used": "2231840",
-        "inodes_available": "8044016",
-        "total_inodes": "10275856",
-        "inodes_percent_used": "22%",
         "mount": "/",
-        "fs_type": "hfs",
         "mount_options": [
           "local",
           "journaled"
-        ]
+        ],
+        "percent_used": "22%",
+        "total_inodes": "10275856"
       },
       "devfs,/dev": {
         "block_size": 512,
         "device": "devfs",
+        "fs_type": "devfs",
+        "inodes_available": "0",
+        "inodes_percent_used": "100%",
+        "inodes_used": "616",
+        "kb_available": "0",
         "kb_size": "177",
         "kb_used": "177",
-        "kb_available": "0",
-        "percent_used": "100%",
-        "inodes_used": "616",
-        "inodes_available": "0",
-        "total_inodes": "616",
-        "inodes_percent_used": "100%",
         "mount": "/dev",
-        "fs_type": "devfs",
         "mount_options": [
           "local",
           "nobrowse"
-        ]
+        ],
+        "percent_used": "100%",
+        "total_inodes": "616"
       },
       "map -hosts,/net": {
         "block_size": 512,
         "device": "map -hosts",
+        "fs_type": "autofs",
+        "inodes_available": "0",
+        "inodes_percent_used": "100%",
+        "inodes_used": "0",
+        "kb_available": "0",
         "kb_size": "0",
         "kb_used": "0",
-        "kb_available": "0",
-        "percent_used": "100%",
-        "inodes_used": "0",
-        "inodes_available": "0",
-        "total_inodes": "0",
-        "inodes_percent_used": "100%",
         "mount": "/net",
-        "fs_type": "autofs",
         "mount_options": [
           "nosuid",
           "automounted",
           "nobrowse"
-        ]
+        ],
+        "percent_used": "100%",
+        "total_inodes": "0"
       },
       "map auto_home,/home": {
         "block_size": 512,
         "device": "map auto_home",
+        "fs_type": "autofs",
+        "inodes_available": "0",
+        "inodes_percent_used": "100%",
+        "inodes_used": "0",
+        "kb_available": "0",
         "kb_size": "0",
         "kb_used": "0",
-        "kb_available": "0",
-        "percent_used": "100%",
-        "inodes_used": "0",
-        "inodes_available": "0",
-        "total_inodes": "0",
-        "inodes_percent_used": "100%",
         "mount": "/home",
-        "fs_type": "autofs",
         "mount_options": [
           "automounted",
           "nobrowse"
-        ]
+        ],
+        "percent_used": "100%",
+        "total_inodes": "0"
       }
     }
   },
@@ -327,464 +326,464 @@
   "idletime_seconds": 2646450,
   "ipaddress": "10.0.0.2",
   "kernel": {
-    "name": "Darwin",
-    "release": "14.0.0",
-    "version": "Darwin Kernel Version 14.0.0: Fri Sep 19 00:26:44 PDT 2014; root:xnu-2782.1.97~2/RELEASE_X86_64",
     "machine": "x86_64",
-    "processor": "i386",
-    "os": "Darwin",
     "modules": {
-      "com.apple.kec.pthread": {
-        "version": "1",
-        "size": 49152,
-        "index": "8",
-        "refcount": "0"
-      },
-      "com.apple.kec.Libm": {
-        "version": "1",
-        "size": 36864,
-        "index": "9",
-        "refcount": "1"
-      },
-      "com.apple.kec.corecrypto": {
-        "version": "1.0",
-        "size": 638976,
-        "index": "10",
-        "refcount": "2"
-      },
-      "com.apple.iokit.IOACPIFamily": {
-        "version": "1.4",
-        "size": 36864,
-        "index": "11",
-        "refcount": "14"
-      },
-      "com.apple.iokit.IOPCIFamily": {
-        "version": "2.9",
-        "size": 192512,
-        "index": "12",
-        "refcount": "19"
-      },
-      "com.apple.driver.AppleACPIPlatform": {
-        "version": "3.1",
-        "size": 389120,
-        "index": "13",
-        "refcount": "1"
-      },
-      "com.apple.driver.AppleFDEKeyStore": {
-        "version": "28.30",
-        "size": 45056,
-        "index": "14",
-        "refcount": "1"
-      },
-      "com.apple.iokit.IOReportFamily": {
-        "version": "31",
-        "size": 28672,
-        "index": "15",
-        "refcount": "1"
-      },
-      "com.apple.iokit.IOStorageFamily": {
-        "version": "2.0",
-        "size": 155648,
-        "index": "16",
-        "refcount": "8"
-      },
-      "com.apple.driver.DiskImages": {
-        "version": "389.1",
-        "size": 102400,
-        "index": "17",
-        "refcount": "0"
-      },
-      "com.apple.driver.AppleCredentialManager": {
-        "version": "1.0",
-        "size": 61440,
-        "index": "18",
-        "refcount": "1"
-      },
-      "com.apple.driver.AppleMobileFileIntegrity": {
-        "version": "1.0.5",
-        "size": 53248,
-        "index": "19",
-        "refcount": "2"
-      },
-      "com.apple.driver.AppleKeyStore": {
-        "version": "2",
-        "size": 143360,
-        "index": "20",
-        "refcount": "0"
-      },
-      "com.apple.security.TMSafetyNet": {
-        "version": "8",
-        "size": 8192,
-        "index": "21",
-        "refcount": "0"
-      },
-      "com.apple.security.sandbox": {
-        "version": "300.0",
-        "size": 94208,
-        "index": "23",
-        "refcount": "1"
-      },
-      "com.apple.security.quarantine": {
-        "version": "3",
-        "size": 36864,
-        "index": "24",
-        "refcount": "0"
-      },
-      "com.apple.nke.applicationfirewall": {
-        "version": "161",
-        "size": 32768,
-        "index": "25",
-        "refcount": "0"
-      },
-      "com.apple.driver.AppleAPIC": {
-        "version": "1.7",
-        "size": 12288,
-        "index": "26",
-        "refcount": "0"
-      },
-      "com.apple.driver.AppleSMBIOS": {
-        "version": "2.1",
-        "size": 16384,
-        "index": "27",
-        "refcount": "0"
-      },
-      "com.apple.driver.AppleRTC": {
-        "version": "2.0",
-        "size": 32768,
-        "index": "28",
-        "refcount": "0"
-      },
-      "com.apple.driver.AppleHPET": {
-        "version": "1.8",
-        "size": 12288,
-        "index": "29",
-        "refcount": "0"
-      },
-      "com.apple.iokit.IOHIDFamily": {
-        "version": "2.0.0",
-        "size": 483328,
-        "index": "30",
-        "refcount": "2"
+      "com.apple.BootCache": {
+        "index": "35",
+        "refcount": "0",
+        "size": 40960,
+        "version": "35"
       },
       "com.apple.driver.AppleACPIButtons": {
-        "version": "3.1",
-        "size": 16384,
         "index": "31",
-        "refcount": "0"
+        "refcount": "0",
+        "size": 16384,
+        "version": "3.1"
       },
-      "com.apple.driver.AppleEFIRuntime": {
-        "version": "2.0",
-        "size": 20480,
-        "index": "32",
-        "refcount": "1"
-      },
-      "com.apple.driver.AppleEFINVRAM": {
-        "version": "2.0",
-        "size": 45056,
-        "index": "33",
-        "refcount": "0"
-      },
-      "com.apple.iokit.IONetworkingFamily": {
-        "version": "3.2",
-        "size": 180224,
-        "index": "34",
-        "refcount": "2"
-      },
-      "com.apple.BootCache": {
-        "version": "35",
-        "size": 40960,
-        "index": "35",
-        "refcount": "0"
-      },
-      "com.apple.iokit.IOATAFamily": {
-        "version": "2.5.3",
-        "size": 102400,
-        "index": "39",
-        "refcount": "1"
-      },
-      "com.apple.driver.AppleIntelPIIXATA": {
-        "version": "2.5.1",
-        "size": 40960,
-        "index": "40",
-        "refcount": "0"
-      },
-      "com.apple.iokit.IOUSBFamily": {
-        "version": "705.4.14",
-        "size": 413696,
-        "index": "41",
-        "refcount": "9"
-      },
-      "com.apple.driver.AppleUSBUHCI": {
-        "version": "656.4.1",
-        "size": 65536,
-        "index": "42",
-        "refcount": "0"
-      },
-      "com.apple.driver.AppleUSBEHCI": {
-        "version": "705.4.14",
-        "size": 102400,
-        "index": "43",
-        "refcount": "0"
-      },
-      "com.apple.iokit.IOAHCIFamily": {
-        "version": "2.7.0",
-        "size": 90112,
-        "index": "44",
-        "refcount": "3"
+      "com.apple.driver.AppleACPIPlatform": {
+        "index": "13",
+        "refcount": "1",
+        "size": 389120,
+        "version": "3.1"
       },
       "com.apple.driver.AppleAHCIPort": {
-        "version": "3.0.7",
-        "size": 110592,
         "index": "45",
-        "refcount": "0"
-      },
-      "com.apple.driver.AppleUSBXHCI": {
-        "version": "705.4.14",
-        "size": 131072,
-        "index": "46",
-        "refcount": "0"
-      },
-      "com.apple.driver.AppleUSBHub": {
-        "version": "705.4.1",
+        "refcount": "0",
         "size": 110592,
-        "index": "47",
-        "refcount": "0"
+        "version": "3.0.7"
       },
-      "com.apple.iokit.IOAHCIBlockStorage": {
-        "version": "2.6.5",
-        "size": 98304,
-        "index": "48",
-        "refcount": "0"
-      },
-      "com.apple.iokit.IOSCSIArchitectureModelFamily": {
-        "version": "3.7.0",
-        "size": 176128,
-        "index": "49",
-        "refcount": "3"
-      },
-      "com.apple.iokit.IOAHCISerialATAPI": {
-        "version": "2.6.1",
-        "size": 53248,
-        "index": "50",
-        "refcount": "0"
-      },
-      "com.apple.driver.XsanFilter": {
-        "version": "404",
+      "com.apple.driver.AppleAPIC": {
+        "index": "26",
+        "refcount": "0",
         "size": 12288,
-        "index": "51",
-        "refcount": "0"
+        "version": "1.7"
       },
-      "com.apple.iokit.SCSITaskUserClient": {
-        "version": "3.7.0",
-        "size": 28672,
-        "index": "52",
-        "refcount": "0"
+      "com.apple.driver.AppleCredentialManager": {
+        "index": "18",
+        "refcount": "1",
+        "size": 61440,
+        "version": "1.0"
       },
-      "com.apple.iokit.IOCDStorageFamily": {
-        "version": "1.7.1",
-        "size": 57344,
-        "index": "53",
-        "refcount": "3"
-      },
-      "com.apple.iokit.IODVDStorageFamily": {
-        "version": "1.7.1",
+      "com.apple.driver.AppleEFINVRAM": {
+        "index": "33",
+        "refcount": "0",
         "size": 45056,
-        "index": "54",
-        "refcount": "2"
+        "version": "2.0"
       },
-      "com.apple.iokit.IOBDStorageFamily": {
-        "version": "1.7",
-        "size": 36864,
-        "index": "55",
-        "refcount": "1"
-      },
-      "com.apple.iokit.IOSCSIMultimediaCommandsDevice": {
-        "version": "3.7.0",
-        "size": 106496,
-        "index": "56",
-        "refcount": "0"
-      },
-      "com.apple.driver.AppleUSBComposite": {
-        "version": "705.4.9",
-        "size": 40960,
-        "index": "57",
-        "refcount": "1"
-      },
-      "com.apple.iokit.IOUSBHIDDriver": {
-        "version": "705.4.0",
-        "size": 36864,
-        "index": "58",
-        "refcount": "0"
-      },
-      "com.apple.driver.AppleUSBMergeNub": {
-        "version": "705.4.0",
-        "size": 28672,
-        "index": "59",
-        "refcount": "0"
-      },
-      "com.apple.driver.IOPlatformPluginLegacy": {
-        "version": "1.0.0",
-        "size": 73728,
-        "index": "61",
-        "refcount": "1"
-      },
-      "com.apple.driver.AppleSMC": {
-        "version": "3.1.9",
-        "size": 106496,
-        "index": "62",
-        "refcount": "2"
-      },
-      "com.apple.iokit.IOHDAFamily": {
-        "version": "267.0",
-        "size": 49152,
-        "index": "64",
-        "refcount": "2"
-      },
-      "com.apple.iokit.IOGraphicsFamily": {
-        "version": "2.4.1",
-        "size": 241664,
-        "index": "65",
-        "refcount": "7"
-      },
-      "com.apple.driver.AppleHDAController": {
-        "version": "267.0",
-        "size": 110592,
-        "index": "66",
-        "refcount": "1"
-      },
-      "com.vmware.kext.VMwareGfx": {
-        "version": "0207.51.48",
-        "size": 77824,
-        "index": "69",
-        "refcount": "0"
-      },
-      "com.apple.iokit.IONDRVSupport": {
-        "version": "2.4.1",
-        "size": 65536,
-        "index": "70",
-        "refcount": "1"
-      },
-      "com.apple.driver.AppleHV": {
-        "version": "1",
-        "size": 45056,
-        "index": "71",
-        "refcount": "0"
-      },
-      "com.apple.driver.AppleHWAccess": {
-        "version": "1",
-        "size": 12288,
-        "index": "72",
-        "refcount": "0"
-      },
-      "com.apple.iokit.IOSurface": {
-        "version": "97",
-        "size": 77824,
-        "index": "74",
-        "refcount": "0"
-      },
-      "com.apple.iokit.IOUserEthernet": {
-        "version": "1.0.1",
-        "size": 24576,
-        "index": "75",
-        "refcount": "0"
-      },
-      "com.apple.iokit.IOSMBusFamily": {
-        "version": "1.1",
-        "size": 16384,
-        "index": "76",
-        "refcount": "1"
-      },
-      "com.apple.driver.AppleMCCSControl": {
-        "version": "1.2.10",
-        "size": 57344,
-        "index": "78",
-        "refcount": "0"
-      },
-      "com.apple.driver.AppleUpstreamUserClient": {
-        "version": "3.6.1",
+      "com.apple.driver.AppleEFIRuntime": {
+        "index": "32",
+        "refcount": "1",
         "size": 20480,
-        "index": "79",
-        "refcount": "0"
+        "version": "2.0"
       },
-      "com.apple.iokit.IOUSBUserClient": {
-        "version": "705.4.0",
-        "size": 12288,
-        "index": "80",
-        "refcount": "0"
-      },
-      "com.apple.vecLib.kext": {
-        "version": "1.2.0",
-        "size": 487424,
-        "index": "81",
-        "refcount": "2"
-      },
-      "com.apple.iokit.IOAudioFamily": {
-        "version": "200.6",
-        "size": 192512,
-        "index": "82",
-        "refcount": "3"
-      },
-      "com.apple.kext.OSvKernDSPLib": {
-        "version": "1.15",
-        "size": 77824,
-        "index": "83",
-        "refcount": "1"
-      },
-      "com.apple.driver.DspFuncLib": {
-        "version": "267.0",
-        "size": 897024,
-        "index": "84",
-        "refcount": "1"
+      "com.apple.driver.AppleFDEKeyStore": {
+        "index": "14",
+        "refcount": "1",
+        "size": 45056,
+        "version": "28.30"
       },
       "com.apple.driver.AppleHDA": {
-        "version": "267.0",
-        "size": 688128,
         "index": "85",
-        "refcount": "0"
+        "refcount": "0",
+        "size": 688128,
+        "version": "267.0"
+      },
+      "com.apple.driver.AppleHDAController": {
+        "index": "66",
+        "refcount": "1",
+        "size": 110592,
+        "version": "267.0"
+      },
+      "com.apple.driver.AppleHPET": {
+        "index": "29",
+        "refcount": "0",
+        "size": 12288,
+        "version": "1.8"
+      },
+      "com.apple.driver.AppleHV": {
+        "index": "71",
+        "refcount": "0",
+        "size": 45056,
+        "version": "1"
+      },
+      "com.apple.driver.AppleHWAccess": {
+        "index": "72",
+        "refcount": "0",
+        "size": 12288,
+        "version": "1"
+      },
+      "com.apple.driver.AppleIntelPIIXATA": {
+        "index": "40",
+        "refcount": "0",
+        "size": 40960,
+        "version": "2.5.1"
+      },
+      "com.apple.driver.AppleKeyStore": {
+        "index": "20",
+        "refcount": "0",
+        "size": 143360,
+        "version": "2"
+      },
+      "com.apple.driver.AppleMCCSControl": {
+        "index": "78",
+        "refcount": "0",
+        "size": 57344,
+        "version": "1.2.10"
+      },
+      "com.apple.driver.AppleMobileFileIntegrity": {
+        "index": "19",
+        "refcount": "2",
+        "size": 53248,
+        "version": "1.0.5"
       },
       "com.apple.driver.AppleOSXWatchdog": {
-        "version": "1",
-        "size": 16384,
         "index": "87",
-        "refcount": "0"
+        "refcount": "0",
+        "size": 16384,
+        "version": "1"
       },
-      "com.apple.iokit.IOSerialFamily": {
-        "version": "11",
-        "size": 57344,
-        "index": "89",
-        "refcount": "1"
+      "com.apple.driver.AppleRTC": {
+        "index": "28",
+        "refcount": "0",
+        "size": 32768,
+        "version": "2.0"
       },
-      "com.apple.kext.triggers": {
-        "version": "1.0",
-        "size": 20480,
-        "index": "92",
-        "refcount": "1"
+      "com.apple.driver.AppleSMBIOS": {
+        "index": "27",
+        "refcount": "0",
+        "size": 16384,
+        "version": "2.1"
       },
-      "com.apple.filesystems.autofs": {
-        "version": "3.0",
-        "size": 36864,
-        "index": "93",
-        "refcount": "0"
+      "com.apple.driver.AppleSMC": {
+        "index": "62",
+        "refcount": "2",
+        "size": 106496,
+        "version": "3.1.9"
       },
-      "com.vmware.kext.vmmemctl": {
-        "version": "0207.51.48",
-        "size": 24576,
-        "index": "94",
-        "refcount": "0"
-      },
-      "com.vmware.kext.vmhgfs": {
-        "version": "0207.51.48",
+      "com.apple.driver.AppleUSBComposite": {
+        "index": "57",
+        "refcount": "1",
         "size": 40960,
-        "index": "95",
-        "refcount": "0"
+        "version": "705.4.9"
+      },
+      "com.apple.driver.AppleUSBEHCI": {
+        "index": "43",
+        "refcount": "0",
+        "size": 102400,
+        "version": "705.4.14"
+      },
+      "com.apple.driver.AppleUSBHub": {
+        "index": "47",
+        "refcount": "0",
+        "size": 110592,
+        "version": "705.4.1"
+      },
+      "com.apple.driver.AppleUSBMergeNub": {
+        "index": "59",
+        "refcount": "0",
+        "size": 28672,
+        "version": "705.4.0"
+      },
+      "com.apple.driver.AppleUSBUHCI": {
+        "index": "42",
+        "refcount": "0",
+        "size": 65536,
+        "version": "656.4.1"
+      },
+      "com.apple.driver.AppleUSBXHCI": {
+        "index": "46",
+        "refcount": "0",
+        "size": 131072,
+        "version": "705.4.14"
+      },
+      "com.apple.driver.AppleUpstreamUserClient": {
+        "index": "79",
+        "refcount": "0",
+        "size": 20480,
+        "version": "3.6.1"
       },
       "com.apple.driver.AudioAUUC": {
-        "version": "1.70",
-        "size": 20480,
         "index": "96",
-        "refcount": "0"
+        "refcount": "0",
+        "size": 20480,
+        "version": "1.70"
+      },
+      "com.apple.driver.DiskImages": {
+        "index": "17",
+        "refcount": "0",
+        "size": 102400,
+        "version": "389.1"
+      },
+      "com.apple.driver.DspFuncLib": {
+        "index": "84",
+        "refcount": "1",
+        "size": 897024,
+        "version": "267.0"
+      },
+      "com.apple.driver.IOPlatformPluginLegacy": {
+        "index": "61",
+        "refcount": "1",
+        "size": 73728,
+        "version": "1.0.0"
+      },
+      "com.apple.driver.XsanFilter": {
+        "index": "51",
+        "refcount": "0",
+        "size": 12288,
+        "version": "404"
+      },
+      "com.apple.filesystems.autofs": {
+        "index": "93",
+        "refcount": "0",
+        "size": 36864,
+        "version": "3.0"
+      },
+      "com.apple.iokit.IOACPIFamily": {
+        "index": "11",
+        "refcount": "14",
+        "size": 36864,
+        "version": "1.4"
+      },
+      "com.apple.iokit.IOAHCIBlockStorage": {
+        "index": "48",
+        "refcount": "0",
+        "size": 98304,
+        "version": "2.6.5"
+      },
+      "com.apple.iokit.IOAHCIFamily": {
+        "index": "44",
+        "refcount": "3",
+        "size": 90112,
+        "version": "2.7.0"
+      },
+      "com.apple.iokit.IOAHCISerialATAPI": {
+        "index": "50",
+        "refcount": "0",
+        "size": 53248,
+        "version": "2.6.1"
+      },
+      "com.apple.iokit.IOATAFamily": {
+        "index": "39",
+        "refcount": "1",
+        "size": 102400,
+        "version": "2.5.3"
+      },
+      "com.apple.iokit.IOAudioFamily": {
+        "index": "82",
+        "refcount": "3",
+        "size": 192512,
+        "version": "200.6"
+      },
+      "com.apple.iokit.IOBDStorageFamily": {
+        "index": "55",
+        "refcount": "1",
+        "size": 36864,
+        "version": "1.7"
+      },
+      "com.apple.iokit.IOCDStorageFamily": {
+        "index": "53",
+        "refcount": "3",
+        "size": 57344,
+        "version": "1.7.1"
+      },
+      "com.apple.iokit.IODVDStorageFamily": {
+        "index": "54",
+        "refcount": "2",
+        "size": 45056,
+        "version": "1.7.1"
+      },
+      "com.apple.iokit.IOGraphicsFamily": {
+        "index": "65",
+        "refcount": "7",
+        "size": 241664,
+        "version": "2.4.1"
+      },
+      "com.apple.iokit.IOHDAFamily": {
+        "index": "64",
+        "refcount": "2",
+        "size": 49152,
+        "version": "267.0"
+      },
+      "com.apple.iokit.IOHIDFamily": {
+        "index": "30",
+        "refcount": "2",
+        "size": 483328,
+        "version": "2.0.0"
+      },
+      "com.apple.iokit.IONDRVSupport": {
+        "index": "70",
+        "refcount": "1",
+        "size": 65536,
+        "version": "2.4.1"
+      },
+      "com.apple.iokit.IONetworkingFamily": {
+        "index": "34",
+        "refcount": "2",
+        "size": 180224,
+        "version": "3.2"
+      },
+      "com.apple.iokit.IOPCIFamily": {
+        "index": "12",
+        "refcount": "19",
+        "size": 192512,
+        "version": "2.9"
+      },
+      "com.apple.iokit.IOReportFamily": {
+        "index": "15",
+        "refcount": "1",
+        "size": 28672,
+        "version": "31"
+      },
+      "com.apple.iokit.IOSCSIArchitectureModelFamily": {
+        "index": "49",
+        "refcount": "3",
+        "size": 176128,
+        "version": "3.7.0"
+      },
+      "com.apple.iokit.IOSCSIMultimediaCommandsDevice": {
+        "index": "56",
+        "refcount": "0",
+        "size": 106496,
+        "version": "3.7.0"
+      },
+      "com.apple.iokit.IOSMBusFamily": {
+        "index": "76",
+        "refcount": "1",
+        "size": 16384,
+        "version": "1.1"
+      },
+      "com.apple.iokit.IOSerialFamily": {
+        "index": "89",
+        "refcount": "1",
+        "size": 57344,
+        "version": "11"
+      },
+      "com.apple.iokit.IOStorageFamily": {
+        "index": "16",
+        "refcount": "8",
+        "size": 155648,
+        "version": "2.0"
+      },
+      "com.apple.iokit.IOSurface": {
+        "index": "74",
+        "refcount": "0",
+        "size": 77824,
+        "version": "97"
+      },
+      "com.apple.iokit.IOUSBFamily": {
+        "index": "41",
+        "refcount": "9",
+        "size": 413696,
+        "version": "705.4.14"
+      },
+      "com.apple.iokit.IOUSBHIDDriver": {
+        "index": "58",
+        "refcount": "0",
+        "size": 36864,
+        "version": "705.4.0"
+      },
+      "com.apple.iokit.IOUSBUserClient": {
+        "index": "80",
+        "refcount": "0",
+        "size": 12288,
+        "version": "705.4.0"
+      },
+      "com.apple.iokit.IOUserEthernet": {
+        "index": "75",
+        "refcount": "0",
+        "size": 24576,
+        "version": "1.0.1"
+      },
+      "com.apple.iokit.SCSITaskUserClient": {
+        "index": "52",
+        "refcount": "0",
+        "size": 28672,
+        "version": "3.7.0"
+      },
+      "com.apple.kec.Libm": {
+        "index": "9",
+        "refcount": "1",
+        "size": 36864,
+        "version": "1"
+      },
+      "com.apple.kec.corecrypto": {
+        "index": "10",
+        "refcount": "2",
+        "size": 638976,
+        "version": "1.0"
+      },
+      "com.apple.kec.pthread": {
+        "index": "8",
+        "refcount": "0",
+        "size": 49152,
+        "version": "1"
+      },
+      "com.apple.kext.OSvKernDSPLib": {
+        "index": "83",
+        "refcount": "1",
+        "size": 77824,
+        "version": "1.15"
+      },
+      "com.apple.kext.triggers": {
+        "index": "92",
+        "refcount": "1",
+        "size": 20480,
+        "version": "1.0"
+      },
+      "com.apple.nke.applicationfirewall": {
+        "index": "25",
+        "refcount": "0",
+        "size": 32768,
+        "version": "161"
+      },
+      "com.apple.security.TMSafetyNet": {
+        "index": "21",
+        "refcount": "0",
+        "size": 8192,
+        "version": "8"
+      },
+      "com.apple.security.quarantine": {
+        "index": "24",
+        "refcount": "0",
+        "size": 36864,
+        "version": "3"
+      },
+      "com.apple.security.sandbox": {
+        "index": "23",
+        "refcount": "1",
+        "size": 94208,
+        "version": "300.0"
+      },
+      "com.apple.vecLib.kext": {
+        "index": "81",
+        "refcount": "2",
+        "size": 487424,
+        "version": "1.2.0"
+      },
+      "com.vmware.kext.VMwareGfx": {
+        "index": "69",
+        "refcount": "0",
+        "size": 77824,
+        "version": "0207.51.48"
+      },
+      "com.vmware.kext.vmhgfs": {
+        "index": "95",
+        "refcount": "0",
+        "size": 40960,
+        "version": "0207.51.48"
+      },
+      "com.vmware.kext.vmmemctl": {
+        "index": "94",
+        "refcount": "0",
+        "size": 24576,
+        "version": "0207.51.48"
       }
-    }
+    },
+    "name": "Darwin",
+    "os": "Darwin",
+    "processor": "i386",
+    "release": "14.0.0",
+    "version": "Darwin Kernel Version 14.0.0: Fri Sep 19 00:26:44 PDT 2014; root:xnu-2782.1.97~2/RELEASE_X86_64"
   },
   "keys": {
     "ssh": {
@@ -793,24 +792,24 @@
     }
   },
   "languages": {
+    "powershell": null,
     "ruby": {
-      "platform": "universal.x86_64-darwin14",
-      "version": "2.0.0",
-      "release_date": "2014-05-08",
-      "target": "universal-apple-darwin14",
-      "target_cpu": "universal",
-      "target_vendor": "apple",
-      "target_os": "darwin14",
+      "bin_dir": "/usr/local/bin",
+      "gem_bin": "/usr/local/bin/gem",
+      "gems_dir": "/usr/local/gems",
       "host": "x86_64-apple-darwin14",
       "host_cpu": "x86_64",
       "host_os": "darwin14",
       "host_vendor": "apple",
-      "bin_dir": "/usr/local/bin",
+      "platform": "universal.x86_64-darwin14",
+      "release_date": "2014-05-08",
       "ruby_bin": "/usr/local/bin/ruby",
-      "gems_dir": "/usr/local/gems",
-      "gem_bin": "/usr/local/bin/gem"
-    },
-    "powershell": null
+      "target": "universal-apple-darwin14",
+      "target_cpu": "universal",
+      "target_os": "darwin14",
+      "target_vendor": "apple",
+      "version": "2.0.0"
+    }
   },
   "macaddress": "11:11:11:11:11:11",
   "machinename": "Fauxhai",
@@ -818,72 +817,43 @@
     "total": "1048576kB"
   },
   "network": {
+    "default_gateway": "10.0.0.1",
+    "default_interface": "en0",
     "interfaces": {
-      "lo": {
-        "mtu": "65536",
-        "flags": [
-          "LOOPBACK",
-          "UP",
-          "LOWER_UP"
-        ],
-        "encapsulation": "Loopback",
+      "en0": {
         "addresses": {
-          "127.0.0.1": {
+          "10.0.0.2": {
+            "broadcast": "10.0.0.255",
             "family": "inet",
-            "prefixlen": "8",
-            "netmask": "255.0.0.0",
-            "scope": "Node",
-            "ip_scope": "LOOPBACK"
+            "ip_scope": "RFC1918 PRIVATE",
+            "netmask": "255.255.255.0",
+            "prefixlen": "24",
+            "scope": "Global"
           },
-          "::1": {
+          "11:11:11:11:11:11": {
+            "family": "lladdr"
+          },
+          "fe80::11:1111:1111:1111": {
             "family": "inet6",
-            "prefixlen": "128",
-            "scope": "Node",
-            "tags": [
-
-            ],
-            "ip_scope": "LINK LOCAL LOOPBACK"
+            "ip_scope": "LINK LOCAL UNICAST",
+            "prefixlen": "64",
+            "scope": "Link",
+            "tags": []
           }
         },
-        "state": "unknown"
-      },
-      "en0": {
-        "type": "en",
-        "number": "0",
-        "mtu": "1500",
+        "arp": {
+          "10.0.0.1": "fe:ff:ff:ff:ff:ff"
+        },
+        "encapsulation": "Ethernet",
         "flags": [
           "BROADCAST",
           "MULTICAST",
           "UP",
           "LOWER_UP"
         ],
-        "encapsulation": "Ethernet",
-        "addresses": {
-          "11:11:11:11:11:11": {
-            "family": "lladdr"
-          },
-          "10.0.0.2": {
-            "family": "inet",
-            "prefixlen": "24",
-            "netmask": "255.255.255.0",
-            "broadcast": "10.0.0.255",
-            "scope": "Global",
-            "ip_scope": "RFC1918 PRIVATE"
-          },
-          "fe80::11:1111:1111:1111": {
-            "family": "inet6",
-            "prefixlen": "64",
-            "scope": "Link",
-            "tags": [
-
-            ],
-            "ip_scope": "LINK LOCAL UNICAST"
-          }
-        },
-        "state": "up",
-        "arp": {
-          "10.0.0.1": "fe:ff:ff:ff:ff:ff"
-        },
+        "mtu": "1500",
+        "number": "0",
+        "ring_params": {},
         "routes": [
           {
             "destination": "default",
@@ -893,8 +863,8 @@
           {
             "destination": "10.0.0.0/24",
             "family": "inet",
-            "scope": "link",
             "proto": "kernel",
+            "scope": "link",
             "src": "10.0.0.2"
           },
           {
@@ -904,12 +874,36 @@
             "proto": "kernel"
           }
         ],
-        "ring_params": {
-        }
+        "state": "up",
+        "type": "en"
+      },
+      "lo": {
+        "addresses": {
+          "127.0.0.1": {
+            "family": "inet",
+            "ip_scope": "LOOPBACK",
+            "netmask": "255.0.0.0",
+            "prefixlen": "8",
+            "scope": "Node"
+          },
+          "::1": {
+            "family": "inet6",
+            "ip_scope": "LINK LOCAL LOOPBACK",
+            "prefixlen": "128",
+            "scope": "Node",
+            "tags": []
+          }
+        },
+        "encapsulation": "Loopback",
+        "flags": [
+          "LOOPBACK",
+          "UP",
+          "LOWER_UP"
+        ],
+        "mtu": "65536",
+        "state": "unknown"
       }
-    },
-    "default_interface": "en0",
-    "default_gateway": "10.0.0.1"
+    }
   },
   "ohai_time": 1497298653.326175,
   "os": "darwin",
@@ -934,7 +928,6 @@
   "uptime": "30 days 15 hours 07 minutes 30 seconds",
   "uptime_seconds": 2646450,
   "virtualization": {
-    "systems": {
-    }
+    "systems": {}
   }
 }

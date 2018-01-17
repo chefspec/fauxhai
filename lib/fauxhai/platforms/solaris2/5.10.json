@@ -1,12 +1,12 @@
 {
   "chef_packages": {
     "chef": {
-      "version": "13.1.31",
-      "chef_root": "/opt/chef/embedded/lib/ruby/gems/2.4.0/gems/chef-13.1.31/lib"
+      "chef_root": "/opt/chef/embedded/lib/ruby/gems/2.4.0/gems/chef-13.1.31/lib",
+      "version": "13.1.31"
     },
     "ohai": {
-      "version": "13.1.0",
-      "ohai_root": "/opt/chef/embedded/lib/ruby/gems/2.4.0/gems/ohai-13.1.0/lib/ohai"
+      "ohai_root": "/opt/chef/embedded/lib/ruby/gems/2.4.0/gems/ohai-13.1.0/lib/ohai",
+      "version": "13.1.0"
     }
   },
   "command": {
@@ -15,187 +15,178 @@
   "counters": {
     "network": {
       "interfaces": {
-        "lo": {
-          "tx": {
-            "queuelen": "1",
-            "bytes": 0,
-            "packets": 0,
-            "errors": 0,
-            "drop": 0,
-            "carrier": 0,
-            "collisions": 0
-          },
-          "rx": {
-            "bytes": 0,
-            "packets": 0,
-            "errors": 0,
-            "drop": 0,
-            "overrun": 0
-          }
-        },
         "eth0": {
           "rx": {
             "bytes": 0,
-            "packets": 0,
-            "errors": 0,
-            "drop": 0,
-            "overrun": 0,
-            "frame": 0,
             "compressed": 0,
-            "multicast": 0
+            "drop": 0,
+            "errors": 0,
+            "frame": 0,
+            "multicast": 0,
+            "overrun": 0,
+            "packets": 0
           },
           "tx": {
             "bytes": 0,
-            "packets": 0,
-            "errors": 0,
-            "drop": 0,
-            "overrun": 0,
-            "collisions": 0,
             "carrier": 0,
-            "compressed": 0
+            "collisions": 0,
+            "compressed": 0,
+            "drop": 0,
+            "errors": 0,
+            "overrun": 0,
+            "packets": 0
+          }
+        },
+        "lo": {
+          "rx": {
+            "bytes": 0,
+            "drop": 0,
+            "errors": 0,
+            "overrun": 0,
+            "packets": 0
+          },
+          "tx": {
+            "bytes": 0,
+            "carrier": 0,
+            "collisions": 0,
+            "drop": 0,
+            "errors": 0,
+            "packets": 0,
+            "queuelen": "1"
           }
         }
       }
     }
   },
   "cpu": {
+    "cores": 1,
     "real": 1,
-    "total": 1,
-    "cores": 1
+    "total": 1
   },
   "current_user": "fauxhai",
   "dmi": {
-    "bios": {
+    "base_board": {
       "all_records": [
         {
-          "record_id": "0",
-          "size": "54",
-          "application_identifier": "BIOS information",
-          "Vendor": "innotek GmbH",
-          "Version String": "VirtualBox",
-          "Release Date": "12/01/2006",
+          "Board Type": "0x21",
+          "Chassis": "134511736",
+          "Flags": {
+            "SMB_BBFL_HOTSWAP": "board is hot-swappable",
+            "SMB_BBFL_NEEDAUX": "auxiliary card or daughter req'd",
+            "SMB_BBFL_REPLACABLE": "board is field-replacable"
+          },
+          "application_identifier": "base board",
+          "record_id": "8",
+          "size": "50"
+        }
+      ],
+      "board_type": "0x21",
+      "chassis": "134511736"
+    },
+    "bios": {
+      "address_segment": "0xe000",
+      "all_records": [
+        {
           "Address Segment": "0xe000",
-          "ROM Size": "131072 bytes",
-          "Image Size": "131072 bytes",
           "Characteristics": {
+            "SMB_BIOSFL_CDBOOT": "Boot from CD is supported",
+            "SMB_BIOSFL_I10_CGA": "int 0x10 CGA svcs",
+            "SMB_BIOSFL_I9_KBD": "int 0x9 8042 keyboard svcs",
             "SMB_BIOSFL_ISA": "ISA is supported",
             "SMB_BIOSFL_PCI": "PCI is supported",
-            "SMB_BIOSFL_CDBOOT": "Boot from CD is supported",
-            "SMB_BIOSFL_SELBOOT": "Selectable Boot supported",
-            "SMB_BIOSFL_I9_KBD": "int 0x9 8042 keyboard svcs",
-            "SMB_BIOSFL_I10_CGA": "int 0x10 CGA svcs"
+            "SMB_BIOSFL_SELBOOT": "Selectable Boot supported"
           },
           "Characteristics Extension Byte 1": {
             "SMB_BIOSXB1_ACPI": "ACPI is supported"
           },
-          "Characteristics Extension Byte 2": "0x0"
+          "Characteristics Extension Byte 2": "0x0",
+          "Image Size": "131072 bytes",
+          "ROM Size": "131072 bytes",
+          "Release Date": "12/01/2006",
+          "Vendor": "innotek GmbH",
+          "Version String": "VirtualBox",
+          "application_identifier": "BIOS information",
+          "record_id": "0",
+          "size": "54"
         }
       ],
-      "vendor": "innotek GmbH",
-      "version_string": "VirtualBox",
-      "release_date": "12/01/2006",
-      "address_segment": "0xe000",
-      "rom_size": "131072 bytes",
+      "characteristics_extension_byte_2": "0x0",
       "image_size": "131072 bytes",
-      "characteristics_extension_byte_2": "0x0"
-    },
-    "system": {
-      "all_records": [
-        {
-          "record_id": "1",
-          "size": "72",
-          "application_identifier": "system information",
-          "Manufacturer": "innotek GmbH",
-          "Product": "VirtualBox",
-          "Version": "1.2",
-          "Serial Number": "0",
-          "UUID": "5bce63e7-d108-4837-a1bf-124371517d5f",
-          "Wake-Up Event": "0x6 (power switch)",
-          "SKU Number": "",
-          "Family": "Virtual Machine"
-        }
-      ],
-      "manufacturer": "innotek GmbH",
-      "product": "VirtualBox",
-      "version": "1.2",
-      "serial_number": "0",
-      "uuid": "5bce63e7-d108-4837-a1bf-124371517d5f",
-      "wake_up_event": "0x6 (power switch)",
-      "sku_number": "",
-      "family": "Virtual Machine"
-    },
-    "base_board": {
-      "all_records": [
-        {
-          "record_id": "8",
-          "size": "50",
-          "application_identifier": "base board",
-          "Chassis": "134511736",
-          "Flags": {
-            "SMB_BBFL_NEEDAUX": "auxiliary card or daughter req'd",
-            "SMB_BBFL_REPLACABLE": "board is field-replacable",
-            "SMB_BBFL_HOTSWAP": "board is hot-swappable"
-          },
-          "Board Type": "0x21"
-        }
-      ],
-      "chassis": "134511736",
-      "board_type": "0x21"
+      "release_date": "12/01/2006",
+      "rom_size": "131072 bytes",
+      "vendor": "innotek GmbH",
+      "version_string": "VirtualBox"
     },
     "chassis": {
       "all_records": [
         {
-          "record_id": "3",
-          "size": "31",
-          "application_identifier": "system enclosure or chassis",
+          "Boot-Up State": "0x3 (safe)",
+          "Chassis Height": "0u",
+          "Chassis Type": "0x1 (other)",
+          "Element Records": "0",
+          "Lock Present": "N",
           "Manufacturer": "Oracle Corporation",
           "OEM Data": "0x0",
-          "Lock Present": "N",
-          "Chassis Type": "0x1 (other)",
-          "Boot-Up State": "0x3 (safe)",
+          "Power Cords": "0",
           "Power Supply State": "0x3 (safe)",
           "Thermal State": "0x3 (safe)",
-          "Chassis Height": "0u",
-          "Power Cords": "0",
-          "Element Records": "0"
+          "application_identifier": "system enclosure or chassis",
+          "record_id": "3",
+          "size": "31"
         }
       ],
+      "boot_up_state": "0x3 (safe)",
+      "chassis_height": "0u",
+      "chassis_type": "0x1 (other)",
+      "element_records": "0",
+      "lock_present": "N",
       "manufacturer": "Oracle Corporation",
       "oem_data": "0x0",
-      "lock_present": "N",
-      "chassis_type": "0x1 (other)",
-      "boot_up_state": "0x3 (safe)",
-      "power_supply_state": "0x3 (safe)",
-      "thermal_state": "0x3 (safe)",
-      "chassis_height": "0u",
       "power_cords": "0",
-      "element_records": "0"
+      "power_supply_state": "0x3 (safe)",
+      "thermal_state": "0x3 (safe)"
     },
     "oem_strings": {
       "all_records": [
         {
+          "application_identifier": "OEM string table",
           "record_id": "2",
           "size": "36",
-          "application_identifier": "OEM string table",
-          "vboxVer_5.1.22": "",
-          "vboxRev_115126": ""
+          "vboxRev_115126": "",
+          "vboxVer_5.1.22": ""
         }
       ],
-      "vboxver_5_1_22": "",
-      "vboxrev_115126": ""
+      "vboxrev_115126": "",
+      "vboxver_5_1_22": ""
+    },
+    "system": {
+      "all_records": [
+        {
+          "Family": "Virtual Machine",
+          "Manufacturer": "innotek GmbH",
+          "Product": "VirtualBox",
+          "SKU Number": "",
+          "Serial Number": "0",
+          "UUID": "5bce63e7-d108-4837-a1bf-124371517d5f",
+          "Version": "1.2",
+          "Wake-Up Event": "0x6 (power switch)",
+          "application_identifier": "system information",
+          "record_id": "1",
+          "size": "72"
+        }
+      ],
+      "family": "Virtual Machine",
+      "manufacturer": "innotek GmbH",
+      "product": "VirtualBox",
+      "serial_number": "0",
+      "sku_number": "",
+      "uuid": "5bce63e7-d108-4837-a1bf-124371517d5f",
+      "version": "1.2",
+      "wake_up_event": "0x6 (power switch)"
     }
   },
   "domain": "local",
   "etc": {
-    "passwd": {
-      "fauxhai": {
-        "dir": "/home/fauxhai",
-        "gid": 0,
-        "uid": 0,
-        "shell": "/bin/bash",
-        "gecos": "Fauxhai"
-      }
-    },
     "group": {
       "fauxhai": {
         "gid": 0,
@@ -203,126 +194,20 @@
           "fauxhai"
         ]
       }
+    },
+    "passwd": {
+      "fauxhai": {
+        "dir": "/home/fauxhai",
+        "gecos": "Fauxhai",
+        "gid": 0,
+        "shell": "/bin/bash",
+        "uid": 0
+      }
     }
   },
   "filesystem": {
-    "rpool/ROOT/s10x_u11wos_24a": {
-      "mount": "/",
-      "mount_time": "Thu Jan  1 00:00:00 1970",
-      "mount_options": [
-        "read",
-        "write",
-        "setuid",
-        "devices",
-        "rstchown",
-        "dev=2d50002"
-      ],
-      "fs_type": "zfs",
-      "zfs_values": {
-        "type": "filesystem",
-        "creation": "1477053450",
-        "used": "950595584",
-        "available": "11392912896",
-        "referenced": "950595584",
-        "compressratio": "1.00x",
-        "mounted": "yes",
-        "quota": "0",
-        "reservation": "0",
-        "recordsize": "131072",
-        "mountpoint": "/",
-        "sharenfs": "off",
-        "checksum": "on",
-        "compression": "off",
-        "atime": "on",
-        "devices": "on",
-        "exec": "on",
-        "setuid": "on",
-        "readonly": "off",
-        "zoned": "off",
-        "snapdir": "hidden",
-        "aclmode": "discard",
-        "aclinherit": "restricted",
-        "canmount": "noauto",
-        "shareiscsi": "off",
-        "xattr": "on",
-        "copies": "1",
-        "version": "5",
-        "utf8only": "off",
-        "normalization": "none",
-        "casesensitivity": "mixed",
-        "vscan": "off",
-        "nbmand": "off",
-        "sharesmb": "off",
-        "refquota": "0",
-        "refreservation": "0",
-        "primarycache": "all",
-        "secondarycache": "all",
-        "usedbysnapshots": "0",
-        "usedbydataset": "950595584",
-        "usedbychildren": "0",
-        "usedbyrefreservation": "0",
-        "logbias": "latency",
-        "sync": "standard",
-        "rekeydate": "-",
-        "rstchown": "on"
-      },
-      "zfs_sources": {
-        "type": "-",
-        "creation": "-",
-        "used": "-",
-        "available": "-",
-        "referenced": "-",
-        "compressratio": "-",
-        "mounted": "-",
-        "quota": "default",
-        "reservation": "default",
-        "recordsize": "default",
-        "mountpoint": "local",
-        "sharenfs": "default",
-        "checksum": "default",
-        "compression": "default",
-        "atime": "default",
-        "devices": "default",
-        "exec": "default",
-        "setuid": "default",
-        "readonly": "default",
-        "zoned": "default",
-        "snapdir": "default",
-        "aclmode": "default",
-        "aclinherit": "default",
-        "canmount": "local",
-        "shareiscsi": "default",
-        "xattr": "default",
-        "copies": "default",
-        "version": "-",
-        "utf8only": "-",
-        "normalization": "-",
-        "casesensitivity": "-",
-        "vscan": "default",
-        "nbmand": "default",
-        "sharesmb": "default",
-        "refquota": "default",
-        "refreservation": "default",
-        "primarycache": "default",
-        "secondarycache": "default",
-        "usedbysnapshots": "-",
-        "usedbydataset": "-",
-        "usedbychildren": "-",
-        "usedbyrefreservation": "-",
-        "logbias": "default",
-        "sync": "default",
-        "rekeydate": "default",
-        "rstchown": "default"
-      },
-      "zfs_parents": [
-        "rpool",
-        "rpool/ROOT"
-      ],
-      "zfs_zpool": false
-    },
     "/devices": {
       "mount": "/devices",
-      "mount_time": "Wed Jun 21 17:37:00 2017",
       "mount_options": [
         "read",
         "write",
@@ -330,84 +215,11 @@
         "devices",
         "rstchown",
         "dev=4900000"
-      ]
-    },
-    "ctfs": {
-      "mount": "/system/contract",
-      "mount_time": "Wed Jun 21 17:37:00 2017",
-      "mount_options": [
-        "read",
-        "write",
-        "setuid",
-        "devices",
-        "rstchown",
-        "dev=4980001"
-      ]
-    },
-    "proc": {
-      "mount": "/proc",
-      "mount_time": "Wed Jun 21 17:37:00 2017",
-      "mount_options": [
-        "read",
-        "write",
-        "setuid",
-        "devices",
-        "rstchown",
-        "dev=4940000"
-      ]
-    },
-    "mnttab": {
-      "mount": "/etc/mnttab",
-      "mount_time": "Wed Jun 21 17:37:00 2017",
-      "mount_options": [
-        "read",
-        "write",
-        "setuid",
-        "devices",
-        "rstchown",
-        "dev=49c0001"
-      ]
-    },
-    "swap": {
-      "mount": "/var/run",
-      "mount_time": "Wed Jun 21 17:37:04 2017",
-      "mount_options": [
-        "read",
-        "write",
-        "setuid",
-        "devices",
-        "rstchown",
-        "xattr",
-        "dev=4a00003"
-      ]
-    },
-    "objfs": {
-      "mount": "/system/object",
-      "mount_time": "Wed Jun 21 17:37:00 2017",
-      "mount_options": [
-        "read",
-        "write",
-        "setuid",
-        "devices",
-        "rstchown",
-        "dev=4a40001"
-      ]
-    },
-    "sharefs": {
-      "mount": "/etc/dfs/sharetab",
-      "mount_time": "Wed Jun 21 17:37:00 2017",
-      "mount_options": [
-        "read",
-        "write",
-        "setuid",
-        "devices",
-        "rstchown",
-        "dev=4a80001"
-      ]
+      ],
+      "mount_time": "Wed Jun 21 17:37:00 2017"
     },
     "/usr/lib/libc/libc_hwcap1.so.1": {
       "mount": "/lib/libc.so.1",
-      "mount_time": "Wed Jun 21 17:37:02 2017",
       "mount_options": [
         "read",
         "write",
@@ -415,11 +227,23 @@
         "devices",
         "rstchown",
         "dev=2d50002"
-      ]
+      ],
+      "mount_time": "Wed Jun 21 17:37:02 2017"
+    },
+    "ctfs": {
+      "mount": "/system/contract",
+      "mount_options": [
+        "read",
+        "write",
+        "setuid",
+        "devices",
+        "rstchown",
+        "dev=4980001"
+      ],
+      "mount_time": "Wed Jun 21 17:37:00 2017"
     },
     "fd": {
       "mount": "/dev/fd",
-      "mount_time": "Wed Jun 21 17:37:04 2017",
       "mount_options": [
         "read",
         "write",
@@ -427,246 +251,48 @@
         "devices",
         "rstchown",
         "dev=4c00001"
-      ]
+      ],
+      "mount_time": "Wed Jun 21 17:37:04 2017"
     },
-    "rpool/export": {
-      "mount": "/export",
-      "mount_time": "Wed Jun 21 17:37:10 2017",
+    "mnttab": {
+      "mount": "/etc/mnttab",
       "mount_options": [
         "read",
         "write",
         "setuid",
         "devices",
         "rstchown",
-        "nonbmand",
-        "exec",
-        "xattr",
-        "atime",
-        "dev=2d50003"
+        "dev=49c0001"
       ],
-      "fs_type": "zfs",
-      "zfs_values": {
-        "type": "filesystem",
-        "creation": "1477053450",
-        "used": "64512",
-        "available": "11392912896",
-        "referenced": "32768",
-        "compressratio": "1.00x",
-        "mounted": "yes",
-        "quota": "0",
-        "reservation": "0",
-        "recordsize": "131072",
-        "mountpoint": "/export",
-        "sharenfs": "off",
-        "checksum": "on",
-        "compression": "off",
-        "atime": "on",
-        "devices": "on",
-        "exec": "on",
-        "setuid": "on",
-        "readonly": "off",
-        "zoned": "off",
-        "snapdir": "hidden",
-        "aclmode": "discard",
-        "aclinherit": "restricted",
-        "canmount": "on",
-        "shareiscsi": "off",
-        "xattr": "on",
-        "copies": "1",
-        "version": "5",
-        "utf8only": "off",
-        "normalization": "none",
-        "casesensitivity": "mixed",
-        "vscan": "off",
-        "nbmand": "off",
-        "sharesmb": "off",
-        "refquota": "0",
-        "refreservation": "0",
-        "primarycache": "all",
-        "secondarycache": "all",
-        "usedbysnapshots": "0",
-        "usedbydataset": "32768",
-        "usedbychildren": "31744",
-        "usedbyrefreservation": "0",
-        "logbias": "latency",
-        "sync": "standard",
-        "rekeydate": "-",
-        "rstchown": "on"
-      },
-      "zfs_sources": {
-        "type": "-",
-        "creation": "-",
-        "used": "-",
-        "available": "-",
-        "referenced": "-",
-        "compressratio": "-",
-        "mounted": "-",
-        "quota": "default",
-        "reservation": "default",
-        "recordsize": "default",
-        "mountpoint": "local",
-        "sharenfs": "default",
-        "checksum": "default",
-        "compression": "default",
-        "atime": "default",
-        "devices": "default",
-        "exec": "default",
-        "setuid": "default",
-        "readonly": "default",
-        "zoned": "default",
-        "snapdir": "default",
-        "aclmode": "default",
-        "aclinherit": "default",
-        "canmount": "default",
-        "shareiscsi": "default",
-        "xattr": "default",
-        "copies": "default",
-        "version": "-",
-        "utf8only": "-",
-        "normalization": "-",
-        "casesensitivity": "-",
-        "vscan": "default",
-        "nbmand": "default",
-        "sharesmb": "default",
-        "refquota": "default",
-        "refreservation": "default",
-        "primarycache": "default",
-        "secondarycache": "default",
-        "usedbysnapshots": "-",
-        "usedbydataset": "-",
-        "usedbychildren": "-",
-        "usedbyrefreservation": "-",
-        "logbias": "default",
-        "sync": "default",
-        "rekeydate": "default",
-        "rstchown": "default"
-      },
-      "zfs_parents": [
-        "rpool"
-      ],
-      "zfs_zpool": false
+      "mount_time": "Wed Jun 21 17:37:00 2017"
     },
-    "rpool/export/home": {
-      "mount": "/export/home",
-      "mount_time": "Wed Jun 21 17:37:10 2017",
+    "objfs": {
+      "mount": "/system/object",
       "mount_options": [
         "read",
         "write",
         "setuid",
         "devices",
         "rstchown",
-        "nonbmand",
-        "exec",
-        "xattr",
-        "atime",
-        "dev=2d50004"
+        "dev=4a40001"
       ],
-      "fs_type": "zfs",
-      "zfs_values": {
-        "type": "filesystem",
-        "creation": "1477053450",
-        "used": "31744",
-        "available": "11392912896",
-        "referenced": "31744",
-        "compressratio": "1.00x",
-        "mounted": "yes",
-        "quota": "0",
-        "reservation": "0",
-        "recordsize": "131072",
-        "mountpoint": "/export/home",
-        "sharenfs": "off",
-        "checksum": "on",
-        "compression": "off",
-        "atime": "on",
-        "devices": "on",
-        "exec": "on",
-        "setuid": "on",
-        "readonly": "off",
-        "zoned": "off",
-        "snapdir": "hidden",
-        "aclmode": "discard",
-        "aclinherit": "restricted",
-        "canmount": "on",
-        "shareiscsi": "off",
-        "xattr": "on",
-        "copies": "1",
-        "version": "5",
-        "utf8only": "off",
-        "normalization": "none",
-        "casesensitivity": "mixed",
-        "vscan": "off",
-        "nbmand": "off",
-        "sharesmb": "off",
-        "refquota": "0",
-        "refreservation": "0",
-        "primarycache": "all",
-        "secondarycache": "all",
-        "usedbysnapshots": "0",
-        "usedbydataset": "31744",
-        "usedbychildren": "0",
-        "usedbyrefreservation": "0",
-        "logbias": "latency",
-        "sync": "standard",
-        "rekeydate": "-",
-        "rstchown": "on"
-      },
-      "zfs_sources": {
-        "type": "-",
-        "creation": "-",
-        "used": "-",
-        "available": "-",
-        "referenced": "-",
-        "compressratio": "-",
-        "mounted": "-",
-        "quota": "default",
-        "reservation": "default",
-        "recordsize": "default",
-        "mountpoint": "inherited from rpool/export",
-        "sharenfs": "default",
-        "checksum": "default",
-        "compression": "default",
-        "atime": "default",
-        "devices": "default",
-        "exec": "default",
-        "setuid": "default",
-        "readonly": "default",
-        "zoned": "default",
-        "snapdir": "default",
-        "aclmode": "default",
-        "aclinherit": "default",
-        "canmount": "default",
-        "shareiscsi": "default",
-        "xattr": "default",
-        "copies": "default",
-        "version": "-",
-        "utf8only": "-",
-        "normalization": "-",
-        "casesensitivity": "-",
-        "vscan": "default",
-        "nbmand": "default",
-        "sharesmb": "default",
-        "refquota": "default",
-        "refreservation": "default",
-        "primarycache": "default",
-        "secondarycache": "default",
-        "usedbysnapshots": "-",
-        "usedbydataset": "-",
-        "usedbychildren": "-",
-        "usedbyrefreservation": "-",
-        "logbias": "default",
-        "sync": "default",
-        "rekeydate": "default",
-        "rstchown": "default"
-      },
-      "zfs_parents": [
-        "rpool",
-        "rpool/export"
+      "mount_time": "Wed Jun 21 17:37:00 2017"
+    },
+    "proc": {
+      "mount": "/proc",
+      "mount_options": [
+        "read",
+        "write",
+        "setuid",
+        "devices",
+        "rstchown",
+        "dev=4940000"
       ],
-      "zfs_zpool": false
+      "mount_time": "Wed Jun 21 17:37:00 2017"
     },
     "rpool": {
+      "fs_type": "zfs",
       "mount": "/rpool",
-      "mount_time": "Wed Jun 21 17:37:10 2017",
       "mount_options": [
         "read",
         "write",
@@ -679,329 +305,701 @@
         "atime",
         "dev=2d50005"
       ],
-      "fs_type": "zfs",
-      "zfs_values": {
-        "type": "filesystem",
-        "creation": "1477053450",
-        "used": "5386400256",
-        "available": "11392912896",
-        "referenced": "43520",
-        "compressratio": "1.00x",
-        "mounted": "yes",
-        "quota": "0",
-        "reservation": "0",
-        "recordsize": "131072",
-        "mountpoint": "/rpool",
-        "sharenfs": "off",
-        "checksum": "on",
-        "compression": "off",
-        "atime": "on",
-        "devices": "on",
-        "exec": "on",
-        "setuid": "on",
-        "readonly": "off",
-        "zoned": "off",
-        "snapdir": "hidden",
-        "aclmode": "discard",
-        "aclinherit": "restricted",
-        "canmount": "on",
-        "shareiscsi": "off",
-        "xattr": "on",
-        "copies": "1",
-        "version": "5",
-        "utf8only": "off",
-        "normalization": "none",
-        "casesensitivity": "mixed",
-        "vscan": "off",
-        "nbmand": "off",
-        "sharesmb": "off",
-        "refquota": "0",
-        "refreservation": "0",
-        "primarycache": "all",
-        "secondarycache": "all",
-        "usedbysnapshots": "0",
-        "usedbydataset": "43520",
-        "usedbychildren": "5386356736",
-        "usedbyrefreservation": "0",
-        "logbias": "latency",
-        "sync": "standard",
-        "rekeydate": "-",
-        "rstchown": "on"
-      },
+      "mount_time": "Wed Jun 21 17:37:10 2017",
+      "zfs_parents": [],
       "zfs_sources": {
-        "type": "-",
-        "creation": "-",
-        "used": "-",
+        "aclinherit": "default",
+        "aclmode": "default",
+        "atime": "default",
         "available": "-",
-        "referenced": "-",
-        "compressratio": "-",
-        "mounted": "-",
-        "quota": "default",
-        "reservation": "default",
-        "recordsize": "default",
-        "mountpoint": "local",
-        "sharenfs": "default",
+        "canmount": "local",
+        "casesensitivity": "-",
         "checksum": "default",
         "compression": "default",
-        "atime": "default",
+        "compressratio": "-",
+        "copies": "default",
+        "creation": "-",
         "devices": "default",
         "exec": "default",
-        "setuid": "default",
-        "readonly": "default",
-        "zoned": "default",
-        "snapdir": "default",
-        "aclmode": "default",
-        "aclinherit": "default",
-        "canmount": "local",
-        "shareiscsi": "default",
-        "xattr": "default",
-        "copies": "default",
-        "version": "-",
-        "utf8only": "-",
-        "normalization": "-",
-        "casesensitivity": "-",
-        "vscan": "default",
+        "logbias": "default",
+        "mounted": "-",
+        "mountpoint": "local",
         "nbmand": "default",
-        "sharesmb": "default",
+        "normalization": "-",
+        "primarycache": "default",
+        "quota": "default",
+        "readonly": "default",
+        "recordsize": "default",
+        "referenced": "-",
         "refquota": "default",
         "refreservation": "default",
-        "primarycache": "default",
-        "secondarycache": "default",
-        "usedbysnapshots": "-",
-        "usedbydataset": "-",
-        "usedbychildren": "-",
-        "usedbyrefreservation": "-",
-        "logbias": "default",
-        "sync": "default",
         "rekeydate": "default",
-        "rstchown": "default"
+        "reservation": "default",
+        "rstchown": "default",
+        "secondarycache": "default",
+        "setuid": "default",
+        "shareiscsi": "default",
+        "sharenfs": "default",
+        "sharesmb": "default",
+        "snapdir": "default",
+        "sync": "default",
+        "type": "-",
+        "used": "-",
+        "usedbychildren": "-",
+        "usedbydataset": "-",
+        "usedbyrefreservation": "-",
+        "usedbysnapshots": "-",
+        "utf8only": "-",
+        "version": "-",
+        "vscan": "default",
+        "xattr": "default",
+        "zoned": "default"
       },
-      "zfs_parents": [
-
-      ],
+      "zfs_values": {
+        "aclinherit": "restricted",
+        "aclmode": "discard",
+        "atime": "on",
+        "available": "11392912896",
+        "canmount": "on",
+        "casesensitivity": "mixed",
+        "checksum": "on",
+        "compression": "off",
+        "compressratio": "1.00x",
+        "copies": "1",
+        "creation": "1477053450",
+        "devices": "on",
+        "exec": "on",
+        "logbias": "latency",
+        "mounted": "yes",
+        "mountpoint": "/rpool",
+        "nbmand": "off",
+        "normalization": "none",
+        "primarycache": "all",
+        "quota": "0",
+        "readonly": "off",
+        "recordsize": "131072",
+        "referenced": "43520",
+        "refquota": "0",
+        "refreservation": "0",
+        "rekeydate": "-",
+        "reservation": "0",
+        "rstchown": "on",
+        "secondarycache": "all",
+        "setuid": "on",
+        "shareiscsi": "off",
+        "sharenfs": "off",
+        "sharesmb": "off",
+        "snapdir": "hidden",
+        "sync": "standard",
+        "type": "filesystem",
+        "used": "5386400256",
+        "usedbychildren": "5386356736",
+        "usedbydataset": "43520",
+        "usedbyrefreservation": "0",
+        "usedbysnapshots": "0",
+        "utf8only": "off",
+        "version": "5",
+        "vscan": "off",
+        "xattr": "on",
+        "zoned": "off"
+      },
       "zfs_zpool": true
     },
     "rpool/ROOT": {
       "fs_type": "zfs",
       "mount": "legacy",
-      "zfs_values": {
-        "type": "filesystem",
-        "creation": "1477053450",
-        "used": "950627328",
-        "available": "11392912896",
-        "referenced": "31744",
-        "compressratio": "1.00x",
-        "mounted": "no",
-        "quota": "0",
-        "reservation": "0",
-        "recordsize": "131072",
-        "mountpoint": "legacy",
-        "sharenfs": "off",
-        "checksum": "on",
-        "compression": "off",
-        "atime": "on",
-        "devices": "on",
-        "exec": "on",
-        "setuid": "on",
-        "readonly": "off",
-        "zoned": "off",
-        "snapdir": "hidden",
-        "aclmode": "discard",
-        "aclinherit": "restricted",
-        "canmount": "on",
-        "shareiscsi": "off",
-        "xattr": "on",
-        "copies": "1",
-        "version": "5",
-        "utf8only": "off",
-        "normalization": "none",
-        "casesensitivity": "mixed",
-        "vscan": "off",
-        "nbmand": "off",
-        "sharesmb": "off",
-        "refquota": "0",
-        "refreservation": "0",
-        "primarycache": "all",
-        "secondarycache": "all",
-        "usedbysnapshots": "0",
-        "usedbydataset": "31744",
-        "usedbychildren": "950595584",
-        "usedbyrefreservation": "0",
-        "logbias": "latency",
-        "sync": "standard",
-        "rekeydate": "-",
-        "rstchown": "on"
-      },
-      "zfs_sources": {
-        "type": "-",
-        "creation": "-",
-        "used": "-",
-        "available": "-",
-        "referenced": "-",
-        "compressratio": "-",
-        "mounted": "-",
-        "quota": "default",
-        "reservation": "default",
-        "recordsize": "default",
-        "mountpoint": "local",
-        "sharenfs": "default",
-        "checksum": "default",
-        "compression": "default",
-        "atime": "default",
-        "devices": "default",
-        "exec": "default",
-        "setuid": "default",
-        "readonly": "default",
-        "zoned": "default",
-        "snapdir": "default",
-        "aclmode": "default",
-        "aclinherit": "default",
-        "canmount": "default",
-        "shareiscsi": "default",
-        "xattr": "default",
-        "copies": "default",
-        "version": "-",
-        "utf8only": "-",
-        "normalization": "-",
-        "casesensitivity": "-",
-        "vscan": "default",
-        "nbmand": "default",
-        "sharesmb": "default",
-        "refquota": "default",
-        "refreservation": "default",
-        "primarycache": "default",
-        "secondarycache": "default",
-        "usedbysnapshots": "-",
-        "usedbydataset": "-",
-        "usedbychildren": "-",
-        "usedbyrefreservation": "-",
-        "logbias": "default",
-        "sync": "default",
-        "rekeydate": "default",
-        "rstchown": "default"
-      },
       "zfs_parents": [
         "rpool"
       ],
+      "zfs_sources": {
+        "aclinherit": "default",
+        "aclmode": "default",
+        "atime": "default",
+        "available": "-",
+        "canmount": "default",
+        "casesensitivity": "-",
+        "checksum": "default",
+        "compression": "default",
+        "compressratio": "-",
+        "copies": "default",
+        "creation": "-",
+        "devices": "default",
+        "exec": "default",
+        "logbias": "default",
+        "mounted": "-",
+        "mountpoint": "local",
+        "nbmand": "default",
+        "normalization": "-",
+        "primarycache": "default",
+        "quota": "default",
+        "readonly": "default",
+        "recordsize": "default",
+        "referenced": "-",
+        "refquota": "default",
+        "refreservation": "default",
+        "rekeydate": "default",
+        "reservation": "default",
+        "rstchown": "default",
+        "secondarycache": "default",
+        "setuid": "default",
+        "shareiscsi": "default",
+        "sharenfs": "default",
+        "sharesmb": "default",
+        "snapdir": "default",
+        "sync": "default",
+        "type": "-",
+        "used": "-",
+        "usedbychildren": "-",
+        "usedbydataset": "-",
+        "usedbyrefreservation": "-",
+        "usedbysnapshots": "-",
+        "utf8only": "-",
+        "version": "-",
+        "vscan": "default",
+        "xattr": "default",
+        "zoned": "default"
+      },
+      "zfs_values": {
+        "aclinherit": "restricted",
+        "aclmode": "discard",
+        "atime": "on",
+        "available": "11392912896",
+        "canmount": "on",
+        "casesensitivity": "mixed",
+        "checksum": "on",
+        "compression": "off",
+        "compressratio": "1.00x",
+        "copies": "1",
+        "creation": "1477053450",
+        "devices": "on",
+        "exec": "on",
+        "logbias": "latency",
+        "mounted": "no",
+        "mountpoint": "legacy",
+        "nbmand": "off",
+        "normalization": "none",
+        "primarycache": "all",
+        "quota": "0",
+        "readonly": "off",
+        "recordsize": "131072",
+        "referenced": "31744",
+        "refquota": "0",
+        "refreservation": "0",
+        "rekeydate": "-",
+        "reservation": "0",
+        "rstchown": "on",
+        "secondarycache": "all",
+        "setuid": "on",
+        "shareiscsi": "off",
+        "sharenfs": "off",
+        "sharesmb": "off",
+        "snapdir": "hidden",
+        "sync": "standard",
+        "type": "filesystem",
+        "used": "950627328",
+        "usedbychildren": "950595584",
+        "usedbydataset": "31744",
+        "usedbyrefreservation": "0",
+        "usedbysnapshots": "0",
+        "utf8only": "off",
+        "version": "5",
+        "vscan": "off",
+        "xattr": "on",
+        "zoned": "off"
+      },
+      "zfs_zpool": false
+    },
+    "rpool/ROOT/s10x_u11wos_24a": {
+      "fs_type": "zfs",
+      "mount": "/",
+      "mount_options": [
+        "read",
+        "write",
+        "setuid",
+        "devices",
+        "rstchown",
+        "dev=2d50002"
+      ],
+      "mount_time": "Thu Jan  1 00:00:00 1970",
+      "zfs_parents": [
+        "rpool",
+        "rpool/ROOT"
+      ],
+      "zfs_sources": {
+        "aclinherit": "default",
+        "aclmode": "default",
+        "atime": "default",
+        "available": "-",
+        "canmount": "local",
+        "casesensitivity": "-",
+        "checksum": "default",
+        "compression": "default",
+        "compressratio": "-",
+        "copies": "default",
+        "creation": "-",
+        "devices": "default",
+        "exec": "default",
+        "logbias": "default",
+        "mounted": "-",
+        "mountpoint": "local",
+        "nbmand": "default",
+        "normalization": "-",
+        "primarycache": "default",
+        "quota": "default",
+        "readonly": "default",
+        "recordsize": "default",
+        "referenced": "-",
+        "refquota": "default",
+        "refreservation": "default",
+        "rekeydate": "default",
+        "reservation": "default",
+        "rstchown": "default",
+        "secondarycache": "default",
+        "setuid": "default",
+        "shareiscsi": "default",
+        "sharenfs": "default",
+        "sharesmb": "default",
+        "snapdir": "default",
+        "sync": "default",
+        "type": "-",
+        "used": "-",
+        "usedbychildren": "-",
+        "usedbydataset": "-",
+        "usedbyrefreservation": "-",
+        "usedbysnapshots": "-",
+        "utf8only": "-",
+        "version": "-",
+        "vscan": "default",
+        "xattr": "default",
+        "zoned": "default"
+      },
+      "zfs_values": {
+        "aclinherit": "restricted",
+        "aclmode": "discard",
+        "atime": "on",
+        "available": "11392912896",
+        "canmount": "noauto",
+        "casesensitivity": "mixed",
+        "checksum": "on",
+        "compression": "off",
+        "compressratio": "1.00x",
+        "copies": "1",
+        "creation": "1477053450",
+        "devices": "on",
+        "exec": "on",
+        "logbias": "latency",
+        "mounted": "yes",
+        "mountpoint": "/",
+        "nbmand": "off",
+        "normalization": "none",
+        "primarycache": "all",
+        "quota": "0",
+        "readonly": "off",
+        "recordsize": "131072",
+        "referenced": "950595584",
+        "refquota": "0",
+        "refreservation": "0",
+        "rekeydate": "-",
+        "reservation": "0",
+        "rstchown": "on",
+        "secondarycache": "all",
+        "setuid": "on",
+        "shareiscsi": "off",
+        "sharenfs": "off",
+        "sharesmb": "off",
+        "snapdir": "hidden",
+        "sync": "standard",
+        "type": "filesystem",
+        "used": "950595584",
+        "usedbychildren": "0",
+        "usedbydataset": "950595584",
+        "usedbyrefreservation": "0",
+        "usedbysnapshots": "0",
+        "utf8only": "off",
+        "version": "5",
+        "vscan": "off",
+        "xattr": "on",
+        "zoned": "off"
+      },
       "zfs_zpool": false
     },
     "rpool/dump": {
       "fs_type": "zfs",
-      "zfs_values": {
-        "type": "volume",
-        "creation": "1477053450",
-        "used": "2151940096",
-        "available": "11397317120",
-        "referenced": "2147535872",
-        "compressratio": "1.00x",
-        "reservation": "0",
-        "volsize": "2147483648",
-        "volblocksize": "1048576",
-        "checksum": "off",
-        "compression": "off",
-        "readonly": "off",
-        "shareiscsi": "off",
-        "copies": "1",
-        "refreservation": "2151940096",
-        "primarycache": "all",
-        "secondarycache": "all",
-        "usedbysnapshots": "0",
-        "usedbydataset": "2147535872",
-        "usedbychildren": "0",
-        "usedbyrefreservation": "4404224",
-        "logbias": "latency",
-        "sync": "standard",
-        "rekeydate": "-"
-      },
-      "zfs_sources": {
-        "type": "-",
-        "creation": "-",
-        "used": "-",
-        "available": "-",
-        "referenced": "-",
-        "compressratio": "-",
-        "reservation": "default",
-        "volsize": "local",
-        "volblocksize": "-",
-        "checksum": "local",
-        "compression": "local",
-        "readonly": "default",
-        "shareiscsi": "default",
-        "copies": "default",
-        "refreservation": "local",
-        "primarycache": "default",
-        "secondarycache": "default",
-        "usedbysnapshots": "-",
-        "usedbydataset": "-",
-        "usedbychildren": "-",
-        "usedbyrefreservation": "-",
-        "logbias": "default",
-        "sync": "default",
-        "rekeydate": "default"
-      },
       "zfs_parents": [
         "rpool"
       ],
+      "zfs_sources": {
+        "available": "-",
+        "checksum": "local",
+        "compression": "local",
+        "compressratio": "-",
+        "copies": "default",
+        "creation": "-",
+        "logbias": "default",
+        "primarycache": "default",
+        "readonly": "default",
+        "referenced": "-",
+        "refreservation": "local",
+        "rekeydate": "default",
+        "reservation": "default",
+        "secondarycache": "default",
+        "shareiscsi": "default",
+        "sync": "default",
+        "type": "-",
+        "used": "-",
+        "usedbychildren": "-",
+        "usedbydataset": "-",
+        "usedbyrefreservation": "-",
+        "usedbysnapshots": "-",
+        "volblocksize": "-",
+        "volsize": "local"
+      },
+      "zfs_values": {
+        "available": "11397317120",
+        "checksum": "off",
+        "compression": "off",
+        "compressratio": "1.00x",
+        "copies": "1",
+        "creation": "1477053450",
+        "logbias": "latency",
+        "primarycache": "all",
+        "readonly": "off",
+        "referenced": "2147535872",
+        "refreservation": "2151940096",
+        "rekeydate": "-",
+        "reservation": "0",
+        "secondarycache": "all",
+        "shareiscsi": "off",
+        "sync": "standard",
+        "type": "volume",
+        "used": "2151940096",
+        "usedbychildren": "0",
+        "usedbydataset": "2147535872",
+        "usedbyrefreservation": "4404224",
+        "usedbysnapshots": "0",
+        "volblocksize": "1048576",
+        "volsize": "2147483648"
+      },
+      "zfs_zpool": false
+    },
+    "rpool/export": {
+      "fs_type": "zfs",
+      "mount": "/export",
+      "mount_options": [
+        "read",
+        "write",
+        "setuid",
+        "devices",
+        "rstchown",
+        "nonbmand",
+        "exec",
+        "xattr",
+        "atime",
+        "dev=2d50003"
+      ],
+      "mount_time": "Wed Jun 21 17:37:10 2017",
+      "zfs_parents": [
+        "rpool"
+      ],
+      "zfs_sources": {
+        "aclinherit": "default",
+        "aclmode": "default",
+        "atime": "default",
+        "available": "-",
+        "canmount": "default",
+        "casesensitivity": "-",
+        "checksum": "default",
+        "compression": "default",
+        "compressratio": "-",
+        "copies": "default",
+        "creation": "-",
+        "devices": "default",
+        "exec": "default",
+        "logbias": "default",
+        "mounted": "-",
+        "mountpoint": "local",
+        "nbmand": "default",
+        "normalization": "-",
+        "primarycache": "default",
+        "quota": "default",
+        "readonly": "default",
+        "recordsize": "default",
+        "referenced": "-",
+        "refquota": "default",
+        "refreservation": "default",
+        "rekeydate": "default",
+        "reservation": "default",
+        "rstchown": "default",
+        "secondarycache": "default",
+        "setuid": "default",
+        "shareiscsi": "default",
+        "sharenfs": "default",
+        "sharesmb": "default",
+        "snapdir": "default",
+        "sync": "default",
+        "type": "-",
+        "used": "-",
+        "usedbychildren": "-",
+        "usedbydataset": "-",
+        "usedbyrefreservation": "-",
+        "usedbysnapshots": "-",
+        "utf8only": "-",
+        "version": "-",
+        "vscan": "default",
+        "xattr": "default",
+        "zoned": "default"
+      },
+      "zfs_values": {
+        "aclinherit": "restricted",
+        "aclmode": "discard",
+        "atime": "on",
+        "available": "11392912896",
+        "canmount": "on",
+        "casesensitivity": "mixed",
+        "checksum": "on",
+        "compression": "off",
+        "compressratio": "1.00x",
+        "copies": "1",
+        "creation": "1477053450",
+        "devices": "on",
+        "exec": "on",
+        "logbias": "latency",
+        "mounted": "yes",
+        "mountpoint": "/export",
+        "nbmand": "off",
+        "normalization": "none",
+        "primarycache": "all",
+        "quota": "0",
+        "readonly": "off",
+        "recordsize": "131072",
+        "referenced": "32768",
+        "refquota": "0",
+        "refreservation": "0",
+        "rekeydate": "-",
+        "reservation": "0",
+        "rstchown": "on",
+        "secondarycache": "all",
+        "setuid": "on",
+        "shareiscsi": "off",
+        "sharenfs": "off",
+        "sharesmb": "off",
+        "snapdir": "hidden",
+        "sync": "standard",
+        "type": "filesystem",
+        "used": "64512",
+        "usedbychildren": "31744",
+        "usedbydataset": "32768",
+        "usedbyrefreservation": "0",
+        "usedbysnapshots": "0",
+        "utf8only": "off",
+        "version": "5",
+        "vscan": "off",
+        "xattr": "on",
+        "zoned": "off"
+      },
+      "zfs_zpool": false
+    },
+    "rpool/export/home": {
+      "fs_type": "zfs",
+      "mount": "/export/home",
+      "mount_options": [
+        "read",
+        "write",
+        "setuid",
+        "devices",
+        "rstchown",
+        "nonbmand",
+        "exec",
+        "xattr",
+        "atime",
+        "dev=2d50004"
+      ],
+      "mount_time": "Wed Jun 21 17:37:10 2017",
+      "zfs_parents": [
+        "rpool",
+        "rpool/export"
+      ],
+      "zfs_sources": {
+        "aclinherit": "default",
+        "aclmode": "default",
+        "atime": "default",
+        "available": "-",
+        "canmount": "default",
+        "casesensitivity": "-",
+        "checksum": "default",
+        "compression": "default",
+        "compressratio": "-",
+        "copies": "default",
+        "creation": "-",
+        "devices": "default",
+        "exec": "default",
+        "logbias": "default",
+        "mounted": "-",
+        "mountpoint": "inherited from rpool/export",
+        "nbmand": "default",
+        "normalization": "-",
+        "primarycache": "default",
+        "quota": "default",
+        "readonly": "default",
+        "recordsize": "default",
+        "referenced": "-",
+        "refquota": "default",
+        "refreservation": "default",
+        "rekeydate": "default",
+        "reservation": "default",
+        "rstchown": "default",
+        "secondarycache": "default",
+        "setuid": "default",
+        "shareiscsi": "default",
+        "sharenfs": "default",
+        "sharesmb": "default",
+        "snapdir": "default",
+        "sync": "default",
+        "type": "-",
+        "used": "-",
+        "usedbychildren": "-",
+        "usedbydataset": "-",
+        "usedbyrefreservation": "-",
+        "usedbysnapshots": "-",
+        "utf8only": "-",
+        "version": "-",
+        "vscan": "default",
+        "xattr": "default",
+        "zoned": "default"
+      },
+      "zfs_values": {
+        "aclinherit": "restricted",
+        "aclmode": "discard",
+        "atime": "on",
+        "available": "11392912896",
+        "canmount": "on",
+        "casesensitivity": "mixed",
+        "checksum": "on",
+        "compression": "off",
+        "compressratio": "1.00x",
+        "copies": "1",
+        "creation": "1477053450",
+        "devices": "on",
+        "exec": "on",
+        "logbias": "latency",
+        "mounted": "yes",
+        "mountpoint": "/export/home",
+        "nbmand": "off",
+        "normalization": "none",
+        "primarycache": "all",
+        "quota": "0",
+        "readonly": "off",
+        "recordsize": "131072",
+        "referenced": "31744",
+        "refquota": "0",
+        "refreservation": "0",
+        "rekeydate": "-",
+        "reservation": "0",
+        "rstchown": "on",
+        "secondarycache": "all",
+        "setuid": "on",
+        "shareiscsi": "off",
+        "sharenfs": "off",
+        "sharesmb": "off",
+        "snapdir": "hidden",
+        "sync": "standard",
+        "type": "filesystem",
+        "used": "31744",
+        "usedbychildren": "0",
+        "usedbydataset": "31744",
+        "usedbyrefreservation": "0",
+        "usedbysnapshots": "0",
+        "utf8only": "off",
+        "version": "5",
+        "vscan": "off",
+        "xattr": "on",
+        "zoned": "off"
+      },
       "zfs_zpool": false
     },
     "rpool/swap": {
       "fs_type": "zfs",
-      "zfs_values": {
-        "type": "volume",
-        "creation": "1477053450",
-        "used": "2283012096",
-        "available": "11528387072",
-        "referenced": "2147537920",
-        "compressratio": "1.00x",
-        "reservation": "0",
-        "volsize": "2147483648",
-        "volblocksize": "1048576",
-        "checksum": "off",
-        "compression": "off",
-        "readonly": "off",
-        "shareiscsi": "off",
-        "copies": "1",
-        "refreservation": "2283012096",
-        "primarycache": "metadata",
-        "secondarycache": "all",
-        "usedbysnapshots": "0",
-        "usedbydataset": "2147537920",
-        "usedbychildren": "0",
-        "usedbyrefreservation": "135474176",
-        "logbias": "latency",
-        "sync": "standard",
-        "rekeydate": "-"
-      },
-      "zfs_sources": {
-        "type": "-",
-        "creation": "-",
-        "used": "-",
-        "available": "-",
-        "referenced": "-",
-        "compressratio": "-",
-        "reservation": "default",
-        "volsize": "local",
-        "volblocksize": "-",
-        "checksum": "local",
-        "compression": "local",
-        "readonly": "default",
-        "shareiscsi": "default",
-        "copies": "default",
-        "refreservation": "local",
-        "primarycache": "local",
-        "secondarycache": "default",
-        "usedbysnapshots": "-",
-        "usedbydataset": "-",
-        "usedbychildren": "-",
-        "usedbyrefreservation": "-",
-        "logbias": "default",
-        "sync": "default",
-        "rekeydate": "default"
-      },
       "zfs_parents": [
         "rpool"
       ],
+      "zfs_sources": {
+        "available": "-",
+        "checksum": "local",
+        "compression": "local",
+        "compressratio": "-",
+        "copies": "default",
+        "creation": "-",
+        "logbias": "default",
+        "primarycache": "local",
+        "readonly": "default",
+        "referenced": "-",
+        "refreservation": "local",
+        "rekeydate": "default",
+        "reservation": "default",
+        "secondarycache": "default",
+        "shareiscsi": "default",
+        "sync": "default",
+        "type": "-",
+        "used": "-",
+        "usedbychildren": "-",
+        "usedbydataset": "-",
+        "usedbyrefreservation": "-",
+        "usedbysnapshots": "-",
+        "volblocksize": "-",
+        "volsize": "local"
+      },
+      "zfs_values": {
+        "available": "11528387072",
+        "checksum": "off",
+        "compression": "off",
+        "compressratio": "1.00x",
+        "copies": "1",
+        "creation": "1477053450",
+        "logbias": "latency",
+        "primarycache": "metadata",
+        "readonly": "off",
+        "referenced": "2147537920",
+        "refreservation": "2283012096",
+        "rekeydate": "-",
+        "reservation": "0",
+        "secondarycache": "all",
+        "shareiscsi": "off",
+        "sync": "standard",
+        "type": "volume",
+        "used": "2283012096",
+        "usedbychildren": "0",
+        "usedbydataset": "2147537920",
+        "usedbyrefreservation": "135474176",
+        "usedbysnapshots": "0",
+        "volblocksize": "1048576",
+        "volsize": "2147483648"
+      },
       "zfs_zpool": false
+    },
+    "sharefs": {
+      "mount": "/etc/dfs/sharetab",
+      "mount_options": [
+        "read",
+        "write",
+        "setuid",
+        "devices",
+        "rstchown",
+        "dev=4a80001"
+      ],
+      "mount_time": "Wed Jun 21 17:37:00 2017"
+    },
+    "swap": {
+      "mount": "/var/run",
+      "mount_options": [
+        "read",
+        "write",
+        "setuid",
+        "devices",
+        "rstchown",
+        "xattr",
+        "dev=4a00003"
+      ],
+      "mount_time": "Wed Jun 21 17:37:04 2017"
     }
   },
   "fqdn": "fauxhai.local",
@@ -1010,819 +1008,819 @@
   "idletime_seconds": 2646450,
   "ipaddress": "10.0.0.2",
   "kernel": {
-    "name": "SunOS",
-    "release": "5.10",
-    "version": "Generic_147148-26",
     "machine": "i86pc",
-    "processor": "i386",
-    "os": "SunOS",
-    "update": "10 1/13 s10x_u11wos_24a X86",
     "modules": {
-      "specfs": {
-        "id": 4,
-        "loadaddr": "fffffffffbb6e000",
-        "size": 22232,
-        "description": "filesystem for specfs"
-      },
-      "fifofs": {
-        "id": 5,
-        "loadaddr": "fffffffffbb735e0",
-        "size": 17544,
-        "description": "filesystem for fifo"
-      },
-      "devfs": {
-        "id": 7,
-        "loadaddr": "fffffffffbb77978",
-        "size": 21464,
-        "description": "devices filesystem 1.16"
-      },
-      "procfs": {
-        "id": 8,
-        "loadaddr": "fffffffffbb7ca88",
-        "size": 128080,
-        "description": "filesystem for proc"
-      },
-      "TS": {
-        "id": 10,
-        "loadaddr": "fffffffffbb9b3e8",
-        "size": 16576,
-        "description": "time sharing sched class"
-      },
-      "TS_DPTBL": {
-        "id": 11,
-        "loadaddr": "fffffffffbb9eb28",
-        "size": 2528,
-        "description": "Time sharing dispatch table"
-      },
-      "acpica": {
-        "id": 14,
-        "loadaddr": "fffffffffbba69f0",
-        "size": 365048,
-        "description": "ACPI interpreter 1.5"
-      },
-      "pcie": {
-        "id": 15,
-        "loadaddr": "fffffffff7800000",
-        "size": 182616,
-        "description": "PCI Express Framework Module"
-      },
-      "busra": {
-        "id": 16,
-        "loadaddr": "fffffffff782d000",
-        "size": 9744,
-        "description": "Bus Resource Allocator (BUSRA) "
-      },
-      "iovcfg": {
-        "id": 17,
-        "loadaddr": "fffffffff7830000",
-        "size": 13416,
-        "description": "IOV Configuration Module"
-      },
-      "mac": {
-        "id": 18,
-        "loadaddr": "fffffffff7834000",
-        "size": 24544,
-        "description": "MAC Services v1.2"
-      },
-      "uppc": {
-        "id": 19,
-        "loadaddr": "fffffffff783a000",
-        "size": 12448,
-        "description": "UniProcessor PC"
-      },
-      "pcplusmp": {
-        "id": 21,
-        "loadaddr": "fffffffff784f000",
-        "size": 66264,
-        "description": "pcplusmp v1.4 compatible 1.137"
-      },
-      "cpu.generic": {
-        "id": 22,
-        "loadaddr": "fffffffff785e000",
-        "size": 17488,
-        "description": "Generic x86 CPU Module"
-      },
-      "rootnex": {
-        "id": 24,
-        "loadaddr": "fffffffff7862000",
-        "size": 83056,
-        "description": "i86pc root nexus 1.137"
-      },
-      "iommulib": {
-        "id": 25,
-        "loadaddr": "fffffffff7876000",
-        "size": 10136,
-        "description": "IOMMU library module"
-      },
-      "options": {
-        "id": 26,
-        "loadaddr": "fffffffff783ce38",
-        "size": 664,
-        "description": "options driver"
-      },
-      "pseudo": {
-        "id": 27,
-        "loadaddr": "fffffffff785d360",
-        "size": 3352,
-        "description": "nexus driver for 'pseudo' 1.28"
-      },
-      "clone": {
-        "id": 28,
-        "loadaddr": "fffffffff784ea40",
-        "size": 1864,
-        "description": "Clone Pseudodriver 'clone'"
-      },
-      "scsi_vhci": {
-        "id": 29,
-        "loadaddr": "fffffffff7879000",
-        "size": 97128,
-        "description": "SCSI VHCI Driver 1.80"
-      },
-      "scsi": {
-        "id": 30,
-        "loadaddr": "fffffffff7890000",
-        "size": 152312,
-        "description": "SCSI Bus Utility Routines"
-      },
-      "isa": {
-        "id": 31,
-        "loadaddr": "fffffffff78b2000",
-        "size": 10032,
-        "description": "isa nexus driver for 'ISA' 1.40"
-      },
-      "sad": {
-        "id": 33,
-        "loadaddr": "fffffffff783d000",
-        "size": 6112,
-        "description": "STREAMS Administrative Driver '"
-      },
-      "zfs": {
-        "id": 35,
-        "loadaddr": "fffffffff78b5000",
-        "size": 913360,
-        "description": "ZFS storage pool"
-      },
-      "swrand": {
-        "id": 36,
-        "loadaddr": "fffffffff783e538",
-        "size": 10168,
-        "description": "Kernel Random number Provider 1"
-      },
-      "kcf": {
-        "id": 37,
-        "loadaddr": "fffffffff798a000",
-        "size": 112624,
-        "description": "Kernel Crypto Framework 1.12"
-      },
-      "sha1": {
-        "id": 38,
-        "loadaddr": "fffffffff783fa98",
-        "size": 13208,
-        "description": "SHA1 Kernel SW Provider 1.1"
-      },
-      "sha2": {
-        "id": 39,
-        "loadaddr": "fffffffff7842b30",
-        "size": 40832,
-        "description": "SHA2 Kernel SW Provider 1.1"
-      },
-      "ppm": {
-        "id": 40,
-        "loadaddr": "fffffffff79a6000",
-        "size": 23504,
-        "description": "platform pm driver v1.18"
-      },
-      "pci": {
-        "id": 41,
-        "loadaddr": "fffffffff79ac000",
-        "size": 24568,
-        "description": "host to PCI nexus driver 1.71"
-      },
-      "pcihp": {
-        "id": 42,
-        "loadaddr": "fffffffff79b2000",
-        "size": 22112,
-        "description": "PCI nexus hotplug support v1.65"
-      },
-      "hpcsvc": {
-        "id": 43,
-        "loadaddr": "fffffffff784c5b0",
-        "size": 4616,
-        "description": "hot-plug controller services v1"
-      },
-      "pci-ide": {
-        "id": 44,
-        "loadaddr": "fffffffff784d728",
-        "size": 4784,
-        "description": "pciide nexus driver for 'PCI-ID"
-      },
-      "ata": {
-        "id": 45,
-        "loadaddr": "fffffffff79b8000",
-        "size": 65216,
-        "description": "ATA AT-bus attachment disk cont"
-      },
-      "cmdk": {
-        "id": 46,
-        "loadaddr": "fffffffff79c8000",
-        "size": 12512,
-        "description": "Common Direct Access Disk 1.73"
-      },
-      "dadk": {
-        "id": 47,
-        "loadaddr": "fffffffff79cb000",
-        "size": 14448,
-        "description": "Direct Attached Disk 1.46"
-      },
-      "gda": {
-        "id": 48,
-        "loadaddr": "fffffffff782f588",
-        "size": 2720,
-        "description": "Generic Direct Attached Device "
-      },
-      "strategy": {
-        "id": 49,
-        "loadaddr": "fffffffff79cf000",
-        "size": 9176,
-        "description": "Device Strategy Objects 1.31"
-      },
-      "cmlb": {
-        "id": 50,
-        "loadaddr": "fffffffff79d2000",
-        "size": 27976,
-        "description": "Common Labeling module 1.12"
-      },
-      "sata": {
-        "id": 56,
-        "loadaddr": "fffffffff7a08000",
-        "size": 106272,
-        "description": "SATA Module v1.42"
-      },
       "SDC": {
+        "description": "system duty cycle scheduling cl",
         "id": 80,
         "loadaddr": "fffffffff7bb3000",
-        "size": 7448,
-        "description": "system duty cycle scheduling cl"
+        "size": 7448
       },
-      "ctfs": {
-        "id": 81,
-        "loadaddr": "fffffffff7bb5000",
-        "size": 15752,
-        "description": "contract filesystem"
+      "TS": {
+        "description": "time sharing sched class",
+        "id": 10,
+        "loadaddr": "fffffffffbb9b3e8",
+        "size": 16576
       },
-      "mntfs": {
-        "id": 82,
-        "loadaddr": "fffffffff7bb9000",
-        "size": 15584,
-        "description": "mount information file system"
+      "TS_DPTBL": {
+        "description": "Time sharing dispatch table",
+        "id": 11,
+        "loadaddr": "fffffffffbb9eb28",
+        "size": 2528
       },
-      "tmpfs": {
-        "id": 83,
-        "loadaddr": "fffffffff7bbd000",
-        "size": 95376,
-        "description": "filesystem for tmpfs"
-      },
-      "objfs": {
-        "id": 84,
-        "loadaddr": "fffffffff7bc5000",
-        "size": 8704,
-        "description": "kernel object filesystem"
-      },
-      "sharefs": {
-        "id": 85,
-        "loadaddr": "fffffffff7bc7000",
-        "size": 7600,
-        "description": "sharefs syscall (32-bit)"
-      },
-      "cpunex": {
-        "id": 86,
-        "loadaddr": "fffffffff7875ca0",
-        "size": 1312,
-        "description": "cpu nexus driver v1.0"
-      },
-      "sockfs": {
-        "id": 89,
-        "loadaddr": "fffffffff7be2000",
-        "size": 200248,
-        "description": "filesystem for sockfs"
-      },
-      "ip": {
-        "id": 90,
-        "loadaddr": "fffffffff7c11000",
-        "size": 1366520,
-        "description": "IP STREAMS module 1.47"
-      },
-      "md5": {
-        "id": 91,
-        "loadaddr": "fffffffff7d53000",
-        "size": 11368,
-        "description": "MD5 Kernel SW Provider 1.1"
-      },
-      "hook": {
-        "id": 92,
-        "loadaddr": "fffffffff7d56000",
-        "size": 16952,
-        "description": "Hooks Interface v1.0"
-      },
-      "neti": {
-        "id": 93,
-        "loadaddr": "fffffffff7d5b000",
-        "size": 9696,
-        "description": "netinfo module"
-      },
-      "dld": {
-        "id": 95,
-        "loadaddr": "fffffffff7bcf000",
-        "size": 28552,
-        "description": "Data-Link Driver v1.7"
-      },
-      "dls": {
-        "id": 96,
-        "loadaddr": "fffffffff7bd6000",
-        "size": 24504,
-        "description": "Data-Link Services v1.8"
-      },
-      "ip6": {
-        "id": 97,
-        "loadaddr": "fffffffff7b44ce8",
-        "size": 1472,
-        "description": "IP6 STREAMS driver 1.9"
-      },
-      "tcp": {
-        "id": 98,
-        "loadaddr": "fffffffff7bd5c48",
-        "size": 1568,
-        "description": "TCP STREAMS module 1.51"
-      },
-      "tcp6": {
-        "id": 99,
-        "loadaddr": "fffffffff7bdbc38",
-        "size": 1568,
-        "description": "TCP6 STREAMS module 1.11"
-      },
-      "udp": {
-        "id": 100,
-        "loadaddr": "fffffffff7c10c38",
-        "size": 1632,
-        "description": "UDP STREAMS module 1.43"
-      },
-      "udp6": {
-        "id": 101,
-        "loadaddr": "fffffffff7bc8c30",
-        "size": 1480,
-        "description": "UDP6 STREAMS driver 1.9"
-      },
-      "sctp": {
-        "id": 102,
-        "loadaddr": "fffffffff7861c28",
-        "size": 1456,
-        "description": "SCTP device"
-      },
-      "sctp6": {
-        "id": 103,
-        "loadaddr": "fffffffff7a21c08",
-        "size": 1472,
-        "description": "SCTP6 device"
-      },
-      "icmp": {
-        "id": 104,
-        "loadaddr": "fffffffff7d5e000",
-        "size": 43848,
-        "description": "ICMP STREAMS module 1.43"
-      },
-      "icmp6": {
-        "id": 105,
-        "loadaddr": "fffffffff788fbf0",
-        "size": 1480,
-        "description": "ICMP6 STREAMS driver 1.10"
+      "acpica": {
+        "description": "ACPI interpreter 1.5",
+        "id": 14,
+        "loadaddr": "fffffffffbba69f0",
+        "size": 365048
       },
       "arp": {
+        "description": "ARP STREAMS module 1.43",
         "id": 106,
         "loadaddr": "fffffffff7d67000",
-        "size": 35328,
-        "description": "ARP STREAMS module 1.43"
+        "size": 35328
       },
-      "timod": {
-        "id": 107,
-        "loadaddr": "fffffffff7bdc000",
-        "size": 18488,
-        "description": "transport interface str mod"
+      "ata": {
+        "description": "ATA AT-bus attachment disk cont",
+        "id": 45,
+        "loadaddr": "fffffffff79b8000",
+        "size": 65216
       },
-      "consconfig_dacf": {
-        "id": 109,
-        "loadaddr": "fffffffff7d70000",
-        "size": 17400,
-        "description": "Consconfig DACF 1.39"
+      "busra": {
+        "description": "Bus Resource Allocator (BUSRA) ",
+        "id": 16,
+        "loadaddr": "fffffffff782d000",
+        "size": 9744
       },
-      "vgatext": {
-        "id": 110,
-        "loadaddr": "fffffffff7d74000",
-        "size": 19816,
-        "description": "VGA text driver v1.27"
+      "clone": {
+        "description": "Clone Pseudodriver 'clone'",
+        "id": 28,
+        "loadaddr": "fffffffff784ea40",
+        "size": 1864
       },
-      "conskbd": {
-        "id": 111,
-        "loadaddr": "fffffffff7d78000",
-        "size": 11400,
-        "description": "conskbd multiplexer driver 5.59"
+      "cmdk": {
+        "description": "Common Direct Access Disk 1.73",
+        "id": 46,
+        "loadaddr": "fffffffff79c8000",
+        "size": 12512
       },
-      "kbtrans": {
-        "id": 112,
-        "loadaddr": "fffffffff7d7b000",
-        "size": 18056,
-        "description": "kbtrans (key translation) 1.37"
-      },
-      "consms": {
-        "id": 113,
-        "loadaddr": "fffffffff7be0000",
-        "size": 7688,
-        "description": "Mouse Driver for Sun 'consms' 5"
-      },
-      "wc": {
-        "id": 114,
-        "loadaddr": "fffffffff7d7f000",
-        "size": 6600,
-        "description": "Workstation multiplexer Driver "
-      },
-      "tem": {
-        "id": 115,
-        "loadaddr": "fffffffff7d81000",
-        "size": 39808,
-        "description": "ANSI Terminal Emulator"
-      },
-      "iwscn": {
-        "id": 116,
-        "loadaddr": "fffffffff7acd2a0",
-        "size": 3840,
-        "description": "Workstation Redirection driver "
-      },
-      "usba": {
-        "id": 118,
-        "loadaddr": "fffffffff7d9c000",
-        "size": 186096,
-        "description": "USBA: USB Architecture 2.0 1.64"
-      },
-      "i8042": {
-        "id": 121,
-        "loadaddr": "fffffffff7de9000",
-        "size": 5280,
-        "description": "i8042 nexus driver 1.31"
-      },
-      "kb8042": {
-        "id": 122,
-        "loadaddr": "fffffffff7deb000",
-        "size": 9992,
-        "description": "PS/2 Keyboard 1.58, 05/06/01"
-      },
-      "mouse8042": {
-        "id": 123,
-        "loadaddr": "fffffffff79c7700",
-        "size": 2984,
-        "description": "PS/2 Mouse 1.43, 05/06/01"
-      },
-      "vuid3ps2": {
-        "id": 124,
-        "loadaddr": "fffffffff7ded000",
-        "size": 8128,
-        "description": "mouse events to vuid events"
-      },
-      "ibtl": {
-        "id": 127,
-        "loadaddr": "fffffffff7e09000",
-        "size": 77952,
-        "description": "IB Transport Layer"
-      },
-      "ibmf": {
-        "id": 128,
-        "loadaddr": "fffffffff7e1b000",
-        "size": 438256,
-        "description": "IB Agent Interfaces 2.0"
-      },
-      "fctl": {
-        "id": 131,
-        "loadaddr": "fffffffff7ea4000",
-        "size": 41424,
-        "description": "SunFC Transport v20121113-1.62"
-      },
-      "elfexec": {
-        "id": 132,
-        "loadaddr": "fffffffff7d86000",
-        "size": 37560,
-        "description": "32-bit exec module for elf"
-      },
-      "iscsi": {
-        "id": 135,
-        "loadaddr": "fffffffff800d000",
-        "size": 226888,
-        "description": "Sun iSCSI Initiator v20121113-0"
-      },
-      "doorfs": {
-        "id": 136,
-        "loadaddr": "fffffffff7def000",
-        "size": 22024,
-        "description": "32-bit door syscalls"
-      },
-      "idm": {
-        "id": 137,
-        "loadaddr": "fffffffff8043000",
-        "size": 62336,
-        "description": "iSCSI Data Mover"
-      },
-      "ibcm": {
-        "id": 139,
-        "loadaddr": "fffffffff807c000",
-        "size": 179136,
-        "description": "IB Communication Manager 1.21"
-      },
-      "ldterm": {
-        "id": 141,
-        "loadaddr": "fffffffff80a8000",
-        "size": 61768,
-        "description": "terminal line discipline"
-      },
-      "ttcompat": {
-        "id": 143,
-        "loadaddr": "fffffffff7df5000",
-        "size": 7696,
-        "description": "alt ioctl calls"
-      },
-      "ptsl": {
-        "id": 145,
-        "loadaddr": "fffffffff7df7000",
-        "size": 5984,
-        "description": "tty pseudo driver slave 'ptsl' "
-      },
-      "ptc": {
-        "id": 146,
-        "loadaddr": "fffffffff7df9000",
-        "size": 7488,
-        "description": "tty pseudo driver control 'ptc'"
-      },
-      "usbser": {
-        "id": 149,
-        "loadaddr": "fffffffff8072000",
-        "size": 20184,
-        "description": "USB generic serial module 1.20"
-      },
-      "kssl": {
-        "id": 152,
-        "loadaddr": "fffffffff80db000",
-        "size": 34448,
-        "description": "Kernel SSL Interface v1.4"
-      },
-      "rts": {
-        "id": 159,
-        "loadaddr": "fffffffff7dfb000",
-        "size": 9400,
-        "description": "PF_ROUTE socket STREAMS module "
-      },
-      "smbios": {
-        "id": 164,
-        "loadaddr": "fffffffff7ae1740",
-        "size": 2648,
-        "description": "System Management BIOS driver"
-      },
-      "tl": {
-        "id": 167,
-        "loadaddr": "fffffffff810d000",
-        "size": 28680,
-        "description": "TPI Local Transport (tl) 1.78"
-      },
-      "keysock": {
-        "id": 168,
-        "loadaddr": "fffffffff8114000",
-        "size": 18832,
-        "description": "PF_KEY socket STREAMS module 1."
-      },
-      "spdsock": {
-        "id": 169,
-        "loadaddr": "fffffffff8119000",
-        "size": 27680,
-        "description": "PF_POLICY socket STREAMS driver"
-      },
-      "sdp": {
-        "id": 170,
-        "loadaddr": "fffffffff7bb89d8",
-        "size": 2296,
-        "description": "SDP STREAMS driver 1.1"
-      },
-      "sysmsg": {
-        "id": 171,
-        "loadaddr": "fffffffff8120000",
-        "size": 6904,
-        "description": "System message redirection (fan"
+      "cmlb": {
+        "description": "Common Labeling module 1.12",
+        "id": 50,
+        "loadaddr": "fffffffff79d2000",
+        "size": 27976
       },
       "cn": {
+        "description": "Console redirection driver 5.63",
         "id": 172,
         "loadaddr": "fffffffff8051610",
-        "size": 2896,
-        "description": "Console redirection driver 5.63"
+        "size": 2896
       },
-      "mm": {
-        "id": 173,
-        "loadaddr": "fffffffff8122000",
-        "size": 6152,
-        "description": "memory driver"
+      "consconfig_dacf": {
+        "description": "Consconfig DACF 1.39",
+        "id": 109,
+        "loadaddr": "fffffffff7d70000",
+        "size": 17400
       },
-      "pipe": {
-        "id": 174,
-        "loadaddr": "fffffffff8076c98",
-        "size": 952,
-        "description": "32-bit pipe(2) syscall"
+      "conskbd": {
+        "description": "conskbd multiplexer driver 5.59",
+        "id": 111,
+        "loadaddr": "fffffffff7d78000",
+        "size": 11400
       },
-      "namefs": {
-        "id": 175,
-        "loadaddr": "fffffffff8124000",
-        "size": 8664,
-        "description": "filesystem for namefs"
+      "consms": {
+        "description": "Mouse Driver for Sun 'consms' 5",
+        "id": 113,
+        "loadaddr": "fffffffff7be0000",
+        "size": 7688
       },
-      "portfs": {
-        "id": 176,
-        "loadaddr": "fffffffff8127000",
-        "size": 14576,
-        "description": "32-bit event ports syscalls"
+      "cpu.generic": {
+        "description": "Generic x86 CPU Module",
+        "id": 22,
+        "loadaddr": "fffffffff785e000",
+        "size": 17488
       },
-      "sysevent": {
-        "id": 177,
-        "loadaddr": "fffffffff812b000",
-        "size": 4656,
-        "description": "sysevent driver 1.6"
-      },
-      "intpexec": {
-        "id": 178,
-        "loadaddr": "fffffffff8113a80",
-        "size": 1464,
-        "description": "exec mod for interp"
-      },
-      "lofs": {
-        "id": 179,
-        "loadaddr": "fffffffff812d000",
-        "size": 16056,
-        "description": "filesystem for lofs"
-      },
-      "e1000g": {
-        "id": 181,
-        "loadaddr": "fffffffff8173000",
-        "size": 210896,
-        "description": "Intel PRO/1000 Ethernet 5.2.28"
-      },
-      "mac_ether": {
-        "id": 182,
-        "loadaddr": "fffffffff7d9b720",
-        "size": 5688,
-        "description": "Ethernet MAC plugin 1.3"
-      },
-      "pts": {
-        "id": 183,
-        "loadaddr": "fffffffff81a6308",
-        "size": 3968,
-        "description": "Slave Stream Pseudo Terminal dr"
-      },
-      "openeepr": {
-        "id": 184,
-        "loadaddr": "fffffffff8059000",
-        "size": 7496,
-        "description": "OPENPROM/NVRAM Driver v1.21"
-      },
-      "devinfo": {
-        "id": 186,
-        "loadaddr": "fffffffff7adb000",
-        "size": 24656,
-        "description": "DEVINFO Driver 1.76"
-      },
-      "objmgr": {
-        "id": 187,
-        "loadaddr": "fffffffff800c6e0",
-        "size": 2856,
-        "description": "Object Manager 1.27"
-      },
-      "vboxguest": {
-        "id": 188,
-        "loadaddr": "fffffffff81a7000",
-        "size": 171120,
-        "description": "VirtualBox GstDrv 5.1.6r110634"
-      },
-      "log": {
-        "id": 189,
-        "loadaddr": "fffffffff80e7778",
-        "size": 2856,
-        "description": "streams log driver"
-      },
-      "sy": {
-        "id": 190,
-        "loadaddr": "fffffffff7eac8d8",
-        "size": 2120,
-        "description": "Indirect driver for tty 'sy' 1."
-      },
-      "ctf": {
-        "id": 192,
-        "loadaddr": "fffffffff81cd000",
-        "size": 37320,
-        "description": "Compact C Type Format routines"
-      },
-      "rpcmod": {
-        "id": 195,
-        "loadaddr": "fffffffff820a000",
-        "size": 146360,
-        "description": "rpc interface str mod"
-      },
-      "tlimod": {
-        "id": 196,
-        "loadaddr": "fffffffff8064000",
-        "size": 8000,
-        "description": "KTLI misc module"
-      },
-      "random": {
-        "id": 201,
-        "loadaddr": "fffffffff7d55968",
-        "size": 2040,
-        "description": "random number device v1.13"
+      "cpunex": {
+        "description": "cpu nexus driver v1.0",
+        "id": 86,
+        "loadaddr": "fffffffff7875ca0",
+        "size": 1312
       },
       "crypto": {
+        "description": "Cryptographic Library Interface",
         "id": 203,
         "loadaddr": "fffffffff7aac000",
-        "size": 72136,
-        "description": "Cryptographic Library Interface"
+        "size": 72136
       },
       "cryptoadm": {
+        "description": "Cryptographic Administrative In",
         "id": 204,
         "loadaddr": "fffffffff824a000",
-        "size": 6984,
-        "description": "Cryptographic Administrative In"
+        "size": 6984
       },
-      "power": {
-        "id": 211,
-        "loadaddr": "fffffffff82ee000",
-        "size": 5840,
-        "description": "power button driver v1.17"
+      "ctf": {
+        "description": "Compact C Type Format routines",
+        "id": 192,
+        "loadaddr": "fffffffff81cd000",
+        "size": 37320
+      },
+      "ctfs": {
+        "description": "contract filesystem",
+        "id": 81,
+        "loadaddr": "fffffffff7bb5000",
+        "size": 15752
+      },
+      "dadk": {
+        "description": "Direct Attached Disk 1.46",
+        "id": 47,
+        "loadaddr": "fffffffff79cb000",
+        "size": 14448
+      },
+      "devfs": {
+        "description": "devices filesystem 1.16",
+        "id": 7,
+        "loadaddr": "fffffffffbb77978",
+        "size": 21464
+      },
+      "devinfo": {
+        "description": "DEVINFO Driver 1.76",
+        "id": 186,
+        "loadaddr": "fffffffff7adb000",
+        "size": 24656
+      },
+      "dld": {
+        "description": "Data-Link Driver v1.7",
+        "id": 95,
+        "loadaddr": "fffffffff7bcf000",
+        "size": 28552
+      },
+      "dls": {
+        "description": "Data-Link Services v1.8",
+        "id": 96,
+        "loadaddr": "fffffffff7bd6000",
+        "size": 24504
+      },
+      "doorfs": {
+        "description": "32-bit door syscalls",
+        "id": 136,
+        "loadaddr": "fffffffff7def000",
+        "size": 22024
+      },
+      "e1000g": {
+        "description": "Intel PRO/1000 Ethernet 5.2.28",
+        "id": 181,
+        "loadaddr": "fffffffff8173000",
+        "size": 210896
+      },
+      "elfexec": {
+        "description": "32-bit exec module for elf",
+        "id": 132,
+        "loadaddr": "fffffffff7d86000",
+        "size": 37560
       },
       "fcip": {
+        "description": "SunFC FCIP v20121113-1.53",
         "id": 213,
         "loadaddr": "fffffffff82fe000",
-        "size": 38432,
-        "description": "SunFC FCIP v20121113-1.53"
+        "size": 38432
       },
-      "fm": {
-        "id": 216,
-        "loadaddr": "fffffffff80e4000",
-        "size": 6152,
-        "description": "fault management driver"
-      },
-      "logindmux": {
-        "id": 219,
-        "loadaddr": "fffffffff8318000",
-        "size": 8352,
-        "description": "logindmux driver 1.31"
-      },
-      "ptm": {
-        "id": 221,
-        "loadaddr": "fffffffff80f01b0",
-        "size": 4328,
-        "description": "Master streams driver 'ptm' 1.4"
-      },
-      "fssnap_if": {
-        "id": 223,
-        "loadaddr": "fffffffff8319cf0",
-        "size": 952,
-        "description": "File System Snapshot Interface"
-      },
-      "ufs": {
-        "id": 224,
-        "loadaddr": "fffffffff831e000",
-        "size": 246448,
-        "description": "filesystem for ufs"
-      },
-      "kstat": {
-        "id": 226,
-        "loadaddr": "fffffffff79d8220",
-        "size": 3888,
-        "description": "kernel statistics driver 1.26"
-      },
-      "ipf": {
-        "id": 228,
-        "loadaddr": "fffffffff835d000",
-        "size": 229296,
-        "description": "IP Filter: v4.1.9"
-      },
-      "vboxms": {
-        "id": 229,
-        "loadaddr": "fffffffff8394000",
-        "size": 15400,
-        "description": "VBoxMouseIntegr 5.1.6r110634"
+      "fctl": {
+        "description": "SunFC Transport v20121113-1.62",
+        "id": 131,
+        "loadaddr": "fffffffff7ea4000",
+        "size": 41424
       },
       "fdfs": {
+        "description": "filesystem for fd",
         "id": 230,
         "loadaddr": "fffffffff8398000",
-        "size": 4952,
-        "description": "filesystem for fd"
+        "size": 4952
+      },
+      "fifofs": {
+        "description": "filesystem for fifo",
+        "id": 5,
+        "loadaddr": "fffffffffbb735e0",
+        "size": 17544
+      },
+      "fm": {
+        "description": "fault management driver",
+        "id": 216,
+        "loadaddr": "fffffffff80e4000",
+        "size": 6152
+      },
+      "fssnap_if": {
+        "description": "File System Snapshot Interface",
+        "id": 223,
+        "loadaddr": "fffffffff8319cf0",
+        "size": 952
+      },
+      "gda": {
+        "description": "Generic Direct Attached Device ",
+        "id": 48,
+        "loadaddr": "fffffffff782f588",
+        "size": 2720
+      },
+      "hook": {
+        "description": "Hooks Interface v1.0",
+        "id": 92,
+        "loadaddr": "fffffffff7d56000",
+        "size": 16952
+      },
+      "hpcsvc": {
+        "description": "hot-plug controller services v1",
+        "id": 43,
+        "loadaddr": "fffffffff784c5b0",
+        "size": 4616
+      },
+      "i8042": {
+        "description": "i8042 nexus driver 1.31",
+        "id": 121,
+        "loadaddr": "fffffffff7de9000",
+        "size": 5280
+      },
+      "ibcm": {
+        "description": "IB Communication Manager 1.21",
+        "id": 139,
+        "loadaddr": "fffffffff807c000",
+        "size": 179136
+      },
+      "ibmf": {
+        "description": "IB Agent Interfaces 2.0",
+        "id": 128,
+        "loadaddr": "fffffffff7e1b000",
+        "size": 438256
+      },
+      "ibtl": {
+        "description": "IB Transport Layer",
+        "id": 127,
+        "loadaddr": "fffffffff7e09000",
+        "size": 77952
+      },
+      "icmp": {
+        "description": "ICMP STREAMS module 1.43",
+        "id": 104,
+        "loadaddr": "fffffffff7d5e000",
+        "size": 43848
+      },
+      "icmp6": {
+        "description": "ICMP6 STREAMS driver 1.10",
+        "id": 105,
+        "loadaddr": "fffffffff788fbf0",
+        "size": 1480
+      },
+      "idm": {
+        "description": "iSCSI Data Mover",
+        "id": 137,
+        "loadaddr": "fffffffff8043000",
+        "size": 62336
+      },
+      "intpexec": {
+        "description": "exec mod for interp",
+        "id": 178,
+        "loadaddr": "fffffffff8113a80",
+        "size": 1464
+      },
+      "iommulib": {
+        "description": "IOMMU library module",
+        "id": 25,
+        "loadaddr": "fffffffff7876000",
+        "size": 10136
+      },
+      "iovcfg": {
+        "description": "IOV Configuration Module",
+        "id": 17,
+        "loadaddr": "fffffffff7830000",
+        "size": 13416
+      },
+      "ip": {
+        "description": "IP STREAMS module 1.47",
+        "id": 90,
+        "loadaddr": "fffffffff7c11000",
+        "size": 1366520
+      },
+      "ip6": {
+        "description": "IP6 STREAMS driver 1.9",
+        "id": 97,
+        "loadaddr": "fffffffff7b44ce8",
+        "size": 1472
+      },
+      "ipf": {
+        "description": "IP Filter: v4.1.9",
+        "id": 228,
+        "loadaddr": "fffffffff835d000",
+        "size": 229296
+      },
+      "isa": {
+        "description": "isa nexus driver for 'ISA' 1.40",
+        "id": 31,
+        "loadaddr": "fffffffff78b2000",
+        "size": 10032
+      },
+      "iscsi": {
+        "description": "Sun iSCSI Initiator v20121113-0",
+        "id": 135,
+        "loadaddr": "fffffffff800d000",
+        "size": 226888
+      },
+      "iwscn": {
+        "description": "Workstation Redirection driver ",
+        "id": 116,
+        "loadaddr": "fffffffff7acd2a0",
+        "size": 3840
+      },
+      "kb8042": {
+        "description": "PS/2 Keyboard 1.58, 05/06/01",
+        "id": 122,
+        "loadaddr": "fffffffff7deb000",
+        "size": 9992
+      },
+      "kbtrans": {
+        "description": "kbtrans (key translation) 1.37",
+        "id": 112,
+        "loadaddr": "fffffffff7d7b000",
+        "size": 18056
+      },
+      "kcf": {
+        "description": "Kernel Crypto Framework 1.12",
+        "id": 37,
+        "loadaddr": "fffffffff798a000",
+        "size": 112624
+      },
+      "keysock": {
+        "description": "PF_KEY socket STREAMS module 1.",
+        "id": 168,
+        "loadaddr": "fffffffff8114000",
+        "size": 18832
+      },
+      "kssl": {
+        "description": "Kernel SSL Interface v1.4",
+        "id": 152,
+        "loadaddr": "fffffffff80db000",
+        "size": 34448
+      },
+      "kstat": {
+        "description": "kernel statistics driver 1.26",
+        "id": 226,
+        "loadaddr": "fffffffff79d8220",
+        "size": 3888
+      },
+      "ldterm": {
+        "description": "terminal line discipline",
+        "id": 141,
+        "loadaddr": "fffffffff80a8000",
+        "size": 61768
+      },
+      "lofs": {
+        "description": "filesystem for lofs",
+        "id": 179,
+        "loadaddr": "fffffffff812d000",
+        "size": 16056
+      },
+      "log": {
+        "description": "streams log driver",
+        "id": 189,
+        "loadaddr": "fffffffff80e7778",
+        "size": 2856
+      },
+      "logindmux": {
+        "description": "logindmux driver 1.31",
+        "id": 219,
+        "loadaddr": "fffffffff8318000",
+        "size": 8352
+      },
+      "mac": {
+        "description": "MAC Services v1.2",
+        "id": 18,
+        "loadaddr": "fffffffff7834000",
+        "size": 24544
+      },
+      "mac_ether": {
+        "description": "Ethernet MAC plugin 1.3",
+        "id": 182,
+        "loadaddr": "fffffffff7d9b720",
+        "size": 5688
+      },
+      "md5": {
+        "description": "MD5 Kernel SW Provider 1.1",
+        "id": 91,
+        "loadaddr": "fffffffff7d53000",
+        "size": 11368
+      },
+      "mm": {
+        "description": "memory driver",
+        "id": 173,
+        "loadaddr": "fffffffff8122000",
+        "size": 6152
+      },
+      "mntfs": {
+        "description": "mount information file system",
+        "id": 82,
+        "loadaddr": "fffffffff7bb9000",
+        "size": 15584
+      },
+      "mouse8042": {
+        "description": "PS/2 Mouse 1.43, 05/06/01",
+        "id": 123,
+        "loadaddr": "fffffffff79c7700",
+        "size": 2984
+      },
+      "namefs": {
+        "description": "filesystem for namefs",
+        "id": 175,
+        "loadaddr": "fffffffff8124000",
+        "size": 8664
+      },
+      "neti": {
+        "description": "netinfo module",
+        "id": 93,
+        "loadaddr": "fffffffff7d5b000",
+        "size": 9696
+      },
+      "objfs": {
+        "description": "kernel object filesystem",
+        "id": 84,
+        "loadaddr": "fffffffff7bc5000",
+        "size": 8704
+      },
+      "objmgr": {
+        "description": "Object Manager 1.27",
+        "id": 187,
+        "loadaddr": "fffffffff800c6e0",
+        "size": 2856
+      },
+      "openeepr": {
+        "description": "OPENPROM/NVRAM Driver v1.21",
+        "id": 184,
+        "loadaddr": "fffffffff8059000",
+        "size": 7496
+      },
+      "options": {
+        "description": "options driver",
+        "id": 26,
+        "loadaddr": "fffffffff783ce38",
+        "size": 664
+      },
+      "pci": {
+        "description": "host to PCI nexus driver 1.71",
+        "id": 41,
+        "loadaddr": "fffffffff79ac000",
+        "size": 24568
+      },
+      "pci-ide": {
+        "description": "pciide nexus driver for 'PCI-ID",
+        "id": 44,
+        "loadaddr": "fffffffff784d728",
+        "size": 4784
+      },
+      "pcie": {
+        "description": "PCI Express Framework Module",
+        "id": 15,
+        "loadaddr": "fffffffff7800000",
+        "size": 182616
+      },
+      "pcihp": {
+        "description": "PCI nexus hotplug support v1.65",
+        "id": 42,
+        "loadaddr": "fffffffff79b2000",
+        "size": 22112
+      },
+      "pcplusmp": {
+        "description": "pcplusmp v1.4 compatible 1.137",
+        "id": 21,
+        "loadaddr": "fffffffff784f000",
+        "size": 66264
+      },
+      "pipe": {
+        "description": "32-bit pipe(2) syscall",
+        "id": 174,
+        "loadaddr": "fffffffff8076c98",
+        "size": 952
+      },
+      "portfs": {
+        "description": "32-bit event ports syscalls",
+        "id": 176,
+        "loadaddr": "fffffffff8127000",
+        "size": 14576
+      },
+      "power": {
+        "description": "power button driver v1.17",
+        "id": 211,
+        "loadaddr": "fffffffff82ee000",
+        "size": 5840
+      },
+      "ppm": {
+        "description": "platform pm driver v1.18",
+        "id": 40,
+        "loadaddr": "fffffffff79a6000",
+        "size": 23504
+      },
+      "procfs": {
+        "description": "filesystem for proc",
+        "id": 8,
+        "loadaddr": "fffffffffbb7ca88",
+        "size": 128080
+      },
+      "pseudo": {
+        "description": "nexus driver for 'pseudo' 1.28",
+        "id": 27,
+        "loadaddr": "fffffffff785d360",
+        "size": 3352
+      },
+      "ptc": {
+        "description": "tty pseudo driver control 'ptc'",
+        "id": 146,
+        "loadaddr": "fffffffff7df9000",
+        "size": 7488
       },
       "ptem": {
+        "description": "pty hardware emulator",
         "id": 232,
         "loadaddr": "fffffffff80e5670",
-        "size": 5000,
-        "description": "pty hardware emulator"
+        "size": 5000
+      },
+      "ptm": {
+        "description": "Master streams driver 'ptm' 1.4",
+        "id": 221,
+        "loadaddr": "fffffffff80f01b0",
+        "size": 4328
+      },
+      "pts": {
+        "description": "Slave Stream Pseudo Terminal dr",
+        "id": 183,
+        "loadaddr": "fffffffff81a6308",
+        "size": 3968
+      },
+      "ptsl": {
+        "description": "tty pseudo driver slave 'ptsl' ",
+        "id": 145,
+        "loadaddr": "fffffffff7df7000",
+        "size": 5984
+      },
+      "random": {
+        "description": "random number device v1.13",
+        "id": 201,
+        "loadaddr": "fffffffff7d55968",
+        "size": 2040
+      },
+      "rootnex": {
+        "description": "i86pc root nexus 1.137",
+        "id": 24,
+        "loadaddr": "fffffffff7862000",
+        "size": 83056
+      },
+      "rpcmod": {
+        "description": "rpc interface str mod",
+        "id": 195,
+        "loadaddr": "fffffffff820a000",
+        "size": 146360
+      },
+      "rts": {
+        "description": "PF_ROUTE socket STREAMS module ",
+        "id": 159,
+        "loadaddr": "fffffffff7dfb000",
+        "size": 9400
+      },
+      "sad": {
+        "description": "STREAMS Administrative Driver '",
+        "id": 33,
+        "loadaddr": "fffffffff783d000",
+        "size": 6112
+      },
+      "sata": {
+        "description": "SATA Module v1.42",
+        "id": 56,
+        "loadaddr": "fffffffff7a08000",
+        "size": 106272
+      },
+      "scsi": {
+        "description": "SCSI Bus Utility Routines",
+        "id": 30,
+        "loadaddr": "fffffffff7890000",
+        "size": 152312
+      },
+      "scsi_vhci": {
+        "description": "SCSI VHCI Driver 1.80",
+        "id": 29,
+        "loadaddr": "fffffffff7879000",
+        "size": 97128
+      },
+      "sctp": {
+        "description": "SCTP device",
+        "id": 102,
+        "loadaddr": "fffffffff7861c28",
+        "size": 1456
+      },
+      "sctp6": {
+        "description": "SCTP6 device",
+        "id": 103,
+        "loadaddr": "fffffffff7a21c08",
+        "size": 1472
+      },
+      "sdp": {
+        "description": "SDP STREAMS driver 1.1",
+        "id": 170,
+        "loadaddr": "fffffffff7bb89d8",
+        "size": 2296
+      },
+      "sha1": {
+        "description": "SHA1 Kernel SW Provider 1.1",
+        "id": 38,
+        "loadaddr": "fffffffff783fa98",
+        "size": 13208
+      },
+      "sha2": {
+        "description": "SHA2 Kernel SW Provider 1.1",
+        "id": 39,
+        "loadaddr": "fffffffff7842b30",
+        "size": 40832
+      },
+      "sharefs": {
+        "description": "sharefs syscall (32-bit)",
+        "id": 85,
+        "loadaddr": "fffffffff7bc7000",
+        "size": 7600
+      },
+      "smbios": {
+        "description": "System Management BIOS driver",
+        "id": 164,
+        "loadaddr": "fffffffff7ae1740",
+        "size": 2648
+      },
+      "sockfs": {
+        "description": "filesystem for sockfs",
+        "id": 89,
+        "loadaddr": "fffffffff7be2000",
+        "size": 200248
+      },
+      "spdsock": {
+        "description": "PF_POLICY socket STREAMS driver",
+        "id": 169,
+        "loadaddr": "fffffffff8119000",
+        "size": 27680
+      },
+      "specfs": {
+        "description": "filesystem for specfs",
+        "id": 4,
+        "loadaddr": "fffffffffbb6e000",
+        "size": 22232
+      },
+      "strategy": {
+        "description": "Device Strategy Objects 1.31",
+        "id": 49,
+        "loadaddr": "fffffffff79cf000",
+        "size": 9176
+      },
+      "swrand": {
+        "description": "Kernel Random number Provider 1",
+        "id": 36,
+        "loadaddr": "fffffffff783e538",
+        "size": 10168
+      },
+      "sy": {
+        "description": "Indirect driver for tty 'sy' 1.",
+        "id": 190,
+        "loadaddr": "fffffffff7eac8d8",
+        "size": 2120
+      },
+      "sysevent": {
+        "description": "sysevent driver 1.6",
+        "id": 177,
+        "loadaddr": "fffffffff812b000",
+        "size": 4656
+      },
+      "sysmsg": {
+        "description": "System message redirection (fan",
+        "id": 171,
+        "loadaddr": "fffffffff8120000",
+        "size": 6904
+      },
+      "tcp": {
+        "description": "TCP STREAMS module 1.51",
+        "id": 98,
+        "loadaddr": "fffffffff7bd5c48",
+        "size": 1568
+      },
+      "tcp6": {
+        "description": "TCP6 STREAMS module 1.11",
+        "id": 99,
+        "loadaddr": "fffffffff7bdbc38",
+        "size": 1568
+      },
+      "tem": {
+        "description": "ANSI Terminal Emulator",
+        "id": 115,
+        "loadaddr": "fffffffff7d81000",
+        "size": 39808
+      },
+      "timod": {
+        "description": "transport interface str mod",
+        "id": 107,
+        "loadaddr": "fffffffff7bdc000",
+        "size": 18488
+      },
+      "tl": {
+        "description": "TPI Local Transport (tl) 1.78",
+        "id": 167,
+        "loadaddr": "fffffffff810d000",
+        "size": 28680
+      },
+      "tlimod": {
+        "description": "KTLI misc module",
+        "id": 196,
+        "loadaddr": "fffffffff8064000",
+        "size": 8000
+      },
+      "tmpfs": {
+        "description": "filesystem for tmpfs",
+        "id": 83,
+        "loadaddr": "fffffffff7bbd000",
+        "size": 95376
+      },
+      "ttcompat": {
+        "description": "alt ioctl calls",
+        "id": 143,
+        "loadaddr": "fffffffff7df5000",
+        "size": 7696
+      },
+      "udp": {
+        "description": "UDP STREAMS module 1.43",
+        "id": 100,
+        "loadaddr": "fffffffff7c10c38",
+        "size": 1632
+      },
+      "udp6": {
+        "description": "UDP6 STREAMS driver 1.9",
+        "id": 101,
+        "loadaddr": "fffffffff7bc8c30",
+        "size": 1480
+      },
+      "ufs": {
+        "description": "filesystem for ufs",
+        "id": 224,
+        "loadaddr": "fffffffff831e000",
+        "size": 246448
+      },
+      "uppc": {
+        "description": "UniProcessor PC",
+        "id": 19,
+        "loadaddr": "fffffffff783a000",
+        "size": 12448
+      },
+      "usba": {
+        "description": "USBA: USB Architecture 2.0 1.64",
+        "id": 118,
+        "loadaddr": "fffffffff7d9c000",
+        "size": 186096
+      },
+      "usbser": {
+        "description": "USB generic serial module 1.20",
+        "id": 149,
+        "loadaddr": "fffffffff8072000",
+        "size": 20184
+      },
+      "vboxguest": {
+        "description": "VirtualBox GstDrv 5.1.6r110634",
+        "id": 188,
+        "loadaddr": "fffffffff81a7000",
+        "size": 171120
+      },
+      "vboxms": {
+        "description": "VBoxMouseIntegr 5.1.6r110634",
+        "id": 229,
+        "loadaddr": "fffffffff8394000",
+        "size": 15400
+      },
+      "vgatext": {
+        "description": "VGA text driver v1.27",
+        "id": 110,
+        "loadaddr": "fffffffff7d74000",
+        "size": 19816
+      },
+      "vuid3ps2": {
+        "description": "mouse events to vuid events",
+        "id": 124,
+        "loadaddr": "fffffffff7ded000",
+        "size": 8128
+      },
+      "wc": {
+        "description": "Workstation multiplexer Driver ",
+        "id": 114,
+        "loadaddr": "fffffffff7d7f000",
+        "size": 6600
+      },
+      "zfs": {
+        "description": "ZFS storage pool",
+        "id": 35,
+        "loadaddr": "fffffffff78b5000",
+        "size": 913360
       }
-    }
+    },
+    "name": "SunOS",
+    "os": "SunOS",
+    "processor": "i386",
+    "release": "5.10",
+    "update": "10 1/13 s10x_u11wos_24a X86",
+    "version": "Generic_147148-26"
   },
   "keys": {
     "ssh": {
@@ -1831,13 +1829,13 @@
     }
   },
   "languages": {
+    "powershell": null,
     "ruby": {
       "bin_dir": "/usr/local/bin",
       "gem_bin": "/usr/local/bin/gem",
       "gems_dir": "/usr/local/gems",
       "ruby_bin": "/usr/local/bin/ruby"
-    },
-    "powershell": null
+    }
   },
   "macaddress": "11:11:11:11:11:11",
   "machinename": "Fauxhai",
@@ -1845,72 +1843,43 @@
     "total": "1048576kB"
   },
   "network": {
+    "default_gateway": "10.0.0.1",
+    "default_interface": "eth0",
     "interfaces": {
-      "lo": {
-        "mtu": "65536",
-        "flags": [
-          "LOOPBACK",
-          "UP",
-          "LOWER_UP"
-        ],
-        "encapsulation": "Loopback",
+      "eth0": {
         "addresses": {
-          "127.0.0.1": {
+          "10.0.0.2": {
+            "broadcast": "10.0.0.255",
             "family": "inet",
-            "prefixlen": "8",
-            "netmask": "255.0.0.0",
-            "scope": "Node",
-            "ip_scope": "LOOPBACK"
+            "ip_scope": "RFC1918 PRIVATE",
+            "netmask": "255.255.255.0",
+            "prefixlen": "24",
+            "scope": "Global"
           },
-          "::1": {
+          "11:11:11:11:11:11": {
+            "family": "lladdr"
+          },
+          "fe80::11:1111:1111:1111": {
             "family": "inet6",
-            "prefixlen": "128",
-            "scope": "Node",
-            "tags": [
-
-            ],
-            "ip_scope": "LINK LOCAL LOOPBACK"
+            "ip_scope": "LINK LOCAL UNICAST",
+            "prefixlen": "64",
+            "scope": "Link",
+            "tags": []
           }
         },
-        "state": "unknown"
-      },
-      "eth0": {
-        "type": "eth",
-        "number": "0",
-        "mtu": "1500",
+        "arp": {
+          "10.0.0.1": "fe:ff:ff:ff:ff:ff"
+        },
+        "encapsulation": "Ethernet",
         "flags": [
           "BROADCAST",
           "MULTICAST",
           "UP",
           "LOWER_UP"
         ],
-        "encapsulation": "Ethernet",
-        "addresses": {
-          "11:11:11:11:11:11": {
-            "family": "lladdr"
-          },
-          "10.0.0.2": {
-            "family": "inet",
-            "prefixlen": "24",
-            "netmask": "255.255.255.0",
-            "broadcast": "10.0.0.255",
-            "scope": "Global",
-            "ip_scope": "RFC1918 PRIVATE"
-          },
-          "fe80::11:1111:1111:1111": {
-            "family": "inet6",
-            "prefixlen": "64",
-            "scope": "Link",
-            "tags": [
-
-            ],
-            "ip_scope": "LINK LOCAL UNICAST"
-          }
-        },
-        "state": "up",
-        "arp": {
-          "10.0.0.1": "fe:ff:ff:ff:ff:ff"
-        },
+        "mtu": "1500",
+        "number": "0",
+        "ring_params": {},
         "routes": [
           {
             "destination": "default",
@@ -1920,8 +1889,8 @@
           {
             "destination": "10.0.0.0/24",
             "family": "inet",
-            "scope": "link",
             "proto": "kernel",
+            "scope": "link",
             "src": "10.0.0.2"
           },
           {
@@ -1931,18 +1900,41 @@
             "proto": "kernel"
           }
         ],
-        "ring_params": {
-        }
+        "state": "up",
+        "type": "eth"
+      },
+      "lo": {
+        "addresses": {
+          "127.0.0.1": {
+            "family": "inet",
+            "ip_scope": "LOOPBACK",
+            "netmask": "255.0.0.0",
+            "prefixlen": "8",
+            "scope": "Node"
+          },
+          "::1": {
+            "family": "inet6",
+            "ip_scope": "LINK LOCAL LOOPBACK",
+            "prefixlen": "128",
+            "scope": "Node",
+            "tags": []
+          }
+        },
+        "encapsulation": "Loopback",
+        "flags": [
+          "LOOPBACK",
+          "UP",
+          "LOWER_UP"
+        ],
+        "mtu": "65536",
+        "state": "unknown"
       }
-    },
-    "default_interface": "eth0",
-    "default_gateway": "10.0.0.1"
+    }
   },
   "ohai_time": 1498066768.8637536,
   "os": "solaris2",
   "os_version": "5.10",
-  "packages": {
-  },
+  "packages": {},
   "platform": "solaris2",
   "platform_build": "Generic_147148-26",
   "platform_family": "solaris2",
@@ -1954,7 +1946,6 @@
   "uptime": "30 days 15 hours 07 minutes 30 seconds",
   "uptime_seconds": 2646450,
   "virtualization": {
-    "systems": {
-    }
+    "systems": {}
   }
 }

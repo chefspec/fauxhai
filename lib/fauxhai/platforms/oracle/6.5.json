@@ -1,216 +1,118 @@
 {
-  "deprecated": true,
-  "kernel": {
-    "name": "Linux",
-    "release": "3.8.13-16.2.1.el6uek.x86_64",
-    "version": "#1 SMP Thu Nov 7 17:01:44 PST 2013",
-    "machine": "x86_64",
-    "modules": {
-      "vboxsf": {
-        "size": "38015",
-        "refcount": "0"
-      },
-      "ipv6": {
-        "size": "337773",
-        "refcount": "24"
-      },
-      "ppdev": {
-        "size": "8342",
-        "refcount": "0"
-      },
-      "parport_pc": {
-        "size": "21472",
-        "refcount": "0"
-      },
-      "parport": {
-        "size": "35848",
-        "refcount": "2"
-      },
-      "microcode": {
-        "size": "114975",
-        "refcount": "0"
-      },
-      "pcspkr": {
-        "size": "2150",
-        "refcount": "0"
-      },
-      "i2c_piix4": {
-        "size": "11994",
-        "refcount": "0"
-      },
-      "vboxguest": {
-        "size": "261238",
-        "refcount": "2"
-      },
-      "e1000": {
-        "size": "146993",
-        "refcount": "0"
-      },
-      "vboxvideo": {
-        "size": "2154",
-        "refcount": "0"
-      },
-      "drm": {
-        "size": "274036",
-        "refcount": "1"
-      },
-      "i2c_core": {
-        "size": "31228",
-        "refcount": "2"
-      },
-      "sg": {
-        "size": "30441",
-        "refcount": "0"
-      },
-      "ext4": {
-        "size": "530703",
-        "refcount": "2"
-      },
-      "jbd2": {
-        "size": "100770",
-        "refcount": "1"
-      },
-      "mbcache": {
-        "size": "7575",
-        "refcount": "1"
-      },
-      "sd_mod": {
-        "size": "40946",
-        "refcount": "3"
-      },
-      "crc_t10dif": {
-        "size": "1547",
-        "refcount": "1"
-      },
-      "pata_acpi": {
-        "size": "3782",
-        "refcount": "0"
-      },
-      "ata_generic": {
-        "size": "3758",
-        "refcount": "0"
-      },
-      "ata_piix": {
-        "size": "26525",
-        "refcount": "2"
-      },
-      "dm_mirror": {
-        "size": "14208",
-        "refcount": "0"
-      },
-      "dm_region_hash": {
-        "size": "11094",
-        "refcount": "1"
-      },
-      "dm_log": {
-        "size": "9681",
-        "refcount": "2"
-      },
-      "dm_mod": {
-        "size": "84786",
-        "refcount": "8"
-      }
+  "chef_packages": {
+    "chef": {
+      "chef_root": "/opt/chef/embedded/lib/ruby/gems/2.1.0/gems/chef-11.10.4/lib",
+      "version": "11.10.4"
     },
-    "os": "GNU/Linux"
+    "ohai": {
+      "ohai_root": "/opt/chef/embedded/lib/ruby/gems/2.1.0/gems/ohai-6.20.0/lib/ohai",
+      "version": "6.20.0"
+    }
   },
-  "os": "linux",
-  "os_version": "3.8.13-16.2.1.el6uek.x86_64",
   "command": {
     "ps": "ps -ef"
   },
-  "dmi": {
+  "counters": {
+    "network": {
+      "interfaces": {
+        "eth0": {
+          "rx": {
+            "bytes": "0",
+            "compressed": 0,
+            "drop": 0,
+            "errors": "0",
+            "frame": 0,
+            "multicast": 0,
+            "overrun": 0,
+            "packets": "0"
+          },
+          "tx": {
+            "bytes": "342",
+            "carrier": 0,
+            "collisions": "0",
+            "compressed": 0,
+            "drop": 0,
+            "errors": "0",
+            "overrun": 0,
+            "packets": "0"
+          }
+        }
+      }
+    }
   },
-  "lsb": {
+  "cpu": {
+    "cores": 1,
+    "real": 1,
+    "total": 1
   },
-  "platform": "oracle",
-  "platform_version": "6.5",
-  "platform_family": "rhel",
-  "ohai_time": 1394501061.1416516,
+  "current_user": "fauxhai",
+  "deprecated": true,
+  "dmi": {},
+  "domain": "local",
+  "etc": {
+    "group": {
+      "fauxhai": {
+        "gid": 0,
+        "members": [
+          "fauxhai"
+        ]
+      }
+    },
+    "passwd": {
+      "fauxhai": {
+        "dir": "/home/fauxhai",
+        "gecos": "Fauxhai",
+        "gid": 0,
+        "shell": "/bin/bash",
+        "uid": 0
+      }
+    }
+  },
   "filesystem": {
     "/dev/mapper/VolGroup-lv_root": {
+      "fs_type": "ext4",
+      "kb_available": "34205464",
       "kb_size": "39710104",
       "kb_used": "3480808",
-      "kb_available": "34205464",
-      "percent_used": "10%",
       "mount": "/",
-      "fs_type": "ext4",
       "mount_options": [
         "rw"
       ],
+      "percent_used": "10%",
       "uuid": "86877200-10d4-410a-8eae-045aac03d7be"
     },
-    "tmpfs": {
-      "kb_size": "122224",
-      "kb_used": "0",
-      "kb_available": "122224",
-      "percent_used": "0%",
-      "mount": "/dev/shm",
-      "fs_type": "tmpfs",
-      "mount_options": [
-        "rw",
-        "rootcontext=\"system_u:object_r:tmpfs_t:s0\""
-      ]
+    "/dev/mapper/VolGroup-lv_swap": {
+      "fs_type": "swap",
+      "uuid": "1f696432-2547-48c7-8289-3878bd8c4023"
     },
     "/dev/sda1": {
+      "fs_type": "ext4",
+      "kb_available": "411598",
       "kb_size": "487652",
       "kb_used": "50454",
-      "kb_available": "411598",
-      "percent_used": "11%",
       "mount": "/boot",
-      "fs_type": "ext4",
       "mount_options": [
         "rw"
       ],
+      "percent_used": "11%",
       "uuid": "60ff3c41-c599-4b80-b653-c5d1f0f54800"
     },
-    "proc": {
-      "mount": "/proc",
-      "fs_type": "proc",
-      "mount_options": [
-        "rw"
-      ]
-    },
-    "sysfs": {
-      "mount": "/sys",
-      "fs_type": "sysfs",
-      "mount_options": [
-        "rw"
-      ]
+    "/dev/sda2": {
+      "fs_type": "LVM2_member",
+      "uuid": "MNuMkd-NFa1-AHFg-THVf-oLd0-Mqzv-wHWdks"
     },
     "devpts": {
-      "mount": "/dev/pts",
       "fs_type": "devpts",
+      "mount": "/dev/pts",
       "mount_options": [
         "rw",
         "gid=5",
         "mode=620"
       ]
     },
-    "none": {
-      "mount": "/proc/sys/fs/binfmt_misc",
-      "fs_type": "binfmt_misc",
-      "mount_options": [
-        "rw"
-      ]
-    },
-    "/dev/sda2": {
-      "fs_type": "LVM2_member",
-      "uuid": "MNuMkd-NFa1-AHFg-THVf-oLd0-Mqzv-wHWdks"
-    },
-    "/dev/mapper/VolGroup-lv_swap": {
-      "fs_type": "swap",
-      "uuid": "1f696432-2547-48c7-8289-3878bd8c4023"
-    },
-    "rootfs": {
-      "mount": "/",
-      "fs_type": "rootfs",
-      "mount_options": [
-        "rw"
-      ]
-    },
     "devtmpfs": {
-      "mount": "/dev",
       "fs_type": "devtmpfs",
+      "mount": "/dev",
       "mount_options": [
         "rw",
         "seclabel",
@@ -219,10 +121,171 @@
         "nr_inodes=27968",
         "mode=755"
       ]
+    },
+    "none": {
+      "fs_type": "binfmt_misc",
+      "mount": "/proc/sys/fs/binfmt_misc",
+      "mount_options": [
+        "rw"
+      ]
+    },
+    "proc": {
+      "fs_type": "proc",
+      "mount": "/proc",
+      "mount_options": [
+        "rw"
+      ]
+    },
+    "rootfs": {
+      "fs_type": "rootfs",
+      "mount": "/",
+      "mount_options": [
+        "rw"
+      ]
+    },
+    "sysfs": {
+      "fs_type": "sysfs",
+      "mount": "/sys",
+      "mount_options": [
+        "rw"
+      ]
+    },
+    "tmpfs": {
+      "fs_type": "tmpfs",
+      "kb_available": "122224",
+      "kb_size": "122224",
+      "kb_used": "0",
+      "mount": "/dev/shm",
+      "mount_options": [
+        "rw",
+        "rootcontext=\"system_u:object_r:tmpfs_t:s0\""
+      ],
+      "percent_used": "0%"
     }
   },
-  "root_group": "root",
+  "fqdn": "fauxhai.local",
+  "hostname": "Fauxhai",
   "init_package": "init",
+  "ipaddress": "10.0.0.2",
+  "kernel": {
+    "machine": "x86_64",
+    "modules": {
+      "ata_generic": {
+        "refcount": "0",
+        "size": "3758"
+      },
+      "ata_piix": {
+        "refcount": "2",
+        "size": "26525"
+      },
+      "crc_t10dif": {
+        "refcount": "1",
+        "size": "1547"
+      },
+      "dm_log": {
+        "refcount": "2",
+        "size": "9681"
+      },
+      "dm_mirror": {
+        "refcount": "0",
+        "size": "14208"
+      },
+      "dm_mod": {
+        "refcount": "8",
+        "size": "84786"
+      },
+      "dm_region_hash": {
+        "refcount": "1",
+        "size": "11094"
+      },
+      "drm": {
+        "refcount": "1",
+        "size": "274036"
+      },
+      "e1000": {
+        "refcount": "0",
+        "size": "146993"
+      },
+      "ext4": {
+        "refcount": "2",
+        "size": "530703"
+      },
+      "i2c_core": {
+        "refcount": "2",
+        "size": "31228"
+      },
+      "i2c_piix4": {
+        "refcount": "0",
+        "size": "11994"
+      },
+      "ipv6": {
+        "refcount": "24",
+        "size": "337773"
+      },
+      "jbd2": {
+        "refcount": "1",
+        "size": "100770"
+      },
+      "mbcache": {
+        "refcount": "1",
+        "size": "7575"
+      },
+      "microcode": {
+        "refcount": "0",
+        "size": "114975"
+      },
+      "parport": {
+        "refcount": "2",
+        "size": "35848"
+      },
+      "parport_pc": {
+        "refcount": "0",
+        "size": "21472"
+      },
+      "pata_acpi": {
+        "refcount": "0",
+        "size": "3782"
+      },
+      "pcspkr": {
+        "refcount": "0",
+        "size": "2150"
+      },
+      "ppdev": {
+        "refcount": "0",
+        "size": "8342"
+      },
+      "sd_mod": {
+        "refcount": "3",
+        "size": "40946"
+      },
+      "sg": {
+        "refcount": "0",
+        "size": "30441"
+      },
+      "vboxguest": {
+        "refcount": "2",
+        "size": "261238"
+      },
+      "vboxsf": {
+        "refcount": "0",
+        "size": "38015"
+      },
+      "vboxvideo": {
+        "refcount": "0",
+        "size": "2154"
+      }
+    },
+    "name": "Linux",
+    "os": "GNU/Linux",
+    "release": "3.8.13-16.2.1.el6uek.x86_64",
+    "version": "#1 SMP Thu Nov 7 17:01:44 PST 2013"
+  },
+  "keys": {
+    "ssh": {
+      "host_dsa_public": "ssh-dss AAAAB3NzaC1kc3MAAACBAJFo9BLAw4WKEs5hgipk5m423FzBsDXCZSMcC9ca/om/1VYzMqImixGe3uICDzNFUWxFoLJTQAOccyzo6MXZiQqwWJDLFi5qOSr6w2XcMyE+zd4wOyMoDiVM5fizmG8K3FzrqvGjwBcHcBdOQnavSijoj38DN25J9zhrid5BY4WlAAAAFQDxXrCyG52XCzn3FV4ej38wJBkomQAAAIBovGPJ4mP2P6BK8lHl0PPbktwQbWlpJ13oz6REJFDVcUi7vV26bX/BjQX+ohzZQzljdz1SpUbPc/8nuA4darYkVh91eBi307EN8IdxRHj2eBgp/ZG4yshIebG3WHrwJD/xUjjZ1MRfyDT1ermVi4LvjjPgWDxLZnPpMaR6S1nzgQAAAIEAj0Vd6DCWslvlsZ8+N53HWsqPi3gnx35JoLPz9Z2epkKIKqmEHav+93G3hdfztVa4I4t3phoPniQchYryF5+RNg8hqxKzjNtrIqUYCeuf2NJrksNsH7OZygPHZpqt4kTuwAGZxjxEGfAI0y8DhkU2ntp2LnzRnWH106BQBCmcXwo= fauxhai.local",
+      "host_rsa_public": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCtLCeqtqr/HbnORckw1ukdLhpfGoOPFi5/esKEokzTqq1gsgQ2V8emmyjfq1i6XXfRtSBxkdlHv/GWdP5wBTuE2G85MzBkVSQPvmwQN8lX/JMPEEtKXkeOo0o92/PiSmvY4eRsdF0mw40Uvg7jtE3f3fxj497kzh5fKtkrHnF4x9gXCbVdr3FqXJfggR5IJwAxToerbK7x/uRS+7YuZI9Pip3tt14nv9ezwXcuGb/tvjWOZINiFl8izVIFKi7sxfTX09p4NgamxRS7TD2Yd0jT8nEoF9UZTsgXcJ1kDSx7N7NxFfNfP6rCdOGRRz4gUhXtsUjG/XkxPeCwZ7A9VnOD fauxhai.local"
+    }
+  },
   "languages": {
     "ruby": {
       "bin_dir": "/usr/local/bin",
@@ -231,80 +294,14 @@
       "ruby_bin": "/usr/local/bin/ruby"
     }
   },
-  "chef_packages": {
-    "chef": {
-      "version": "11.10.4",
-      "chef_root": "/opt/chef/embedded/lib/ruby/gems/2.1.0/gems/chef-11.10.4/lib"
-    },
-    "ohai": {
-      "version": "6.20.0",
-      "ohai_root": "/opt/chef/embedded/lib/ruby/gems/2.1.0/gems/ohai-6.20.0/lib/ohai"
-    }
-  },
-  "counters": {
-    "network": {
-      "interfaces": {
-        "eth0": {
-          "rx": {
-            "bytes": "0",
-            "packets": "0",
-            "errors": "0",
-            "drop": 0,
-            "overrun": 0,
-            "frame": 0,
-            "compressed": 0,
-            "multicast": 0
-          },
-          "tx": {
-            "bytes": "342",
-            "packets": "0",
-            "errors": "0",
-            "drop": 0,
-            "overrun": 0,
-            "collisions": "0",
-            "carrier": 0,
-            "compressed": 0
-          }
-        }
-      }
-    }
-  },
-  "current_user": "fauxhai",
-  "domain": "local",
-  "etc": {
-    "passwd": {
-      "fauxhai": {
-        "dir": "/home/fauxhai",
-        "gid": 0,
-        "uid": 0,
-        "shell": "/bin/bash",
-        "gecos": "Fauxhai"
-      }
-    },
-    "group": {
-      "fauxhai": {
-        "gid": 0,
-        "members": [
-          "fauxhai"
-        ]
-      }
-    }
-  },
-  "hostname": "Fauxhai",
-  "fqdn": "fauxhai.local",
-  "ipaddress": "10.0.0.2",
-  "keys": {
-    "ssh": {
-      "host_dsa_public": "ssh-dss AAAAB3NzaC1kc3MAAACBAJFo9BLAw4WKEs5hgipk5m423FzBsDXCZSMcC9ca/om/1VYzMqImixGe3uICDzNFUWxFoLJTQAOccyzo6MXZiQqwWJDLFi5qOSr6w2XcMyE+zd4wOyMoDiVM5fizmG8K3FzrqvGjwBcHcBdOQnavSijoj38DN25J9zhrid5BY4WlAAAAFQDxXrCyG52XCzn3FV4ej38wJBkomQAAAIBovGPJ4mP2P6BK8lHl0PPbktwQbWlpJ13oz6REJFDVcUi7vV26bX/BjQX+ohzZQzljdz1SpUbPc/8nuA4darYkVh91eBi307EN8IdxRHj2eBgp/ZG4yshIebG3WHrwJD/xUjjZ1MRfyDT1ermVi4LvjjPgWDxLZnPpMaR6S1nzgQAAAIEAj0Vd6DCWslvlsZ8+N53HWsqPi3gnx35JoLPz9Z2epkKIKqmEHav+93G3hdfztVa4I4t3phoPniQchYryF5+RNg8hqxKzjNtrIqUYCeuf2NJrksNsH7OZygPHZpqt4kTuwAGZxjxEGfAI0y8DhkU2ntp2LnzRnWH106BQBCmcXwo= fauxhai.local",
-      "host_rsa_public": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCtLCeqtqr/HbnORckw1ukdLhpfGoOPFi5/esKEokzTqq1gsgQ2V8emmyjfq1i6XXfRtSBxkdlHv/GWdP5wBTuE2G85MzBkVSQPvmwQN8lX/JMPEEtKXkeOo0o92/PiSmvY4eRsdF0mw40Uvg7jtE3f3fxj497kzh5fKtkrHnF4x9gXCbVdr3FqXJfggR5IJwAxToerbK7x/uRS+7YuZI9Pip3tt14nv9ezwXcuGb/tvjWOZINiFl8izVIFKi7sxfTX09p4NgamxRS7TD2Yd0jT8nEoF9UZTsgXcJ1kDSx7N7NxFfNfP6rCdOGRRz4gUhXtsUjG/XkxPeCwZ7A9VnOD fauxhai.local"
-    }
-  },
+  "lsb": {},
   "macaddress": "11:11:11:11:11:11",
+  "memory": {
+    "total": "524288kB"
+  },
   "network": {
     "default_gateway": "10.0.0.1",
     "default_interface": "eth0",
-    "settings": {
-    },
     "interfaces": {
       "eth0": {
         "addresses": {
@@ -332,24 +329,24 @@
           {
             "destination": "10.0.0.0/24",
             "family": "inet",
-            "scope": "link",
             "proto": "kernel",
+            "scope": "link",
             "src": "10.0.0.2"
           }
         ],
         "state": "up",
         "type": "eth"
       }
-    }
+    },
+    "settings": {}
   },
+  "ohai_time": 1394501061.1416516,
+  "os": "linux",
+  "os_version": "3.8.13-16.2.1.el6uek.x86_64",
+  "platform": "oracle",
+  "platform_family": "rhel",
+  "platform_version": "6.5",
+  "root_group": "root",
   "uptime": "30 days 15 hours 07 minutes 30 seconds",
-  "uptime_seconds": 2646450,
-  "cpu": {
-    "real": 1,
-    "total": 1,
-    "cores": 1
-  },
-  "memory": {
-    "total": "524288kB"
-  }
+  "uptime_seconds": 2646450
 }

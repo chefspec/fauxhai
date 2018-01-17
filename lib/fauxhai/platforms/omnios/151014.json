@@ -1,317 +1,172 @@
 {
+  "chef_packages": {
+    "chef": {
+      "chef_root": "/opt/chef/embedded/lib/ruby/gems/2.1.0/gems/chef-11.18.6/lib",
+      "version": "11.18.6"
+    },
+    "ohai": {
+      "ohai_root": "/opt/chef/embedded/lib/ruby/gems/2.1.0/gems/ohai-7.4.1/lib/ohai",
+      "version": "7.4.1"
+    }
+  },
+  "command": {
+    "ps": "ps -ef"
+  },
+  "counters": {
+    "network": {
+      "interfaces": {
+        "eth0": {
+          "rx": {
+            "bytes": "0",
+            "compressed": 0,
+            "drop": 0,
+            "errors": "0",
+            "frame": 0,
+            "multicast": 0,
+            "overrun": 0,
+            "packets": "0"
+          },
+          "tx": {
+            "bytes": "342",
+            "carrier": 0,
+            "collisions": "0",
+            "compressed": 0,
+            "drop": 0,
+            "errors": "0",
+            "overrun": 0,
+            "packets": "0"
+          }
+        }
+      }
+    }
+  },
+  "cpu": {
+    "cores": 1,
+    "real": 1,
+    "total": 1
+  },
+  "current_user": "fauxhai",
   "deprecated": true,
+  "dmi": {},
+  "domain": "local",
+  "etc": {
+    "group": {
+      "fauxhai": {
+        "gid": 0,
+        "members": [
+          "fauxhai"
+        ]
+      }
+    },
+    "passwd": {
+      "fauxhai": {
+        "dir": "/home/fauxhai",
+        "gecos": "Fauxhai",
+        "gid": 0,
+        "shell": "/bin/bash",
+        "uid": 0
+      }
+    }
+  },
   "filesystem": {
-    "swap": {
-      "kb_size": "3335292",
-      "kb_used": "36",
-      "kb_available": "3335256",
-      "percent_used": "1%",
-      "mount": "/var/run",
-      "mount_time": "Wed Apr 29 14:22:54 2015",
+    "/dev": {
+      "mount": "/dev",
       "mount_options": [
         "read",
         "write",
         "setuid",
         "devices",
-        "xattr",
-        "dev=83c0003"
-      ]
+        "dev=8280000"
+      ],
+      "mount_time": "Wed Apr 29 14:22:28 2015"
+    },
+    "/devices": {
+      "mount": "/devices",
+      "mount_options": [
+        "read",
+        "write",
+        "setuid",
+        "devices",
+        "dev=8240000"
+      ],
+      "mount_time": "Wed Apr 29 14:22:28 2015"
     },
     "/usr/lib/libc/libc_hwcap1.so.1": {
+      "kb_available": "24590991",
       "kb_size": "27013067",
       "kb_used": "2422076",
-      "kb_available": "24590991",
-      "percent_used": "9%",
       "mount": "/lib/libc.so.1",
-      "mount_time": "Wed Apr 29 14:22:52 2015",
       "mount_options": [
         "read",
         "write",
         "setuid",
         "devices",
         "dev=41d0002"
-      ]
+      ],
+      "mount_time": "Wed Apr 29 14:22:52 2015",
+      "percent_used": "9%"
     },
-    "rpool/export": {
-      "kb_size": "24591010",
-      "kb_used": "19",
-      "kb_available": "24590991",
-      "percent_used": "1%",
-      "mount": "/export",
-      "mount_time": "Wed Apr 29 14:23:02 2015",
+    "ctfs": {
+      "mount": "/system/contract",
       "mount_options": [
         "read",
         "write",
         "setuid",
         "devices",
-        "nonbmand",
-        "exec",
-        "xattr",
-        "atime",
-        "dev=41d0008"
+        "dev=8340001"
       ],
-      "fs_type": "zfs",
-      "zfs_values": {
-        "type": "filesystem",
-        "creation": "1430335083",
-        "used": "38912",
-        "available": "25181174272",
-        "referenced": "19456",
-        "compressratio": "1.00x",
-        "mounted": "yes",
-        "quota": "0",
-        "reservation": "0",
-        "recordsize": "131072",
-        "mountpoint": "/export",
-        "sharenfs": "off",
-        "checksum": "on",
-        "compression": "off",
-        "atime": "on",
-        "devices": "on",
-        "exec": "on",
-        "setuid": "on",
-        "readonly": "off",
-        "zoned": "off",
-        "snapdir": "hidden",
-        "aclmode": "discard",
-        "aclinherit": "restricted",
-        "canmount": "on",
-        "xattr": "on",
-        "copies": "1",
-        "version": "5",
-        "utf8only": "off",
-        "normalization": "none",
-        "casesensitivity": "sensitive",
-        "vscan": "off",
-        "nbmand": "off",
-        "sharesmb": "off",
-        "refquota": "0",
-        "refreservation": "0",
-        "primarycache": "all",
-        "secondarycache": "all",
-        "usedbysnapshots": "0",
-        "usedbydataset": "19456",
-        "usedbychildren": "19456",
-        "usedbyrefreservation": "0",
-        "logbias": "latency",
-        "dedup": "off",
-        "mlslabel": "none",
-        "sync": "standard",
-        "refcompressratio": "1.00x",
-        "written": "19456",
-        "logicalused": "19456",
-        "logicalreferenced": "9728",
-        "filesystem_limit": "18446744073709551615",
-        "snapshot_limit": "18446744073709551615",
-        "filesystem_count": "18446744073709551615",
-        "snapshot_count": "18446744073709551615",
-        "redundant_metadata": "all"
-      },
-      "zfs_sources": {
-        "type": "-",
-        "creation": "-",
-        "used": "-",
-        "available": "-",
-        "referenced": "-",
-        "compressratio": "-",
-        "mounted": "-",
-        "quota": "default",
-        "reservation": "default",
-        "recordsize": "default",
-        "mountpoint": "local",
-        "sharenfs": "default",
-        "checksum": "default",
-        "compression": "default",
-        "atime": "default",
-        "devices": "default",
-        "exec": "default",
-        "setuid": "default",
-        "readonly": "default",
-        "zoned": "default",
-        "snapdir": "default",
-        "aclmode": "default",
-        "aclinherit": "default",
-        "canmount": "default",
-        "xattr": "default",
-        "copies": "default",
-        "version": "-",
-        "utf8only": "-",
-        "normalization": "-",
-        "casesensitivity": "-",
-        "vscan": "default",
-        "nbmand": "default",
-        "sharesmb": "default",
-        "refquota": "default",
-        "refreservation": "default",
-        "primarycache": "default",
-        "secondarycache": "default",
-        "usedbysnapshots": "-",
-        "usedbydataset": "-",
-        "usedbychildren": "-",
-        "usedbyrefreservation": "-",
-        "logbias": "default",
-        "dedup": "default",
-        "mlslabel": "default",
-        "sync": "default",
-        "refcompressratio": "-",
-        "written": "-",
-        "logicalused": "-",
-        "logicalreferenced": "-",
-        "filesystem_limit": "default",
-        "snapshot_limit": "default",
-        "filesystem_count": "default",
-        "snapshot_count": "default",
-        "redundant_metadata": "default"
-      },
-      "zfs_parents": [
-        "rpool"
-      ],
-      "zfs_zpool": false
+      "mount_time": "Wed Apr 29 14:22:28 2015"
     },
-    "rpool/export/home": {
-      "kb_size": "24591010",
-      "kb_used": "19",
-      "kb_available": "24590991",
-      "percent_used": "1%",
-      "mount": "/export/home",
-      "mount_time": "Wed Apr 29 14:23:02 2015",
+    "fd": {
+      "mount": "/dev/fd",
       "mount_options": [
         "read",
         "write",
         "setuid",
         "devices",
-        "nonbmand",
-        "exec",
-        "xattr",
-        "atime",
-        "dev=41d0009"
+        "dev=8540001"
       ],
-      "fs_type": "zfs",
-      "zfs_values": {
-        "type": "filesystem",
-        "creation": "1430335083",
-        "used": "19456",
-        "available": "25181174272",
-        "referenced": "19456",
-        "compressratio": "1.00x",
-        "mounted": "yes",
-        "quota": "0",
-        "reservation": "0",
-        "recordsize": "131072",
-        "mountpoint": "/export/home",
-        "sharenfs": "off",
-        "checksum": "on",
-        "compression": "off",
-        "atime": "on",
-        "devices": "on",
-        "exec": "on",
-        "setuid": "on",
-        "readonly": "off",
-        "zoned": "off",
-        "snapdir": "hidden",
-        "aclmode": "discard",
-        "aclinherit": "restricted",
-        "canmount": "on",
-        "xattr": "on",
-        "copies": "1",
-        "version": "5",
-        "utf8only": "off",
-        "normalization": "none",
-        "casesensitivity": "sensitive",
-        "vscan": "off",
-        "nbmand": "off",
-        "sharesmb": "off",
-        "refquota": "0",
-        "refreservation": "0",
-        "primarycache": "all",
-        "secondarycache": "all",
-        "usedbysnapshots": "0",
-        "usedbydataset": "19456",
-        "usedbychildren": "0",
-        "usedbyrefreservation": "0",
-        "logbias": "latency",
-        "dedup": "off",
-        "mlslabel": "none",
-        "sync": "standard",
-        "refcompressratio": "1.00x",
-        "written": "19456",
-        "logicalused": "9728",
-        "logicalreferenced": "9728",
-        "filesystem_limit": "18446744073709551615",
-        "snapshot_limit": "18446744073709551615",
-        "filesystem_count": "18446744073709551615",
-        "snapshot_count": "18446744073709551615",
-        "redundant_metadata": "all"
-      },
-      "zfs_sources": {
-        "type": "-",
-        "creation": "-",
-        "used": "-",
-        "available": "-",
-        "referenced": "-",
-        "compressratio": "-",
-        "mounted": "-",
-        "quota": "default",
-        "reservation": "default",
-        "recordsize": "default",
-        "mountpoint": "inherited from rpool/export",
-        "sharenfs": "default",
-        "checksum": "default",
-        "compression": "default",
-        "atime": "default",
-        "devices": "default",
-        "exec": "default",
-        "setuid": "default",
-        "readonly": "default",
-        "zoned": "default",
-        "snapdir": "default",
-        "aclmode": "default",
-        "aclinherit": "default",
-        "canmount": "default",
-        "xattr": "default",
-        "copies": "default",
-        "version": "-",
-        "utf8only": "-",
-        "normalization": "-",
-        "casesensitivity": "-",
-        "vscan": "default",
-        "nbmand": "default",
-        "sharesmb": "default",
-        "refquota": "default",
-        "refreservation": "default",
-        "primarycache": "default",
-        "secondarycache": "default",
-        "usedbysnapshots": "-",
-        "usedbydataset": "-",
-        "usedbychildren": "-",
-        "usedbyrefreservation": "-",
-        "logbias": "default",
-        "dedup": "default",
-        "mlslabel": "default",
-        "sync": "default",
-        "refcompressratio": "-",
-        "written": "-",
-        "logicalused": "-",
-        "logicalreferenced": "-",
-        "filesystem_limit": "default",
-        "snapshot_limit": "default",
-        "filesystem_count": "default",
-        "snapshot_count": "default",
-        "redundant_metadata": "default"
-      },
-      "zfs_parents": [
-        "rpool",
-        "rpool/export"
+      "mount_time": "Wed Apr 29 14:22:52 2015"
+    },
+    "mnttab": {
+      "mount": "/etc/mnttab",
+      "mount_options": [
+        "read",
+        "write",
+        "setuid",
+        "devices",
+        "dev=8380001"
       ],
-      "zfs_zpool": false
+      "mount_time": "Wed Apr 29 14:22:28 2015"
+    },
+    "objfs": {
+      "mount": "/system/object",
+      "mount_options": [
+        "read",
+        "write",
+        "setuid",
+        "devices",
+        "dev=8400001"
+      ],
+      "mount_time": "Wed Apr 29 14:22:28 2015"
+    },
+    "proc": {
+      "mount": "/proc",
+      "mount_options": [
+        "read",
+        "write",
+        "setuid",
+        "devices",
+        "dev=82c0000"
+      ],
+      "mount_time": "Wed Apr 29 14:22:28 2015"
     },
     "rpool": {
+      "fs_type": "zfs",
+      "kb_available": "24590991",
       "kb_size": "24591013",
       "kb_used": "22",
-      "kb_available": "24590991",
-      "percent_used": "1%",
       "mount": "/rpool",
-      "mount_time": "Wed Apr 29 14:23:02 2015",
       "mount_options": [
         "read",
         "write",
@@ -323,127 +178,246 @@
         "atime",
         "dev=41d000a"
       ],
-      "fs_type": "zfs",
-      "zfs_values": {
-        "type": "filesystem",
-        "creation": "1430335083",
-        "used": "5764400640",
-        "available": "25181174272",
-        "referenced": "22528",
-        "compressratio": "1.00x",
-        "mounted": "yes",
-        "quota": "0",
-        "reservation": "0",
-        "recordsize": "131072",
-        "mountpoint": "/rpool",
-        "sharenfs": "off",
-        "checksum": "on",
-        "compression": "off",
-        "atime": "on",
-        "devices": "on",
-        "exec": "on",
-        "setuid": "on",
-        "readonly": "off",
-        "zoned": "off",
-        "snapdir": "hidden",
-        "aclmode": "discard",
-        "aclinherit": "restricted",
-        "canmount": "on",
-        "xattr": "on",
-        "copies": "1",
-        "version": "5",
-        "utf8only": "off",
-        "normalization": "none",
-        "casesensitivity": "sensitive",
-        "vscan": "off",
-        "nbmand": "off",
-        "sharesmb": "off",
-        "refquota": "0",
-        "refreservation": "0",
-        "primarycache": "all",
-        "secondarycache": "all",
-        "usedbysnapshots": "0",
-        "usedbydataset": "22528",
-        "usedbychildren": "5764378112",
-        "usedbyrefreservation": "0",
-        "logbias": "latency",
-        "dedup": "off",
-        "mlslabel": "none",
-        "sync": "standard",
-        "refcompressratio": "1.00x",
-        "written": "22528",
-        "logicalused": "4647199232",
-        "logicalreferenced": "12288",
-        "filesystem_limit": "18446744073709551615",
-        "snapshot_limit": "18446744073709551615",
-        "filesystem_count": "18446744073709551615",
-        "snapshot_count": "18446744073709551615",
-        "redundant_metadata": "all"
-      },
+      "mount_time": "Wed Apr 29 14:23:02 2015",
+      "percent_used": "1%",
+      "zfs_parents": [],
       "zfs_sources": {
-        "type": "-",
-        "creation": "-",
-        "used": "-",
+        "aclinherit": "default",
+        "aclmode": "default",
+        "atime": "default",
         "available": "-",
-        "referenced": "-",
-        "compressratio": "-",
-        "mounted": "-",
-        "quota": "default",
-        "reservation": "default",
-        "recordsize": "default",
-        "mountpoint": "default",
-        "sharenfs": "default",
+        "canmount": "default",
+        "casesensitivity": "-",
         "checksum": "default",
         "compression": "default",
-        "atime": "default",
+        "compressratio": "-",
+        "copies": "default",
+        "creation": "-",
+        "dedup": "default",
         "devices": "default",
         "exec": "default",
-        "setuid": "default",
-        "readonly": "default",
-        "zoned": "default",
-        "snapdir": "default",
-        "aclmode": "default",
-        "aclinherit": "default",
-        "canmount": "default",
-        "xattr": "default",
-        "copies": "default",
-        "version": "-",
-        "utf8only": "-",
-        "normalization": "-",
-        "casesensitivity": "-",
-        "vscan": "default",
+        "filesystem_count": "default",
+        "filesystem_limit": "default",
+        "logbias": "default",
+        "logicalreferenced": "-",
+        "logicalused": "-",
+        "mlslabel": "default",
+        "mounted": "-",
+        "mountpoint": "default",
         "nbmand": "default",
-        "sharesmb": "default",
+        "normalization": "-",
+        "primarycache": "default",
+        "quota": "default",
+        "readonly": "default",
+        "recordsize": "default",
+        "redundant_metadata": "default",
+        "refcompressratio": "-",
+        "referenced": "-",
         "refquota": "default",
         "refreservation": "default",
-        "primarycache": "default",
+        "reservation": "default",
         "secondarycache": "default",
-        "usedbysnapshots": "-",
-        "usedbydataset": "-",
-        "usedbychildren": "-",
-        "usedbyrefreservation": "-",
-        "logbias": "default",
-        "dedup": "default",
-        "mlslabel": "default",
-        "sync": "default",
-        "refcompressratio": "-",
-        "written": "-",
-        "logicalused": "-",
-        "logicalreferenced": "-",
-        "filesystem_limit": "default",
-        "snapshot_limit": "default",
-        "filesystem_count": "default",
+        "setuid": "default",
+        "sharenfs": "default",
+        "sharesmb": "default",
+        "snapdir": "default",
         "snapshot_count": "default",
-        "redundant_metadata": "default"
+        "snapshot_limit": "default",
+        "sync": "default",
+        "type": "-",
+        "used": "-",
+        "usedbychildren": "-",
+        "usedbydataset": "-",
+        "usedbyrefreservation": "-",
+        "usedbysnapshots": "-",
+        "utf8only": "-",
+        "version": "-",
+        "vscan": "default",
+        "written": "-",
+        "xattr": "default",
+        "zoned": "default"
       },
-      "zfs_parents": [
-
-      ],
+      "zfs_values": {
+        "aclinherit": "restricted",
+        "aclmode": "discard",
+        "atime": "on",
+        "available": "25181174272",
+        "canmount": "on",
+        "casesensitivity": "sensitive",
+        "checksum": "on",
+        "compression": "off",
+        "compressratio": "1.00x",
+        "copies": "1",
+        "creation": "1430335083",
+        "dedup": "off",
+        "devices": "on",
+        "exec": "on",
+        "filesystem_count": "18446744073709551615",
+        "filesystem_limit": "18446744073709551615",
+        "logbias": "latency",
+        "logicalreferenced": "12288",
+        "logicalused": "4647199232",
+        "mlslabel": "none",
+        "mounted": "yes",
+        "mountpoint": "/rpool",
+        "nbmand": "off",
+        "normalization": "none",
+        "primarycache": "all",
+        "quota": "0",
+        "readonly": "off",
+        "recordsize": "131072",
+        "redundant_metadata": "all",
+        "refcompressratio": "1.00x",
+        "referenced": "22528",
+        "refquota": "0",
+        "refreservation": "0",
+        "reservation": "0",
+        "secondarycache": "all",
+        "setuid": "on",
+        "sharenfs": "off",
+        "sharesmb": "off",
+        "snapdir": "hidden",
+        "snapshot_count": "18446744073709551615",
+        "snapshot_limit": "18446744073709551615",
+        "sync": "standard",
+        "type": "filesystem",
+        "used": "5764400640",
+        "usedbychildren": "5764378112",
+        "usedbydataset": "22528",
+        "usedbyrefreservation": "0",
+        "usedbysnapshots": "0",
+        "utf8only": "off",
+        "version": "5",
+        "vscan": "off",
+        "written": "22528",
+        "xattr": "on",
+        "zoned": "off"
+      },
       "zfs_zpool": true
     },
+    "rpool/ROOT": {
+      "fs_type": "zfs",
+      "mount": "legacy",
+      "zfs_parents": [
+        "rpool"
+      ],
+      "zfs_sources": {
+        "aclinherit": "default",
+        "aclmode": "default",
+        "atime": "default",
+        "available": "-",
+        "canmount": "local",
+        "casesensitivity": "-",
+        "checksum": "default",
+        "compression": "default",
+        "compressratio": "-",
+        "copies": "default",
+        "creation": "-",
+        "dedup": "default",
+        "devices": "default",
+        "exec": "default",
+        "filesystem_count": "default",
+        "filesystem_limit": "default",
+        "logbias": "default",
+        "logicalreferenced": "-",
+        "logicalused": "-",
+        "mlslabel": "default",
+        "mounted": "-",
+        "mountpoint": "local",
+        "nbmand": "default",
+        "normalization": "-",
+        "primarycache": "default",
+        "quota": "default",
+        "readonly": "default",
+        "recordsize": "default",
+        "redundant_metadata": "default",
+        "refcompressratio": "-",
+        "referenced": "-",
+        "refquota": "default",
+        "refreservation": "default",
+        "reservation": "default",
+        "secondarycache": "default",
+        "setuid": "default",
+        "sharenfs": "default",
+        "sharesmb": "default",
+        "snapdir": "default",
+        "snapshot_count": "default",
+        "snapshot_limit": "default",
+        "sync": "default",
+        "type": "-",
+        "used": "-",
+        "usedbychildren": "-",
+        "usedbydataset": "-",
+        "usedbyrefreservation": "-",
+        "usedbysnapshots": "-",
+        "utf8only": "-",
+        "version": "-",
+        "vscan": "default",
+        "written": "-",
+        "xattr": "default",
+        "zoned": "default"
+      },
+      "zfs_values": {
+        "aclinherit": "restricted",
+        "aclmode": "discard",
+        "atime": "on",
+        "available": "25181174272",
+        "canmount": "off",
+        "casesensitivity": "sensitive",
+        "checksum": "on",
+        "compression": "off",
+        "compressratio": "1.00x",
+        "copies": "1",
+        "creation": "1430335083",
+        "dedup": "off",
+        "devices": "on",
+        "exec": "on",
+        "filesystem_count": "18446744073709551615",
+        "filesystem_limit": "18446744073709551615",
+        "logbias": "latency",
+        "logicalreferenced": "9728",
+        "logicalused": "2496884736",
+        "mlslabel": "none",
+        "mounted": "no",
+        "mountpoint": "legacy",
+        "nbmand": "off",
+        "normalization": "none",
+        "primarycache": "all",
+        "quota": "0",
+        "readonly": "off",
+        "recordsize": "131072",
+        "redundant_metadata": "all",
+        "refcompressratio": "1.00x",
+        "referenced": "19456",
+        "refquota": "0",
+        "refreservation": "0",
+        "reservation": "0",
+        "secondarycache": "all",
+        "setuid": "on",
+        "sharenfs": "off",
+        "sharesmb": "off",
+        "snapdir": "hidden",
+        "snapshot_count": "18446744073709551615",
+        "snapshot_limit": "18446744073709551615",
+        "sync": "standard",
+        "type": "filesystem",
+        "used": "2508322816",
+        "usedbychildren": "2508303360",
+        "usedbydataset": "19456",
+        "usedbyrefreservation": "0",
+        "usedbysnapshots": "0",
+        "utf8only": "off",
+        "version": "5",
+        "vscan": "off",
+        "written": "19456",
+        "xattr": "on",
+        "zoned": "off"
+      },
+      "zfs_zpool": false
+    },
     "rpool/ROOT/omnios": {
+      "fs_type": "zfs",
       "mount": "/",
-      "mount_time": "Wed Dec 31 17:00:00 1969",
       "mount_options": [
         "read",
         "write",
@@ -451,1932 +425,1954 @@
         "devices",
         "dev=41d0002"
       ],
-      "fs_type": "zfs",
-      "zfs_values": {
-        "type": "filesystem",
-        "creation": "1430335083",
-        "used": "2508216320",
-        "available": "25181174272",
-        "referenced": "2480205824",
-        "compressratio": "1.00x",
-        "mounted": "yes",
-        "quota": "0",
-        "reservation": "0",
-        "recordsize": "131072",
-        "mountpoint": "/",
-        "sharenfs": "off",
-        "checksum": "on",
-        "compression": "off",
-        "atime": "on",
-        "devices": "on",
-        "exec": "on",
-        "setuid": "on",
-        "readonly": "off",
-        "zoned": "off",
-        "snapdir": "hidden",
-        "aclmode": "discard",
-        "aclinherit": "restricted",
-        "canmount": "noauto",
-        "xattr": "on",
-        "copies": "1",
-        "version": "5",
-        "utf8only": "off",
-        "normalization": "none",
-        "casesensitivity": "sensitive",
-        "vscan": "off",
-        "nbmand": "off",
-        "sharesmb": "off",
-        "refquota": "0",
-        "refreservation": "0",
-        "primarycache": "all",
-        "secondarycache": "all",
-        "usedbysnapshots": "28010496",
-        "usedbydataset": "2480205824",
-        "usedbychildren": "0",
-        "usedbyrefreservation": "0",
-        "logbias": "latency",
-        "dedup": "off",
-        "mlslabel": "none",
-        "sync": "standard",
-        "refcompressratio": "1.00x",
-        "written": "789197824",
-        "logicalused": "2496831488",
-        "logicalreferenced": "2469934080",
-        "filesystem_limit": "18446744073709551615",
-        "snapshot_limit": "18446744073709551615",
-        "filesystem_count": "18446744073709551615",
-        "snapshot_count": "18446744073709551615",
-        "redundant_metadata": "all",
-        "org.opensolaris.libbe:uuid": "1595aba6-eac8-ef1f-ee5e-cdd9c8a93043"
-      },
-      "zfs_sources": {
-        "type": "-",
-        "creation": "-",
-        "used": "-",
-        "available": "-",
-        "referenced": "-",
-        "compressratio": "-",
-        "mounted": "-",
-        "quota": "default",
-        "reservation": "default",
-        "recordsize": "default",
-        "mountpoint": "local",
-        "sharenfs": "default",
-        "checksum": "default",
-        "compression": "default",
-        "atime": "default",
-        "devices": "default",
-        "exec": "default",
-        "setuid": "default",
-        "readonly": "default",
-        "zoned": "default",
-        "snapdir": "default",
-        "aclmode": "default",
-        "aclinherit": "default",
-        "canmount": "local",
-        "xattr": "default",
-        "copies": "default",
-        "version": "-",
-        "utf8only": "-",
-        "normalization": "-",
-        "casesensitivity": "-",
-        "vscan": "default",
-        "nbmand": "default",
-        "sharesmb": "default",
-        "refquota": "default",
-        "refreservation": "default",
-        "primarycache": "default",
-        "secondarycache": "default",
-        "usedbysnapshots": "-",
-        "usedbydataset": "-",
-        "usedbychildren": "-",
-        "usedbyrefreservation": "-",
-        "logbias": "default",
-        "dedup": "default",
-        "mlslabel": "default",
-        "sync": "default",
-        "refcompressratio": "-",
-        "written": "-",
-        "logicalused": "-",
-        "logicalreferenced": "-",
-        "filesystem_limit": "default",
-        "snapshot_limit": "default",
-        "filesystem_count": "default",
-        "snapshot_count": "default",
-        "redundant_metadata": "default",
-        "org.opensolaris.libbe:uuid": "local"
-      },
+      "mount_time": "Wed Dec 31 17:00:00 1969",
       "zfs_parents": [
         "rpool",
         "rpool/ROOT"
       ],
+      "zfs_sources": {
+        "aclinherit": "default",
+        "aclmode": "default",
+        "atime": "default",
+        "available": "-",
+        "canmount": "local",
+        "casesensitivity": "-",
+        "checksum": "default",
+        "compression": "default",
+        "compressratio": "-",
+        "copies": "default",
+        "creation": "-",
+        "dedup": "default",
+        "devices": "default",
+        "exec": "default",
+        "filesystem_count": "default",
+        "filesystem_limit": "default",
+        "logbias": "default",
+        "logicalreferenced": "-",
+        "logicalused": "-",
+        "mlslabel": "default",
+        "mounted": "-",
+        "mountpoint": "local",
+        "nbmand": "default",
+        "normalization": "-",
+        "org.opensolaris.libbe:uuid": "local",
+        "primarycache": "default",
+        "quota": "default",
+        "readonly": "default",
+        "recordsize": "default",
+        "redundant_metadata": "default",
+        "refcompressratio": "-",
+        "referenced": "-",
+        "refquota": "default",
+        "refreservation": "default",
+        "reservation": "default",
+        "secondarycache": "default",
+        "setuid": "default",
+        "sharenfs": "default",
+        "sharesmb": "default",
+        "snapdir": "default",
+        "snapshot_count": "default",
+        "snapshot_limit": "default",
+        "sync": "default",
+        "type": "-",
+        "used": "-",
+        "usedbychildren": "-",
+        "usedbydataset": "-",
+        "usedbyrefreservation": "-",
+        "usedbysnapshots": "-",
+        "utf8only": "-",
+        "version": "-",
+        "vscan": "default",
+        "written": "-",
+        "xattr": "default",
+        "zoned": "default"
+      },
+      "zfs_values": {
+        "aclinherit": "restricted",
+        "aclmode": "discard",
+        "atime": "on",
+        "available": "25181174272",
+        "canmount": "noauto",
+        "casesensitivity": "sensitive",
+        "checksum": "on",
+        "compression": "off",
+        "compressratio": "1.00x",
+        "copies": "1",
+        "creation": "1430335083",
+        "dedup": "off",
+        "devices": "on",
+        "exec": "on",
+        "filesystem_count": "18446744073709551615",
+        "filesystem_limit": "18446744073709551615",
+        "logbias": "latency",
+        "logicalreferenced": "2469934080",
+        "logicalused": "2496831488",
+        "mlslabel": "none",
+        "mounted": "yes",
+        "mountpoint": "/",
+        "nbmand": "off",
+        "normalization": "none",
+        "org.opensolaris.libbe:uuid": "1595aba6-eac8-ef1f-ee5e-cdd9c8a93043",
+        "primarycache": "all",
+        "quota": "0",
+        "readonly": "off",
+        "recordsize": "131072",
+        "redundant_metadata": "all",
+        "refcompressratio": "1.00x",
+        "referenced": "2480205824",
+        "refquota": "0",
+        "refreservation": "0",
+        "reservation": "0",
+        "secondarycache": "all",
+        "setuid": "on",
+        "sharenfs": "off",
+        "sharesmb": "off",
+        "snapdir": "hidden",
+        "snapshot_count": "18446744073709551615",
+        "snapshot_limit": "18446744073709551615",
+        "sync": "standard",
+        "type": "filesystem",
+        "used": "2508216320",
+        "usedbychildren": "0",
+        "usedbydataset": "2480205824",
+        "usedbyrefreservation": "0",
+        "usedbysnapshots": "28010496",
+        "utf8only": "off",
+        "version": "5",
+        "vscan": "off",
+        "written": "789197824",
+        "xattr": "on",
+        "zoned": "off"
+      },
       "zfs_zpool": false
     },
-    "/devices": {
-      "mount": "/devices",
-      "mount_time": "Wed Apr 29 14:22:28 2015",
-      "mount_options": [
-        "read",
-        "write",
-        "setuid",
-        "devices",
-        "dev=8240000"
-      ]
+    "rpool/ROOT/omnios-backup-1": {
+      "fs_type": "zfs",
+      "mount": "/",
+      "zfs_parents": [
+        "rpool",
+        "rpool/ROOT"
+      ],
+      "zfs_sources": {
+        "aclinherit": "default",
+        "aclmode": "default",
+        "atime": "default",
+        "available": "-",
+        "canmount": "local",
+        "casesensitivity": "-",
+        "checksum": "default",
+        "compression": "default",
+        "compressratio": "-",
+        "copies": "default",
+        "creation": "-",
+        "dedup": "default",
+        "devices": "default",
+        "exec": "default",
+        "filesystem_count": "default",
+        "filesystem_limit": "default",
+        "logbias": "default",
+        "logicalreferenced": "-",
+        "logicalused": "-",
+        "mlslabel": "default",
+        "mounted": "-",
+        "mountpoint": "local",
+        "nbmand": "default",
+        "normalization": "-",
+        "org.opensolaris.libbe:policy": "local",
+        "org.opensolaris.libbe:uuid": "local",
+        "origin": "-",
+        "primarycache": "default",
+        "quota": "default",
+        "readonly": "default",
+        "recordsize": "default",
+        "redundant_metadata": "default",
+        "refcompressratio": "-",
+        "referenced": "-",
+        "refquota": "default",
+        "refreservation": "default",
+        "reservation": "default",
+        "secondarycache": "default",
+        "setuid": "default",
+        "sharenfs": "default",
+        "sharesmb": "default",
+        "snapdir": "default",
+        "snapshot_count": "default",
+        "snapshot_limit": "default",
+        "sync": "default",
+        "type": "-",
+        "used": "-",
+        "usedbychildren": "-",
+        "usedbydataset": "-",
+        "usedbyrefreservation": "-",
+        "usedbysnapshots": "-",
+        "utf8only": "-",
+        "version": "-",
+        "vscan": "default",
+        "written": "-",
+        "xattr": "default",
+        "zoned": "default"
+      },
+      "zfs_values": {
+        "aclinherit": "restricted",
+        "aclmode": "discard",
+        "atime": "on",
+        "available": "25181174272",
+        "canmount": "noauto",
+        "casesensitivity": "sensitive",
+        "checksum": "on",
+        "compression": "off",
+        "compressratio": "1.00x",
+        "copies": "1",
+        "creation": "1430337045",
+        "dedup": "off",
+        "devices": "on",
+        "exec": "on",
+        "filesystem_count": "18446744073709551615",
+        "filesystem_limit": "18446744073709551615",
+        "logbias": "latency",
+        "logicalreferenced": "1704547328",
+        "logicalused": "33792",
+        "mlslabel": "none",
+        "mounted": "no",
+        "mountpoint": "/",
+        "nbmand": "off",
+        "normalization": "none",
+        "org.opensolaris.libbe:policy": "static",
+        "org.opensolaris.libbe:uuid": "021c5b46-8a3f-4003-e1b5-b31e05f1f862",
+        "origin": "rpool/ROOT/omnios@2015-04-29-19:50:45",
+        "primarycache": "all",
+        "quota": "0",
+        "readonly": "off",
+        "recordsize": "131072",
+        "redundant_metadata": "all",
+        "refcompressratio": "1.00x",
+        "referenced": "1712636928",
+        "refquota": "0",
+        "refreservation": "0",
+        "reservation": "0",
+        "secondarycache": "all",
+        "setuid": "on",
+        "sharenfs": "off",
+        "sharesmb": "off",
+        "snapdir": "hidden",
+        "snapshot_count": "18446744073709551615",
+        "snapshot_limit": "18446744073709551615",
+        "sync": "standard",
+        "type": "filesystem",
+        "used": "67584",
+        "usedbychildren": "0",
+        "usedbydataset": "67584",
+        "usedbyrefreservation": "0",
+        "usedbysnapshots": "0",
+        "utf8only": "off",
+        "version": "5",
+        "vscan": "off",
+        "written": "67584",
+        "xattr": "on",
+        "zoned": "off"
+      },
+      "zfs_zpool": false
     },
-    "/dev": {
-      "mount": "/dev",
-      "mount_time": "Wed Apr 29 14:22:28 2015",
-      "mount_options": [
-        "read",
-        "write",
-        "setuid",
-        "devices",
-        "dev=8280000"
-      ]
+    "rpool/ROOT/omnios@2015-04-29-19:50:45": {
+      "fs_type": "zfs",
+      "zfs_parents": [
+        "rpool",
+        "rpool/ROOT"
+      ],
+      "zfs_sources": {
+        "casesensitivity": "-",
+        "clones": "-",
+        "compressratio": "-",
+        "creation": "-",
+        "defer_destroy": "-",
+        "devices": "default",
+        "exec": "default",
+        "logicalreferenced": "-",
+        "logicalused": "-",
+        "mlslabel": "default",
+        "nbmand": "default",
+        "normalization": "-",
+        "org.opensolaris.libbe:policy": "local",
+        "org.opensolaris.libbe:uuid": "inherited from rpool/ROOT/omnios",
+        "primarycache": "default",
+        "refcompressratio": "-",
+        "referenced": "-",
+        "secondarycache": "default",
+        "setuid": "default",
+        "type": "-",
+        "used": "-",
+        "userrefs": "-",
+        "utf8only": "-",
+        "version": "-",
+        "written": "-",
+        "xattr": "default"
+      },
+      "zfs_values": {
+        "casesensitivity": "sensitive",
+        "clones": "rpool/ROOT/omnios-backup-1",
+        "compressratio": "1.00x",
+        "creation": "1430337045",
+        "defer_destroy": "off",
+        "devices": "on",
+        "exec": "on",
+        "logicalreferenced": "1704547840",
+        "logicalused": "0",
+        "mlslabel": "none",
+        "nbmand": "off",
+        "normalization": "none",
+        "org.opensolaris.libbe:policy": "static",
+        "org.opensolaris.libbe:uuid": "1595aba6-eac8-ef1f-ee5e-cdd9c8a93043",
+        "primarycache": "all",
+        "refcompressratio": "1.00x",
+        "referenced": "1712637952",
+        "secondarycache": "all",
+        "setuid": "on",
+        "type": "snapshot",
+        "used": "4368384",
+        "userrefs": "0",
+        "utf8only": "off",
+        "version": "5",
+        "written": "20816384",
+        "xattr": "on"
+      },
+      "zfs_zpool": false
     },
-    "ctfs": {
-      "mount": "/system/contract",
-      "mount_time": "Wed Apr 29 14:22:28 2015",
-      "mount_options": [
-        "read",
-        "write",
-        "setuid",
-        "devices",
-        "dev=8340001"
-      ]
+    "rpool/ROOT/omnios@install": {
+      "fs_type": "zfs",
+      "zfs_parents": [
+        "rpool",
+        "rpool/ROOT"
+      ],
+      "zfs_sources": {
+        "casesensitivity": "-",
+        "compressratio": "-",
+        "creation": "-",
+        "defer_destroy": "-",
+        "devices": "default",
+        "exec": "default",
+        "logicalreferenced": "-",
+        "logicalused": "-",
+        "mlslabel": "default",
+        "nbmand": "default",
+        "normalization": "-",
+        "org.opensolaris.libbe:policy": "local",
+        "org.opensolaris.libbe:uuid": "inherited from rpool/ROOT/omnios",
+        "primarycache": "default",
+        "refcompressratio": "-",
+        "referenced": "-",
+        "secondarycache": "default",
+        "setuid": "default",
+        "type": "-",
+        "used": "-",
+        "userrefs": "-",
+        "utf8only": "-",
+        "version": "-",
+        "written": "-",
+        "xattr": "default"
+      },
+      "zfs_values": {
+        "casesensitivity": "sensitive",
+        "compressratio": "1.00x",
+        "creation": "1430335236",
+        "defer_destroy": "off",
+        "devices": "on",
+        "exec": "on",
+        "logicalreferenced": "1690203648",
+        "logicalused": "0",
+        "mlslabel": "none",
+        "nbmand": "off",
+        "normalization": "none",
+        "org.opensolaris.libbe:policy": "static",
+        "org.opensolaris.libbe:uuid": "1595aba6-eac8-ef1f-ee5e-cdd9c8a93043",
+        "primarycache": "all",
+        "refcompressratio": "1.00x",
+        "referenced": "1698202112",
+        "secondarycache": "all",
+        "setuid": "on",
+        "type": "snapshot",
+        "used": "6380544",
+        "userrefs": "0",
+        "utf8only": "off",
+        "version": "5",
+        "written": "1698202112",
+        "xattr": "on"
+      },
+      "zfs_zpool": false
     },
-    "proc": {
-      "mount": "/proc",
-      "mount_time": "Wed Apr 29 14:22:28 2015",
-      "mount_options": [
-        "read",
-        "write",
-        "setuid",
-        "devices",
-        "dev=82c0000"
-      ]
+    "rpool/ROOT/omniosvar": {
+      "fs_type": "zfs",
+      "mount": "legacy",
+      "zfs_parents": [
+        "rpool",
+        "rpool/ROOT"
+      ],
+      "zfs_sources": {
+        "aclinherit": "default",
+        "aclmode": "default",
+        "atime": "default",
+        "available": "-",
+        "canmount": "local",
+        "casesensitivity": "-",
+        "checksum": "default",
+        "compression": "default",
+        "compressratio": "-",
+        "copies": "default",
+        "creation": "-",
+        "dedup": "default",
+        "devices": "default",
+        "exec": "default",
+        "filesystem_count": "default",
+        "filesystem_limit": "default",
+        "logbias": "default",
+        "logicalreferenced": "-",
+        "logicalused": "-",
+        "mlslabel": "default",
+        "mounted": "-",
+        "mountpoint": "inherited from rpool/ROOT",
+        "nbmand": "default",
+        "normalization": "-",
+        "primarycache": "default",
+        "quota": "default",
+        "readonly": "default",
+        "recordsize": "default",
+        "redundant_metadata": "default",
+        "refcompressratio": "-",
+        "referenced": "-",
+        "refquota": "default",
+        "refreservation": "default",
+        "reservation": "default",
+        "secondarycache": "default",
+        "setuid": "default",
+        "sharenfs": "default",
+        "sharesmb": "default",
+        "snapdir": "default",
+        "snapshot_count": "default",
+        "snapshot_limit": "default",
+        "sync": "default",
+        "type": "-",
+        "used": "-",
+        "usedbychildren": "-",
+        "usedbydataset": "-",
+        "usedbyrefreservation": "-",
+        "usedbysnapshots": "-",
+        "utf8only": "-",
+        "version": "-",
+        "vscan": "default",
+        "written": "-",
+        "xattr": "default",
+        "zoned": "default"
+      },
+      "zfs_values": {
+        "aclinherit": "restricted",
+        "aclmode": "discard",
+        "atime": "on",
+        "available": "25181174272",
+        "canmount": "noauto",
+        "casesensitivity": "sensitive",
+        "checksum": "on",
+        "compression": "off",
+        "compressratio": "1.00x",
+        "copies": "1",
+        "creation": "1430335083",
+        "dedup": "off",
+        "devices": "on",
+        "exec": "on",
+        "filesystem_count": "18446744073709551615",
+        "filesystem_limit": "18446744073709551615",
+        "logbias": "latency",
+        "logicalreferenced": "9728",
+        "logicalused": "9728",
+        "mlslabel": "none",
+        "mounted": "no",
+        "mountpoint": "legacy",
+        "nbmand": "off",
+        "normalization": "none",
+        "primarycache": "all",
+        "quota": "0",
+        "readonly": "off",
+        "recordsize": "131072",
+        "redundant_metadata": "all",
+        "refcompressratio": "1.00x",
+        "referenced": "19456",
+        "refquota": "0",
+        "refreservation": "0",
+        "reservation": "0",
+        "secondarycache": "all",
+        "setuid": "on",
+        "sharenfs": "off",
+        "sharesmb": "off",
+        "snapdir": "hidden",
+        "snapshot_count": "18446744073709551615",
+        "snapshot_limit": "18446744073709551615",
+        "sync": "standard",
+        "type": "filesystem",
+        "used": "19456",
+        "usedbychildren": "0",
+        "usedbydataset": "19456",
+        "usedbyrefreservation": "0",
+        "usedbysnapshots": "0",
+        "utf8only": "off",
+        "version": "5",
+        "vscan": "off",
+        "written": "19456",
+        "xattr": "on",
+        "zoned": "off"
+      },
+      "zfs_zpool": false
     },
-    "mnttab": {
-      "mount": "/etc/mnttab",
-      "mount_time": "Wed Apr 29 14:22:28 2015",
-      "mount_options": [
-        "read",
-        "write",
-        "setuid",
-        "devices",
-        "dev=8380001"
-      ]
+    "rpool/dump": {
+      "fs_type": "zfs",
+      "zfs_parents": [
+        "rpool"
+      ],
+      "zfs_sources": {
+        "available": "-",
+        "checksum": "local",
+        "compression": "local",
+        "compressratio": "-",
+        "copies": "default",
+        "creation": "-",
+        "dedup": "local",
+        "logbias": "default",
+        "logicalreferenced": "-",
+        "logicalused": "-",
+        "mlslabel": "default",
+        "primarycache": "default",
+        "readonly": "default",
+        "redundant_metadata": "default",
+        "refcompressratio": "-",
+        "referenced": "-",
+        "refreservation": "local",
+        "reservation": "default",
+        "secondarycache": "default",
+        "snapshot_count": "default",
+        "snapshot_limit": "default",
+        "sync": "default",
+        "type": "-",
+        "used": "-",
+        "usedbychildren": "-",
+        "usedbydataset": "-",
+        "usedbyrefreservation": "-",
+        "usedbysnapshots": "-",
+        "volblocksize": "-",
+        "volsize": "local",
+        "written": "-"
+      },
+      "zfs_values": {
+        "available": "25181174272",
+        "checksum": "off",
+        "compression": "off",
+        "compressratio": "1.00x",
+        "copies": "1",
+        "creation": "1430335083",
+        "dedup": "off",
+        "logbias": "latency",
+        "logicalreferenced": "2147627008",
+        "logicalused": "2147627008",
+        "mlslabel": "none",
+        "primarycache": "all",
+        "readonly": "off",
+        "redundant_metadata": "all",
+        "refcompressratio": "1.00x",
+        "referenced": "2147770368",
+        "refreservation": "0",
+        "reservation": "0",
+        "secondarycache": "all",
+        "snapshot_count": "18446744073709551615",
+        "snapshot_limit": "18446744073709551615",
+        "sync": "standard",
+        "type": "volume",
+        "used": "2147770368",
+        "usedbychildren": "0",
+        "usedbydataset": "2147770368",
+        "usedbyrefreservation": "0",
+        "usedbysnapshots": "0",
+        "volblocksize": "131072",
+        "volsize": "2147483648",
+        "written": "2147770368"
+      },
+      "zfs_zpool": false
     },
-    "objfs": {
-      "mount": "/system/object",
-      "mount_time": "Wed Apr 29 14:22:28 2015",
+    "rpool/export": {
+      "fs_type": "zfs",
+      "kb_available": "24590991",
+      "kb_size": "24591010",
+      "kb_used": "19",
+      "mount": "/export",
       "mount_options": [
         "read",
         "write",
         "setuid",
         "devices",
-        "dev=8400001"
-      ]
+        "nonbmand",
+        "exec",
+        "xattr",
+        "atime",
+        "dev=41d0008"
+      ],
+      "mount_time": "Wed Apr 29 14:23:02 2015",
+      "percent_used": "1%",
+      "zfs_parents": [
+        "rpool"
+      ],
+      "zfs_sources": {
+        "aclinherit": "default",
+        "aclmode": "default",
+        "atime": "default",
+        "available": "-",
+        "canmount": "default",
+        "casesensitivity": "-",
+        "checksum": "default",
+        "compression": "default",
+        "compressratio": "-",
+        "copies": "default",
+        "creation": "-",
+        "dedup": "default",
+        "devices": "default",
+        "exec": "default",
+        "filesystem_count": "default",
+        "filesystem_limit": "default",
+        "logbias": "default",
+        "logicalreferenced": "-",
+        "logicalused": "-",
+        "mlslabel": "default",
+        "mounted": "-",
+        "mountpoint": "local",
+        "nbmand": "default",
+        "normalization": "-",
+        "primarycache": "default",
+        "quota": "default",
+        "readonly": "default",
+        "recordsize": "default",
+        "redundant_metadata": "default",
+        "refcompressratio": "-",
+        "referenced": "-",
+        "refquota": "default",
+        "refreservation": "default",
+        "reservation": "default",
+        "secondarycache": "default",
+        "setuid": "default",
+        "sharenfs": "default",
+        "sharesmb": "default",
+        "snapdir": "default",
+        "snapshot_count": "default",
+        "snapshot_limit": "default",
+        "sync": "default",
+        "type": "-",
+        "used": "-",
+        "usedbychildren": "-",
+        "usedbydataset": "-",
+        "usedbyrefreservation": "-",
+        "usedbysnapshots": "-",
+        "utf8only": "-",
+        "version": "-",
+        "vscan": "default",
+        "written": "-",
+        "xattr": "default",
+        "zoned": "default"
+      },
+      "zfs_values": {
+        "aclinherit": "restricted",
+        "aclmode": "discard",
+        "atime": "on",
+        "available": "25181174272",
+        "canmount": "on",
+        "casesensitivity": "sensitive",
+        "checksum": "on",
+        "compression": "off",
+        "compressratio": "1.00x",
+        "copies": "1",
+        "creation": "1430335083",
+        "dedup": "off",
+        "devices": "on",
+        "exec": "on",
+        "filesystem_count": "18446744073709551615",
+        "filesystem_limit": "18446744073709551615",
+        "logbias": "latency",
+        "logicalreferenced": "9728",
+        "logicalused": "19456",
+        "mlslabel": "none",
+        "mounted": "yes",
+        "mountpoint": "/export",
+        "nbmand": "off",
+        "normalization": "none",
+        "primarycache": "all",
+        "quota": "0",
+        "readonly": "off",
+        "recordsize": "131072",
+        "redundant_metadata": "all",
+        "refcompressratio": "1.00x",
+        "referenced": "19456",
+        "refquota": "0",
+        "refreservation": "0",
+        "reservation": "0",
+        "secondarycache": "all",
+        "setuid": "on",
+        "sharenfs": "off",
+        "sharesmb": "off",
+        "snapdir": "hidden",
+        "snapshot_count": "18446744073709551615",
+        "snapshot_limit": "18446744073709551615",
+        "sync": "standard",
+        "type": "filesystem",
+        "used": "38912",
+        "usedbychildren": "19456",
+        "usedbydataset": "19456",
+        "usedbyrefreservation": "0",
+        "usedbysnapshots": "0",
+        "utf8only": "off",
+        "version": "5",
+        "vscan": "off",
+        "written": "19456",
+        "xattr": "on",
+        "zoned": "off"
+      },
+      "zfs_zpool": false
+    },
+    "rpool/export/home": {
+      "fs_type": "zfs",
+      "kb_available": "24590991",
+      "kb_size": "24591010",
+      "kb_used": "19",
+      "mount": "/export/home",
+      "mount_options": [
+        "read",
+        "write",
+        "setuid",
+        "devices",
+        "nonbmand",
+        "exec",
+        "xattr",
+        "atime",
+        "dev=41d0009"
+      ],
+      "mount_time": "Wed Apr 29 14:23:02 2015",
+      "percent_used": "1%",
+      "zfs_parents": [
+        "rpool",
+        "rpool/export"
+      ],
+      "zfs_sources": {
+        "aclinherit": "default",
+        "aclmode": "default",
+        "atime": "default",
+        "available": "-",
+        "canmount": "default",
+        "casesensitivity": "-",
+        "checksum": "default",
+        "compression": "default",
+        "compressratio": "-",
+        "copies": "default",
+        "creation": "-",
+        "dedup": "default",
+        "devices": "default",
+        "exec": "default",
+        "filesystem_count": "default",
+        "filesystem_limit": "default",
+        "logbias": "default",
+        "logicalreferenced": "-",
+        "logicalused": "-",
+        "mlslabel": "default",
+        "mounted": "-",
+        "mountpoint": "inherited from rpool/export",
+        "nbmand": "default",
+        "normalization": "-",
+        "primarycache": "default",
+        "quota": "default",
+        "readonly": "default",
+        "recordsize": "default",
+        "redundant_metadata": "default",
+        "refcompressratio": "-",
+        "referenced": "-",
+        "refquota": "default",
+        "refreservation": "default",
+        "reservation": "default",
+        "secondarycache": "default",
+        "setuid": "default",
+        "sharenfs": "default",
+        "sharesmb": "default",
+        "snapdir": "default",
+        "snapshot_count": "default",
+        "snapshot_limit": "default",
+        "sync": "default",
+        "type": "-",
+        "used": "-",
+        "usedbychildren": "-",
+        "usedbydataset": "-",
+        "usedbyrefreservation": "-",
+        "usedbysnapshots": "-",
+        "utf8only": "-",
+        "version": "-",
+        "vscan": "default",
+        "written": "-",
+        "xattr": "default",
+        "zoned": "default"
+      },
+      "zfs_values": {
+        "aclinherit": "restricted",
+        "aclmode": "discard",
+        "atime": "on",
+        "available": "25181174272",
+        "canmount": "on",
+        "casesensitivity": "sensitive",
+        "checksum": "on",
+        "compression": "off",
+        "compressratio": "1.00x",
+        "copies": "1",
+        "creation": "1430335083",
+        "dedup": "off",
+        "devices": "on",
+        "exec": "on",
+        "filesystem_count": "18446744073709551615",
+        "filesystem_limit": "18446744073709551615",
+        "logbias": "latency",
+        "logicalreferenced": "9728",
+        "logicalused": "9728",
+        "mlslabel": "none",
+        "mounted": "yes",
+        "mountpoint": "/export/home",
+        "nbmand": "off",
+        "normalization": "none",
+        "primarycache": "all",
+        "quota": "0",
+        "readonly": "off",
+        "recordsize": "131072",
+        "redundant_metadata": "all",
+        "refcompressratio": "1.00x",
+        "referenced": "19456",
+        "refquota": "0",
+        "refreservation": "0",
+        "reservation": "0",
+        "secondarycache": "all",
+        "setuid": "on",
+        "sharenfs": "off",
+        "sharesmb": "off",
+        "snapdir": "hidden",
+        "snapshot_count": "18446744073709551615",
+        "snapshot_limit": "18446744073709551615",
+        "sync": "standard",
+        "type": "filesystem",
+        "used": "19456",
+        "usedbychildren": "0",
+        "usedbydataset": "19456",
+        "usedbyrefreservation": "0",
+        "usedbysnapshots": "0",
+        "utf8only": "off",
+        "version": "5",
+        "vscan": "off",
+        "written": "19456",
+        "xattr": "on",
+        "zoned": "off"
+      },
+      "zfs_zpool": false
+    },
+    "rpool/swap": {
+      "fs_type": "zfs",
+      "zfs_parents": [
+        "rpool"
+      ],
+      "zfs_sources": {
+        "available": "-",
+        "checksum": "default",
+        "compression": "default",
+        "compressratio": "-",
+        "copies": "default",
+        "creation": "-",
+        "dedup": "default",
+        "logbias": "default",
+        "logicalreferenced": "-",
+        "logicalused": "-",
+        "mlslabel": "default",
+        "primarycache": "default",
+        "readonly": "default",
+        "redundant_metadata": "default",
+        "refcompressratio": "-",
+        "referenced": "-",
+        "refreservation": "local",
+        "reservation": "default",
+        "secondarycache": "default",
+        "snapshot_count": "default",
+        "snapshot_limit": "default",
+        "sync": "default",
+        "type": "-",
+        "used": "-",
+        "usedbychildren": "-",
+        "usedbydataset": "-",
+        "usedbyrefreservation": "-",
+        "usedbysnapshots": "-",
+        "volblocksize": "-",
+        "volsize": "local",
+        "written": "-"
+      },
+      "zfs_values": {
+        "available": "26286465536",
+        "checksum": "on",
+        "compression": "off",
+        "compressratio": "1.00x",
+        "copies": "1",
+        "creation": "1430335083",
+        "dedup": "off",
+        "logbias": "latency",
+        "logicalreferenced": "2513920",
+        "logicalused": "2513920",
+        "mlslabel": "none",
+        "primarycache": "all",
+        "readonly": "off",
+        "redundant_metadata": "all",
+        "refcompressratio": "1.00x",
+        "referenced": "2529280",
+        "refreservation": "1107820544",
+        "reservation": "0",
+        "secondarycache": "all",
+        "snapshot_count": "18446744073709551615",
+        "snapshot_limit": "18446744073709551615",
+        "sync": "standard",
+        "type": "volume",
+        "used": "1107820544",
+        "usedbychildren": "0",
+        "usedbydataset": "2529280",
+        "usedbyrefreservation": "1105291264",
+        "usedbysnapshots": "0",
+        "volblocksize": "8192",
+        "volsize": "1073741824",
+        "written": "2529280"
+      },
+      "zfs_zpool": false
     },
     "sharefs": {
       "mount": "/etc/dfs/sharetab",
-      "mount_time": "Wed Apr 29 14:22:28 2015",
       "mount_options": [
         "read",
         "write",
         "setuid",
         "devices",
         "dev=8440001"
-      ]
+      ],
+      "mount_time": "Wed Apr 29 14:22:28 2015"
     },
-    "fd": {
-      "mount": "/dev/fd",
-      "mount_time": "Wed Apr 29 14:22:52 2015",
+    "swap": {
+      "kb_available": "3335256",
+      "kb_size": "3335292",
+      "kb_used": "36",
+      "mount": "/var/run",
       "mount_options": [
         "read",
         "write",
         "setuid",
         "devices",
-        "dev=8540001"
-      ]
-    },
-    "rpool/ROOT": {
-      "fs_type": "zfs",
-      "mount": "legacy",
-      "zfs_values": {
-        "type": "filesystem",
-        "creation": "1430335083",
-        "used": "2508322816",
-        "available": "25181174272",
-        "referenced": "19456",
-        "compressratio": "1.00x",
-        "mounted": "no",
-        "quota": "0",
-        "reservation": "0",
-        "recordsize": "131072",
-        "mountpoint": "legacy",
-        "sharenfs": "off",
-        "checksum": "on",
-        "compression": "off",
-        "atime": "on",
-        "devices": "on",
-        "exec": "on",
-        "setuid": "on",
-        "readonly": "off",
-        "zoned": "off",
-        "snapdir": "hidden",
-        "aclmode": "discard",
-        "aclinherit": "restricted",
-        "canmount": "off",
-        "xattr": "on",
-        "copies": "1",
-        "version": "5",
-        "utf8only": "off",
-        "normalization": "none",
-        "casesensitivity": "sensitive",
-        "vscan": "off",
-        "nbmand": "off",
-        "sharesmb": "off",
-        "refquota": "0",
-        "refreservation": "0",
-        "primarycache": "all",
-        "secondarycache": "all",
-        "usedbysnapshots": "0",
-        "usedbydataset": "19456",
-        "usedbychildren": "2508303360",
-        "usedbyrefreservation": "0",
-        "logbias": "latency",
-        "dedup": "off",
-        "mlslabel": "none",
-        "sync": "standard",
-        "refcompressratio": "1.00x",
-        "written": "19456",
-        "logicalused": "2496884736",
-        "logicalreferenced": "9728",
-        "filesystem_limit": "18446744073709551615",
-        "snapshot_limit": "18446744073709551615",
-        "filesystem_count": "18446744073709551615",
-        "snapshot_count": "18446744073709551615",
-        "redundant_metadata": "all"
-      },
-      "zfs_sources": {
-        "type": "-",
-        "creation": "-",
-        "used": "-",
-        "available": "-",
-        "referenced": "-",
-        "compressratio": "-",
-        "mounted": "-",
-        "quota": "default",
-        "reservation": "default",
-        "recordsize": "default",
-        "mountpoint": "local",
-        "sharenfs": "default",
-        "checksum": "default",
-        "compression": "default",
-        "atime": "default",
-        "devices": "default",
-        "exec": "default",
-        "setuid": "default",
-        "readonly": "default",
-        "zoned": "default",
-        "snapdir": "default",
-        "aclmode": "default",
-        "aclinherit": "default",
-        "canmount": "local",
-        "xattr": "default",
-        "copies": "default",
-        "version": "-",
-        "utf8only": "-",
-        "normalization": "-",
-        "casesensitivity": "-",
-        "vscan": "default",
-        "nbmand": "default",
-        "sharesmb": "default",
-        "refquota": "default",
-        "refreservation": "default",
-        "primarycache": "default",
-        "secondarycache": "default",
-        "usedbysnapshots": "-",
-        "usedbydataset": "-",
-        "usedbychildren": "-",
-        "usedbyrefreservation": "-",
-        "logbias": "default",
-        "dedup": "default",
-        "mlslabel": "default",
-        "sync": "default",
-        "refcompressratio": "-",
-        "written": "-",
-        "logicalused": "-",
-        "logicalreferenced": "-",
-        "filesystem_limit": "default",
-        "snapshot_limit": "default",
-        "filesystem_count": "default",
-        "snapshot_count": "default",
-        "redundant_metadata": "default"
-      },
-      "zfs_parents": [
-        "rpool"
+        "xattr",
+        "dev=83c0003"
       ],
-      "zfs_zpool": false
-    },
-    "rpool/ROOT/omnios@install": {
-      "fs_type": "zfs",
-      "zfs_values": {
-        "type": "snapshot",
-        "creation": "1430335236",
-        "used": "6380544",
-        "referenced": "1698202112",
-        "compressratio": "1.00x",
-        "devices": "on",
-        "exec": "on",
-        "setuid": "on",
-        "xattr": "on",
-        "version": "5",
-        "utf8only": "off",
-        "normalization": "none",
-        "casesensitivity": "sensitive",
-        "nbmand": "off",
-        "primarycache": "all",
-        "secondarycache": "all",
-        "defer_destroy": "off",
-        "userrefs": "0",
-        "mlslabel": "none",
-        "refcompressratio": "1.00x",
-        "written": "1698202112",
-        "logicalused": "0",
-        "logicalreferenced": "1690203648",
-        "org.opensolaris.libbe:uuid": "1595aba6-eac8-ef1f-ee5e-cdd9c8a93043",
-        "org.opensolaris.libbe:policy": "static"
-      },
-      "zfs_sources": {
-        "type": "-",
-        "creation": "-",
-        "used": "-",
-        "referenced": "-",
-        "compressratio": "-",
-        "devices": "default",
-        "exec": "default",
-        "setuid": "default",
-        "xattr": "default",
-        "version": "-",
-        "utf8only": "-",
-        "normalization": "-",
-        "casesensitivity": "-",
-        "nbmand": "default",
-        "primarycache": "default",
-        "secondarycache": "default",
-        "defer_destroy": "-",
-        "userrefs": "-",
-        "mlslabel": "default",
-        "refcompressratio": "-",
-        "written": "-",
-        "logicalused": "-",
-        "logicalreferenced": "-",
-        "org.opensolaris.libbe:uuid": "inherited from rpool/ROOT/omnios",
-        "org.opensolaris.libbe:policy": "local"
-      },
-      "zfs_parents": [
-        "rpool",
-        "rpool/ROOT"
-      ],
-      "zfs_zpool": false
-    },
-    "rpool/ROOT/omnios@2015-04-29-19:50:45": {
-      "fs_type": "zfs",
-      "zfs_values": {
-        "type": "snapshot",
-        "creation": "1430337045",
-        "used": "4368384",
-        "referenced": "1712637952",
-        "compressratio": "1.00x",
-        "devices": "on",
-        "exec": "on",
-        "setuid": "on",
-        "xattr": "on",
-        "version": "5",
-        "utf8only": "off",
-        "normalization": "none",
-        "casesensitivity": "sensitive",
-        "nbmand": "off",
-        "primarycache": "all",
-        "secondarycache": "all",
-        "defer_destroy": "off",
-        "userrefs": "0",
-        "mlslabel": "none",
-        "refcompressratio": "1.00x",
-        "written": "20816384",
-        "clones": "rpool/ROOT/omnios-backup-1",
-        "logicalused": "0",
-        "logicalreferenced": "1704547840",
-        "org.opensolaris.libbe:uuid": "1595aba6-eac8-ef1f-ee5e-cdd9c8a93043",
-        "org.opensolaris.libbe:policy": "static"
-      },
-      "zfs_sources": {
-        "type": "-",
-        "creation": "-",
-        "used": "-",
-        "referenced": "-",
-        "compressratio": "-",
-        "devices": "default",
-        "exec": "default",
-        "setuid": "default",
-        "xattr": "default",
-        "version": "-",
-        "utf8only": "-",
-        "normalization": "-",
-        "casesensitivity": "-",
-        "nbmand": "default",
-        "primarycache": "default",
-        "secondarycache": "default",
-        "defer_destroy": "-",
-        "userrefs": "-",
-        "mlslabel": "default",
-        "refcompressratio": "-",
-        "written": "-",
-        "clones": "-",
-        "logicalused": "-",
-        "logicalreferenced": "-",
-        "org.opensolaris.libbe:uuid": "inherited from rpool/ROOT/omnios",
-        "org.opensolaris.libbe:policy": "local"
-      },
-      "zfs_parents": [
-        "rpool",
-        "rpool/ROOT"
-      ],
-      "zfs_zpool": false
-    },
-    "rpool/ROOT/omnios-backup-1": {
-      "fs_type": "zfs",
-      "mount": "/",
-      "zfs_values": {
-        "type": "filesystem",
-        "creation": "1430337045",
-        "used": "67584",
-        "available": "25181174272",
-        "referenced": "1712636928",
-        "compressratio": "1.00x",
-        "mounted": "no",
-        "origin": "rpool/ROOT/omnios@2015-04-29-19:50:45",
-        "quota": "0",
-        "reservation": "0",
-        "recordsize": "131072",
-        "mountpoint": "/",
-        "sharenfs": "off",
-        "checksum": "on",
-        "compression": "off",
-        "atime": "on",
-        "devices": "on",
-        "exec": "on",
-        "setuid": "on",
-        "readonly": "off",
-        "zoned": "off",
-        "snapdir": "hidden",
-        "aclmode": "discard",
-        "aclinherit": "restricted",
-        "canmount": "noauto",
-        "xattr": "on",
-        "copies": "1",
-        "version": "5",
-        "utf8only": "off",
-        "normalization": "none",
-        "casesensitivity": "sensitive",
-        "vscan": "off",
-        "nbmand": "off",
-        "sharesmb": "off",
-        "refquota": "0",
-        "refreservation": "0",
-        "primarycache": "all",
-        "secondarycache": "all",
-        "usedbysnapshots": "0",
-        "usedbydataset": "67584",
-        "usedbychildren": "0",
-        "usedbyrefreservation": "0",
-        "logbias": "latency",
-        "dedup": "off",
-        "mlslabel": "none",
-        "sync": "standard",
-        "refcompressratio": "1.00x",
-        "written": "67584",
-        "logicalused": "33792",
-        "logicalreferenced": "1704547328",
-        "filesystem_limit": "18446744073709551615",
-        "snapshot_limit": "18446744073709551615",
-        "filesystem_count": "18446744073709551615",
-        "snapshot_count": "18446744073709551615",
-        "redundant_metadata": "all",
-        "org.opensolaris.libbe:uuid": "021c5b46-8a3f-4003-e1b5-b31e05f1f862",
-        "org.opensolaris.libbe:policy": "static"
-      },
-      "zfs_sources": {
-        "type": "-",
-        "creation": "-",
-        "used": "-",
-        "available": "-",
-        "referenced": "-",
-        "compressratio": "-",
-        "mounted": "-",
-        "origin": "-",
-        "quota": "default",
-        "reservation": "default",
-        "recordsize": "default",
-        "mountpoint": "local",
-        "sharenfs": "default",
-        "checksum": "default",
-        "compression": "default",
-        "atime": "default",
-        "devices": "default",
-        "exec": "default",
-        "setuid": "default",
-        "readonly": "default",
-        "zoned": "default",
-        "snapdir": "default",
-        "aclmode": "default",
-        "aclinherit": "default",
-        "canmount": "local",
-        "xattr": "default",
-        "copies": "default",
-        "version": "-",
-        "utf8only": "-",
-        "normalization": "-",
-        "casesensitivity": "-",
-        "vscan": "default",
-        "nbmand": "default",
-        "sharesmb": "default",
-        "refquota": "default",
-        "refreservation": "default",
-        "primarycache": "default",
-        "secondarycache": "default",
-        "usedbysnapshots": "-",
-        "usedbydataset": "-",
-        "usedbychildren": "-",
-        "usedbyrefreservation": "-",
-        "logbias": "default",
-        "dedup": "default",
-        "mlslabel": "default",
-        "sync": "default",
-        "refcompressratio": "-",
-        "written": "-",
-        "logicalused": "-",
-        "logicalreferenced": "-",
-        "filesystem_limit": "default",
-        "snapshot_limit": "default",
-        "filesystem_count": "default",
-        "snapshot_count": "default",
-        "redundant_metadata": "default",
-        "org.opensolaris.libbe:uuid": "local",
-        "org.opensolaris.libbe:policy": "local"
-      },
-      "zfs_parents": [
-        "rpool",
-        "rpool/ROOT"
-      ],
-      "zfs_zpool": false
-    },
-    "rpool/ROOT/omniosvar": {
-      "fs_type": "zfs",
-      "mount": "legacy",
-      "zfs_values": {
-        "type": "filesystem",
-        "creation": "1430335083",
-        "used": "19456",
-        "available": "25181174272",
-        "referenced": "19456",
-        "compressratio": "1.00x",
-        "mounted": "no",
-        "quota": "0",
-        "reservation": "0",
-        "recordsize": "131072",
-        "mountpoint": "legacy",
-        "sharenfs": "off",
-        "checksum": "on",
-        "compression": "off",
-        "atime": "on",
-        "devices": "on",
-        "exec": "on",
-        "setuid": "on",
-        "readonly": "off",
-        "zoned": "off",
-        "snapdir": "hidden",
-        "aclmode": "discard",
-        "aclinherit": "restricted",
-        "canmount": "noauto",
-        "xattr": "on",
-        "copies": "1",
-        "version": "5",
-        "utf8only": "off",
-        "normalization": "none",
-        "casesensitivity": "sensitive",
-        "vscan": "off",
-        "nbmand": "off",
-        "sharesmb": "off",
-        "refquota": "0",
-        "refreservation": "0",
-        "primarycache": "all",
-        "secondarycache": "all",
-        "usedbysnapshots": "0",
-        "usedbydataset": "19456",
-        "usedbychildren": "0",
-        "usedbyrefreservation": "0",
-        "logbias": "latency",
-        "dedup": "off",
-        "mlslabel": "none",
-        "sync": "standard",
-        "refcompressratio": "1.00x",
-        "written": "19456",
-        "logicalused": "9728",
-        "logicalreferenced": "9728",
-        "filesystem_limit": "18446744073709551615",
-        "snapshot_limit": "18446744073709551615",
-        "filesystem_count": "18446744073709551615",
-        "snapshot_count": "18446744073709551615",
-        "redundant_metadata": "all"
-      },
-      "zfs_sources": {
-        "type": "-",
-        "creation": "-",
-        "used": "-",
-        "available": "-",
-        "referenced": "-",
-        "compressratio": "-",
-        "mounted": "-",
-        "quota": "default",
-        "reservation": "default",
-        "recordsize": "default",
-        "mountpoint": "inherited from rpool/ROOT",
-        "sharenfs": "default",
-        "checksum": "default",
-        "compression": "default",
-        "atime": "default",
-        "devices": "default",
-        "exec": "default",
-        "setuid": "default",
-        "readonly": "default",
-        "zoned": "default",
-        "snapdir": "default",
-        "aclmode": "default",
-        "aclinherit": "default",
-        "canmount": "local",
-        "xattr": "default",
-        "copies": "default",
-        "version": "-",
-        "utf8only": "-",
-        "normalization": "-",
-        "casesensitivity": "-",
-        "vscan": "default",
-        "nbmand": "default",
-        "sharesmb": "default",
-        "refquota": "default",
-        "refreservation": "default",
-        "primarycache": "default",
-        "secondarycache": "default",
-        "usedbysnapshots": "-",
-        "usedbydataset": "-",
-        "usedbychildren": "-",
-        "usedbyrefreservation": "-",
-        "logbias": "default",
-        "dedup": "default",
-        "mlslabel": "default",
-        "sync": "default",
-        "refcompressratio": "-",
-        "written": "-",
-        "logicalused": "-",
-        "logicalreferenced": "-",
-        "filesystem_limit": "default",
-        "snapshot_limit": "default",
-        "filesystem_count": "default",
-        "snapshot_count": "default",
-        "redundant_metadata": "default"
-      },
-      "zfs_parents": [
-        "rpool",
-        "rpool/ROOT"
-      ],
-      "zfs_zpool": false
-    },
-    "rpool/dump": {
-      "fs_type": "zfs",
-      "zfs_values": {
-        "type": "volume",
-        "creation": "1430335083",
-        "used": "2147770368",
-        "available": "25181174272",
-        "referenced": "2147770368",
-        "compressratio": "1.00x",
-        "reservation": "0",
-        "volsize": "2147483648",
-        "volblocksize": "131072",
-        "checksum": "off",
-        "compression": "off",
-        "readonly": "off",
-        "copies": "1",
-        "refreservation": "0",
-        "primarycache": "all",
-        "secondarycache": "all",
-        "usedbysnapshots": "0",
-        "usedbydataset": "2147770368",
-        "usedbychildren": "0",
-        "usedbyrefreservation": "0",
-        "logbias": "latency",
-        "dedup": "off",
-        "mlslabel": "none",
-        "sync": "standard",
-        "refcompressratio": "1.00x",
-        "written": "2147770368",
-        "logicalused": "2147627008",
-        "logicalreferenced": "2147627008",
-        "snapshot_limit": "18446744073709551615",
-        "snapshot_count": "18446744073709551615",
-        "redundant_metadata": "all"
-      },
-      "zfs_sources": {
-        "type": "-",
-        "creation": "-",
-        "used": "-",
-        "available": "-",
-        "referenced": "-",
-        "compressratio": "-",
-        "reservation": "default",
-        "volsize": "local",
-        "volblocksize": "-",
-        "checksum": "local",
-        "compression": "local",
-        "readonly": "default",
-        "copies": "default",
-        "refreservation": "local",
-        "primarycache": "default",
-        "secondarycache": "default",
-        "usedbysnapshots": "-",
-        "usedbydataset": "-",
-        "usedbychildren": "-",
-        "usedbyrefreservation": "-",
-        "logbias": "default",
-        "dedup": "local",
-        "mlslabel": "default",
-        "sync": "default",
-        "refcompressratio": "-",
-        "written": "-",
-        "logicalused": "-",
-        "logicalreferenced": "-",
-        "snapshot_limit": "default",
-        "snapshot_count": "default",
-        "redundant_metadata": "default"
-      },
-      "zfs_parents": [
-        "rpool"
-      ],
-      "zfs_zpool": false
-    },
-    "rpool/swap": {
-      "fs_type": "zfs",
-      "zfs_values": {
-        "type": "volume",
-        "creation": "1430335083",
-        "used": "1107820544",
-        "available": "26286465536",
-        "referenced": "2529280",
-        "compressratio": "1.00x",
-        "reservation": "0",
-        "volsize": "1073741824",
-        "volblocksize": "8192",
-        "checksum": "on",
-        "compression": "off",
-        "readonly": "off",
-        "copies": "1",
-        "refreservation": "1107820544",
-        "primarycache": "all",
-        "secondarycache": "all",
-        "usedbysnapshots": "0",
-        "usedbydataset": "2529280",
-        "usedbychildren": "0",
-        "usedbyrefreservation": "1105291264",
-        "logbias": "latency",
-        "dedup": "off",
-        "mlslabel": "none",
-        "sync": "standard",
-        "refcompressratio": "1.00x",
-        "written": "2529280",
-        "logicalused": "2513920",
-        "logicalreferenced": "2513920",
-        "snapshot_limit": "18446744073709551615",
-        "snapshot_count": "18446744073709551615",
-        "redundant_metadata": "all"
-      },
-      "zfs_sources": {
-        "type": "-",
-        "creation": "-",
-        "used": "-",
-        "available": "-",
-        "referenced": "-",
-        "compressratio": "-",
-        "reservation": "default",
-        "volsize": "local",
-        "volblocksize": "-",
-        "checksum": "default",
-        "compression": "default",
-        "readonly": "default",
-        "copies": "default",
-        "refreservation": "local",
-        "primarycache": "default",
-        "secondarycache": "default",
-        "usedbysnapshots": "-",
-        "usedbydataset": "-",
-        "usedbychildren": "-",
-        "usedbyrefreservation": "-",
-        "logbias": "default",
-        "dedup": "default",
-        "mlslabel": "default",
-        "sync": "default",
-        "refcompressratio": "-",
-        "written": "-",
-        "logicalused": "-",
-        "logicalreferenced": "-",
-        "snapshot_limit": "default",
-        "snapshot_count": "default",
-        "redundant_metadata": "default"
-      },
-      "zfs_parents": [
-        "rpool"
-      ],
-      "zfs_zpool": false
+      "mount_time": "Wed Apr 29 14:22:54 2015",
+      "percent_used": "1%"
     }
   },
+  "fqdn": "fauxhai.local",
+  "hostname": "Fauxhai",
+  "ipaddress": "10.0.0.2",
   "kernel": {
-    "name": "SunOS",
-    "release": "5.11",
-    "version": "omnios-170cea2",
     "machine": "i86pc",
-    "os": "SunOS",
     "modules": {
-      "specfs": {
-        "id": 3,
-        "loadaddr": "fffffffffbbd6000",
-        "size": 25520,
-        "description": "filesystem for specfs"
-      },
-      "fifofs": {
-        "id": 4,
-        "loadaddr": "fffffffffbbdc2b0",
-        "size": 18768,
-        "description": "filesystem for fifo"
-      },
-      "dtrace": {
-        "id": 5,
-        "loadaddr": "fffffffff831a000",
-        "size": 120112,
-        "description": "Dynamic Tracing"
-      },
-      "devfs": {
-        "id": 6,
-        "loadaddr": "fffffffffbbe0b10",
-        "size": 23248,
-        "description": "devices filesystem"
-      },
-      "dev": {
-        "id": 7,
-        "loadaddr": "fffffffffbbe6318",
-        "size": 74272,
-        "description": "/dev filesystem"
-      },
-      "dls": {
-        "id": 8,
-        "loadaddr": "fffffffffbbf7f28",
-        "size": 27264,
-        "description": "Data-Link Services"
-      },
-      "mac": {
-        "id": 9,
-        "loadaddr": "fffffffff77fb000",
-        "size": 212088,
-        "description": "MAC Services"
-      },
-      "procfs": {
-        "id": 10,
-        "loadaddr": "fffffffff782e000",
-        "size": 136376,
-        "description": "filesystem for proc"
-      },
-      "TS": {
-        "id": 12,
-        "loadaddr": "fffffffff784f000",
-        "size": 16504,
-        "description": "time sharing sched class"
-      },
-      "TS_DPTBL": {
-        "id": 13,
-        "loadaddr": "fffffffff782dac0",
-        "size": 2584,
-        "description": "Time sharing dispatch table"
-      },
-      "pci_autoconfig": {
-        "id": 14,
-        "loadaddr": "fffffffff7853000",
-        "size": 41368,
-        "description": "PCI BIOS interface"
-      },
-      "acpica": {
-        "id": 15,
-        "loadaddr": "fffffffff785e000",
-        "size": 420488,
-        "description": "ACPI interpreter"
-      },
-      "pcie": {
-        "id": 16,
-        "loadaddr": "fffffffff78c4000",
-        "size": 104384,
-        "description": "PCI Express Framework Module"
-      },
-      "busra": {
-        "id": 17,
-        "loadaddr": "fffffffff78de000",
-        "size": 9848,
-        "description": "Bus Resource Allocator (BUSRA)"
-      },
-      "acpidev": {
-        "id": 18,
-        "loadaddr": "fffffffff78e1000",
-        "size": 70936,
-        "description": "ACPI device enumerator"
-      },
-      "isa": {
-        "id": 19,
-        "loadaddr": "fffffffff78f2000",
-        "size": 15816,
-        "description": "isa nexus driver for 'ISA'"
-      },
-      "cpu.generic": {
-        "id": 20,
-        "loadaddr": "fffffffff78f6000",
-        "size": 19384,
-        "description": "Generic x86 CPU Module"
-      },
-      "uppc": {
-        "id": 22,
-        "loadaddr": "fffffffff78fd000",
-        "size": 14168,
-        "description": "UniProcessor PC"
-      },
-      "pcplusmp": {
-        "id": 25,
-        "loadaddr": "fffffffff7915000",
-        "size": 70584,
-        "description": "pcplusmp v1.4 compatible"
-      },
-      "rootnex": {
-        "id": 26,
-        "loadaddr": "fffffffff7926000",
-        "size": 86048,
-        "description": "i86pc root nexus"
-      },
-      "iommulib": {
-        "id": 27,
-        "loadaddr": "fffffffff793b000",
-        "size": 9760,
-        "description": "IOMMU library module"
-      },
-      "options": {
-        "id": 28,
-        "loadaddr": "fffffffff7925c78",
-        "size": 816,
-        "description": "options driver"
-      },
-      "pseudo": {
-        "id": 29,
-        "loadaddr": "fffffffff785d050",
-        "size": 3640,
-        "description": "nexus driver for 'pseudo' 1.31"
-      },
-      "clone": {
-        "id": 30,
-        "loadaddr": "fffffffff78f1a40",
-        "size": 2096,
-        "description": "Clone Pseudodriver 'clone'"
-      },
-      "scsi_vhci": {
-        "id": 31,
-        "loadaddr": "fffffffff793e000",
-        "size": 77632,
-        "description": "SCSI VHCI Driver"
-      },
-      "scsi": {
-        "id": 32,
-        "loadaddr": "fffffffff7951000",
-        "size": 157840,
-        "description": "SCSI Bus Utility Routines"
-      },
-      "scsi_vhci_f_asym_sun": {
-        "id": 33,
-        "loadaddr": "fffffffffbbfe8e8",
-        "size": 4056,
-        "description": "f_asym_sun"
-      },
-      "scsi_vhci_f_asym_lsi": {
-        "id": 34,
-        "loadaddr": "fffffffff7974000",
-        "size": 8000,
-        "description": "f_asym_lsi"
-      },
-      "scsi_vhci_f_asym_emc": {
-        "id": 35,
-        "loadaddr": "fffffffff7976000",
-        "size": 4624,
-        "description": "f_asym_emc"
-      },
-      "scsi_vhci_f_sym_emc": {
-        "id": 36,
-        "loadaddr": "fffffffff782dc70",
-        "size": 1112,
-        "description": "f_sym_emc"
-      },
-      "scsi_vhci_f_sym_hds": {
-        "id": 37,
-        "loadaddr": "fffffffff78527f0",
-        "size": 2000,
-        "description": "f_sym_hds"
-      },
-      "scsi_vhci_f_sym": {
-        "id": 38,
-        "loadaddr": "fffffffff793a9d0",
-        "size": 1944,
-        "description": "f_sym"
-      },
-      "scsi_vhci_f_tpgs": {
-        "id": 39,
-        "loadaddr": "fffffffff7977128",
-        "size": 3288,
-        "description": "f_tpgs"
-      },
-      "npe": {
-        "id": 40,
-        "loadaddr": "fffffffff7978000",
-        "size": 34112,
-        "description": "Host to PCIe nexus driver"
-      },
-      "zfs": {
-        "id": 43,
-        "loadaddr": "fffffffff7980000",
-        "size": 1014160,
-        "description": "ZFS storage pool"
-      },
-      "swrand": {
-        "id": 44,
-        "loadaddr": "fffffffff7901000",
-        "size": 8120,
-        "description": "Kernel Random number Provider"
-      },
-      "kcf": {
-        "id": 45,
-        "loadaddr": "fffffffff7a6b000",
-        "size": 155176,
-        "description": "Kernel Crypto Framework"
-      },
-      "sha1": {
-        "id": 46,
-        "loadaddr": "fffffffff7903000",
-        "size": 13976,
-        "description": "SHA1 Kernel SW Provider 1.1"
-      },
-      "idmap": {
-        "id": 47,
-        "loadaddr": "fffffffff7907000",
-        "size": 20392,
-        "description": "ID Mapping kernel module"
-      },
-      "doorfs": {
-        "id": 48,
-        "loadaddr": "fffffffff790c000",
-        "size": 27864,
-        "description": "32-bit door syscalls"
-      },
-      "rpcmod": {
-        "id": 49,
-        "loadaddr": "fffffffff7a91000",
-        "size": 132640,
-        "description": "rpc interface str mod"
-      },
-      "tlimod": {
-        "id": 50,
-        "loadaddr": "fffffffff7aaf000",
-        "size": 8384,
-        "description": "KTLI misc module"
-      },
-      "sha2": {
-        "id": 51,
-        "loadaddr": "fffffffff7ab2000",
-        "size": 23248,
-        "description": "SHA2 Kernel SW Provider"
-      },
-      "acpippm": {
-        "id": 52,
-        "loadaddr": "fffffffff7ab75b0",
-        "size": 3048,
-        "description": "ACPI ppm driver"
-      },
-      "ppm": {
-        "id": 53,
-        "loadaddr": "fffffffff7ab8000",
-        "size": 25536,
-        "description": "platform pm driver"
-      },
-      "sd": {
-        "id": 54,
-        "loadaddr": "fffffffff7abe000",
-        "size": 154880,
-        "description": "SCSI Disk Driver"
-      },
-      "cmlb": {
-        "id": 55,
-        "loadaddr": "fffffffff7ae3000",
-        "size": 35152,
-        "description": "Common Labeling module"
-      },
-      "ata": {
-        "id": 62,
-        "loadaddr": "fffffffff7b78000",
-        "size": 69920,
-        "description": "ATA AT-bus attachment disk cont"
-      },
-      "pci-ide": {
-        "id": 63,
-        "loadaddr": "fffffffff7913000",
-        "size": 5552,
-        "description": "pciide nexus driver for 'PCI-ID"
-      },
-      "mpt": {
-        "id": 70,
-        "loadaddr": "fffffffff7bce000",
-        "size": 260904,
-        "description": "MPT HBA Driver"
-      },
-      "cmdk": {
-        "id": 76,
-        "loadaddr": "fffffffff7c87000",
-        "size": 14696,
-        "description": "Common Direct Access Disk"
-      },
-      "dadk": {
-        "id": 77,
-        "loadaddr": "fffffffff7c8b000",
-        "size": 16152,
-        "description": "Direct Attached Disk"
-      },
-      "gda": {
-        "id": 78,
-        "loadaddr": "fffffffff78fa468",
-        "size": 2992,
-        "description": "Generic Direct Attached Device "
-      },
-      "strategy": {
-        "id": 79,
-        "loadaddr": "fffffffff7c8f000",
-        "size": 9480,
-        "description": "Device Strategy Objects"
-      },
-      "SDC": {
-        "id": 81,
-        "loadaddr": "fffffffff7c92000",
-        "size": 7616,
-        "description": "system duty cycle scheduling cl"
-      },
-      "ctfs": {
-        "id": 82,
-        "loadaddr": "fffffffff7c94000",
-        "size": 17528,
-        "description": "contract filesystem"
-      },
-      "mntfs": {
-        "id": 83,
-        "loadaddr": "fffffffff7c99000",
-        "size": 16208,
-        "description": "mount information file system"
-      },
-      "tmpfs": {
-        "id": 84,
-        "loadaddr": "fffffffff7c9d000",
-        "size": 98176,
-        "description": "filesystem for tmpfs"
-      },
-      "objfs": {
-        "id": 85,
-        "loadaddr": "fffffffff7ca5000",
-        "size": 9888,
-        "description": "kernel object filesystem"
-      },
-      "sharefs": {
-        "id": 86,
-        "loadaddr": "fffffffff7ca8000",
-        "size": 7696,
-        "description": "sharefs syscall (32-bit)"
-      },
-      "acpinex": {
-        "id": 87,
-        "loadaddr": "fffffffff7caa000",
-        "size": 12512,
-        "description": "ACPI virtual bus driver"
-      },
-      "strplumb": {
-        "id": 89,
-        "loadaddr": "fffffffff7cb0000",
-        "size": 5952,
-        "description": "STREAMS Plumbing Module"
-      },
-      "dld": {
-        "id": 90,
-        "loadaddr": "fffffffff7cb2000",
-        "size": 37408,
-        "description": "Data-Link Driver"
-      },
-      "ip": {
-        "id": 91,
-        "loadaddr": "fffffffff7cbb000",
-        "size": 1369720,
-        "description": "IP STREAMS module 1.47"
-      },
-      "md5": {
-        "id": 92,
-        "loadaddr": "fffffffff7dfa000",
-        "size": 12064,
-        "description": "MD5 Kernel SW Provider"
-      },
-      "hook": {
-        "id": 93,
-        "loadaddr": "fffffffff7dfd000",
-        "size": 17456,
-        "description": "Hooks Interface v1.0"
-      },
-      "neti": {
-        "id": 94,
-        "loadaddr": "fffffffff7e02000",
-        "size": 10704,
-        "description": "netinfo module"
-      },
-      "ip6": {
-        "id": 95,
-        "loadaddr": "fffffffff7c43b40",
-        "size": 1608,
-        "description": "IP6 STREAMS driver"
-      },
-      "tcp": {
-        "id": 96,
-        "loadaddr": "fffffffff7bf3a98",
-        "size": 1896,
-        "description": "TCP socket module"
-      },
-      "sockfs": {
-        "id": 97,
-        "loadaddr": "fffffffff7e05000",
-        "size": 204264,
-        "description": "filesystem for sockfs"
-      },
-      "tcp6": {
-        "id": 98,
-        "loadaddr": "fffffffff7aea990",
-        "size": 1608,
-        "description": "TCP6 STREAMS driver"
-      },
-      "udp": {
-        "id": 99,
-        "loadaddr": "fffffffff78f5940",
-        "size": 1896,
-        "description": "UDP socket module"
-      },
-      "udp6": {
-        "id": 100,
-        "loadaddr": "fffffffff7e04938",
-        "size": 1608,
-        "description": "UDP6 STREAMS driver"
-      },
-      "icmp": {
-        "id": 101,
-        "loadaddr": "fffffffff7b938b0",
-        "size": 1896,
-        "description": "Rawip socket module"
-      },
-      "icmp6": {
-        "id": 102,
-        "loadaddr": "fffffffff7c938a0",
-        "size": 1608,
-        "description": "ICMP6 STREAMS driver"
-      },
-      "arp": {
-        "id": 103,
-        "loadaddr": "fffffffff797f888",
-        "size": 1704,
-        "description": "ARP STREAMS module"
-      },
-      "timod": {
-        "id": 104,
-        "loadaddr": "fffffffff7e35000",
-        "size": 18448,
-        "description": "transport interface str mod"
-      },
-      "consconfig_dacf": {
-        "id": 106,
-        "loadaddr": "fffffffff7e39000",
-        "size": 22800,
-        "description": "Consconfig DACF"
-      },
-      "usbser": {
-        "id": 107,
-        "loadaddr": "fffffffff7e3e000",
-        "size": 21408,
-        "description": "USB generic serial module"
-      },
-      "usba": {
-        "id": 108,
-        "loadaddr": "fffffffff7e44000",
-        "size": 242472,
-        "description": "USBA: USB Architecture 2.0 1.66"
-      },
-      "i8042": {
-        "id": 109,
-        "loadaddr": "fffffffff7e7f000",
-        "size": 7936,
-        "description": "i8042 nexus driver"
-      },
-      "pci_pci": {
-        "id": 110,
-        "loadaddr": "fffffffff7e81000",
-        "size": 8248,
-        "description": "Standard PCI to PCI bridge nexu"
-      },
-      "pcihp": {
-        "id": 111,
-        "loadaddr": "fffffffff7e83000",
-        "size": 23800,
-        "description": "PCI nexus hotplug support"
-      },
-      "hpcsvc": {
-        "id": 112,
-        "loadaddr": "fffffffff7e89000",
-        "size": 5080,
-        "description": "hot-plug controller services"
-      },
-      "vgatext": {
-        "id": 113,
-        "loadaddr": "fffffffff7e8b000",
-        "size": 19184,
-        "description": "VGA text driver"
-      },
-      "agpmaster": {
-        "id": 114,
-        "loadaddr": "fffffffff7e8e000",
-        "size": 6064,
-        "description": "AGP master interfaces"
-      },
-      "conskbd": {
-        "id": 115,
-        "loadaddr": "fffffffff7e90000",
-        "size": 12568,
-        "description": "conskbd multiplexer driver"
-      },
-      "kbtrans": {
-        "id": 116,
-        "loadaddr": "fffffffff7e93000",
-        "size": 20160,
-        "description": "kbtrans (key translation)"
-      },
-      "consms": {
-        "id": 117,
-        "loadaddr": "fffffffff7e97000",
-        "size": 8024,
-        "description": "Mouse Driver for Sun 'consms' 5"
-      },
-      "wc": {
-        "id": 118,
-        "loadaddr": "fffffffff7e99000",
-        "size": 16096,
-        "description": "Workstation multiplexer Driver "
-      },
-      "tem": {
-        "id": 119,
-        "loadaddr": "fffffffff7e9d000",
-        "size": 45904,
-        "description": "ANSI Terminal Emulator"
-      },
-      "iwscn": {
-        "id": 120,
-        "loadaddr": "fffffffff7a90138",
-        "size": 4104,
-        "description": "Workstation Redirection driver"
-      },
-      "kb8042": {
-        "id": 124,
-        "loadaddr": "fffffffff7ee0000",
-        "size": 14272,
-        "description": "PS/2 keyboard driver"
-      },
-      "mouse8042": {
-        "id": 125,
-        "loadaddr": "fffffffff7ee3000",
-        "size": 5296,
-        "description": "PS/2 Mouse"
-      },
-      "vuid3ps2": {
-        "id": 126,
-        "loadaddr": "fffffffff7ee5000",
-        "size": 9056,
-        "description": "mouse events to vuid events"
-      },
-      "ibtl": {
-        "id": 129,
-        "loadaddr": "fffffffff7f03000",
-        "size": 81064,
-        "description": "IB Transport Layer"
-      },
-      "ibmf": {
-        "id": 130,
-        "loadaddr": "fffffffff7f16000",
-        "size": 443904,
-        "description": "IB Agent Interfaces 2.0"
-      },
-      "acpi_drv": {
-        "id": 131,
-        "loadaddr": "fffffffff7ee8000",
-        "size": 20296,
-        "description": "ACPI driver"
-      },
-      "audio": {
-        "id": 133,
-        "loadaddr": "fffffffff7f63000",
-        "size": 367136,
-        "description": "Audio Framework"
-      },
-      "elfexec": {
-        "id": 145,
-        "loadaddr": "fffffffff8036000",
-        "size": 46752,
-        "description": "32-bit exec module for elf"
-      },
-      "smbios": {
-        "id": 147,
-        "loadaddr": "fffffffff8210600",
-        "size": 2960,
-        "description": "System Management BIOS driver"
-      },
-      "kssl": {
-        "id": 150,
-        "loadaddr": "fffffffff8045000",
-        "size": 11840,
-        "description": "Kernel SSL Interface"
-      },
-      "pcieb": {
-        "id": 154,
-        "loadaddr": "fffffffff806e000",
-        "size": 17472,
-        "description": "PCIe bridge/switch driver"
-      },
-      "fctl": {
-        "id": 156,
-        "loadaddr": "fffffffff80f9000",
-        "size": 44760,
-        "description": "SunFC Transport v20090729-1.70"
-      },
-      "stmf": {
-        "id": 159,
-        "loadaddr": "fffffffff8124000",
-        "size": 72656,
-        "description": "COMSTAR STMF"
-      },
-      "ksocket": {
-        "id": 161,
-        "loadaddr": "fffffffff8072000",
-        "size": 8576,
-        "description": "kernel socket module"
-      },
-      "ibcm": {
-        "id": 162,
-        "loadaddr": "fffffffff814f000",
-        "size": 182728,
-        "description": "IB Communication Manager"
-      },
-      "stmf_sbd": {
-        "id": 164,
-        "loadaddr": "fffffffff8190000",
-        "size": 71664,
-        "description": "COMSTAR SBD"
-      },
-      "sad": {
-        "id": 167,
-        "loadaddr": "fffffffff8138000",
-        "size": 4968,
-        "description": "STREAMS Administrative Driver '"
-      },
-      "ldterm": {
-        "id": 168,
-        "loadaddr": "fffffffff813a000",
-        "size": 61576,
-        "description": "terminal line discipline"
-      },
-      "ttcompat": {
-        "id": 169,
-        "loadaddr": "fffffffff8149000",
-        "size": 8368,
-        "description": "alt ioctl calls"
-      },
-      "ptsl": {
-        "id": 171,
-        "loadaddr": "fffffffff814b000",
-        "size": 6192,
-        "description": "tty pseudo driver slave 'ptsl'"
-      },
-      "ptc": {
-        "id": 172,
-        "loadaddr": "fffffffff814d000",
-        "size": 7872,
-        "description": "tty pseudo driver control 'ptc'"
-      },
-      "tl": {
-        "id": 181,
-        "loadaddr": "fffffffff81e9000",
-        "size": 30440,
-        "description": "TPI Local Transport (tl)"
-      },
-      "keysock": {
-        "id": 182,
-        "loadaddr": "fffffffff81f1000",
-        "size": 19672,
-        "description": "PF_KEY socket STREAMS module"
-      },
-      "spdsock": {
-        "id": 183,
-        "loadaddr": "fffffffff81f6000",
-        "size": 29664,
-        "description": "PF_POLICY socket STREAMS driver"
-      },
-      "rds": {
-        "id": 184,
-        "loadaddr": "fffffffff81fd000",
-        "size": 14008,
-        "description": "RDS STREAMS driver"
-      },
-      "sysmsg": {
-        "id": 185,
-        "loadaddr": "fffffffff8200000",
-        "size": 7296,
-        "description": "System message redirection (fan"
-      },
-      "cn": {
-        "id": 186,
-        "loadaddr": "fffffffff8041560",
-        "size": 3120,
-        "description": "Console redirection driver"
-      },
-      "mm": {
-        "id": 187,
-        "loadaddr": "fffffffff8202000",
-        "size": 6408,
-        "description": "memory driver"
-      },
-      "pipe": {
-        "id": 188,
-        "loadaddr": "fffffffff7c8eb78",
-        "size": 1296,
-        "description": "32-bit pipe(2) syscall"
-      },
-      "namefs": {
-        "id": 189,
-        "loadaddr": "fffffffff8204000",
-        "size": 9440,
-        "description": "filesystem for namefs"
-      },
-      "portfs": {
-        "id": 190,
-        "loadaddr": "fffffffff8207000",
-        "size": 30008,
-        "description": "32-bit event ports syscalls"
-      },
-      "intpexec": {
-        "id": 191,
-        "loadaddr": "fffffffff8256a50",
-        "size": 1632,
-        "description": "exec mod for interp"
-      },
-      "sysevent": {
-        "id": 192,
-        "loadaddr": "fffffffff820f000",
-        "size": 6072,
-        "description": "sysevent driver"
-      },
-      "log": {
-        "id": 193,
-        "loadaddr": "fffffffff7e3d710",
-        "size": 2968,
-        "description": "streams log driver"
-      },
-      "softmac": {
-        "id": 194,
-        "loadaddr": "fffffffff8211000",
-        "size": 40312,
-        "description": "softmac driver"
-      },
-      "rts": {
-        "id": 195,
-        "loadaddr": "fffffffff7e9cb00",
-        "size": 1736,
-        "description": "PF_ROUTE socket module"
-      },
-      "devinfo": {
-        "id": 196,
-        "loadaddr": "fffffffff7b94000",
-        "size": 26344,
-        "description": "DEVINFO Driver"
-      },
-      "iscsi": {
-        "id": 197,
-        "loadaddr": "fffffffff8222000",
-        "size": 218720,
-        "description": "iSCSI Initiator v-1.55"
-      },
-      "idm": {
-        "id": 198,
-        "loadaddr": "fffffffff8257000",
-        "size": 73744,
-        "description": "iSCSI Data Mover"
-      },
-      "e1000g": {
-        "id": 203,
-        "loadaddr": "fffffffff7aeb000",
-        "size": 298648,
-        "description": "Intel PRO/1000 Ethernet"
-      },
-      "cpc": {
-        "id": 206,
-        "loadaddr": "fffffffff8082dd8",
-        "size": 6256,
-        "description": "32-bit cpc sampling system call"
-      },
-      "fdc": {
-        "id": 207,
-        "loadaddr": "fffffffff82d3000",
-        "size": 28848,
-        "description": "Floppy Controller"
-      },
-      "pit_beep": {
-        "id": 210,
-        "loadaddr": "fffffffff7912b60",
-        "size": 1488,
-        "description": "Intel Pit_beep Driver"
-      },
-      "crypto": {
-        "id": 213,
-        "loadaddr": "fffffffff8048000",
-        "size": 80656,
-        "description": "Cryptographic Library Interface"
-      },
-      "mac_ether": {
-        "id": 215,
-        "loadaddr": "fffffffff814c588",
-        "size": 6416,
-        "description": "Ethernet MAC plugin"
-      },
-      "net_dacf": {
-        "id": 216,
-        "loadaddr": "fffffffff814ed38",
-        "size": 936,
-        "description": "net DACF"
-      },
-      "fcip": {
-        "id": 222,
-        "loadaddr": "fffffffff8349000",
-        "size": 38192,
-        "description": "SunFC FCIP v1.61"
-      },
-      "openeepr": {
-        "id": 237,
-        "loadaddr": "fffffffff84bc000",
-        "size": 8008,
-        "description": "OPENPROM/NVRAM Driver"
-      },
-      "power": {
-        "id": 240,
-        "loadaddr": "fffffffff84c2000",
-        "size": 6288,
-        "description": "power button driver"
-      },
-      "random": {
-        "id": 243,
-        "loadaddr": "fffffffff833d818",
-        "size": 2264,
-        "description": "random number device"
-      },
-      "srn": {
-        "id": 248,
-        "loadaddr": "fffffffff7ef5308",
-        "size": 3928,
-        "description": "srn driver"
-      },
-      "sy": {
-        "id": 249,
-        "loadaddr": "fffffffff827d7e0",
-        "size": 2232,
-        "description": "Indirect driver for tty 'sy'"
-      },
-      "lofs": {
-        "id": 253,
-        "loadaddr": "fffffffff84d0000",
-        "size": 17168,
-        "description": "filesystem for lofs"
-      },
-      "fdfs": {
-        "id": 255,
-        "loadaddr": "fffffffff84d5000",
-        "size": 5400,
-        "description": "filesystem for fd"
-      },
-      "fssnap_if": {
-        "id": 258,
-        "loadaddr": "fffffffff82d9ca0",
-        "size": 1040,
-        "description": "File System Snapshot Interface"
-      },
-      "ufs": {
-        "id": 259,
-        "loadaddr": "fffffffff84e0000",
-        "size": 270672,
-        "description": "filesystem for ufs"
-      },
-      "ipf": {
-        "id": 260,
-        "loadaddr": "fffffffff8521000",
-        "size": 233784,
-        "description": "IP Filter: v4.1.9"
-      },
-      "kstat": {
-        "id": 261,
-        "loadaddr": "fffffffff8372160",
-        "size": 4136,
-        "description": "kernel statistics driver"
-      },
-      "logindmux": {
-        "id": 263,
-        "loadaddr": "fffffffff8559000",
-        "size": 8304,
-        "description": "logindmux driver"
-      },
-      "pool": {
-        "id": 267,
-        "loadaddr": "fffffffff8572000",
-        "size": 5216,
-        "description": "pool driver"
-      },
-      "ptm": {
-        "id": 268,
-        "loadaddr": "fffffffff81372e0",
-        "size": 3984,
-        "description": "Master streams driver 'ptm'"
-      },
-      "pts": {
-        "id": 269,
-        "loadaddr": "fffffffff85732d0",
-        "size": 3976,
-        "description": "Slave Stream Pseudo Terminal dr"
-      },
-      "klmmod": {
-        "id": 271,
-        "loadaddr": "fffffffff85c8000",
-        "size": 74664,
-        "description": "lock mgr common module"
-      },
-      "nfs": {
-        "id": 272,
-        "loadaddr": "fffffffff85da000",
-        "size": 633312,
-        "description": "network filesystem version 4"
-      },
-      "rpcsec": {
-        "id": 273,
-        "loadaddr": "fffffffff8673000",
-        "size": 25664,
-        "description": "kernel RPC security module."
-      },
       "FX": {
+        "description": "Fixed priority sched class",
         "id": 275,
         "loadaddr": "fffffffff867a000",
-        "size": 13264,
-        "description": "Fixed priority sched class"
+        "size": 13264
       },
       "FX_DPTBL": {
+        "description": "Fixed priority dispatch table",
         "id": 276,
         "loadaddr": "fffffffff7b9de80",
-        "size": 960,
-        "description": "Fixed priority dispatch table"
+        "size": 960
+      },
+      "SDC": {
+        "description": "system duty cycle scheduling cl",
+        "id": 81,
+        "loadaddr": "fffffffff7c92000",
+        "size": 7616
+      },
+      "TS": {
+        "description": "time sharing sched class",
+        "id": 12,
+        "loadaddr": "fffffffff784f000",
+        "size": 16504
+      },
+      "TS_DPTBL": {
+        "description": "Time sharing dispatch table",
+        "id": 13,
+        "loadaddr": "fffffffff782dac0",
+        "size": 2584
+      },
+      "acpi_drv": {
+        "description": "ACPI driver",
+        "id": 131,
+        "loadaddr": "fffffffff7ee8000",
+        "size": 20296
+      },
+      "acpica": {
+        "description": "ACPI interpreter",
+        "id": 15,
+        "loadaddr": "fffffffff785e000",
+        "size": 420488
+      },
+      "acpidev": {
+        "description": "ACPI device enumerator",
+        "id": 18,
+        "loadaddr": "fffffffff78e1000",
+        "size": 70936
+      },
+      "acpinex": {
+        "description": "ACPI virtual bus driver",
+        "id": 87,
+        "loadaddr": "fffffffff7caa000",
+        "size": 12512
+      },
+      "acpippm": {
+        "description": "ACPI ppm driver",
+        "id": 52,
+        "loadaddr": "fffffffff7ab75b0",
+        "size": 3048
+      },
+      "agpmaster": {
+        "description": "AGP master interfaces",
+        "id": 114,
+        "loadaddr": "fffffffff7e8e000",
+        "size": 6064
+      },
+      "arp": {
+        "description": "ARP STREAMS module",
+        "id": 103,
+        "loadaddr": "fffffffff797f888",
+        "size": 1704
+      },
+      "ata": {
+        "description": "ATA AT-bus attachment disk cont",
+        "id": 62,
+        "loadaddr": "fffffffff7b78000",
+        "size": 69920
+      },
+      "audio": {
+        "description": "Audio Framework",
+        "id": 133,
+        "loadaddr": "fffffffff7f63000",
+        "size": 367136
       },
       "autofs": {
+        "description": "AUTOFS syscall (32-bit)",
         "id": 279,
         "loadaddr": "fffffffff8683000",
-        "size": 37096,
-        "description": "AUTOFS syscall (32-bit)"
+        "size": 37096
       },
-      "ptem": {
-        "id": 280,
-        "loadaddr": "fffffffff8136000",
-        "size": 5160,
-        "description": "pty hardware emulator"
+      "busra": {
+        "description": "Bus Resource Allocator (BUSRA)",
+        "id": 17,
+        "loadaddr": "fffffffff78de000",
+        "size": 9848
+      },
+      "clone": {
+        "description": "Clone Pseudodriver 'clone'",
+        "id": 30,
+        "loadaddr": "fffffffff78f1a40",
+        "size": 2096
+      },
+      "cmdk": {
+        "description": "Common Direct Access Disk",
+        "id": 76,
+        "loadaddr": "fffffffff7c87000",
+        "size": 14696
+      },
+      "cmlb": {
+        "description": "Common Labeling module",
+        "id": 55,
+        "loadaddr": "fffffffff7ae3000",
+        "size": 35152
+      },
+      "cn": {
+        "description": "Console redirection driver",
+        "id": 186,
+        "loadaddr": "fffffffff8041560",
+        "size": 3120
+      },
+      "consconfig_dacf": {
+        "description": "Consconfig DACF",
+        "id": 106,
+        "loadaddr": "fffffffff7e39000",
+        "size": 22800
+      },
+      "conskbd": {
+        "description": "conskbd multiplexer driver",
+        "id": 115,
+        "loadaddr": "fffffffff7e90000",
+        "size": 12568
+      },
+      "consms": {
+        "description": "Mouse Driver for Sun 'consms' 5",
+        "id": 117,
+        "loadaddr": "fffffffff7e97000",
+        "size": 8024
+      },
+      "cpc": {
+        "description": "32-bit cpc sampling system call",
+        "id": 206,
+        "loadaddr": "fffffffff8082dd8",
+        "size": 6256
+      },
+      "cpu.generic": {
+        "description": "Generic x86 CPU Module",
+        "id": 20,
+        "loadaddr": "fffffffff78f6000",
+        "size": 19384
+      },
+      "crypto": {
+        "description": "Cryptographic Library Interface",
+        "id": 213,
+        "loadaddr": "fffffffff8048000",
+        "size": 80656
+      },
+      "ctfs": {
+        "description": "contract filesystem",
+        "id": 82,
+        "loadaddr": "fffffffff7c94000",
+        "size": 17528
+      },
+      "dadk": {
+        "description": "Direct Attached Disk",
+        "id": 77,
+        "loadaddr": "fffffffff7c8b000",
+        "size": 16152
+      },
+      "dev": {
+        "description": "/dev filesystem",
+        "id": 7,
+        "loadaddr": "fffffffffbbe6318",
+        "size": 74272
+      },
+      "devfs": {
+        "description": "devices filesystem",
+        "id": 6,
+        "loadaddr": "fffffffffbbe0b10",
+        "size": 23248
+      },
+      "devinfo": {
+        "description": "DEVINFO Driver",
+        "id": 196,
+        "loadaddr": "fffffffff7b94000",
+        "size": 26344
+      },
+      "dld": {
+        "description": "Data-Link Driver",
+        "id": 90,
+        "loadaddr": "fffffffff7cb2000",
+        "size": 37408
+      },
+      "dls": {
+        "description": "Data-Link Services",
+        "id": 8,
+        "loadaddr": "fffffffffbbf7f28",
+        "size": 27264
+      },
+      "doorfs": {
+        "description": "32-bit door syscalls",
+        "id": 48,
+        "loadaddr": "fffffffff790c000",
+        "size": 27864
+      },
+      "dtrace": {
+        "description": "Dynamic Tracing",
+        "id": 5,
+        "loadaddr": "fffffffff831a000",
+        "size": 120112
+      },
+      "e1000g": {
+        "description": "Intel PRO/1000 Ethernet",
+        "id": 203,
+        "loadaddr": "fffffffff7aeb000",
+        "size": 298648
+      },
+      "elfexec": {
+        "description": "32-bit exec module for elf",
+        "id": 145,
+        "loadaddr": "fffffffff8036000",
+        "size": 46752
+      },
+      "fcip": {
+        "description": "SunFC FCIP v1.61",
+        "id": 222,
+        "loadaddr": "fffffffff8349000",
+        "size": 38192
+      },
+      "fctl": {
+        "description": "SunFC Transport v20090729-1.70",
+        "id": 156,
+        "loadaddr": "fffffffff80f9000",
+        "size": 44760
+      },
+      "fdc": {
+        "description": "Floppy Controller",
+        "id": 207,
+        "loadaddr": "fffffffff82d3000",
+        "size": 28848
+      },
+      "fdfs": {
+        "description": "filesystem for fd",
+        "id": 255,
+        "loadaddr": "fffffffff84d5000",
+        "size": 5400
+      },
+      "fifofs": {
+        "description": "filesystem for fifo",
+        "id": 4,
+        "loadaddr": "fffffffffbbdc2b0",
+        "size": 18768
+      },
+      "fssnap_if": {
+        "description": "File System Snapshot Interface",
+        "id": 258,
+        "loadaddr": "fffffffff82d9ca0",
+        "size": 1040
+      },
+      "gda": {
+        "description": "Generic Direct Attached Device ",
+        "id": 78,
+        "loadaddr": "fffffffff78fa468",
+        "size": 2992
+      },
+      "hook": {
+        "description": "Hooks Interface v1.0",
+        "id": 93,
+        "loadaddr": "fffffffff7dfd000",
+        "size": 17456
+      },
+      "hpcsvc": {
+        "description": "hot-plug controller services",
+        "id": 112,
+        "loadaddr": "fffffffff7e89000",
+        "size": 5080
+      },
+      "i8042": {
+        "description": "i8042 nexus driver",
+        "id": 109,
+        "loadaddr": "fffffffff7e7f000",
+        "size": 7936
+      },
+      "ibcm": {
+        "description": "IB Communication Manager",
+        "id": 162,
+        "loadaddr": "fffffffff814f000",
+        "size": 182728
+      },
+      "ibmf": {
+        "description": "IB Agent Interfaces 2.0",
+        "id": 130,
+        "loadaddr": "fffffffff7f16000",
+        "size": 443904
+      },
+      "ibtl": {
+        "description": "IB Transport Layer",
+        "id": 129,
+        "loadaddr": "fffffffff7f03000",
+        "size": 81064
+      },
+      "icmp": {
+        "description": "Rawip socket module",
+        "id": 101,
+        "loadaddr": "fffffffff7b938b0",
+        "size": 1896
+      },
+      "icmp6": {
+        "description": "ICMP6 STREAMS driver",
+        "id": 102,
+        "loadaddr": "fffffffff7c938a0",
+        "size": 1608
+      },
+      "idm": {
+        "description": "iSCSI Data Mover",
+        "id": 198,
+        "loadaddr": "fffffffff8257000",
+        "size": 73744
+      },
+      "idmap": {
+        "description": "ID Mapping kernel module",
+        "id": 47,
+        "loadaddr": "fffffffff7907000",
+        "size": 20392
+      },
+      "intpexec": {
+        "description": "exec mod for interp",
+        "id": 191,
+        "loadaddr": "fffffffff8256a50",
+        "size": 1632
+      },
+      "iommulib": {
+        "description": "IOMMU library module",
+        "id": 27,
+        "loadaddr": "fffffffff793b000",
+        "size": 9760
+      },
+      "ip": {
+        "description": "IP STREAMS module 1.47",
+        "id": 91,
+        "loadaddr": "fffffffff7cbb000",
+        "size": 1369720
+      },
+      "ip6": {
+        "description": "IP6 STREAMS driver",
+        "id": 95,
+        "loadaddr": "fffffffff7c43b40",
+        "size": 1608
+      },
+      "ipf": {
+        "description": "IP Filter: v4.1.9",
+        "id": 260,
+        "loadaddr": "fffffffff8521000",
+        "size": 233784
+      },
+      "isa": {
+        "description": "isa nexus driver for 'ISA'",
+        "id": 19,
+        "loadaddr": "fffffffff78f2000",
+        "size": 15816
+      },
+      "iscsi": {
+        "description": "iSCSI Initiator v-1.55",
+        "id": 197,
+        "loadaddr": "fffffffff8222000",
+        "size": 218720
+      },
+      "iwscn": {
+        "description": "Workstation Redirection driver",
+        "id": 120,
+        "loadaddr": "fffffffff7a90138",
+        "size": 4104
+      },
+      "kb8042": {
+        "description": "PS/2 keyboard driver",
+        "id": 124,
+        "loadaddr": "fffffffff7ee0000",
+        "size": 14272
+      },
+      "kbtrans": {
+        "description": "kbtrans (key translation)",
+        "id": 116,
+        "loadaddr": "fffffffff7e93000",
+        "size": 20160
+      },
+      "kcf": {
+        "description": "Kernel Crypto Framework",
+        "id": 45,
+        "loadaddr": "fffffffff7a6b000",
+        "size": 155176
+      },
+      "keysock": {
+        "description": "PF_KEY socket STREAMS module",
+        "id": 182,
+        "loadaddr": "fffffffff81f1000",
+        "size": 19672
+      },
+      "klmmod": {
+        "description": "lock mgr common module",
+        "id": 271,
+        "loadaddr": "fffffffff85c8000",
+        "size": 74664
+      },
+      "ksocket": {
+        "description": "kernel socket module",
+        "id": 161,
+        "loadaddr": "fffffffff8072000",
+        "size": 8576
+      },
+      "kssl": {
+        "description": "Kernel SSL Interface",
+        "id": 150,
+        "loadaddr": "fffffffff8045000",
+        "size": 11840
+      },
+      "kstat": {
+        "description": "kernel statistics driver",
+        "id": 261,
+        "loadaddr": "fffffffff8372160",
+        "size": 4136
+      },
+      "ldterm": {
+        "description": "terminal line discipline",
+        "id": 168,
+        "loadaddr": "fffffffff813a000",
+        "size": 61576
+      },
+      "lofs": {
+        "description": "filesystem for lofs",
+        "id": 253,
+        "loadaddr": "fffffffff84d0000",
+        "size": 17168
+      },
+      "log": {
+        "description": "streams log driver",
+        "id": 193,
+        "loadaddr": "fffffffff7e3d710",
+        "size": 2968
+      },
+      "logindmux": {
+        "description": "logindmux driver",
+        "id": 263,
+        "loadaddr": "fffffffff8559000",
+        "size": 8304
+      },
+      "mac": {
+        "description": "MAC Services",
+        "id": 9,
+        "loadaddr": "fffffffff77fb000",
+        "size": 212088
+      },
+      "mac_ether": {
+        "description": "Ethernet MAC plugin",
+        "id": 215,
+        "loadaddr": "fffffffff814c588",
+        "size": 6416
+      },
+      "md5": {
+        "description": "MD5 Kernel SW Provider",
+        "id": 92,
+        "loadaddr": "fffffffff7dfa000",
+        "size": 12064
+      },
+      "mm": {
+        "description": "memory driver",
+        "id": 187,
+        "loadaddr": "fffffffff8202000",
+        "size": 6408
+      },
+      "mntfs": {
+        "description": "mount information file system",
+        "id": 83,
+        "loadaddr": "fffffffff7c99000",
+        "size": 16208
+      },
+      "mouse8042": {
+        "description": "PS/2 Mouse",
+        "id": 125,
+        "loadaddr": "fffffffff7ee3000",
+        "size": 5296
+      },
+      "mpt": {
+        "description": "MPT HBA Driver",
+        "id": 70,
+        "loadaddr": "fffffffff7bce000",
+        "size": 260904
+      },
+      "namefs": {
+        "description": "filesystem for namefs",
+        "id": 189,
+        "loadaddr": "fffffffff8204000",
+        "size": 9440
+      },
+      "net_dacf": {
+        "description": "net DACF",
+        "id": 216,
+        "loadaddr": "fffffffff814ed38",
+        "size": 936
+      },
+      "neti": {
+        "description": "netinfo module",
+        "id": 94,
+        "loadaddr": "fffffffff7e02000",
+        "size": 10704
+      },
+      "nfs": {
+        "description": "network filesystem version 4",
+        "id": 272,
+        "loadaddr": "fffffffff85da000",
+        "size": 633312
+      },
+      "npe": {
+        "description": "Host to PCIe nexus driver",
+        "id": 40,
+        "loadaddr": "fffffffff7978000",
+        "size": 34112
+      },
+      "objfs": {
+        "description": "kernel object filesystem",
+        "id": 85,
+        "loadaddr": "fffffffff7ca5000",
+        "size": 9888
+      },
+      "openeepr": {
+        "description": "OPENPROM/NVRAM Driver",
+        "id": 237,
+        "loadaddr": "fffffffff84bc000",
+        "size": 8008
+      },
+      "options": {
+        "description": "options driver",
+        "id": 28,
+        "loadaddr": "fffffffff7925c78",
+        "size": 816
+      },
+      "pci-ide": {
+        "description": "pciide nexus driver for 'PCI-ID",
+        "id": 63,
+        "loadaddr": "fffffffff7913000",
+        "size": 5552
+      },
+      "pci_autoconfig": {
+        "description": "PCI BIOS interface",
+        "id": 14,
+        "loadaddr": "fffffffff7853000",
+        "size": 41368
+      },
+      "pci_pci": {
+        "description": "Standard PCI to PCI bridge nexu",
+        "id": 110,
+        "loadaddr": "fffffffff7e81000",
+        "size": 8248
+      },
+      "pcie": {
+        "description": "PCI Express Framework Module",
+        "id": 16,
+        "loadaddr": "fffffffff78c4000",
+        "size": 104384
+      },
+      "pcieb": {
+        "description": "PCIe bridge/switch driver",
+        "id": 154,
+        "loadaddr": "fffffffff806e000",
+        "size": 17472
+      },
+      "pcihp": {
+        "description": "PCI nexus hotplug support",
+        "id": 111,
+        "loadaddr": "fffffffff7e83000",
+        "size": 23800
+      },
+      "pcplusmp": {
+        "description": "pcplusmp v1.4 compatible",
+        "id": 25,
+        "loadaddr": "fffffffff7915000",
+        "size": 70584
+      },
+      "pipe": {
+        "description": "32-bit pipe(2) syscall",
+        "id": 188,
+        "loadaddr": "fffffffff7c8eb78",
+        "size": 1296
+      },
+      "pit_beep": {
+        "description": "Intel Pit_beep Driver",
+        "id": 210,
+        "loadaddr": "fffffffff7912b60",
+        "size": 1488
+      },
+      "pool": {
+        "description": "pool driver",
+        "id": 267,
+        "loadaddr": "fffffffff8572000",
+        "size": 5216
+      },
+      "portfs": {
+        "description": "32-bit event ports syscalls",
+        "id": 190,
+        "loadaddr": "fffffffff8207000",
+        "size": 30008
+      },
+      "power": {
+        "description": "power button driver",
+        "id": 240,
+        "loadaddr": "fffffffff84c2000",
+        "size": 6288
+      },
+      "ppm": {
+        "description": "platform pm driver",
+        "id": 53,
+        "loadaddr": "fffffffff7ab8000",
+        "size": 25536
+      },
+      "procfs": {
+        "description": "filesystem for proc",
+        "id": 10,
+        "loadaddr": "fffffffff782e000",
+        "size": 136376
       },
       "pset": {
+        "description": "32-bit pset(2) syscall",
         "id": 281,
         "loadaddr": "fffffffff7b9a550",
-        "size": 8232,
-        "description": "32-bit pset(2) syscall"
+        "size": 8232
+      },
+      "pseudo": {
+        "description": "nexus driver for 'pseudo' 1.31",
+        "id": 29,
+        "loadaddr": "fffffffff785d050",
+        "size": 3640
+      },
+      "ptc": {
+        "description": "tty pseudo driver control 'ptc'",
+        "id": 172,
+        "loadaddr": "fffffffff814d000",
+        "size": 7872
+      },
+      "ptem": {
+        "description": "pty hardware emulator",
+        "id": 280,
+        "loadaddr": "fffffffff8136000",
+        "size": 5160
+      },
+      "ptm": {
+        "description": "Master streams driver 'ptm'",
+        "id": 268,
+        "loadaddr": "fffffffff81372e0",
+        "size": 3984
+      },
+      "pts": {
+        "description": "Slave Stream Pseudo Terminal dr",
+        "id": 269,
+        "loadaddr": "fffffffff85732d0",
+        "size": 3976
+      },
+      "ptsl": {
+        "description": "tty pseudo driver slave 'ptsl'",
+        "id": 171,
+        "loadaddr": "fffffffff814b000",
+        "size": 6192
+      },
+      "random": {
+        "description": "random number device",
+        "id": 243,
+        "loadaddr": "fffffffff833d818",
+        "size": 2264
+      },
+      "rds": {
+        "description": "RDS STREAMS driver",
+        "id": 184,
+        "loadaddr": "fffffffff81fd000",
+        "size": 14008
+      },
+      "rootnex": {
+        "description": "i86pc root nexus",
+        "id": 26,
+        "loadaddr": "fffffffff7926000",
+        "size": 86048
+      },
+      "rpcmod": {
+        "description": "rpc interface str mod",
+        "id": 49,
+        "loadaddr": "fffffffff7a91000",
+        "size": 132640
+      },
+      "rpcsec": {
+        "description": "kernel RPC security module.",
+        "id": 273,
+        "loadaddr": "fffffffff8673000",
+        "size": 25664
+      },
+      "rts": {
+        "description": "PF_ROUTE socket module",
+        "id": 195,
+        "loadaddr": "fffffffff7e9cb00",
+        "size": 1736
+      },
+      "sad": {
+        "description": "STREAMS Administrative Driver '",
+        "id": 167,
+        "loadaddr": "fffffffff8138000",
+        "size": 4968
+      },
+      "scsi": {
+        "description": "SCSI Bus Utility Routines",
+        "id": 32,
+        "loadaddr": "fffffffff7951000",
+        "size": 157840
+      },
+      "scsi_vhci": {
+        "description": "SCSI VHCI Driver",
+        "id": 31,
+        "loadaddr": "fffffffff793e000",
+        "size": 77632
+      },
+      "scsi_vhci_f_asym_emc": {
+        "description": "f_asym_emc",
+        "id": 35,
+        "loadaddr": "fffffffff7976000",
+        "size": 4624
+      },
+      "scsi_vhci_f_asym_lsi": {
+        "description": "f_asym_lsi",
+        "id": 34,
+        "loadaddr": "fffffffff7974000",
+        "size": 8000
+      },
+      "scsi_vhci_f_asym_sun": {
+        "description": "f_asym_sun",
+        "id": 33,
+        "loadaddr": "fffffffffbbfe8e8",
+        "size": 4056
+      },
+      "scsi_vhci_f_sym": {
+        "description": "f_sym",
+        "id": 38,
+        "loadaddr": "fffffffff793a9d0",
+        "size": 1944
+      },
+      "scsi_vhci_f_sym_emc": {
+        "description": "f_sym_emc",
+        "id": 36,
+        "loadaddr": "fffffffff782dc70",
+        "size": 1112
+      },
+      "scsi_vhci_f_sym_hds": {
+        "description": "f_sym_hds",
+        "id": 37,
+        "loadaddr": "fffffffff78527f0",
+        "size": 2000
+      },
+      "scsi_vhci_f_tpgs": {
+        "description": "f_tpgs",
+        "id": 39,
+        "loadaddr": "fffffffff7977128",
+        "size": 3288
+      },
+      "sd": {
+        "description": "SCSI Disk Driver",
+        "id": 54,
+        "loadaddr": "fffffffff7abe000",
+        "size": 154880
+      },
+      "sha1": {
+        "description": "SHA1 Kernel SW Provider 1.1",
+        "id": 46,
+        "loadaddr": "fffffffff7903000",
+        "size": 13976
+      },
+      "sha2": {
+        "description": "SHA2 Kernel SW Provider",
+        "id": 51,
+        "loadaddr": "fffffffff7ab2000",
+        "size": 23248
+      },
+      "sharefs": {
+        "description": "sharefs syscall (32-bit)",
+        "id": 86,
+        "loadaddr": "fffffffff7ca8000",
+        "size": 7696
+      },
+      "smbios": {
+        "description": "System Management BIOS driver",
+        "id": 147,
+        "loadaddr": "fffffffff8210600",
+        "size": 2960
+      },
+      "sockfs": {
+        "description": "filesystem for sockfs",
+        "id": 97,
+        "loadaddr": "fffffffff7e05000",
+        "size": 204264
+      },
+      "softmac": {
+        "description": "softmac driver",
+        "id": 194,
+        "loadaddr": "fffffffff8211000",
+        "size": 40312
+      },
+      "spdsock": {
+        "description": "PF_POLICY socket STREAMS driver",
+        "id": 183,
+        "loadaddr": "fffffffff81f6000",
+        "size": 29664
+      },
+      "specfs": {
+        "description": "filesystem for specfs",
+        "id": 3,
+        "loadaddr": "fffffffffbbd6000",
+        "size": 25520
+      },
+      "srn": {
+        "description": "srn driver",
+        "id": 248,
+        "loadaddr": "fffffffff7ef5308",
+        "size": 3928
+      },
+      "stmf": {
+        "description": "COMSTAR STMF",
+        "id": 159,
+        "loadaddr": "fffffffff8124000",
+        "size": 72656
+      },
+      "stmf_sbd": {
+        "description": "COMSTAR SBD",
+        "id": 164,
+        "loadaddr": "fffffffff8190000",
+        "size": 71664
+      },
+      "strategy": {
+        "description": "Device Strategy Objects",
+        "id": 79,
+        "loadaddr": "fffffffff7c8f000",
+        "size": 9480
+      },
+      "strplumb": {
+        "description": "STREAMS Plumbing Module",
+        "id": 89,
+        "loadaddr": "fffffffff7cb0000",
+        "size": 5952
+      },
+      "swrand": {
+        "description": "Kernel Random number Provider",
+        "id": 44,
+        "loadaddr": "fffffffff7901000",
+        "size": 8120
+      },
+      "sy": {
+        "description": "Indirect driver for tty 'sy'",
+        "id": 249,
+        "loadaddr": "fffffffff827d7e0",
+        "size": 2232
+      },
+      "sysevent": {
+        "description": "sysevent driver",
+        "id": 192,
+        "loadaddr": "fffffffff820f000",
+        "size": 6072
+      },
+      "sysmsg": {
+        "description": "System message redirection (fan",
+        "id": 185,
+        "loadaddr": "fffffffff8200000",
+        "size": 7296
+      },
+      "tcp": {
+        "description": "TCP socket module",
+        "id": 96,
+        "loadaddr": "fffffffff7bf3a98",
+        "size": 1896
+      },
+      "tcp6": {
+        "description": "TCP6 STREAMS driver",
+        "id": 98,
+        "loadaddr": "fffffffff7aea990",
+        "size": 1608
+      },
+      "tem": {
+        "description": "ANSI Terminal Emulator",
+        "id": 119,
+        "loadaddr": "fffffffff7e9d000",
+        "size": 45904
+      },
+      "timod": {
+        "description": "transport interface str mod",
+        "id": 104,
+        "loadaddr": "fffffffff7e35000",
+        "size": 18448
+      },
+      "tl": {
+        "description": "TPI Local Transport (tl)",
+        "id": 181,
+        "loadaddr": "fffffffff81e9000",
+        "size": 30440
+      },
+      "tlimod": {
+        "description": "KTLI misc module",
+        "id": 50,
+        "loadaddr": "fffffffff7aaf000",
+        "size": 8384
+      },
+      "tmpfs": {
+        "description": "filesystem for tmpfs",
+        "id": 84,
+        "loadaddr": "fffffffff7c9d000",
+        "size": 98176
+      },
+      "ttcompat": {
+        "description": "alt ioctl calls",
+        "id": 169,
+        "loadaddr": "fffffffff8149000",
+        "size": 8368
+      },
+      "udp": {
+        "description": "UDP socket module",
+        "id": 99,
+        "loadaddr": "fffffffff78f5940",
+        "size": 1896
+      },
+      "udp6": {
+        "description": "UDP6 STREAMS driver",
+        "id": 100,
+        "loadaddr": "fffffffff7e04938",
+        "size": 1608
+      },
+      "ufs": {
+        "description": "filesystem for ufs",
+        "id": 259,
+        "loadaddr": "fffffffff84e0000",
+        "size": 270672
+      },
+      "uppc": {
+        "description": "UniProcessor PC",
+        "id": 22,
+        "loadaddr": "fffffffff78fd000",
+        "size": 14168
+      },
+      "usba": {
+        "description": "USBA: USB Architecture 2.0 1.66",
+        "id": 108,
+        "loadaddr": "fffffffff7e44000",
+        "size": 242472
+      },
+      "usbser": {
+        "description": "USB generic serial module",
+        "id": 107,
+        "loadaddr": "fffffffff7e3e000",
+        "size": 21408
+      },
+      "vgatext": {
+        "description": "VGA text driver",
+        "id": 113,
+        "loadaddr": "fffffffff7e8b000",
+        "size": 19184
+      },
+      "vuid3ps2": {
+        "description": "mouse events to vuid events",
+        "id": 126,
+        "loadaddr": "fffffffff7ee5000",
+        "size": 9056
+      },
+      "wc": {
+        "description": "Workstation multiplexer Driver ",
+        "id": 118,
+        "loadaddr": "fffffffff7e99000",
+        "size": 16096
+      },
+      "zfs": {
+        "description": "ZFS storage pool",
+        "id": 43,
+        "loadaddr": "fffffffff7980000",
+        "size": 1014160
       }
-    }
-  },
-  "os": "solaris2",
-  "os_version": "5.11",
-  "platform_version": "151014",
-  "platform_build": "omnios-170cea2",
-  "platform": "omnios",
-  "platform_family": "omnios",
-  "command": {
-    "ps": "ps -ef"
-  },
-  "dmi": {
-  },
-  "ohai_time": 1430340895.575212,
-  "languages": {
-    "ruby": {
-      "bin_dir": "/usr/local/bin",
-      "gem_bin": "/usr/local/bin/gem",
-      "gems_dir": "/usr/local/gems",
-      "ruby_bin": "/usr/local/bin/ruby"
     },
-    "powershell": null
+    "name": "SunOS",
+    "os": "SunOS",
+    "release": "5.11",
+    "version": "omnios-170cea2"
   },
-  "chef_packages": {
-    "chef": {
-      "version": "11.18.6",
-      "chef_root": "/opt/chef/embedded/lib/ruby/gems/2.1.0/gems/chef-11.18.6/lib"
-    },
-    "ohai": {
-      "version": "7.4.1",
-      "ohai_root": "/opt/chef/embedded/lib/ruby/gems/2.1.0/gems/ohai-7.4.1/lib/ohai"
-    }
-  },
-  "counters": {
-    "network": {
-      "interfaces": {
-        "eth0": {
-          "rx": {
-            "bytes": "0",
-            "packets": "0",
-            "errors": "0",
-            "drop": 0,
-            "overrun": 0,
-            "frame": 0,
-            "compressed": 0,
-            "multicast": 0
-          },
-          "tx": {
-            "bytes": "342",
-            "packets": "0",
-            "errors": "0",
-            "drop": 0,
-            "overrun": 0,
-            "collisions": "0",
-            "carrier": 0,
-            "compressed": 0
-          }
-        }
-      }
-    }
-  },
-  "current_user": "fauxhai",
-  "domain": "local",
-  "etc": {
-    "passwd": {
-      "fauxhai": {
-        "dir": "/home/fauxhai",
-        "gid": 0,
-        "uid": 0,
-        "shell": "/bin/bash",
-        "gecos": "Fauxhai"
-      }
-    },
-    "group": {
-      "fauxhai": {
-        "gid": 0,
-        "members": [
-          "fauxhai"
-        ]
-      }
-    }
-  },
-  "hostname": "Fauxhai",
-  "fqdn": "fauxhai.local",
-  "ipaddress": "10.0.0.2",
   "keys": {
     "ssh": {
       "host_dsa_public": "ssh-dss AAAAB3NzaC1kc3MAAACBAJFo9BLAw4WKEs5hgipk5m423FzBsDXCZSMcC9ca/om/1VYzMqImixGe3uICDzNFUWxFoLJTQAOccyzo6MXZiQqwWJDLFi5qOSr6w2XcMyE+zd4wOyMoDiVM5fizmG8K3FzrqvGjwBcHcBdOQnavSijoj38DN25J9zhrid5BY4WlAAAAFQDxXrCyG52XCzn3FV4ej38wJBkomQAAAIBovGPJ4mP2P6BK8lHl0PPbktwQbWlpJ13oz6REJFDVcUi7vV26bX/BjQX+ohzZQzljdz1SpUbPc/8nuA4darYkVh91eBi307EN8IdxRHj2eBgp/ZG4yshIebG3WHrwJD/xUjjZ1MRfyDT1ermVi4LvjjPgWDxLZnPpMaR6S1nzgQAAAIEAj0Vd6DCWslvlsZ8+N53HWsqPi3gnx35JoLPz9Z2epkKIKqmEHav+93G3hdfztVa4I4t3phoPniQchYryF5+RNg8hqxKzjNtrIqUYCeuf2NJrksNsH7OZygPHZpqt4kTuwAGZxjxEGfAI0y8DhkU2ntp2LnzRnWH106BQBCmcXwo= fauxhai.local",
       "host_rsa_public": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCtLCeqtqr/HbnORckw1ukdLhpfGoOPFi5/esKEokzTqq1gsgQ2V8emmyjfq1i6XXfRtSBxkdlHv/GWdP5wBTuE2G85MzBkVSQPvmwQN8lX/JMPEEtKXkeOo0o92/PiSmvY4eRsdF0mw40Uvg7jtE3f3fxj497kzh5fKtkrHnF4x9gXCbVdr3FqXJfggR5IJwAxToerbK7x/uRS+7YuZI9Pip3tt14nv9ezwXcuGb/tvjWOZINiFl8izVIFKi7sxfTX09p4NgamxRS7TD2Yd0jT8nEoF9UZTsgXcJ1kDSx7N7NxFfNfP6rCdOGRRz4gUhXtsUjG/XkxPeCwZ7A9VnOD fauxhai.local"
     }
   },
+  "languages": {
+    "powershell": null,
+    "ruby": {
+      "bin_dir": "/usr/local/bin",
+      "gem_bin": "/usr/local/bin/gem",
+      "gems_dir": "/usr/local/gems",
+      "ruby_bin": "/usr/local/bin/ruby"
+    }
+  },
   "macaddress": "11:11:11:11:11:11",
+  "memory": {
+    "total": "1048576kB"
+  },
   "network": {
     "default_gateway": "10.0.0.1",
     "default_interface": "eth0",
-    "settings": {
-    },
     "interfaces": {
       "eth0": {
         "addresses": {
@@ -2404,28 +2400,27 @@
           {
             "destination": "10.0.0.0/24",
             "family": "inet",
-            "scope": "link",
             "proto": "kernel",
+            "scope": "link",
             "src": "10.0.0.2"
           }
         ],
         "state": "up",
         "type": "eth"
       }
-    }
+    },
+    "settings": {}
   },
+  "ohai_time": 1430340895.575212,
+  "os": "solaris2",
+  "os_version": "5.11",
+  "platform": "omnios",
+  "platform_build": "omnios-170cea2",
+  "platform_family": "omnios",
+  "platform_version": "151014",
   "uptime": "30 days 15 hours 07 minutes 30 seconds",
   "uptime_seconds": 2646450,
-  "cpu": {
-    "real": 1,
-    "total": 1,
-    "cores": 1
-  },
-  "memory": {
-    "total": "1048576kB"
-  },
   "virtualization": {
-    "systems": {
-    }
+    "systems": {}
   }
 }

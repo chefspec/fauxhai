@@ -1,561 +1,627 @@
 {
-  "filesystem": {
-    "/dev/hd4": {
-      "kb_size": "786432",
-      "kb_used": "423048",
-      "kb_available": "363384",
-      "percent_used": "54%",
-      "mount": "/",
-      "fs_type": "jfs2",
-      "mount_options": "rw,log=/dev/hd8"
+  "chef_packages": {
+    "chef": {
+      "chef_root": "/opt/chef/embedded/lib/ruby/gems/2.1.0/gems/chef-12.0.0.alpha.0/lib",
+      "version": "12.0.0.alpha.0"
     },
-    "/dev/hd2": {
-      "kb_size": "11796480",
-      "kb_used": "9317648",
-      "kb_available": "2478832",
-      "percent_used": "79%",
-      "mount": "/usr",
-      "fs_type": "jfs2",
-      "mount_options": "rw,log=/dev/hd8"
-    },
-    "/dev/hd9var": {
-      "kb_size": "3145728",
-      "kb_used": "825728",
-      "kb_available": "2320000",
-      "percent_used": "27%",
-      "mount": "/var",
-      "fs_type": "jfs2",
-      "mount_options": "rw,log=/dev/hd8"
-    },
-    "/dev/hd3": {
-      "kb_size": "3145728",
-      "kb_used": "24648",
-      "kb_available": "3121080",
-      "percent_used": "1%",
-      "mount": "/tmp",
-      "fs_type": "jfs2",
-      "mount_options": "rw,log=/dev/hd8"
-    },
-    "/dev/hd1": {
-      "kb_size": "2359296",
-      "kb_used": "63584",
-      "kb_available": "2295712",
-      "percent_used": "3%",
-      "mount": "/home",
-      "fs_type": "jfs2",
-      "mount_options": "rw,log=/dev/hd8"
-    },
-    "/dev/hd11admin": {
-      "kb_size": "262144",
-      "kb_used": "760",
-      "kb_available": "261384",
-      "percent_used": "1%",
-      "mount": "/admin",
-      "fs_type": "jfs2",
-      "mount_options": "rw,log=/dev/hd8"
-    },
-    "/dev/hd10opt": {
-      "kb_size": "3932160",
-      "kb_used": "1921504",
-      "kb_available": "2010656",
-      "percent_used": "49%",
-      "mount": "/opt",
-      "fs_type": "jfs2",
-      "mount_options": "rw,log=/dev/hd8"
-    },
-    "/dev/livedump": {
-      "kb_size": "524288",
-      "kb_used": "736",
-      "kb_available": "523552",
-      "percent_used": "1%",
-      "mount": "/var/adm/ras/livedump",
-      "fs_type": "jfs2",
-      "mount_options": "rw,log=/dev/hd8"
-    },
-    "192.168.1.11:/stage/middleware": {
-      "kb_size": "314572800",
-      "kb_used": "225814136",
-      "kb_available": "88758664",
-      "percent_used": "72%",
-      "mount": "/stage/middleware",
-      "fs_type": "nfs3",
-      "mount_options": "ro,bg,hard,intr,sec=sys"
-    },
-    "/proc": {
-      "mount": "/proc",
-      "fs_type": "procfs",
-      "mount_options": "rw"
+    "ohai": {
+      "ohai_root": "/opt/chef/embedded/lib/ruby/gems/2.1.0/gems/ohai-7.2.0/lib/ohai",
+      "version": "7.2.0"
     }
   },
-  "kernel": {
-    "name": "aix",
-    "release": "1",
-    "version": "7",
-    "machine": "powerpc",
-    "modules": {
-      "/usr/lib/drivers/cluster": {
-        "text": {
-          "address": "f1000000c0459000",
-          "size": "7a000"
-        },
-        "data": {
-          "address": "f1000000c04b3000",
-          "size": "1fc2c"
-        }
-      },
-      "/usr/lib/drivers/if_en": {
-        "text": {
-          "address": "6370000",
-          "size": "20000"
-        },
-        "data": {
-          "address": "6380000",
-          "size": "bb8"
-        }
-      },
-      "/usr/lib/drivers/random": {
-        "text": {
-          "address": "f1000000c0439000",
-          "size": "20000"
-        },
-        "data": {
-          "address": "f1000000c0441000",
-          "size": "17138"
-        }
-      },
-      "/usr/lib/drivers/nfs.ext": {
-        "text": {
-          "address": "6130000",
-          "size": "220000"
-        },
-        "data": {
-          "address": "62e0000",
-          "size": "66858"
-        }
-      },
-      "/usr/lib/drivers/krpc.ext": {
-        "text": {
-          "address": "60d0000",
-          "size": "60000"
-        },
-        "data": {
-          "address": "6120000",
-          "size": "fb38"
-        }
-      },
-      "/usr/lib/drivers/nfs_kdes.ext": {
-        "text": {
-          "address": "f1000000c0437000",
-          "size": "2000"
-        },
-        "data": {
-          "address": "f1000000c0438000",
-          "size": "c8"
-        }
-      },
-      "/usr/lib/drivers/posix_aiopin": {
-        "text": {
-          "address": "60b0000",
-          "size": "20000"
-        },
-        "data": {
-          "address": "60c0000",
-          "size": "8910"
-        }
-      },
-      "/usr/lib/drivers/posix_aio.ext": {
-        "text": {
-          "address": "6090000",
-          "size": "20000"
-        },
-        "data": {
-          "address": "60a0000",
-          "size": "e60"
-        }
-      },
-      "/usr/lib/drivers/aiopin": {
-        "text": {
-          "address": "6060000",
-          "size": "20000"
-        },
-        "data": {
-          "address": "6070000",
-          "size": "8910"
-        }
-      },
-      "/usr/lib/drivers/aio.ext": {
-        "text": {
-          "address": "6040000",
-          "size": "20000"
-        },
-        "data": {
-          "address": "6050000",
-          "size": "1190"
-        }
-      },
-      "/usr/lib/drivers/smt_loadpin": {
-        "text": {
-          "address": "f1000000c0435000",
-          "size": "2000"
-        },
-        "data": {
-          "address": "f1000000c0436000",
-          "size": "70"
-        }
-      },
-      "/usr/lib/drivers/smt_load": {
-        "text": {
-          "address": "f1000000c042d000",
-          "size": "6000"
-        },
-        "data": {
-          "address": "f1000000c0432000",
-          "size": "680"
-        }
-      },
-      "/usr/lib/drivers/perfvmmstat": {
-        "text": {
-          "address": "6020000",
-          "size": "20000"
-        },
-        "data": {
-          "address": "6030000",
-          "size": "9d0"
-        }
-      },
-      "/usr/pmapi/etc/pmsvcs": {
-        "text": {
-          "address": "5fd0000",
-          "size": "40000"
-        },
-        "data": {
-          "address": "6000000",
-          "size": "3344"
-        }
-      },
-      "/usr/lib/perf/perfstat": {
-        "text": {
-          "address": "5f90000",
-          "size": "30000"
-        },
-        "data": {
-          "address": "5fb0000",
-          "size": "f1c"
-        }
-      },
-      "/usr/lib/drivers/ptydd": {
-        "text": {
-          "address": "f1000000c0411000",
-          "size": "1c000"
-        },
-        "data": {
-          "address": "f1000000c042a000",
-          "size": "219c"
-        }
-      },
-      "/usr/lib/drivers/netinet": {
-        "text": {
-          "address": "5cd0000",
-          "size": "2c0000"
-        },
-        "data": {
-          "address": "5db0000",
-          "size": "1d6598"
-        }
-      },
-      "/usr/lib/drivers/pkcs11": {
-        "text": {
-          "address": "f1000000c02f2000",
-          "size": "11f000"
-        },
-        "data": {
-          "address": "f1000000c03bf000",
-          "size": "50ed0"
-        }
-      },
-      "/usr/lib/drivers/crypto/clickext": {
-        "text": {
-          "address": "f1000000c02a1000",
-          "size": "51000"
-        },
-        "data": {
-          "address": "f1000000c02e5000",
-          "size": "b148"
-        }
-      },
-      "/usr/lib/drivers/ldterm": {
-        "text": {
-          "address": "f1000000c0286000",
-          "size": "1b000"
-        },
-        "data": {
-          "address": "f1000000c029f000",
-          "size": "16d8"
-        }
-      },
-      "/usr/lib/drivers/vconsdd": {
-        "text": {
-          "address": "f1000000c027d000",
-          "size": "9000"
-        },
-        "data": {
-          "address": "f1000000c0285000",
-          "size": "788"
-        }
-      },
-      "/usr/lib/drivers/storfwork": {
-        "text": {
-          "address": "5c80000",
-          "size": "40000"
-        },
-        "data": {
-          "address": "5cb0000",
-          "size": "4100"
-        }
-      },
-      "/etc/drivers/coreprobe.ext": {
-        "text": {
-          "address": "f1000000c0275000",
-          "size": "5000"
-        },
-        "data": {
-          "address": "f1000000c0279000",
-          "size": "2a8"
-        }
-      },
-      "/usr/lib/drivers/pse/tirdwr": {
-        "text": {
-          "address": "f1000000c0271000",
-          "size": "4000"
-        },
-        "data": {
-          "address": "f1000000c0274000",
-          "size": "4a8"
-        }
-      },
-      "/usr/lib/drivers/pse/timod": {
-        "text": {
-          "address": "f1000000c026d000",
-          "size": "4000"
-        },
-        "data": {
-          "address": "f1000000c0270000",
-          "size": "588"
-        }
-      },
-      "/usr/lib/drivers/pse/xtiso": {
-        "text": {
-          "address": "f1000000c0250000",
-          "size": "1d000"
-        },
-        "data": {
-          "address": "f1000000c026b000",
-          "size": "10f0"
-        }
-      },
-      "/usr/lib/drivers/pse/stdmod": {
-        "text": {
-          "address": "f1000000c024e000",
-          "size": "2000"
-        },
-        "data": {
-          "address": "f1000000c024f000",
-          "size": "9c8"
-        }
-      },
-      "/usr/lib/drivers/pse/sc": {
-        "text": {
-          "address": "f1000000c024a000",
-          "size": "3000"
-        },
-        "data": {
-          "address": "f1000000c024c000",
-          "size": "610"
-        }
-      },
-      "/usr/lib/drivers/pse/spx": {
-        "text": {
-          "address": "f1000000c0246000",
-          "size": "3000"
-        },
-        "data": {
-          "address": "f1000000c0248000",
-          "size": "2b0"
-        }
-      },
-      "/usr/lib/drivers/pse/stddev": {
-        "text": {
-          "address": "f1000000c0242000",
-          "size": "3000"
-        },
-        "data": {
-          "address": "f1000000c0244000",
-          "size": "938"
-        }
-      },
-      "/usr/lib/drivers/ttydbg": {
-        "text": {
-          "address": "f1000000c0240000",
-          "size": "2000"
-        },
-        "data": {
-          "address": "f1000000c0241000",
-          "size": "4d0"
-        }
-      },
-      "/usr/lib/drivers/ttydbg_pinned": {
-        "text": {
-          "address": "f1000000c023c000",
-          "size": "4000"
-        },
-        "data": {
-          "address": "f1000000c023f000",
-          "size": "430"
-        }
-      },
-      "/usr/lib/drivers/pse/pse": {
-        "text": {
-          "address": "f1000000c01e4000",
-          "size": "58000"
-        },
-        "data": {
-          "address": "f1000000c0233000",
-          "size": "7f78"
-        }
-      },
-      "/usr/lib/drivers/iscsidd": {
-        "text": {
-          "address": "5c20000",
-          "size": "50000"
-        },
-        "data": {
-          "address": "5c60000",
-          "size": "7eb0"
-        }
-      },
-      "/usr/lib/drivers/hd_pin_bot": {
-        "text": {
-          "address": "5bb0000",
-          "size": "70000"
-        },
-        "data": {
-          "address": "5bf0000",
-          "size": "20d38"
-        }
-      },
-      "/usr/lib/drivers/hd_pin": {
-        "text": {
-          "address": "5b70000",
-          "size": "40000"
-        },
-        "data": {
-          "address": "5ba0000",
-          "size": "1f80"
-        }
-      },
-      "/usr/lib/drivers/aixdiskpcmke": {
-        "text": {
-          "address": "5b20000",
-          "size": "50000"
-        },
-        "data": {
-          "address": "5b60000",
-          "size": "836c"
-        }
-      },
-      "/etc/drivers/scsidiskpin": {
-        "text": {
-          "address": "5ac0000",
-          "size": "60000"
-        },
-        "data": {
-          "address": "5b10000",
-          "size": "ad50"
-        }
-      },
-      "/usr/lib/drivers/scsidisk": {
-        "text": {
-          "address": "5a90000",
-          "size": "30000"
-        },
-        "data": {
-          "address": "5ab0000",
-          "size": "cc8"
-        }
-      },
-      "/usr/lib/drivers/vscsi_initdd": {
-        "text": {
-          "address": "f1000000c01c0000",
-          "size": "24000"
-        },
-        "data": {
-          "address": "f1000000c01e1000",
-          "size": "2783"
-        }
-      },
-      "/usr/lib/drivers/eth_demux": {
-        "text": {
-          "address": "5a60000",
-          "size": "20000"
-        },
-        "data": {
-          "address": "5a70000",
-          "size": "400"
-        }
-      },
-      "/usr/lib/drivers/vioentdd": {
-        "text": {
-          "address": "5a30000",
-          "size": "30000"
-        },
-        "data": {
-          "address": "5a50000",
-          "size": "fdf8"
-        }
-      },
-      "/usr/lib/drivers/vdev_busdd": {
-        "text": {
-          "address": "5a00000",
-          "size": "30000"
-        },
-        "data": {
-          "address": "5a20000",
-          "size": "2a34"
-        }
-      },
-      "/usr/lib/drivers/planar_pal_chrp": {
-        "text": {
-          "address": "59c0000",
-          "size": "40000"
-        },
-        "data": {
-          "address": "59f0000",
-          "size": "f3a0"
-        }
-      },
-      "/unix": {
-        "text": {
-          "address": "2dc2ac8",
-          "size": "0"
-        },
-        "data": {
-          "address": "0",
-          "size": "32bc9a8"
+  "command": {
+    "ps": "ps -ef"
+  },
+  "counters": {
+    "network": {
+      "interfaces": {
+        "eth0": {
+          "rx": {
+            "bytes": "0",
+            "compressed": 0,
+            "drop": 0,
+            "errors": "0",
+            "frame": 0,
+            "multicast": 0,
+            "overrun": 0,
+            "packets": "0"
+          },
+          "tx": {
+            "bytes": "342",
+            "carrier": 0,
+            "collisions": "0",
+            "compressed": 0,
+            "drop": 0,
+            "errors": "0",
+            "overrun": 0,
+            "packets": "0"
+          }
         }
       }
     }
   },
-  "os": "aix",
-  "os_version": "1",
-  "platform": "aix",
-  "platform_version": "7.1",
-  "platform_family": "aix",
-  "command": {
-    "ps": "ps -ef"
+  "cpu": {
+    "cores": 1,
+    "real": 1,
+    "total": 1
   },
-  "dmi": {
+  "current_user": "fauxhai",
+  "dmi": {},
+  "domain": "local",
+  "etc": {
+    "group": {
+      "fauxhai": {
+        "gid": 0,
+        "members": [
+          "fauxhai"
+        ]
+      }
+    },
+    "passwd": {
+      "fauxhai": {
+        "dir": "/home/fauxhai",
+        "gecos": "Fauxhai",
+        "gid": 0,
+        "shell": "/bin/bash",
+        "uid": 0
+      }
+    }
   },
-  "ohai_time": 1412030480.531248,
+  "filesystem": {
+    "/dev/hd1": {
+      "fs_type": "jfs2",
+      "kb_available": "2295712",
+      "kb_size": "2359296",
+      "kb_used": "63584",
+      "mount": "/home",
+      "mount_options": "rw,log=/dev/hd8",
+      "percent_used": "3%"
+    },
+    "/dev/hd10opt": {
+      "fs_type": "jfs2",
+      "kb_available": "2010656",
+      "kb_size": "3932160",
+      "kb_used": "1921504",
+      "mount": "/opt",
+      "mount_options": "rw,log=/dev/hd8",
+      "percent_used": "49%"
+    },
+    "/dev/hd11admin": {
+      "fs_type": "jfs2",
+      "kb_available": "261384",
+      "kb_size": "262144",
+      "kb_used": "760",
+      "mount": "/admin",
+      "mount_options": "rw,log=/dev/hd8",
+      "percent_used": "1%"
+    },
+    "/dev/hd2": {
+      "fs_type": "jfs2",
+      "kb_available": "2478832",
+      "kb_size": "11796480",
+      "kb_used": "9317648",
+      "mount": "/usr",
+      "mount_options": "rw,log=/dev/hd8",
+      "percent_used": "79%"
+    },
+    "/dev/hd3": {
+      "fs_type": "jfs2",
+      "kb_available": "3121080",
+      "kb_size": "3145728",
+      "kb_used": "24648",
+      "mount": "/tmp",
+      "mount_options": "rw,log=/dev/hd8",
+      "percent_used": "1%"
+    },
+    "/dev/hd4": {
+      "fs_type": "jfs2",
+      "kb_available": "363384",
+      "kb_size": "786432",
+      "kb_used": "423048",
+      "mount": "/",
+      "mount_options": "rw,log=/dev/hd8",
+      "percent_used": "54%"
+    },
+    "/dev/hd9var": {
+      "fs_type": "jfs2",
+      "kb_available": "2320000",
+      "kb_size": "3145728",
+      "kb_used": "825728",
+      "mount": "/var",
+      "mount_options": "rw,log=/dev/hd8",
+      "percent_used": "27%"
+    },
+    "/dev/livedump": {
+      "fs_type": "jfs2",
+      "kb_available": "523552",
+      "kb_size": "524288",
+      "kb_used": "736",
+      "mount": "/var/adm/ras/livedump",
+      "mount_options": "rw,log=/dev/hd8",
+      "percent_used": "1%"
+    },
+    "/proc": {
+      "fs_type": "procfs",
+      "mount": "/proc",
+      "mount_options": "rw"
+    },
+    "192.168.1.11:/stage/middleware": {
+      "fs_type": "nfs3",
+      "kb_available": "88758664",
+      "kb_size": "314572800",
+      "kb_used": "225814136",
+      "mount": "/stage/middleware",
+      "mount_options": "ro,bg,hard,intr,sec=sys",
+      "percent_used": "72%"
+    }
+  },
+  "fqdn": "fauxhai.local",
+  "hostname": "Fauxhai",
+  "ipaddress": "10.0.0.2",
+  "kernel": {
+    "machine": "powerpc",
+    "modules": {
+      "/etc/drivers/coreprobe.ext": {
+        "data": {
+          "address": "f1000000c0279000",
+          "size": "2a8"
+        },
+        "text": {
+          "address": "f1000000c0275000",
+          "size": "5000"
+        }
+      },
+      "/etc/drivers/scsidiskpin": {
+        "data": {
+          "address": "5b10000",
+          "size": "ad50"
+        },
+        "text": {
+          "address": "5ac0000",
+          "size": "60000"
+        }
+      },
+      "/unix": {
+        "data": {
+          "address": "0",
+          "size": "32bc9a8"
+        },
+        "text": {
+          "address": "2dc2ac8",
+          "size": "0"
+        }
+      },
+      "/usr/lib/drivers/aio.ext": {
+        "data": {
+          "address": "6050000",
+          "size": "1190"
+        },
+        "text": {
+          "address": "6040000",
+          "size": "20000"
+        }
+      },
+      "/usr/lib/drivers/aiopin": {
+        "data": {
+          "address": "6070000",
+          "size": "8910"
+        },
+        "text": {
+          "address": "6060000",
+          "size": "20000"
+        }
+      },
+      "/usr/lib/drivers/aixdiskpcmke": {
+        "data": {
+          "address": "5b60000",
+          "size": "836c"
+        },
+        "text": {
+          "address": "5b20000",
+          "size": "50000"
+        }
+      },
+      "/usr/lib/drivers/cluster": {
+        "data": {
+          "address": "f1000000c04b3000",
+          "size": "1fc2c"
+        },
+        "text": {
+          "address": "f1000000c0459000",
+          "size": "7a000"
+        }
+      },
+      "/usr/lib/drivers/crypto/clickext": {
+        "data": {
+          "address": "f1000000c02e5000",
+          "size": "b148"
+        },
+        "text": {
+          "address": "f1000000c02a1000",
+          "size": "51000"
+        }
+      },
+      "/usr/lib/drivers/eth_demux": {
+        "data": {
+          "address": "5a70000",
+          "size": "400"
+        },
+        "text": {
+          "address": "5a60000",
+          "size": "20000"
+        }
+      },
+      "/usr/lib/drivers/hd_pin": {
+        "data": {
+          "address": "5ba0000",
+          "size": "1f80"
+        },
+        "text": {
+          "address": "5b70000",
+          "size": "40000"
+        }
+      },
+      "/usr/lib/drivers/hd_pin_bot": {
+        "data": {
+          "address": "5bf0000",
+          "size": "20d38"
+        },
+        "text": {
+          "address": "5bb0000",
+          "size": "70000"
+        }
+      },
+      "/usr/lib/drivers/if_en": {
+        "data": {
+          "address": "6380000",
+          "size": "bb8"
+        },
+        "text": {
+          "address": "6370000",
+          "size": "20000"
+        }
+      },
+      "/usr/lib/drivers/iscsidd": {
+        "data": {
+          "address": "5c60000",
+          "size": "7eb0"
+        },
+        "text": {
+          "address": "5c20000",
+          "size": "50000"
+        }
+      },
+      "/usr/lib/drivers/krpc.ext": {
+        "data": {
+          "address": "6120000",
+          "size": "fb38"
+        },
+        "text": {
+          "address": "60d0000",
+          "size": "60000"
+        }
+      },
+      "/usr/lib/drivers/ldterm": {
+        "data": {
+          "address": "f1000000c029f000",
+          "size": "16d8"
+        },
+        "text": {
+          "address": "f1000000c0286000",
+          "size": "1b000"
+        }
+      },
+      "/usr/lib/drivers/netinet": {
+        "data": {
+          "address": "5db0000",
+          "size": "1d6598"
+        },
+        "text": {
+          "address": "5cd0000",
+          "size": "2c0000"
+        }
+      },
+      "/usr/lib/drivers/nfs.ext": {
+        "data": {
+          "address": "62e0000",
+          "size": "66858"
+        },
+        "text": {
+          "address": "6130000",
+          "size": "220000"
+        }
+      },
+      "/usr/lib/drivers/nfs_kdes.ext": {
+        "data": {
+          "address": "f1000000c0438000",
+          "size": "c8"
+        },
+        "text": {
+          "address": "f1000000c0437000",
+          "size": "2000"
+        }
+      },
+      "/usr/lib/drivers/perfvmmstat": {
+        "data": {
+          "address": "6030000",
+          "size": "9d0"
+        },
+        "text": {
+          "address": "6020000",
+          "size": "20000"
+        }
+      },
+      "/usr/lib/drivers/pkcs11": {
+        "data": {
+          "address": "f1000000c03bf000",
+          "size": "50ed0"
+        },
+        "text": {
+          "address": "f1000000c02f2000",
+          "size": "11f000"
+        }
+      },
+      "/usr/lib/drivers/planar_pal_chrp": {
+        "data": {
+          "address": "59f0000",
+          "size": "f3a0"
+        },
+        "text": {
+          "address": "59c0000",
+          "size": "40000"
+        }
+      },
+      "/usr/lib/drivers/posix_aio.ext": {
+        "data": {
+          "address": "60a0000",
+          "size": "e60"
+        },
+        "text": {
+          "address": "6090000",
+          "size": "20000"
+        }
+      },
+      "/usr/lib/drivers/posix_aiopin": {
+        "data": {
+          "address": "60c0000",
+          "size": "8910"
+        },
+        "text": {
+          "address": "60b0000",
+          "size": "20000"
+        }
+      },
+      "/usr/lib/drivers/pse/pse": {
+        "data": {
+          "address": "f1000000c0233000",
+          "size": "7f78"
+        },
+        "text": {
+          "address": "f1000000c01e4000",
+          "size": "58000"
+        }
+      },
+      "/usr/lib/drivers/pse/sc": {
+        "data": {
+          "address": "f1000000c024c000",
+          "size": "610"
+        },
+        "text": {
+          "address": "f1000000c024a000",
+          "size": "3000"
+        }
+      },
+      "/usr/lib/drivers/pse/spx": {
+        "data": {
+          "address": "f1000000c0248000",
+          "size": "2b0"
+        },
+        "text": {
+          "address": "f1000000c0246000",
+          "size": "3000"
+        }
+      },
+      "/usr/lib/drivers/pse/stddev": {
+        "data": {
+          "address": "f1000000c0244000",
+          "size": "938"
+        },
+        "text": {
+          "address": "f1000000c0242000",
+          "size": "3000"
+        }
+      },
+      "/usr/lib/drivers/pse/stdmod": {
+        "data": {
+          "address": "f1000000c024f000",
+          "size": "9c8"
+        },
+        "text": {
+          "address": "f1000000c024e000",
+          "size": "2000"
+        }
+      },
+      "/usr/lib/drivers/pse/timod": {
+        "data": {
+          "address": "f1000000c0270000",
+          "size": "588"
+        },
+        "text": {
+          "address": "f1000000c026d000",
+          "size": "4000"
+        }
+      },
+      "/usr/lib/drivers/pse/tirdwr": {
+        "data": {
+          "address": "f1000000c0274000",
+          "size": "4a8"
+        },
+        "text": {
+          "address": "f1000000c0271000",
+          "size": "4000"
+        }
+      },
+      "/usr/lib/drivers/pse/xtiso": {
+        "data": {
+          "address": "f1000000c026b000",
+          "size": "10f0"
+        },
+        "text": {
+          "address": "f1000000c0250000",
+          "size": "1d000"
+        }
+      },
+      "/usr/lib/drivers/ptydd": {
+        "data": {
+          "address": "f1000000c042a000",
+          "size": "219c"
+        },
+        "text": {
+          "address": "f1000000c0411000",
+          "size": "1c000"
+        }
+      },
+      "/usr/lib/drivers/random": {
+        "data": {
+          "address": "f1000000c0441000",
+          "size": "17138"
+        },
+        "text": {
+          "address": "f1000000c0439000",
+          "size": "20000"
+        }
+      },
+      "/usr/lib/drivers/scsidisk": {
+        "data": {
+          "address": "5ab0000",
+          "size": "cc8"
+        },
+        "text": {
+          "address": "5a90000",
+          "size": "30000"
+        }
+      },
+      "/usr/lib/drivers/smt_load": {
+        "data": {
+          "address": "f1000000c0432000",
+          "size": "680"
+        },
+        "text": {
+          "address": "f1000000c042d000",
+          "size": "6000"
+        }
+      },
+      "/usr/lib/drivers/smt_loadpin": {
+        "data": {
+          "address": "f1000000c0436000",
+          "size": "70"
+        },
+        "text": {
+          "address": "f1000000c0435000",
+          "size": "2000"
+        }
+      },
+      "/usr/lib/drivers/storfwork": {
+        "data": {
+          "address": "5cb0000",
+          "size": "4100"
+        },
+        "text": {
+          "address": "5c80000",
+          "size": "40000"
+        }
+      },
+      "/usr/lib/drivers/ttydbg": {
+        "data": {
+          "address": "f1000000c0241000",
+          "size": "4d0"
+        },
+        "text": {
+          "address": "f1000000c0240000",
+          "size": "2000"
+        }
+      },
+      "/usr/lib/drivers/ttydbg_pinned": {
+        "data": {
+          "address": "f1000000c023f000",
+          "size": "430"
+        },
+        "text": {
+          "address": "f1000000c023c000",
+          "size": "4000"
+        }
+      },
+      "/usr/lib/drivers/vconsdd": {
+        "data": {
+          "address": "f1000000c0285000",
+          "size": "788"
+        },
+        "text": {
+          "address": "f1000000c027d000",
+          "size": "9000"
+        }
+      },
+      "/usr/lib/drivers/vdev_busdd": {
+        "data": {
+          "address": "5a20000",
+          "size": "2a34"
+        },
+        "text": {
+          "address": "5a00000",
+          "size": "30000"
+        }
+      },
+      "/usr/lib/drivers/vioentdd": {
+        "data": {
+          "address": "5a50000",
+          "size": "fdf8"
+        },
+        "text": {
+          "address": "5a30000",
+          "size": "30000"
+        }
+      },
+      "/usr/lib/drivers/vscsi_initdd": {
+        "data": {
+          "address": "f1000000c01e1000",
+          "size": "2783"
+        },
+        "text": {
+          "address": "f1000000c01c0000",
+          "size": "24000"
+        }
+      },
+      "/usr/lib/perf/perfstat": {
+        "data": {
+          "address": "5fb0000",
+          "size": "f1c"
+        },
+        "text": {
+          "address": "5f90000",
+          "size": "30000"
+        }
+      },
+      "/usr/pmapi/etc/pmsvcs": {
+        "data": {
+          "address": "6000000",
+          "size": "3344"
+        },
+        "text": {
+          "address": "5fd0000",
+          "size": "40000"
+        }
+      }
+    },
+    "name": "aix",
+    "release": "1",
+    "version": "7"
+  },
+  "keys": {
+    "ssh": {
+      "host_dsa_public": "ssh-dss AAAAB3NzaC1kc3MAAACBAJFo9BLAw4WKEs5hgipk5m423FzBsDXCZSMcC9ca/om/1VYzMqImixGe3uICDzNFUWxFoLJTQAOccyzo6MXZiQqwWJDLFi5qOSr6w2XcMyE+zd4wOyMoDiVM5fizmG8K3FzrqvGjwBcHcBdOQnavSijoj38DN25J9zhrid5BY4WlAAAAFQDxXrCyG52XCzn3FV4ej38wJBkomQAAAIBovGPJ4mP2P6BK8lHl0PPbktwQbWlpJ13oz6REJFDVcUi7vV26bX/BjQX+ohzZQzljdz1SpUbPc/8nuA4darYkVh91eBi307EN8IdxRHj2eBgp/ZG4yshIebG3WHrwJD/xUjjZ1MRfyDT1ermVi4LvjjPgWDxLZnPpMaR6S1nzgQAAAIEAj0Vd6DCWslvlsZ8+N53HWsqPi3gnx35JoLPz9Z2epkKIKqmEHav+93G3hdfztVa4I4t3phoPniQchYryF5+RNg8hqxKzjNtrIqUYCeuf2NJrksNsH7OZygPHZpqt4kTuwAGZxjxEGfAI0y8DhkU2ntp2LnzRnWH106BQBCmcXwo= fauxhai.local",
+      "host_rsa_public": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCtLCeqtqr/HbnORckw1ukdLhpfGoOPFi5/esKEokzTqq1gsgQ2V8emmyjfq1i6XXfRtSBxkdlHv/GWdP5wBTuE2G85MzBkVSQPvmwQN8lX/JMPEEtKXkeOo0o92/PiSmvY4eRsdF0mw40Uvg7jtE3f3fxj497kzh5fKtkrHnF4x9gXCbVdr3FqXJfggR5IJwAxToerbK7x/uRS+7YuZI9Pip3tt14nv9ezwXcuGb/tvjWOZINiFl8izVIFKi7sxfTX09p4NgamxRS7TD2Yd0jT8nEoF9UZTsgXcJ1kDSx7N7NxFfNfP6rCdOGRRz4gUhXtsUjG/XkxPeCwZ7A9VnOD fauxhai.local"
+    }
+  },
   "languages": {
     "ruby": {
       "bin_dir": "/usr/local/bin",
@@ -564,80 +630,13 @@
       "ruby_bin": "/usr/local/bin/ruby"
     }
   },
-  "chef_packages": {
-    "chef": {
-      "version": "12.0.0.alpha.0",
-      "chef_root": "/opt/chef/embedded/lib/ruby/gems/2.1.0/gems/chef-12.0.0.alpha.0/lib"
-    },
-    "ohai": {
-      "version": "7.2.0",
-      "ohai_root": "/opt/chef/embedded/lib/ruby/gems/2.1.0/gems/ohai-7.2.0/lib/ohai"
-    }
-  },
-  "counters": {
-    "network": {
-      "interfaces": {
-        "eth0": {
-          "rx": {
-            "bytes": "0",
-            "packets": "0",
-            "errors": "0",
-            "drop": 0,
-            "overrun": 0,
-            "frame": 0,
-            "compressed": 0,
-            "multicast": 0
-          },
-          "tx": {
-            "bytes": "342",
-            "packets": "0",
-            "errors": "0",
-            "drop": 0,
-            "overrun": 0,
-            "collisions": "0",
-            "carrier": 0,
-            "compressed": 0
-          }
-        }
-      }
-    }
-  },
-  "current_user": "fauxhai",
-  "domain": "local",
-  "etc": {
-    "passwd": {
-      "fauxhai": {
-        "dir": "/home/fauxhai",
-        "gid": 0,
-        "uid": 0,
-        "shell": "/bin/bash",
-        "gecos": "Fauxhai"
-      }
-    },
-    "group": {
-      "fauxhai": {
-        "gid": 0,
-        "members": [
-          "fauxhai"
-        ]
-      }
-    }
-  },
-  "hostname": "Fauxhai",
-  "fqdn": "fauxhai.local",
-  "ipaddress": "10.0.0.2",
-  "keys": {
-    "ssh": {
-      "host_dsa_public": "ssh-dss AAAAB3NzaC1kc3MAAACBAJFo9BLAw4WKEs5hgipk5m423FzBsDXCZSMcC9ca/om/1VYzMqImixGe3uICDzNFUWxFoLJTQAOccyzo6MXZiQqwWJDLFi5qOSr6w2XcMyE+zd4wOyMoDiVM5fizmG8K3FzrqvGjwBcHcBdOQnavSijoj38DN25J9zhrid5BY4WlAAAAFQDxXrCyG52XCzn3FV4ej38wJBkomQAAAIBovGPJ4mP2P6BK8lHl0PPbktwQbWlpJ13oz6REJFDVcUi7vV26bX/BjQX+ohzZQzljdz1SpUbPc/8nuA4darYkVh91eBi307EN8IdxRHj2eBgp/ZG4yshIebG3WHrwJD/xUjjZ1MRfyDT1ermVi4LvjjPgWDxLZnPpMaR6S1nzgQAAAIEAj0Vd6DCWslvlsZ8+N53HWsqPi3gnx35JoLPz9Z2epkKIKqmEHav+93G3hdfztVa4I4t3phoPniQchYryF5+RNg8hqxKzjNtrIqUYCeuf2NJrksNsH7OZygPHZpqt4kTuwAGZxjxEGfAI0y8DhkU2ntp2LnzRnWH106BQBCmcXwo= fauxhai.local",
-      "host_rsa_public": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCtLCeqtqr/HbnORckw1ukdLhpfGoOPFi5/esKEokzTqq1gsgQ2V8emmyjfq1i6XXfRtSBxkdlHv/GWdP5wBTuE2G85MzBkVSQPvmwQN8lX/JMPEEtKXkeOo0o92/PiSmvY4eRsdF0mw40Uvg7jtE3f3fxj497kzh5fKtkrHnF4x9gXCbVdr3FqXJfggR5IJwAxToerbK7x/uRS+7YuZI9Pip3tt14nv9ezwXcuGb/tvjWOZINiFl8izVIFKi7sxfTX09p4NgamxRS7TD2Yd0jT8nEoF9UZTsgXcJ1kDSx7N7NxFfNfP6rCdOGRRz4gUhXtsUjG/XkxPeCwZ7A9VnOD fauxhai.local"
-    }
-  },
   "macaddress": "11:11:11:11:11:11",
+  "memory": {
+    "total": "1048576kB"
+  },
   "network": {
     "default_gateway": "10.0.0.1",
     "default_interface": "eth0",
-    "settings": {
-    },
     "interfaces": {
       "eth0": {
         "addresses": {
@@ -665,28 +664,26 @@
           {
             "destination": "10.0.0.0/24",
             "family": "inet",
-            "scope": "link",
             "proto": "kernel",
+            "scope": "link",
             "src": "10.0.0.2"
           }
         ],
         "state": "up",
         "type": "eth"
       }
-    }
+    },
+    "settings": {}
   },
+  "ohai_time": 1412030480.531248,
+  "os": "aix",
+  "os_version": "1",
+  "platform": "aix",
+  "platform_family": "aix",
+  "platform_version": "7.1",
   "uptime": "30 days 15 hours 07 minutes 30 seconds",
   "uptime_seconds": 2646450,
-  "cpu": {
-    "real": 1,
-    "total": 1,
-    "cores": 1
-  },
-  "memory": {
-    "total": "1048576kB"
-  },
   "virtualization": {
-    "systems": {
-    }
+    "systems": {}
   }
 }

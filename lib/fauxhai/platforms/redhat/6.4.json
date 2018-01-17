@@ -1,70 +1,109 @@
 {
+  "chef_packages": {
+    "chef": {
+      "chef_root": "/opt/chef/embedded/lib/ruby/gems/2.1.0/gems/chef-11.8.2/lib",
+      "version": "11.8.2"
+    },
+    "ohai": {
+      "ohai_root": "/opt/chef/embedded/lib/ruby/gems/2.1.0/gems/ohai-7.0.0.rc.0/lib/ohai",
+      "version": "7.0.0.rc.0"
+    }
+  },
+  "command": {
+    "ps": "ps -ef"
+  },
+  "counters": {
+    "network": {
+      "interfaces": {
+        "eth0": {
+          "rx": {
+            "bytes": "0",
+            "compressed": 0,
+            "drop": 0,
+            "errors": "0",
+            "frame": 0,
+            "multicast": 0,
+            "overrun": 0,
+            "packets": "0"
+          },
+          "tx": {
+            "bytes": "342",
+            "carrier": 0,
+            "collisions": "0",
+            "compressed": 0,
+            "drop": 0,
+            "errors": "0",
+            "overrun": 0,
+            "packets": "0"
+          }
+        }
+      }
+    }
+  },
+  "cpu": {
+    "cores": 1,
+    "real": 1,
+    "total": 1
+  },
+  "current_user": "fauxhai",
   "deprecated": true,
+  "dmi": {
+    "dmidecode_version": "2.11"
+  },
+  "domain": "local",
+  "etc": {
+    "group": {
+      "fauxhai": {
+        "gid": 0,
+        "members": [
+          "fauxhai"
+        ]
+      }
+    },
+    "passwd": {
+      "fauxhai": {
+        "dir": "/home/fauxhai",
+        "gecos": "Fauxhai",
+        "gid": 0,
+        "shell": "/bin/bash",
+        "uid": 0
+      }
+    }
+  },
   "filesystem": {
     "/dev/xvda1": {
+      "fs_type": "ext3",
+      "kb_available": "17302864",
       "kb_size": "20641404",
       "kb_used": "2290016",
-      "kb_available": "17302864",
-      "percent_used": "12%",
       "mount": "/",
-      "fs_type": "ext3",
       "mount_options": [
         "rw",
         "noatime"
       ],
+      "percent_used": "12%",
       "uuid": "748aa742-064e-41f4-b1e0-c8bab4c930f4"
     },
-    "tmpfs": {
-      "kb_size": "508236",
-      "kb_used": "0",
-      "kb_available": "508236",
-      "percent_used": "0%",
-      "mount": "/dev/shm",
-      "fs_type": "tmpfs",
+    "/proc/bus/usb": {
+      "fs_type": "usbfs",
+      "mount": "/proc/bus/usb",
       "mount_options": [
-        "rw"
-      ]
-    },
-    "proc": {
-      "mount": "/proc",
-      "fs_type": "proc",
-      "mount_options": [
-        "rw"
-      ]
-    },
-    "sysfs": {
-      "mount": "/sys",
-      "fs_type": "sysfs",
-      "mount_options": [
-        "rw"
+        "rw",
+        "relatime"
       ]
     },
     "devpts": {
-      "mount": "/dev/pts",
       "fs_type": "devpts",
+      "mount": "/dev/pts",
       "mount_options": [
         "rw",
         "gid=5",
         "mode=620"
       ]
     },
-    "none": {
-      "mount": "/proc/xen",
-      "fs_type": "xenfs",
-      "mount_options": [
-        "rw"
-      ]
-    },
-    "rootfs": {
-      "mount": "/",
-      "fs_type": "rootfs",
-      "mount_options": [
-        "rw"
-      ]
-    },
     "devtmpfs": {
-      "mount": "/dev",
       "fs_type": "devtmpfs",
+      "mount": "/dev",
       "mount_options": [
         "rw",
         "relatime",
@@ -73,212 +112,163 @@
         "mode=755"
       ]
     },
-    "/proc/bus/usb": {
-      "mount": "/proc/bus/usb",
-      "fs_type": "usbfs",
+    "none": {
+      "fs_type": "xenfs",
+      "mount": "/proc/xen",
       "mount_options": [
-        "rw",
-        "relatime"
+        "rw"
       ]
+    },
+    "proc": {
+      "fs_type": "proc",
+      "mount": "/proc",
+      "mount_options": [
+        "rw"
+      ]
+    },
+    "rootfs": {
+      "fs_type": "rootfs",
+      "mount": "/",
+      "mount_options": [
+        "rw"
+      ]
+    },
+    "sysfs": {
+      "fs_type": "sysfs",
+      "mount": "/sys",
+      "mount_options": [
+        "rw"
+      ]
+    },
+    "tmpfs": {
+      "fs_type": "tmpfs",
+      "kb_available": "508236",
+      "kb_size": "508236",
+      "kb_used": "0",
+      "mount": "/dev/shm",
+      "mount_options": [
+        "rw"
+      ],
+      "percent_used": "0%"
     }
   },
-  "lsb": {
-  },
+  "fqdn": "fauxhai.local",
+  "hostname": "Fauxhai",
+  "ipaddress": "10.0.0.2",
   "kernel": {
-    "name": "Linux",
-    "release": "2.6.32-358.23.2.el6.x86_64",
-    "version": "#1 SMP Sat Sep 14 05:32:37 EDT 2013",
     "machine": "x86_64",
-    "os": "GNU/Linux",
     "modules": {
-      "xenfs": {
-        "size": "5705",
-        "refcount": "1"
-      },
-      "ipv6": {
-        "size": "321614",
-        "refcount": "12"
-      },
-      "ipt_REJECT": {
-        "size": "2351",
-        "refcount": "2"
-      },
-      "nf_conntrack_ipv4": {
-        "size": "9506",
-        "refcount": "2"
-      },
-      "nf_defrag_ipv4": {
-        "size": "1483",
-        "refcount": "1"
-      },
-      "xt_state": {
-        "size": "1492",
-        "refcount": "2"
-      },
-      "nf_conntrack": {
-        "size": "79645",
-        "refcount": "2"
-      },
-      "iptable_filter": {
-        "size": "2793",
-        "refcount": "1"
-      },
-      "ip_tables": {
-        "size": "17831",
-        "refcount": "1"
-      },
-      "xen_netfront": {
-        "size": "19033",
-        "refcount": "0"
-      },
-      "ext3": {
-        "size": "232456",
-        "refcount": "1"
-      },
-      "jbd": {
-        "size": "79103",
-        "refcount": "1"
-      },
-      "mbcache": {
-        "size": "8193",
-        "refcount": "1"
-      },
-      "xen_blkfront": {
-        "size": "15495",
-        "refcount": "2"
+      "dm_log": {
+        "refcount": "2",
+        "size": "9930"
       },
       "dm_mirror": {
-        "size": "14133",
-        "refcount": "0"
-      },
-      "dm_region_hash": {
-        "size": "12085",
-        "refcount": "1"
-      },
-      "dm_log": {
-        "size": "9930",
-        "refcount": "2"
+        "refcount": "0",
+        "size": "14133"
       },
       "dm_mod": {
-        "size": "82839",
-        "refcount": "2"
-      }
-    }
-  },
-  "os": "linux",
-  "os_version": "2.6.32-358.23.2.el6.x86_64",
-  "platform": "redhat",
-  "platform_version": "6.4",
-  "platform_family": "rhel",
-  "cpu": {
-    "real": 1,
-    "total": 1,
-    "cores": 1
-  },
-  "memory": {
-    "total": "524288kB"
-  },
-  "ohai_time": 1390495866.7016296,
-  "dmi": {
-    "dmidecode_version": "2.11"
-  },
-  "command": {
-    "ps": "ps -ef"
-  },
-  "root_group": "root",
-  "languages": {
-    "ruby": {
-      "platform": "x86_64-linux",
-      "version": "2.1.0",
-      "release_date": "2013-12-25",
-      "target": "x86_64-unknown-linux-gnu",
-      "target_cpu": "x86_64",
-      "target_vendor": "unknown",
-      "target_os": "linux",
-      "host": "x86_64-unknown-linux-gnu",
-      "host_cpu": "x86_64",
-      "host_os": "linux-gnu",
-      "host_vendor": "unknown",
-      "bin_dir": "/usr/local/bin",
-      "ruby_bin": "/usr/local/bin/ruby",
-      "gems_dir": "/usr/local/gems",
-      "gem_bin": "/usr/local/bin/gem"
-    }
-  },
-  "chef_packages": {
-    "chef": {
-      "version": "11.8.2",
-      "chef_root": "/opt/chef/embedded/lib/ruby/gems/2.1.0/gems/chef-11.8.2/lib"
-    },
-    "ohai": {
-      "version": "7.0.0.rc.0",
-      "ohai_root": "/opt/chef/embedded/lib/ruby/gems/2.1.0/gems/ohai-7.0.0.rc.0/lib/ohai"
-    }
-  },
-  "counters": {
-    "network": {
-      "interfaces": {
-        "eth0": {
-          "rx": {
-            "bytes": "0",
-            "packets": "0",
-            "errors": "0",
-            "drop": 0,
-            "overrun": 0,
-            "frame": 0,
-            "compressed": 0,
-            "multicast": 0
-          },
-          "tx": {
-            "bytes": "342",
-            "packets": "0",
-            "errors": "0",
-            "drop": 0,
-            "overrun": 0,
-            "collisions": "0",
-            "carrier": 0,
-            "compressed": 0
-          }
-        }
-      }
-    }
-  },
-  "current_user": "fauxhai",
-  "domain": "local",
-  "etc": {
-    "passwd": {
-      "fauxhai": {
-        "dir": "/home/fauxhai",
-        "gid": 0,
-        "uid": 0,
-        "shell": "/bin/bash",
-        "gecos": "Fauxhai"
+        "refcount": "2",
+        "size": "82839"
+      },
+      "dm_region_hash": {
+        "refcount": "1",
+        "size": "12085"
+      },
+      "ext3": {
+        "refcount": "1",
+        "size": "232456"
+      },
+      "ip_tables": {
+        "refcount": "1",
+        "size": "17831"
+      },
+      "ipt_REJECT": {
+        "refcount": "2",
+        "size": "2351"
+      },
+      "iptable_filter": {
+        "refcount": "1",
+        "size": "2793"
+      },
+      "ipv6": {
+        "refcount": "12",
+        "size": "321614"
+      },
+      "jbd": {
+        "refcount": "1",
+        "size": "79103"
+      },
+      "mbcache": {
+        "refcount": "1",
+        "size": "8193"
+      },
+      "nf_conntrack": {
+        "refcount": "2",
+        "size": "79645"
+      },
+      "nf_conntrack_ipv4": {
+        "refcount": "2",
+        "size": "9506"
+      },
+      "nf_defrag_ipv4": {
+        "refcount": "1",
+        "size": "1483"
+      },
+      "xen_blkfront": {
+        "refcount": "2",
+        "size": "15495"
+      },
+      "xen_netfront": {
+        "refcount": "0",
+        "size": "19033"
+      },
+      "xenfs": {
+        "refcount": "1",
+        "size": "5705"
+      },
+      "xt_state": {
+        "refcount": "2",
+        "size": "1492"
       }
     },
-    "group": {
-      "fauxhai": {
-        "gid": 0,
-        "members": [
-          "fauxhai"
-        ]
-      }
-    }
+    "name": "Linux",
+    "os": "GNU/Linux",
+    "release": "2.6.32-358.23.2.el6.x86_64",
+    "version": "#1 SMP Sat Sep 14 05:32:37 EDT 2013"
   },
-  "hostname": "Fauxhai",
-  "fqdn": "fauxhai.local",
-  "ipaddress": "10.0.0.2",
   "keys": {
     "ssh": {
       "host_dsa_public": "ssh-dss AAAAB3NzaC1kc3MAAACBAJFo9BLAw4WKEs5hgipk5m423FzBsDXCZSMcC9ca/om/1VYzMqImixGe3uICDzNFUWxFoLJTQAOccyzo6MXZiQqwWJDLFi5qOSr6w2XcMyE+zd4wOyMoDiVM5fizmG8K3FzrqvGjwBcHcBdOQnavSijoj38DN25J9zhrid5BY4WlAAAAFQDxXrCyG52XCzn3FV4ej38wJBkomQAAAIBovGPJ4mP2P6BK8lHl0PPbktwQbWlpJ13oz6REJFDVcUi7vV26bX/BjQX+ohzZQzljdz1SpUbPc/8nuA4darYkVh91eBi307EN8IdxRHj2eBgp/ZG4yshIebG3WHrwJD/xUjjZ1MRfyDT1ermVi4LvjjPgWDxLZnPpMaR6S1nzgQAAAIEAj0Vd6DCWslvlsZ8+N53HWsqPi3gnx35JoLPz9Z2epkKIKqmEHav+93G3hdfztVa4I4t3phoPniQchYryF5+RNg8hqxKzjNtrIqUYCeuf2NJrksNsH7OZygPHZpqt4kTuwAGZxjxEGfAI0y8DhkU2ntp2LnzRnWH106BQBCmcXwo= fauxhai.local",
       "host_rsa_public": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCtLCeqtqr/HbnORckw1ukdLhpfGoOPFi5/esKEokzTqq1gsgQ2V8emmyjfq1i6XXfRtSBxkdlHv/GWdP5wBTuE2G85MzBkVSQPvmwQN8lX/JMPEEtKXkeOo0o92/PiSmvY4eRsdF0mw40Uvg7jtE3f3fxj497kzh5fKtkrHnF4x9gXCbVdr3FqXJfggR5IJwAxToerbK7x/uRS+7YuZI9Pip3tt14nv9ezwXcuGb/tvjWOZINiFl8izVIFKi7sxfTX09p4NgamxRS7TD2Yd0jT8nEoF9UZTsgXcJ1kDSx7N7NxFfNfP6rCdOGRRz4gUhXtsUjG/XkxPeCwZ7A9VnOD fauxhai.local"
     }
   },
+  "languages": {
+    "ruby": {
+      "bin_dir": "/usr/local/bin",
+      "gem_bin": "/usr/local/bin/gem",
+      "gems_dir": "/usr/local/gems",
+      "host": "x86_64-unknown-linux-gnu",
+      "host_cpu": "x86_64",
+      "host_os": "linux-gnu",
+      "host_vendor": "unknown",
+      "platform": "x86_64-linux",
+      "release_date": "2013-12-25",
+      "ruby_bin": "/usr/local/bin/ruby",
+      "target": "x86_64-unknown-linux-gnu",
+      "target_cpu": "x86_64",
+      "target_os": "linux",
+      "target_vendor": "unknown",
+      "version": "2.1.0"
+    }
+  },
+  "lsb": {},
   "macaddress": "11:11:11:11:11:11",
+  "memory": {
+    "total": "524288kB"
+  },
   "network": {
     "default_gateway": "10.0.0.1",
     "default_interface": "eth0",
-    "settings": {
-    },
     "interfaces": {
       "eth0": {
         "addresses": {
@@ -306,16 +296,24 @@
           {
             "destination": "10.0.0.0/24",
             "family": "inet",
-            "scope": "link",
             "proto": "kernel",
+            "scope": "link",
             "src": "10.0.0.2"
           }
         ],
         "state": "up",
         "type": "eth"
       }
-    }
+    },
+    "settings": {}
   },
+  "ohai_time": 1390495866.7016296,
+  "os": "linux",
+  "os_version": "2.6.32-358.23.2.el6.x86_64",
+  "platform": "redhat",
+  "platform_family": "rhel",
+  "platform_version": "6.4",
+  "root_group": "root",
   "uptime": "30 days 15 hours 07 minutes 30 seconds",
   "uptime_seconds": 2646450
 }
