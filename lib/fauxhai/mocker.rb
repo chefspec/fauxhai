@@ -68,7 +68,7 @@ module Fauxhai
             begin
               File.open(filepath, 'w') { |f| f.write(response_body) }
             rescue Errno::EACCES # a pretty common problem in CI systems
-              raise Fauxhai::Exception::InvalidPlatform.new("Fetched '#{platform}/#{version}' from GitHub, but could not write to the local path: #{filepath}")
+              puts "Fetched '#{platform}/#{version}' from GitHub, but could not write to the local path: #{filepath}. Fix the local file permissions to avoid downloading this file every run."
             end
             return parse_and_validate(response_body)
           else
