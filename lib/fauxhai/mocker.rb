@@ -65,7 +65,11 @@ module Fauxhai
             path = Pathname.new(filepath)
             FileUtils.mkdir_p(path.dirname)
 
-            File.open(filepath, 'w') { |f| f.write(response_body) }
+            begin
+              File.open(filepath, 'w') { |f| f.write(response_body) }
+            rescue Errno::EACCES # a pretty common problem in CI systems
+              raise Fauxhai::Exception::InvalidPlatform.new("Fetched '#{platform}/#{version}' from Github, but could could not write the to the local path: #{filepath}")
+            end
             return parse_and_validate(response_body)
           else
             raise Fauxhai::Exception::InvalidPlatform.new("Could not find platform '#{platform}/#{version}' on the local disk and an Github fetching returned http error code #{response.status.first.to_i}! #{PLATFORM_LIST_MESSAGE}")
