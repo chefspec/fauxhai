@@ -1,8 +1,34 @@
 # Fauxhai Changelog
 
+## v6.0.0 (2018-03-07)
+
+### Removed Deprecated Platforms
+
+All previously deprecated platforms have been removed. If you previously saw deprecation messages when running fauxhai/chefspec you will now see a hard error message linking to the list of supported platforms. This allows us to keep the Fauxhai gem size reasonable and also allows us to remove files that were dumped with very old versions of Chef (10/11).
+
+### New Deprecations
+
+Multiple platform versions are now marked as deprecatedn and will begin throwing warning messages during ChefSpec runs. This continues the goal of providing only up to date fauxhai dumps using recent builds of Chef. Since regenerating fauxhai data against new releases of Chef involves manually installing each version of distros we're limiting the number of point releases we'll support. This mostly impacts distros such as Debian/RHEL that release many point releases for the same major version.
+
+#### Newly Deprecated Platforms:
+
+- CentOS 5.10 / 6.7 / 7.2.1511
+- Debian 7.10 / 8.7 / 8.8 / 9.0 / 9.1
+- Fedora 24 / 25
+- FreeBSD 11
+- openSUSE 13.2 / 42.1
+- Oracle 5.10 / 7.2
+- RedHat 5.10 / 7.2
+
+### Other Changes
+
+- Added openBSD 6.2 data
+- Fauxhai now handles situations where it can fetch new platform data from Github, but can't write it to disk due to lack of permissions. This is pretty common in CI systems like Travis. Previously we'd fail, but no we'll use the data without writing it to disk. This will require fetching it every time, but avoids failures.
+
 ## v5.6.0 (2018-01-17)
 
 - Add new platform data:
+
   - `Debian` 9.3, 8.10
   - `Fedora` 27
   - `FreeBSD` 10.4
