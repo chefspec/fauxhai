@@ -12,7 +12,7 @@ All previously deprecated platforms have been removed. If you previously saw dep
 
 ### New Deprecations
 
-Multiple platform versions are now marked as deprecatedn and will begin throwing warning messages during ChefSpec runs. This continues the goal of providing only up to date fauxhai dumps using recent builds of Chef. Since regenerating fauxhai data against new releases of Chef involves manually installing each version of distros we're limiting the number of point releases we'll support. This mostly impacts distros such as Debian/RHEL that release many point releases for the same major version.
+Multiple platform versions are now marked as deprecated and will begin throwing warning messages during ChefSpec runs. This continues the goal of providing only up to date fauxhai dumps using recent builds of Chef. Since regenerating fauxhai data against new releases of Chef involves manually installing each version of distros we're limiting the number of point releases we'll support. This mostly impacts distros such as Debian/RHEL that release many point releases for the same major version.
 
 #### Newly Deprecated Platforms:
 
