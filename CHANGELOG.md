@@ -1,5 +1,9 @@
 # Fauxhai Changelog
 
+## v6.0.1 (2018-03-07)
+
+- Updated the deprecation warning to now show the date files will be removed as 3/2019 in the Fauxhai 7.0 release.
+
 ## v6.0.0 (2018-03-07)
 
 ### Removed Deprecated Platforms
