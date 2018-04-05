@@ -79,28 +79,6 @@ module Fauxhai
         'local'
       end
 
-      def etc
-        {
-          'passwd' => {
-            'fauxhai' => {
-              'dir' => '/home/fauxhai',
-              'gid' => 0,
-              'uid' => 0,
-              'shell' => '/bin/bash',
-              'gecos' => 'Fauxhai',
-            },
-          },
-          'group' => {
-            'fauxhai' => {
-              'gid' => 0,
-              'members' => [
-                'fauxhai',
-              ],
-            },
-          },
-        }
-      end
-
       def fqdn
         'fauxhai.local'
       end

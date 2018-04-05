@@ -9,10 +9,6 @@ This file lists each platform known to Fauxhai and the available versions for ea
 
 ### amazon
 
-  - 2012.09
-  - 2013.09
-  - 2014.03
-  - 2014.09
   - 2015.03
   - 2015.09
   - 2016.03
@@ -70,7 +66,8 @@ This file lists each platform known to Fauxhai and the available versions for ea
 
 ### linuxmint
 
-  - 18.1
+  - 18.2
+  - 18.3
 
 ### mac_os_x
 

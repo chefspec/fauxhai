@@ -14,14 +14,14 @@
       "vendor": "ATA"
     },
     "sr0": {
-      "logical_block_size": "2048",
+      "logical_block_size": "512",
       "model": "CD-ROM",
-      "physical_block_size": "2048",
+      "physical_block_size": "512",
       "queue_depth": "1",
       "removable": "1",
       "rev": "1.0",
       "rotational": "1",
-      "size": "7493632",
+      "size": "2097151",
       "state": "running",
       "timeout": "30",
       "vendor": "VBOX"
@@ -29,12 +29,12 @@
   },
   "chef_packages": {
     "chef": {
-      "chef_root": "/opt/chef/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib",
-      "version": "13.4.19"
+      "chef_root": "/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.0.190/lib",
+      "version": "14.0.190"
     },
     "ohai": {
-      "ohai_root": "/opt/chef/embedded/lib/ruby/gems/2.4.0/gems/ohai-13.4.0/lib/ohai",
-      "version": "13.4.0"
+      "ohai_root": "/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/ohai-14.0.31/lib/ohai",
+      "version": "14.0.31"
     }
   },
   "command": {
@@ -186,20 +186,20 @@
     "oem_strings": {
       "all_records": [
         {
-          "String 1": "vboxVer_5.1.26",
-          "String 2": "vboxRev_117224",
+          "String 1": "vboxVer_5.2.8",
+          "String 2": "vboxRev_121009",
           "application_identifier": "OEM Strings",
           "record_id": "0x0002",
           "size": "11"
         }
       ],
-      "string_1": "vboxVer_5.1.26",
-      "string_2": "vboxRev_117224"
+      "string_1": "vboxVer_5.2.8",
+      "string_2": "vboxRev_121009"
     },
     "smbios_version": "2.5",
     "structures": {
       "count": "10",
-      "size": "450"
+      "size": "449"
     },
     "system": {
       "all_records": [
@@ -229,25 +229,6 @@
     "table_location": "0x000E1000"
   },
   "domain": "local",
-  "etc": {
-    "group": {
-      "fauxhai": {
-        "gid": 0,
-        "members": [
-          "fauxhai"
-        ]
-      }
-    },
-    "passwd": {
-      "fauxhai": {
-        "dir": "/home/fauxhai",
-        "gecos": "Fauxhai",
-        "gid": 0,
-        "shell": "/bin/bash",
-        "uid": 0
-      }
-    }
-  },
   "filesystem": {
     "by_device": {
       "/dev/sda": {
@@ -260,65 +241,44 @@
       },
       "/dev/sda2": {
         "fs_type": "btrfs",
-        "kb_available": "3070860",
+        "kb_available": "2901864",
         "kb_size": "7368704",
-        "kb_used": "3485364",
+        "kb_used": "3752952",
         "mount_options": [
           "rw",
           "relatime",
           "space_cache",
-          "subvolid=269",
-          "subvol=/@/var/lib/mailman"
+          "subvolid=261",
+          "subvol=/@/opt"
         ],
         "mounts": [
           "/",
-          "/tmp",
-          "/opt",
+          "/var/lib/mariadb",
+          "/var/cache",
           "/var/lib/machines",
+          "/var/lib/pgsql",
           "/var/spool",
           "/var/crash",
-          "/boot/grub2/x86_64-efi",
           "/usr/local",
-          "/var/cache",
-          "/var/lib/pgsql",
+          "/var/lib/mailman",
           "/var/lib/named",
-          "/srv",
           "/var/tmp",
-          "/var/lib/mariadb",
           "/var/opt",
           "/boot/grub2/i386-pc",
-          "/var/lib/libvirt/images",
           "/home",
+          "/var/lib/libvirt/images",
+          "/tmp",
           "/var/log",
           "/var/lib/mysql",
-          "/var/lib/mailman"
+          "/srv",
+          "/boot/grub2/x86_64-efi",
+          "/opt"
         ],
-        "percent_used": "54%",
+        "percent_used": "57%",
         "uuid": "cb47efb9-07b3-4402-90b9-f6ec82479dcf"
       },
       "/dev/sr0": {
-        "fs_type": "iso9660",
-        "kb_available": "0",
-        "kb_size": "3746070",
-        "kb_used": "3746070",
-        "label": "SLE-12-SP3-Server-DVD-x86_640473",
-        "mount_options": [
-          "ro",
-          "nosuid",
-          "nodev",
-          "relatime",
-          "uid=0",
-          "gid=0",
-          "iocharset=utf8",
-          "mode=0400",
-          "dmode=0500",
-          "uhelper=udisks2"
-        ],
-        "mounts": [
-          "/run/media/root/SLE-12-SP3-Server-DVD-x86_640473"
-        ],
-        "percent_used": "100%",
-        "uuid": "2017-07-12-03-04-39-00"
+        "mounts": []
       },
       "cgroup": {
         "fs_type": "cgroup",
@@ -328,20 +288,20 @@
           "nodev",
           "noexec",
           "relatime",
-          "perf_event"
+          "blkio"
         ],
         "mounts": [
           "/sys/fs/cgroup/systemd",
-          "/sys/fs/cgroup/net_cls,net_prio",
           "/sys/fs/cgroup/memory",
           "/sys/fs/cgroup/freezer",
-          "/sys/fs/cgroup/cpuset",
-          "/sys/fs/cgroup/hugetlb",
           "/sys/fs/cgroup/pids",
+          "/sys/fs/cgroup/hugetlb",
           "/sys/fs/cgroup/cpu,cpuacct",
           "/sys/fs/cgroup/devices",
-          "/sys/fs/cgroup/blkio",
-          "/sys/fs/cgroup/perf_event"
+          "/sys/fs/cgroup/net_cls,net_prio",
+          "/sys/fs/cgroup/cpuset",
+          "/sys/fs/cgroup/perf_event",
+          "/sys/fs/cgroup/blkio"
         ]
       },
       "debugfs": {
@@ -371,9 +331,9 @@
       },
       "devtmpfs": {
         "fs_type": "devtmpfs",
-        "inodes_available": "124030",
+        "inodes_available": "124033",
         "inodes_percent_used": "1%",
-        "inodes_used": "425",
+        "inodes_used": "422",
         "kb_available": "497820",
         "kb_size": "497820",
         "kb_used": "0",
@@ -491,7 +451,7 @@
         "mount_options": [
           "rw",
           "relatime",
-          "fd=31",
+          "fd=22",
           "pgrp=1",
           "timeout=0",
           "minproto=5",
@@ -504,12 +464,12 @@
       },
       "tmpfs": {
         "fs_type": "tmpfs",
-        "inodes_available": "126953",
+        "inodes_available": "126952",
         "inodes_percent_used": "1%",
-        "inodes_used": "19",
-        "kb_available": "101564",
+        "inodes_used": "20",
+        "kb_available": "101560",
         "kb_size": "101580",
-        "kb_used": "16",
+        "kb_used": "20",
         "mount_options": [
           "rw",
           "nosuid",
@@ -526,16 +486,6 @@
         ],
         "percent_used": "1%",
         "total_inodes": "126972"
-      },
-      "tracefs": {
-        "fs_type": "tracefs",
-        "mount_options": [
-          "rw",
-          "relatime"
-        ],
-        "mounts": [
-          "/sys/kernel/debug/tracing"
-        ]
       }
     },
     "by_mountpoint": {
@@ -544,9 +494,9 @@
           "/dev/sda2"
         ],
         "fs_type": "btrfs",
-        "kb_available": "3070860",
+        "kb_available": "2901864",
         "kb_size": "7368704",
-        "kb_used": "3485364",
+        "kb_used": "3752952",
         "mount_options": [
           "rw",
           "relatime",
@@ -554,7 +504,7 @@
           "subvolid=257",
           "subvol=/@"
         ],
-        "percent_used": "54%",
+        "percent_used": "57%",
         "uuid": "cb47efb9-07b3-4402-90b9-f6ec82479dcf"
       },
       "/boot/grub2/i386-pc": {
@@ -562,9 +512,9 @@
           "/dev/sda2"
         ],
         "fs_type": "btrfs",
-        "kb_available": "3070860",
+        "kb_available": "2901864",
         "kb_size": "7368704",
-        "kb_used": "3485364",
+        "kb_used": "3752952",
         "mount_options": [
           "rw",
           "relatime",
@@ -572,7 +522,7 @@
           "subvolid=258",
           "subvol=/@/boot/grub2/i386-pc"
         ],
-        "percent_used": "54%",
+        "percent_used": "57%",
         "uuid": "cb47efb9-07b3-4402-90b9-f6ec82479dcf"
       },
       "/boot/grub2/x86_64-efi": {
@@ -580,9 +530,9 @@
           "/dev/sda2"
         ],
         "fs_type": "btrfs",
-        "kb_available": "3070860",
+        "kb_available": "2901864",
         "kb_size": "7368704",
-        "kb_used": "3485364",
+        "kb_used": "3752952",
         "mount_options": [
           "rw",
           "relatime",
@@ -590,7 +540,7 @@
           "subvolid=259",
           "subvol=/@/boot/grub2/x86_64-efi"
         ],
-        "percent_used": "54%",
+        "percent_used": "57%",
         "uuid": "cb47efb9-07b3-4402-90b9-f6ec82479dcf"
       },
       "/dev": {
@@ -598,9 +548,9 @@
           "devtmpfs"
         ],
         "fs_type": "devtmpfs",
-        "inodes_available": "124030",
+        "inodes_available": "124033",
         "inodes_percent_used": "1%",
-        "inodes_used": "425",
+        "inodes_used": "422",
         "kb_available": "497820",
         "kb_size": "497820",
         "kb_used": "0",
@@ -673,9 +623,9 @@
           "/dev/sda2"
         ],
         "fs_type": "btrfs",
-        "kb_available": "3070860",
+        "kb_available": "2901864",
         "kb_size": "7368704",
-        "kb_used": "3485364",
+        "kb_used": "3752952",
         "mount_options": [
           "rw",
           "relatime",
@@ -683,7 +633,7 @@
           "subvolid=260",
           "subvol=/@/home"
         ],
-        "percent_used": "54%",
+        "percent_used": "57%",
         "uuid": "cb47efb9-07b3-4402-90b9-f6ec82479dcf"
       },
       "/opt": {
@@ -691,9 +641,9 @@
           "/dev/sda2"
         ],
         "fs_type": "btrfs",
-        "kb_available": "3070860",
+        "kb_available": "2901864",
         "kb_size": "7368704",
-        "kb_used": "3485364",
+        "kb_used": "3752952",
         "mount_options": [
           "rw",
           "relatime",
@@ -701,7 +651,7 @@
           "subvolid=261",
           "subvol=/@/opt"
         ],
-        "percent_used": "54%",
+        "percent_used": "57%",
         "uuid": "cb47efb9-07b3-4402-90b9-f6ec82479dcf"
       },
       "/proc": {
@@ -725,7 +675,7 @@
         "mount_options": [
           "rw",
           "relatime",
-          "fd=31",
+          "fd=22",
           "pgrp=1",
           "timeout=0",
           "minproto=5",
@@ -738,12 +688,12 @@
           "tmpfs"
         ],
         "fs_type": "tmpfs",
-        "inodes_available": "126369",
+        "inodes_available": "126374",
         "inodes_percent_used": "1%",
-        "inodes_used": "603",
-        "kb_available": "499716",
+        "inodes_used": "598",
+        "kb_available": "499708",
         "kb_size": "507888",
-        "kb_used": "8172",
+        "kb_used": "8180",
         "mount_options": [
           "rw",
           "nosuid",
@@ -753,41 +703,17 @@
         "percent_used": "2%",
         "total_inodes": "126972"
       },
-      "/run/media/root/SLE-12-SP3-Server-DVD-x86_640473": {
-        "devices": [
-          "/dev/sr0"
-        ],
-        "fs_type": "iso9660",
-        "kb_available": "0",
-        "kb_size": "3746070",
-        "kb_used": "3746070",
-        "label": "SLE-12-SP3-Server-DVD-x86_640473",
-        "mount_options": [
-          "ro",
-          "nosuid",
-          "nodev",
-          "relatime",
-          "uid=0",
-          "gid=0",
-          "iocharset=utf8",
-          "mode=0400",
-          "dmode=0500",
-          "uhelper=udisks2"
-        ],
-        "percent_used": "100%",
-        "uuid": "2017-07-12-03-04-39-00"
-      },
       "/run/user/0": {
         "devices": [
           "tmpfs"
         ],
         "fs_type": "tmpfs",
-        "inodes_available": "126953",
+        "inodes_available": "126952",
         "inodes_percent_used": "1%",
-        "inodes_used": "19",
-        "kb_available": "101564",
+        "inodes_used": "20",
+        "kb_available": "101560",
         "kb_size": "101580",
-        "kb_used": "16",
+        "kb_used": "20",
         "mount_options": [
           "rw",
           "nosuid",
@@ -818,9 +744,9 @@
           "/dev/sda2"
         ],
         "fs_type": "btrfs",
-        "kb_available": "3070860",
+        "kb_available": "2901864",
         "kb_size": "7368704",
-        "kb_used": "3485364",
+        "kb_used": "3752952",
         "mount_options": [
           "rw",
           "relatime",
@@ -828,7 +754,7 @@
           "subvolid=262",
           "subvol=/@/srv"
         ],
-        "percent_used": "54%",
+        "percent_used": "57%",
         "uuid": "cb47efb9-07b3-4402-90b9-f6ec82479dcf"
       },
       "/sys": {
@@ -1056,16 +982,6 @@
           "relatime"
         ]
       },
-      "/sys/kernel/debug/tracing": {
-        "devices": [
-          "tracefs"
-        ],
-        "fs_type": "tracefs",
-        "mount_options": [
-          "rw",
-          "relatime"
-        ]
-      },
       "/sys/kernel/security": {
         "devices": [
           "securityfs"
@@ -1084,9 +1000,9 @@
           "/dev/sda2"
         ],
         "fs_type": "btrfs",
-        "kb_available": "3070860",
+        "kb_available": "2901864",
         "kb_size": "7368704",
-        "kb_used": "3485364",
+        "kb_used": "3752952",
         "mount_options": [
           "rw",
           "relatime",
@@ -1094,7 +1010,7 @@
           "subvolid=263",
           "subvol=/@/tmp"
         ],
-        "percent_used": "54%",
+        "percent_used": "57%",
         "uuid": "cb47efb9-07b3-4402-90b9-f6ec82479dcf"
       },
       "/usr/local": {
@@ -1102,9 +1018,9 @@
           "/dev/sda2"
         ],
         "fs_type": "btrfs",
-        "kb_available": "3070860",
+        "kb_available": "2901864",
         "kb_size": "7368704",
-        "kb_used": "3485364",
+        "kb_used": "3752952",
         "mount_options": [
           "rw",
           "relatime",
@@ -1112,7 +1028,7 @@
           "subvolid=264",
           "subvol=/@/usr/local"
         ],
-        "percent_used": "54%",
+        "percent_used": "57%",
         "uuid": "cb47efb9-07b3-4402-90b9-f6ec82479dcf"
       },
       "/var/cache": {
@@ -1120,9 +1036,9 @@
           "/dev/sda2"
         ],
         "fs_type": "btrfs",
-        "kb_available": "3070860",
+        "kb_available": "2901864",
         "kb_size": "7368704",
-        "kb_used": "3485364",
+        "kb_used": "3752952",
         "mount_options": [
           "rw",
           "relatime",
@@ -1130,7 +1046,7 @@
           "subvolid=265",
           "subvol=/@/var/cache"
         ],
-        "percent_used": "54%",
+        "percent_used": "57%",
         "uuid": "cb47efb9-07b3-4402-90b9-f6ec82479dcf"
       },
       "/var/crash": {
@@ -1138,9 +1054,9 @@
           "/dev/sda2"
         ],
         "fs_type": "btrfs",
-        "kb_available": "3070860",
+        "kb_available": "2901864",
         "kb_size": "7368704",
-        "kb_used": "3485364",
+        "kb_used": "3752952",
         "mount_options": [
           "rw",
           "relatime",
@@ -1148,7 +1064,7 @@
           "subvolid=266",
           "subvol=/@/var/crash"
         ],
-        "percent_used": "54%",
+        "percent_used": "57%",
         "uuid": "cb47efb9-07b3-4402-90b9-f6ec82479dcf"
       },
       "/var/lib/libvirt/images": {
@@ -1156,9 +1072,9 @@
           "/dev/sda2"
         ],
         "fs_type": "btrfs",
-        "kb_available": "3070860",
+        "kb_available": "2901864",
         "kb_size": "7368704",
-        "kb_used": "3485364",
+        "kb_used": "3752952",
         "mount_options": [
           "rw",
           "relatime",
@@ -1166,7 +1082,7 @@
           "subvolid=267",
           "subvol=/@/var/lib/libvirt/images"
         ],
-        "percent_used": "54%",
+        "percent_used": "57%",
         "uuid": "cb47efb9-07b3-4402-90b9-f6ec82479dcf"
       },
       "/var/lib/machines": {
@@ -1174,9 +1090,9 @@
           "/dev/sda2"
         ],
         "fs_type": "btrfs",
-        "kb_available": "3070860",
+        "kb_available": "2901864",
         "kb_size": "7368704",
-        "kb_used": "3485364",
+        "kb_used": "3752952",
         "mount_options": [
           "rw",
           "relatime",
@@ -1184,7 +1100,7 @@
           "subvolid=268",
           "subvol=/@/var/lib/machines"
         ],
-        "percent_used": "54%",
+        "percent_used": "57%",
         "uuid": "cb47efb9-07b3-4402-90b9-f6ec82479dcf"
       },
       "/var/lib/mailman": {
@@ -1192,9 +1108,9 @@
           "/dev/sda2"
         ],
         "fs_type": "btrfs",
-        "kb_available": "3070860",
+        "kb_available": "2901864",
         "kb_size": "7368704",
-        "kb_used": "3485364",
+        "kb_used": "3752952",
         "mount_options": [
           "rw",
           "relatime",
@@ -1202,7 +1118,7 @@
           "subvolid=269",
           "subvol=/@/var/lib/mailman"
         ],
-        "percent_used": "54%",
+        "percent_used": "57%",
         "uuid": "cb47efb9-07b3-4402-90b9-f6ec82479dcf"
       },
       "/var/lib/mariadb": {
@@ -1210,9 +1126,9 @@
           "/dev/sda2"
         ],
         "fs_type": "btrfs",
-        "kb_available": "3070860",
+        "kb_available": "2901864",
         "kb_size": "7368704",
-        "kb_used": "3485364",
+        "kb_used": "3752952",
         "mount_options": [
           "rw",
           "relatime",
@@ -1220,7 +1136,7 @@
           "subvolid=270",
           "subvol=/@/var/lib/mariadb"
         ],
-        "percent_used": "54%",
+        "percent_used": "57%",
         "uuid": "cb47efb9-07b3-4402-90b9-f6ec82479dcf"
       },
       "/var/lib/mysql": {
@@ -1228,9 +1144,9 @@
           "/dev/sda2"
         ],
         "fs_type": "btrfs",
-        "kb_available": "3070860",
+        "kb_available": "2901864",
         "kb_size": "7368704",
-        "kb_used": "3485364",
+        "kb_used": "3752952",
         "mount_options": [
           "rw",
           "relatime",
@@ -1238,7 +1154,7 @@
           "subvolid=271",
           "subvol=/@/var/lib/mysql"
         ],
-        "percent_used": "54%",
+        "percent_used": "57%",
         "uuid": "cb47efb9-07b3-4402-90b9-f6ec82479dcf"
       },
       "/var/lib/named": {
@@ -1246,9 +1162,9 @@
           "/dev/sda2"
         ],
         "fs_type": "btrfs",
-        "kb_available": "3070860",
+        "kb_available": "2901864",
         "kb_size": "7368704",
-        "kb_used": "3485364",
+        "kb_used": "3752952",
         "mount_options": [
           "rw",
           "relatime",
@@ -1256,7 +1172,7 @@
           "subvolid=272",
           "subvol=/@/var/lib/named"
         ],
-        "percent_used": "54%",
+        "percent_used": "57%",
         "uuid": "cb47efb9-07b3-4402-90b9-f6ec82479dcf"
       },
       "/var/lib/pgsql": {
@@ -1264,9 +1180,9 @@
           "/dev/sda2"
         ],
         "fs_type": "btrfs",
-        "kb_available": "3070860",
+        "kb_available": "2901864",
         "kb_size": "7368704",
-        "kb_used": "3485364",
+        "kb_used": "3752952",
         "mount_options": [
           "rw",
           "relatime",
@@ -1274,7 +1190,7 @@
           "subvolid=273",
           "subvol=/@/var/lib/pgsql"
         ],
-        "percent_used": "54%",
+        "percent_used": "57%",
         "uuid": "cb47efb9-07b3-4402-90b9-f6ec82479dcf"
       },
       "/var/log": {
@@ -1282,9 +1198,9 @@
           "/dev/sda2"
         ],
         "fs_type": "btrfs",
-        "kb_available": "3070860",
+        "kb_available": "2901864",
         "kb_size": "7368704",
-        "kb_used": "3485364",
+        "kb_used": "3752952",
         "mount_options": [
           "rw",
           "relatime",
@@ -1292,7 +1208,7 @@
           "subvolid=274",
           "subvol=/@/var/log"
         ],
-        "percent_used": "54%",
+        "percent_used": "57%",
         "uuid": "cb47efb9-07b3-4402-90b9-f6ec82479dcf"
       },
       "/var/opt": {
@@ -1300,9 +1216,9 @@
           "/dev/sda2"
         ],
         "fs_type": "btrfs",
-        "kb_available": "3070860",
+        "kb_available": "2901864",
         "kb_size": "7368704",
-        "kb_used": "3485364",
+        "kb_used": "3752952",
         "mount_options": [
           "rw",
           "relatime",
@@ -1310,7 +1226,7 @@
           "subvolid=275",
           "subvol=/@/var/opt"
         ],
-        "percent_used": "54%",
+        "percent_used": "57%",
         "uuid": "cb47efb9-07b3-4402-90b9-f6ec82479dcf"
       },
       "/var/spool": {
@@ -1318,9 +1234,9 @@
           "/dev/sda2"
         ],
         "fs_type": "btrfs",
-        "kb_available": "3070860",
+        "kb_available": "2901864",
         "kb_size": "7368704",
-        "kb_used": "3485364",
+        "kb_used": "3752952",
         "mount_options": [
           "rw",
           "relatime",
@@ -1328,7 +1244,7 @@
           "subvolid=276",
           "subvol=/@/var/spool"
         ],
-        "percent_used": "54%",
+        "percent_used": "57%",
         "uuid": "cb47efb9-07b3-4402-90b9-f6ec82479dcf"
       },
       "/var/tmp": {
@@ -1336,9 +1252,9 @@
           "/dev/sda2"
         ],
         "fs_type": "btrfs",
-        "kb_available": "3070860",
+        "kb_available": "2901864",
         "kb_size": "7368704",
-        "kb_used": "3485364",
+        "kb_used": "3752952",
         "mount_options": [
           "rw",
           "relatime",
@@ -1346,7 +1262,7 @@
           "subvolid=277",
           "subvol=/@/var/tmp"
         ],
-        "percent_used": "54%",
+        "percent_used": "57%",
         "uuid": "cb47efb9-07b3-4402-90b9-f6ec82479dcf"
       }
     },
@@ -1362,9 +1278,9 @@
       "/dev/sda2,/": {
         "device": "/dev/sda2",
         "fs_type": "btrfs",
-        "kb_available": "3070860",
+        "kb_available": "2901864",
         "kb_size": "7368704",
-        "kb_used": "3485364",
+        "kb_used": "3752952",
         "mount": "/",
         "mount_options": [
           "rw",
@@ -1373,15 +1289,15 @@
           "subvolid=257",
           "subvol=/@"
         ],
-        "percent_used": "54%",
+        "percent_used": "57%",
         "uuid": "cb47efb9-07b3-4402-90b9-f6ec82479dcf"
       },
       "/dev/sda2,/boot/grub2/i386-pc": {
         "device": "/dev/sda2",
         "fs_type": "btrfs",
-        "kb_available": "3070860",
+        "kb_available": "2901864",
         "kb_size": "7368704",
-        "kb_used": "3485364",
+        "kb_used": "3752952",
         "mount": "/boot/grub2/i386-pc",
         "mount_options": [
           "rw",
@@ -1390,15 +1306,15 @@
           "subvolid=258",
           "subvol=/@/boot/grub2/i386-pc"
         ],
-        "percent_used": "54%",
+        "percent_used": "57%",
         "uuid": "cb47efb9-07b3-4402-90b9-f6ec82479dcf"
       },
       "/dev/sda2,/boot/grub2/x86_64-efi": {
         "device": "/dev/sda2",
         "fs_type": "btrfs",
-        "kb_available": "3070860",
+        "kb_available": "2901864",
         "kb_size": "7368704",
-        "kb_used": "3485364",
+        "kb_used": "3752952",
         "mount": "/boot/grub2/x86_64-efi",
         "mount_options": [
           "rw",
@@ -1407,15 +1323,15 @@
           "subvolid=259",
           "subvol=/@/boot/grub2/x86_64-efi"
         ],
-        "percent_used": "54%",
+        "percent_used": "57%",
         "uuid": "cb47efb9-07b3-4402-90b9-f6ec82479dcf"
       },
       "/dev/sda2,/home": {
         "device": "/dev/sda2",
         "fs_type": "btrfs",
-        "kb_available": "3070860",
+        "kb_available": "2901864",
         "kb_size": "7368704",
-        "kb_used": "3485364",
+        "kb_used": "3752952",
         "mount": "/home",
         "mount_options": [
           "rw",
@@ -1424,15 +1340,15 @@
           "subvolid=260",
           "subvol=/@/home"
         ],
-        "percent_used": "54%",
+        "percent_used": "57%",
         "uuid": "cb47efb9-07b3-4402-90b9-f6ec82479dcf"
       },
       "/dev/sda2,/opt": {
         "device": "/dev/sda2",
         "fs_type": "btrfs",
-        "kb_available": "3070860",
+        "kb_available": "2901864",
         "kb_size": "7368704",
-        "kb_used": "3485364",
+        "kb_used": "3752952",
         "mount": "/opt",
         "mount_options": [
           "rw",
@@ -1441,15 +1357,15 @@
           "subvolid=261",
           "subvol=/@/opt"
         ],
-        "percent_used": "54%",
+        "percent_used": "57%",
         "uuid": "cb47efb9-07b3-4402-90b9-f6ec82479dcf"
       },
       "/dev/sda2,/srv": {
         "device": "/dev/sda2",
         "fs_type": "btrfs",
-        "kb_available": "3070860",
+        "kb_available": "2901864",
         "kb_size": "7368704",
-        "kb_used": "3485364",
+        "kb_used": "3752952",
         "mount": "/srv",
         "mount_options": [
           "rw",
@@ -1458,15 +1374,15 @@
           "subvolid=262",
           "subvol=/@/srv"
         ],
-        "percent_used": "54%",
+        "percent_used": "57%",
         "uuid": "cb47efb9-07b3-4402-90b9-f6ec82479dcf"
       },
       "/dev/sda2,/tmp": {
         "device": "/dev/sda2",
         "fs_type": "btrfs",
-        "kb_available": "3070860",
+        "kb_available": "2901864",
         "kb_size": "7368704",
-        "kb_used": "3485364",
+        "kb_used": "3752952",
         "mount": "/tmp",
         "mount_options": [
           "rw",
@@ -1475,15 +1391,15 @@
           "subvolid=263",
           "subvol=/@/tmp"
         ],
-        "percent_used": "54%",
+        "percent_used": "57%",
         "uuid": "cb47efb9-07b3-4402-90b9-f6ec82479dcf"
       },
       "/dev/sda2,/usr/local": {
         "device": "/dev/sda2",
         "fs_type": "btrfs",
-        "kb_available": "3070860",
+        "kb_available": "2901864",
         "kb_size": "7368704",
-        "kb_used": "3485364",
+        "kb_used": "3752952",
         "mount": "/usr/local",
         "mount_options": [
           "rw",
@@ -1492,15 +1408,15 @@
           "subvolid=264",
           "subvol=/@/usr/local"
         ],
-        "percent_used": "54%",
+        "percent_used": "57%",
         "uuid": "cb47efb9-07b3-4402-90b9-f6ec82479dcf"
       },
       "/dev/sda2,/var/cache": {
         "device": "/dev/sda2",
         "fs_type": "btrfs",
-        "kb_available": "3070860",
+        "kb_available": "2901864",
         "kb_size": "7368704",
-        "kb_used": "3485364",
+        "kb_used": "3752952",
         "mount": "/var/cache",
         "mount_options": [
           "rw",
@@ -1509,15 +1425,15 @@
           "subvolid=265",
           "subvol=/@/var/cache"
         ],
-        "percent_used": "54%",
+        "percent_used": "57%",
         "uuid": "cb47efb9-07b3-4402-90b9-f6ec82479dcf"
       },
       "/dev/sda2,/var/crash": {
         "device": "/dev/sda2",
         "fs_type": "btrfs",
-        "kb_available": "3070860",
+        "kb_available": "2901864",
         "kb_size": "7368704",
-        "kb_used": "3485364",
+        "kb_used": "3752952",
         "mount": "/var/crash",
         "mount_options": [
           "rw",
@@ -1526,15 +1442,15 @@
           "subvolid=266",
           "subvol=/@/var/crash"
         ],
-        "percent_used": "54%",
+        "percent_used": "57%",
         "uuid": "cb47efb9-07b3-4402-90b9-f6ec82479dcf"
       },
       "/dev/sda2,/var/lib/libvirt/images": {
         "device": "/dev/sda2",
         "fs_type": "btrfs",
-        "kb_available": "3070860",
+        "kb_available": "2901864",
         "kb_size": "7368704",
-        "kb_used": "3485364",
+        "kb_used": "3752952",
         "mount": "/var/lib/libvirt/images",
         "mount_options": [
           "rw",
@@ -1543,15 +1459,15 @@
           "subvolid=267",
           "subvol=/@/var/lib/libvirt/images"
         ],
-        "percent_used": "54%",
+        "percent_used": "57%",
         "uuid": "cb47efb9-07b3-4402-90b9-f6ec82479dcf"
       },
       "/dev/sda2,/var/lib/machines": {
         "device": "/dev/sda2",
         "fs_type": "btrfs",
-        "kb_available": "3070860",
+        "kb_available": "2901864",
         "kb_size": "7368704",
-        "kb_used": "3485364",
+        "kb_used": "3752952",
         "mount": "/var/lib/machines",
         "mount_options": [
           "rw",
@@ -1560,15 +1476,15 @@
           "subvolid=268",
           "subvol=/@/var/lib/machines"
         ],
-        "percent_used": "54%",
+        "percent_used": "57%",
         "uuid": "cb47efb9-07b3-4402-90b9-f6ec82479dcf"
       },
       "/dev/sda2,/var/lib/mailman": {
         "device": "/dev/sda2",
         "fs_type": "btrfs",
-        "kb_available": "3070860",
+        "kb_available": "2901864",
         "kb_size": "7368704",
-        "kb_used": "3485364",
+        "kb_used": "3752952",
         "mount": "/var/lib/mailman",
         "mount_options": [
           "rw",
@@ -1577,15 +1493,15 @@
           "subvolid=269",
           "subvol=/@/var/lib/mailman"
         ],
-        "percent_used": "54%",
+        "percent_used": "57%",
         "uuid": "cb47efb9-07b3-4402-90b9-f6ec82479dcf"
       },
       "/dev/sda2,/var/lib/mariadb": {
         "device": "/dev/sda2",
         "fs_type": "btrfs",
-        "kb_available": "3070860",
+        "kb_available": "2901864",
         "kb_size": "7368704",
-        "kb_used": "3485364",
+        "kb_used": "3752952",
         "mount": "/var/lib/mariadb",
         "mount_options": [
           "rw",
@@ -1594,15 +1510,15 @@
           "subvolid=270",
           "subvol=/@/var/lib/mariadb"
         ],
-        "percent_used": "54%",
+        "percent_used": "57%",
         "uuid": "cb47efb9-07b3-4402-90b9-f6ec82479dcf"
       },
       "/dev/sda2,/var/lib/mysql": {
         "device": "/dev/sda2",
         "fs_type": "btrfs",
-        "kb_available": "3070860",
+        "kb_available": "2901864",
         "kb_size": "7368704",
-        "kb_used": "3485364",
+        "kb_used": "3752952",
         "mount": "/var/lib/mysql",
         "mount_options": [
           "rw",
@@ -1611,15 +1527,15 @@
           "subvolid=271",
           "subvol=/@/var/lib/mysql"
         ],
-        "percent_used": "54%",
+        "percent_used": "57%",
         "uuid": "cb47efb9-07b3-4402-90b9-f6ec82479dcf"
       },
       "/dev/sda2,/var/lib/named": {
         "device": "/dev/sda2",
         "fs_type": "btrfs",
-        "kb_available": "3070860",
+        "kb_available": "2901864",
         "kb_size": "7368704",
-        "kb_used": "3485364",
+        "kb_used": "3752952",
         "mount": "/var/lib/named",
         "mount_options": [
           "rw",
@@ -1628,15 +1544,15 @@
           "subvolid=272",
           "subvol=/@/var/lib/named"
         ],
-        "percent_used": "54%",
+        "percent_used": "57%",
         "uuid": "cb47efb9-07b3-4402-90b9-f6ec82479dcf"
       },
       "/dev/sda2,/var/lib/pgsql": {
         "device": "/dev/sda2",
         "fs_type": "btrfs",
-        "kb_available": "3070860",
+        "kb_available": "2901864",
         "kb_size": "7368704",
-        "kb_used": "3485364",
+        "kb_used": "3752952",
         "mount": "/var/lib/pgsql",
         "mount_options": [
           "rw",
@@ -1645,15 +1561,15 @@
           "subvolid=273",
           "subvol=/@/var/lib/pgsql"
         ],
-        "percent_used": "54%",
+        "percent_used": "57%",
         "uuid": "cb47efb9-07b3-4402-90b9-f6ec82479dcf"
       },
       "/dev/sda2,/var/log": {
         "device": "/dev/sda2",
         "fs_type": "btrfs",
-        "kb_available": "3070860",
+        "kb_available": "2901864",
         "kb_size": "7368704",
-        "kb_used": "3485364",
+        "kb_used": "3752952",
         "mount": "/var/log",
         "mount_options": [
           "rw",
@@ -1662,15 +1578,15 @@
           "subvolid=274",
           "subvol=/@/var/log"
         ],
-        "percent_used": "54%",
+        "percent_used": "57%",
         "uuid": "cb47efb9-07b3-4402-90b9-f6ec82479dcf"
       },
       "/dev/sda2,/var/opt": {
         "device": "/dev/sda2",
         "fs_type": "btrfs",
-        "kb_available": "3070860",
+        "kb_available": "2901864",
         "kb_size": "7368704",
-        "kb_used": "3485364",
+        "kb_used": "3752952",
         "mount": "/var/opt",
         "mount_options": [
           "rw",
@@ -1679,15 +1595,15 @@
           "subvolid=275",
           "subvol=/@/var/opt"
         ],
-        "percent_used": "54%",
+        "percent_used": "57%",
         "uuid": "cb47efb9-07b3-4402-90b9-f6ec82479dcf"
       },
       "/dev/sda2,/var/spool": {
         "device": "/dev/sda2",
         "fs_type": "btrfs",
-        "kb_available": "3070860",
+        "kb_available": "2901864",
         "kb_size": "7368704",
-        "kb_used": "3485364",
+        "kb_used": "3752952",
         "mount": "/var/spool",
         "mount_options": [
           "rw",
@@ -1696,15 +1612,15 @@
           "subvolid=276",
           "subvol=/@/var/spool"
         ],
-        "percent_used": "54%",
+        "percent_used": "57%",
         "uuid": "cb47efb9-07b3-4402-90b9-f6ec82479dcf"
       },
       "/dev/sda2,/var/tmp": {
         "device": "/dev/sda2",
         "fs_type": "btrfs",
-        "kb_available": "3070860",
+        "kb_available": "2901864",
         "kb_size": "7368704",
-        "kb_used": "3485364",
+        "kb_used": "3752952",
         "mount": "/var/tmp",
         "mount_options": [
           "rw",
@@ -1713,31 +1629,11 @@
           "subvolid=277",
           "subvol=/@/var/tmp"
         ],
-        "percent_used": "54%",
+        "percent_used": "57%",
         "uuid": "cb47efb9-07b3-4402-90b9-f6ec82479dcf"
       },
-      "/dev/sr0,/run/media/root/SLE-12-SP3-Server-DVD-x86_640473": {
-        "device": "/dev/sr0",
-        "fs_type": "iso9660",
-        "kb_available": "0",
-        "kb_size": "3746070",
-        "kb_used": "3746070",
-        "label": "SLE-12-SP3-Server-DVD-x86_640473",
-        "mount": "/run/media/root/SLE-12-SP3-Server-DVD-x86_640473",
-        "mount_options": [
-          "ro",
-          "nosuid",
-          "nodev",
-          "relatime",
-          "uid=0",
-          "gid=0",
-          "iocharset=utf8",
-          "mode=0400",
-          "dmode=0500",
-          "uhelper=udisks2"
-        ],
-        "percent_used": "100%",
-        "uuid": "2017-07-12-03-04-39-00"
+      "/dev/sr0,": {
+        "device": "/dev/sr0"
       },
       "cgroup,/sys/fs/cgroup/blkio": {
         "device": "cgroup",
@@ -1912,9 +1808,9 @@
       "devtmpfs,/dev": {
         "device": "devtmpfs",
         "fs_type": "devtmpfs",
-        "inodes_available": "124030",
+        "inodes_available": "124033",
         "inodes_percent_used": "1%",
-        "inodes_used": "425",
+        "inodes_used": "422",
         "kb_available": "497820",
         "kb_size": "497820",
         "kb_used": "0",
@@ -2024,7 +1920,7 @@
         "mount_options": [
           "rw",
           "relatime",
-          "fd=31",
+          "fd=22",
           "pgrp=1",
           "timeout=0",
           "minproto=5",
@@ -2053,12 +1949,12 @@
       "tmpfs,/run": {
         "device": "tmpfs",
         "fs_type": "tmpfs",
-        "inodes_available": "126369",
+        "inodes_available": "126374",
         "inodes_percent_used": "1%",
-        "inodes_used": "603",
-        "kb_available": "499716",
+        "inodes_used": "598",
+        "kb_available": "499708",
         "kb_size": "507888",
-        "kb_used": "8172",
+        "kb_used": "8180",
         "mount": "/run",
         "mount_options": [
           "rw",
@@ -2072,12 +1968,12 @@
       "tmpfs,/run/user/0": {
         "device": "tmpfs",
         "fs_type": "tmpfs",
-        "inodes_available": "126953",
+        "inodes_available": "126952",
         "inodes_percent_used": "1%",
-        "inodes_used": "19",
-        "kb_available": "101564",
+        "inodes_used": "20",
+        "kb_available": "101560",
         "kb_size": "101580",
-        "kb_used": "16",
+        "kb_used": "20",
         "mount": "/run/user/0",
         "mount_options": [
           "rw",
@@ -2109,15 +2005,6 @@
         ],
         "percent_used": "0%",
         "total_inodes": "126972"
-      },
-      "tracefs,/sys/kernel/debug/tracing": {
-        "device": "tracefs",
-        "fs_type": "tracefs",
-        "mount": "/sys/kernel/debug/tracing",
-        "mount_options": [
-          "rw",
-          "relatime"
-        ]
       }
     }
   },
@@ -2174,7 +2061,7 @@
         "version": "0.2.15"
       },
       "ata_piix": {
-        "refcount": "1",
+        "refcount": "0",
         "size": "36864",
         "version": "2.13"
       },
@@ -2309,10 +2196,6 @@
         "size": "16384",
         "version": "0.5.0"
       },
-      "isofs": {
-        "refcount": "1",
-        "size": "40960"
-      },
       "jitterentropy_rng": {
         "refcount": "0",
         "size": "16384"
@@ -2364,10 +2247,6 @@
       },
       "nf_log_ipv6": {
         "refcount": "5",
-        "size": "16384"
-      },
-      "nls_utf8": {
-        "refcount": "1",
         "size": "16384"
       },
       "ohci_hcd": {
@@ -2458,7 +2337,7 @@
         "size": "16384"
       },
       "sr_mod": {
-        "refcount": "1",
+        "refcount": "0",
         "size": "24576"
       },
       "usb_common": {
@@ -2642,7 +2521,7 @@
       }
     }
   },
-  "ohai_time": 1505361641.4328063,
+  "ohai_time": 1522896156.3496056,
   "os": "linux",
   "os_version": "4.4.73-5-default",
   "packages": {
@@ -3216,9 +3095,9 @@
     "chef": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1505361623",
+      "installdate": "1522896150",
       "release": "1.sles12",
-      "version": "13.4.19"
+      "version": "14.0.190"
     },
     "chrome-gnome-shell": {
       "arch": "x86_64",
@@ -14250,7 +14129,6 @@
   "platform_family": "suse",
   "platform_version": "12.3",
   "root_group": "root",
-  "shard_seed": 168642050,
   "shells": [
     "/bin/ash",
     "/bin/bash",
