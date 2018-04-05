@@ -137,9 +137,7 @@ This file lists each platform known to Fauxhai and the available versions for ea
 ### windows
 
   - 10
-  - 2008R2
   - 2012
   - 2012R2
   - 2016
-  - 7
   - 8.1
