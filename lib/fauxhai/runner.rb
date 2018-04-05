@@ -21,7 +21,6 @@ module Fauxhai
         'counters' => counters,
         'current_user' => current_user,
         'domain' => domain,
-        'etc' => etc,
         'hostname' => hostname,
         'machinename' => hostname,
         'fqdn' => fqdn,
