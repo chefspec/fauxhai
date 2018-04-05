@@ -19,6 +19,7 @@ This file lists each platform known to Fauxhai and the available versions for ea
   - 2016.09
   - 2017.03
   - 2017.09
+  - 2017.12
 
 ### arch
 
