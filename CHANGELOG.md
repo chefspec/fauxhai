@@ -1,5 +1,34 @@
 # Fauxhai Changelog
 
+## v6.1.0 (2018-04-09)
+
+### New Deprecations
+
+- Amazon Linux 2012.09, 2013.09, 2014.03, 2014.09
+- Linux Mint 18.1
+- Windows 2008R2
+- Windows 7
+
+### New Platforms
+
+- Amazon Linux 2017.12 (Amazon Linux 2.0 preview)
+- Linux Mint 18.2, 18.3
+- Debian 9.4
+- Ubuntu 18.04
+
+### Dumps Updated for Chef 14
+
+- AIX 7.1
+- Amazon Linux 2017.09
+- Debian 7.11, 8.10, 9.2, 9.3
+- Fedora 26, 27
+- FreeBSD 10.4, 11.1
+- openSUSE 42.2, 42.3
+- SLES 12.3
+- Ubuntu 14.04, 16.04
+- Windows 2008R2, 2012, 2012R2, 2016
+- macOS 10.13
+
 ## v6.0.1 (2018-03-07)
 
 - Updated the deprecation warning to now show the date files will be removed as 3/2019 in the Fauxhai 7.0 release.
