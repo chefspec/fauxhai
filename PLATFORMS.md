@@ -9,13 +9,14 @@ This file lists each platform known to Fauxhai and the available versions for ea
 
 ### amazon
 
+  - 2
   - 2015.03
   - 2015.09
   - 2016.03
   - 2016.09
   - 2017.03
   - 2017.09
-  - 2017.12
+  - 2018.03
 
 ### arch
 
@@ -50,6 +51,7 @@ This file lists each platform known to Fauxhai and the available versions for ea
 
   - 26
   - 27
+  - 28
 
 ### freebsd
 
@@ -113,6 +115,7 @@ This file lists each platform known to Fauxhai and the available versions for ea
   - 6.9
   - 7.3
   - 7.4
+  - 7.5
 
 ### smartos
 
@@ -139,6 +142,7 @@ This file lists each platform known to Fauxhai and the available versions for ea
 ### windows
 
   - 10
+  - 2008R2
   - 2012
   - 2012R2
   - 2016
