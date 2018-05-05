@@ -32,7 +32,7 @@ This file lists each platform known to Fauxhai and the available versions for ea
 
 ### clearos
 
-  - 7.0
+  - 7.4
 
 ### debian
 
