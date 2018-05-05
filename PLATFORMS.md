@@ -61,7 +61,6 @@ This file lists each platform known to Fauxhai and the available versions for ea
 
 ### gentoo
 
-  - 4.9.6-gentoo-r1
   - 4.9.95-gentoo
 
 ### ios_xr
