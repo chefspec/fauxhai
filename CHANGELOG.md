@@ -1,5 +1,31 @@
 # Fauxhai Changelog
 
+## v6.2.0 (2018-05-07)
+
+### New Platforms
+
+- Ubuntu 17.10
+- Amazon 2018.03
+- Amazon 2
+- ClearOS 7.4
+- Gentoo 4.9.95-gentoo
+- Redhat 7.5
+- Windows 2008R2
+- Fedora 28
+
+### Dumps Updated for Chef 14
+
+- Amazon 2015.03 / 2015.09 / 2016.03 / 2016.09 / 2017.03
+- openBSD 6.2
+- Redhat 6.8 / 6.9 / 7.3 / 7.4
+- SLES 11.4 / 12.1
+
+### New Deprecations
+
+- Amazon 2017.12 (replaced with Amazon 2)
+- ClearOS 7.0
+- Gentoo 4.9.6-gentoo-r1
+
 ## v6.1.0 (2018-04-09)
 
 ### New Deprecations
