@@ -122,7 +122,7 @@ module Fauxhai
             # probably mostly work on all OSes. Famous last words. The idea of
             # the regex is to split on any punctuation (the common case) and
             # also any single letter with digit on either side (2012r2). This
-            # leaves any long runs of letters intact (4.2-RELEASE). The convert
+            # leaves any long runs of letters intact (4.2-RELEASE). Then convert
             # any run of digits to an integer to get version-ish comparison.
             # This is basically a more flexible version of Gem::Version.
             versions.max_by do |ver|
