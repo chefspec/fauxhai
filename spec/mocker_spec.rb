@@ -1,6 +1,21 @@
 require 'spec_helper'
 
 describe Fauxhai::Mocker do
+  describe "#data" do
+    let(:options) { {} }
+    subject { described_class.new({github_fetching: false}.merge(options)).data }
+
+    context 'with a platform and version' do
+      let(:options) { {platform: 'chefspec', version: '0.6.1'} }
+      its(['hostname']) { is_expected.to eq 'chefspec' }
+    end
+
+    context 'with a Windows platform and version' do
+      let(:options) { {platform: 'windows', version: '10'} }
+      its(['hostname']) { is_expected.to eq 'Fauxhai' }
+    end
+  end
+
   describe '#version' do
     let(:options) { {} }
     subject { described_class.new({github_fetching: false}.merge(options)).send(:version) }
