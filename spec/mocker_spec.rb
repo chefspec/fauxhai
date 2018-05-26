@@ -56,8 +56,8 @@ describe Fauxhai::Mocker do
     end
 
     context 'with a Windows platform and an exact partial version' do
-      let(:options) { {platform: 'windows', version: '8'} }
-      it { is_expected.to eq '8' }
+      let(:options) { {platform: 'windows', version: '2012'} }
+      it { is_expected.to eq '2012' }
     end
 
     context 'with a CentOS platform and a partial version' do
