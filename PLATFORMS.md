@@ -9,15 +9,14 @@ This file lists each platform known to Fauxhai and the available versions for ea
 
 ### amazon
 
-  - 2012.09
-  - 2013.09
-  - 2014.03
-  - 2014.09
+  - 2
   - 2015.03
   - 2015.09
   - 2016.03
   - 2016.09
   - 2017.03
+  - 2017.09
+  - 2018.03
 
 ### arch
 
@@ -25,32 +24,24 @@ This file lists each platform known to Fauxhai and the available versions for ea
 
 ### centos
 
-  - 5.10
   - 5.11
-  - 6.7
   - 6.8
   - 6.9
-  - 7.2.1511
   - 7.3.1611
   - 7.4.1708
 
-### chefspec
-
-  - 0.6.1
-
 ### clearos
 
-  - 7.0
+  - 7.4
 
 ### debian
 
-  - 7.10
   - 7.11
-  - 8.7
-  - 8.8
+  - 8.10
   - 8.9
-  - 9.0
-  - 9.1
+  - 9.2
+  - 9.3
+  - 9.4
 
 ### dragonfly4
 
@@ -58,19 +49,19 @@ This file lists each platform known to Fauxhai and the available versions for ea
 
 ### fedora
 
-  - 24
-  - 25
   - 26
+  - 27
+  - 28
 
 ### freebsd
 
   - 10.3
-  - 11.0
+  - 10.4
   - 11.1
 
 ### gentoo
 
-  - 4.9.6-gentoo-r1
+  - 4.9.95-gentoo
 
 ### ios_xr
 
@@ -78,13 +69,15 @@ This file lists each platform known to Fauxhai and the available versions for ea
 
 ### linuxmint
 
-  - 18.1
+  - 18.2
+  - 18.3
 
 ### mac_os_x
 
   - 10.10
   - 10.11
   - 10.12
+  - 10.13
 
 ### nexus
 
@@ -94,20 +87,20 @@ This file lists each platform known to Fauxhai and the available versions for ea
 
   - 151018
 
+### openbsd
+
+  - 6.2
+
 ### opensuse
 
-  - 13.2
-  - 42.1
   - 42.2
   - 42.3
 
 ### oracle
 
-  - 5.10
   - 5.11
   - 6.8
   - 6.9
-  - 7.2
   - 7.3
   - 7.4
 
@@ -117,13 +110,12 @@ This file lists each platform known to Fauxhai and the available versions for ea
 
 ### redhat
 
-  - 5.10
   - 5.11
   - 6.8
   - 6.9
-  - 7.2
   - 7.3
   - 7.4
+  - 7.5
 
 ### smartos
 
@@ -145,6 +137,8 @@ This file lists each platform known to Fauxhai and the available versions for ea
 
   - 14.04
   - 16.04
+  - 17.10
+  - 18.04
 
 ### windows
 
@@ -153,5 +147,4 @@ This file lists each platform known to Fauxhai and the available versions for ea
   - 2012
   - 2012R2
   - 2016
-  - 7
   - 8.1

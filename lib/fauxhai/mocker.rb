@@ -57,7 +57,11 @@ module Fauxhai
             path = Pathname.new(filepath)
             FileUtils.mkdir_p(path.dirname)
 
-            File.open(filepath, 'w') { |f| f.write(response_body) }
+            begin
+              File.open(filepath, 'w') { |f| f.write(response_body) }
+            rescue Errno::EACCES # a pretty common problem in CI systems
+              puts "Fetched '#{platform}/#{version}' from GitHub, but could not write to the local path: #{filepath}. Fix the local file permissions to avoid downloading this file every run."
+            end
             return parse_and_validate(response_body)
           else
             raise Fauxhai::Exception::InvalidPlatform.new("Could not find platform '#{platform}/#{version}' on the local disk and an Github fetching returned http error code #{response.status.first.to_i}! #{PLATFORM_LIST_MESSAGE}")
@@ -76,7 +80,7 @@ module Fauxhai
     def parse_and_validate(unparsed_data)
       parsed_data = JSON.parse(unparsed_data)
       if parsed_data['deprecated']
-        STDERR.puts "WARNING: Fauxhai platform data for #{parsed_data['platform']} #{parsed_data['platform_version']} is deprecated and will be removed in the 6.0 release 3/2018. #{PLATFORM_LIST_MESSAGE}"
+        STDERR.puts "WARNING: Fauxhai platform data for #{parsed_data['platform']} #{parsed_data['platform_version']} is deprecated and will be removed in the 7.0 release 3/2019. #{PLATFORM_LIST_MESSAGE}"
       end
       parsed_data
     end

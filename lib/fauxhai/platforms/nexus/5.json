@@ -1,40 +1,82 @@
 {
-  "kernel": {
-    "name": "Linux",
-    "release": "3.4.43-WR5.0.1.13_standard",
-    "version": "#1 SMP PREEMPT Fri May 1 11:23:16 PDT 2015",
-    "machine": "x86_64",
-    "os": "GNU/Linux",
-    "modules": {
+  "chef_packages": {
+    "chef": {
+      "chef_root": "/opt/chef/embedded/lib/ruby/gems/2.1.0/gems/chef-12.3.0/lib",
+      "version": "12.3.0"
+    },
+    "ohai": {
+      "ohai_root": "/opt/chef/embedded/lib/ruby/gems/2.1.0/gems/ohai-8.6.0/lib/ohai",
+      "version": "8.6.0"
+    }
+  },
+  "command": {
+    "ps": "ps -ef"
+  },
+  "counters": {
+    "network": {
+      "interfaces": {
+        "eth0": {
+          "rx": {
+            "bytes": "0",
+            "compressed": 0,
+            "drop": 0,
+            "errors": "0",
+            "frame": 0,
+            "multicast": 0,
+            "overrun": 0,
+            "packets": "0"
+          },
+          "tx": {
+            "bytes": "342",
+            "carrier": 0,
+            "collisions": "0",
+            "compressed": 0,
+            "drop": 0,
+            "errors": "0",
+            "overrun": 0,
+            "packets": "0"
+          }
+        }
+      }
+    }
+  },
+  "cpu": {
+    "cores": 1,
+    "real": 1,
+    "total": 1
+  },
+  "current_user": "fauxhai",
+  "dmi": {},
+  "domain": "local",
+  "etc": {
+    "group": {
+      "fauxhai": {
+        "gid": 0,
+        "members": [
+          "fauxhai"
+        ]
+      }
+    },
+    "passwd": {
+      "fauxhai": {
+        "dir": "/home/fauxhai",
+        "gecos": "Fauxhai",
+        "gid": 0,
+        "shell": "/bin/bash",
+        "uid": 0
+      }
     }
   },
   "filesystem": {
-    "rootfs": {
-      "kb_size": "7825336",
-      "kb_used": "1672500",
-      "kb_available": "5755320",
-      "percent_used": "23%",
-      "mount": "/",
-      "total_inodes": "497760",
-      "inodes_used": "69839",
-      "inodes_available": "427921",
-      "inodes_percent_used": "15%",
-      "fs_type": "rootfs",
-      "mount_options": [
-        "rw"
-      ]
-    },
     "/dev/root": {
-      "kb_size": "7825336",
-      "kb_used": "1672500",
-      "kb_available": "5755320",
-      "percent_used": "23%",
-      "mount": "/var/volatile/run/named-chroot/etc/localtime",
-      "total_inodes": "497760",
-      "inodes_used": "69839",
+      "fs_type": "ext3",
       "inodes_available": "427921",
       "inodes_percent_used": "15%",
-      "fs_type": "ext3",
+      "inodes_used": "69839",
+      "kb_available": "5755320",
+      "kb_size": "7825336",
+      "kb_used": "1672500",
+      "mount": "/var/volatile/run/named-chroot/etc/localtime",
       "mount_options": [
         "rw",
         "relatime",
@@ -43,97 +85,9 @@
         "acl",
         "barrier=1",
         "data=ordered"
-      ]
-    },
-    "devtmpfs": {
-      "kb_size": "4084332",
-      "kb_used": "164",
-      "kb_available": "4084168",
-      "percent_used": "1%",
-      "mount": "/var/volatile/run/named-chroot/dev/null",
-      "total_inodes": "1021083",
-      "inodes_used": "2156",
-      "inodes_available": "1018927",
-      "inodes_percent_used": "1%",
-      "fs_type": "devtmpfs",
-      "mount_options": [
-        "rw",
-        "relatime",
-        "size=4084332k",
-        "nr_inodes=1021083",
-        "mode=755"
-      ]
-    },
-    "/dev/sr0": {
-      "kb_size": "186460",
-      "kb_used": "186460",
-      "kb_available": "0",
-      "percent_used": "100%",
-      "mount": "/media/sr0",
-      "fs_type": "iso9660",
-      "mount_options": [
-        "ro",
-        "relatime"
       ],
-      "label": "boot"
-    },
-    "tmpfs": {
-      "kb_size": "4085252",
-      "kb_used": "576",
-      "kb_available": "4084676",
-      "percent_used": "1%",
-      "mount": "/var/volatile/run/named-chroot/var/cache/bind",
-      "total_inodes": "1021313",
-      "inodes_used": "76",
-      "inodes_available": "1021237",
-      "inodes_percent_used": "1%",
-      "fs_type": "tmpfs",
-      "mount_options": [
-        "rw",
-        "relatime"
-      ]
-    },
-    "proc": {
-      "mount": "/proc",
-      "fs_type": "proc",
-      "mount_options": [
-        "rw",
-        "relatime"
-      ]
-    },
-    "sysfs": {
-      "mount": "/sys",
-      "fs_type": "sysfs",
-      "mount_options": [
-        "rw",
-        "relatime"
-      ]
-    },
-    "debugfs": {
-      "mount": "/sys/kernel/debug",
-      "fs_type": "debugfs",
-      "mount_options": [
-        "rw",
-        "relatime"
-      ]
-    },
-    "devpts": {
-      "mount": "/dev/pts",
-      "fs_type": "devpts",
-      "mount_options": [
-        "rw",
-        "relatime",
-        "gid=5",
-        "mode=620"
-      ]
-    },
-    "rpc_pipefs": {
-      "mount": "/var/lib/nfs/rpc_pipefs",
-      "fs_type": "rpc_pipefs",
-      "mount_options": [
-        "rw",
-        "relatime"
-      ]
+      "percent_used": "23%",
+      "total_inodes": "497760"
     },
     "/dev/sda1": {
       "fs_type": "ext3",
@@ -145,115 +99,158 @@
     },
     "/dev/sda3": {
       "fs_type": "swap"
-    }
-  },
-  "os": "linux",
-  "os_version": "3.4.43-WR5.0.1.13_standard",
-  "lsb": {
-  },
-  "platform": "nexus",
-  "platform_family": "wrlinux",
-  "platform_version": "5",
-  "dmi": {
-  },
-  "command": {
-    "ps": "ps -ef"
-  },
-  "ohai_time": 1441912364.4540393,
-  "languages": {
-    "ruby": {
-      "platform": "x86_64-linux",
-      "version": "2.2.2",
-      "release_date": "2015-04-13",
-      "target": "x86_64-unknown-linux-gnu",
-      "target_cpu": "x86_64",
-      "target_vendor": "unknown",
-      "target_os": "linux",
-      "host": "x86_64-unknown-linux-gnu",
-      "host_cpu": "x86_64",
-      "host_os": "linux-gnu",
-      "host_vendor": "unknown",
-      "bin_dir": "/usr/local/bin",
-      "ruby_bin": "/usr/local/bin/ruby",
-      "gems_dir": "/usr/local/gems",
-      "gem_bin": "/usr/local/bin/gem"
     },
-    "powershell": null
-  },
-  "chef_packages": {
-    "chef": {
-      "version": "12.3.0",
-      "chef_root": "/opt/chef/embedded/lib/ruby/gems/2.1.0/gems/chef-12.3.0/lib"
+    "/dev/sr0": {
+      "fs_type": "iso9660",
+      "kb_available": "0",
+      "kb_size": "186460",
+      "kb_used": "186460",
+      "label": "boot",
+      "mount": "/media/sr0",
+      "mount_options": [
+        "ro",
+        "relatime"
+      ],
+      "percent_used": "100%"
     },
-    "ohai": {
-      "version": "8.6.0",
-      "ohai_root": "/opt/chef/embedded/lib/ruby/gems/2.1.0/gems/ohai-8.6.0/lib/ohai"
-    }
-  },
-  "counters": {
-    "network": {
-      "interfaces": {
-        "eth0": {
-          "rx": {
-            "bytes": "0",
-            "packets": "0",
-            "errors": "0",
-            "drop": 0,
-            "overrun": 0,
-            "frame": 0,
-            "compressed": 0,
-            "multicast": 0
-          },
-          "tx": {
-            "bytes": "342",
-            "packets": "0",
-            "errors": "0",
-            "drop": 0,
-            "overrun": 0,
-            "collisions": "0",
-            "carrier": 0,
-            "compressed": 0
-          }
-        }
-      }
-    }
-  },
-  "current_user": "fauxhai",
-  "domain": "local",
-  "etc": {
-    "passwd": {
-      "fauxhai": {
-        "dir": "/home/fauxhai",
-        "gid": 0,
-        "uid": 0,
-        "shell": "/bin/bash",
-        "gecos": "Fauxhai"
-      }
+    "debugfs": {
+      "fs_type": "debugfs",
+      "mount": "/sys/kernel/debug",
+      "mount_options": [
+        "rw",
+        "relatime"
+      ]
     },
-    "group": {
-      "fauxhai": {
-        "gid": 0,
-        "members": [
-          "fauxhai"
-        ]
-      }
+    "devpts": {
+      "fs_type": "devpts",
+      "mount": "/dev/pts",
+      "mount_options": [
+        "rw",
+        "relatime",
+        "gid=5",
+        "mode=620"
+      ]
+    },
+    "devtmpfs": {
+      "fs_type": "devtmpfs",
+      "inodes_available": "1018927",
+      "inodes_percent_used": "1%",
+      "inodes_used": "2156",
+      "kb_available": "4084168",
+      "kb_size": "4084332",
+      "kb_used": "164",
+      "mount": "/var/volatile/run/named-chroot/dev/null",
+      "mount_options": [
+        "rw",
+        "relatime",
+        "size=4084332k",
+        "nr_inodes=1021083",
+        "mode=755"
+      ],
+      "percent_used": "1%",
+      "total_inodes": "1021083"
+    },
+    "proc": {
+      "fs_type": "proc",
+      "mount": "/proc",
+      "mount_options": [
+        "rw",
+        "relatime"
+      ]
+    },
+    "rootfs": {
+      "fs_type": "rootfs",
+      "inodes_available": "427921",
+      "inodes_percent_used": "15%",
+      "inodes_used": "69839",
+      "kb_available": "5755320",
+      "kb_size": "7825336",
+      "kb_used": "1672500",
+      "mount": "/",
+      "mount_options": [
+        "rw"
+      ],
+      "percent_used": "23%",
+      "total_inodes": "497760"
+    },
+    "rpc_pipefs": {
+      "fs_type": "rpc_pipefs",
+      "mount": "/var/lib/nfs/rpc_pipefs",
+      "mount_options": [
+        "rw",
+        "relatime"
+      ]
+    },
+    "sysfs": {
+      "fs_type": "sysfs",
+      "mount": "/sys",
+      "mount_options": [
+        "rw",
+        "relatime"
+      ]
+    },
+    "tmpfs": {
+      "fs_type": "tmpfs",
+      "inodes_available": "1021237",
+      "inodes_percent_used": "1%",
+      "inodes_used": "76",
+      "kb_available": "4084676",
+      "kb_size": "4085252",
+      "kb_used": "576",
+      "mount": "/var/volatile/run/named-chroot/var/cache/bind",
+      "mount_options": [
+        "rw",
+        "relatime"
+      ],
+      "percent_used": "1%",
+      "total_inodes": "1021313"
     }
   },
-  "hostname": "Fauxhai",
   "fqdn": "fauxhai.local",
+  "hostname": "Fauxhai",
   "ipaddress": "10.0.0.2",
+  "kernel": {
+    "machine": "x86_64",
+    "modules": {},
+    "name": "Linux",
+    "os": "GNU/Linux",
+    "release": "3.4.43-WR5.0.1.13_standard",
+    "version": "#1 SMP PREEMPT Fri May 1 11:23:16 PDT 2015"
+  },
   "keys": {
     "ssh": {
       "host_dsa_public": "ssh-dss AAAAB3NzaC1kc3MAAACBAJFo9BLAw4WKEs5hgipk5m423FzBsDXCZSMcC9ca/om/1VYzMqImixGe3uICDzNFUWxFoLJTQAOccyzo6MXZiQqwWJDLFi5qOSr6w2XcMyE+zd4wOyMoDiVM5fizmG8K3FzrqvGjwBcHcBdOQnavSijoj38DN25J9zhrid5BY4WlAAAAFQDxXrCyG52XCzn3FV4ej38wJBkomQAAAIBovGPJ4mP2P6BK8lHl0PPbktwQbWlpJ13oz6REJFDVcUi7vV26bX/BjQX+ohzZQzljdz1SpUbPc/8nuA4darYkVh91eBi307EN8IdxRHj2eBgp/ZG4yshIebG3WHrwJD/xUjjZ1MRfyDT1ermVi4LvjjPgWDxLZnPpMaR6S1nzgQAAAIEAj0Vd6DCWslvlsZ8+N53HWsqPi3gnx35JoLPz9Z2epkKIKqmEHav+93G3hdfztVa4I4t3phoPniQchYryF5+RNg8hqxKzjNtrIqUYCeuf2NJrksNsH7OZygPHZpqt4kTuwAGZxjxEGfAI0y8DhkU2ntp2LnzRnWH106BQBCmcXwo= fauxhai.local",
       "host_rsa_public": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCtLCeqtqr/HbnORckw1ukdLhpfGoOPFi5/esKEokzTqq1gsgQ2V8emmyjfq1i6XXfRtSBxkdlHv/GWdP5wBTuE2G85MzBkVSQPvmwQN8lX/JMPEEtKXkeOo0o92/PiSmvY4eRsdF0mw40Uvg7jtE3f3fxj497kzh5fKtkrHnF4x9gXCbVdr3FqXJfggR5IJwAxToerbK7x/uRS+7YuZI9Pip3tt14nv9ezwXcuGb/tvjWOZINiFl8izVIFKi7sxfTX09p4NgamxRS7TD2Yd0jT8nEoF9UZTsgXcJ1kDSx7N7NxFfNfP6rCdOGRRz4gUhXtsUjG/XkxPeCwZ7A9VnOD fauxhai.local"
     }
   },
+  "languages": {
+    "powershell": null,
+    "ruby": {
+      "bin_dir": "/usr/local/bin",
+      "gem_bin": "/usr/local/bin/gem",
+      "gems_dir": "/usr/local/gems",
+      "host": "x86_64-unknown-linux-gnu",
+      "host_cpu": "x86_64",
+      "host_os": "linux-gnu",
+      "host_vendor": "unknown",
+      "platform": "x86_64-linux",
+      "release_date": "2015-04-13",
+      "ruby_bin": "/usr/local/bin/ruby",
+      "target": "x86_64-unknown-linux-gnu",
+      "target_cpu": "x86_64",
+      "target_os": "linux",
+      "target_vendor": "unknown",
+      "version": "2.2.2"
+    }
+  },
+  "lsb": {},
   "macaddress": "11:11:11:11:11:11",
+  "memory": {
+    "total": "1048576kB"
+  },
   "network": {
     "default_gateway": "10.0.0.1",
     "default_interface": "eth0",
-    "settings": {
-    },
     "interfaces": {
       "eth0": {
         "addresses": {
@@ -281,28 +278,26 @@
           {
             "destination": "10.0.0.0/24",
             "family": "inet",
-            "scope": "link",
             "proto": "kernel",
+            "scope": "link",
             "src": "10.0.0.2"
           }
         ],
         "state": "up",
         "type": "eth"
       }
-    }
+    },
+    "settings": {}
   },
+  "ohai_time": 1441912364.4540393,
+  "os": "linux",
+  "os_version": "3.4.43-WR5.0.1.13_standard",
+  "platform": "nexus",
+  "platform_family": "wrlinux",
+  "platform_version": "5",
   "uptime": "30 days 15 hours 07 minutes 30 seconds",
   "uptime_seconds": 2646450,
-  "cpu": {
-    "real": 1,
-    "total": 1,
-    "cores": 1
-  },
-  "memory": {
-    "total": "1048576kB"
-  },
   "virtualization": {
-    "systems": {
-    }
+    "systems": {}
   }
 }

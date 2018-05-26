@@ -1,9 +1,109 @@
 # Fauxhai Changelog
 
+## v6.2.0 (2018-05-07)
+
+### New Platforms
+
+- Ubuntu 17.10
+- Amazon 2018.03
+- Amazon 2
+- ClearOS 7.4
+- Gentoo 4.9.95-gentoo
+- Redhat 7.5
+- Windows 2008R2
+- Fedora 28
+
+### Dumps Updated for Chef 14
+
+- Amazon 2015.03 / 2015.09 / 2016.03 / 2016.09 / 2017.03
+- openBSD 6.2
+- Redhat 6.8 / 6.9 / 7.3 / 7.4
+- SLES 11.4 / 12.1
+
+### New Deprecations
+
+- Amazon 2017.12 (replaced with Amazon 2)
+- ClearOS 7.0
+- Gentoo 4.9.6-gentoo-r1
+
+## v6.1.0 (2018-04-09)
+
+### New Deprecations
+
+- Amazon Linux 2012.09, 2013.09, 2014.03, 2014.09
+- Linux Mint 18.1
+- Windows 2008R2
+- Windows 7
+
+### New Platforms
+
+- Amazon Linux 2017.12 (Amazon Linux 2.0 preview)
+- Linux Mint 18.2, 18.3
+- Debian 9.4
+- Ubuntu 18.04
+
+### Dumps Updated for Chef 14
+
+- AIX 7.1
+- Amazon Linux 2017.09
+- Debian 7.11, 8.10, 9.2, 9.3
+- Fedora 26, 27
+- FreeBSD 10.4, 11.1
+- openSUSE 42.2, 42.3
+- SLES 12.3
+- Ubuntu 14.04, 16.04
+- Windows 2008R2, 2012, 2012R2, 2016
+- macOS 10.13
+
+## v6.0.1 (2018-03-07)
+
+- Updated the deprecation warning to now show the date files will be removed as 3/2019 in the Fauxhai 7.0 release.
+
+## v6.0.0 (2018-03-07)
+
+### Removed Deprecated Platforms
+
+All previously deprecated platforms have been removed. If you previously saw deprecation messages when running fauxhai/chefspec you will now see a hard error message linking to the list of supported platforms. This allows us to keep the Fauxhai gem size reasonable and also allows us to remove files that were dumped with very old versions of Chef (10/11).
+
+### New Deprecations
+
+Multiple platform versions are now marked as deprecated and will begin throwing warning messages during ChefSpec runs. This continues the goal of providing only up to date fauxhai dumps using recent builds of Chef. Since regenerating fauxhai data against new releases of Chef involves manually installing each version of distros we're limiting the number of point releases we'll support. This mostly impacts distros such as Debian/RHEL that release many point releases for the same major version.
+
+#### Newly Deprecated Platforms:
+
+- CentOS 5.10 / 6.7 / 7.2.1511
+- Debian 7.10 / 8.7 / 8.8 / 9.0 / 9.1
+- Fedora 24 / 25
+- FreeBSD 11
+- openSUSE 13.2 / 42.1
+- Oracle 5.10 / 7.2
+- RedHat 5.10 / 7.2
+
+### Other Changes
+
+- Added openBSD 6.2 data
+- Fauxhai now handles situations where it can fetch new platform data from Github, but can't write it to disk due to lack of permissions. This is pretty common in CI systems like Travis. Previously we'd fail, but no we'll use the data without writing it to disk. This will require fetching it every time, but avoids failures.
+
+## v5.6.0 (2018-01-17)
+
+- Add new platform data:
+
+  - `Debian` 9.3, 8.10
+  - `Fedora` 27
+  - `FreeBSD` 10.4
+
+## v5.5.0 (2017-11-07)
+
+- Added new platform data:
+
+  - `Debian` 9.2
+  - `macOS` 10.13
+  - `Amazon Linux` 2017.09
+
 ## v5.4.0 (2017-09-15)
 
 - Set the date for the removal of all deprecated platform data to 3/2018 to coincide with ChefDK 3.0
-- Removed several non-critical files from the Gemfile to slim the package size down sligthly
+- Removed several non-critical files from the Gemfile to slim the package size down slightly
 - Added new platform data:
 
   - `Redhat` 7.4
@@ -99,8 +199,11 @@
   - `windows`: 2003R2, 8
 
 - Data provided by the chef_packages will no longer be mocked, but instead the actual Ohai data will be used. This corrects incorrect paths to the Chef/Ohai binaries on many platforms
+
 - Update the chef/ohai dependencies to allow for Chef/Ohai 13
+
 - Improve the mocked Network data to return more platform appropriate network information.
+
 - Whitelisted additional Ohai plugins to provide better mocked data
 
   - idletime_seconds
@@ -114,7 +217,9 @@
   - shells
 
 - Remove backwards compatibility with ChefSpec < 0.9.0 which was released 5 years ago
+
 - Improve error messages when the platform data cannot be fetched remotely
+
 - Fix the logic for enabling / disabling the Github fetching being backwards
 
 ## v4.1.0 (2017-03-27)
