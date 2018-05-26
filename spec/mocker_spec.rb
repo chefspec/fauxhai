@@ -61,8 +61,8 @@ describe Fauxhai::Mocker do
     end
 
     context 'with a CentOS platform and a partial version' do
-      let(:options) { {platform: 'centos', version: '7.4'} }
-      it { is_expected.to eq '7.4.1708' }
+      let(:options) { {platform: 'centos', version: '6'} }
+      it { is_expected.to eq '6.9' }
     end
 
     context 'with a platform and an invalid version' do
