@@ -10,9 +10,6 @@ module Fauxhai
     # A message about where to find a list of platforms
     PLATFORM_LIST_MESSAGE = 'A list of available platforms is available at https://github.com/chefspec/fauxhai/blob/master/PLATFORMS.md'.freeze
 
-    # @return [Hash] The raw ohai data for the given Mock
-    attr_reader :data
-
     # Create a new Ohai Mock with fauxhai.
     #
     # @param [Hash] options
@@ -28,13 +25,10 @@ module Fauxhai
     def initialize(options = {}, &override_attributes)
       @options = { github_fetching: true }.merge(options)
 
-      @data = fauxhai_data
-      yield(@data) if block_given?
+      yield(data) if block_given?
     end
 
-    private
-
-    def fauxhai_data
+    def data
       @fauxhai_data ||= lambda do
         # If a path option was specified, use it
         if @options[:path]
@@ -73,6 +67,8 @@ module Fauxhai
         end
       end.call
     end
+
+    private
 
     # As major releases of Ohai ship it's difficult and sometimes impossible
     # to regenerate all fauxhai data. This allows us to deprecate old releases
