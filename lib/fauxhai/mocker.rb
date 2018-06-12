@@ -10,9 +10,6 @@ module Fauxhai
     # A message about where to find a list of platforms
     PLATFORM_LIST_MESSAGE = 'A list of available platforms is available at https://github.com/chefspec/fauxhai/blob/master/PLATFORMS.md'.freeze
 
-    # @return [Hash] The raw ohai data for the given Mock
-    attr_reader :data
-
     # Create a new Ohai Mock with fauxhai.
     #
     # @param [Hash] options
@@ -28,15 +25,10 @@ module Fauxhai
     def initialize(options = {}, &override_attributes)
       @options = { github_fetching: true }.merge(options)
 
-      @data = fauxhai_data
-      yield(@data) if block_given?
-
-      @data
+      yield(data) if block_given?
     end
 
-    private
-
-    def fauxhai_data
+    def data
       @fauxhai_data ||= lambda do
         # If a path option was specified, use it
         if @options[:path]
@@ -80,6 +72,8 @@ module Fauxhai
       end.call
     end
 
+    private
+
     # As major releases of Ohai ship it's difficult and sometimes impossible
     # to regenerate all fauxhai data. This allows us to deprecate old releases
     # and eventually remove them while giving end users ample warning.
@@ -93,7 +87,7 @@ module Fauxhai
 
     def platform
       @options[:platform] ||= begin
-                                STDERR.puts "WARNING: you must specify a 'platform' and 'version' to your ChefSpec Runner and/or Fauxhai constructor, in the future omitting these will become a hard error. #{PLATFORM_LIST_MESSAGE}"
+                                STDERR.puts "WARNING: you must specify a 'platform' and optionally a 'version' for your ChefSpec Runner and/or Fauxhai constructor, in the future omitting the platform will become a hard error. #{PLATFORM_LIST_MESSAGE}"
                                 'chefspec'
                               end
     end
@@ -103,11 +97,47 @@ module Fauxhai
     end
 
     def version
-      @options[:version] ||= chefspec_version || raise(Fauxhai::Exception::InvalidVersion.new("Platform version not specified. #{PLATFORM_LIST_MESSAGE}"))
+      @version ||= begin
+        if File.exist?("#{platform_path}/#{@options[:version]}.json")
+          # Whole version, use it as-is.
+          @options[:version]
+        else
+          # Check if it's a prefix of an existing version.
+          versions = Dir["#{platform_path}/*.json"].map {|path| File.basename(path, '.json') }
+          unless @options[:version].to_s == ''
+            # If the provided version is nil or '', that means take anything,
+            # otherwise run the prefix match with an extra \D to avoid the
+            # case where "7.1" matches "7.10.0".
+            prefix_re = /^#{Regexp.escape(@options[:version])}\D/
+            versions.select! {|ver| ver =~ prefix_re }
+          end
+
+          if versions.empty?
+            # No versions available, either an unknown platform or nothing matched
+            # the prefix check. Pass through the option as given so we can try
+            # github fetching.
+            @options[:version]
+          else
+            # Take the highest version available, trying to use rules that should
+            # probably mostly work on all OSes. Famous last words. The idea of
+            # the regex is to split on any punctuation (the common case) and
+            # also any single letter with digit on either side (2012r2). This
+            # leaves any long runs of letters intact (4.2-RELEASE). Then convert
+            # any run of digits to an integer to get version-ish comparison.
+            # This is basically a more flexible version of Gem::Version.
+            versions.max_by do |ver|
+              ver.split(/[^a-z0-9]|(?<=\d)[a-z](?=\d)/i).map do |part|
+                if part =~ /^\d+$/
+                  part.to_i
+                else
+                  part
+                end
+              end
+            end
+          end
+        end
+      end
     end
 
-    def chefspec_version
-      platform == 'chefspec' ? '0.6.1' : nil
-    end
   end
 end

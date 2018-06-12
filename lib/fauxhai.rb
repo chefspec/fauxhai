@@ -1,8 +1,8 @@
 module Fauxhai
-  require 'fauxhai/exception'
-  require 'fauxhai/fetcher'
-  require 'fauxhai/mocker'
-  require 'fauxhai/version'
+  autoload :Exception, 'fauxhai/exception'
+  autoload :Fetcher, 'fauxhai/fetcher'
+  autoload :Mocker, 'fauxhai/mocker'
+  autoload :VERSION, 'fauxhai/version'
 
   def self.root
     @@root ||= File.expand_path('../../', __FILE__)
