@@ -1,5 +1,24 @@
 # Fauxhai Changelog
 
+## v6.4.0 (2018-06-28)
+
+### New Platforms
+
+- CentOS 7.5
+- Debian 8.11
+- FreeBSD 11.2
+
+### Dumps Updated for Chef 14.2
+
+- Amazon Linux
+- Redhat
+- SLES
+- Ubuntu
+
+### New Deprecations
+
+- FreeBSD 10.3
+
 ## v6.3.0 (2018-06-11)
 
 New intelligent platform and version matching. This means if you specify the platform centos we'll now automatically match you to the latest version. If you specify the version of 6 we'll automatically match you to 6.9\. This should make it easier to write specs that don't need constant updating as we deprecate dumps of minor versions.
