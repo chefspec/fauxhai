@@ -56,9 +56,9 @@ This file lists each platform known to Fauxhai and the available versions for ea
 
 ### freebsd
 
-  - 10.3
   - 10.4
   - 11.1
+  - 11.2
 
 ### gentoo
 
