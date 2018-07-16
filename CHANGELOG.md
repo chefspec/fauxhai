@@ -1,5 +1,13 @@
 # Fauxhai Changelog
 
+## v6.5.0 (2018-07-16)
+
+- Re-gathered the following operating systems on AWS with Chef 14.2
+
+  - CentOS 6.9/7.4/7.5
+  - Fedora 24-28
+  - Debian 9.4
+
 ## v6.4.0 (2018-06-28)
 
 ### New Platforms
