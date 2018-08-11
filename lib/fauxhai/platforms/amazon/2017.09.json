@@ -10,12 +10,12 @@
   },
   "chef_packages": {
     "chef": {
-      "chef_root": "/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.2.0/lib",
-      "version": "14.2.0"
+      "chef_root": "/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.3.37/lib",
+      "version": "14.3.37"
     },
     "ohai": {
-      "ohai_root": "/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/ohai-14.2.0/lib/ohai",
-      "version": "14.2.0"
+      "ohai_root": "/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/ohai-14.3.1/lib/ohai",
+      "version": "14.3.1"
     }
   },
   "command": {
@@ -82,17 +82,17 @@
       },
       "/dev/xvda1": {
         "fs_type": "ext4",
-        "inodes_available": "472586",
+        "inodes_available": "472276",
         "inodes_percent_used": "10%",
-        "inodes_used": "51702",
-        "kb_available": "6775864",
+        "inodes_used": "52012",
+        "kb_available": "6769048",
         "kb_size": "8123812",
-        "kb_used": "1247700",
+        "kb_used": "1254516",
         "label": "/",
         "mount_options": [
-          "data=ordered",
+          "rw",
           "noatime",
-          "rw"
+          "data=ordered"
         ],
         "mounts": [
           "/"
@@ -104,11 +104,11 @@
       "devpts": {
         "fs_type": "devpts",
         "mount_options": [
+          "rw",
+          "relatime",
           "gid=5",
           "mode=620",
-          "ptmxmode=000",
-          "relatime",
-          "rw"
+          "ptmxmode=000"
         ],
         "mounts": [
           "/dev/pts"
@@ -116,30 +116,30 @@
       },
       "devtmpfs": {
         "fs_type": "devtmpfs",
-        "inodes_available": "253484",
+        "inodes_available": "124460",
         "inodes_percent_used": "1%",
         "inodes_used": "431",
-        "kb_available": "1015604",
-        "kb_size": "1015660",
+        "kb_available": "499508",
+        "kb_size": "499564",
         "kb_used": "56",
         "mount_options": [
-          "mode=755",
-          "nr_inodes=253915",
-          "relatime",
           "rw",
-          "size=1015660k"
+          "relatime",
+          "size=499564k",
+          "nr_inodes=124891",
+          "mode=755"
         ],
         "mounts": [
           "/dev"
         ],
         "percent_used": "1%",
-        "total_inodes": "253915"
+        "total_inodes": "124891"
       },
       "none": {
         "fs_type": "binfmt_misc",
         "mount_options": [
-          "relatime",
-          "rw"
+          "rw",
+          "relatime"
         ],
         "mounts": [
           "/proc/sys/fs/binfmt_misc"
@@ -148,8 +148,8 @@
       "proc": {
         "fs_type": "proc",
         "mount_options": [
-          "relatime",
-          "rw"
+          "rw",
+          "relatime"
         ],
         "mounts": [
           "/proc"
@@ -158,8 +158,8 @@
       "sysfs": {
         "fs_type": "sysfs",
         "mount_options": [
-          "relatime",
-          "rw"
+          "rw",
+          "relatime"
         ],
         "mounts": [
           "/sys"
@@ -167,21 +167,21 @@
       },
       "tmpfs": {
         "fs_type": "tmpfs",
-        "inodes_available": "256155",
+        "inodes_available": "127131",
         "inodes_percent_used": "1%",
         "inodes_used": "1",
-        "kb_available": "1024624",
-        "kb_size": "1024624",
+        "kb_available": "508528",
+        "kb_size": "508528",
         "kb_used": "0",
         "mount_options": [
-          "relatime",
-          "rw"
+          "rw",
+          "relatime"
         ],
         "mounts": [
           "/dev/shm"
         ],
         "percent_used": "0%",
-        "total_inodes": "256156"
+        "total_inodes": "127132"
       }
     },
     "by_mountpoint": {
@@ -190,17 +190,17 @@
           "/dev/xvda1"
         ],
         "fs_type": "ext4",
-        "inodes_available": "472586",
+        "inodes_available": "472276",
         "inodes_percent_used": "10%",
-        "inodes_used": "51702",
-        "kb_available": "6775864",
+        "inodes_used": "52012",
+        "kb_available": "6769048",
         "kb_size": "8123812",
-        "kb_used": "1247700",
+        "kb_used": "1254516",
         "label": "/",
         "mount_options": [
-          "data=ordered",
+          "rw",
           "noatime",
-          "rw"
+          "data=ordered"
         ],
         "percent_used": "16%",
         "total_inodes": "524288",
@@ -211,21 +211,21 @@
           "devtmpfs"
         ],
         "fs_type": "devtmpfs",
-        "inodes_available": "253484",
+        "inodes_available": "124460",
         "inodes_percent_used": "1%",
         "inodes_used": "431",
-        "kb_available": "1015604",
-        "kb_size": "1015660",
+        "kb_available": "499508",
+        "kb_size": "499564",
         "kb_used": "56",
         "mount_options": [
-          "mode=755",
-          "nr_inodes=253915",
-          "relatime",
           "rw",
-          "size=1015660k"
+          "relatime",
+          "size=499564k",
+          "nr_inodes=124891",
+          "mode=755"
         ],
         "percent_used": "1%",
-        "total_inodes": "253915"
+        "total_inodes": "124891"
       },
       "/dev/pts": {
         "devices": [
@@ -233,11 +233,11 @@
         ],
         "fs_type": "devpts",
         "mount_options": [
+          "rw",
+          "relatime",
           "gid=5",
           "mode=620",
-          "ptmxmode=000",
-          "relatime",
-          "rw"
+          "ptmxmode=000"
         ]
       },
       "/dev/shm": {
@@ -245,18 +245,18 @@
           "tmpfs"
         ],
         "fs_type": "tmpfs",
-        "inodes_available": "256155",
+        "inodes_available": "127131",
         "inodes_percent_used": "1%",
         "inodes_used": "1",
-        "kb_available": "1024624",
-        "kb_size": "1024624",
+        "kb_available": "508528",
+        "kb_size": "508528",
         "kb_used": "0",
         "mount_options": [
-          "relatime",
-          "rw"
+          "rw",
+          "relatime"
         ],
         "percent_used": "0%",
-        "total_inodes": "256156"
+        "total_inodes": "127132"
       },
       "/proc": {
         "devices": [
@@ -264,8 +264,8 @@
         ],
         "fs_type": "proc",
         "mount_options": [
-          "relatime",
-          "rw"
+          "rw",
+          "relatime"
         ]
       },
       "/proc/sys/fs/binfmt_misc": {
@@ -274,8 +274,8 @@
         ],
         "fs_type": "binfmt_misc",
         "mount_options": [
-          "relatime",
-          "rw"
+          "rw",
+          "relatime"
         ]
       },
       "/sys": {
@@ -284,8 +284,8 @@
         ],
         "fs_type": "sysfs",
         "mount_options": [
-          "relatime",
-          "rw"
+          "rw",
+          "relatime"
         ]
       }
     },
@@ -296,18 +296,18 @@
       "/dev/xvda1,/": {
         "device": "/dev/xvda1",
         "fs_type": "ext4",
-        "inodes_available": "472586",
+        "inodes_available": "472276",
         "inodes_percent_used": "10%",
-        "inodes_used": "51702",
-        "kb_available": "6775864",
+        "inodes_used": "52012",
+        "kb_available": "6769048",
         "kb_size": "8123812",
-        "kb_used": "1247700",
+        "kb_used": "1254516",
         "label": "/",
         "mount": "/",
         "mount_options": [
-          "data=ordered",
+          "rw",
           "noatime",
-          "rw"
+          "data=ordered"
         ],
         "percent_used": "16%",
         "total_inodes": "524288",
@@ -318,40 +318,40 @@
         "fs_type": "devpts",
         "mount": "/dev/pts",
         "mount_options": [
+          "rw",
+          "relatime",
           "gid=5",
           "mode=620",
-          "ptmxmode=000",
-          "relatime",
-          "rw"
+          "ptmxmode=000"
         ]
       },
       "devtmpfs,/dev": {
         "device": "devtmpfs",
         "fs_type": "devtmpfs",
-        "inodes_available": "253484",
+        "inodes_available": "124460",
         "inodes_percent_used": "1%",
         "inodes_used": "431",
-        "kb_available": "1015604",
-        "kb_size": "1015660",
+        "kb_available": "499508",
+        "kb_size": "499564",
         "kb_used": "56",
         "mount": "/dev",
         "mount_options": [
-          "mode=755",
-          "nr_inodes=253915",
-          "relatime",
           "rw",
-          "size=1015660k"
+          "relatime",
+          "size=499564k",
+          "nr_inodes=124891",
+          "mode=755"
         ],
         "percent_used": "1%",
-        "total_inodes": "253915"
+        "total_inodes": "124891"
       },
       "none,/proc/sys/fs/binfmt_misc": {
         "device": "none",
         "fs_type": "binfmt_misc",
         "mount": "/proc/sys/fs/binfmt_misc",
         "mount_options": [
-          "relatime",
-          "rw"
+          "rw",
+          "relatime"
         ]
       },
       "proc,/proc": {
@@ -359,8 +359,8 @@
         "fs_type": "proc",
         "mount": "/proc",
         "mount_options": [
-          "relatime",
-          "rw"
+          "rw",
+          "relatime"
         ]
       },
       "sysfs,/sys": {
@@ -368,26 +368,26 @@
         "fs_type": "sysfs",
         "mount": "/sys",
         "mount_options": [
-          "relatime",
-          "rw"
+          "rw",
+          "relatime"
         ]
       },
       "tmpfs,/dev/shm": {
         "device": "tmpfs",
         "fs_type": "tmpfs",
-        "inodes_available": "256155",
+        "inodes_available": "127131",
         "inodes_percent_used": "1%",
         "inodes_used": "1",
-        "kb_available": "1024624",
-        "kb_size": "1024624",
+        "kb_available": "508528",
+        "kb_size": "508528",
         "kb_used": "0",
         "mount": "/dev/shm",
         "mount_options": [
-          "relatime",
-          "rw"
+          "rw",
+          "relatime"
         ],
         "percent_used": "0%",
-        "total_inodes": "256156"
+        "total_inodes": "127132"
       }
     }
   },
@@ -553,25 +553,25 @@
         "encapsulation": "Ethernet",
         "flags": [
           "BROADCAST",
-          "LOWER_UP",
           "MULTICAST",
-          "UP"
+          "UP",
+          "LOWER_UP"
         ],
         "mtu": "1500",
         "number": "0",
         "ring_params": {},
         "routes": [
           {
+            "destination": "default",
+            "family": "inet",
+            "via": "10.0.0.1"
+          },
+          {
             "destination": "10.0.0.0/24",
             "family": "inet",
             "proto": "kernel",
             "scope": "link",
             "src": "10.0.0.2"
-          },
-          {
-            "destination": "default",
-            "family": "inet",
-            "via": "10.0.0.1"
           },
           {
             "destination": "fe80::/64",
@@ -603,15 +603,15 @@
         "encapsulation": "Loopback",
         "flags": [
           "LOOPBACK",
-          "LOWER_UP",
-          "UP"
+          "UP",
+          "LOWER_UP"
         ],
         "mtu": "65536",
         "state": "unknown"
       }
     }
   },
-  "ohai_time": 1530211650.2798667,
+  "ohai_time": 1533958384.9614263,
   "os": "linux",
   "os_version": "4.9.81-35.56.amzn1.x86_64",
   "packages": {
@@ -814,9 +814,9 @@
     "chef": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1530211646",
+      "installdate": "1533958382",
       "release": "1.el6",
-      "version": "14.2.0"
+      "version": "14.3.37"
     },
     "chkconfig": {
       "arch": "x86_64",
@@ -1024,14 +1024,14 @@
     "dhclient": {
       "arch": "x86_64",
       "epoch": "12",
-      "installdate": "1530211444",
+      "installdate": "1533958369",
       "release": "53.P1.28.amzn1",
       "version": "4.1.1"
     },
     "dhcp-common": {
       "arch": "x86_64",
       "epoch": "12",
-      "installdate": "1530211444",
+      "installdate": "1533958369",
       "release": "53.P1.28.amzn1",
       "version": "4.1.1"
     },
@@ -1255,14 +1255,14 @@
     "glibc": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1530211443",
+      "installdate": "1533958369",
       "release": "222.173.amzn1",
       "version": "2.17"
     },
     "glibc-common": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1530211441",
+      "installdate": "1533958366",
       "release": "222.173.amzn1",
       "version": "2.17"
     },
@@ -1276,8 +1276,8 @@
     "gnupg2": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1520405211",
-      "release": "1.30.amzn1",
+      "installdate": "1533958369",
+      "release": "2.32.amzn1",
       "version": "2.0.28"
     },
     "gpg-pubkey": {
@@ -1416,7 +1416,7 @@
     "java-1.7.0-openjdk": {
       "arch": "x86_64",
       "epoch": "1",
-      "installdate": "1530211445",
+      "installdate": "1533958370",
       "release": "2.6.14.8.80.amzn1",
       "version": "1.7.0.181"
     },
@@ -1458,9 +1458,9 @@
     "kernel-tools": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1530211444",
-      "release": "56.37.amzn1",
-      "version": "4.14.47"
+      "installdate": "1533958369",
+      "release": "64.43.amzn1",
+      "version": "4.14.59"
     },
     "keyutils": {
       "arch": "x86_64",
@@ -2774,7 +2774,7 @@
     "python27-paramiko": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1530211446",
+      "installdate": "1533958371",
       "release": "2.6.amzn1",
       "version": "1.15.1"
     },
@@ -3348,22 +3348,22 @@
     "yum-plugin-priorities": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1520405211",
-      "release": "40.29.amzn1",
+      "installdate": "1533958371",
+      "release": "46.30.amzn1",
       "version": "1.1.31"
     },
     "yum-plugin-upgrade-helper": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1520405218",
-      "release": "40.29.amzn1",
+      "installdate": "1533958371",
+      "release": "46.30.amzn1",
       "version": "1.1.31"
     },
     "yum-utils": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1520405218",
-      "release": "40.29.amzn1",
+      "installdate": "1533958371",
+      "release": "46.30.amzn1",
       "version": "1.1.31"
     },
     "zip": {
@@ -3385,12 +3385,12 @@
   "platform_family": "amazon",
   "platform_version": "2017.09",
   "root_group": "root",
-  "shard_seed": 250296899,
+  "shard_seed": 134884951,
   "shells": [
-    "/bin/bash",
-    "/bin/dash",
     "/bin/sh",
-    "/sbin/nologin"
+    "/bin/bash",
+    "/sbin/nologin",
+    "/bin/dash"
   ],
   "time": {
     "timezone": "GMT"
