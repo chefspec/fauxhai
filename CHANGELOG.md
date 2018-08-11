@@ -1,5 +1,60 @@
 # Fauxhai Changelog
 
+## v6.6.0 (2018-08-11)
+
+### New Platforms
+
+- Debian 9.5
+
+### Regenerated on AWS
+
+These systems were previously on Chef 13 on VirtualBox, but are now updated for Chef 14.3 on AWS
+
+- Amazon 2012.09
+- Amazon 2013.09
+- Amazon 2014.03
+- Amazon 2014.09
+- Debian 8.7
+- Debian 9.0
+- Debian 9.1
+- Debian 9.2
+- Debian 9.3
+- Redhat 7.2
+
+### Updated From Chef 14.x -> Chef 14.3
+
+- Amazon 2015.03
+- Amazon 2015.09
+- Amazon 2016.03
+- Amazon 2016.09
+- Amazon 2017.03
+- Amazon 2017.09
+- Amazon 2018.03
+- CentOS 6.9
+- CentOS 7.5
+- CentOS 7.4
+- Debian 9.4
+- Fedora 24
+- Fedora 25
+- Fedora 26
+- Fedora 27
+- Fedora 28
+- openBSD 6.2
+- opeSUSE 42.2
+- opeSUSE 42.3
+- Redhat 6.8
+- Redhat 6.9
+- Redhat 7.3
+- Redhat 7.4
+- Redhat 7.5
+- SLES 11.4
+- SLES 12.2
+- SLES 12.3
+- SLES 12.4
+- Ubuntu 14.04
+- Ubuntu 16.04
+- Ubuntu 18.04
+
 ## v6.5.0 (2018-07-16)
 
 - Re-gathered the following operating systems on AWS with Chef 14.2
