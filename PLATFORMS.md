@@ -126,7 +126,6 @@ This file lists each platform known to Fauxhai and the available versions for ea
 
 ### solaris2
 
-  - 5.10
   - 5.11
 
 ### suse
