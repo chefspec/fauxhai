@@ -1,5 +1,18 @@
 # Fauxhai Changelog
 
+## v6.8.0 (2018-10-19)
+
+### New Platforms
+
+- Solaris 5.11 has been updated to the latest Solaris 11.4 release on Chef 14.5
+- macOS 10.14
+- SLES 15
+
+### Newly Deprecated Platforms
+
+- Solaris 5.11
+- macOS 10.10 
+
 ## v6.7.0 (2018-09-26)
 
 ### Regenerated on AWS
