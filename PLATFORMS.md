@@ -77,10 +77,10 @@ This file lists each platform known to Fauxhai and the available versions for ea
 
 ### mac_os_x
 
-  - 10.10
   - 10.11
   - 10.12
   - 10.13
+  - 10.14
 
 ### nexus
 
