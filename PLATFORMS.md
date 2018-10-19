@@ -66,10 +66,6 @@ This file lists each platform known to Fauxhai and the available versions for ea
 
   - 4.9.95-gentoo
 
-### ios_xr
-
-  - 6.0.0.14I
-
 ### linuxmint
 
   - 18.2
@@ -81,14 +77,6 @@ This file lists each platform known to Fauxhai and the available versions for ea
   - 10.12
   - 10.13
   - 10.14
-
-### nexus
-
-  - 5
-
-### omnios
-
-  - 151018
 
 ### openbsd
 
