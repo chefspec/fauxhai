@@ -1,5 +1,20 @@
 # Fauxhai Changelog
 
+## v6.9.0 (2018-10-20)
+
+### New / Updated Platforms
+
+- Linux Mint 18.3 updated to Chef 14.5
+- Added Linux Mint 19
+
+### Newly Deprecated Platforms
+
+- Linux Mint 18.2
+- Gentoo 4.9.6
+- All versions of ios_xr
+- All versions of omnios
+- All versions of nexus
+
 ## v6.8.0 (2018-10-19)
 
 ### New Platforms
@@ -11,7 +26,7 @@
 ### Newly Deprecated Platforms
 
 - Solaris 5.11
-- macOS 10.10 
+- macOS 10.10
 
 ## v6.7.0 (2018-09-26)
 
