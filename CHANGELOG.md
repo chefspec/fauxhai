@@ -30,7 +30,7 @@
 
 ### Newly Deprecated Platforms
 
-- Solaris 5.11
+- Solaris 5.10
 - macOS 10.10
 
 ## v6.7.0 (2018-09-26)
