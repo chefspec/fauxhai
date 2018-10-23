@@ -1,5 +1,10 @@
 # Fauxhai Changelog
 
+## v6.9.1 (2018-10-22)
+
+- Remove extra 'etc' plugin data from several dumps
+- Don't ship contributing and testing deps in the published gem to reduce gem size
+
 ## v6.9.0 (2018-10-20)
 
 ### New / Updated Platforms
