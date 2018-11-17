@@ -14,7 +14,7 @@ describe 'awesome_cookbook::default' do
 
   it 'should install awesome' do
     @runner = ChefSpec::ChefRunner.new.converge('tmpreaper::default')
-    @runner.should install_package 'awesome'
+    expect(@runner).to install_package 'awesome'
   end
 end
 ```
@@ -31,7 +31,7 @@ describe 'awesome_cookbook::default' do
 
   it 'should install awesome' do
     @runner = ChefSpec::ChefRunner.new.converge('tmpreaper::default')
-    @runner.should install_package 'awesome'
+    expect(@runner).to install_package 'awesome'
   end
 end
 ```
@@ -71,7 +71,7 @@ describe 'awesome_cookbook::default' do
 
   it 'should install awesome' do
     @runner = ChefSpec::ChefRunner.new.converge('tmpreaper::default')
-    @runner.should install_package 'awesome'
+    expect(@runner).to install_package 'awesome'
   end
 end
 ```
@@ -96,7 +96,7 @@ describe 'awesome_cookbook::default' do
 
   it 'should install awesome' do
     @runner = ChefSpec::ChefRunner.new.converge('tmpreaper::default')
-    @runner.should install_package 'awesome'
+    expect(@runner).to install_package 'awesome'
   end
 end
 ```
@@ -119,7 +119,7 @@ describe 'awesome_cookbook::default' do
 
   it 'should install awesome' do
     @runner = ChefSpec::ChefRunner.new.converge('tmpreaper::default')
-    @runner.should install_package 'awesome'
+    expect(@runner).to install_package 'awesome'
   end
 end
 ```
@@ -184,7 +184,7 @@ describe 'awesome_cookbook::default' do
 
       it 'should install awesome' do
         @runner = ChefSpec::ChefRunner.new.converge('tmpreaper::default')
-        @runner.should install_package 'awesome'
+        expect(@runner).to install_package 'awesome'
       end
     end
   end
