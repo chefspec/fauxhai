@@ -66,12 +66,12 @@
   },
   "chef_packages": {
     "chef": {
-      "chef_root": "/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.5.27/lib",
-      "version": "14.5.27"
+      "chef_root": "/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.8.12/lib",
+      "version": "14.8.12"
     },
     "ohai": {
-      "ohai_root": "/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/ohai-14.5.4/lib/ohai",
-      "version": "14.5.4"
+      "ohai_root": "/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/ohai-14.8.10/lib/ohai",
+      "version": "14.8.10"
     }
   },
   "command": {
@@ -202,12 +202,12 @@
     "processor": {
       "all_records": [
         {
-          "Current Speed": "2395 MHz",
+          "Current Speed": "2400 MHz",
           "External Clock": "Unknown",
           "Family": "Other",
           "ID": "F2 06 03 00 FF FB 89 17",
           "Manufacturer": "Intel",
-          "Max Speed": "2395 MHz",
+          "Max Speed": "2400 MHz",
           "Socket Designation": "CPU 1",
           "Status": "Populated, Enabled",
           "Type": "Central Processor",
@@ -219,12 +219,12 @@
           "size": "4"
         }
       ],
-      "current_speed": "2395 MHz",
+      "current_speed": "2400 MHz",
       "external_clock": "Unknown",
       "family": "Other",
       "id": "F2 06 03 00 FF FB 89 17",
       "manufacturer": "Intel",
-      "max_speed": "2395 MHz",
+      "max_speed": "2400 MHz",
       "socket_designation": "CPU 1",
       "status": "Populated, Enabled",
       "type": "Central Processor",
@@ -244,8 +244,8 @@
           "Manufacturer": "Xen",
           "Product Name": "HVM domU",
           "SKU Number": "Not Specified",
-          "Serial Number": "ec2fc3f3-b059-0a6d-d0d6-253163a9493b",
-          "UUID": "EC2FC3F3-B059-0A6D-D0D6-253163A9493B",
+          "Serial Number": "ec204a3d-a29d-fa0f-b1f1-1d6b5c908ad5",
+          "UUID": "EC204A3D-A29D-FA0F-B1F1-1D6B5C908AD5",
           "Version": "4.2.amazon",
           "Wake-up Type": "Power Switch",
           "application_identifier": "System Information",
@@ -256,9 +256,9 @@
       "family": "Not Specified",
       "manufacturer": "Xen",
       "product_name": "HVM domU",
-      "serial_number": "ec2fc3f3-b059-0a6d-d0d6-253163a9493b",
+      "serial_number": "ec204a3d-a29d-fa0f-b1f1-1d6b5c908ad5",
       "sku_number": "Not Specified",
-      "uuid": "EC2FC3F3-B059-0A6D-D0D6-253163A9493B",
+      "uuid": "EC204A3D-A29D-FA0F-B1F1-1D6B5C908AD5",
       "version": "4.2.amazon",
       "wake_up_type": "Power Switch"
     }
@@ -270,7 +270,7 @@
         "fs_type": "btrfs",
         "kb_available": "102731852",
         "kb_size": "104857600",
-        "kb_used": "28340",
+        "kb_used": "28596",
         "mount_options": [
           "rw",
           "relatime",
@@ -283,19 +283,19 @@
           "/var/lib/docker/btrfs"
         ],
         "percent_used": "1%",
-        "uuid": "581521d6-a143-407d-bc87-d7f12bf905f6"
+        "uuid": "3b755f2d-e5f7-471d-94d5-43ff57bcc4ac"
       },
       "/dev/xvda": {
         "mounts": []
       },
       "/dev/xvda1": {
         "fs_type": "ext4",
-        "inodes_available": "593245",
-        "inodes_percent_used": "10%",
-        "inodes_used": "62115",
-        "kb_available": "7898504",
+        "inodes_available": "604059",
+        "inodes_percent_used": "8%",
+        "inodes_used": "51301",
+        "kb_available": "7427852",
         "kb_size": "10189112",
-        "kb_used": "1749988",
+        "kb_used": "2220640",
         "label": "ROOT",
         "mount_options": [
           "rw",
@@ -305,7 +305,7 @@
         "mounts": [
           "/"
         ],
-        "percent_used": "19%",
+        "percent_used": "24%",
         "total_inodes": "655360",
         "uuid": "70cc68a9-8721-4a9b-8ae8-731ed68310e1"
       },
@@ -331,20 +331,20 @@
           "nodev",
           "noexec",
           "relatime",
-          "blkio"
+          "memory"
         ],
         "mounts": [
           "/sys/fs/cgroup/systemd",
           "/sys/fs/cgroup/net_cls,net_prio",
           "/sys/fs/cgroup/cpu,cpuacct",
-          "/sys/fs/cgroup/memory",
-          "/sys/fs/cgroup/devices",
-          "/sys/fs/cgroup/cpuset",
-          "/sys/fs/cgroup/hugetlb",
+          "/sys/fs/cgroup/blkio",
+          "/sys/fs/cgroup/pids",
           "/sys/fs/cgroup/perf_event",
           "/sys/fs/cgroup/freezer",
-          "/sys/fs/cgroup/pids",
-          "/sys/fs/cgroup/blkio"
+          "/sys/fs/cgroup/cpuset",
+          "/sys/fs/cgroup/devices",
+          "/sys/fs/cgroup/hugetlb",
+          "/sys/fs/cgroup/memory"
         ]
       },
       "debugfs": {
@@ -471,6 +471,12 @@
       },
       "shm": {
         "fs_type": "tmpfs",
+        "inodes_available": "126794",
+        "inodes_percent_used": "1%",
+        "inodes_used": "1",
+        "kb_available": "65536",
+        "kb_size": "65536",
+        "kb_used": "0",
         "mount_options": [
           "rw",
           "nosuid",
@@ -480,8 +486,10 @@
           "size=65536k"
         ],
         "mounts": [
-          "/var/lib/docker/containers/affef0ac6cc9196ecf4bca572ce0a53dbdd26832cae7321dbe147e134e0c8441/shm"
-        ]
+          "/var/lib/docker/containers/4e5a932ed85f463ca2f984df760bf55793b7129c5969fb14b6b6008f1f2a8973/shm"
+        ],
+        "percent_used": "0%",
+        "total_inodes": "126795"
       },
       "sysfs": {
         "fs_type": "sysfs",
@@ -501,7 +509,7 @@
         "mount_options": [
           "rw",
           "relatime",
-          "fd=29",
+          "fd=28",
           "pgrp=1",
           "timeout=0",
           "minproto=5",
@@ -514,12 +522,12 @@
       },
       "tmpfs": {
         "fs_type": "tmpfs",
-        "inodes_available": "126791",
+        "inodes_available": "126790",
         "inodes_percent_used": "1%",
-        "inodes_used": "4",
-        "kb_available": "101436",
-        "kb_size": "101436",
-        "kb_used": "0",
+        "inodes_used": "5",
+        "kb_available": "507168",
+        "kb_size": "507180",
+        "kb_used": "12",
         "mount_options": [
           "rw",
           "nosuid",
@@ -532,9 +540,9 @@
           "/run",
           "/sys/fs/cgroup",
           "/run/user/0",
-          "/var/lib/docker/containers/affef0ac6cc9196ecf4bca572ce0a53dbdd26832cae7321dbe147e134e0c8441/suse.secrets"
+          "/var/lib/docker/containers/4e5a932ed85f463ca2f984df760bf55793b7129c5969fb14b6b6008f1f2a8973/suse.secrets"
         ],
-        "percent_used": "0%",
+        "percent_used": "1%",
         "total_inodes": "126795"
       },
       "tracefs": {
@@ -554,19 +562,19 @@
           "/dev/xvda1"
         ],
         "fs_type": "ext4",
-        "inodes_available": "593245",
-        "inodes_percent_used": "10%",
-        "inodes_used": "62115",
-        "kb_available": "7898504",
+        "inodes_available": "604059",
+        "inodes_percent_used": "8%",
+        "inodes_used": "51301",
+        "kb_available": "7427852",
         "kb_size": "10189112",
-        "kb_used": "1749988",
+        "kb_used": "2220640",
         "label": "ROOT",
         "mount_options": [
           "rw",
           "relatime",
           "data=ordered"
         ],
-        "percent_used": "19%",
+        "percent_used": "24%",
         "total_inodes": "655360",
         "uuid": "70cc68a9-8721-4a9b-8ae8-731ed68310e1"
       },
@@ -663,7 +671,7 @@
         "mount_options": [
           "rw",
           "relatime",
-          "fd=29",
+          "fd=28",
           "pgrp=1",
           "timeout=0",
           "minproto=5",
@@ -676,12 +684,12 @@
           "tmpfs"
         ],
         "fs_type": "tmpfs",
-        "inodes_available": "126329",
+        "inodes_available": "126323",
         "inodes_percent_used": "1%",
-        "inodes_used": "466",
-        "kb_available": "499204",
+        "inodes_used": "472",
+        "kb_available": "499128",
         "kb_size": "507180",
-        "kb_used": "7976",
+        "kb_used": "8052",
         "mount_options": [
           "rw",
           "nosuid",
@@ -979,7 +987,7 @@
         "fs_type": "btrfs",
         "kb_available": "102731852",
         "kb_size": "104857600",
-        "kb_used": "28340",
+        "kb_used": "28596",
         "mount_options": [
           "rw",
           "relatime",
@@ -988,7 +996,7 @@
           "subvol=/"
         ],
         "percent_used": "1%",
-        "uuid": "581521d6-a143-407d-bc87-d7f12bf905f6"
+        "uuid": "3b755f2d-e5f7-471d-94d5-43ff57bcc4ac"
       },
       "/var/lib/docker/btrfs": {
         "devices": [
@@ -1004,11 +1012,17 @@
           "subvol=/btrfs"
         ]
       },
-      "/var/lib/docker/containers/affef0ac6cc9196ecf4bca572ce0a53dbdd26832cae7321dbe147e134e0c8441/shm": {
+      "/var/lib/docker/containers/4e5a932ed85f463ca2f984df760bf55793b7129c5969fb14b6b6008f1f2a8973/shm": {
         "devices": [
           "shm"
         ],
         "fs_type": "tmpfs",
+        "inodes_available": "126794",
+        "inodes_percent_used": "1%",
+        "inodes_used": "1",
+        "kb_available": "65536",
+        "kb_size": "65536",
+        "kb_used": "0",
         "mount_options": [
           "rw",
           "nosuid",
@@ -1016,20 +1030,30 @@
           "noexec",
           "relatime",
           "size=65536k"
-        ]
+        ],
+        "percent_used": "0%",
+        "total_inodes": "126795"
       },
-      "/var/lib/docker/containers/affef0ac6cc9196ecf4bca572ce0a53dbdd26832cae7321dbe147e134e0c8441/suse.secrets": {
+      "/var/lib/docker/containers/4e5a932ed85f463ca2f984df760bf55793b7129c5969fb14b6b6008f1f2a8973/suse.secrets": {
         "devices": [
           "tmpfs"
         ],
         "fs_type": "tmpfs",
+        "inodes_available": "126790",
+        "inodes_percent_used": "1%",
+        "inodes_used": "5",
+        "kb_available": "507168",
+        "kb_size": "507180",
+        "kb_used": "12",
         "mount_options": [
           "rw",
           "nosuid",
           "nodev",
           "noexec",
           "relatime"
-        ]
+        ],
+        "percent_used": "1%",
+        "total_inodes": "126795"
       }
     },
     "by_pair": {
@@ -1038,10 +1062,10 @@
         "fs_type": "btrfs",
         "kb_available": "102731852",
         "kb_size": "104857600",
-        "kb_used": "28340",
+        "kb_used": "28596",
         "mount": "/var/lib/docker",
         "percent_used": "1%",
-        "uuid": "581521d6-a143-407d-bc87-d7f12bf905f6"
+        "uuid": "3b755f2d-e5f7-471d-94d5-43ff57bcc4ac"
       },
       "/dev/loop0,/var/lib/docker/btrfs": {
         "device": "/dev/loop0",
@@ -1061,12 +1085,12 @@
       "/dev/xvda1,/": {
         "device": "/dev/xvda1",
         "fs_type": "ext4",
-        "inodes_available": "593245",
-        "inodes_percent_used": "10%",
-        "inodes_used": "62115",
-        "kb_available": "7898504",
+        "inodes_available": "604059",
+        "inodes_percent_used": "8%",
+        "inodes_used": "51301",
+        "kb_available": "7427852",
         "kb_size": "10189112",
-        "kb_used": "1749988",
+        "kb_used": "2220640",
         "label": "ROOT",
         "mount": "/",
         "mount_options": [
@@ -1074,7 +1098,7 @@
           "relatime",
           "data=ordered"
         ],
-        "percent_used": "19%",
+        "percent_used": "24%",
         "total_inodes": "655360",
         "uuid": "70cc68a9-8721-4a9b-8ae8-731ed68310e1"
       },
@@ -1361,10 +1385,16 @@
           "relatime"
         ]
       },
-      "shm,/var/lib/docker/containers/affef0ac6cc9196ecf4bca572ce0a53dbdd26832cae7321dbe147e134e0c8441/shm": {
+      "shm,/var/lib/docker/containers/4e5a932ed85f463ca2f984df760bf55793b7129c5969fb14b6b6008f1f2a8973/shm": {
         "device": "shm",
         "fs_type": "tmpfs",
-        "mount": "/var/lib/docker/containers/affef0ac6cc9196ecf4bca572ce0a53dbdd26832cae7321dbe147e134e0c8441/shm",
+        "inodes_available": "126794",
+        "inodes_percent_used": "1%",
+        "inodes_used": "1",
+        "kb_available": "65536",
+        "kb_size": "65536",
+        "kb_used": "0",
+        "mount": "/var/lib/docker/containers/4e5a932ed85f463ca2f984df760bf55793b7129c5969fb14b6b6008f1f2a8973/shm",
         "mount_options": [
           "rw",
           "nosuid",
@@ -1372,7 +1402,9 @@
           "noexec",
           "relatime",
           "size=65536k"
-        ]
+        ],
+        "percent_used": "0%",
+        "total_inodes": "126795"
       },
       "sysfs,/sys": {
         "device": "sysfs",
@@ -1393,7 +1425,7 @@
         "mount_options": [
           "rw",
           "relatime",
-          "fd=29",
+          "fd=28",
           "pgrp=1",
           "timeout=0",
           "minproto=5",
@@ -1421,12 +1453,12 @@
       "tmpfs,/run": {
         "device": "tmpfs",
         "fs_type": "tmpfs",
-        "inodes_available": "126329",
+        "inodes_available": "126323",
         "inodes_percent_used": "1%",
-        "inodes_used": "466",
-        "kb_available": "499204",
+        "inodes_used": "472",
+        "kb_available": "499128",
         "kb_size": "507180",
-        "kb_used": "7976",
+        "kb_used": "8052",
         "mount": "/run",
         "mount_options": [
           "rw",
@@ -1479,17 +1511,25 @@
         "percent_used": "0%",
         "total_inodes": "126795"
       },
-      "tmpfs,/var/lib/docker/containers/affef0ac6cc9196ecf4bca572ce0a53dbdd26832cae7321dbe147e134e0c8441/suse.secrets": {
+      "tmpfs,/var/lib/docker/containers/4e5a932ed85f463ca2f984df760bf55793b7129c5969fb14b6b6008f1f2a8973/suse.secrets": {
         "device": "tmpfs",
         "fs_type": "tmpfs",
-        "mount": "/var/lib/docker/containers/affef0ac6cc9196ecf4bca572ce0a53dbdd26832cae7321dbe147e134e0c8441/suse.secrets",
+        "inodes_available": "126790",
+        "inodes_percent_used": "1%",
+        "inodes_used": "5",
+        "kb_available": "507168",
+        "kb_size": "507180",
+        "kb_used": "12",
+        "mount": "/var/lib/docker/containers/4e5a932ed85f463ca2f984df760bf55793b7129c5969fb14b6b6008f1f2a8973/suse.secrets",
         "mount_options": [
           "rw",
           "nosuid",
           "nodev",
           "noexec",
           "relatime"
-        ]
+        ],
+        "percent_used": "1%",
+        "total_inodes": "126795"
       },
       "tracefs,/sys/kernel/debug/tracing": {
         "device": "tracefs",
@@ -1992,7 +2032,7 @@
       }
     }
   },
-  "ohai_time": 1537851823.384598,
+  "ohai_time": 1545335439.3072445,
   "os": "linux",
   "os_version": "4.4.59-92.20-default",
   "packages": {
@@ -2125,9 +2165,9 @@
     "chef": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1537851817",
+      "installdate": "1545335434",
       "release": "1.sles12",
-      "version": "14.5.27"
+      "version": "14.8.12"
     },
     "cifs-utils": {
       "arch": "x86_64",
@@ -5018,7 +5058,7 @@
   "platform_family": "suse",
   "platform_version": "12.2",
   "root_group": "root",
-  "shard_seed": 102132601,
+  "shard_seed": 95198476,
   "shells": [
     "/bin/ash",
     "/bin/bash",
