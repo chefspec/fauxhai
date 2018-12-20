@@ -55,6 +55,7 @@ This file lists each platform known to Fauxhai and the available versions for ea
   - 26
   - 27
   - 28
+  - 29
 
 ### freebsd
 
