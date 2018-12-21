@@ -1,5 +1,11 @@
 # Fauxhai Changelog
 
+## v6.10.0 (2018-12-20)
+
+- Updated the majority of dumps to Ohai 14.8
+- Added Fedora 29
+- Update examples in the readme to be rspec 3.X style
+
 ## v6.9.1 (2018-10-22)
 
 - Remove extra 'etc' plugin data from several dumps
