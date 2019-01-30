@@ -1,12 +1,12 @@
 {
   "chef_packages": {
     "chef": {
-      "chef_root": "C:/opscode/chef/embedded/lib/ruby/gems/2.4.0/gems/chef-13.1.31-universal-mingw32/lib",
-      "version": "13.1.31"
+      "chef_root": "C:/opscode/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.10.9-universal-mingw32/lib",
+      "version": "14.10.9"
     },
     "ohai": {
-      "ohai_root": "C:/opscode/chef/embedded/lib/ruby/gems/2.4.0/gems/ohai-13.1.0/lib/ohai",
-      "version": "13.1.0"
+      "ohai_root": "C:/opscode/chef/embedded/lib/ruby/gems/2.5.0/gems/ohai-14.8.10/lib/ohai",
+      "version": "14.8.10"
     }
   },
   "command": {},
@@ -64,34 +64,43 @@
   "current_user": "fauxhai",
   "dmi": {},
   "domain": "local",
-  "etc": {
-    "group": {
-      "fauxhai": {
-        "gid": 0,
-        "members": [
-          "fauxhai"
-        ]
-      }
-    },
-    "passwd": {
-      "fauxhai": {
-        "dir": "/home/fauxhai",
-        "gecos": "Fauxhai",
-        "gid": 0,
-        "shell": "/bin/bash",
-        "uid": 0
-      }
-    }
-  },
   "filesystem": {
+    "A:": {
+      "fs_type": "",
+      "kb_available": 0,
+      "kb_size": 0,
+      "kb_used": 0,
+      "mount": "A:",
+      "percent_used": 0,
+      "volume_name": ""
+    },
     "C:": {
       "fs_type": "ntfs",
-      "kb_available": 29551521,
-      "kb_size": 42947571,
-      "kb_used": 13396050,
+      "kb_available": 122320953,
+      "kb_size": 136363110,
+      "kb_used": 14042157,
       "mount": "C:",
-      "percent_used": 31,
-      "volume_name": "Windows 10"
+      "percent_used": 10,
+      "volume_name": ""
+    },
+    "D:": {
+      "encryption_status": "FullyDecrypted",
+      "fs_type": "ntfs",
+      "kb_available": 51570606,
+      "kb_size": 53685972,
+      "kb_used": 2115366,
+      "mount": "D:",
+      "percent_used": 3,
+      "volume_name": "temporary storage"
+    },
+    "E:": {
+      "fs_type": "",
+      "kb_available": 0,
+      "kb_size": 0,
+      "kb_used": 0,
+      "mount": "E:",
+      "percent_used": 0,
+      "volume_name": ""
     }
   },
   "fips": {
@@ -107,22 +116,32 @@
   "kernel": {
     "cs_info": {
       "admin_password_status": 3,
-      "automatic_managed_pagefile": true,
+      "automatic_managed_pagefile": false,
       "automatic_reset_boot_option": true,
       "automatic_reset_capability": true,
-      "boot_option_on_limit": null,
-      "boot_option_on_watch_dog": null,
+      "boot_option_on_limit": 0,
+      "boot_option_on_watch_dog": 0,
       "boot_rom_supported": true,
-      "boot_status": null,
+      "boot_status": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
       "bootup_state": "Normal boot",
-      "caption": "VAGRANT-PR7FK70",
+      "caption": "win10",
       "chassis_bootup_state": 3,
       "chassis_sku_number": null,
-      "creation_class_name": "Win32_ComputerSystem",
-      "current_time_zone": 60,
-      "daylight_in_effect": true,
+      "current_time_zone": 0,
+      "daylight_in_effect": null,
       "description": "AT/AT COMPATIBLE",
-      "dns_host_name": "VAGRANT-PR7FK70",
+      "dns_host_name": "win10",
       "domain": "WORKGROUP",
       "domain_role": 0,
       "enable_daylight_savings_time": true,
@@ -133,28 +152,29 @@
       "install_date": null,
       "keyboard_password_status": 3,
       "last_load_info": null,
-      "manufacturer": "innotek GmbH",
-      "model": "VirtualBox",
-      "name": "VAGRANT-PR7FK70",
+      "manufacturer": "Microsoft Corporation",
+      "model": "Virtual Machine",
+      "name": "win10",
       "name_format": null,
       "network_server_mode_enabled": true,
       "number_of_logical_processors": 2,
       "number_of_processors": 1,
       "oem_string_array": [
-        "vboxVer_5.1.22",
-        "vboxRev_115126"
+        "[MS_VM_CERT/SHA1/9b80ca0d5dd061ec9da4e494f4c3fd1196270c22]",
+        "00000000000000000000000000000000",
+        "To be filed by MSFT"
       ],
       "part_of_domain": false,
-      "pause_after_reset": "-1",
-      "pc_system_type": 2,
-      "pc_system_type_ex": 2,
+      "pause_after_reset": "3932100000",
+      "pc_system_type": 1,
+      "pc_system_type_ex": 1,
       "power_management_capabilities": null,
       "power_management_supported": null,
       "power_on_password_status": 3,
       "power_state": 0,
       "power_supply_state": 3,
       "primary_owner_contact": null,
-      "primary_owner_name": "Vagrant Administrator",
+      "primary_owner_name": null,
       "reset_capability": 1,
       "reset_count": -1,
       "reset_limit": -1,
@@ -165,33 +185,31 @@
       ],
       "status": "OK",
       "support_contact_description": null,
-      "system_family": "Virtual Machine",
+      "system_family": null,
       "system_sku_number": null,
       "system_startup_delay": null,
       "system_startup_options": null,
       "system_startup_setting": null,
       "system_type": "x64-based PC",
-      "thermal_state": 3,
-      "total_physical_memory": "4294496256",
-      "user_name": "VAGRANT-PR7FK70\\vagrant",
+      "thermal_state": 1,
+      "total_physical_memory": "8589463552",
+      "user_name": null,
       "wake_up_type": 6,
       "workgroup": "WORKGROUP"
     },
     "machine": "x86_64",
-    "name": "Microsoft Windows 10 Enterprise Evaluation",
+    "name": "Microsoft Windows 10 Education N",
     "os": "WINNT",
     "os_info": {
       "boot_device": "\\Device\\HarddiskVolume1",
-      "build_number": "15063",
+      "build_number": "17763",
       "build_type": "Multiprocessor Free",
-      "caption": "Microsoft Windows 10 Enterprise Evaluation",
+      "caption": "Microsoft Windows 10 Education N",
       "code_set": "1252",
       "country_code": "1",
-      "creation_class_name": "Win32_OperatingSystem",
-      "cs_creation_class_name": "Win32_ComputerSystem",
-      "cs_name": "VAGRANT-PR7FK70",
+      "cs_name": "win10",
       "csd_version": null,
-      "current_time_zone": 60,
+      "current_time_zone": 0,
       "data_execution_prevention_32_bit_applications": true,
       "data_execution_prevention_available": true,
       "data_execution_prevention_drivers": true,
@@ -201,13 +219,10 @@
       "distributed": false,
       "encryption_level": 256,
       "foreground_application_boost": 2,
-      "free_physical_memory": "2476220",
-      "free_space_in_paging_files": "1440948",
-      "free_virtual_memory": "4076480",
-      "install_date": "20170512194723.000000+060",
+      "install_date": "20190130214734.000000+000",
       "large_system_cache": null,
-      "last_boot_up_time": "20170612215000.907671+060",
-      "local_date_time": "20170612220147.960000+060",
+      "last_boot_up_time": "20190130214257.459403+000",
+      "local_date_time": "20190130221336.518000+000",
       "locale": "0409",
       "manufacturer": "Microsoft Corporation",
       "max_number_of_processes": -1,
@@ -215,12 +230,12 @@
       "mui_languages": [
         "en-US"
       ],
-      "name": "Microsoft Windows 10 Enterprise Evaluation|C:\\Windows|\\Device\\Harddisk0\\Partition1",
+      "name": "Microsoft Windows 10 Education N|C:\\Windows|\\Device\\Harddisk0\\Partition1",
       "number_of_licensed_users": 0,
-      "number_of_processes": 116,
+      "number_of_processes": 159,
       "number_of_users": 1,
-      "operating_system_sku": 72,
-      "organization": "Vagrant Inc.",
+      "operating_system_sku": 122,
+      "organization": null,
       "os_architecture": "64-bit",
       "os_language": 1033,
       "os_product_suite": 256,
@@ -232,24 +247,25 @@
       "portable_operating_system": false,
       "primary": true,
       "product_type": 1,
-      "registered_user": "Vagrant Administrator",
-      "serial_number": "00329-20000-00001-AA890",
+      "registered_user": null,
+      "serial_number": "00328-60000-00001-AA228",
       "service_pack_major_version": 0,
       "service_pack_minor_version": 0,
-      "size_stored_in_paging_files": "1441792",
+      "size_stored_in_paging_files": "1966080",
       "status": "OK",
       "suite_mask": 272,
       "system_device": "\\Device\\HarddiskVolume1",
       "system_directory": "C:\\Windows\\system32",
       "system_drive": "C:",
-      "total_swap_space_size": null,
-      "total_virtual_memory_size": "5635636",
-      "total_visible_memory_size": "4193844",
-      "version": "10.0.15063",
+      "total_visible_memory_size": "8388148",
+      "version": "10.0.17763",
       "windows_directory": "C:\\Windows"
     },
-    "release": "10.0.15063",
-    "version": "10.0.15063  Build 15063"
+    "product_type": "Workstation",
+    "release": "10.0.17763",
+    "server_core": false,
+    "system_type": "Desktop",
+    "version": "10.0.17763  Build 17763"
   },
   "keys": {
     "ssh": {
@@ -259,7 +275,7 @@
   },
   "languages": {
     "powershell": {
-      "build_version": "10.0.15063.296",
+      "build_version": "10.0.17763.134",
       "clr_version": "4.0.30319.42000",
       "compatible_versions": [
         "1.0",
@@ -267,11 +283,11 @@
         "3.0",
         "4.0",
         "5.0",
-        "5.1.15063.296"
+        "5.1.17763.134"
       ],
       "remoting_protocol_version": "2.3",
       "serialization_version": "1.1.0.1",
-      "version": "5.1.15063.296",
+      "version": "5.1.17763.134",
       "ws_man_stack_version": "3.0"
     },
     "ruby": {
@@ -381,20 +397,21 @@
       }
     }
   },
-  "ohai_time": 1497301314.069695,
+  "ohai_time": 1548886420.420179,
   "os": "windows",
-  "os_version": "10.0.15063",
+  "os_version": "10.0.17763",
   "packages": {
-    "Chef Client v13.1.31": {
-      "installdate": "20170612",
+    "Chef Client v14.10.9": {
+      "installdate": "20190130",
       "publisher": "Chef Software, Inc.",
-      "version": "13.1.31.1"
+      "version": "14.10.9.1"
     }
   },
   "platform": "windows",
   "platform_family": "windows",
-  "platform_version": "10.0.15063",
+  "platform_version": "10.0.17763",
   "root_group": "Administrators",
+  "shard_seed": 111319863,
   "time": {
     "timezone": "GMT"
   },
