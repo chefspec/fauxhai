@@ -1,5 +1,17 @@
 # Fauxhai Changelog
 
+## v6.11.0 (2018-01-30)
+
+- Added Windows 2019 Server
+- Added Red Hat Linux 7.6
+- Added Debian 9.6
+- Added CentOS 7.6.1804
+- Updated Windows 2008 R2, 2012, 2012 R2, and 2016 from Chef 14.0 to Chef 14.10
+- Updated Windows 7, 8.1, and 10 from 13.1 to 14.10
+- Updated the fetcher logic to be compatible with ChefSpec 7.3+. Thanks [@oscar123mendoza](https://github.com/oscar123mendoza)
+- Update Oracle Linux 6.8/7.2/7.3/7.4 to Ohai 14.8 in EC2
+- Removed duplicate json data in gentoo 4.9.6
+
 ## v6.10.0 (2018-12-20)
 
 - Updated the majority of dumps to Ohai 14.8
