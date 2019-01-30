@@ -1,5 +1,28 @@
 # Fauxhai Changelog
 
+## v7.0.0 (2018-01-30)
+
+- Removed support for Ruby 2.2 as this Ruby release is now EOL
+- Removed platform releases previously marked as deprecated:
+  - Amazon Linux 2012.09, 2013.09, 2014.03, 2014.09, 2017.12 (2 beta)
+  - CentOS 5.10, 6.7, 7.2.1511
+  - ClearOS 7.0
+  - Debian 7.10, 8.7, 8.8, 9.0, 9.1
+  - Fedora 24, 25
+  - FreeBSD 10.3, 11.0
+  - Gentoo 4.9.6-gentoo-r1
+  - ios_xr 6.0.0.14l
+  - Linux Mint 18.1, 18.2
+  - macOS 10.10
+  - Nexus 5
+  - OmniOS 151018
+  - openSUSE 13.2, 42.1
+  - Oracle Linux 5.10, 7.2
+  - Solaris 5.10
+  - Windows 7
+
+For a list of currently support platform releases see https://github.com/chefspec/fauxhai/blob/master/PLATFORMS.md
+
 ## v6.11.0 (2018-01-30)
 
 - Added Windows 2019 Server
