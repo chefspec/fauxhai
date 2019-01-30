@@ -47,7 +47,7 @@ describe Fauxhai::Mocker do
 
     context 'with a Windows platform and no version' do
       let(:options) { {platform: 'windows'} }
-      it { is_expected.to eq '2016' }
+      it { is_expected.to eq '2019' }
     end
 
     context 'with a Windows platform and a partial version' do
