@@ -27,8 +27,6 @@ This file lists each platform known to Fauxhai and the available versions for ea
   - 5.11
   - 6.10
   - 6.9
-  - 7.3.1611
-  - 7.4.1708
   - 7.5.1804
   - 7.6.1804
 
