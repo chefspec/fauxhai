@@ -1,5 +1,24 @@
 # Fauxhai Changelog
 
+## v7.1.0 (2019-05-01)
+
+### New / Updated Platforms
+
+- Added openSUSE 15.0
+- Added CentOS 6.10
+- Added RHEL 6.10
+- Added Debian 9.8 / 9.9
+- Added Oracle Linux 6.10, 7.5, and 7.6
+- Debian 9 releases updated to Chef 14.12
+- Ubuntu releases updated to the latest point releases of 14.04, 16.04, and 18.04
+
+### Newly Deprecated Platforms (removal in April 2020)
+
+- Debian 9.2, 9.3, and 9.4
+- Ubuntu 17.10
+- CentOS 6.8, 7.3, 7.4
+- Oracle Linux 6.8, 7.3, and 7.4
+
 ## v7.0.0 (2018-01-30)
 
 - Removed support for Ruby 2.2 as this Ruby release is now EOL
