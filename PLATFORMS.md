@@ -87,6 +87,7 @@ This file lists each platform known to Fauxhai and the available versions for ea
 
 ### opensuse
 
+  - 15.0
   - 42.2
   - 42.3
 
