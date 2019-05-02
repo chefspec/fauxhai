@@ -103,6 +103,7 @@ This file lists each platform known to Fauxhai and the available versions for ea
 ### redhat
 
   - 5.11
+  - 6.10
   - 6.8
   - 6.9
   - 7.3
