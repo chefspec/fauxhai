@@ -18,6 +18,7 @@
 - Ubuntu 17.10
 - CentOS 6.8, 7.3, 7.4
 - Oracle Linux 6.8, 7.3, and 7.4
+- RHEL 6.8, 7.3 and 7.4
 
 ## v7.0.0 (2018-01-30)
 
