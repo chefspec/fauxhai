@@ -1,5 +1,11 @@
 # Fauxhai Changelog
 
+## v7.2.0 (2019-05-08)
+
+### New / Updated Platforms
+
+- Added RHEL 8.0
+
 ## v7.1.0 (2019-05-01)
 
 ### New / Updated Platforms
