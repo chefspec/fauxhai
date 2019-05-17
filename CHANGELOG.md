@@ -1,5 +1,9 @@
 # Fauxhai Changelog
 
+## v7.3.0 (2019-06-17)
+
+- Updated many of the Amazon, Redhat, Debian, CentOS, Ubuntu, openSUSE, and SLES platforms to Chef 15.0.300
+
 ## v7.2.0 (2019-05-08)
 
 ### New / Updated Platforms
