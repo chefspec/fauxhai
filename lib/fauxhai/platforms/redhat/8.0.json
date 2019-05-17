@@ -10,12 +10,12 @@
   },
   "chef_packages": {
     "chef": {
-      "chef_root": "/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.12.9/lib",
-      "version": "14.12.9"
+      "chef_root": "/opt/chef/embedded/lib/ruby/gems/2.6.0/gems/chef-15.0.300/lib",
+      "version": "15.0.300"
     },
     "ohai": {
-      "ohai_root": "/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/ohai-14.8.11/lib/ohai",
-      "version": "14.8.11"
+      "ohai_root": "/opt/chef/embedded/lib/ruby/gems/2.6.0/gems/ohai-15.0.35/lib/ohai",
+      "version": "15.0.35"
     }
   },
   "command": {
@@ -188,8 +188,8 @@
           "Manufacturer": "Xen",
           "Product Name": "HVM domU",
           "SKU Number": "Not Specified",
-          "Serial Number": "ec23f228-fc4d-2a63-fa53-bc468f3d30b9",
-          "UUID": "ec23f228-fc4d-2a63-fa53-bc468f3d30b9",
+          "Serial Number": "ec2f0503-838e-7a63-a97c-ac3dc4e6b0f0",
+          "UUID": "ec2f0503-838e-7a63-a97c-ac3dc4e6b0f0",
           "Version": "4.2.amazon",
           "Wake-up Type": "Power Switch",
           "application_identifier": "System Information",
@@ -200,9 +200,9 @@
       "family": "Not Specified",
       "manufacturer": "Xen",
       "product_name": "HVM domU",
-      "serial_number": "ec23f228-fc4d-2a63-fa53-bc468f3d30b9",
+      "serial_number": "ec2f0503-838e-7a63-a97c-ac3dc4e6b0f0",
       "sku_number": "Not Specified",
-      "uuid": "ec23f228-fc4d-2a63-fa53-bc468f3d30b9",
+      "uuid": "ec2f0503-838e-7a63-a97c-ac3dc4e6b0f0",
       "version": "4.2.amazon",
       "wake_up_type": "Power Switch"
     }
@@ -218,12 +218,12 @@
       },
       "/dev/xvda2": {
         "fs_type": "xfs",
-        "inodes_available": "5192918",
+        "inodes_available": "5194553",
         "inodes_percent_used": "1%",
-        "inodes_used": "48922",
-        "kb_available": "9169720",
+        "inodes_used": "47287",
+        "kb_available": "9240996",
         "kb_size": "10473452",
-        "kb_used": "1303732",
+        "kb_used": "1232456",
         "mount_options": [
           "rw",
           "relatime",
@@ -235,7 +235,7 @@
         "mounts": [
           "/"
         ],
-        "percent_used": "13%",
+        "percent_used": "12%",
         "total_inodes": "5241840",
         "uuid": "58013e4a-11c0-4195-8fd8-e4b33e5b17d6"
       },
@@ -262,21 +262,21 @@
           "noexec",
           "relatime",
           "seclabel",
-          "devices"
+          "hugetlb"
         ],
         "mounts": [
           "/sys/fs/cgroup/systemd",
+          "/sys/fs/cgroup/perf_event",
+          "/sys/fs/cgroup/rdma",
           "/sys/fs/cgroup/blkio",
           "/sys/fs/cgroup/memory",
-          "/sys/fs/cgroup/freezer",
-          "/sys/fs/cgroup/net_cls,net_prio",
           "/sys/fs/cgroup/cpu,cpuacct",
-          "/sys/fs/cgroup/perf_event",
           "/sys/fs/cgroup/cpuset",
-          "/sys/fs/cgroup/rdma",
           "/sys/fs/cgroup/pids",
-          "/sys/fs/cgroup/hugetlb",
-          "/sys/fs/cgroup/devices"
+          "/sys/fs/cgroup/net_cls,net_prio",
+          "/sys/fs/cgroup/freezer",
+          "/sys/fs/cgroup/devices",
+          "/sys/fs/cgroup/hugetlb"
         ]
       },
       "configfs": {
@@ -430,13 +430,13 @@
         "mount_options": [
           "rw",
           "relatime",
-          "fd=31",
+          "fd=32",
           "pgrp=1",
           "timeout=0",
           "minproto=5",
           "maxproto=5",
           "direct",
-          "pipe_ino=17940"
+          "pipe_ino=18015"
         ],
         "mounts": [
           "/proc/sys/fs/binfmt_misc"
@@ -477,12 +477,12 @@
           "/dev/xvda2"
         ],
         "fs_type": "xfs",
-        "inodes_available": "5192918",
+        "inodes_available": "5194553",
         "inodes_percent_used": "1%",
-        "inodes_used": "48922",
-        "kb_available": "9169720",
+        "inodes_used": "47287",
+        "kb_available": "9240996",
         "kb_size": "10473452",
-        "kb_used": "1303732",
+        "kb_used": "1232456",
         "mount_options": [
           "rw",
           "relatime",
@@ -491,7 +491,7 @@
           "inode64",
           "noquota"
         ],
-        "percent_used": "13%",
+        "percent_used": "12%",
         "total_inodes": "5241840",
         "uuid": "58013e4a-11c0-4195-8fd8-e4b33e5b17d6"
       },
@@ -597,13 +597,13 @@
         "mount_options": [
           "rw",
           "relatime",
-          "fd=31",
+          "fd=32",
           "pgrp=1",
           "timeout=0",
           "minproto=5",
           "maxproto=5",
           "direct",
-          "pipe_ino=17940"
+          "pipe_ino=18015"
         ]
       },
       "/run": {
@@ -955,12 +955,12 @@
       "/dev/xvda2,/": {
         "device": "/dev/xvda2",
         "fs_type": "xfs",
-        "inodes_available": "5192918",
+        "inodes_available": "5194553",
         "inodes_percent_used": "1%",
-        "inodes_used": "48922",
-        "kb_available": "9169720",
+        "inodes_used": "47287",
+        "kb_available": "9240996",
         "kb_size": "10473452",
-        "kb_used": "1303732",
+        "kb_used": "1232456",
         "mount": "/",
         "mount_options": [
           "rw",
@@ -970,7 +970,7 @@
           "inode64",
           "noquota"
         ],
-        "percent_used": "13%",
+        "percent_used": "12%",
         "total_inodes": "5241840",
         "uuid": "58013e4a-11c0-4195-8fd8-e4b33e5b17d6"
       },
@@ -1301,13 +1301,13 @@
         "mount_options": [
           "rw",
           "relatime",
-          "fd=31",
+          "fd=32",
           "pgrp=1",
           "timeout=0",
           "minproto=5",
           "maxproto=5",
           "direct",
-          "pipe_ino=17940"
+          "pipe_ino=18015"
         ]
       },
       "tmpfs,/dev/shm": {
@@ -1646,7 +1646,7 @@
       }
     }
   },
-  "ohai_time": 1557370172.0361705,
+  "ohai_time": 1558114473.2211978,
   "os": "linux",
   "os_version": "4.18.0-80.el8.x86_64",
   "packages": {
@@ -1779,9 +1779,9 @@
     "chef": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1557370165",
+      "installdate": "1558114468",
       "release": "1.el7",
-      "version": "14.12.9"
+      "version": "15.0.300"
     },
     "chkconfig": {
       "arch": "x86_64",
@@ -2290,7 +2290,7 @@
     "gpg-pubkey": {
       "arch": "(none)",
       "epoch": "0",
-      "installdate": "1557370146",
+      "installdate": "1558114449",
       "release": "5b32db75",
       "version": "d4082792"
     },
@@ -4476,7 +4476,7 @@
   "platform_family": "rhel",
   "platform_version": "8.0",
   "root_group": "root",
-  "shard_seed": 176043462,
+  "shard_seed": 66194157,
   "shells": [
     "/bin/sh",
     "/bin/bash",

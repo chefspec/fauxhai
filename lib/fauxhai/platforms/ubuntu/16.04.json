@@ -5,14 +5,14 @@
       "physical_block_size": "512",
       "removable": "0",
       "rotational": "1",
-      "size": "182776"
+      "size": "183048"
     },
     "loop1": {
       "logical_block_size": "512",
       "physical_block_size": "512",
       "removable": "0",
       "rotational": "1",
-      "size": "36592"
+      "size": "36776"
     },
     "loop2": {
       "logical_block_size": "512",
@@ -178,12 +178,12 @@
   },
   "chef_packages": {
     "chef": {
-      "chef_root": "/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.12.9/lib",
-      "version": "14.12.9"
+      "chef_root": "/opt/chef/embedded/lib/ruby/gems/2.6.0/gems/chef-15.0.300/lib",
+      "version": "15.0.300"
     },
     "ohai": {
-      "ohai_root": "/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/ohai-14.8.11/lib/ohai",
-      "version": "14.8.11"
+      "ohai_root": "/opt/chef/embedded/lib/ruby/gems/2.6.0/gems/ohai-15.0.35/lib/ohai",
+      "version": "15.0.35"
     }
   },
   "command": {
@@ -356,8 +356,8 @@
           "Manufacturer": "Xen",
           "Product Name": "HVM domU",
           "SKU Number": "Not Specified",
-          "Serial Number": "ec2366d2-96c7-acfd-1309-55cd371e4606",
-          "UUID": "EC2366D2-96C7-ACFD-1309-55CD371E4606",
+          "Serial Number": "ec26c08f-b3f0-8359-16e4-ec216091379c",
+          "UUID": "EC26C08F-B3F0-8359-16E4-EC216091379C",
           "Version": "4.2.amazon",
           "Wake-up Type": "Power Switch",
           "application_identifier": "System Information",
@@ -368,9 +368,9 @@
       "family": "Not Specified",
       "manufacturer": "Xen",
       "product_name": "HVM domU",
-      "serial_number": "ec2366d2-96c7-acfd-1309-55cd371e4606",
+      "serial_number": "ec26c08f-b3f0-8359-16e4-ec216091379c",
       "sku_number": "Not Specified",
-      "uuid": "EC2366D2-96C7-ACFD-1309-55CD371E4606",
+      "uuid": "EC26C08F-B3F0-8359-16E4-EC216091379C",
       "version": "4.2.amazon",
       "wake_up_type": "Power Switch"
     }
@@ -382,15 +382,15 @@
         "fs_type": "squashfs",
         "inodes_available": "0",
         "inodes_percent_used": "100%",
-        "inodes_used": "12819",
+        "inodes_used": "12820",
         "kb_available": "0",
-        "kb_size": "91392",
-        "kb_used": "91392",
+        "kb_size": "91648",
+        "kb_used": "91648",
         "mounts": [
-          "/snap/core/6673"
+          "/snap/core/6818"
         ],
         "percent_used": "100%",
-        "total_inodes": "12819"
+        "total_inodes": "12820"
       },
       "/dev/loop1": {
         "fs_type": "squashfs",
@@ -398,10 +398,10 @@
         "inodes_percent_used": "100%",
         "inodes_used": "15",
         "kb_available": "0",
-        "kb_size": "18304",
-        "kb_used": "18304",
+        "kb_size": "18432",
+        "kb_used": "18432",
         "mounts": [
-          "/snap/amazon-ssm-agent/1068"
+          "/snap/amazon-ssm-agent/1335"
         ],
         "percent_used": "100%",
         "total_inodes": "15"
@@ -411,12 +411,12 @@
       },
       "/dev/xvda1": {
         "fs_type": "ext4",
-        "inodes_available": "950522",
+        "inodes_available": "952159",
         "inodes_percent_used": "8%",
-        "inodes_used": "73478",
-        "kb_available": "6875716",
+        "inodes_used": "71841",
+        "kb_available": "6917128",
         "kb_size": "8065444",
-        "kb_used": "1173344",
+        "kb_used": "1131932",
         "label": "cloudimg-rootfs",
         "mount_options": [
           "rw",
@@ -429,9 +429,9 @@
         ],
         "percent_used": "15%",
         "total_inodes": "1024000",
-        "uuid": "97b17ee3-960c-445a-9639-700bfbe2d6b0"
+        "uuid": "d436f049-ad78-4cb8-aa3a-e52454b395f5"
       },
-      "/var/lib/snapd/snaps/amazon-ssm-agent_1068.snap": {
+      "/var/lib/snapd/snaps/amazon-ssm-agent_1335.snap": {
         "fs_type": "squashfs",
         "mount_options": [
           "ro",
@@ -439,10 +439,10 @@
           "relatime"
         ],
         "mounts": [
-          "/snap/amazon-ssm-agent/1068"
+          "/snap/amazon-ssm-agent/1335"
         ]
       },
-      "/var/lib/snapd/snaps/core_6673.snap": {
+      "/var/lib/snapd/snaps/core_6818.snap": {
         "fs_type": "squashfs",
         "mount_options": [
           "ro",
@@ -450,7 +450,7 @@
           "relatime"
         ],
         "mounts": [
-          "/snap/core/6673"
+          "/snap/core/6818"
         ]
       },
       "cgroup": {
@@ -461,20 +461,20 @@
           "nodev",
           "noexec",
           "relatime",
-          "perf_event"
+          "blkio"
         ],
         "mounts": [
           "/sys/fs/cgroup/systemd",
-          "/sys/fs/cgroup/cpu,cpuacct",
           "/sys/fs/cgroup/net_cls,net_prio",
-          "/sys/fs/cgroup/memory",
-          "/sys/fs/cgroup/hugetlb",
-          "/sys/fs/cgroup/blkio",
+          "/sys/fs/cgroup/cpu,cpuacct",
+          "/sys/fs/cgroup/cpuset",
+          "/sys/fs/cgroup/freezer",
           "/sys/fs/cgroup/pids",
           "/sys/fs/cgroup/devices",
-          "/sys/fs/cgroup/freezer",
-          "/sys/fs/cgroup/cpuset",
-          "/sys/fs/cgroup/perf_event"
+          "/sys/fs/cgroup/hugetlb",
+          "/sys/fs/cgroup/perf_event",
+          "/sys/fs/cgroup/memory",
+          "/sys/fs/cgroup/blkio"
         ]
       },
       "debugfs": {
@@ -604,7 +604,7 @@
         "mount_options": [
           "rw",
           "relatime",
-          "fd=33",
+          "fd=26",
           "pgrp=1",
           "timeout=0",
           "minproto=5",
@@ -617,18 +617,18 @@
       },
       "tmpfs": {
         "fs_type": "tmpfs",
-        "inodes_available": "126802",
+        "inodes_available": "126795",
         "inodes_percent_used": "1%",
         "inodes_used": "4",
-        "kb_available": "101448",
-        "kb_size": "101448",
+        "kb_available": "101440",
+        "kb_size": "101440",
         "kb_used": "0",
         "mount_options": [
           "rw",
           "nosuid",
           "nodev",
           "relatime",
-          "size=101448k",
+          "size=101440k",
           "mode=700",
           "uid=1000",
           "gid=1000"
@@ -641,29 +641,29 @@
           "/run/user/1000"
         ],
         "percent_used": "0%",
-        "total_inodes": "126806"
+        "total_inodes": "126799"
       },
       "udev": {
         "fs_type": "devtmpfs",
-        "inodes_available": "124498",
+        "inodes_available": "124503",
         "inodes_percent_used": "1%",
         "inodes_used": "322",
-        "kb_available": "499280",
-        "kb_size": "499280",
+        "kb_available": "499300",
+        "kb_size": "499300",
         "kb_used": "0",
         "mount_options": [
           "rw",
           "nosuid",
           "relatime",
-          "size=499280k",
-          "nr_inodes=124820",
+          "size=499300k",
+          "nr_inodes=124825",
           "mode=755"
         ],
         "mounts": [
           "/dev"
         ],
         "percent_used": "0%",
-        "total_inodes": "124820"
+        "total_inodes": "124825"
       }
     },
     "by_mountpoint": {
@@ -672,12 +672,12 @@
           "/dev/xvda1"
         ],
         "fs_type": "ext4",
-        "inodes_available": "950522",
+        "inodes_available": "952159",
         "inodes_percent_used": "8%",
-        "inodes_used": "73478",
-        "kb_available": "6875716",
+        "inodes_used": "71841",
+        "kb_available": "6917128",
         "kb_size": "8065444",
-        "kb_used": "1173344",
+        "kb_used": "1131932",
         "label": "cloudimg-rootfs",
         "mount_options": [
           "rw",
@@ -687,29 +687,29 @@
         ],
         "percent_used": "15%",
         "total_inodes": "1024000",
-        "uuid": "97b17ee3-960c-445a-9639-700bfbe2d6b0"
+        "uuid": "d436f049-ad78-4cb8-aa3a-e52454b395f5"
       },
       "/dev": {
         "devices": [
           "udev"
         ],
         "fs_type": "devtmpfs",
-        "inodes_available": "124498",
+        "inodes_available": "124503",
         "inodes_percent_used": "1%",
         "inodes_used": "322",
-        "kb_available": "499280",
-        "kb_size": "499280",
+        "kb_available": "499300",
+        "kb_size": "499300",
         "kb_used": "0",
         "mount_options": [
           "rw",
           "nosuid",
           "relatime",
-          "size=499280k",
-          "nr_inodes=124820",
+          "size=499300k",
+          "nr_inodes=124825",
           "mode=755"
         ],
         "percent_used": "0%",
-        "total_inodes": "124820"
+        "total_inodes": "124825"
       },
       "/dev/hugepages": {
         "devices": [
@@ -751,11 +751,11 @@
           "tmpfs"
         ],
         "fs_type": "tmpfs",
-        "inodes_available": "126805",
+        "inodes_available": "126798",
         "inodes_percent_used": "1%",
         "inodes_used": "1",
-        "kb_available": "507224",
-        "kb_size": "507224",
+        "kb_available": "507196",
+        "kb_size": "507196",
         "kb_used": "0",
         "mount_options": [
           "rw",
@@ -763,7 +763,7 @@
           "nodev"
         ],
         "percent_used": "0%",
-        "total_inodes": "126806"
+        "total_inodes": "126799"
       },
       "/proc": {
         "devices": [
@@ -786,7 +786,7 @@
         "mount_options": [
           "rw",
           "relatime",
-          "fd=33",
+          "fd=26",
           "pgrp=1",
           "timeout=0",
           "minproto=5",
@@ -799,29 +799,29 @@
           "tmpfs"
         ],
         "fs_type": "tmpfs",
-        "inodes_available": "126402",
+        "inodes_available": "126395",
         "inodes_percent_used": "1%",
         "inodes_used": "404",
         "kb_available": "98144",
-        "kb_size": "101448",
-        "kb_used": "3304",
+        "kb_size": "101440",
+        "kb_used": "3296",
         "mount_options": [
           "rw",
           "nosuid",
           "noexec",
           "relatime",
-          "size=101448k",
+          "size=101440k",
           "mode=755"
         ],
         "percent_used": "4%",
-        "total_inodes": "126806"
+        "total_inodes": "126799"
       },
       "/run/lock": {
         "devices": [
           "tmpfs"
         ],
         "fs_type": "tmpfs",
-        "inodes_available": "126803",
+        "inodes_available": "126796",
         "inodes_percent_used": "1%",
         "inodes_used": "3",
         "kb_available": "5120",
@@ -836,44 +836,44 @@
           "size=5120k"
         ],
         "percent_used": "0%",
-        "total_inodes": "126806"
+        "total_inodes": "126799"
       },
       "/run/user/1000": {
         "devices": [
           "tmpfs"
         ],
         "fs_type": "tmpfs",
-        "inodes_available": "126802",
+        "inodes_available": "126795",
         "inodes_percent_used": "1%",
         "inodes_used": "4",
-        "kb_available": "101448",
-        "kb_size": "101448",
+        "kb_available": "101440",
+        "kb_size": "101440",
         "kb_used": "0",
         "mount_options": [
           "rw",
           "nosuid",
           "nodev",
           "relatime",
-          "size=101448k",
+          "size=101440k",
           "mode=700",
           "uid=1000",
           "gid=1000"
         ],
         "percent_used": "0%",
-        "total_inodes": "126806"
+        "total_inodes": "126799"
       },
-      "/snap/amazon-ssm-agent/1068": {
+      "/snap/amazon-ssm-agent/1335": {
         "devices": [
           "/dev/loop1",
-          "/var/lib/snapd/snaps/amazon-ssm-agent_1068.snap"
+          "/var/lib/snapd/snaps/amazon-ssm-agent_1335.snap"
         ],
         "fs_type": "squashfs",
         "inodes_available": "0",
         "inodes_percent_used": "100%",
         "inodes_used": "15",
         "kb_available": "0",
-        "kb_size": "18304",
-        "kb_used": "18304",
+        "kb_size": "18432",
+        "kb_used": "18432",
         "mount_options": [
           "ro",
           "nodev",
@@ -882,25 +882,25 @@
         "percent_used": "100%",
         "total_inodes": "15"
       },
-      "/snap/core/6673": {
+      "/snap/core/6818": {
         "devices": [
           "/dev/loop0",
-          "/var/lib/snapd/snaps/core_6673.snap"
+          "/var/lib/snapd/snaps/core_6818.snap"
         ],
         "fs_type": "squashfs",
         "inodes_available": "0",
         "inodes_percent_used": "100%",
-        "inodes_used": "12819",
+        "inodes_used": "12820",
         "kb_available": "0",
-        "kb_size": "91392",
-        "kb_used": "91392",
+        "kb_size": "91648",
+        "kb_used": "91648",
         "mount_options": [
           "ro",
           "nodev",
           "relatime"
         ],
         "percent_used": "100%",
-        "total_inodes": "12819"
+        "total_inodes": "12820"
       },
       "/sys": {
         "devices": [
@@ -920,11 +920,11 @@
           "tmpfs"
         ],
         "fs_type": "tmpfs",
-        "inodes_available": "126790",
+        "inodes_available": "126783",
         "inodes_percent_used": "1%",
         "inodes_used": "16",
-        "kb_available": "507224",
-        "kb_size": "507224",
+        "kb_available": "507196",
+        "kb_size": "507196",
         "kb_used": "0",
         "mount_options": [
           "ro",
@@ -934,7 +934,7 @@
           "mode=755"
         ],
         "percent_used": "0%",
-        "total_inodes": "126806"
+        "total_inodes": "126799"
       },
       "/sys/fs/cgroup/blkio": {
         "devices": [
@@ -1157,29 +1157,29 @@
       }
     },
     "by_pair": {
-      "/dev/loop0,/snap/core/6673": {
+      "/dev/loop0,/snap/core/6818": {
         "device": "/dev/loop0",
         "fs_type": "squashfs",
         "inodes_available": "0",
         "inodes_percent_used": "100%",
-        "inodes_used": "12819",
+        "inodes_used": "12820",
         "kb_available": "0",
-        "kb_size": "91392",
-        "kb_used": "91392",
-        "mount": "/snap/core/6673",
+        "kb_size": "91648",
+        "kb_used": "91648",
+        "mount": "/snap/core/6818",
         "percent_used": "100%",
-        "total_inodes": "12819"
+        "total_inodes": "12820"
       },
-      "/dev/loop1,/snap/amazon-ssm-agent/1068": {
+      "/dev/loop1,/snap/amazon-ssm-agent/1335": {
         "device": "/dev/loop1",
         "fs_type": "squashfs",
         "inodes_available": "0",
         "inodes_percent_used": "100%",
         "inodes_used": "15",
         "kb_available": "0",
-        "kb_size": "18304",
-        "kb_used": "18304",
-        "mount": "/snap/amazon-ssm-agent/1068",
+        "kb_size": "18432",
+        "kb_used": "18432",
+        "mount": "/snap/amazon-ssm-agent/1335",
         "percent_used": "100%",
         "total_inodes": "15"
       },
@@ -1189,12 +1189,12 @@
       "/dev/xvda1,/": {
         "device": "/dev/xvda1",
         "fs_type": "ext4",
-        "inodes_available": "950522",
+        "inodes_available": "952159",
         "inodes_percent_used": "8%",
-        "inodes_used": "73478",
-        "kb_available": "6875716",
+        "inodes_used": "71841",
+        "kb_available": "6917128",
         "kb_size": "8065444",
-        "kb_used": "1173344",
+        "kb_used": "1131932",
         "label": "cloudimg-rootfs",
         "mount": "/",
         "mount_options": [
@@ -1205,22 +1205,22 @@
         ],
         "percent_used": "15%",
         "total_inodes": "1024000",
-        "uuid": "97b17ee3-960c-445a-9639-700bfbe2d6b0"
+        "uuid": "d436f049-ad78-4cb8-aa3a-e52454b395f5"
       },
-      "/var/lib/snapd/snaps/amazon-ssm-agent_1068.snap,/snap/amazon-ssm-agent/1068": {
-        "device": "/var/lib/snapd/snaps/amazon-ssm-agent_1068.snap",
+      "/var/lib/snapd/snaps/amazon-ssm-agent_1335.snap,/snap/amazon-ssm-agent/1335": {
+        "device": "/var/lib/snapd/snaps/amazon-ssm-agent_1335.snap",
         "fs_type": "squashfs",
-        "mount": "/snap/amazon-ssm-agent/1068",
+        "mount": "/snap/amazon-ssm-agent/1335",
         "mount_options": [
           "ro",
           "nodev",
           "relatime"
         ]
       },
-      "/var/lib/snapd/snaps/core_6673.snap,/snap/core/6673": {
-        "device": "/var/lib/snapd/snaps/core_6673.snap",
+      "/var/lib/snapd/snaps/core_6818.snap,/snap/core/6818": {
+        "device": "/var/lib/snapd/snaps/core_6818.snap",
         "fs_type": "squashfs",
-        "mount": "/snap/core/6673",
+        "mount": "/snap/core/6818",
         "mount_options": [
           "ro",
           "nodev",
@@ -1493,7 +1493,7 @@
         "mount_options": [
           "rw",
           "relatime",
-          "fd=33",
+          "fd=26",
           "pgrp=1",
           "timeout=0",
           "minproto=5",
@@ -1504,11 +1504,11 @@
       "tmpfs,/dev/shm": {
         "device": "tmpfs",
         "fs_type": "tmpfs",
-        "inodes_available": "126805",
+        "inodes_available": "126798",
         "inodes_percent_used": "1%",
         "inodes_used": "1",
-        "kb_available": "507224",
-        "kb_size": "507224",
+        "kb_available": "507196",
+        "kb_size": "507196",
         "kb_used": "0",
         "mount": "/dev/shm",
         "mount_options": [
@@ -1517,33 +1517,33 @@
           "nodev"
         ],
         "percent_used": "0%",
-        "total_inodes": "126806"
+        "total_inodes": "126799"
       },
       "tmpfs,/run": {
         "device": "tmpfs",
         "fs_type": "tmpfs",
-        "inodes_available": "126402",
+        "inodes_available": "126395",
         "inodes_percent_used": "1%",
         "inodes_used": "404",
         "kb_available": "98144",
-        "kb_size": "101448",
-        "kb_used": "3304",
+        "kb_size": "101440",
+        "kb_used": "3296",
         "mount": "/run",
         "mount_options": [
           "rw",
           "nosuid",
           "noexec",
           "relatime",
-          "size=101448k",
+          "size=101440k",
           "mode=755"
         ],
         "percent_used": "4%",
-        "total_inodes": "126806"
+        "total_inodes": "126799"
       },
       "tmpfs,/run/lock": {
         "device": "tmpfs",
         "fs_type": "tmpfs",
-        "inodes_available": "126803",
+        "inodes_available": "126796",
         "inodes_percent_used": "1%",
         "inodes_used": "3",
         "kb_available": "5120",
@@ -1559,16 +1559,16 @@
           "size=5120k"
         ],
         "percent_used": "0%",
-        "total_inodes": "126806"
+        "total_inodes": "126799"
       },
       "tmpfs,/run/user/1000": {
         "device": "tmpfs",
         "fs_type": "tmpfs",
-        "inodes_available": "126802",
+        "inodes_available": "126795",
         "inodes_percent_used": "1%",
         "inodes_used": "4",
-        "kb_available": "101448",
-        "kb_size": "101448",
+        "kb_available": "101440",
+        "kb_size": "101440",
         "kb_used": "0",
         "mount": "/run/user/1000",
         "mount_options": [
@@ -1576,22 +1576,22 @@
           "nosuid",
           "nodev",
           "relatime",
-          "size=101448k",
+          "size=101440k",
           "mode=700",
           "uid=1000",
           "gid=1000"
         ],
         "percent_used": "0%",
-        "total_inodes": "126806"
+        "total_inodes": "126799"
       },
       "tmpfs,/sys/fs/cgroup": {
         "device": "tmpfs",
         "fs_type": "tmpfs",
-        "inodes_available": "126790",
+        "inodes_available": "126783",
         "inodes_percent_used": "1%",
         "inodes_used": "16",
-        "kb_available": "507224",
-        "kb_size": "507224",
+        "kb_available": "507196",
+        "kb_size": "507196",
         "kb_used": "0",
         "mount": "/sys/fs/cgroup",
         "mount_options": [
@@ -1602,28 +1602,28 @@
           "mode=755"
         ],
         "percent_used": "0%",
-        "total_inodes": "126806"
+        "total_inodes": "126799"
       },
       "udev,/dev": {
         "device": "udev",
         "fs_type": "devtmpfs",
-        "inodes_available": "124498",
+        "inodes_available": "124503",
         "inodes_percent_used": "1%",
         "inodes_used": "322",
-        "kb_available": "499280",
-        "kb_size": "499280",
+        "kb_available": "499300",
+        "kb_size": "499300",
         "kb_used": "0",
         "mount": "/dev",
         "mount_options": [
           "rw",
           "nosuid",
           "relatime",
-          "size=499280k",
-          "nr_inodes=124820",
+          "size=499300k",
+          "nr_inodes=124825",
           "mode=755"
         ],
         "percent_used": "0%",
-        "total_inodes": "124820"
+        "total_inodes": "124825"
       }
     }
   },
@@ -1803,8 +1803,8 @@
     "name": "Linux",
     "os": "GNU/Linux",
     "processor": "x86_64",
-    "release": "4.4.0-1079-aws",
-    "version": "#89-Ubuntu SMP Tue Mar 26 15:25:52 UTC 2019"
+    "release": "4.4.0-1083-aws",
+    "version": "#93-Ubuntu SMP Wed May 8 16:08:41 UTC 2019"
   },
   "keys": {
     "ssh": {
@@ -1921,9 +1921,9 @@
       }
     }
   },
-  "ohai_time": 1556782338.99638,
+  "ohai_time": 1558114061.486544,
   "os": "linux",
-  "os_version": "4.4.0-1079-aws",
+  "os_version": "4.4.0-1083-aws",
   "packages": {
     "accountsservice": {
       "arch": "amd64",
@@ -1991,7 +1991,7 @@
     },
     "bind9-host": {
       "arch": "amd64",
-      "version": "1:9.10.3.dfsg.P4-8ubuntu1.12"
+      "version": "1:9.10.3.dfsg.P4-8ubuntu1.14"
     },
     "bsdmainutils": {
       "arch": "amd64",
@@ -2027,7 +2027,7 @@
     },
     "chef": {
       "arch": "amd64",
-      "version": "14.12.9-1"
+      "version": "15.0.300-1"
     },
     "cloud-guest-utils": {
       "arch": "all",
@@ -2055,11 +2055,11 @@
     },
     "console-setup": {
       "arch": "all",
-      "version": "1.108ubuntu15.4"
+      "version": "1.108ubuntu15.5"
     },
     "console-setup-linux": {
       "arch": "all",
-      "version": "1.108ubuntu15.4"
+      "version": "1.108ubuntu15.5"
     },
     "coreutils": {
       "arch": "amd64",
@@ -2115,7 +2115,7 @@
     },
     "distro-info-data": {
       "arch": "all",
-      "version": "0.28ubuntu0.10"
+      "version": "0.28ubuntu0.12"
     },
     "dmeventd": {
       "arch": "amd64",
@@ -2139,7 +2139,7 @@
     },
     "dnsutils": {
       "arch": "amd64",
-      "version": "1:9.10.3.dfsg.P4-8ubuntu1.12"
+      "version": "1:9.10.3.dfsg.P4-8ubuntu1.14"
     },
     "dosfstools": {
       "arch": "amd64",
@@ -2251,7 +2251,7 @@
     },
     "grub-common": {
       "arch": "amd64",
-      "version": "2.02~beta2-36ubuntu3.21"
+      "version": "2.02~beta2-36ubuntu3.22"
     },
     "grub-gfxpayload-lists": {
       "arch": "amd64",
@@ -2263,15 +2263,15 @@
     },
     "grub-pc": {
       "arch": "amd64",
-      "version": "2.02~beta2-36ubuntu3.21"
+      "version": "2.02~beta2-36ubuntu3.22"
     },
     "grub-pc-bin": {
       "arch": "amd64",
-      "version": "2.02~beta2-36ubuntu3.21"
+      "version": "2.02~beta2-36ubuntu3.22"
     },
     "grub2-common": {
       "arch": "amd64",
-      "version": "2.02~beta2-36ubuntu3.21"
+      "version": "2.02~beta2-36ubuntu3.22"
     },
     "gzip": {
       "arch": "amd64",
@@ -2335,7 +2335,7 @@
     },
     "iproute2": {
       "arch": "amd64",
-      "version": "4.3.0-1ubuntu3.16.04.4"
+      "version": "4.3.0-1ubuntu3.16.04.5"
     },
     "iptables": {
       "arch": "amd64",
@@ -2371,7 +2371,7 @@
     },
     "keyboard-configuration": {
       "arch": "all",
-      "version": "1.108ubuntu15.4"
+      "version": "1.108ubuntu15.5"
     },
     "klibc-utils": {
       "arch": "amd64",
@@ -2443,7 +2443,7 @@
     },
     "libbind9-140": {
       "arch": "amd64",
-      "version": "1:9.10.3.dfsg.P4-8ubuntu1.12"
+      "version": "1:9.10.3.dfsg.P4-8ubuntu1.14"
     },
     "libblkid1": {
       "arch": "amd64",
@@ -2515,11 +2515,11 @@
     },
     "libdns-export162": {
       "arch": "amd64",
-      "version": "1:9.10.3.dfsg.P4-8ubuntu1.12"
+      "version": "1:9.10.3.dfsg.P4-8ubuntu1.14"
     },
     "libdns162": {
       "arch": "amd64",
-      "version": "1:9.10.3.dfsg.P4-8ubuntu1.12"
+      "version": "1:9.10.3.dfsg.P4-8ubuntu1.14"
     },
     "libdrm-common": {
       "arch": "all",
@@ -2667,19 +2667,19 @@
     },
     "libisc-export160": {
       "arch": "amd64",
-      "version": "1:9.10.3.dfsg.P4-8ubuntu1.12"
+      "version": "1:9.10.3.dfsg.P4-8ubuntu1.14"
     },
     "libisc160": {
       "arch": "amd64",
-      "version": "1:9.10.3.dfsg.P4-8ubuntu1.12"
+      "version": "1:9.10.3.dfsg.P4-8ubuntu1.14"
     },
     "libisccc140": {
       "arch": "amd64",
-      "version": "1:9.10.3.dfsg.P4-8ubuntu1.12"
+      "version": "1:9.10.3.dfsg.P4-8ubuntu1.14"
     },
     "libisccfg140": {
       "arch": "amd64",
-      "version": "1:9.10.3.dfsg.P4-8ubuntu1.12"
+      "version": "1:9.10.3.dfsg.P4-8ubuntu1.14"
     },
     "libjson-c2": {
       "arch": "amd64",
@@ -2715,7 +2715,7 @@
     },
     "libldap-2.4-2": {
       "arch": "amd64",
-      "version": "2.4.42+dfsg-2ubuntu3.4"
+      "version": "2.4.42+dfsg-2ubuntu3.5"
     },
     "liblocale-gettext-perl": {
       "arch": "amd64",
@@ -2731,11 +2731,11 @@
     },
     "liblwres141": {
       "arch": "amd64",
-      "version": "1:9.10.3.dfsg.P4-8ubuntu1.12"
+      "version": "1:9.10.3.dfsg.P4-8ubuntu1.14"
     },
     "liblxc1": {
       "arch": "amd64",
-      "version": "2.0.8-0ubuntu1~16.04.2"
+      "version": "2.0.11-0ubuntu1~16.04.3"
     },
     "liblz4-1": {
       "arch": "amd64",
@@ -2823,7 +2823,7 @@
     },
     "libpam-systemd": {
       "arch": "amd64",
-      "version": "229-4ubuntu21.19"
+      "version": "229-4ubuntu21.21"
     },
     "libpam0g": {
       "arch": "amd64",
@@ -2975,7 +2975,7 @@
     },
     "libsystemd0": {
       "arch": "amd64",
-      "version": "229-4ubuntu21.19"
+      "version": "229-4ubuntu21.21"
     },
     "libtasn1-6": {
       "arch": "amd64",
@@ -2999,7 +2999,7 @@
     },
     "libudev1": {
       "arch": "amd64",
-      "version": "229-4ubuntu21.19"
+      "version": "229-4ubuntu21.21"
     },
     "libusb-0.1-4": {
       "arch": "amd64",
@@ -3071,7 +3071,7 @@
     },
     "libxslt1.1": {
       "arch": "amd64",
-      "version": "1.1.28-2.1ubuntu0.1"
+      "version": "1.1.28-2.1ubuntu0.2"
     },
     "libxtables11": {
       "arch": "amd64",
@@ -3083,35 +3083,35 @@
     },
     "linux-aws": {
       "arch": "amd64",
-      "version": "4.4.0.1079.82"
+      "version": "4.4.0.1083.86"
     },
-    "linux-aws-headers-4.4.0-1079": {
+    "linux-aws-headers-4.4.0-1083": {
       "arch": "all",
-      "version": "4.4.0-1079.89"
+      "version": "4.4.0-1083.93"
     },
     "linux-base": {
       "arch": "all",
       "version": "4.5ubuntu1~16.04.1"
     },
-    "linux-headers-4.4.0-1079-aws": {
+    "linux-headers-4.4.0-1083-aws": {
       "arch": "amd64",
-      "version": "4.4.0-1079.89"
+      "version": "4.4.0-1083.93"
     },
     "linux-headers-aws": {
       "arch": "amd64",
-      "version": "4.4.0.1079.82"
+      "version": "4.4.0.1083.86"
     },
-    "linux-image-4.4.0-1079-aws": {
+    "linux-image-4.4.0-1083-aws": {
       "arch": "amd64",
-      "version": "4.4.0-1079.89"
+      "version": "4.4.0-1083.93"
     },
     "linux-image-aws": {
       "arch": "amd64",
-      "version": "4.4.0.1079.82"
+      "version": "4.4.0.1083.86"
     },
-    "linux-modules-4.4.0-1079-aws": {
+    "linux-modules-4.4.0-1083-aws": {
       "arch": "amd64",
-      "version": "4.4.0-1079.89"
+      "version": "4.4.0-1083.93"
     },
     "locales": {
       "arch": "all",
@@ -3119,7 +3119,7 @@
     },
     "login": {
       "arch": "amd64",
-      "version": "1:4.2-3.1ubuntu5.3"
+      "version": "1:4.2-3.1ubuntu5.4"
     },
     "logrotate": {
       "arch": "amd64",
@@ -3135,7 +3135,7 @@
     },
     "lshw": {
       "arch": "amd64",
-      "version": "02.17-1.1ubuntu3.5"
+      "version": "02.17-1.1ubuntu3.6"
     },
     "lsof": {
       "arch": "amd64",
@@ -3151,7 +3151,7 @@
     },
     "lxc-common": {
       "arch": "amd64",
-      "version": "2.0.8-0ubuntu1~16.04.2"
+      "version": "2.0.11-0ubuntu1~16.04.3"
     },
     "lxcfs": {
       "arch": "amd64",
@@ -3235,7 +3235,7 @@
     },
     "ntfs-3g": {
       "arch": "amd64",
-      "version": "1:2015.3.14AR.1-1ubuntu0.2"
+      "version": "1:2015.3.14AR.1-1ubuntu0.3"
     },
     "open-iscsi": {
       "arch": "amd64",
@@ -3275,7 +3275,7 @@
     },
     "passwd": {
       "arch": "amd64",
-      "version": "1:4.2-3.1ubuntu5.3"
+      "version": "1:4.2-3.1ubuntu5.4"
     },
     "pastebinit": {
       "arch": "all",
@@ -3535,7 +3535,7 @@
     },
     "snapd": {
       "arch": "amd64",
-      "version": "2.37.4ubuntu0.1"
+      "version": "2.38"
     },
     "software-properties-common": {
       "arch": "all",
@@ -3559,15 +3559,15 @@
     },
     "sudo": {
       "arch": "amd64",
-      "version": "1.8.16-0ubuntu1.5"
+      "version": "1.8.16-0ubuntu1.6"
     },
     "systemd": {
       "arch": "amd64",
-      "version": "229-4ubuntu21.19"
+      "version": "229-4ubuntu21.21"
     },
     "systemd-sysv": {
       "arch": "amd64",
-      "version": "229-4ubuntu21.19"
+      "version": "229-4ubuntu21.21"
     },
     "sysv-rc": {
       "arch": "all",
@@ -3603,7 +3603,7 @@
     },
     "tzdata": {
       "arch": "all",
-      "version": "2018i-0ubuntu0.16.04"
+      "version": "2019a-0ubuntu0.16.04"
     },
     "ubuntu-advantage-tools": {
       "arch": "all",
@@ -3615,7 +3615,7 @@
     },
     "ubuntu-core-launcher": {
       "arch": "amd64",
-      "version": "2.37.4ubuntu0.1"
+      "version": "2.38"
     },
     "ubuntu-keyring": {
       "arch": "all",
@@ -3623,7 +3623,7 @@
     },
     "ubuntu-minimal": {
       "arch": "amd64",
-      "version": "1.361.2"
+      "version": "1.361.3"
     },
     "ubuntu-release-upgrader-core": {
       "arch": "all",
@@ -3631,11 +3631,11 @@
     },
     "ubuntu-server": {
       "arch": "amd64",
-      "version": "1.361.2"
+      "version": "1.361.3"
     },
     "ubuntu-standard": {
       "arch": "amd64",
-      "version": "1.361.2"
+      "version": "1.361.3"
     },
     "ucf": {
       "arch": "all",
@@ -3643,7 +3643,7 @@
     },
     "udev": {
       "arch": "amd64",
-      "version": "229-4ubuntu21.19"
+      "version": "229-4ubuntu21.21"
     },
     "ufw": {
       "arch": "all",
@@ -3651,7 +3651,7 @@
     },
     "uidmap": {
       "arch": "amd64",
-      "version": "1:4.2-3.1ubuntu5.3"
+      "version": "1:4.2-3.1ubuntu5.4"
     },
     "unattended-upgrades": {
       "arch": "all",
@@ -3667,7 +3667,7 @@
     },
     "ureadahead": {
       "arch": "amd64",
-      "version": "0.100.0-19"
+      "version": "0.100.0-19.1"
     },
     "usbutils": {
       "arch": "amd64",
@@ -3703,7 +3703,7 @@
     },
     "wget": {
       "arch": "amd64",
-      "version": "1.17.1-1ubuntu1.4"
+      "version": "1.17.1-1ubuntu1.5"
     },
     "whiptail": {
       "arch": "amd64",
@@ -3746,7 +3746,7 @@
   "platform_family": "debian",
   "platform_version": "16.04",
   "root_group": "root",
-  "shard_seed": 251508133,
+  "shard_seed": 70921763,
   "shells": [
     "/bin/sh",
     "/bin/dash",
