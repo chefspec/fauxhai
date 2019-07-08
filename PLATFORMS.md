@@ -44,6 +44,7 @@ This file lists each platform known to Fauxhai and the available versions for ea
   - 9.6
   - 9.8
   - 9.9
+  - 10.0
 
 ### dragonfly4
 
