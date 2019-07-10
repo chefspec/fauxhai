@@ -1,5 +1,14 @@
 # Fauxhai Changelog
 
+## v7.4.0 (2019-07-10)
+
+Note: Going forward we won't be shipping the point releases for each distro. Instead the major version will just be updated from time to time with the latest release. This means redhat 8 will be 8.0 then 8.1, then 8.2, etc. This will greatly reduce the size of this repo and the need to for users to update from deprecated definitions.
+
+- Updated `suse` 15 from 15.0 to 15.1.
+- Added a new `redhat` 8 definition to replace the 8.0 definition, which is now deprecated
+- Updated all `amazon` and `ubuntu` releases to Chef 15.1
+- Added an initial `debian` 10 dump. The debian project hasn't released an AMI yet so this is a VirtualBox dump
+
 ## v7.3.0 (2019-06-17)
 
 - Updated many of the Amazon, Redhat, Debian, CentOS, Ubuntu, openSUSE, and SLES platforms to Chef 15.0.300
