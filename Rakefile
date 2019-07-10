@@ -40,6 +40,7 @@ namespace :documentation do
       # make sure there are any non-deprecated platforms before writing out the header
       unless versions.empty?
         f.write "\n### #{platform_path.split('/')[-1]}\n\n"
+        versions = versions.sort_by { |v| Gem::Version.new(v) } unless platform_path.split('/')[-1] == 'windows' # make sure we're sorted by version and not by strings
         versions.each do |v|
           f.write "  - #{v}\n"
         end
