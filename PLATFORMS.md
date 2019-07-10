@@ -36,6 +36,7 @@ This file lists each platform known to Fauxhai and the available versions for ea
 
 ### debian
 
+  - 10.0
   - 7.11
   - 8.10
   - 8.11
@@ -44,7 +45,6 @@ This file lists each platform known to Fauxhai and the available versions for ea
   - 9.6
   - 9.8
   - 9.9
-  - 10.0
 
 ### dragonfly4
 
@@ -127,6 +127,7 @@ This file lists each platform known to Fauxhai and the available versions for ea
   - 12.1
   - 12.2
   - 12.3
+  - 15.1
   - 15
 
 ### ubuntu
