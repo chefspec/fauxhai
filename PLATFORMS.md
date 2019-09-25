@@ -29,6 +29,7 @@ This file lists each platform known to Fauxhai and the available versions for ea
   - 6.10
   - 7.5.1804
   - 7.6.1810
+  - 8.0.1905
 
 ### clearos
 
