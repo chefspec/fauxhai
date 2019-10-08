@@ -11,12 +11,12 @@
   },
   "chef_packages": {
     "chef": {
-      "chef_root": "/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.8.12/lib",
-      "version": "14.8.12"
+      "chef_root": "/opt/chef/embedded/lib/ruby/gems/2.6.0/gems/chef-15.3.14/lib",
+      "version": "15.3.14"
     },
     "ohai": {
-      "ohai_root": "/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/ohai-14.8.10/lib/ohai",
-      "version": "14.8.10"
+      "ohai_root": "/opt/chef/embedded/lib/ruby/gems/2.6.0/gems/ohai-15.3.1/lib/ohai",
+      "version": "15.3.1"
     }
   },
   "command": {
@@ -83,12 +83,12 @@
       },
       "/dev/xvda1": {
         "fs_type": "ext4",
-        "inodes_available": "352309",
+        "inodes_available": "350346",
         "inodes_percent_used": "11%",
-        "inodes_used": "40907",
-        "kb_available": "4843356",
+        "inodes_used": "42870",
+        "kb_available": "4836316",
         "kb_size": "6126124",
-        "kb_used": "972876",
+        "kb_used": "979916",
         "mount_options": [
           "rw",
           "relatime",
@@ -99,7 +99,7 @@
         ],
         "percent_used": "17%",
         "total_inodes": "393216",
-        "uuid": "a84f47e9-a84c-47b5-b6f6-d55e6e7cbf06"
+        "uuid": "81635e03-5450-4b04-a0a7-f7dff1a3aa31"
       },
       "bpf": {
         "fs_type": "bpf",
@@ -124,20 +124,20 @@
           "noexec",
           "relatime",
           "seclabel",
-          "devices"
+          "hugetlb"
         ],
         "mounts": [
           "/sys/fs/cgroup/systemd",
-          "/sys/fs/cgroup/hugetlb",
+          "/sys/fs/cgroup/devices",
+          "/sys/fs/cgroup/memory",
+          "/sys/fs/cgroup/perf_event",
+          "/sys/fs/cgroup/freezer",
+          "/sys/fs/cgroup/cpu,cpuacct",
+          "/sys/fs/cgroup/cpuset",
           "/sys/fs/cgroup/net_cls,net_prio",
           "/sys/fs/cgroup/blkio",
-          "/sys/fs/cgroup/cpuset",
-          "/sys/fs/cgroup/cpu,cpuacct",
-          "/sys/fs/cgroup/memory",
-          "/sys/fs/cgroup/freezer",
           "/sys/fs/cgroup/pids",
-          "/sys/fs/cgroup/perf_event",
-          "/sys/fs/cgroup/devices"
+          "/sys/fs/cgroup/hugetlb"
         ]
       },
       "cgroup2": {
@@ -194,25 +194,25 @@
       },
       "devtmpfs": {
         "fs_type": "devtmpfs",
-        "inodes_available": "121528",
+        "inodes_available": "120947",
         "inodes_percent_used": "1%",
-        "inodes_used": "332",
-        "kb_available": "487440",
-        "kb_size": "487440",
+        "inodes_used": "334",
+        "kb_available": "485124",
+        "kb_size": "485124",
         "kb_used": "0",
         "mount_options": [
           "rw",
           "nosuid",
           "seclabel",
-          "size=487440k",
-          "nr_inodes=121860",
+          "size=485124k",
+          "nr_inodes=121281",
           "mode=755"
         ],
         "mounts": [
           "/dev"
         ],
         "percent_used": "0%",
-        "total_inodes": "121860"
+        "total_inodes": "121281"
       },
       "hugetlbfs": {
         "fs_type": "hugetlbfs",
@@ -306,13 +306,13 @@
         "mount_options": [
           "rw",
           "relatime",
-          "fd=42",
+          "fd=36",
           "pgrp=1",
           "timeout=0",
           "minproto=5",
           "maxproto=5",
           "direct",
-          "pipe_ino=15023"
+          "pipe_ino=15427"
         ],
         "mounts": [
           "/proc/sys/fs/binfmt_misc"
@@ -320,11 +320,11 @@
       },
       "tmpfs": {
         "fs_type": "tmpfs",
-        "inodes_available": "125516",
+        "inodes_available": "125399",
         "inodes_percent_used": "1%",
         "inodes_used": "5",
-        "kb_available": "100416",
-        "kb_size": "100416",
+        "kb_available": "100320",
+        "kb_size": "100320",
         "kb_used": "0",
         "mount_options": [
           "rw",
@@ -332,7 +332,7 @@
           "nodev",
           "relatime",
           "seclabel",
-          "size=100416k",
+          "size=100320k",
           "mode=700",
           "uid=1000",
           "gid=1000"
@@ -344,7 +344,7 @@
           "/run/user/1000"
         ],
         "percent_used": "0%",
-        "total_inodes": "125521"
+        "total_inodes": "125404"
       }
     },
     "by_mountpoint": {
@@ -353,12 +353,12 @@
           "/dev/xvda1"
         ],
         "fs_type": "ext4",
-        "inodes_available": "352309",
+        "inodes_available": "350346",
         "inodes_percent_used": "11%",
-        "inodes_used": "40907",
-        "kb_available": "4843356",
+        "inodes_used": "42870",
+        "kb_available": "4836316",
         "kb_size": "6126124",
-        "kb_used": "972876",
+        "kb_used": "979916",
         "mount_options": [
           "rw",
           "relatime",
@@ -366,29 +366,29 @@
         ],
         "percent_used": "17%",
         "total_inodes": "393216",
-        "uuid": "a84f47e9-a84c-47b5-b6f6-d55e6e7cbf06"
+        "uuid": "81635e03-5450-4b04-a0a7-f7dff1a3aa31"
       },
       "/dev": {
         "devices": [
           "devtmpfs"
         ],
         "fs_type": "devtmpfs",
-        "inodes_available": "121528",
+        "inodes_available": "120947",
         "inodes_percent_used": "1%",
-        "inodes_used": "332",
-        "kb_available": "487440",
-        "kb_size": "487440",
+        "inodes_used": "334",
+        "kb_available": "485124",
+        "kb_size": "485124",
         "kb_used": "0",
         "mount_options": [
           "rw",
           "nosuid",
           "seclabel",
-          "size=487440k",
-          "nr_inodes=121860",
+          "size=485124k",
+          "nr_inodes=121281",
           "mode=755"
         ],
         "percent_used": "0%",
-        "total_inodes": "121860"
+        "total_inodes": "121281"
       },
       "/dev/hugepages": {
         "devices": [
@@ -434,11 +434,11 @@
           "tmpfs"
         ],
         "fs_type": "tmpfs",
-        "inodes_available": "125520",
+        "inodes_available": "125403",
         "inodes_percent_used": "1%",
         "inodes_used": "1",
-        "kb_available": "502084",
-        "kb_size": "502084",
+        "kb_available": "501616",
+        "kb_size": "501616",
         "kb_used": "0",
         "mount_options": [
           "rw",
@@ -447,7 +447,7 @@
           "seclabel"
         ],
         "percent_used": "0%",
-        "total_inodes": "125521"
+        "total_inodes": "125404"
       },
       "/proc": {
         "devices": [
@@ -470,13 +470,13 @@
         "mount_options": [
           "rw",
           "relatime",
-          "fd=42",
+          "fd=36",
           "pgrp=1",
           "timeout=0",
           "minproto=5",
           "maxproto=5",
           "direct",
-          "pipe_ino=15023"
+          "pipe_ino=15427"
         ]
       },
       "/run": {
@@ -484,11 +484,11 @@
           "tmpfs"
         ],
         "fs_type": "tmpfs",
-        "inodes_available": "125109",
+        "inodes_available": "124991",
         "inodes_percent_used": "1%",
-        "inodes_used": "412",
-        "kb_available": "501192",
-        "kb_size": "502084",
+        "inodes_used": "413",
+        "kb_available": "500724",
+        "kb_size": "501616",
         "kb_used": "892",
         "mount_options": [
           "rw",
@@ -498,18 +498,18 @@
           "mode=755"
         ],
         "percent_used": "1%",
-        "total_inodes": "125521"
+        "total_inodes": "125404"
       },
       "/run/user/1000": {
         "devices": [
           "tmpfs"
         ],
         "fs_type": "tmpfs",
-        "inodes_available": "125516",
+        "inodes_available": "125399",
         "inodes_percent_used": "1%",
         "inodes_used": "5",
-        "kb_available": "100416",
-        "kb_size": "100416",
+        "kb_available": "100320",
+        "kb_size": "100320",
         "kb_used": "0",
         "mount_options": [
           "rw",
@@ -517,13 +517,13 @@
           "nodev",
           "relatime",
           "seclabel",
-          "size=100416k",
+          "size=100320k",
           "mode=700",
           "uid=1000",
           "gid=1000"
         ],
         "percent_used": "0%",
-        "total_inodes": "125521"
+        "total_inodes": "125404"
       },
       "/sys": {
         "devices": [
@@ -558,11 +558,11 @@
           "tmpfs"
         ],
         "fs_type": "tmpfs",
-        "inodes_available": "125504",
+        "inodes_available": "125387",
         "inodes_percent_used": "1%",
         "inodes_used": "17",
-        "kb_available": "502084",
-        "kb_size": "502084",
+        "kb_available": "501616",
+        "kb_size": "501616",
         "kb_used": "0",
         "mount_options": [
           "ro",
@@ -573,7 +573,7 @@
           "mode=755"
         ],
         "percent_used": "0%",
-        "total_inodes": "125521"
+        "total_inodes": "125404"
       },
       "/sys/fs/cgroup/blkio": {
         "devices": [
@@ -824,12 +824,12 @@
       "/dev/xvda1,/": {
         "device": "/dev/xvda1",
         "fs_type": "ext4",
-        "inodes_available": "352309",
+        "inodes_available": "350346",
         "inodes_percent_used": "11%",
-        "inodes_used": "40907",
-        "kb_available": "4843356",
+        "inodes_used": "42870",
+        "kb_available": "4836316",
         "kb_size": "6126124",
-        "kb_used": "972876",
+        "kb_used": "979916",
         "mount": "/",
         "mount_options": [
           "rw",
@@ -838,7 +838,7 @@
         ],
         "percent_used": "17%",
         "total_inodes": "393216",
-        "uuid": "a84f47e9-a84c-47b5-b6f6-d55e6e7cbf06"
+        "uuid": "81635e03-5450-4b04-a0a7-f7dff1a3aa31"
       },
       "bpf,/sys/fs/bpf": {
         "device": "bpf",
@@ -1061,23 +1061,23 @@
       "devtmpfs,/dev": {
         "device": "devtmpfs",
         "fs_type": "devtmpfs",
-        "inodes_available": "121528",
+        "inodes_available": "120947",
         "inodes_percent_used": "1%",
-        "inodes_used": "332",
-        "kb_available": "487440",
-        "kb_size": "487440",
+        "inodes_used": "334",
+        "kb_available": "485124",
+        "kb_size": "485124",
         "kb_used": "0",
         "mount": "/dev",
         "mount_options": [
           "rw",
           "nosuid",
           "seclabel",
-          "size=487440k",
-          "nr_inodes=121860",
+          "size=485124k",
+          "nr_inodes=121281",
           "mode=755"
         ],
         "percent_used": "0%",
-        "total_inodes": "121860"
+        "total_inodes": "121281"
       },
       "hugetlbfs,/dev/hugepages": {
         "device": "hugetlbfs",
@@ -1166,23 +1166,23 @@
         "mount_options": [
           "rw",
           "relatime",
-          "fd=42",
+          "fd=36",
           "pgrp=1",
           "timeout=0",
           "minproto=5",
           "maxproto=5",
           "direct",
-          "pipe_ino=15023"
+          "pipe_ino=15427"
         ]
       },
       "tmpfs,/dev/shm": {
         "device": "tmpfs",
         "fs_type": "tmpfs",
-        "inodes_available": "125520",
+        "inodes_available": "125403",
         "inodes_percent_used": "1%",
         "inodes_used": "1",
-        "kb_available": "502084",
-        "kb_size": "502084",
+        "kb_available": "501616",
+        "kb_size": "501616",
         "kb_used": "0",
         "mount": "/dev/shm",
         "mount_options": [
@@ -1192,16 +1192,16 @@
           "seclabel"
         ],
         "percent_used": "0%",
-        "total_inodes": "125521"
+        "total_inodes": "125404"
       },
       "tmpfs,/run": {
         "device": "tmpfs",
         "fs_type": "tmpfs",
-        "inodes_available": "125109",
+        "inodes_available": "124991",
         "inodes_percent_used": "1%",
-        "inodes_used": "412",
-        "kb_available": "501192",
-        "kb_size": "502084",
+        "inodes_used": "413",
+        "kb_available": "500724",
+        "kb_size": "501616",
         "kb_used": "892",
         "mount": "/run",
         "mount_options": [
@@ -1212,16 +1212,16 @@
           "mode=755"
         ],
         "percent_used": "1%",
-        "total_inodes": "125521"
+        "total_inodes": "125404"
       },
       "tmpfs,/run/user/1000": {
         "device": "tmpfs",
         "fs_type": "tmpfs",
-        "inodes_available": "125516",
+        "inodes_available": "125399",
         "inodes_percent_used": "1%",
         "inodes_used": "5",
-        "kb_available": "100416",
-        "kb_size": "100416",
+        "kb_available": "100320",
+        "kb_size": "100320",
         "kb_used": "0",
         "mount": "/run/user/1000",
         "mount_options": [
@@ -1230,22 +1230,22 @@
           "nodev",
           "relatime",
           "seclabel",
-          "size=100416k",
+          "size=100320k",
           "mode=700",
           "uid=1000",
           "gid=1000"
         ],
         "percent_used": "0%",
-        "total_inodes": "125521"
+        "total_inodes": "125404"
       },
       "tmpfs,/sys/fs/cgroup": {
         "device": "tmpfs",
         "fs_type": "tmpfs",
-        "inodes_available": "125504",
+        "inodes_available": "125387",
         "inodes_percent_used": "1%",
         "inodes_used": "17",
-        "kb_available": "502084",
-        "kb_size": "502084",
+        "kb_available": "501616",
+        "kb_size": "501616",
         "kb_used": "0",
         "mount": "/sys/fs/cgroup",
         "mount_options": [
@@ -1257,7 +1257,7 @@
           "mode=755"
         ],
         "percent_used": "0%",
-        "total_inodes": "125521"
+        "total_inodes": "125404"
       }
     }
   },
@@ -1281,8 +1281,8 @@
         "version": "0.2.15"
       },
       "cirrus": {
-        "refcount": "1",
-        "size": "28672"
+        "refcount": "0",
+        "size": "16384"
       },
       "crc32_pclmul": {
         "refcount": "0",
@@ -1293,16 +1293,16 @@
         "size": "24576"
       },
       "crct10dif_pclmul": {
-        "refcount": "0",
+        "refcount": "1",
         "size": "16384"
       },
       "drm": {
-        "refcount": "4",
+        "refcount": "3",
         "size": "487424"
       },
       "drm_kms_helper": {
-        "refcount": "1",
-        "size": "196608"
+        "refcount": "3",
+        "size": "225280"
       },
       "ghash_clmulni_intel": {
         "refcount": "0",
@@ -1310,11 +1310,11 @@
       },
       "i2c_piix4": {
         "refcount": "0",
-        "size": "24576"
+        "size": "28672"
       },
       "intel_rapl": {
         "refcount": "0",
-        "size": "24576"
+        "size": "28672"
       },
       "intel_rapl_perf": {
         "refcount": "0",
@@ -1322,7 +1322,7 @@
       },
       "isofs": {
         "refcount": "0",
-        "size": "45056"
+        "size": "53248"
       },
       "pata_acpi": {
         "refcount": "0",
@@ -1335,11 +1335,7 @@
       },
       "serio_raw": {
         "refcount": "0",
-        "size": "16384"
-      },
-      "ttm": {
-        "refcount": "1",
-        "size": "131072"
+        "size": "20480"
       },
       "xen_blkfront": {
         "refcount": "2",
@@ -1347,14 +1343,14 @@
       },
       "xen_netfront": {
         "refcount": "0",
-        "size": "32768"
+        "size": "36864"
       }
     },
     "name": "Linux",
     "os": "GNU/Linux",
     "processor": "x86_64",
-    "release": "4.19.9-300.fc29.x86_64",
-    "version": "#1 SMP Thu Dec 13 17:25:01 UTC 2018"
+    "release": "5.2.17-100.fc29.x86_64",
+    "version": "#1 SMP Mon Sep 23 14:09:29 UTC 2019"
   },
   "keys": {
     "ssh": {
@@ -1466,2339 +1462,2346 @@
       }
     }
   },
-  "ohai_time": 1545338314.1962712,
+  "ohai_time": 1570576614.1024282,
   "os": "linux",
-  "os_version": "4.19.9-300.fc29.x86_64",
+  "os_version": "5.2.17-100.fc29.x86_64",
   "packages": {
     "NetworkManager": {
       "arch": "x86_64",
       "epoch": "1",
-      "installdate": "1545290335",
-      "release": "3.fc29",
+      "installdate": "1570519139",
+      "release": "5.fc29",
       "version": "1.12.6"
     },
     "NetworkManager-libnm": {
       "arch": "x86_64",
       "epoch": "1",
-      "installdate": "1545290330",
-      "release": "3.fc29",
+      "installdate": "1570519136",
+      "release": "5.fc29",
       "version": "1.12.6"
     },
     "acl": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290303",
+      "installdate": "1570519101",
       "release": "2.fc29",
       "version": "2.2.53"
     },
     "audit": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290340",
-      "release": "0.4.20180831git0047a6c.fc29",
+      "installdate": "1570519144",
+      "release": "0.9.20190507gitf58ec40.fc29",
       "version": "3.0"
     },
     "audit-libs": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290300",
-      "release": "0.4.20180831git0047a6c.fc29",
+      "installdate": "1570519099",
+      "release": "0.9.20190507gitf58ec40.fc29",
       "version": "3.0"
     },
     "basesystem": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290297",
+      "installdate": "1570519096",
       "release": "6.fc29",
       "version": "11"
     },
     "bash": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290299",
-      "release": "5.fc29",
+      "installdate": "1570519098",
+      "release": "6.fc29",
       "version": "4.4.23"
     },
     "bind-export-libs": {
       "arch": "x86_64",
       "epoch": "32",
-      "installdate": "1545290331",
-      "release": "10.P2.fc29",
-      "version": "9.11.4"
+      "installdate": "1570519135",
+      "release": "1.fc29",
+      "version": "9.11.10"
     },
     "brotli": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290306",
+      "installdate": "1570519112",
       "release": "1.fc29",
       "version": "1.0.5"
     },
     "bzip2": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290306",
+      "installdate": "1570519104",
       "release": "28.fc29",
       "version": "1.0.6"
     },
     "bzip2-libs": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290299",
+      "installdate": "1570519098",
       "release": "28.fc29",
       "version": "1.0.6"
     },
     "c-ares": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290306",
+      "installdate": "1570519112",
       "release": "5.fc29",
       "version": "1.13.0"
     },
     "ca-certificates": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290313",
+      "installdate": "1570519118",
       "release": "2.fc29",
       "version": "2018.2.26"
     },
     "checkpolicy": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290307",
-      "release": "2.fc29",
+      "installdate": "1570519113",
+      "release": "3.fc29",
       "version": "2.8"
     },
     "chef": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545338311",
+      "installdate": "1570576611",
       "release": "1.el7",
-      "version": "14.8.12"
+      "version": "15.3.14"
     },
     "chkconfig": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290300",
+      "installdate": "1570519099",
       "release": "6.fc29",
       "version": "1.10"
     },
     "chrony": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290339",
+      "installdate": "1570519144",
       "release": "1.fc29",
       "version": "3.4"
     },
     "cloud-init": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290334",
+      "installdate": "1570519139",
       "release": "7.fc29",
       "version": "17.1"
     },
     "cloud-utils-growpart": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290340",
+      "installdate": "1570519144",
       "release": "4.fc29",
       "version": "0.30"
     },
     "coreutils": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290312",
-      "release": "6.fc29",
+      "installdate": "1570519117",
+      "release": "7.fc29",
       "version": "8.30"
     },
     "coreutils-common": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290304",
-      "release": "6.fc29",
+      "installdate": "1570519102",
+      "release": "7.fc29",
       "version": "8.30"
     },
     "cpio": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290307",
+      "installdate": "1570519112",
       "release": "9.fc29",
       "version": "2.12"
     },
     "cracklib": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290310",
+      "installdate": "1570519116",
       "release": "15.fc29",
       "version": "2.9.6"
     },
     "cracklib-dicts": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290310",
+      "installdate": "1570519116",
       "release": "15.fc29",
       "version": "2.9.6"
     },
     "crypto-policies": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290315",
-      "release": "1.gitd42aaa6.fc29",
-      "version": "20181026"
+      "installdate": "1570519122",
+      "release": "1.git0b3add8.fc29",
+      "version": "20190527"
     },
     "cryptsetup-libs": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290314",
+      "installdate": "1570519119",
       "release": "1.fc29",
       "version": "2.0.6"
     },
     "curl": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290309",
-      "release": "5.fc29",
+      "installdate": "1570519114",
+      "release": "12.fc29",
       "version": "7.61.1"
     },
     "cyrus-sasl-lib": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290309",
+      "installdate": "1570519114",
       "release": "0.3rc7.fc29",
       "version": "2.1.27"
     },
     "dbus": {
       "arch": "x86_64",
       "epoch": "1",
-      "installdate": "1545290316",
+      "installdate": "1570519117",
       "release": "1.fc29",
-      "version": "1.12.10"
+      "version": "1.12.12"
     },
     "dbus-common": {
       "arch": "noarch",
       "epoch": "1",
-      "installdate": "1545290313",
+      "installdate": "1570519122",
       "release": "1.fc29",
-      "version": "1.12.10"
+      "version": "1.12.12"
     },
     "dbus-daemon": {
       "arch": "x86_64",
       "epoch": "1",
-      "installdate": "1545290312",
+      "installdate": "1570519122",
       "release": "1.fc29",
-      "version": "1.12.10"
+      "version": "1.12.12"
     },
     "dbus-libs": {
       "arch": "x86_64",
       "epoch": "1",
-      "installdate": "1545290311",
+      "installdate": "1570519117",
       "release": "1.fc29",
-      "version": "1.12.10"
+      "version": "1.12.12"
     },
     "dbus-tools": {
       "arch": "x86_64",
       "epoch": "1",
-      "installdate": "1545290311",
+      "installdate": "1570519117",
       "release": "1.fc29",
-      "version": "1.12.10"
+      "version": "1.12.12"
     },
     "deltarpm": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290331",
+      "installdate": "1570519135",
       "release": "28.fc29",
       "version": "3.6"
     },
     "device-mapper": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290311",
+      "installdate": "1570519116",
       "release": "1.fc29",
       "version": "1.02.154"
     },
     "device-mapper-libs": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290312",
+      "installdate": "1570519118",
       "release": "1.fc29",
       "version": "1.02.154"
     },
     "dhcp-client": {
       "arch": "x86_64",
       "epoch": "12",
-      "installdate": "1545290334",
-      "release": "28.fc29",
+      "installdate": "1570519139",
+      "release": "34.fc29",
       "version": "4.3.6"
     },
     "dhcp-common": {
       "arch": "noarch",
       "epoch": "12",
-      "installdate": "1545290334",
-      "release": "28.fc29",
+      "installdate": "1570519096",
+      "release": "34.fc29",
       "version": "4.3.6"
     },
     "dhcp-libs": {
       "arch": "x86_64",
       "epoch": "12",
-      "installdate": "1545290331",
-      "release": "28.fc29",
+      "installdate": "1570519136",
+      "release": "34.fc29",
       "version": "4.3.6"
     },
     "diffutils": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290302",
+      "installdate": "1570519100",
       "release": "5.fc29",
       "version": "3.6"
     },
     "dnf": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290333",
-      "release": "2.fc29",
-      "version": "4.0.9"
+      "installdate": "1570519138",
+      "release": "5.fc29",
+      "version": "4.2.5"
     },
     "dnf-data": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290294",
-      "release": "2.fc29",
-      "version": "4.0.9"
+      "installdate": "1570519093",
+      "release": "5.fc29",
+      "version": "4.2.5"
     },
     "dnf-plugins-core": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290334",
+      "installdate": "1570519138",
       "release": "1.fc29",
-      "version": "4.0.2"
+      "version": "4.0.7"
     },
     "dnf-yum": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290334",
-      "release": "2.fc29",
-      "version": "4.0.9"
+      "installdate": "1570519138",
+      "release": "5.fc29",
+      "version": "4.2.5"
     },
     "dracut": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290315",
-      "release": "25.git20181204.fc29",
+      "installdate": "1570519121",
+      "release": "26.git20181204.fc29",
       "version": "049"
     },
     "dracut-config-generic": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290340",
-      "release": "25.git20181204.fc29",
+      "installdate": "1570519144",
+      "release": "26.git20181204.fc29",
       "version": "049"
     },
     "e2fsprogs": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290331",
+      "installdate": "1570519136",
       "release": "1.fc29",
-      "version": "1.44.3"
+      "version": "1.44.6"
     },
     "e2fsprogs-libs": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290306",
+      "installdate": "1570519104",
       "release": "1.fc29",
-      "version": "1.44.3"
+      "version": "1.44.6"
     },
     "elfutils-default-yama-scope": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290309",
-      "release": "5.fc29",
-      "version": "0.174"
+      "installdate": "1570519115",
+      "release": "1.fc29",
+      "version": "0.176"
     },
     "elfutils-libelf": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290299",
-      "release": "5.fc29",
-      "version": "0.174"
+      "installdate": "1570519098",
+      "release": "1.fc29",
+      "version": "0.176"
     },
     "elfutils-libs": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290309",
-      "release": "5.fc29",
-      "version": "0.174"
+      "installdate": "1570519115",
+      "release": "1.fc29",
+      "version": "0.176"
     },
     "expat": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290300",
+      "installdate": "1570519099",
       "release": "1.fc29",
-      "version": "2.2.6"
+      "version": "2.2.8"
     },
     "fedora-gpg-keys": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290296",
-      "release": "2",
+      "installdate": "1570519095",
+      "release": "6",
       "version": "29"
     },
     "fedora-release": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290296",
-      "release": "7",
+      "installdate": "1570519095",
+      "release": "11",
       "version": "29"
     },
     "fedora-release-cloud": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290341",
-      "release": "7",
+      "installdate": "1570519145",
+      "release": "11",
       "version": "29"
     },
     "fedora-repos": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290296",
-      "release": "2",
+      "installdate": "1570519095",
+      "release": "6",
       "version": "29"
     },
     "file": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290301",
-      "release": "7.fc29",
+      "installdate": "1570519100",
+      "release": "14.fc29",
       "version": "5.34"
     },
     "file-libs": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290301",
-      "release": "7.fc29",
+      "installdate": "1570519100",
+      "release": "14.fc29",
       "version": "5.34"
     },
     "filesystem": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290297",
+      "installdate": "1570519096",
       "release": "2.fc29",
       "version": "3.9"
     },
     "findutils": {
       "arch": "x86_64",
       "epoch": "1",
-      "installdate": "1545290301",
+      "installdate": "1570519100",
       "release": "21.fc29",
       "version": "4.6.0"
     },
     "fipscheck": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290331",
+      "installdate": "1570519135",
       "release": "5.fc29",
       "version": "1.5.0"
     },
     "fipscheck-lib": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290331",
+      "installdate": "1570519135",
       "release": "5.fc29",
       "version": "1.5.0"
     },
     "freetype": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290306",
+      "installdate": "1570519104",
       "release": "6.fc29",
       "version": "2.9.1"
     },
     "fuse-libs": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290307",
-      "release": "14.fc29",
-      "version": "2.9.7"
+      "installdate": "1570519113",
+      "release": "7.fc29",
+      "version": "2.9.9"
     },
     "gawk": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290307",
+      "installdate": "1570519113",
       "release": "3.fc29",
       "version": "4.2.1"
     },
     "gdbm-libs": {
       "arch": "x86_64",
       "epoch": "1",
-      "installdate": "1545290302",
+      "installdate": "1570519100",
       "release": "1.fc29",
       "version": "1.18"
     },
     "geolite2-city": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290296",
+      "installdate": "1570519095",
       "release": "1.fc29",
-      "version": "20181204"
+      "version": "20190806"
     },
     "geolite2-country": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290294",
+      "installdate": "1570519093",
       "release": "1.fc29",
-      "version": "20181204"
+      "version": "20190806"
     },
     "gettext": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290311",
+      "installdate": "1570519115",
       "release": "18.fc29",
       "version": "0.19.8.1"
     },
     "gettext-libs": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290310",
+      "installdate": "1570519115",
       "release": "18.fc29",
       "version": "0.19.8.1"
     },
     "glib2": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290311",
+      "installdate": "1570519115",
       "release": "1.fc29",
-      "version": "2.58.1"
+      "version": "2.58.3"
     },
     "glibc": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290299",
-      "release": "26.fc29",
+      "installdate": "1570519097",
+      "release": "39.fc29",
       "version": "2.28"
     },
     "glibc-common": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290298",
-      "release": "26.fc29",
+      "installdate": "1570519097",
+      "release": "39.fc29",
       "version": "2.28"
     },
     "glibc-langpack-en": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290298",
-      "release": "26.fc29",
+      "installdate": "1570519097",
+      "release": "39.fc29",
       "version": "2.28"
     },
     "gmp": {
       "arch": "x86_64",
       "epoch": "1",
-      "installdate": "1545290300",
-      "release": "8.fc29",
+      "installdate": "1570519099",
+      "release": "9.fc29",
       "version": "6.1.2"
     },
     "gnupg2": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290332",
+      "installdate": "1570519137",
       "release": "1.fc29",
-      "version": "2.2.11"
+      "version": "2.2.17"
     },
     "gnupg2-smime": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290332",
+      "installdate": "1570519137",
       "release": "1.fc29",
-      "version": "2.2.11"
+      "version": "2.2.17"
     },
     "gnutls": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290315",
+      "installdate": "1570519117",
       "release": "1.fc29",
-      "version": "3.6.5"
+      "version": "3.6.7"
     },
     "gpg-pubkey": {
       "arch": "(none)",
       "epoch": "0",
-      "installdate": "1545290419",
+      "installdate": "1570519219",
       "release": "5a886537",
       "version": "429476b4"
     },
     "gpgme": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290332",
-      "release": "3.fc29",
-      "version": "1.11.1"
+      "installdate": "1570519137",
+      "release": "1.fc29",
+      "version": "1.12.0"
     },
     "grep": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290301",
+      "installdate": "1570519100",
       "release": "8.fc29",
       "version": "3.1"
     },
     "groff-base": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290303",
+      "installdate": "1570519101",
       "release": "17.fc29",
       "version": "1.22.3"
     },
     "grub2-common": {
       "arch": "noarch",
       "epoch": "1",
-      "installdate": "1545290301",
+      "installdate": "1570519099",
       "release": "62.fc29",
       "version": "2.02"
     },
     "grub2-pc": {
       "arch": "x86_64",
       "epoch": "1",
-      "installdate": "1545290334",
+      "installdate": "1570519139",
       "release": "62.fc29",
       "version": "2.02"
     },
     "grub2-pc-modules": {
       "arch": "noarch",
       "epoch": "1",
-      "installdate": "1545290303",
+      "installdate": "1570519102",
       "release": "62.fc29",
       "version": "2.02"
     },
     "grub2-tools": {
       "arch": "x86_64",
       "epoch": "1",
-      "installdate": "1545290315",
+      "installdate": "1570519122",
       "release": "62.fc29",
       "version": "2.02"
     },
     "grub2-tools-extra": {
       "arch": "x86_64",
       "epoch": "1",
-      "installdate": "1545290331",
+      "installdate": "1570519136",
       "release": "62.fc29",
       "version": "2.02"
     },
     "grub2-tools-minimal": {
       "arch": "x86_64",
       "epoch": "1",
-      "installdate": "1545290311",
+      "installdate": "1570519116",
       "release": "62.fc29",
       "version": "2.02"
     },
     "grubby": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290315",
+      "installdate": "1570519122",
       "release": "18.fc29",
       "version": "8.40"
     },
     "gzip": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290310",
-      "release": "7.fc29",
+      "installdate": "1570519116",
+      "release": "9.fc29",
       "version": "1.9"
     },
     "hardlink": {
       "arch": "x86_64",
       "epoch": "1",
-      "installdate": "1545290307",
+      "installdate": "1570519112",
       "release": "7.fc29",
       "version": "1.3"
     },
     "heat-cfntools": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290335",
+      "installdate": "1570519140",
       "release": "6.fc29",
       "version": "1.4.2"
     },
     "hostname": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290340",
-      "release": "6.fc29",
+      "installdate": "1570519145",
+      "release": "7.fc29",
       "version": "3.20"
     },
     "ima-evm-utils": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290331",
+      "installdate": "1570519135",
       "release": "4.fc29",
       "version": "1.1"
     },
     "info": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290300",
+      "installdate": "1570519099",
       "release": "11.fc29",
       "version": "6.5"
     },
     "initscripts": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290340",
+      "installdate": "1570519144",
       "release": "1.fc29",
       "version": "10.01"
     },
     "ipcalc": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290307",
-      "release": "2.fc29",
+      "installdate": "1570519112",
+      "release": "4.fc29",
       "version": "0.2.4"
     },
     "iproute": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290307",
-      "release": "3.fc29",
-      "version": "4.18.0"
+      "installdate": "1570519113",
+      "release": "2.fc29",
+      "version": "5.0.0"
     },
     "iproute-tc": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290307",
-      "release": "3.fc29",
-      "version": "4.18.0"
+      "installdate": "1570519113",
+      "release": "2.fc29",
+      "version": "5.0.0"
     },
     "iptables-libs": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290302",
+      "installdate": "1570519100",
       "release": "3.fc29",
       "version": "1.8.0"
     },
     "iputils": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290330",
+      "installdate": "1570519135",
       "release": "2.fc29",
       "version": "20180629"
     },
     "jansson": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290302",
+      "installdate": "1570519100",
       "release": "2.fc29",
       "version": "2.11"
     },
     "json-c": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290301",
+      "installdate": "1570519099",
       "release": "3.fc29",
       "version": "0.13.1"
     },
     "kbd": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290310",
+      "installdate": "1570519116",
       "release": "9.fc29",
       "version": "2.0.4"
     },
     "kbd-legacy": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290309",
+      "installdate": "1570519114",
       "release": "9.fc29",
       "version": "2.0.4"
     },
     "kbd-misc": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290308",
+      "installdate": "1570519114",
       "release": "9.fc29",
       "version": "2.0.4"
     },
     "kernel-core": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290330",
-      "release": "300.fc29",
-      "version": "4.19.9"
+      "installdate": "1570519135",
+      "release": "100.fc29",
+      "version": "5.2.17"
     },
     "keyutils-libs": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290301",
+      "installdate": "1570519100",
       "release": "8.fc29",
       "version": "1.5.10"
     },
     "kmod": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290301",
+      "installdate": "1570519100",
       "release": "3.fc29",
       "version": "25"
     },
     "kmod-libs": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290301",
+      "installdate": "1570519100",
       "release": "3.fc29",
       "version": "25"
     },
     "kpartx": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290311",
-      "release": "5.gitef6d98b.fc29",
+      "installdate": "1570519116",
+      "release": "6.gitef6d98b.fc29",
       "version": "0.7.7"
     },
     "krb5-libs": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290309",
-      "release": "21.fc29",
+      "installdate": "1570519114",
+      "release": "25.fc29",
       "version": "1.16.1"
     },
     "langpacks-en": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290341",
+      "installdate": "1570519145",
       "release": "13.fc29",
       "version": "1.0"
     },
     "less": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290306",
+      "installdate": "1570519104",
       "release": "2.fc29",
       "version": "530"
     },
     "libacl": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290301",
+      "installdate": "1570519099",
       "release": "2.fc29",
       "version": "2.2.53"
     },
     "libarchive": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290309",
-      "release": "2.fc29",
+      "installdate": "1570519114",
+      "release": "6.fc29",
       "version": "3.3.3"
     },
     "libargon2": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290307",
-      "release": "6.fc29",
+      "installdate": "1570519113",
+      "release": "7.fc29",
       "version": "20161029"
     },
     "libassuan": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290301",
-      "release": "4.fc29",
-      "version": "2.5.1"
+      "installdate": "1570519099",
+      "release": "1.fc29",
+      "version": "2.5.2"
     },
     "libattr": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290301",
+      "installdate": "1570519099",
       "release": "3.fc29",
       "version": "2.4.48"
     },
     "libbasicobjects": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290301",
+      "installdate": "1570519100",
       "release": "41.fc29",
       "version": "0.1.1"
     },
     "libblkid": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290313",
+      "installdate": "1570519118",
       "release": "1.fc29",
       "version": "2.32.1"
     },
     "libcap": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290299",
+      "installdate": "1570519098",
       "release": "12.fc29",
       "version": "2.25"
     },
     "libcap-ng": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290300",
-      "release": "4.fc29",
+      "installdate": "1570519099",
+      "release": "5.fc29",
       "version": "0.7.9"
     },
     "libcollection": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290301",
+      "installdate": "1570519100",
       "release": "41.fc29",
       "version": "0.7.0"
     },
     "libcom_err": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290299",
+      "installdate": "1570519098",
       "release": "1.fc29",
-      "version": "1.44.3"
+      "version": "1.44.6"
     },
     "libcomps": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290306",
-      "release": "14.fc29",
-      "version": "0.1.8"
+      "installdate": "1570519104",
+      "release": "1.fc29",
+      "version": "0.1.11"
     },
     "libcroco": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290310",
+      "installdate": "1570519115",
       "release": "5.fc29",
       "version": "0.6.12"
     },
     "libcurl": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290309",
-      "release": "5.fc29",
+      "installdate": "1570519114",
+      "release": "12.fc29",
       "version": "7.61.1"
     },
     "libdb": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290300",
+      "installdate": "1570519098",
       "release": "33.fc29",
       "version": "5.3.28"
     },
     "libdb-utils": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290306",
+      "installdate": "1570519104",
       "release": "33.fc29",
       "version": "5.3.28"
     },
     "libdhash": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290302",
+      "installdate": "1570519100",
       "release": "41.fc29",
       "version": "0.5.0"
     },
     "libdnf": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290332",
-      "release": "1.fc29",
-      "version": "0.22.3"
+      "installdate": "1570519137",
+      "release": "7.fc29",
+      "version": "0.31.0"
     },
     "libedit": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290302",
+      "installdate": "1570519100",
       "release": "24.20170329cvs.fc29",
       "version": "3.1"
     },
     "libevent": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290322",
+      "installdate": "1570519126",
       "release": "3.fc29",
       "version": "2.1.8"
     },
     "libfdisk": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290312",
+      "installdate": "1570519117",
       "release": "1.fc29",
       "version": "2.32.1"
     },
     "libffi": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290300",
+      "installdate": "1570519099",
       "release": "18.fc29",
       "version": "3.1"
     },
     "libgcc": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290285",
-      "release": "6.fc29",
-      "version": "8.2.1"
+      "installdate": "1570519092",
+      "release": "2.fc29",
+      "version": "8.3.1"
     },
     "libgcrypt": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290300",
+      "installdate": "1570519099",
       "release": "1.fc29",
-      "version": "1.8.4"
+      "version": "1.8.5"
     },
     "libgomp": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290301",
-      "release": "6.fc29",
-      "version": "8.2.1"
+      "installdate": "1570519100",
+      "release": "2.fc29",
+      "version": "8.3.1"
     },
     "libgpg-error": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290299",
-      "release": "2.fc29",
-      "version": "1.31"
+      "installdate": "1570519098",
+      "release": "1.fc29",
+      "version": "1.33"
     },
     "libicu": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290306",
-      "release": "3.fc29",
-      "version": "62.1"
+      "installdate": "1570519104",
+      "release": "1.fc29",
+      "version": "62.2"
     },
     "libidn2": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290301",
-      "release": "2.fc29",
-      "version": "2.0.5"
+      "installdate": "1570519099",
+      "release": "1.fc29",
+      "version": "2.2.0"
     },
     "libini_config": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290307",
+      "installdate": "1570519112",
       "release": "41.fc29",
       "version": "1.3.1"
     },
     "libkcapi": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290309",
+      "installdate": "1570519114",
       "release": "16.fc29",
       "version": "1.1.1"
     },
     "libkcapi-hmaccalc": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290309",
+      "installdate": "1570519114",
       "release": "16.fc29",
       "version": "1.1.1"
     },
     "libksba": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290301",
+      "installdate": "1570519100",
       "release": "8.fc29",
       "version": "1.3.5"
     },
     "libldb": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290322",
+      "installdate": "1570519127",
       "release": "1.fc29",
-      "version": "1.4.3"
+      "version": "1.4.7"
+    },
+    "libmaxminddb": {
+      "arch": "x86_64",
+      "epoch": "0",
+      "installdate": "1570519112",
+      "release": "6.fc29",
+      "version": "1.2.0"
     },
     "libmetalink": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290306",
+      "installdate": "1570519104",
       "release": "7.fc29",
       "version": "0.1.3"
     },
     "libmnl": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290300",
+      "installdate": "1570519099",
       "release": "8.fc29",
       "version": "1.0.4"
     },
-    "libmodulemd": {
+    "libmodulemd1": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290321",
-      "release": "1.fc29",
-      "version": "1.7.0"
+      "installdate": "1570519126",
+      "release": "3.fc29.1",
+      "version": "1.8.15"
     },
     "libmount": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290312",
+      "installdate": "1570519117",
       "release": "1.fc29",
       "version": "2.32.1"
     },
     "libndp": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290307",
+      "installdate": "1570519112",
       "release": "2.fc29",
       "version": "1.7"
     },
     "libnfsidmap": {
       "arch": "x86_64",
       "epoch": "1",
-      "installdate": "1545290333",
+      "installdate": "1570519138",
       "release": "1.rc2.fc29",
       "version": "2.3.3"
     },
     "libnghttp2": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290307",
+      "installdate": "1570519113",
       "release": "1.fc29",
-      "version": "1.34.0"
+      "version": "1.39.2"
     },
     "libnl3": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290307",
+      "installdate": "1570519112",
       "release": "6.fc29",
       "version": "3.4.0"
     },
     "libnsl2": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290309",
+      "installdate": "1570519114",
       "release": "3.20180605git4a062cf.fc29",
       "version": "1.2.0"
     },
     "libpath_utils": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290307",
+      "installdate": "1570519112",
       "release": "41.fc29",
       "version": "0.2.1"
     },
     "libpcap": {
       "arch": "x86_64",
       "epoch": "14",
-      "installdate": "1545290302",
+      "installdate": "1570519100",
       "release": "2.fc29",
       "version": "1.9.0"
     },
     "libpipeline": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290307",
+      "installdate": "1570519112",
       "release": "5.fc29",
       "version": "1.5.0"
     },
     "libpng": {
       "arch": "x86_64",
       "epoch": "2",
-      "installdate": "1545290306",
-      "release": "6.fc29",
+      "installdate": "1570519104",
+      "release": "7.fc29",
       "version": "1.6.34"
     },
     "libpsl": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290301",
+      "installdate": "1570519100",
       "release": "5.fc29",
       "version": "0.20.2"
     },
     "libpwquality": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290310",
+      "installdate": "1570519116",
       "release": "10.fc29",
       "version": "1.4.0"
     },
     "libref_array": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290301",
+      "installdate": "1570519100",
       "release": "41.fc29",
       "version": "0.1.5"
     },
     "librepo": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290332",
+      "installdate": "1570519137",
       "release": "1.fc29",
-      "version": "1.9.1"
+      "version": "1.10.5"
     },
     "libreport-filesystem": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290294",
+      "installdate": "1570519093",
       "release": "1.fc29",
-      "version": "2.9.7"
+      "version": "2.10.1"
     },
     "libseccomp": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290302",
-      "release": "3.fc29",
-      "version": "2.3.3"
+      "installdate": "1570519100",
+      "release": "0.fc29",
+      "version": "2.4.1"
     },
     "libsecret": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290331",
-      "release": "2.fc29",
-      "version": "0.18.6"
+      "installdate": "1570519137",
+      "release": "1.fc29",
+      "version": "0.18.7"
     },
     "libselinux": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290297",
-      "release": "4.fc29",
+      "installdate": "1570519096",
+      "release": "6.fc29",
       "version": "2.8"
     },
     "libselinux-utils": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290306",
-      "release": "4.fc29",
+      "installdate": "1570519104",
+      "release": "6.fc29",
       "version": "2.8"
     },
     "libsemanage": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290301",
-      "release": "4.fc29",
+      "installdate": "1570519099",
+      "release": "8.fc29",
       "version": "2.8"
     },
     "libsepol": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290299",
-      "release": "2.fc29",
+      "installdate": "1570519098",
+      "release": "3.fc29",
       "version": "2.8"
     },
     "libsigsegv": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290307",
+      "installdate": "1570519112",
       "release": "6.fc29",
       "version": "2.11"
     },
     "libsmartcols": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290301",
+      "installdate": "1570519100",
       "release": "1.fc29",
       "version": "2.32.1"
     },
     "libsolv": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290331",
+      "installdate": "1570519127",
       "release": "1.fc29",
-      "version": "0.7.2"
+      "version": "0.7.5"
     },
     "libss": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290306",
+      "installdate": "1570519104",
       "release": "1.fc29",
-      "version": "1.44.3"
+      "version": "1.44.6"
     },
     "libssh": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290309",
+      "installdate": "1570519114",
       "release": "1.fc29",
-      "version": "0.8.5"
+      "version": "0.8.7"
     },
     "libsss_autofs": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290307",
-      "release": "5.fc29",
-      "version": "2.0.0"
+      "installdate": "1570519113",
+      "release": "3.fc29",
+      "version": "2.2.0"
     },
     "libsss_certmap": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290322",
-      "release": "5.fc29",
-      "version": "2.0.0"
+      "installdate": "1570519126",
+      "release": "3.fc29",
+      "version": "2.2.0"
     },
     "libsss_idmap": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290302",
-      "release": "5.fc29",
-      "version": "2.0.0"
+      "installdate": "1570519100",
+      "release": "3.fc29",
+      "version": "2.2.0"
     },
     "libsss_nss_idmap": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290307",
-      "release": "5.fc29",
-      "version": "2.0.0"
+      "installdate": "1570519113",
+      "release": "3.fc29",
+      "version": "2.2.0"
     },
     "libsss_sudo": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290308",
-      "release": "5.fc29",
-      "version": "2.0.0"
+      "installdate": "1570519113",
+      "release": "3.fc29",
+      "version": "2.2.0"
     },
     "libstdc++": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290300",
-      "release": "6.fc29",
-      "version": "8.2.1"
+      "installdate": "1570519099",
+      "release": "2.fc29",
+      "version": "8.3.1"
     },
     "libtalloc": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290300",
+      "installdate": "1570519099",
       "release": "2.fc29",
       "version": "2.1.14"
     },
     "libtasn1": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290302",
+      "installdate": "1570519100",
       "release": "5.fc29",
       "version": "4.13"
     },
     "libtdb": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290301",
+      "installdate": "1570519100",
       "release": "2.fc29",
       "version": "1.3.16"
     },
     "libtevent": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290301",
+      "installdate": "1570519100",
       "release": "2.fc29",
       "version": "0.9.37"
     },
     "libtirpc": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290309",
+      "installdate": "1570519114",
       "release": "2.rc2.fc29",
       "version": "1.1.4"
     },
     "libunistring": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290301",
+      "installdate": "1570519099",
       "release": "4.fc29",
       "version": "0.9.10"
     },
     "libusbx": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290331",
+      "installdate": "1570519136",
       "release": "1.fc29",
       "version": "1.0.22"
     },
     "libuser": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290333",
+      "installdate": "1570519136",
       "release": "18.fc29",
       "version": "0.62"
     },
     "libutempter": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290314",
+      "installdate": "1570519119",
       "release": "15.fc29",
       "version": "1.1.6"
     },
     "libuuid": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290299",
+      "installdate": "1570519098",
       "release": "1.fc29",
       "version": "2.32.1"
     },
     "libverto": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290307",
+      "installdate": "1570519113",
       "release": "6.fc29",
       "version": "0.3.0"
     },
     "libxcrypt": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290299",
+      "installdate": "1570519098",
       "release": "1.fc29",
-      "version": "4.4.1"
+      "version": "4.4.10"
     },
     "libxkbcommon": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290307",
+      "installdate": "1570519113",
       "release": "1.fc29",
       "version": "0.8.2"
     },
     "libxml2": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290299",
-      "release": "4.fc29",
+      "installdate": "1570519098",
+      "release": "5.fc29",
       "version": "2.9.8"
     },
     "libyaml": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290302",
-      "release": "2.fc29",
+      "installdate": "1570519100",
+      "release": "5.fc29",
       "version": "0.2.1"
     },
     "libzstd": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290300",
+      "installdate": "1570519099",
       "release": "1.fc29",
-      "version": "1.3.6"
+      "version": "1.4.2"
     },
     "linux-atm-libs": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290307",
+      "installdate": "1570519113",
       "release": "21.fc29",
       "version": "2.5.1"
+    },
+    "linux-firmware-whence": {
+      "arch": "noarch",
+      "epoch": "0",
+      "installdate": "1570519093",
+      "release": "101.fc29",
+      "version": "20190815"
     },
     "lmdb-libs": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290308",
-      "release": "4.fc29",
-      "version": "0.9.22"
+      "installdate": "1570519113",
+      "release": "1.fc29",
+      "version": "0.9.23"
     },
     "lua-libs": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290300",
-      "release": "2.fc29",
+      "installdate": "1570519099",
+      "release": "3.fc29",
       "version": "5.3.5"
     },
     "lz4-libs": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290301",
-      "release": "2.fc29",
-      "version": "1.8.2"
+      "installdate": "1570519100",
+      "release": "1.fc29",
+      "version": "1.9.1"
     },
     "man-db": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290340",
-      "release": "1.fc29",
+      "installdate": "1570519144",
+      "release": "3.fc29",
       "version": "2.8.4"
     },
     "mozjs52": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290305",
+      "installdate": "1570519103",
       "release": "1.fc29",
       "version": "52.9.0"
     },
     "mpfr": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290304",
+      "installdate": "1570519102",
       "release": "2.fc29",
       "version": "3.1.6"
     },
     "mtools": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290306",
+      "installdate": "1570519104",
       "release": "15.fc29",
       "version": "4.0.18"
     },
     "ncurses": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290307",
+      "installdate": "1570519113",
       "release": "8.20180923.fc29",
       "version": "6.1"
     },
     "ncurses-base": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290297",
+      "installdate": "1570519096",
       "release": "8.20180923.fc29",
       "version": "6.1"
     },
     "ncurses-libs": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290298",
+      "installdate": "1570519096",
       "release": "8.20180923.fc29",
       "version": "6.1"
     },
     "net-tools": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290330",
-      "release": "0.52.20160912git.fc29",
+      "installdate": "1570519135",
+      "release": "0.53.20160912git.fc29",
       "version": "2.0"
     },
     "nettle": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290301",
+      "installdate": "1570519100",
       "release": "1.fc29",
       "version": "3.4.1rc1"
     },
     "npth": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290307",
+      "installdate": "1570519113",
       "release": "6.fc29",
       "version": "1.5"
     },
     "openldap": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290309",
-      "release": "9.fc29",
+      "installdate": "1570519114",
+      "release": "10.fc29",
       "version": "2.4.46"
     },
     "openssh": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290331",
-      "release": "2.fc29",
+      "installdate": "1570519135",
+      "release": "6.fc29",
       "version": "7.9p1"
     },
     "openssh-clients": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290335",
-      "release": "2.fc29",
+      "installdate": "1570519139",
+      "release": "6.fc29",
       "version": "7.9p1"
     },
     "openssh-server": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290335",
-      "release": "2.fc29",
+      "installdate": "1570519140",
+      "release": "6.fc29",
       "version": "7.9p1"
     },
     "openssl": {
       "arch": "x86_64",
       "epoch": "1",
-      "installdate": "1545290309",
-      "release": "3.fc29",
-      "version": "1.1.1"
+      "installdate": "1570519115",
+      "release": "1.fc29",
+      "version": "1.1.1d"
     },
     "openssl-libs": {
       "arch": "x86_64",
       "epoch": "1",
-      "installdate": "1545290314",
-      "release": "3.fc29",
-      "version": "1.1.1"
+      "installdate": "1570519119",
+      "release": "1.fc29",
+      "version": "1.1.1d"
     },
     "openssl-pkcs11": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290311",
-      "release": "2.fc29",
-      "version": "0.4.8"
+      "installdate": "1570519116",
+      "release": "1.fc29",
+      "version": "0.4.10"
     },
     "os-prober": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290312",
+      "installdate": "1570519119",
       "release": "7.fc29",
       "version": "1.74"
     },
     "p11-kit": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290300",
+      "installdate": "1570519099",
       "release": "1.fc29",
-      "version": "0.23.14"
+      "version": "0.23.16.1"
     },
     "p11-kit-trust": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290302",
+      "installdate": "1570519100",
       "release": "1.fc29",
-      "version": "0.23.14"
+      "version": "0.23.16.1"
     },
     "pam": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290310",
-      "release": "13.fc29",
+      "installdate": "1570519116",
+      "release": "15.fc29",
       "version": "1.3.1"
     },
     "parted": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290340",
+      "installdate": "1570519144",
       "release": "36.fc29",
       "version": "3.2"
     },
     "passwd": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290334",
+      "installdate": "1570519139",
       "release": "4.fc29",
       "version": "0.80"
     },
     "pcre": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290301",
-      "release": "5.fc29",
-      "version": "8.42"
+      "installdate": "1570519100",
+      "release": "2.fc29",
+      "version": "8.43"
     },
     "pcre2": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290297",
-      "release": "4.fc29",
-      "version": "10.32"
+      "installdate": "1570519096",
+      "release": "14.fc29",
+      "version": "10.33"
     },
     "pigz": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290306",
+      "installdate": "1570519104",
       "release": "3.fc29",
       "version": "2.4"
     },
     "pinentry": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290332",
+      "installdate": "1570519137",
       "release": "4.fc29",
       "version": "1.1.0"
     },
     "policycoreutils": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290322",
-      "release": "8.fc29",
+      "installdate": "1570519126",
+      "release": "17.fc29",
       "version": "2.8"
     },
     "polkit": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290322",
-      "release": "4.1.fc29",
+      "installdate": "1570519127",
+      "release": "4.4.fc29",
       "version": "0.115"
     },
     "polkit-libs": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290322",
-      "release": "4.1.fc29",
+      "installdate": "1570519126",
+      "release": "4.4.fc29",
       "version": "0.115"
     },
     "polkit-pkla-compat": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290322",
+      "installdate": "1570519127",
       "release": "13.fc29",
       "version": "0.1"
     },
     "popt": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290299",
+      "installdate": "1570519098",
       "release": "15.fc29",
       "version": "1.16"
     },
     "procps-ng": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290311",
+      "installdate": "1570519116",
       "release": "4.fc29",
       "version": "3.3.15"
     },
     "publicsuffix-list-dafsa": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290297",
+      "installdate": "1570519096",
       "release": "1.fc29",
       "version": "20180723"
     },
     "python-pip-wheel": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290285",
+      "installdate": "1570519093",
       "release": "1.fc29",
       "version": "18.1"
     },
     "python-setuptools-wheel": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290297",
+      "installdate": "1570519093",
       "release": "1.fc29",
-      "version": "40.4.3"
+      "version": "40.8.0"
     },
     "python3": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290319",
-      "release": "4.fc29",
-      "version": "3.7.1"
-    },
-    "python3-IPy": {
-      "arch": "noarch",
-      "epoch": "0",
-      "installdate": "1545290323",
-      "release": "23.fc29",
-      "version": "0.81"
+      "installdate": "1570519123",
+      "release": "1.fc29",
+      "version": "3.7.4"
     },
     "python3-asn1crypto": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290323",
+      "installdate": "1570519128",
       "release": "5.fc29",
       "version": "0.24.0"
     },
     "python3-audit": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290323",
-      "release": "0.4.20180831git0047a6c.fc29",
+      "installdate": "1570519131",
+      "release": "0.9.20190507gitf58ec40.fc29",
       "version": "3.0"
     },
     "python3-babel": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290327",
+      "installdate": "1570519131",
       "release": "5.fc29",
       "version": "2.6.0"
     },
     "python3-boto": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290325",
+      "installdate": "1570519130",
       "release": "10.fc29",
       "version": "2.45.0"
     },
     "python3-cffi": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290324",
+      "installdate": "1570519128",
       "release": "6.fc29",
       "version": "1.11.5"
     },
     "python3-chardet": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290324",
+      "installdate": "1570519128",
       "release": "7.fc29",
       "version": "3.0.4"
     },
     "python3-configobj": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290323",
+      "installdate": "1570519127",
       "release": "14.fc29",
       "version": "5.0.6"
     },
     "python3-cryptography": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290324",
+      "installdate": "1570519128",
       "release": "2.fc29",
       "version": "2.3"
+    },
+    "python3-dateutil": {
+      "arch": "noarch",
+      "epoch": "1",
+      "installdate": "1570519127",
+      "release": "1.fc29",
+      "version": "2.7.5"
     },
     "python3-dbus": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290321",
+      "installdate": "1570519126",
       "release": "3.fc29",
       "version": "1.2.8"
     },
     "python3-distro": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290324",
+      "installdate": "1570519128",
       "release": "4.fc29",
       "version": "1.3.0"
     },
     "python3-dnf": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290332",
-      "release": "2.fc29",
-      "version": "4.0.9"
+      "installdate": "1570519138",
+      "release": "5.fc29",
+      "version": "4.2.5"
     },
     "python3-dnf-plugins-core": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290333",
+      "installdate": "1570519138",
       "release": "1.fc29",
-      "version": "4.0.2"
+      "version": "4.0.7"
     },
     "python3-gpg": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290332",
-      "release": "3.fc29",
-      "version": "1.11.1"
+      "installdate": "1570519137",
+      "release": "1.fc29",
+      "version": "1.12.0"
     },
     "python3-hawkey": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290332",
-      "release": "1.fc29",
-      "version": "0.22.3"
+      "installdate": "1570519137",
+      "release": "7.fc29",
+      "version": "0.31.0"
     },
     "python3-idna": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290322",
+      "installdate": "1570519126",
       "release": "3.fc29",
       "version": "2.7"
-    },
-    "python3-iniparse": {
-      "arch": "noarch",
-      "epoch": "0",
-      "installdate": "1545290323",
-      "release": "32.fc29",
-      "version": "0.4"
     },
     "python3-jinja2": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290327",
-      "release": "6.fc29",
-      "version": "2.10"
+      "installdate": "1570519131",
+      "release": "1.fc29",
+      "version": "2.10.1"
     },
     "python3-jsonpatch": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290324",
+      "installdate": "1570519128",
       "release": "4.fc29",
       "version": "1.21"
     },
     "python3-jsonpointer": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290324",
+      "installdate": "1570519128",
       "release": "13.fc29",
       "version": "1.10"
     },
     "python3-jsonschema": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290324",
-      "release": "5.fc29",
+      "installdate": "1570519132",
+      "release": "6.fc29",
       "version": "2.6.0"
     },
     "python3-jwt": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290324",
+      "installdate": "1570519128",
       "release": "1.fc29",
       "version": "1.6.4"
     },
     "python3-libcomps": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290323",
-      "release": "14.fc29",
-      "version": "0.1.8"
+      "installdate": "1570519128",
+      "release": "1.fc29",
+      "version": "0.1.11"
     },
     "python3-libdnf": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290332",
-      "release": "1.fc29",
-      "version": "0.22.3"
+      "installdate": "1570519137",
+      "release": "7.fc29",
+      "version": "0.31.0"
     },
     "python3-libs": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290321",
-      "release": "4.fc29",
-      "version": "3.7.1"
+      "installdate": "1570519126",
+      "release": "1.fc29",
+      "version": "3.7.4"
     },
     "python3-libselinux": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290321",
-      "release": "4.fc29",
+      "installdate": "1570519126",
+      "release": "6.fc29",
       "version": "2.8"
     },
     "python3-libsemanage": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290322",
-      "release": "4.fc29",
+      "installdate": "1570519127",
+      "release": "8.fc29",
       "version": "2.8"
     },
     "python3-markupsafe": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290323",
+      "installdate": "1570519127",
       "release": "1.fc29",
       "version": "1.0"
     },
     "python3-oauthlib": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290324",
+      "installdate": "1570519128",
       "release": "1.fc29",
       "version": "2.1.0"
     },
     "python3-pip": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290319",
+      "installdate": "1570519123",
       "release": "1.fc29",
       "version": "18.1"
     },
     "python3-ply": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290324",
+      "installdate": "1570519128",
       "release": "8.fc29",
       "version": "3.9"
     },
     "python3-policycoreutils": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290323",
-      "release": "8.fc29",
+      "installdate": "1570519132",
+      "release": "17.fc29",
       "version": "2.8"
     },
     "python3-prettytable": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290324",
+      "installdate": "1570519128",
       "release": "15.fc29",
       "version": "0.7.2"
     },
     "python3-psutil": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290323",
+      "installdate": "1570519128",
       "release": "6.fc29",
       "version": "5.4.3"
     },
     "python3-pyasn1": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290324",
+      "installdate": "1570519129",
       "release": "4.fc29",
       "version": "0.3.7"
     },
     "python3-pycparser": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290324",
+      "installdate": "1570519128",
       "release": "15.fc29",
       "version": "2.14"
     },
     "python3-pyserial": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290324",
+      "installdate": "1570519129",
       "release": "10.fc29",
       "version": "3.1.1"
     },
     "python3-pysocks": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290324",
+      "installdate": "1570519129",
       "release": "4.fc29",
       "version": "1.6.8"
     },
     "python3-pytz": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290325",
+      "installdate": "1570519130",
       "release": "1.fc29",
       "version": "2018.5"
     },
     "python3-pyyaml": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290323",
-      "release": "0.1.b4.fc29",
-      "version": "4.2"
+      "installdate": "1570519128",
+      "release": "1.fc29",
+      "version": "5.1"
     },
     "python3-requests": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290325",
+      "installdate": "1570519129",
       "release": "1.fc29",
       "version": "2.20.0"
     },
     "python3-rpm": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290332",
-      "release": "2.fc29",
+      "installdate": "1570519137",
+      "release": "3.fc29",
       "version": "4.14.2.1"
     },
     "python3-rsa": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290324",
+      "installdate": "1570519129",
       "release": "8.fc29",
       "version": "3.4.2"
     },
     "python3-setools": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290323",
+      "installdate": "1570519127",
       "release": "13.fc29",
       "version": "4.1.1"
     },
     "python3-setuptools": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290318",
+      "installdate": "1570519123",
       "release": "1.fc29",
-      "version": "40.4.3"
+      "version": "40.8.0"
     },
     "python3-six": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290321",
+      "installdate": "1570519126",
       "release": "6.fc29",
       "version": "1.11.0"
     },
     "python3-unbound": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290322",
+      "installdate": "1570519127",
       "release": "2.fc29",
       "version": "1.8.3"
     },
     "python3-urllib3": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290324",
-      "release": "2.fc29",
-      "version": "1.24.1"
+      "installdate": "1570519129",
+      "release": "1.fc29",
+      "version": "1.24.3"
     },
     "qrencode-libs": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290307",
+      "installdate": "1570519113",
       "release": "6.fc29",
       "version": "3.4.4"
     },
     "readline": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290300",
+      "installdate": "1570519099",
       "release": "12.fc29",
       "version": "7.0"
     },
     "rootfiles": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290341",
+      "installdate": "1570519145",
       "release": "23.fc29",
       "version": "8.1"
     },
     "rpm": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290312",
-      "release": "2.fc29",
+      "installdate": "1570519117",
+      "release": "3.fc29",
       "version": "4.14.2.1"
     },
     "rpm-build-libs": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290331",
-      "release": "2.fc29",
+      "installdate": "1570519135",
+      "release": "3.fc29",
       "version": "4.14.2.1"
     },
     "rpm-libs": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290314",
-      "release": "2.fc29",
+      "installdate": "1570519119",
+      "release": "3.fc29",
       "version": "4.14.2.1"
     },
     "rpm-plugin-selinux": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290312",
-      "release": "2.fc29",
+      "installdate": "1570519117",
+      "release": "3.fc29",
       "version": "4.14.2.1"
     },
     "rpm-plugin-systemd-inhibit": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290331",
-      "release": "2.fc29",
+      "installdate": "1570519135",
+      "release": "3.fc29",
       "version": "4.14.2.1"
     },
     "rpm-sign-libs": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290332",
-      "release": "2.fc29",
+      "installdate": "1570519137",
+      "release": "3.fc29",
       "version": "4.14.2.1"
     },
     "rsync": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290340",
-      "release": "4.fc29",
+      "installdate": "1570519145",
+      "release": "7.fc29",
       "version": "3.1.3"
     },
     "sed": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290301",
+      "installdate": "1570519099",
       "release": "2.fc29",
       "version": "4.5"
     },
     "selinux-policy": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290322",
-      "release": "44.fc29",
+      "installdate": "1570519127",
+      "release": "64.fc29",
       "version": "3.14.2"
     },
     "selinux-policy-targeted": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290338",
-      "release": "44.fc29",
+      "installdate": "1570519143",
+      "release": "64.fc29",
       "version": "3.14.2"
     },
     "setup": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290296",
-      "release": "1.fc29",
+      "installdate": "1570519096",
+      "release": "2.fc29",
       "version": "2.12.1"
     },
     "shadow-utils": {
       "arch": "x86_64",
       "epoch": "2",
-      "installdate": "1545290313",
+      "installdate": "1570519118",
       "release": "4.fc29",
       "version": "4.6"
     },
     "shared-mime-info": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290309",
-      "release": "3.fc29",
-      "version": "1.10"
+      "installdate": "1570519114",
+      "release": "1.fc29",
+      "version": "1.12"
     },
     "sqlite-libs": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290300",
-      "release": "2.fc29",
-      "version": "3.24.0"
+      "installdate": "1570519099",
+      "release": "4.fc29",
+      "version": "3.26.0"
     },
     "sssd-client": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290333",
-      "release": "5.fc29",
-      "version": "2.0.0"
+      "installdate": "1570519136",
+      "release": "3.fc29",
+      "version": "2.2.0"
     },
     "sssd-common": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290333",
-      "release": "5.fc29",
-      "version": "2.0.0"
+      "installdate": "1570519138",
+      "release": "3.fc29",
+      "version": "2.2.0"
     },
     "sssd-kcm": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290334",
-      "release": "5.fc29",
-      "version": "2.0.0"
+      "installdate": "1570519138",
+      "release": "3.fc29",
+      "version": "2.2.0"
     },
     "sssd-nfs-idmap": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290333",
-      "release": "5.fc29",
-      "version": "2.0.0"
+      "installdate": "1570519138",
+      "release": "3.fc29",
+      "version": "2.2.0"
     },
     "sudo": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290340",
+      "installdate": "1570519140",
       "release": "1.fc29",
-      "version": "1.8.25"
+      "version": "1.8.27"
     },
     "syslinux": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290306",
+      "installdate": "1570519104",
       "release": "0.8.fc28",
       "version": "6.04"
     },
     "syslinux-extlinux": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290340",
+      "installdate": "1570519144",
       "release": "0.8.fc28",
       "version": "6.04"
     },
     "syslinux-extlinux-nonlinux": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290306",
+      "installdate": "1570519104",
       "release": "0.8.fc28",
       "version": "6.04"
     },
     "syslinux-nonlinux": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290306",
+      "installdate": "1570519104",
       "release": "0.8.fc28",
       "version": "6.04"
     },
     "systemd": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290317",
-      "release": "6.git9f3aed1.fc29",
+      "installdate": "1570519120",
+      "release": "14.git33ccd62.fc29",
       "version": "239"
     },
     "systemd-bootchart": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290317",
+      "installdate": "1570519121",
       "release": "3.fc29",
       "version": "233"
     },
     "systemd-libs": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290312",
-      "release": "6.git9f3aed1.fc29",
+      "installdate": "1570519117",
+      "release": "14.git33ccd62.fc29",
       "version": "239"
     },
     "systemd-pam": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290312",
-      "release": "6.git9f3aed1.fc29",
+      "installdate": "1570519119",
+      "release": "14.git33ccd62.fc29",
       "version": "239"
     },
     "systemd-udev": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290318",
-      "release": "6.git9f3aed1.fc29",
+      "installdate": "1570519121",
+      "release": "14.git33ccd62.fc29",
       "version": "239"
     },
     "tar": {
       "arch": "x86_64",
       "epoch": "2",
-      "installdate": "1545290303",
+      "installdate": "1570519101",
       "release": "6.fc29",
       "version": "1.30"
     },
     "timedatex": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290322",
+      "installdate": "1570519127",
       "release": "5.fc29",
       "version": "0.5"
     },
     "trousers": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290316",
+      "installdate": "1570519122",
       "release": "11.fc29",
       "version": "0.3.13"
     },
     "trousers-lib": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290312",
+      "installdate": "1570519117",
       "release": "11.fc29",
       "version": "0.3.13"
     },
     "tzdata": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290285",
+      "installdate": "1570519092",
       "release": "1.fc29",
-      "version": "2018g"
+      "version": "2019c"
     },
     "unbound-libs": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290322",
+      "installdate": "1570519127",
       "release": "2.fc29",
       "version": "1.8.3"
     },
     "util-linux": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290314",
+      "installdate": "1570519119",
       "release": "1.fc29",
       "version": "2.32.1"
     },
     "vim-minimal": {
       "arch": "x86_64",
       "epoch": "2",
-      "installdate": "1545290303",
-      "release": "1.fc29",
-      "version": "8.1.575"
+      "installdate": "1570519128",
+      "release": "2.fc29",
+      "version": "8.1.1991"
     },
     "which": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290301",
+      "installdate": "1570519100",
       "release": "11.fc29",
       "version": "2.21"
     },
     "xfsprogs": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290327",
+      "installdate": "1570519131",
       "release": "3.fc29",
       "version": "4.17.0"
     },
     "xkeyboard-config": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1545290297",
-      "release": "4.fc29",
+      "installdate": "1570519093",
+      "release": "5.fc29",
       "version": "2.24"
     },
     "xz": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290303",
+      "installdate": "1570519101",
       "release": "3.fc29",
       "version": "5.2.4"
     },
     "xz-libs": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290299",
+      "installdate": "1570519098",
       "release": "3.fc29",
       "version": "5.2.4"
     },
     "zchunk-libs": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290331",
-      "release": "1.fc29",
-      "version": "0.9.17"
+      "installdate": "1570519127",
+      "release": "2.fc29",
+      "version": "1.1.2"
     },
     "zlib": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1545290299",
-      "release": "14.fc29",
+      "installdate": "1570519098",
+      "release": "17.fc29",
       "version": "1.2.11"
     }
   },
@@ -3806,7 +3809,6 @@
   "platform_family": "fedora",
   "platform_version": "29",
   "root_group": "root",
-  "shard_seed": 260638801,
   "shells": [
     "/bin/sh",
     "/bin/bash",
