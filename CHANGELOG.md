@@ -1,4 +1,41 @@
-# Fauxhai Changelog
+# Fauxhai-ng Changelog
+
+## v7.5.0 (2019-10-08)
+
+Note: fauxhai is now being pushed as the fauxhai-ng gem due to lack of access to the original rubygems namespace despite the access to the Github source of truth. The CLI and library namespaces will remain the same.
+
+### New / Updated Platforms
+
+- CentOS 7.7.1908
+- CentOS 8
+- Debian 9.11
+- Fedora 30
+- macOS 10.15
+- SLES 12.4
+
+### Newly Deprecated Platforms (removal in April 2021)
+
+- Debian 7.11
+- Fedora 26 / 27
+- FreeBSD 10.4
+- macOS 10.11
+- openSUSE 42.2 / 42.3
+- SLES 11.4, 12.1, 12.2
+- Ubuntu 14.04
+
+### Updated platforms
+
+The following platforms we updated to Chef Infra Client 15.3, which adds additional package information for RHEL / SUSE based platforms
+- Amazon Linux 2015 - 2.x
+- CentOS 7.6.1810
+- Debian 9.2 - 9.9
+- Debian 10
+- Fedora 28 / 29
+- openSUSE 42.2 / 42.3
+- Oracle Linux 6.10, 7.5, 7.6
+- Redhat 6.8 - 6.10, 7.3 - 7.6
+- SLES 11.4, 12.1 - 12.3, 15
+- Ubuntu 16.04 / 18.04
 
 ## v7.4.0 (2019-07-10)
 
