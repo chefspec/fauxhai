@@ -1,5 +1,10 @@
 # Fauxhai-ng Changelog
 
+## v7.5.1 (2019-10-29)
+
+- Fixed missing platform_family data for opensuse 15.0
+- Deprecate Debian 7.11 platform data
+
 ## v7.5.0 (2019-10-08)
 
 Note: fauxhai is now being pushed as the fauxhai-ng gem due to lack of access to the original rubygems namespace despite the access to the Github source of truth. The CLI and library namespaces will remain the same.
@@ -26,6 +31,7 @@ Note: fauxhai is now being pushed as the fauxhai-ng gem due to lack of access to
 ### Updated platforms
 
 The following platforms we updated to Chef Infra Client 15.3, which adds additional package information for RHEL / SUSE based platforms
+
 - Amazon Linux 2015 - 2.x
 - CentOS 7.6.1810
 - Debian 9.2 - 9.9
