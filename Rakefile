@@ -2,6 +2,8 @@
 require 'bundler/gem_tasks'
 require 'json'
 
+Bundler::GemHelper.install_tasks name: 'fauxhai-ng'
+
 task :default => ['validate:json', 'spec']
 
 namespace :validate do
