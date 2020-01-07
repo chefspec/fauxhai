@@ -1,7 +1,7 @@
 module Fauxhai
   class Runner
     module Windows
-      require 'fauxhai/runner/default'
+      require_relative 'default'
       include ::Fauxhai::Runner::Default
 
       def default_interface

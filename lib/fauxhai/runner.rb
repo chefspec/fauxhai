@@ -9,10 +9,10 @@ module Fauxhai
 
       case @system.data['platform']
       when 'windows', :windows
-        require 'fauxhai/runner/windows'
+        require_relative 'runner/windows'
         self.singleton_class.send :include, ::Fauxhai::Runner::Windows
       else
-        require 'fauxhai/runner/default'
+        require_relative 'runner/default'
         self.singleton_class.send :include, ::Fauxhai::Runner::Default
       end
 
