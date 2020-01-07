@@ -62,6 +62,7 @@ This file lists each platform known to Fauxhai and the available versions for ea
 
   - 11.1
   - 11.2
+  - 12.1
 
 ### gentoo
 
