@@ -4,7 +4,6 @@ This file lists each platform known to Fauxhai and the available versions for ea
 
 ### aix
 
-  - 6.1
   - 7.1
 
 ### amazon
@@ -41,8 +40,6 @@ This file lists each platform known to Fauxhai and the available versions for ea
   - 8.9
   - 8.10
   - 8.11
-  - 9.5
-  - 9.6
   - 9.8
   - 9.9
   - 9.11
