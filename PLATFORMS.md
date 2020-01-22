@@ -54,13 +54,10 @@ This file lists each platform known to Fauxhai and the available versions for ea
 
 ### fedora
 
-  - 28
-  - 29
   - 30
 
 ### freebsd
 
-  - 11.1
   - 11.2
   - 12.1
 
@@ -103,11 +100,8 @@ This file lists each platform known to Fauxhai and the available versions for ea
 ### redhat
 
   - 5.11
-  - 6.8
   - 6.9
   - 6.10
-  - 7.3
-  - 7.4
   - 7.5
   - 7.6
   - 8
@@ -134,7 +128,6 @@ This file lists each platform known to Fauxhai and the available versions for ea
 ### windows
 
   - 10
-  - 2008R2
   - 2012
   - 2012R2
   - 2016
