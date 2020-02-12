@@ -1,5 +1,11 @@
 # Fauxhai-ng Changelog
 
+## v7.6 (2012-02-12)
+
+### New / Updated Platforms
+
+- FreeBSD 12.1
+
 ## v7.5.1 (2019-10-29)
 
 - Fixed missing platform_family data for opensuse 15.0
