@@ -9,8 +9,6 @@ This file lists each platform known to Fauxhai and the available versions for ea
 ### amazon
 
   - 2
-  - 2015.03
-  - 2015.09
   - 2016.03
   - 2016.09
   - 2017.03
