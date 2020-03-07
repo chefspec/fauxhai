@@ -66,12 +66,12 @@
   },
   "chef_packages": {
     "chef": {
-      "chef_root": "/opt/chef/embedded/lib/ruby/gems/2.6.0/gems/chef-15.3.14/lib",
-      "version": "15.3.14"
+      "chef_root": "/opt/chef/embedded/lib/ruby/gems/2.6.0/gems/chef-15.8.23/lib",
+      "version": "15.8.23"
     },
     "ohai": {
-      "ohai_root": "/opt/chef/embedded/lib/ruby/gems/2.6.0/gems/ohai-15.3.1/lib/ohai",
-      "version": "15.3.1"
+      "ohai_root": "/opt/chef/embedded/lib/ruby/gems/2.6.0/gems/ohai-15.7.4/lib/ohai",
+      "version": "15.7.4"
     }
   },
   "command": {
@@ -244,8 +244,8 @@
           "Manufacturer": "Xen",
           "Product Name": "HVM domU",
           "SKU Number": "Not Specified",
-          "Serial Number": "ec240761-759e-cdf2-76f7-5c6c4ce7c8ea",
-          "UUID": "EC240761-759E-CDF2-76F7-5C6C4CE7C8EA",
+          "Serial Number": "ec24938c-9e28-f892-cf6d-45eb7a87b6a9",
+          "UUID": "EC24938C-9E28-F892-CF6D-45EB7A87B6A9",
           "Version": "4.2.amazon",
           "Wake-up Type": "Power Switch",
           "application_identifier": "System Information",
@@ -256,9 +256,9 @@
       "family": "Not Specified",
       "manufacturer": "Xen",
       "product_name": "HVM domU",
-      "serial_number": "ec240761-759e-cdf2-76f7-5c6c4ce7c8ea",
+      "serial_number": "ec24938c-9e28-f892-cf6d-45eb7a87b6a9",
       "sku_number": "Not Specified",
-      "uuid": "EC240761-759E-CDF2-76F7-5C6C4CE7C8EA",
+      "uuid": "EC24938C-9E28-F892-CF6D-45EB7A87B6A9",
       "version": "4.2.amazon",
       "wake_up_type": "Power Switch"
     }
@@ -271,12 +271,12 @@
       },
       "/dev/xvda1": {
         "fs_type": "ext4",
-        "inodes_available": "589287",
-        "inodes_percent_used": "11%",
-        "inodes_used": "66073",
-        "kb_available": "8146720",
+        "inodes_available": "589955",
+        "inodes_percent_used": "10%",
+        "inodes_used": "65405",
+        "kb_available": "8177372",
         "kb_size": "10189112",
-        "kb_used": "1501772",
+        "kb_used": "1471120",
         "label": "ROOT",
         "mount_options": [
           "rw",
@@ -298,20 +298,21 @@
           "nodev",
           "noexec",
           "relatime",
-          "pids"
+          "net_cls",
+          "net_prio"
         ],
         "mounts": [
           "/sys/fs/cgroup/systemd",
-          "/sys/fs/cgroup/net_cls,net_prio",
-          "/sys/fs/cgroup/cpuset",
-          "/sys/fs/cgroup/hugetlb",
           "/sys/fs/cgroup/memory",
-          "/sys/fs/cgroup/freezer",
+          "/sys/fs/cgroup/hugetlb",
+          "/sys/fs/cgroup/blkio",
+          "/sys/fs/cgroup/cpu,cpuacct",
           "/sys/fs/cgroup/devices",
           "/sys/fs/cgroup/perf_event",
-          "/sys/fs/cgroup/cpu,cpuacct",
-          "/sys/fs/cgroup/blkio",
-          "/sys/fs/cgroup/pids"
+          "/sys/fs/cgroup/pids",
+          "/sys/fs/cgroup/cpuset",
+          "/sys/fs/cgroup/freezer",
+          "/sys/fs/cgroup/net_cls,net_prio"
         ]
       },
       "debugfs": {
@@ -445,7 +446,7 @@
         "mount_options": [
           "rw",
           "relatime",
-          "fd=31",
+          "fd=32",
           "pgrp=1",
           "timeout=0",
           "minproto=5",
@@ -482,16 +483,6 @@
         ],
         "percent_used": "0%",
         "total_inodes": "126769"
-      },
-      "tracefs": {
-        "fs_type": "tracefs",
-        "mount_options": [
-          "rw",
-          "relatime"
-        ],
-        "mounts": [
-          "/sys/kernel/debug/tracing"
-        ]
       }
     },
     "by_mountpoint": {
@@ -500,12 +491,12 @@
           "/dev/xvda1"
         ],
         "fs_type": "ext4",
-        "inodes_available": "589287",
-        "inodes_percent_used": "11%",
-        "inodes_used": "66073",
-        "kb_available": "8146720",
+        "inodes_available": "589955",
+        "inodes_percent_used": "10%",
+        "inodes_used": "65405",
+        "kb_available": "8177372",
         "kb_size": "10189112",
-        "kb_used": "1501772",
+        "kb_used": "1471120",
         "label": "ROOT",
         "mount_options": [
           "rw",
@@ -609,7 +600,7 @@
         "mount_options": [
           "rw",
           "relatime",
-          "fd=31",
+          "fd=32",
           "pgrp=1",
           "timeout=0",
           "minproto=5",
@@ -622,12 +613,12 @@
           "tmpfs"
         ],
         "fs_type": "tmpfs",
-        "inodes_available": "126378",
+        "inodes_available": "126377",
         "inodes_percent_used": "1%",
-        "inodes_used": "391",
-        "kb_available": "499256",
+        "inodes_used": "392",
+        "kb_available": "499252",
         "kb_size": "507076",
-        "kb_used": "7820",
+        "kb_used": "7824",
         "mount_options": [
           "rw",
           "nosuid",
@@ -887,16 +878,6 @@
           "relatime"
         ]
       },
-      "/sys/kernel/debug/tracing": {
-        "devices": [
-          "tracefs"
-        ],
-        "fs_type": "tracefs",
-        "mount_options": [
-          "rw",
-          "relatime"
-        ]
-      },
       "/sys/kernel/security": {
         "devices": [
           "securityfs"
@@ -918,12 +899,12 @@
       "/dev/xvda1,/": {
         "device": "/dev/xvda1",
         "fs_type": "ext4",
-        "inodes_available": "589287",
-        "inodes_percent_used": "11%",
-        "inodes_used": "66073",
-        "kb_available": "8146720",
+        "inodes_available": "589955",
+        "inodes_percent_used": "10%",
+        "inodes_used": "65405",
+        "kb_available": "8177372",
         "kb_size": "10189112",
-        "kb_used": "1501772",
+        "kb_used": "1471120",
         "label": "ROOT",
         "mount": "/",
         "mount_options": [
@@ -1205,7 +1186,7 @@
         "mount_options": [
           "rw",
           "relatime",
-          "fd=31",
+          "fd=32",
           "pgrp=1",
           "timeout=0",
           "minproto=5",
@@ -1233,12 +1214,12 @@
       "tmpfs,/run": {
         "device": "tmpfs",
         "fs_type": "tmpfs",
-        "inodes_available": "126378",
+        "inodes_available": "126377",
         "inodes_percent_used": "1%",
-        "inodes_used": "391",
-        "kb_available": "499256",
+        "inodes_used": "392",
+        "kb_available": "499252",
         "kb_size": "507076",
-        "kb_used": "7820",
+        "kb_used": "7824",
         "mount": "/run",
         "mount_options": [
           "rw",
@@ -1292,15 +1273,6 @@
         ],
         "percent_used": "0%",
         "total_inodes": "126769"
-      },
-      "tracefs,/sys/kernel/debug/tracing": {
-        "device": "tracefs",
-        "fs_type": "tracefs",
-        "mount": "/sys/kernel/debug/tracing",
-        "mount_options": [
-          "rw",
-          "relatime"
-        ]
       }
     }
   },
@@ -1681,7 +1653,7 @@
       }
     }
   },
-  "ohai_time": 1570578018.4717171,
+  "ohai_time": 1583543010.1520424,
   "os": "linux",
   "os_version": "4.4.138-94.39-default",
   "packages": {
@@ -1870,9 +1842,9 @@
     "chef": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1570578013",
+      "installdate": "1583543005",
       "release": "1.sles12",
-      "version": "15.3.14"
+      "version": "15.8.23"
     },
     "cifs-utils": {
       "arch": "x86_64",
@@ -5801,7 +5773,7 @@
   "platform_family": "suse",
   "platform_version": "12.3",
   "root_group": "root",
-  "shard_seed": 65206502,
+  "shard_seed": 241113739,
   "shells": [
     "/bin/ash",
     "/bin/bash",
