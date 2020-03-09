@@ -90,7 +90,7 @@ This file lists each platform known to Fauxhai and the available versions for ea
 
 ### raspbian
 
-  - 8.0
+  - 10
 
 ### redhat
 
