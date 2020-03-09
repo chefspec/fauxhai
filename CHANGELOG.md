@@ -1,6 +1,40 @@
 # Fauxhai-ng Changelog
 
-## v7.6 (2012-02-12)
+## v8.0.0 (2020-03-09)
+
+### New Platforms
+
+- Raspbian 10
+- Fedora 31
+- Redhat 7.7
+- CentOS 7.7.1908
+
+### Removed Platforms
+
+- Raspbian 8.0
+- Debian 9.2 / 9.3 / 9.4 / 9.5 / 9.6
+- Fedora 26/27/28
+- FreeBSD 10.4
+- macOS 10.11 / 10.12
+- openSUSE 42.2 / 42.3
+- CentOS 6.8 / 7.3.1611 / 7.4.1708
+- Debian 7.11
+- FreeBSD 10.4
+- Oracle Linux 6.8 / 7.3 / 7.4
+- Redhat 6.8 / 7.3
+- SUSE 11.4 / 12.1 / 12.2
+- Ubuntu 17.10
+
+### Newly Deprecated Platforms (removal in April 2021)
+
+- AIX 6.1
+- Amazon 2015.03 / 2015.09
+- FreeBSD 11.1
+- Redhat 6.9 / 7.4
+- Windows 2008 R2
+- Fedora 29
+
+## v7.6 (2020-02-12)
 
 ### New / Updated Platforms
 
