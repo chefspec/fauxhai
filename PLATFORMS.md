@@ -79,6 +79,7 @@ This file lists each platform known to Fauxhai and the available versions for ea
 ### opensuse
 
   - 15.0
+  - 15.1
 
 ### oracle
 

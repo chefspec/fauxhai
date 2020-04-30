@@ -1,13 +1,12 @@
 {
   "block_device": {
-    "nvme0n1": {
+    "xvda": {
       "logical_block_size": "512",
-      "model": "Amazon Elastic Block Store",
       "physical_block_size": "512",
       "removable": "0",
       "rotational": "0",
       "size": "16777216",
-      "state": "live"
+      "state": "Connected"
     }
   },
   "chef_packages": {
@@ -79,17 +78,17 @@
   "domain": "local",
   "filesystem": {
     "by_device": {
-      "/dev/nvme0n1": {
+      "/dev/xvda": {
         "mounts": []
       },
-      "/dev/nvme0n1p1": {
+      "/dev/xvda1": {
         "fs_type": "ext4",
         "inodes_available": "477154",
         "inodes_percent_used": "8%",
         "inodes_used": "38942",
-        "kb_available": "6712112",
+        "kb_available": "6712100",
         "kb_size": "8062380",
-        "kb_used": "921012",
+        "kb_used": "921024",
         "mount_options": [
           "rw",
           "relatime",
@@ -103,10 +102,10 @@
         "total_inodes": "516096",
         "uuid": "78a35998-521b-4a27-b49c-e81ff6fc8676"
       },
-      "/dev/nvme0n1p14": {
+      "/dev/xvda14": {
         "mounts": []
       },
-      "/dev/nvme0n1p15": {
+      "/dev/xvda15": {
         "fs_type": "vfat",
         "kb_available": "126448",
         "kb_size": "126710",
@@ -150,20 +149,20 @@
           "nodev",
           "noexec",
           "relatime",
-          "perf_event"
+          "pids"
         ],
         "mounts": [
           "/sys/fs/cgroup/systemd",
-          "/sys/fs/cgroup/cpu,cpuacct",
-          "/sys/fs/cgroup/cpuset",
           "/sys/fs/cgroup/rdma",
-          "/sys/fs/cgroup/memory",
-          "/sys/fs/cgroup/blkio",
-          "/sys/fs/cgroup/freezer",
+          "/sys/fs/cgroup/cpu,cpuacct",
           "/sys/fs/cgroup/devices",
+          "/sys/fs/cgroup/freezer",
+          "/sys/fs/cgroup/cpuset",
           "/sys/fs/cgroup/net_cls,net_prio",
-          "/sys/fs/cgroup/pids",
-          "/sys/fs/cgroup/perf_event"
+          "/sys/fs/cgroup/blkio",
+          "/sys/fs/cgroup/memory",
+          "/sys/fs/cgroup/perf_event",
+          "/sys/fs/cgroup/pids"
         ]
       },
       "cgroup2": {
@@ -283,13 +282,13 @@
         "mount_options": [
           "rw",
           "relatime",
-          "fd=41",
+          "fd=28",
           "pgrp=1",
           "timeout=0",
           "minproto=5",
           "maxproto=5",
           "direct",
-          "pipe_ino=10621"
+          "pipe_ino=10200"
         ],
         "mounts": [
           "/proc/sys/fs/binfmt_misc"
@@ -297,18 +296,18 @@
       },
       "tmpfs": {
         "fs_type": "tmpfs",
-        "inodes_available": "122779",
+        "inodes_available": "126073",
         "inodes_percent_used": "1%",
         "inodes_used": "4",
-        "kb_available": "98224",
-        "kb_size": "98224",
+        "kb_available": "100860",
+        "kb_size": "100860",
         "kb_used": "0",
         "mount_options": [
           "rw",
           "nosuid",
           "nodev",
           "relatime",
-          "size=98224k",
+          "size=100860k",
           "mode=700",
           "uid=1000",
           "gid=1000"
@@ -321,43 +320,43 @@
           "/run/user/1000"
         ],
         "percent_used": "0%",
-        "total_inodes": "122783"
+        "total_inodes": "126077"
       },
       "udev": {
         "fs_type": "devtmpfs",
-        "inodes_available": "118791",
+        "inodes_available": "122091",
         "inodes_percent_used": "1%",
-        "inodes_used": "303",
-        "kb_available": "476376",
-        "kb_size": "476376",
+        "inodes_used": "297",
+        "kb_available": "489552",
+        "kb_size": "489552",
         "kb_used": "0",
         "mount_options": [
           "rw",
           "nosuid",
           "relatime",
-          "size=476376k",
-          "nr_inodes=119094",
+          "size=489552k",
+          "nr_inodes=122388",
           "mode=755"
         ],
         "mounts": [
           "/dev"
         ],
         "percent_used": "0%",
-        "total_inodes": "119094"
+        "total_inodes": "122388"
       }
     },
     "by_mountpoint": {
       "/": {
         "devices": [
-          "/dev/nvme0n1p1"
+          "/dev/xvda1"
         ],
         "fs_type": "ext4",
         "inodes_available": "477154",
         "inodes_percent_used": "8%",
         "inodes_used": "38942",
-        "kb_available": "6712112",
+        "kb_available": "6712100",
         "kb_size": "8062380",
-        "kb_used": "921012",
+        "kb_used": "921024",
         "mount_options": [
           "rw",
           "relatime",
@@ -370,7 +369,7 @@
       },
       "/boot/efi": {
         "devices": [
-          "/dev/nvme0n1p15"
+          "/dev/xvda15"
         ],
         "fs_type": "vfat",
         "kb_available": "126448",
@@ -395,22 +394,22 @@
           "udev"
         ],
         "fs_type": "devtmpfs",
-        "inodes_available": "118791",
+        "inodes_available": "122091",
         "inodes_percent_used": "1%",
-        "inodes_used": "303",
-        "kb_available": "476376",
-        "kb_size": "476376",
+        "inodes_used": "297",
+        "kb_available": "489552",
+        "kb_size": "489552",
         "kb_used": "0",
         "mount_options": [
           "rw",
           "nosuid",
           "relatime",
-          "size=476376k",
-          "nr_inodes=119094",
+          "size=489552k",
+          "nr_inodes=122388",
           "mode=755"
         ],
         "percent_used": "0%",
-        "total_inodes": "119094"
+        "total_inodes": "122388"
       },
       "/dev/hugepages": {
         "devices": [
@@ -453,11 +452,11 @@
           "tmpfs"
         ],
         "fs_type": "tmpfs",
-        "inodes_available": "122782",
+        "inodes_available": "126076",
         "inodes_percent_used": "1%",
         "inodes_used": "1",
-        "kb_available": "491132",
-        "kb_size": "491132",
+        "kb_available": "504308",
+        "kb_size": "504308",
         "kb_used": "0",
         "mount_options": [
           "rw",
@@ -465,7 +464,7 @@
           "nodev"
         ],
         "percent_used": "0%",
-        "total_inodes": "122783"
+        "total_inodes": "126077"
       },
       "/proc": {
         "devices": [
@@ -488,13 +487,13 @@
         "mount_options": [
           "rw",
           "relatime",
-          "fd=41",
+          "fd=28",
           "pgrp=1",
           "timeout=0",
           "minproto=5",
           "maxproto=5",
           "direct",
-          "pipe_ino=10621"
+          "pipe_ino=10200"
         ]
       },
       "/run": {
@@ -502,29 +501,29 @@
           "tmpfs"
         ],
         "fs_type": "tmpfs",
-        "inodes_available": "122404",
+        "inodes_available": "125703",
         "inodes_percent_used": "1%",
-        "inodes_used": "379",
-        "kb_available": "95456",
-        "kb_size": "98228",
-        "kb_used": "2772",
+        "inodes_used": "374",
+        "kb_available": "97984",
+        "kb_size": "100864",
+        "kb_used": "2880",
         "mount_options": [
           "rw",
           "nosuid",
           "noexec",
           "relatime",
-          "size=98228k",
+          "size=100864k",
           "mode=755"
         ],
         "percent_used": "3%",
-        "total_inodes": "122783"
+        "total_inodes": "126077"
       },
       "/run/lock": {
         "devices": [
           "tmpfs"
         ],
         "fs_type": "tmpfs",
-        "inodes_available": "122781",
+        "inodes_available": "126075",
         "inodes_percent_used": "1%",
         "inodes_used": "2",
         "kb_available": "5120",
@@ -539,31 +538,31 @@
           "size=5120k"
         ],
         "percent_used": "0%",
-        "total_inodes": "122783"
+        "total_inodes": "126077"
       },
       "/run/user/1000": {
         "devices": [
           "tmpfs"
         ],
         "fs_type": "tmpfs",
-        "inodes_available": "122779",
+        "inodes_available": "126073",
         "inodes_percent_used": "1%",
         "inodes_used": "4",
-        "kb_available": "98224",
-        "kb_size": "98224",
+        "kb_available": "100860",
+        "kb_size": "100860",
         "kb_used": "0",
         "mount_options": [
           "rw",
           "nosuid",
           "nodev",
           "relatime",
-          "size=98224k",
+          "size=100860k",
           "mode=700",
           "uid=1000",
           "gid=1000"
         ],
         "percent_used": "0%",
-        "total_inodes": "122783"
+        "total_inodes": "126077"
       },
       "/sys": {
         "devices": [
@@ -597,11 +596,11 @@
           "tmpfs"
         ],
         "fs_type": "tmpfs",
-        "inodes_available": "122766",
+        "inodes_available": "126060",
         "inodes_percent_used": "1%",
         "inodes_used": "17",
-        "kb_available": "491132",
-        "kb_size": "491132",
+        "kb_available": "504308",
+        "kb_size": "504308",
         "kb_used": "0",
         "mount_options": [
           "ro",
@@ -611,7 +610,7 @@
           "mode=755"
         ],
         "percent_used": "0%",
-        "total_inodes": "122783"
+        "total_inodes": "126077"
       },
       "/sys/fs/cgroup/blkio": {
         "devices": [
@@ -822,18 +821,18 @@
       }
     },
     "by_pair": {
-      "/dev/nvme0n1,": {
-        "device": "/dev/nvme0n1"
+      "/dev/xvda,": {
+        "device": "/dev/xvda"
       },
-      "/dev/nvme0n1p1,/": {
-        "device": "/dev/nvme0n1p1",
+      "/dev/xvda1,/": {
+        "device": "/dev/xvda1",
         "fs_type": "ext4",
         "inodes_available": "477154",
         "inodes_percent_used": "8%",
         "inodes_used": "38942",
-        "kb_available": "6712112",
+        "kb_available": "6712100",
         "kb_size": "8062380",
-        "kb_used": "921012",
+        "kb_used": "921024",
         "mount": "/",
         "mount_options": [
           "rw",
@@ -845,11 +844,11 @@
         "total_inodes": "516096",
         "uuid": "78a35998-521b-4a27-b49c-e81ff6fc8676"
       },
-      "/dev/nvme0n1p14,": {
-        "device": "/dev/nvme0n1p14"
+      "/dev/xvda14,": {
+        "device": "/dev/xvda14"
       },
-      "/dev/nvme0n1p15,/boot/efi": {
-        "device": "/dev/nvme0n1p15",
+      "/dev/xvda15,/boot/efi": {
+        "device": "/dev/xvda15",
         "fs_type": "vfat",
         "kb_available": "126448",
         "kb_size": "126710",
@@ -1138,23 +1137,23 @@
         "mount_options": [
           "rw",
           "relatime",
-          "fd=41",
+          "fd=28",
           "pgrp=1",
           "timeout=0",
           "minproto=5",
           "maxproto=5",
           "direct",
-          "pipe_ino=10621"
+          "pipe_ino=10200"
         ]
       },
       "tmpfs,/dev/shm": {
         "device": "tmpfs",
         "fs_type": "tmpfs",
-        "inodes_available": "122782",
+        "inodes_available": "126076",
         "inodes_percent_used": "1%",
         "inodes_used": "1",
-        "kb_available": "491132",
-        "kb_size": "491132",
+        "kb_available": "504308",
+        "kb_size": "504308",
         "kb_used": "0",
         "mount": "/dev/shm",
         "mount_options": [
@@ -1163,33 +1162,33 @@
           "nodev"
         ],
         "percent_used": "0%",
-        "total_inodes": "122783"
+        "total_inodes": "126077"
       },
       "tmpfs,/run": {
         "device": "tmpfs",
         "fs_type": "tmpfs",
-        "inodes_available": "122404",
+        "inodes_available": "125703",
         "inodes_percent_used": "1%",
-        "inodes_used": "379",
-        "kb_available": "95456",
-        "kb_size": "98228",
-        "kb_used": "2772",
+        "inodes_used": "374",
+        "kb_available": "97984",
+        "kb_size": "100864",
+        "kb_used": "2880",
         "mount": "/run",
         "mount_options": [
           "rw",
           "nosuid",
           "noexec",
           "relatime",
-          "size=98228k",
+          "size=100864k",
           "mode=755"
         ],
         "percent_used": "3%",
-        "total_inodes": "122783"
+        "total_inodes": "126077"
       },
       "tmpfs,/run/lock": {
         "device": "tmpfs",
         "fs_type": "tmpfs",
-        "inodes_available": "122781",
+        "inodes_available": "126075",
         "inodes_percent_used": "1%",
         "inodes_used": "2",
         "kb_available": "5120",
@@ -1205,16 +1204,16 @@
           "size=5120k"
         ],
         "percent_used": "0%",
-        "total_inodes": "122783"
+        "total_inodes": "126077"
       },
       "tmpfs,/run/user/1000": {
         "device": "tmpfs",
         "fs_type": "tmpfs",
-        "inodes_available": "122779",
+        "inodes_available": "126073",
         "inodes_percent_used": "1%",
         "inodes_used": "4",
-        "kb_available": "98224",
-        "kb_size": "98224",
+        "kb_available": "100860",
+        "kb_size": "100860",
         "kb_used": "0",
         "mount": "/run/user/1000",
         "mount_options": [
@@ -1222,22 +1221,22 @@
           "nosuid",
           "nodev",
           "relatime",
-          "size=98224k",
+          "size=100860k",
           "mode=700",
           "uid=1000",
           "gid=1000"
         ],
         "percent_used": "0%",
-        "total_inodes": "122783"
+        "total_inodes": "126077"
       },
       "tmpfs,/sys/fs/cgroup": {
         "device": "tmpfs",
         "fs_type": "tmpfs",
-        "inodes_available": "122766",
+        "inodes_available": "126060",
         "inodes_percent_used": "1%",
         "inodes_used": "17",
-        "kb_available": "491132",
-        "kb_size": "491132",
+        "kb_available": "504308",
+        "kb_size": "504308",
         "kb_used": "0",
         "mount": "/sys/fs/cgroup",
         "mount_options": [
@@ -1248,28 +1247,28 @@
           "mode=755"
         ],
         "percent_used": "0%",
-        "total_inodes": "122783"
+        "total_inodes": "126077"
       },
       "udev,/dev": {
         "device": "udev",
         "fs_type": "devtmpfs",
-        "inodes_available": "118791",
+        "inodes_available": "122091",
         "inodes_percent_used": "1%",
-        "inodes_used": "303",
-        "kb_available": "476376",
-        "kb_size": "476376",
+        "inodes_used": "297",
+        "kb_available": "489552",
+        "kb_size": "489552",
         "kb_used": "0",
         "mount": "/dev",
         "mount_options": [
           "rw",
           "nosuid",
           "relatime",
-          "size=476376k",
-          "nr_inodes=119094",
+          "size=489552k",
+          "nr_inodes=122388",
           "mode=755"
         ],
         "percent_used": "0%",
-        "total_inodes": "119094"
+        "total_inodes": "122388"
       }
     }
   },
@@ -1295,6 +1294,16 @@
         "refcount": "0",
         "size": "200704"
       },
+      "ata_generic": {
+        "refcount": "0",
+        "size": "16384",
+        "version": "0.2.15"
+      },
+      "ata_piix": {
+        "refcount": "0",
+        "size": "36864",
+        "version": "2.13"
+      },
       "autofs4": {
         "refcount": "2",
         "size": "49152"
@@ -1302,6 +1311,10 @@
       "button": {
         "refcount": "0",
         "size": "16384"
+      },
+      "cirrus": {
+        "refcount": "1",
+        "size": "28672"
       },
       "crc16": {
         "refcount": "1",
@@ -1331,14 +1344,17 @@
         "refcount": "1",
         "size": "16384"
       },
+      "drm": {
+        "refcount": "4",
+        "size": "495616"
+      },
+      "drm_kms_helper": {
+        "refcount": "1",
+        "size": "208896"
+      },
       "ecb": {
         "refcount": "0",
         "size": "16384"
-      },
-      "ena": {
-        "refcount": "0",
-        "size": "110592",
-        "version": "2.0.2K"
       },
       "evdev": {
         "refcount": "3",
@@ -1350,6 +1366,10 @@
       },
       "fat": {
         "refcount": "1",
+        "size": "86016"
+      },
+      "floppy": {
+        "refcount": "0",
         "size": "86016"
       },
       "fscrypto": {
@@ -1368,6 +1388,10 @@
         "refcount": "0",
         "size": "24576"
       },
+      "intel_rapl": {
+        "refcount": "0",
+        "size": "24576"
+      },
       "intel_rapl_perf": {
         "refcount": "0",
         "size": "16384"
@@ -1380,17 +1404,14 @@
         "refcount": "1",
         "size": "122880"
       },
-      "libnvdimm": {
-        "refcount": "1",
-        "size": "172032"
+      "libata": {
+        "refcount": "2",
+        "size": "270336",
+        "version": "3.00"
       },
       "mbcache": {
         "refcount": "1",
         "size": "16384"
-      },
-      "nfit": {
-        "refcount": "0",
-        "size": "61440"
       },
       "nls_ascii": {
         "refcount": "1",
@@ -1400,35 +1421,25 @@
         "refcount": "1",
         "size": "20480"
       },
-      "nvme": {
-        "refcount": "2",
-        "size": "36864",
-        "version": "1.0"
-      },
-      "nvme_core": {
-        "refcount": "4",
-        "size": "81920",
-        "version": "1.0"
-      },
-      "parport": {
-        "refcount": "2",
-        "size": "57344"
-      },
-      "parport_pc": {
-        "refcount": "0",
-        "size": "32768"
-      },
-      "ppdev": {
-        "refcount": "0",
-        "size": "20480"
-      },
       "psmouse": {
         "refcount": "0",
         "size": "172032"
       },
+      "sb_edac": {
+        "refcount": "0",
+        "size": "24576"
+      },
+      "scsi_mod": {
+        "refcount": "1",
+        "size": "249856"
+      },
       "serio_raw": {
         "refcount": "0",
         "size": "16384"
+      },
+      "ttm": {
+        "refcount": "1",
+        "size": "131072"
       },
       "vfat": {
         "refcount": "1",
@@ -1437,6 +1448,14 @@
       "x_tables": {
         "refcount": "1",
         "size": "45056"
+      },
+      "xen_blkfront": {
+        "refcount": "3",
+        "size": "45056"
+      },
+      "xen_netfront": {
+        "refcount": "0",
+        "size": "32768"
       }
     },
     "name": "Linux",
@@ -1560,7 +1579,7 @@
       }
     }
   },
-  "ohai_time": 1588211628.0210955,
+  "ohai_time": 1588214429.9646175,
   "os": "linux",
   "os_version": "4.19.0-6-amd64",
   "packages": {
