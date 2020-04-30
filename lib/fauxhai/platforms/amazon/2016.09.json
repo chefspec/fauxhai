@@ -1,7 +1,8 @@
 {
   "block_device": {
-    "xvda": {
+    "nvme0n1": {
       "logical_block_size": "512",
+      "model": "Amazon Elastic Block Store",
       "physical_block_size": "512",
       "removable": "0",
       "rotational": "0",
@@ -10,12 +11,12 @@
   },
   "chef_packages": {
     "chef": {
-      "chef_root": "/opt/chef/embedded/lib/ruby/gems/2.6.0/gems/chef-15.8.23/lib",
-      "version": "15.8.23"
+      "chef_root": "/opt/chef/embedded/lib/ruby/gems/2.7.0/gems/chef-16.0.257/lib",
+      "version": "16.0.257"
     },
     "ohai": {
-      "ohai_root": "/opt/chef/embedded/lib/ruby/gems/2.6.0/gems/ohai-15.7.4/lib/ohai",
-      "version": "15.7.4"
+      "ohai_root": "/opt/chef/embedded/lib/ruby/gems/2.7.0/gems/ohai-16.0.20/lib/ohai",
+      "version": "16.0.20"
     }
   },
   "command": {
@@ -77,17 +78,17 @@
   "domain": "local",
   "filesystem": {
     "by_device": {
-      "/dev/xvda": {
+      "/dev/nvme0n1": {
         "mounts": []
       },
-      "/dev/xvda1": {
+      "/dev/nvme0n1p1": {
         "fs_type": "ext4",
-        "inodes_available": "473215",
-        "inodes_percent_used": "10%",
-        "inodes_used": "51073",
-        "kb_available": "6802864",
+        "inodes_available": "478053",
+        "inodes_percent_used": "9%",
+        "inodes_used": "46235",
+        "kb_available": "6853916",
         "kb_size": "8123812",
-        "kb_used": "1220700",
+        "kb_used": "1169648",
         "label": "/",
         "mount_options": [
           "rw",
@@ -97,9 +98,12 @@
         "mounts": [
           "/"
         ],
-        "percent_used": "16%",
+        "percent_used": "15%",
         "total_inodes": "524288",
         "uuid": "30c0cb51-8e21-459a-bde6-67d8c6ec7d68"
+      },
+      "/dev/nvme0n1p128": {
+        "mounts": []
       },
       "devpts": {
         "fs_type": "devpts",
@@ -116,24 +120,24 @@
       },
       "devtmpfs": {
         "fs_type": "devtmpfs",
-        "inodes_available": "124263",
+        "inodes_available": "120865",
         "inodes_percent_used": "1%",
-        "inodes_used": "428",
-        "kb_available": "498708",
-        "kb_size": "498764",
-        "kb_used": "56",
+        "inodes_used": "451",
+        "kb_available": "485200",
+        "kb_size": "485264",
+        "kb_used": "64",
         "mount_options": [
           "rw",
           "relatime",
-          "size=498764k",
-          "nr_inodes=124691",
+          "size=485264k",
+          "nr_inodes=121316",
           "mode=755"
         ],
         "mounts": [
           "/dev"
         ],
         "percent_used": "1%",
-        "total_inodes": "124691"
+        "total_inodes": "121316"
       },
       "none": {
         "fs_type": "binfmt_misc",
@@ -167,11 +171,11 @@
       },
       "tmpfs": {
         "fs_type": "tmpfs",
-        "inodes_available": "127409",
+        "inodes_available": "124033",
         "inodes_percent_used": "1%",
         "inodes_used": "1",
-        "kb_available": "509640",
-        "kb_size": "509640",
+        "kb_available": "496136",
+        "kb_size": "496136",
         "kb_used": "0",
         "mount_options": [
           "rw",
@@ -181,28 +185,28 @@
           "/dev/shm"
         ],
         "percent_used": "0%",
-        "total_inodes": "127410"
+        "total_inodes": "124034"
       }
     },
     "by_mountpoint": {
       "/": {
         "devices": [
-          "/dev/xvda1"
+          "/dev/nvme0n1p1"
         ],
         "fs_type": "ext4",
-        "inodes_available": "473215",
-        "inodes_percent_used": "10%",
-        "inodes_used": "51073",
-        "kb_available": "6802864",
+        "inodes_available": "478053",
+        "inodes_percent_used": "9%",
+        "inodes_used": "46235",
+        "kb_available": "6853916",
         "kb_size": "8123812",
-        "kb_used": "1220700",
+        "kb_used": "1169648",
         "label": "/",
         "mount_options": [
           "rw",
           "noatime",
           "data=ordered"
         ],
-        "percent_used": "16%",
+        "percent_used": "15%",
         "total_inodes": "524288",
         "uuid": "30c0cb51-8e21-459a-bde6-67d8c6ec7d68"
       },
@@ -211,21 +215,21 @@
           "devtmpfs"
         ],
         "fs_type": "devtmpfs",
-        "inodes_available": "124263",
+        "inodes_available": "120865",
         "inodes_percent_used": "1%",
-        "inodes_used": "428",
-        "kb_available": "498708",
-        "kb_size": "498764",
-        "kb_used": "56",
+        "inodes_used": "451",
+        "kb_available": "485200",
+        "kb_size": "485264",
+        "kb_used": "64",
         "mount_options": [
           "rw",
           "relatime",
-          "size=498764k",
-          "nr_inodes=124691",
+          "size=485264k",
+          "nr_inodes=121316",
           "mode=755"
         ],
         "percent_used": "1%",
-        "total_inodes": "124691"
+        "total_inodes": "121316"
       },
       "/dev/pts": {
         "devices": [
@@ -245,18 +249,18 @@
           "tmpfs"
         ],
         "fs_type": "tmpfs",
-        "inodes_available": "127409",
+        "inodes_available": "124033",
         "inodes_percent_used": "1%",
         "inodes_used": "1",
-        "kb_available": "509640",
-        "kb_size": "509640",
+        "kb_available": "496136",
+        "kb_size": "496136",
         "kb_used": "0",
         "mount_options": [
           "rw",
           "relatime"
         ],
         "percent_used": "0%",
-        "total_inodes": "127410"
+        "total_inodes": "124034"
       },
       "/proc": {
         "devices": [
@@ -290,18 +294,18 @@
       }
     },
     "by_pair": {
-      "/dev/xvda,": {
-        "device": "/dev/xvda"
+      "/dev/nvme0n1,": {
+        "device": "/dev/nvme0n1"
       },
-      "/dev/xvda1,/": {
-        "device": "/dev/xvda1",
+      "/dev/nvme0n1p1,/": {
+        "device": "/dev/nvme0n1p1",
         "fs_type": "ext4",
-        "inodes_available": "473215",
-        "inodes_percent_used": "10%",
-        "inodes_used": "51073",
-        "kb_available": "6802864",
+        "inodes_available": "478053",
+        "inodes_percent_used": "9%",
+        "inodes_used": "46235",
+        "kb_available": "6853916",
         "kb_size": "8123812",
-        "kb_used": "1220700",
+        "kb_used": "1169648",
         "label": "/",
         "mount": "/",
         "mount_options": [
@@ -309,9 +313,12 @@
           "noatime",
           "data=ordered"
         ],
-        "percent_used": "16%",
+        "percent_used": "15%",
         "total_inodes": "524288",
         "uuid": "30c0cb51-8e21-459a-bde6-67d8c6ec7d68"
+      },
+      "/dev/nvme0n1p128,": {
+        "device": "/dev/nvme0n1p128"
       },
       "devpts,/dev/pts": {
         "device": "devpts",
@@ -328,22 +335,22 @@
       "devtmpfs,/dev": {
         "device": "devtmpfs",
         "fs_type": "devtmpfs",
-        "inodes_available": "124263",
+        "inodes_available": "120865",
         "inodes_percent_used": "1%",
-        "inodes_used": "428",
-        "kb_available": "498708",
-        "kb_size": "498764",
-        "kb_used": "56",
+        "inodes_used": "451",
+        "kb_available": "485200",
+        "kb_size": "485264",
+        "kb_used": "64",
         "mount": "/dev",
         "mount_options": [
           "rw",
           "relatime",
-          "size=498764k",
-          "nr_inodes=124691",
+          "size=485264k",
+          "nr_inodes=121316",
           "mode=755"
         ],
         "percent_used": "1%",
-        "total_inodes": "124691"
+        "total_inodes": "121316"
       },
       "none,/proc/sys/fs/binfmt_misc": {
         "device": "none",
@@ -375,11 +382,11 @@
       "tmpfs,/dev/shm": {
         "device": "tmpfs",
         "fs_type": "tmpfs",
-        "inodes_available": "127409",
+        "inodes_available": "124033",
         "inodes_percent_used": "1%",
         "inodes_used": "1",
-        "kb_available": "509640",
-        "kb_size": "509640",
+        "kb_available": "496136",
+        "kb_size": "496136",
         "kb_used": "0",
         "mount": "/dev/shm",
         "mount_options": [
@@ -387,7 +394,7 @@
           "relatime"
         ],
         "percent_used": "0%",
-        "total_inodes": "127410"
+        "total_inodes": "124034"
       }
     }
   },
@@ -408,11 +415,6 @@
       "acpi_cpufreq": {
         "refcount": "0",
         "size": "7838"
-      },
-      "ata_piix": {
-        "refcount": "0",
-        "size": "26804",
-        "version": "2.13"
       },
       "binfmt_misc": {
         "refcount": "1",
@@ -442,6 +444,11 @@
         "refcount": "1",
         "size": "11021"
       },
+      "ena": {
+        "refcount": "0",
+        "size": "66938",
+        "version": "1.1.1"
+      },
       "evdev": {
         "refcount": "0",
         "size": "12270"
@@ -451,17 +458,12 @@
         "size": "575008"
       },
       "ipv6": {
-        "refcount": "54",
+        "refcount": "28",
         "size": "368382"
       },
       "jbd2": {
         "refcount": "1",
         "size": "105184"
-      },
-      "libata": {
-        "refcount": "1",
-        "size": "225805",
-        "version": "3.00"
       },
       "mbcache": {
         "refcount": "1",
@@ -471,13 +473,14 @@
         "refcount": "0",
         "size": "11430"
       },
+      "nvme": {
+        "refcount": "2",
+        "size": "48813",
+        "version": "1.0"
+      },
       "psmouse": {
         "refcount": "0",
         "size": "17744"
-      },
-      "scsi_mod": {
-        "refcount": "1",
-        "size": "221423"
       }
     },
     "name": "Linux",
@@ -607,7 +610,7 @@
       }
     }
   },
-  "ohai_time": 1583539866.4234047,
+  "ohai_time": 1588211382.697599,
   "os": "linux",
   "os_version": "4.4.41-36.55.amzn1.x86_64",
   "packages": {
@@ -719,7 +722,7 @@
     "aws-cfn-bootstrap": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1583539851",
+      "installdate": "1588211371",
       "release": "31.22.amzn1",
       "version": "1.4"
     },
@@ -754,14 +757,14 @@
     "bind-libs": {
       "arch": "x86_64",
       "epoch": "32",
-      "installdate": "1583539846",
+      "installdate": "1588211368",
       "release": "0.68.rc1.60.amzn1",
       "version": "9.8.2"
     },
     "bind-utils": {
       "arch": "x86_64",
       "epoch": "32",
-      "installdate": "1583539850",
+      "installdate": "1588211371",
       "release": "0.68.rc1.60.amzn1",
       "version": "9.8.2"
     },
@@ -803,9 +806,9 @@
     "chef": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1583539864",
+      "installdate": "1588211380",
       "release": "1.el6",
-      "version": "15.8.23"
+      "version": "16.0.257"
     },
     "chkconfig": {
       "arch": "x86_64",
@@ -831,7 +834,7 @@
     "copy-jdk-configs": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1583539847",
+      "installdate": "1588211368",
       "release": "10.3.amzn1",
       "version": "3.3"
     },
@@ -901,7 +904,7 @@
     "curl": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1583539850",
+      "installdate": "1588211371",
       "release": "12.93.amzn1",
       "version": "7.61.1"
     },
@@ -1020,14 +1023,14 @@
     "dhclient": {
       "arch": "x86_64",
       "epoch": "12",
-      "installdate": "1583539850",
+      "installdate": "1588211370",
       "release": "53.P1.28.amzn1",
       "version": "4.1.1"
     },
     "dhcp-common": {
       "arch": "x86_64",
       "epoch": "12",
-      "installdate": "1583539847",
+      "installdate": "1588211368",
       "release": "53.P1.28.amzn1",
       "version": "4.1.1"
     },
@@ -1139,14 +1142,14 @@
     "file": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1583539850",
+      "installdate": "1588211370",
       "release": "8.49.amzn1",
       "version": "5.37"
     },
     "file-libs": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1583539847",
+      "installdate": "1588211368",
       "release": "8.49.amzn1",
       "version": "5.37"
     },
@@ -1251,14 +1254,14 @@
     "glibc": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1583539843",
+      "installdate": "1588211366",
       "release": "292.180.amzn1",
       "version": "2.17"
     },
     "glibc-common": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1583539841",
+      "installdate": "1588211364",
       "release": "292.180.amzn1",
       "version": "2.17"
     },
@@ -1272,7 +1275,7 @@
     "gnupg2": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1583539850",
+      "installdate": "1588211371",
       "release": "2.33.amzn1",
       "version": "2.0.28"
     },
@@ -1405,9 +1408,9 @@
     "java-1.7.0-openjdk": {
       "arch": "x86_64",
       "epoch": "1",
-      "installdate": "1583539848",
-      "release": "2.6.19.1.80.amzn1",
-      "version": "1.7.0.231"
+      "installdate": "1588211369",
+      "release": "2.6.21.0.82.amzn1",
+      "version": "1.7.0.251"
     },
     "javapackages-tools": {
       "arch": "noarch",
@@ -1447,9 +1450,9 @@
     "kernel-tools": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1583539851",
-      "release": "103.209.amzn1",
-      "version": "4.14.165"
+      "installdate": "1588211371",
+      "release": "106.229.amzn1",
+      "version": "4.14.173"
     },
     "keyutils": {
       "arch": "x86_64",
@@ -1650,7 +1653,7 @@
     "libcurl": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1583539847",
+      "installdate": "1588211368",
       "release": "12.93.amzn1",
       "version": "7.61.1"
     },
@@ -1727,7 +1730,7 @@
     "libidn2": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1583539847",
+      "installdate": "1588211368",
       "release": "1.4.amzn1",
       "version": "2.3.0"
     },
@@ -1755,7 +1758,7 @@
     "libnghttp2": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1583539847",
+      "installdate": "1588211368",
       "release": "2.5.amzn1",
       "version": "1.31.1"
     },
@@ -1839,7 +1842,7 @@
     "libssh2": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1583539846",
+      "installdate": "1588211368",
       "release": "3.12.amzn1",
       "version": "1.4.2"
     },
@@ -1867,8 +1870,8 @@
     "libtirpc": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1583539847",
-      "release": "0.8.14.amzn1",
+      "installdate": "1588211368",
+      "release": "0.16.15.amzn1",
       "version": "0.2.4"
     },
     "libudev": {
@@ -1881,7 +1884,7 @@
     "libunistring": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1583539846",
+      "installdate": "1588211368",
       "release": "6.1.amzn1",
       "version": "0.9.3"
     },
@@ -2091,58 +2094,58 @@
     "nspr": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1583539844",
+      "installdate": "1588211366",
       "release": "1.43.amzn1",
-      "version": "4.19.0"
+      "version": "4.21.0"
     },
     "nss": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1583539845",
-      "release": "5.82.amzn1",
-      "version": "3.36.0"
+      "installdate": "1588211367",
+      "release": "7.84.amzn1",
+      "version": "3.44.0"
     },
     "nss-pem": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1583539845",
+      "installdate": "1588211367",
       "release": "4.3.amzn1",
       "version": "1.0.3"
     },
     "nss-softokn": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1583539845",
-      "release": "5.42.amzn1",
-      "version": "3.36.0"
+      "installdate": "1588211367",
+      "release": "8.44.amzn1",
+      "version": "3.44.0"
     },
     "nss-softokn-freebl": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1583539843",
-      "release": "5.42.amzn1",
-      "version": "3.36.0"
+      "installdate": "1588211365",
+      "release": "8.44.amzn1",
+      "version": "3.44.0"
     },
     "nss-sysinit": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1583539845",
-      "release": "5.82.amzn1",
-      "version": "3.36.0"
+      "installdate": "1588211367",
+      "release": "7.84.amzn1",
+      "version": "3.44.0"
     },
     "nss-tools": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1583539851",
-      "release": "5.82.amzn1",
-      "version": "3.36.0"
+      "installdate": "1588211371",
+      "release": "7.84.amzn1",
+      "version": "3.44.0"
     },
     "nss-util": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1583539844",
-      "release": "1.54.amzn1",
-      "version": "3.36.0"
+      "installdate": "1588211366",
+      "release": "4.56.amzn1",
+      "version": "3.44.0"
     },
     "ntp": {
       "arch": "x86_64",
@@ -2203,7 +2206,7 @@
     "openssl": {
       "arch": "x86_64",
       "epoch": "1",
-      "installdate": "1583539844",
+      "installdate": "1588211366",
       "release": "16.151.amzn1",
       "version": "1.0.2k"
     },
@@ -2280,14 +2283,14 @@
     "pcre": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1583539851",
+      "installdate": "1588211371",
       "release": "7.8.amzn1",
       "version": "8.21"
     },
     "perl": {
       "arch": "x86_64",
       "epoch": "4",
-      "installdate": "1583539846",
+      "installdate": "1588211367",
       "release": "294.43.amzn1",
       "version": "5.16.3"
     },
@@ -2385,7 +2388,7 @@
     "perl-Pod-Escapes": {
       "arch": "noarch",
       "epoch": "1",
-      "installdate": "1583539850",
+      "installdate": "1588211371",
       "release": "294.43.amzn1",
       "version": "1.04"
     },
@@ -2462,14 +2465,14 @@
     "perl-libs": {
       "arch": "x86_64",
       "epoch": "4",
-      "installdate": "1583539845",
+      "installdate": "1588211367",
       "release": "294.43.amzn1",
       "version": "5.16.3"
     },
     "perl-macros": {
       "arch": "x86_64",
       "epoch": "4",
-      "installdate": "1583539845",
+      "installdate": "1588211367",
       "release": "294.43.amzn1",
       "version": "5.16.3"
     },
@@ -2532,7 +2535,7 @@
     "procmail": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1583539851",
+      "installdate": "1588211371",
       "release": "25.1.7.amzn1",
       "version": "3.22"
     },
@@ -2567,7 +2570,7 @@
     "python27": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1583539845",
+      "installdate": "1588211366",
       "release": "1.131.amzn1",
       "version": "2.7.16"
     },
@@ -2637,7 +2640,7 @@
     "python27-crypto": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1583539846",
+      "installdate": "1588211367",
       "release": "1.15.amzn1",
       "version": "2.6.1"
     },
@@ -2658,7 +2661,7 @@
     "python27-devel": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1583539851",
+      "installdate": "1588211371",
       "release": "1.131.amzn1",
       "version": "2.7.16"
     },
@@ -2700,7 +2703,7 @@
     "python27-jinja2": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1583539851",
+      "installdate": "1588211371",
       "release": "3.16.amzn1",
       "version": "2.7.2"
     },
@@ -2735,7 +2738,7 @@
     "python27-libs": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1583539845",
+      "installdate": "1588211366",
       "release": "1.131.amzn1",
       "version": "2.7.16"
     },
@@ -2756,7 +2759,7 @@
     "python27-paramiko": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1583539850",
+      "installdate": "1588211371",
       "release": "2.7.amzn1",
       "version": "1.15.1"
     },
@@ -2854,7 +2857,7 @@
     "python27-urlgrabber": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1583539846",
+      "installdate": "1588211367",
       "release": "8.16.amzn1",
       "version": "3.10"
     },
@@ -2917,7 +2920,7 @@
     "rpcbind": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1583539850",
+      "installdate": "1588211370",
       "release": "13.10.amzn1",
       "version": "0.2.0"
     },
@@ -2973,28 +2976,28 @@
     "ruby20": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1583539846",
+      "installdate": "1588211367",
       "release": "1.32.amzn1",
       "version": "2.0.0.648"
     },
     "ruby20-irb": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1583539850",
+      "installdate": "1588211371",
       "release": "1.32.amzn1",
       "version": "2.0.0.648"
     },
     "ruby20-libs": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1583539845",
+      "installdate": "1588211367",
       "release": "1.32.amzn1",
       "version": "2.0.0.648"
     },
     "rubygem20-bigdecimal": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1583539846",
+      "installdate": "1588211367",
       "release": "1.32.amzn1",
       "version": "1.2.0"
     },
@@ -3008,7 +3011,7 @@
     "rubygem20-psych": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1583539846",
+      "installdate": "1588211367",
       "release": "1.32.amzn1",
       "version": "2.0.0"
     },
@@ -3022,7 +3025,7 @@
     "rubygems20": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1583539846",
+      "installdate": "1588211367",
       "release": "1.32.amzn1",
       "version": "2.0.14.1"
     },
@@ -3099,8 +3102,8 @@
     "sudo": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1583539850",
-      "release": "29.29.amzn1",
+      "installdate": "1588211370",
+      "release": "29.30.amzn1",
       "version": "1.8.6p3"
     },
     "sysctl-defaults": {
@@ -3239,35 +3242,35 @@
     "vim-common": {
       "arch": "x86_64",
       "epoch": "2",
-      "installdate": "1583539847",
+      "installdate": "1588211368",
       "release": "1.46.amzn1",
       "version": "8.0.0503"
     },
     "vim-enhanced": {
       "arch": "x86_64",
       "epoch": "2",
-      "installdate": "1583539847",
+      "installdate": "1588211368",
       "release": "1.46.amzn1",
       "version": "8.0.0503"
     },
     "vim-filesystem": {
       "arch": "x86_64",
       "epoch": "2",
-      "installdate": "1583539847",
+      "installdate": "1588211368",
       "release": "1.46.amzn1",
       "version": "8.0.0503"
     },
     "vim-minimal": {
       "arch": "x86_64",
       "epoch": "2",
-      "installdate": "1583539847",
+      "installdate": "1588211368",
       "release": "1.46.amzn1",
       "version": "8.0.0503"
     },
     "wget": {
       "arch": "x86_64",
       "epoch": "0",
-      "installdate": "1583539851",
+      "installdate": "1588211371",
       "release": "5.30.amzn1",
       "version": "1.18"
     },
@@ -3316,7 +3319,7 @@
     "yum": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1583539846",
+      "installdate": "1588211368",
       "release": "150.70.amzn1",
       "version": "3.4.3"
     },
@@ -3330,21 +3333,21 @@
     "yum-plugin-priorities": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1583539850",
+      "installdate": "1588211371",
       "release": "46.30.amzn1",
       "version": "1.1.31"
     },
     "yum-plugin-upgrade-helper": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1583539850",
+      "installdate": "1588211371",
       "release": "46.30.amzn1",
       "version": "1.1.31"
     },
     "yum-utils": {
       "arch": "noarch",
       "epoch": "0",
-      "installdate": "1583539850",
+      "installdate": "1588211371",
       "release": "46.30.amzn1",
       "version": "1.1.31"
     },
