@@ -21,7 +21,6 @@ This file lists each platform known to Fauxhai and the available versions for ea
 
 ### centos
 
-  - 5.11
   - 6.9
   - 6.10
   - 7.5.1804
@@ -83,7 +82,6 @@ This file lists each platform known to Fauxhai and the available versions for ea
 
 ### oracle
 
-  - 5.11
   - 6.9
   - 6.10
   - 7.5
@@ -95,7 +93,6 @@ This file lists each platform known to Fauxhai and the available versions for ea
 
 ### redhat
 
-  - 5.11
   - 6.10
   - 7.5
   - 7.6

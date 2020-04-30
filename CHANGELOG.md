@@ -1,5 +1,24 @@
 # Fauxhai-ng Changelog
 
+## v8.1.0 (2020-04-29)
+
+### New Platforms
+
+- Ubuntu 20.04
+- openSUSE 15.1
+
+### Updated Platforms
+
+- macOS 10.15 has been updated to 10.15.4
+- CentOS 8 updated from 8.0.1905 to 8.1.1911 and is now on AWS
+- Most non-deprecated systems re-gathered using Chef Infra Client 16.0
+
+### Newly Deprecated Platforms (removal in April 2021)
+
+- Oracle 5.11
+- Redhat 5.11
+- CentOS 5.11
+
 ## v8.0.0 (2020-03-09)
 
 ### New Platforms
