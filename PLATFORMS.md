@@ -48,7 +48,6 @@ This file lists each platform known to Fauxhai and the available versions for ea
 
 ### fedora
 
-  - 30
   - 31
   - 32
 
