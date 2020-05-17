@@ -1,5 +1,25 @@
 # Fauxhai-ng Changelog
 
+## v8.2.0 (2020-05-17)
+
+### New Platforms
+
+- SLES 12.5
+- Fedora 32
+
+### Updated Platforms
+
+- Redhat 8 is now gathered using a Redhat 8.2 AMI
+- Debian 10 is now gathering using a Debian 10.4 AMI
+- CentOS 7.7 is now gathered using the official CentOS AMI
+
+### Newly Deprecated Platforms (removal in April 2021)
+
+- CentOS 7.5
+- RHEL 7.5
+- Fedora 30
+- SLES 12.3
+
 ## v8.1.0 (2020-04-29)
 
 ### New Platforms
