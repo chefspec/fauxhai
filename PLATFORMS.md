@@ -109,8 +109,8 @@ This file lists each platform known to Fauxhai and the available versions for ea
 
 ### suse
 
-  - 12.3
   - 12.4
+  - 12.5
   - 15
 
 ### ubuntu
