@@ -2,51 +2,51 @@ module Fauxhai
   class Runner
     module Default
       def bin_dir
-        '/usr/local/bin'
+        "/usr/local/bin"
       end
 
       def counters
         {
-          'network' => {
-            'interfaces' => {
-              'lo' => {
-                'tx' => {
-                  'queuelen' => '1',
-                  'bytes' =>  0,
-                  'packets' =>  0,
-                  'errors' =>  0,
-                  'drop' =>  0,
-                  'carrier' => 0,
-                  'collisions' => 0,
+          "network" => {
+            "interfaces" => {
+              "lo" => {
+                "tx" => {
+                  "queuelen" => "1",
+                  "bytes" =>  0,
+                  "packets" =>  0,
+                  "errors" =>  0,
+                  "drop" =>  0,
+                  "carrier" => 0,
+                  "collisions" => 0,
                 },
-                'rx' =>  {
-                  'bytes' => 0,
-                  'packets' => 0,
-                  'errors' => 0,
-                  'drop' => 0,
-                  'overrun' => 0,
+                "rx" =>  {
+                  "bytes" => 0,
+                  "packets" => 0,
+                  "errors" => 0,
+                  "drop" => 0,
+                  "overrun" => 0,
                 },
               },
               default_interface.to_s => {
-                'rx' => {
-                  'bytes' => 0,
-                  'packets' => 0,
-                  'errors' => 0,
-                  'drop' => 0,
-                  'overrun' => 0,
-                  'frame' => 0,
-                  'compressed' => 0,
-                  'multicast' => 0,
+                "rx" => {
+                  "bytes" => 0,
+                  "packets" => 0,
+                  "errors" => 0,
+                  "drop" => 0,
+                  "overrun" => 0,
+                  "frame" => 0,
+                  "compressed" => 0,
+                  "multicast" => 0,
                 },
-                'tx' => {
-                  'bytes' => 0,
-                  'packets' => 0,
-                  'errors' => 0,
-                  'drop' => 0,
-                  'overrun' => 0,
-                  'collisions' => 0,
-                  'carrier' => 0,
-                  'compressed' => 0,
+                "tx" => {
+                  "bytes" => 0,
+                  "packets" => 0,
+                  "errors" => 0,
+                  "drop" => 0,
+                  "overrun" => 0,
+                  "collisions" => 0,
+                  "carrier" => 0,
+                  "compressed" => 0,
                 },
               },
             },
@@ -55,170 +55,170 @@ module Fauxhai
       end
 
       def current_user
-        'fauxhai'
+        "fauxhai"
       end
 
       def default_gateway
-        '10.0.0.1'
+        "10.0.0.1"
       end
 
       def default_interface
-        case @system.data['platform_family']
-        when 'mac_os_x'
-          'en0'
+        case @system.data["platform_family"]
+        when "mac_os_x"
+          "en0"
         when /bsd/
-          'em0'
-        when 'arch', 'fedora'
-          'enp0s3'
+          "em0"
+        when "arch", "fedora"
+          "enp0s3"
         else
-          'eth0'
+          "eth0"
         end
       end
 
       def domain
-        'local'
+        "local"
       end
 
       def fqdn
-        'fauxhai.local'
+        "fauxhai.local"
       end
 
       def gem_bin
-        '/usr/local/bin/gem'
+        "/usr/local/bin/gem"
       end
 
       def gems_dir
-        '/usr/local/gems'
+        "/usr/local/gems"
       end
 
       def hostname
-        'Fauxhai'
+        "Fauxhai"
       end
 
       def ipaddress
-        '10.0.0.2'
+        "10.0.0.2"
       end
 
       def ip6address
-        'fe80:0:0:0:0:0:a00:2'
+        "fe80:0:0:0:0:0:a00:2"
       end
 
       def keys
         {
-          'ssh' => ssh,
+          "ssh" => ssh,
         }
       end
 
       def languages
         {
-          'ruby' => @system.data['languages']['ruby'].merge('bin_dir' => bin_dir,
-                                                            'gem_bin' => gem_bin,
-                                                            'gems_dir' => gems_dir,
-                                                            'ruby_bin' => ruby_bin),
-          'powershell' => @system.data['languages']['powershell'],
+          "ruby" => @system.data["languages"]["ruby"].merge("bin_dir" => bin_dir,
+                                                            "gem_bin" => gem_bin,
+                                                            "gems_dir" => gems_dir,
+                                                            "ruby_bin" => ruby_bin),
+          "powershell" => @system.data["languages"]["powershell"],
         }
       end
 
       def macaddress
-        '11:11:11:11:11:11'
+        "11:11:11:11:11:11"
       end
 
       def network
         {
-          'interfaces' => {
-            'lo' => {
-              'mtu' => '65536',
-              'flags' => %w(LOOPBACK UP LOWER_UP),
-              'encapsulation' => 'Loopback',
-              'addresses' => {
-                '127.0.0.1' => {
-                  'family' => 'inet',
-                  'prefixlen' => '8',
-                  'netmask' => '255.0.0.0',
-                  'scope' => 'Node',
-                  'ip_scope' => 'LOOPBACK',
+          "interfaces" => {
+            "lo" => {
+              "mtu" => "65536",
+              "flags" => %w{LOOPBACK UP LOWER_UP},
+              "encapsulation" => "Loopback",
+              "addresses" => {
+                "127.0.0.1" => {
+                  "family" => "inet",
+                  "prefixlen" => "8",
+                  "netmask" => "255.0.0.0",
+                  "scope" => "Node",
+                  "ip_scope" => "LOOPBACK",
                 },
-                '::1' => {
-                  'family' => 'inet6',
-                  'prefixlen' => '128',
-                  'scope' => 'Node',
-                  'tags' => [],
-                  'ip_scope' => 'LINK LOCAL LOOPBACK',
+                "::1" => {
+                  "family" => "inet6",
+                  "prefixlen" => "128",
+                  "scope" => "Node",
+                  "tags" => [],
+                  "ip_scope" => "LINK LOCAL LOOPBACK",
                 },
               },
-              'state' => 'unknown',
+              "state" => "unknown",
             },
             default_interface.to_s => {
-              'type' => default_interface.chop,
-              'number' => '0',
-              'mtu' => '1500',
-              'flags' => %w(BROADCAST MULTICAST UP LOWER_UP),
-              'encapsulation' => 'Ethernet',
-              'addresses' => {
+              "type" => default_interface.chop,
+              "number" => "0",
+              "mtu" => "1500",
+              "flags" => %w{BROADCAST MULTICAST UP LOWER_UP},
+              "encapsulation" => "Ethernet",
+              "addresses" => {
                 macaddress.to_s => {
-                  'family' => 'lladdr',
+                  "family" => "lladdr",
                 },
                 ipaddress.to_s => {
-                  'family' => 'inet',
-                  'prefixlen' => '24',
-                  'netmask' => '255.255.255.0',
-                  'broadcast' => '10.0.0.255',
-                  'scope' => 'Global',
-                  'ip_scope' => 'RFC1918 PRIVATE',
+                  "family" => "inet",
+                  "prefixlen" => "24",
+                  "netmask" => "255.255.255.0",
+                  "broadcast" => "10.0.0.255",
+                  "scope" => "Global",
+                  "ip_scope" => "RFC1918 PRIVATE",
                 },
-                'fe80::11:1111:1111:1111' => {
-                  'family' => 'inet6',
-                  'prefixlen' => '64',
-                  'scope' => 'Link',
-                  'tags' => [],
-                  'ip_scope' => 'LINK LOCAL UNICAST',
+                "fe80::11:1111:1111:1111" => {
+                  "family" => "inet6",
+                  "prefixlen" => "64",
+                  "scope" => "Link",
+                  "tags" => [],
+                  "ip_scope" => "LINK LOCAL UNICAST",
                 },
               },
-              'state' => 'up',
-              'arp' => {
-                '10.0.0.1' => 'fe:ff:ff:ff:ff:ff',
+              "state" => "up",
+              "arp" => {
+                "10.0.0.1" => "fe:ff:ff:ff:ff:ff",
               },
-              'routes' => [
+              "routes" => [
                 {
-                  'destination' => 'default',
-                  'family' => 'inet',
-                  'via' => default_gateway,
+                  "destination" => "default",
+                  "family" => "inet",
+                  "via" => default_gateway,
                 },
                 {
-                  'destination' => '10.0.0.0/24',
-                  'family' => 'inet',
-                  'scope' => 'link',
-                  'proto' => 'kernel',
-                  'src' => ipaddress,
+                  "destination" => "10.0.0.0/24",
+                  "family" => "inet",
+                  "scope" => "link",
+                  "proto" => "kernel",
+                  "src" => ipaddress,
                 },
                 {
-                  'destination' => 'fe80::/64',
-                  'family' => 'inet6',
-                  'metric' => '256',
-                  'proto' => 'kernel',
+                  "destination" => "fe80::/64",
+                  "family" => "inet6",
+                  "metric" => "256",
+                  "proto" => "kernel",
                 },
               ],
-              'ring_params' => {},
+              "ring_params" => {},
             },
           },
-          'default_interface' => default_interface,
-          'default_gateway' => default_gateway,
+          "default_interface" => default_interface,
+          "default_gateway" => default_gateway,
         }
       end
 
       def ruby_bin
-        '/usr/local/bin/ruby'
+        "/usr/local/bin/ruby"
       end
 
       def ssh
         {
-          'host_dsa_public' => File.read(File.join(Fauxhai.root, 'lib', 'fauxhai', 'keys', 'id_dsa.pub')).strip,
-          'host_rsa_public' => File.read(File.join(Fauxhai.root, 'lib', 'fauxhai', 'keys', 'id_rsa.pub')).strip,
+          "host_dsa_public" => File.read(File.join(Fauxhai.root, "lib", "fauxhai", "keys", "id_dsa.pub")).strip,
+          "host_rsa_public" => File.read(File.join(Fauxhai.root, "lib", "fauxhai", "keys", "id_rsa.pub")).strip,
         }
       end
 
       def uptime
-        '30 days 15 hours 07 minutes 30 seconds'
+        "30 days 15 hours 07 minutes 30 seconds"
       end
 
       def uptime_seconds
@@ -227,27 +227,27 @@ module Fauxhai
 
       def cpu
         {
-          'real' => 1,
-          'total' => 1,
-          'cores' => 1,
+          "real" => 1,
+          "total" => 1,
+          "cores" => 1,
         }
       end
 
       def memory
         {
-          'total' => '1048576kB',
+          "total" => "1048576kB",
         }
       end
 
       def virtualization
         {
-          'systems' => {},
+          "systems" => {},
         }
       end
 
       def time
         {
-          'timezone' => 'GMT',
+          "timezone" => "GMT",
         }
       end
 
@@ -256,7 +256,7 @@ module Fauxhai
       #
       # @return [Array] - the key of whitelisted attributes
       def whitelist_attributes
-        %w(
+        %w{
           block_device
           chef_packages
           command
@@ -277,7 +277,7 @@ module Fauxhai
           root_group
           shard_seed
           shells
-        )
+        }
       end
     end
   end
