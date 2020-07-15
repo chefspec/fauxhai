@@ -1,23 +1,23 @@
 #!/usr/bin/env ruby
 
-lib = File.expand_path(File.dirname(__FILE__) + '../../lib')
+lib = File.expand_path(File.dirname(__FILE__) + "../../lib")
 $LOAD_PATH.unshift(lib) if File.directory?(lib) && !$LOAD_PATH.include?(lib)
 
 args = ARGV.dup
 ARGV.clear
 
-unless (args & ['-v', '--version']).empty?
-  require 'fauxhai/version'
+unless (args & ["-v", "--version"]).empty?
+  require "fauxhai/version"
   puts Fauxhai::VERSION
   exit(0)
 end
 
-unless (args & ['-h', '--help']).empty?
-  puts 'Usage: fauxhai'
-  puts '(There are no flags or options)'
+unless (args & ["-h", "--help"]).empty?
+  puts "Usage: fauxhai"
+  puts "(There are no flags or options)"
   exit(0)
 end
 
-require 'fauxhai'
-require 'fauxhai/runner'
+require "fauxhai"
+require "fauxhai/runner"
 Fauxhai::Runner.new(args)

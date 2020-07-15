@@ -1,6 +1,6 @@
-require 'digest/sha1'
-require 'json'
-require 'net/ssh'
+require "digest/sha1"
+require "json"
+require "net/ssh"
 
 module Fauxhai
   class Fetcher
@@ -11,11 +11,11 @@ module Fauxhai
         @data = cache
       else
         Net::SSH.start(host, user, @options) do |ssh|
-          @data = JSON.parse(ssh.exec!('ohai'))
+          @data = JSON.parse(ssh.exec!("ohai"))
         end
 
         # cache this data so we do not have to SSH again
-        File.open(cache_file, 'w+') { |f| f.write(@data.to_json) }
+        File.open(cache_file, "w+") { |f| f.write(@data.to_json) }
       end
 
       yield(@data) if block_given?
@@ -45,7 +45,7 @@ module Fauxhai
     end
 
     def cache_file
-      File.expand_path(File.join(Fauxhai.root, 'tmp', cache_key))
+      File.expand_path(File.join(Fauxhai.root, "tmp", cache_key))
     end
 
     def force_cache_miss?
@@ -67,13 +67,14 @@ module Fauxhai
 
     def host
       @host ||= begin
-        raise ArgumentError, ':host is a required option for Fauxhai.fetch' unless @options[:host]
+        raise ArgumentError, ":host is a required option for Fauxhai.fetch" unless @options[:host]
+
         @options.delete(:host)
       end
     end
 
     def user
-      @user ||= (@options.delete(:user) || ENV['USER'] || ENV['USERNAME']).chomp
+      @user ||= (@options.delete(:user) || ENV["USER"] || ENV["USERNAME"]).chomp
     end
   end
 end

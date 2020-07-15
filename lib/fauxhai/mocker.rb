@@ -1,14 +1,14 @@
-require 'json'
-require 'pathname'
-require 'open-uri'
+require "json"
+require "pathname"
+require "open-uri"
 
 module Fauxhai
   class Mocker
     # The base URL for the GitHub project (raw)
-    RAW_BASE = 'https://raw.githubusercontent.com/chefspec/fauxhai/master'.freeze
+    RAW_BASE = "https://raw.githubusercontent.com/chefspec/fauxhai/master".freeze
 
     # A message about where to find a list of platforms
-    PLATFORM_LIST_MESSAGE = 'A list of available platforms is available at https://github.com/chefspec/fauxhai/blob/master/PLATFORMS.md'.freeze
+    PLATFORM_LIST_MESSAGE = "A list of available platforms is available at https://github.com/chefspec/fauxhai/blob/master/PLATFORMS.md".freeze
 
     # Create a new Ohai Mock with fauxhai.
     #
@@ -58,7 +58,7 @@ module Fauxhai
             FileUtils.mkdir_p(path.dirname)
 
             begin
-              File.open(filepath, 'w') { |f| f.write(response_body) }
+              File.open(filepath, "w") { |f| f.write(response_body) }
             rescue Errno::EACCES # a pretty common problem in CI systems
               puts "Fetched '#{platform}/#{version}' from GitHub, but could not write to the local path: #{filepath}. Fix the local file permissions to avoid downloading this file every run."
             end
@@ -79,8 +79,8 @@ module Fauxhai
     # and eventually remove them while giving end users ample warning.
     def parse_and_validate(unparsed_data)
       parsed_data = JSON.parse(unparsed_data)
-      if parsed_data['deprecated']
-        STDERR.puts "WARNING: Fauxhai platform data for #{parsed_data['platform']} #{parsed_data['platform_version']} is deprecated and will be removed in the 9.0 release 3/2021. #{PLATFORM_LIST_MESSAGE}"
+      if parsed_data["deprecated"]
+        STDERR.puts "WARNING: Fauxhai platform data for #{parsed_data["platform"]} #{parsed_data["platform_version"]} is deprecated and will be removed in the 9.0 release 3/2021. #{PLATFORM_LIST_MESSAGE}"
       end
       parsed_data
     end
@@ -88,12 +88,12 @@ module Fauxhai
     def platform
       @options[:platform] ||= begin
                                 STDERR.puts "WARNING: you must specify a 'platform' and optionally a 'version' for your ChefSpec Runner and/or Fauxhai constructor, in the future omitting the platform will become a hard error. #{PLATFORM_LIST_MESSAGE}"
-                                'chefspec'
+                                "chefspec"
                               end
     end
 
     def platform_path
-      File.join(Fauxhai.root, 'lib', 'fauxhai', 'platforms', platform)
+      File.join(Fauxhai.root, "lib", "fauxhai", "platforms", platform)
     end
 
     def version
@@ -103,13 +103,13 @@ module Fauxhai
           @options[:version]
         else
           # Check if it's a prefix of an existing version.
-          versions = Dir["#{platform_path}/*.json"].map {|path| File.basename(path, '.json') }
-          unless @options[:version].to_s == ''
+          versions = Dir["#{platform_path}/*.json"].map { |path| File.basename(path, ".json") }
+          unless @options[:version].to_s == ""
             # If the provided version is nil or '', that means take anything,
             # otherwise run the prefix match with an extra \D to avoid the
             # case where "7.1" matches "7.10.0".
             prefix_re = /^#{Regexp.escape(@options[:version])}\D/
-            versions.select! {|ver| ver =~ prefix_re }
+            versions.select! { |ver| ver =~ prefix_re }
           end
 
           if versions.empty?
