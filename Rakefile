@@ -30,21 +30,17 @@ namespace :documentation do
     Dir.glob("./lib/fauxhai/platforms/**").sort.each do |platform_path|
       next if platform_path.split("/")[-1] == "chefspec"
 
-      versions = []
+      versions = {}
       Dir.glob(File.join(platform_path, "**.json")).sort.each do |version_path|
         # skip anything marked as deprecated
         data = JSON.parse(File.read(version_path))
-        unless data["deprecated"]
-          versions << version_path.split("/")[-1].chomp(".json")
-        end
+        versions[version_path.split("/")[-1].chomp(".json")] = data["deprecated"] ? :deprecated : :supported
       end
-      # make sure there are any non-deprecated platforms before writing out the header
-      unless versions.empty?
-        f.write "\n### #{platform_path.split("/")[-1]}\n\n"
-        versions = versions.sort_by { |v| Gem::Version.new(v) } unless platform_path.split("/")[-1] == "windows" # make sure we're sorted by version and not by strings
-        versions.each do |v|
-          f.write "- #{v}\n"
-        end
+
+      f.write "\n### #{platform_path.split("/")[-1]}\n\n"
+      versions = versions.sort_by { |v, _s| Gem::Version.new(v) } unless platform_path.split("/")[-1] == "windows" # make sure we're sorted by version and not by strings
+      versions.each do |ver, status|
+        f.write "- #{ver}#{" (deprecated)" if status == :deprecated}\n"
       end
     end
     f.close
