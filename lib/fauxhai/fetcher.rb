@@ -1,6 +1,6 @@
 require "digest/sha1"
-require "json"
-require "net/ssh"
+require "json" unless defined?(JSON)
+require "net/ssh" unless defined?(Net::SSH)
 
 module Fauxhai
   class Fetcher

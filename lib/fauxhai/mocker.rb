@@ -1,5 +1,5 @@
-require "json"
-require "pathname"
+require "json" unless defined?(JSON)
+require "pathname" unless defined?(Pathname)
 require "open-uri"
 
 module Fauxhai
