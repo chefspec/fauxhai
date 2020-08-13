@@ -43,7 +43,7 @@ namespace :documentation do
         f.write "\n### #{platform_path.split("/")[-1]}\n\n"
         versions = versions.sort_by { |v| Gem::Version.new(v) } unless platform_path.split("/")[-1] == "windows" # make sure we're sorted by version and not by strings
         versions.each do |v|
-          f.write "  - #{v}\n"
+          f.write "- #{v}\n"
         end
       end
     end
