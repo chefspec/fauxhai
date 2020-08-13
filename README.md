@@ -11,7 +11,7 @@ require 'chefspec'
 
 describe 'awesome_cookbook::default' do
   before do
-    Fauxhai.mock(platform: 'ubuntu', version: '16.04')
+    Fauxhai.mock(platform: 'ubuntu', version: '20.04')
   end
 
   it 'should install awesome' do
@@ -178,7 +178,7 @@ It's a common use case to test multiple version of the same operating system. He
 require 'chefspec'
 
 describe 'awesome_cookbook::default' do
-  ['14.04', '16.04'].each do |version|
+  ['18.04', '20.04'].each do |version|
     context "on Ubuntu #{version}" do
       before do
         Fauxhai.mock(platform: 'ubuntu', version: version)
