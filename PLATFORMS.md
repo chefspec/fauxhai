@@ -89,7 +89,7 @@ This file lists each platform known to Fauxhai and the available versions for ea
 ### oracle
 
 - 5.11 (deprecated)
-- 6.9
+- 6.9 (deprecated)
 - 6.10
 - 7.5
 - 7.6
