@@ -1,5 +1,31 @@
 # Fauxhai-ng Changelog
 
+## v8.3.0 (2020-08-13)
+
+### Newly Removed Platforms
+
+- Removed the end of life Debian 8.9/8.10 definitions. If you still need to test EOL Debian 8 you can use Debian 8.11 for now.
+
+### New Platforms
+
+- Debian 9.12
+
+### Updated Platforms
+
+- Ubuntu 16.04 has been updated to 16.04.7
+- Ubuntu 18.04 has been updated to 18.04.5
+- Ubuntu 20.04 has been updated to 20.04.1
+- CentOS 8 has been updated to 8.2
+
+### Newly Deprecated Platforms (removal in April 2021)
+
+- CentOS 6.9
+- Debian 8.11
+- Debian 9.8
+- Debian 9.9
+- openSUSE 15.0
+- Oracle Linux 6.9
+
 ## v8.2.0 (2020-05-17)
 
 ### New Platforms
