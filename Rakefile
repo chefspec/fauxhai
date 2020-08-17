@@ -41,7 +41,7 @@ task :update_json_list do
   # get a sorted list of platforms from files in the platforms dir
   # but skip any hidden files and skip the fake chefspec platform
   plats = Dir.children("./lib/fauxhai/platforms/").sort
-    .select { |v| !v.match?(/(^\.|chefspec)/) }
+    .grep_v(/(^\.|chefspec)/)
     .to_h { |v| [v, {}] }
 
   # add version, deprecated status, and file path to each platform
