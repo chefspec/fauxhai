@@ -53,7 +53,7 @@ task :update_json_list do
     ver_data = if plat == "windows"
                  ver_data.sort
                else
-                 ver_data.sort_by { |x| Gem::Version.new(x.split("/")[-1].chomp(".json")) }
+                 ver_data.sort_by { |x| Gem::Version.new(File.basename(x, ".json")) }
                end
 
     ver_data.each do |version_path|
