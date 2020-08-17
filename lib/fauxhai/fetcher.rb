@@ -1,6 +1,5 @@
 require "digest/sha1"
 require "json" unless defined?(JSON)
-require "net/ssh" unless defined?(Net::SSH)
 
 module Fauxhai
   class Fetcher
@@ -10,6 +9,7 @@ module Fauxhai
       if !force_cache_miss? && cached?
         @data = cache
       else
+        require "net/ssh" unless defined?(Net::SSH)
         Net::SSH.start(host, user, @options) do |ssh|
           @data = JSON.parse(ssh.exec!("ohai"))
         end

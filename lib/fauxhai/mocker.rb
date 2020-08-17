@@ -1,6 +1,5 @@
 require "json" unless defined?(JSON)
 require "pathname" unless defined?(Pathname)
-require "open-uri"
 
 module Fauxhai
   class Mocker
@@ -46,6 +45,7 @@ module Fauxhai
         elsif @options[:github_fetching]
           # Try loading from github (in case someone submitted a PR with a new file, but we haven't
           # yet updated the gem version). Cache the response locally so it's faster next time.
+          require "open-uri" unless defined?(OpenURI)
           begin
             response = URI.open("#{RAW_BASE}/lib/fauxhai/platforms/#{platform}/#{version}.json")
           rescue OpenURI::HTTPError
