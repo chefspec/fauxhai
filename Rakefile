@@ -60,7 +60,7 @@ task :update_json_list do
       data = JSON.parse(File.read(version_path))
       ver = File.basename(version_path, ".json")
       plats[plat][ver] = {}
-      plats[plat][ver]["deprecated"] = data["deprecated"] ? true : false
+      plats[plat][ver]["deprecated"] = !!data["deprecated"]
       plats[plat][ver]["path"] = version_path
     end
   end
