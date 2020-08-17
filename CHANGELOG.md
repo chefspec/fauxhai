@@ -1,5 +1,10 @@
 # Fauxhai-ng Changelog
 
+## v8.3.1 (2020-08-17)
+
+- Only require net/ssh if we're using the ssh functionality
+- Add a rake task to generate a platforms.json file that can be parses out to determine all platforms
+
 ## v8.3.0 (2020-08-13)
 
 ### Newly Removed Platforms
