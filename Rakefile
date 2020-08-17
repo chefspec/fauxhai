@@ -45,7 +45,7 @@ task :update_json_list do
     .to_h { |v| [v, {}] }
 
   # add version, deprecated status, and file path to each platform
-  plats.each_pair do |plat, _data|
+  plats.each_key do |plat|
     ver_data = Dir.glob(File.join("lib/fauxhai/platforms/", plat, "**.json"))
 
     # we can't properly sort windows versions
