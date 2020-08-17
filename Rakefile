@@ -65,9 +65,7 @@ task :update_json_list do
     end
   end
 
-  File.open("platforms.json", "w") do |f|
-    f.write(JSON.pretty_generate(plats))
-  end
+  File.write("platforms.json", JSON.pretty_generate(plats))
 end
 
 require "rspec/core/rake_task"
