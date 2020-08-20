@@ -1,4 +1,4 @@
-require "digest/sha1"
+require "digest/sha1" unless defined?(Digest::SHA1)
 require "json" unless defined?(JSON)
 
 module Fauxhai

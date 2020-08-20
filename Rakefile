@@ -1,6 +1,6 @@
 #!/usr/bin/env rake
 require "bundler/gem_tasks"
-require "json"
+require "json" unless defined?(JSON)
 
 task default: ["validate:json", "spec"]
 
