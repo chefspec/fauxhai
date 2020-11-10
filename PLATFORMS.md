@@ -85,6 +85,7 @@ This file lists each platform known to Fauxhai and the available versions for ea
 
 - 15.0 (deprecated)
 - 15.1
+- 15.2
 
 ### oracle
 
@@ -107,6 +108,7 @@ This file lists each platform known to Fauxhai and the available versions for ea
 - 7.5 (deprecated)
 - 7.6
 - 7.7
+- 7.8
 - 8
 
 ### smartos
