@@ -30,6 +30,7 @@ This file lists each platform known to Fauxhai and the available versions for ea
 - 7.5.1804 (deprecated)
 - 7.6.1810
 - 7.7.1908
+- 7.8.2003
 - 8
 
 ### clearos
