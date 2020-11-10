@@ -10,12 +10,12 @@
   },
   "chef_packages": {
     "chef": {
-      "chef_root": "/opt/chef/embedded/lib/ruby/gems/2.7.0/gems/chef-16.3.45/lib",
-      "version": "16.3.45"
+      "chef_root": "/opt/chef/embedded/lib/ruby/gems/2.7.0/gems/chef-16.6.14/lib",
+      "version": "16.6.14"
     },
     "ohai": {
-      "ohai_root": "/opt/chef/embedded/lib/ruby/gems/2.7.0/gems/ohai-16.3.2/lib/ohai",
-      "version": "16.3.2"
+      "ohai_root": "/opt/chef/embedded/lib/ruby/gems/2.7.0/gems/ohai-16.6.5/lib/ohai",
+      "version": "16.6.5"
     }
   },
   "command": {
@@ -187,8 +187,8 @@
           "Manufacturer": "Xen",
           "Product Name": "HVM domU",
           "SKU Number": "Not Specified",
-          "Serial Number": "ec24fcd9-2a8e-7c3d-f25f-3e1cc717fdab",
-          "UUID": "EC24FCD9-2A8E-7C3D-F25F-3E1CC717FDAB",
+          "Serial Number": "ec20e92d-6311-c71a-61b9-b757ff148b23",
+          "UUID": "EC20E92D-6311-C71A-61B9-B757FF148B23",
           "Version": "4.2.amazon",
           "Wake-up Type": "Power Switch",
           "application_identifier": "System Information",
@@ -199,9 +199,9 @@
       "family": "Not Specified",
       "manufacturer": "Xen",
       "product_name": "HVM domU",
-      "serial_number": "ec24fcd9-2a8e-7c3d-f25f-3e1cc717fdab",
+      "serial_number": "ec20e92d-6311-c71a-61b9-b757ff148b23",
       "sku_number": "Not Specified",
-      "uuid": "EC24FCD9-2A8E-7C3D-F25F-3E1CC717FDAB",
+      "uuid": "EC20E92D-6311-C71A-61B9-B757FF148B23",
       "version": "4.2.amazon",
       "wake_up_type": "Power Switch"
     }
@@ -214,12 +214,12 @@
       },
       "/dev/xvda1": {
         "fs_type": "ext4",
-        "inodes_available": "474202",
+        "inodes_available": "474546",
         "inodes_percent_used": "10%",
-        "inodes_used": "50086",
-        "kb_available": "6609076",
+        "inodes_used": "49742",
+        "kb_available": "6614400",
         "kb_size": "8190392",
-        "kb_used": "1145556",
+        "kb_used": "1140232",
         "mount_options": [
           "rw",
           "relatime",
@@ -242,19 +242,19 @@
           "nodev",
           "noexec",
           "relatime",
-          "devices"
+          "freezer"
         ],
         "mounts": [
           "/sys/fs/cgroup/systemd",
           "/sys/fs/cgroup/pids",
           "/sys/fs/cgroup/blkio",
-          "/sys/fs/cgroup/memory",
-          "/sys/fs/cgroup/freezer",
+          "/sys/fs/cgroup/devices",
+          "/sys/fs/cgroup/perf_event",
+          "/sys/fs/cgroup/cpuset",
           "/sys/fs/cgroup/cpu,cpuacct",
           "/sys/fs/cgroup/net_cls,net_prio",
-          "/sys/fs/cgroup/cpuset",
-          "/sys/fs/cgroup/perf_event",
-          "/sys/fs/cgroup/devices"
+          "/sys/fs/cgroup/memory",
+          "/sys/fs/cgroup/freezer"
         ]
       },
       "debugfs": {
@@ -359,13 +359,13 @@
         "mount_options": [
           "rw",
           "relatime",
-          "fd=35",
+          "fd=37",
           "pgrp=1",
           "timeout=0",
           "minproto=5",
           "maxproto=5",
           "direct",
-          "pipe_ino=9531"
+          "pipe_ino=9612"
         ],
         "mounts": [
           "/proc/sys/fs/binfmt_misc"
@@ -428,12 +428,12 @@
           "/dev/xvda1"
         ],
         "fs_type": "ext4",
-        "inodes_available": "474202",
+        "inodes_available": "474546",
         "inodes_percent_used": "10%",
-        "inodes_used": "50086",
-        "kb_available": "6609076",
+        "inodes_used": "49742",
+        "kb_available": "6614400",
         "kb_size": "8190392",
-        "kb_used": "1145556",
+        "kb_used": "1140232",
         "mount_options": [
           "rw",
           "relatime",
@@ -542,13 +542,13 @@
         "mount_options": [
           "rw",
           "relatime",
-          "fd=35",
+          "fd=37",
           "pgrp=1",
           "timeout=0",
           "minproto=5",
           "maxproto=5",
           "direct",
-          "pipe_ino=9531"
+          "pipe_ino=9612"
         ]
       },
       "/run": {
@@ -841,12 +841,12 @@
       "/dev/xvda1,/": {
         "device": "/dev/xvda1",
         "fs_type": "ext4",
-        "inodes_available": "474202",
+        "inodes_available": "474546",
         "inodes_percent_used": "10%",
-        "inodes_used": "50086",
-        "kb_available": "6609076",
+        "inodes_used": "49742",
+        "kb_available": "6614400",
         "kb_size": "8190392",
-        "kb_used": "1145556",
+        "kb_used": "1140232",
         "mount": "/",
         "mount_options": [
           "rw",
@@ -1089,13 +1089,13 @@
         "mount_options": [
           "rw",
           "relatime",
-          "fd=35",
+          "fd=37",
           "pgrp=1",
           "timeout=0",
           "minproto=5",
           "maxproto=5",
           "direct",
-          "pipe_ino=9531"
+          "pipe_ino=9612"
         ]
       },
       "tmpfs,/dev/shm": {
@@ -1424,7 +1424,18 @@
       "bin_dir": "/usr/local/bin",
       "gem_bin": "/usr/local/bin/gem",
       "gems_dir": "/usr/local/gems",
-      "ruby_bin": "/usr/local/bin/ruby"
+      "host": "x86_64-pc-linux-gnu",
+      "host_cpu": "x86_64",
+      "host_os": "linux-gnu",
+      "host_vendor": "pc",
+      "platform": "x86_64-linux",
+      "release_date": "2020-10-01",
+      "ruby_bin": "/usr/local/bin/ruby",
+      "target": "x86_64-pc-linux-gnu",
+      "target_cpu": "x86_64",
+      "target_os": "linux",
+      "target_vendor": "pc",
+      "version": "2.7.2"
     }
   },
   "lsb": {
@@ -1527,7 +1538,7 @@
       }
     }
   },
-  "ohai_time": 1597357615.8585901,
+  "ohai_time": 1604985312.5831692,
   "os": "linux",
   "os_version": "4.9.0-9-amd64",
   "packages": {
@@ -1593,7 +1604,7 @@
     },
     "chef": {
       "arch": "amd64",
-      "version": "16.3.45-1"
+      "version": "16.6.14-1"
     },
     "chrony": {
       "arch": "amd64",
@@ -2908,7 +2919,7 @@
   "platform_family": "debian",
   "platform_version": "9",
   "root_group": "root",
-  "shard_seed": 113780445,
+  "shard_seed": 163158122,
   "shells": [
     "/bin/sh",
     "/bin/dash",
