@@ -1,5 +1,22 @@
 # Fauxhai-ng Changelog
 
+## v8.4.0 (2020-11-09)
+
+### New Platforms
+
+- CentOS 7.8
+- Red Hat 7.8
+- Add openSUSE 15.2
+
+### Updated Platforms
+
+- Ubuntu 16.04 - 20.04
+- Debian 9 & 10 releases
+- Red Hat 7 and 8 releases
+- openSUSE 15.1
+- Fedora 31/32
+- Amazon releases
+
 ## v8.3.1 (2020-08-17)
 
 - Only require net/ssh if we're using the ssh functionality
