@@ -1,5 +1,15 @@
 # Fauxhai-ng Changelog
 
+## v8.5.0 (2020-11-17)
+
+### New Platforms
+
+- AIX 7.2
+
+### Updated Platforms
+
+- AIX 7.1: Updated the Ohai dump from Chef Infra Client 14 to 16.7, which updates Ruby plugin data, filesystem plugin data, and shard plugin data.
+
 ## v8.4.0 (2020-11-09)
 
 ### New Platforms
