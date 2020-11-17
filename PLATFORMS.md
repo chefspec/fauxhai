@@ -6,6 +6,7 @@ This file lists each platform known to Fauxhai and the available versions for ea
 
 - 6.1 (deprecated)
 - 7.1
+- 7.2
 
 ### amazon
 
