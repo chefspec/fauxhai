@@ -1,12 +1,12 @@
 {
   "chef_packages": {
     "chef": {
-      "chef_root": "/opt/chef/embedded/lib/ruby/gems/2.6.0/gems/chef-15.2.20/lib",
-      "version": "15.2.20"
+      "chef_root": "/opt/chef/embedded/lib/ruby/gems/2.7.0/gems/chef-16.7.47/lib",
+      "version": "16.7.47"
     },
     "ohai": {
-      "ohai_root": "/opt/chef/embedded/lib/ruby/gems/2.6.0/gems/ohai-15.2.5/lib/ohai",
-      "version": "15.2.5"
+      "ohai_root": "/opt/chef/embedded/lib/ruby/gems/2.7.0/gems/ohai-16.7.18/lib/ohai",
+      "version": "16.7.18"
     }
   },
   "command": {
@@ -67,88 +67,295 @@
   "dmi": {},
   "domain": "local",
   "filesystem": {
-    "Global:/": {
-      "fs_type": "jfs2",
-      "kb_available": "10169204",
-      "kb_size": "10485760",
-      "kb_used": "316556",
-      "mount": "/",
-      "mount_options": [
-        "rw",
-        "log=NULL"
-      ],
-      "percent_used": "4%"
+    "by_device": {
+      "Global:/": {
+        "fs_type": "jfs2",
+        "kb_available": "10059044",
+        "kb_size": "10485760",
+        "kb_used": "426716",
+        "mount_options": [
+          "rw",
+          "log=NULL"
+        ],
+        "mounts": [
+          "/"
+        ],
+        "percent_used": "5%"
+      },
+      "Global:/home": {
+        "fs_type": "jfs2",
+        "kb_available": "4635356",
+        "kb_size": "5242880",
+        "kb_used": "607524",
+        "mount_options": [
+          "rw",
+          "log=NULL"
+        ],
+        "mounts": [
+          "/home"
+        ],
+        "percent_used": "12%"
+      },
+      "Global:/opt": {
+        "fs_type": "jfs2",
+        "kb_available": "3677644",
+        "kb_size": "5242880",
+        "kb_used": "1565236",
+        "mount_options": [
+          "rw",
+          "log=NULL"
+        ],
+        "mounts": [
+          "/opt"
+        ],
+        "percent_used": "30%"
+      },
+      "Global:/proc": {
+        "fs_type": "namefs",
+        "kb_available": "-",
+        "kb_size": "-",
+        "kb_used": "-",
+        "mount_options": [
+          "rw"
+        ],
+        "mounts": [
+          "/proc"
+        ],
+        "percent_used": "-"
+      },
+      "Global:/tmp": {
+        "fs_type": "jfs2",
+        "kb_available": "5118596",
+        "kb_size": "5242880",
+        "kb_used": "124284",
+        "mount_options": [
+          "rw",
+          "log=NULL"
+        ],
+        "mounts": [
+          "/tmp"
+        ],
+        "percent_used": "3%"
+      },
+      "Global:/usr": {
+        "fs_type": "jfs2",
+        "kb_available": "432760",
+        "kb_size": "6291456",
+        "kb_used": "5858696",
+        "mount_options": [
+          "rw",
+          "log=NULL"
+        ],
+        "mounts": [
+          "/usr"
+        ],
+        "percent_used": "94%"
+      },
+      "Global:/var": {
+        "fs_type": "jfs2",
+        "kb_available": "10239008",
+        "kb_size": "10485760",
+        "kb_used": "246752",
+        "mount_options": [
+          "rw",
+          "log=NULL"
+        ],
+        "mounts": [
+          "/var"
+        ],
+        "percent_used": "3%"
+      }
     },
-    "Global:/home": {
-      "fs_type": "jfs2",
-      "kb_available": "5021352",
-      "kb_size": "5242880",
-      "kb_used": "221528",
-      "mount": "/home",
-      "mount_options": [
-        "rw",
-        "log=NULL"
-      ],
-      "percent_used": "5%"
+    "by_mountpoint": {
+      "/": {
+        "devices": [
+          "Global:/"
+        ],
+        "fs_type": "jfs2",
+        "kb_available": "10059044",
+        "kb_size": "10485760",
+        "kb_used": "426716",
+        "mount_options": [
+          "rw",
+          "log=NULL"
+        ],
+        "percent_used": "5%"
+      },
+      "/home": {
+        "devices": [
+          "Global:/home"
+        ],
+        "fs_type": "jfs2",
+        "kb_available": "4635356",
+        "kb_size": "5242880",
+        "kb_used": "607524",
+        "mount_options": [
+          "rw",
+          "log=NULL"
+        ],
+        "percent_used": "12%"
+      },
+      "/opt": {
+        "devices": [
+          "Global:/opt"
+        ],
+        "fs_type": "jfs2",
+        "kb_available": "3677644",
+        "kb_size": "5242880",
+        "kb_used": "1565236",
+        "mount_options": [
+          "rw",
+          "log=NULL"
+        ],
+        "percent_used": "30%"
+      },
+      "/proc": {
+        "devices": [
+          "Global:/proc"
+        ],
+        "fs_type": "namefs",
+        "kb_available": "-",
+        "kb_size": "-",
+        "kb_used": "-",
+        "mount_options": [
+          "rw"
+        ],
+        "percent_used": "-"
+      },
+      "/tmp": {
+        "devices": [
+          "Global:/tmp"
+        ],
+        "fs_type": "jfs2",
+        "kb_available": "5118596",
+        "kb_size": "5242880",
+        "kb_used": "124284",
+        "mount_options": [
+          "rw",
+          "log=NULL"
+        ],
+        "percent_used": "3%"
+      },
+      "/usr": {
+        "devices": [
+          "Global:/usr"
+        ],
+        "fs_type": "jfs2",
+        "kb_available": "432760",
+        "kb_size": "6291456",
+        "kb_used": "5858696",
+        "mount_options": [
+          "rw",
+          "log=NULL"
+        ],
+        "percent_used": "94%"
+      },
+      "/var": {
+        "devices": [
+          "Global:/var"
+        ],
+        "fs_type": "jfs2",
+        "kb_available": "10239008",
+        "kb_size": "10485760",
+        "kb_used": "246752",
+        "mount_options": [
+          "rw",
+          "log=NULL"
+        ],
+        "percent_used": "3%"
+      }
     },
-    "Global:/opt": {
-      "fs_type": "jfs2",
-      "kb_available": "3593120",
-      "kb_size": "5242880",
-      "kb_used": "1649760",
-      "mount": "/opt",
-      "mount_options": [
-        "rw",
-        "log=NULL"
-      ],
-      "percent_used": "32%"
-    },
-    "Global:/proc": {
-      "fs_type": "namefs",
-      "kb_available": "-",
-      "kb_size": "-",
-      "kb_used": "-",
-      "mount": "/proc",
-      "mount_options": [
-        "rw"
-      ],
-      "percent_used": "-"
-    },
-    "Global:/tmp": {
-      "fs_type": "jfs2",
-      "kb_available": "5122044",
-      "kb_size": "5242880",
-      "kb_used": "120836",
-      "mount": "/tmp",
-      "mount_options": [
-        "rw",
-        "log=NULL"
-      ],
-      "percent_used": "3%"
-    },
-    "Global:/usr": {
-      "fs_type": "jfs2",
-      "kb_available": "716096",
-      "kb_size": "6291456",
-      "kb_used": "5575360",
-      "mount": "/usr",
-      "mount_options": [
-        "rw",
-        "log=NULL"
-      ],
-      "percent_used": "89%"
-    },
-    "Global:/var": {
-      "fs_type": "jfs2",
-      "kb_available": "10262156",
-      "kb_size": "10485760",
-      "kb_used": "223604",
-      "mount": "/var",
-      "mount_options": [
-        "rw",
-        "log=NULL"
-      ],
-      "percent_used": "3%"
+    "by_pair": {
+      "Global:/,/": {
+        "device": "Global:/",
+        "fs_type": "jfs2",
+        "kb_available": "10059044",
+        "kb_size": "10485760",
+        "kb_used": "426716",
+        "mount": "/",
+        "mount_options": [
+          "rw",
+          "log=NULL"
+        ],
+        "percent_used": "5%"
+      },
+      "Global:/home,/home": {
+        "device": "Global:/home",
+        "fs_type": "jfs2",
+        "kb_available": "4635356",
+        "kb_size": "5242880",
+        "kb_used": "607524",
+        "mount": "/home",
+        "mount_options": [
+          "rw",
+          "log=NULL"
+        ],
+        "percent_used": "12%"
+      },
+      "Global:/opt,/opt": {
+        "device": "Global:/opt",
+        "fs_type": "jfs2",
+        "kb_available": "3677644",
+        "kb_size": "5242880",
+        "kb_used": "1565236",
+        "mount": "/opt",
+        "mount_options": [
+          "rw",
+          "log=NULL"
+        ],
+        "percent_used": "30%"
+      },
+      "Global:/proc,/proc": {
+        "device": "Global:/proc",
+        "fs_type": "namefs",
+        "kb_available": "-",
+        "kb_size": "-",
+        "kb_used": "-",
+        "mount": "/proc",
+        "mount_options": [
+          "rw"
+        ],
+        "percent_used": "-"
+      },
+      "Global:/tmp,/tmp": {
+        "device": "Global:/tmp",
+        "fs_type": "jfs2",
+        "kb_available": "5118596",
+        "kb_size": "5242880",
+        "kb_used": "124284",
+        "mount": "/tmp",
+        "mount_options": [
+          "rw",
+          "log=NULL"
+        ],
+        "percent_used": "3%"
+      },
+      "Global:/usr,/usr": {
+        "device": "Global:/usr",
+        "fs_type": "jfs2",
+        "kb_available": "432760",
+        "kb_size": "6291456",
+        "kb_used": "5858696",
+        "mount": "/usr",
+        "mount_options": [
+          "rw",
+          "log=NULL"
+        ],
+        "percent_used": "94%"
+      },
+      "Global:/var,/var": {
+        "device": "Global:/var",
+        "fs_type": "jfs2",
+        "kb_available": "10239008",
+        "kb_size": "10485760",
+        "kb_used": "246752",
+        "mount": "/var",
+        "mount_options": [
+          "rw",
+          "log=NULL"
+        ],
+        "percent_used": "3%"
+      }
     }
   },
   "fqdn": "fauxhai.local",
@@ -787,7 +994,18 @@
       "bin_dir": "/usr/local/bin",
       "gem_bin": "/usr/local/bin/gem",
       "gems_dir": "/usr/local/gems",
-      "ruby_bin": "/usr/local/bin/ruby"
+      "host": "powerpc-ibm-aix7.1.5.0",
+      "host_cpu": "powerpc",
+      "host_os": "aix7.1.5.0",
+      "host_vendor": "ibm",
+      "platform": "powerpc-aix7.1.5.0",
+      "release_date": "2020-10-01",
+      "ruby_bin": "/usr/local/bin/ruby",
+      "target": "powerpc-ibm-aix7.1.5.0",
+      "target_cpu": "powerpc",
+      "target_os": "aix7.1.5.0",
+      "target_vendor": "ibm",
+      "version": "2.7.2"
     }
   },
   "macaddress": "11:11:11:11:11:11",
@@ -884,7 +1102,7 @@
       }
     }
   },
-  "ohai_time": 1605643592.325401,
+  "ohai_time": 1605643694.444739,
   "os": "aix",
   "os_version": "7200-03-03-1913",
   "packages": {
@@ -1519,7 +1737,10 @@
       "version": "7.2.2.0"
     },
     "angry-omnibus-toolchain": {
-      "version": "2.0.5.1"
+      "version": "2.0.1.1"
+    },
+    "angrychef": {
+      "version": "15.0.293.1"
     },
     "artex.base.rte": {
       "version": "7.2.3.16"
@@ -2422,7 +2643,7 @@
       "version": "1.9.0.9"
     },
     "chef": {
-      "version": "15.2.20.1"
+      "version": "16.7.47.1"
     },
     "clic.rte.kernext": {
       "version": "4.10.0.2"
@@ -3976,7 +4197,7 @@
       "version": "7.2.3.16"
     },
     "omnibus-toolchain": {
-      "version": "2.0.1.1"
+      "version": "2.0.5.1"
     },
     "openpts.collector": {
       "version": "1.0.0.0"
@@ -4689,9 +4910,6 @@
     "printers.ti2115.rte": {
       "version": "7.2.0.0"
     },
-    "push-jobs-client": {
-      "version": "3.0.13.1"
-    },
     "radius.base.rte": {
       "version": "7.2.3.15"
     },
@@ -5042,7 +5260,7 @@
   "platform_family": "aix",
   "platform_version": "7.2",
   "root_group": "system",
-  "shard_seed": 245703084,
+  "shard_seed": 10748181,
   "shells": [
     "/bin/csh",
     "/bin/ksh",
