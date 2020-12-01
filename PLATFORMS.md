@@ -75,7 +75,7 @@ This file lists each platform known to Fauxhai and the available versions for ea
 
 ### mac_os_x
 
-- 10.13
+- 10.13 (deprecated)
 - 10.14
 - 10.15
 - 11.0
