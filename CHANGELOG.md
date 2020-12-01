@@ -1,5 +1,15 @@
 # Fauxhai-ng Changelog
 
+## v8.6.0 (2020-12-01)
+
+### New Platforms
+
+- macOS 11
+
+### Newly Deprecated Platforms (removal in April 2021)
+
+- macOS 10.13
+
 ## v8.5.0 (2020-11-17)
 
 ### New Platforms
