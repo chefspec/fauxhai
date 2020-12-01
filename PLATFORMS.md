@@ -78,6 +78,7 @@ This file lists each platform known to Fauxhai and the available versions for ea
 - 10.13
 - 10.14
 - 10.15
+- 11.0
 
 ### openbsd
 
