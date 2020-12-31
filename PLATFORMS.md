@@ -70,7 +70,7 @@ This file lists each platform known to Fauxhai and the available versions for ea
 
 ### linuxmint
 
-- 18.3
+- 18.3 (deprecated)
 - 19.0
 
 ### mac_os_x
