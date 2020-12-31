@@ -109,7 +109,7 @@ This file lists each platform known to Fauxhai and the available versions for ea
 - 6.10
 - 7.4 (deprecated)
 - 7.5 (deprecated)
-- 7.6
+- 7.6 (deprecated)
 - 7.7
 - 7.8
 - 8
