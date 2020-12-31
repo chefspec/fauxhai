@@ -1,6 +1,6 @@
 # Fauxhai-ng
 
-[![Build Status](https://travis-ci.org/chefspec/fauxhai.svg?branch=master)](https://travis-ci.org/chefspec/fauxhai) [![Gem Version](https://badge.fury.io/rb/fauxhai-ng.svg)](https://badge.fury.io/rb/fauxhai-ng)
+![CI](https://github.com/chefspec/fauxhai/workflows/CI/badge.svg) [![Gem Version](https://badge.fury.io/rb/fauxhai-ng.svg)](https://badge.fury.io/rb/fauxhai-ng)
 
 Note: fauxhai-ng is an updated version of the original fauxhai gem. The CLI and library namespaces have not changed, but you will want to update to use the new gem.
 
