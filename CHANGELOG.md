@@ -1,5 +1,15 @@
 # Fauxhai-ng Changelog
 
+## v8.7.0 (2020-12-31)
+
+### Newly Deprecated Platforms (removal in April 2021)
+
+- openSUSE 15.1
+- Redhat 7.6
+- CentOS 7.6
+- Linux Mint 18.3
+- All Amazon Linux 201X releases except 2018.03
+
 ## v8.6.0 (2020-12-01)
 
 ### New Platforms
