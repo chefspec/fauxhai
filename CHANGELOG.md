@@ -1,5 +1,9 @@
 # Fauxhai-ng Changelog
 
+## v8.7.1 (2021-04-03)
+
+- Add files to the gem package to help with Chef Workstation bundling
+
 ## v8.7.0 (2020-12-31)
 
 ### Newly Deprecated Platforms (removal in April 2021)
