@@ -1,5 +1,47 @@
 # Fauxhai-ng Changelog
 
+## v9.0.0 (2021-04-07)
+
+This release removes all previously deprecated Fauxhai definitions which have alerted during their use over the last year.  These platforms have been removed either due the platform reaching end of life status with the vendor or newer minor releases of the platform being available in Fauxhai. In general make sure to write ChefSpec tests that reference the major version (or no version at all) of the platform so that Fauxhai can automatically pick the latest version. Allowing Fauxhai to best chose the version of the minor or major platform release ensures you specs continue to run as new platforms are released and older Fauxhai data is removed.
+
+To automatically migrate ChefSpec tests to use newer platforms you use the [Chef/Deprecations/DeprecatedChefSpecPlatform](https://docs.chef.io/workstation/cookstyle/chef_deprecations_deprecatedchefspecplatform/) Cookstyle cop, which will autocorrect many specs:
+
+`cookstyle -a --only Chef/Deprecations/DeprecatedChefSpecPlatform`
+
+### Platforms Removed
+
+- AIX 6.1
+- Amazon Linux 2015.03
+- Amazon Linux 2015.09
+- Amazon Linux 2016.03
+- Amazon Linux 2016.09
+- Amazon Linux 2017.03
+- Amazon Linux 2017.09
+- CentOS 5.11
+- CentOS 6.9
+- CentOS 7.5.1804
+- CentOS 7.6.1810
+- Debian 8.11
+- Debian 9.8
+- Debian 9.9
+- Fedora 29
+- Fedora 30
+- FreeBSD  11.1
+- Linux Mint 18.3
+- macOS 10.13
+- OpenSUSE 15.0
+- OpenSUSE 15.1
+- Oracle Linux 5.11
+- Oracle Linux 6.9
+- Red Hat Linux 5.11
+- Red Hat Linux 6.9
+- Red Hat Linux 7.4
+- Red Hat Linux 7.5
+- Red Hat Linux 7.6
+- Suse Enterprise Linux 12.3
+- Ubuntu 14.04
+- Windows 20008 R2
+
 ## v8.7.1 (2021-04-03)
 
 - Add files to the gem package to help with Chef Workstation bundling
