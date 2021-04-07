@@ -43,6 +43,7 @@ To automatically migrate ChefSpec tests to use newer platforms you use the [Chef
 - Suse Enterprise Linux 12.3
 - Ubuntu 14.04
 - Windows 20008 R2
+
 ## v8.7.1 (2021-04-03)
 
 - Add files to the gem package to help with Chef Workstation bundling
