@@ -1,5 +1,30 @@
 # Fauxhai-ng Changelog
 
+## 9.1.0 (2021-11-01)
+
+### Updated Platforms
+
+- Debian 10 updated to 10.11
+- Debian 11 regenerated on AWS using Debian 11.1
+- Suse 15 updated from 15.0 to 15.1
+- Amazon 2 updated to tha latest release
+- Ubuntu 18.04 / 20.04 updated to the latest releases
+- Redhat 8 updated from 8.2 to 8.4
+
+### New Platforms
+
+- Debian 9.13
+- Redhat 7.9
+
+### Newly Deprecated Platforms (removal in April 2022)
+
+- Redhat 7.7
+- CentOS 7.7
+- Debian 9.11
+- Fedora 31
+- Oracle 7.5
+- Amazon 2018.03
+
 ## v9.0.1 (2021-11-01)
 
 - Resolved a Ruby error when attempting to generate new Fauxhai data on a host
