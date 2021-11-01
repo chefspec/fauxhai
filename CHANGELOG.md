@@ -4,6 +4,7 @@
 
 - Resolved a Ruby error when attempting to generate new Fauxhai data on a host
 - Deprecated the SmartOS platform data dump
+- Add Debian 11
 
 ## v9.0.0 (2021-04-07)
 
