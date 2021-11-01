@@ -19,7 +19,7 @@ This file lists each platform known to Fauxhai and the available versions for ea
 ### centos
 
 - 6.10
-- 7.7.1908
+- 7.7.1908 (deprecated)
 - 7.8.2003
 - 8
 
