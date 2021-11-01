@@ -73,7 +73,7 @@ This file lists each platform known to Fauxhai and the available versions for ea
 ### oracle
 
 - 6.10
-- 7.5
+- 7.5 (deprecated)
 - 7.6
 
 ### raspbian
