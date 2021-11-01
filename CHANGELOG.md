@@ -1,5 +1,10 @@
 # Fauxhai-ng Changelog
 
+## v9.0.1 (2021-11-01)
+
+- Resolved a Ruby error when attempting to generate new Fauxhai data on a host
+- Deprecated the SmartOS platform data dump
+
 ## v9.0.0 (2021-04-07)
 
 This release removes all previously deprecated Fauxhai definitions which have alerted during their use over the last year.  These platforms have been removed either due to the platform reaching end-of-life status with the vendor or newer minor releases of the platform being available in Fauxhai.
