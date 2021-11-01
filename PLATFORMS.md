@@ -29,7 +29,7 @@ This file lists each platform known to Fauxhai and the available versions for ea
 
 ### debian
 
-- 9.11
+- 9.11 (deprecated)
 - 9.12
 - 10
 - 11
