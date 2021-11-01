@@ -38,6 +38,7 @@ module Fauxhai
         "time" => time
       )
 
+      require "json" unless defined?(JSON)
       puts JSON.pretty_generate(result.sort.to_h)
     end
   end
