@@ -89,7 +89,7 @@ This file lists each platform known to Fauxhai and the available versions for ea
 
 ### smartos
 
-- 5.11
+- 5.11 (deprecated)
 
 ### solaris2
 
