@@ -85,6 +85,7 @@ This file lists each platform known to Fauxhai and the available versions for ea
 - 6.10
 - 7.7 (deprecated)
 - 7.8
+- 7.9
 - 8
 
 ### smartos
