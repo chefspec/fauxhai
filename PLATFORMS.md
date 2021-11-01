@@ -40,7 +40,7 @@ This file lists each platform known to Fauxhai and the available versions for ea
 
 ### fedora
 
-- 31
+- 31 (deprecated)
 - 32
 
 ### freebsd
