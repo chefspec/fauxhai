@@ -89,6 +89,10 @@ This file lists each platform known to Fauxhai and the available versions for ea
 - 7.9
 - 8
 
+### rocky
+
+- 8
+
 ### smartos
 
 - 5.11 (deprecated)
