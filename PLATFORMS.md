@@ -7,6 +7,10 @@ This file lists each platform known to Fauxhai and the available versions for ea
 - 7.1
 - 7.2
 
+### almalinux
+
+- 8
+
 ### amazon
 
 - 2
