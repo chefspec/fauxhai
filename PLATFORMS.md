@@ -65,7 +65,9 @@ This file lists each platform known to Fauxhai and the available versions for ea
 
 - 10.14
 - 10.15
-- 11.0
+- 11.0 (deprecated)
+- 11
+- 12
 
 ### openbsd
 
