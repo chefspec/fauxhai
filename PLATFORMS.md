@@ -27,6 +27,10 @@ This file lists each platform known to Fauxhai and the available versions for ea
 - 7.8.2003
 - 8
 
+### centos-stream
+
+- 8
+
 ### clearos
 
 - 7.4
