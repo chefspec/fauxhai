@@ -1,5 +1,11 @@
 # Fauxhai-ng Changelog
 
+## 9.3.0 (2022-01-26)
+
+- Add macOS 12
+- Deprecate macOS 11.0 with a new macOS 11 taking it's place
+- Deprecate FreeBSD 11.2 since this is EOL now
+
 ## 9.2.0 (2022-01-26)
 
 - Add Alma Linux 8
