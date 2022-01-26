@@ -1,5 +1,10 @@
 # Fauxhai-ng Changelog
 
+## 9.2.0 (2022-01-26)
+
+- Add Alma Linux 8
+- Add Rocky Linux 8
+
 ## 9.1.0 (2021-11-01)
 
 ### Updated Platforms
