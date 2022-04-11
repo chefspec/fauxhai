@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/chefspec/fauxhai"
   spec.license       = "MIT"
 
-  spec.required_ruby_version = ">= 2.3"
+  spec.required_ruby_version = ">= 2.7"
 
   spec.files         = %w{LICENSE Gemfile fauxhai-ng.gemspec} + Dir.glob("{lib,bin}/**/*", File::FNM_DOTMATCH).reject { |f| File.directory?(f) }
   spec.executables   = "fauxhai"
