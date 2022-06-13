@@ -1,14 +1,15 @@
-<!-- latest_release 9.3.1 -->
-## [v9.3.1](https://github.com/chef/fauxhai/tree/v9.3.1) (2022-06-13)
+<!-- latest_release 9.3.2 -->
+## [v9.3.2](https://github.com/chef/fauxhai/tree/v9.3.2) (2022-06-13)
 
 #### Merged Pull Requests
-- Mimaslanka/dummy [#6](https://github.com/chef/fauxhai/pull/6) ([mimaslanka](https://github.com/mimaslanka))
+- Force action [#7](https://github.com/chef/fauxhai/pull/7) ([mimaslanka](https://github.com/mimaslanka))
 <!-- latest_release -->
 
 <!-- release_rollup -->
 ### Changes not yet released to rubygems.org
 
 #### Merged Pull Requests
+- Force action [#7](https://github.com/chef/fauxhai/pull/7) ([mimaslanka](https://github.com/mimaslanka)) <!-- 9.3.2 -->
 - Mimaslanka/dummy [#6](https://github.com/chef/fauxhai/pull/6) ([mimaslanka](https://github.com/mimaslanka)) <!-- 9.3.1 -->
 <!-- release_rollup -->
 
