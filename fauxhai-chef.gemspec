@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
 
   spec.required_ruby_version = ">= 2.7"
 
-  spec.files         = %w{LICENSE Gemfile fauxhai-ng.gemspec} + Dir.glob("{lib,bin}/**/*", File::FNM_DOTMATCH).reject { |f| File.directory?(f) }
+  spec.files         = %w{LICENSE Gemfile fauxhai-chef.gemspec} + Dir.glob("{lib,bin}/**/*", File::FNM_DOTMATCH).reject { |f| File.directory?(f) }
   spec.executables   = "fauxhai"
   spec.require_paths = ["lib"]
 
