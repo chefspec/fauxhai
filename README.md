@@ -195,4 +195,4 @@ end
 
 ## Contributing
 
-See [CONTRIBUTING.md](https://github.com/chefspec/fauxhai/blob/master/CONTRIBUTING.md).
+See [CONTRIBUTING.md](https://github.com/chef/fauxhai/blob/master/CONTRIBUTING.md).
