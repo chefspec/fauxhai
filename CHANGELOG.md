@@ -1,25 +1,22 @@
-<!-- latest_release 9.3.2 -->
-## [v9.3.2](https://github.com/chef/fauxhai/tree/v9.3.2) (2022-06-13)
-
-#### Merged Pull Requests
-- Force action [#7](https://github.com/chef/fauxhai/pull/7) ([mimaslanka](https://github.com/mimaslanka))
+<!-- latest_release -->
 <!-- latest_release -->
 
 <!-- release_rollup -->
-### Changes not yet released to rubygems.org
-
-#### Merged Pull Requests
-- Force action [#7](https://github.com/chef/fauxhai/pull/7) ([mimaslanka](https://github.com/mimaslanka)) <!-- 9.3.2 -->
-- Mimaslanka/dummy [#6](https://github.com/chef/fauxhai/pull/6) ([mimaslanka](https://github.com/mimaslanka)) <!-- 9.3.1 -->
 <!-- release_rollup -->
 
 <!-- latest_stable_release -->
+## [v9.3.2](https://github.com/chef/fauxhai/tree/v9.3.2) (2022-06-13)
+
+#### Merged Pull Requests
+- Mimaslanka/dummy [#6](https://github.com/chef/fauxhai/pull/6) ([mimaslanka](https://github.com/mimaslanka))
+- Force action [#7](https://github.com/chef/fauxhai/pull/7) ([mimaslanka](https://github.com/mimaslanka))
+<!-- latest_stable_release -->
+
 ## 9.3.0 (2022-01-26)
 
 - Add macOS 12
 - Deprecate macOS 11.0 with a new macOS 11 taking it's place
 - Deprecate FreeBSD 11.2 since this is EOL now
-<!-- latest_stable_release -->
 
 ## 9.2.0 (2022-01-26)
 
