@@ -1,14 +1,15 @@
-<!-- latest_release 9.3.3 -->
-## [v9.3.3](https://github.com/chef/fauxhai/tree/v9.3.3) (2023-02-03)
+<!-- latest_release 9.3.4 -->
+## [v9.3.4](https://github.com/chef/fauxhai/tree/v9.3.4) (2023-02-03)
 
 #### Merged Pull Requests
-- Add AlmaLinux 9 data [#8](https://github.com/chef/fauxhai/pull/8) ([vkarve-chef](https://github.com/vkarve-chef))
+- CentOS Stream 8 &amp; 9 data [#10](https://github.com/chef/fauxhai/pull/10) ([ramereth](https://github.com/ramereth))
 <!-- latest_release -->
 
 <!-- release_rollup since=9.3.2 -->
 ### Changes not yet released to rubygems.org
 
 #### Merged Pull Requests
+- CentOS Stream 8 &amp; 9 data [#10](https://github.com/chef/fauxhai/pull/10) ([ramereth](https://github.com/ramereth)) <!-- 9.3.4 -->
 - Add AlmaLinux 9 data [#8](https://github.com/chef/fauxhai/pull/8) ([vkarve-chef](https://github.com/vkarve-chef)) <!-- 9.3.3 -->
 <!-- release_rollup -->
 
