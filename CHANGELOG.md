@@ -1,26 +1,23 @@
-<!-- latest_release 9.3.5 -->
-## [v9.3.5](https://github.com/chef/fauxhai/tree/v9.3.5) (2023-02-03)
-
-#### Merged Pull Requests
-- Add Oracle 7 / 8 / 9 [#12](https://github.com/chef/fauxhai/pull/12) ([davidjkling](https://github.com/davidjkling))
+<!-- latest_release -->
 <!-- latest_release -->
 
-<!-- release_rollup since=9.3.2 -->
-### Changes not yet released to rubygems.org
-
-#### Merged Pull Requests
-- Add Oracle 7 / 8 / 9 [#12](https://github.com/chef/fauxhai/pull/12) ([davidjkling](https://github.com/davidjkling)) <!-- 9.3.5 -->
-- CentOS Stream 8 &amp; 9 data [#10](https://github.com/chef/fauxhai/pull/10) ([ramereth](https://github.com/ramereth)) <!-- 9.3.4 -->
-- Add AlmaLinux 9 data [#8](https://github.com/chef/fauxhai/pull/8) ([vkarve-chef](https://github.com/vkarve-chef)) <!-- 9.3.3 -->
+<!-- release_rollup -->
 <!-- release_rollup -->
 
 <!-- latest_stable_release -->
+## [v9.3.5](https://github.com/chef/fauxhai/tree/v9.3.5) (2023-02-03)
+
+#### Merged Pull Requests
+- Add AlmaLinux 9 data [#8](https://github.com/chef/fauxhai/pull/8) ([vkarve-chef](https://github.com/vkarve-chef))
+- CentOS Stream 8 &amp; 9 data [#10](https://github.com/chef/fauxhai/pull/10) ([ramereth](https://github.com/ramereth))
+- Add Oracle 7 / 8 / 9 [#12](https://github.com/chef/fauxhai/pull/12) ([davidjkling](https://github.com/davidjkling))
+<!-- latest_stable_release -->
+
 ## [v9.3.2](https://github.com/chef/fauxhai/tree/v9.3.2) (2022-06-13)
 
 #### Merged Pull Requests
 - Mimaslanka/dummy [#6](https://github.com/chef/fauxhai/pull/6) ([mimaslanka](https://github.com/mimaslanka))
 - Force action [#7](https://github.com/chef/fauxhai/pull/7) ([mimaslanka](https://github.com/mimaslanka))
-<!-- latest_stable_release -->
 
 ## 9.3.0 (2022-01-26)
 
