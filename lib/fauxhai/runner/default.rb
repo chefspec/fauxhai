@@ -268,6 +268,7 @@ module Fauxhai
           lsb
           ohai_time
           os
+          os_release
           os_version
           packages
           platform
