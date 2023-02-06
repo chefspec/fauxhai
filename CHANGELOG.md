@@ -1,7 +1,15 @@
-<!-- latest_release -->
+<!-- latest_release 9.3.6 -->
+## [v9.3.6](https://github.com/chef/fauxhai/tree/v9.3.6) (2023-02-06)
+
+#### Merged Pull Requests
+- Add Rocky Linux 9 data [#9](https://github.com/chef/fauxhai/pull/9) ([vkarve-chef](https://github.com/vkarve-chef))
 <!-- latest_release -->
 
-<!-- release_rollup -->
+<!-- release_rollup since=9.3.5 -->
+### Changes not yet released to rubygems.org
+
+#### Merged Pull Requests
+- Add Rocky Linux 9 data [#9](https://github.com/chef/fauxhai/pull/9) ([vkarve-chef](https://github.com/vkarve-chef)) <!-- 9.3.6 -->
 <!-- release_rollup -->
 
 <!-- latest_stable_release -->
