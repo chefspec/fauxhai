@@ -1,14 +1,15 @@
-<!-- latest_release 9.3.6 -->
-## [v9.3.6](https://github.com/chef/fauxhai/tree/v9.3.6) (2023-02-06)
+<!-- latest_release 9.3.7 -->
+## [v9.3.7](https://github.com/chef/fauxhai/tree/v9.3.7) (2023-03-31)
 
 #### Merged Pull Requests
-- Add Rocky Linux 9 data [#9](https://github.com/chef/fauxhai/pull/9) ([vkarve-chef](https://github.com/vkarve-chef))
+- Added the SonarQube configuration [#13](https://github.com/chef/fauxhai/pull/13) ([nikhil2611](https://github.com/nikhil2611))
 <!-- latest_release -->
 
 <!-- release_rollup since=9.3.5 -->
 ### Changes not yet released to rubygems.org
 
 #### Merged Pull Requests
+- Added the SonarQube configuration [#13](https://github.com/chef/fauxhai/pull/13) ([nikhil2611](https://github.com/nikhil2611)) <!-- 9.3.7 -->
 - Add Rocky Linux 9 data [#9](https://github.com/chef/fauxhai/pull/9) ([vkarve-chef](https://github.com/vkarve-chef)) <!-- 9.3.6 -->
 <!-- release_rollup -->
 
