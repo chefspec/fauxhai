@@ -1,27 +1,24 @@
-<!-- latest_release 9.3.8 -->
-## [v9.3.8](https://github.com/chef/fauxhai/tree/v9.3.8) (2023-05-05)
-
-#### Merged Pull Requests
-- Update fetcher to pull from correct repository [#14](https://github.com/chef/fauxhai/pull/14) ([ramereth](https://github.com/ramereth))
+<!-- latest_release -->
 <!-- latest_release -->
 
-<!-- release_rollup since=9.3.5 -->
-### Changes not yet released to rubygems.org
-
-#### Merged Pull Requests
-- Update fetcher to pull from correct repository [#14](https://github.com/chef/fauxhai/pull/14) ([ramereth](https://github.com/ramereth)) <!-- 9.3.8 -->
-- Added the SonarQube configuration [#13](https://github.com/chef/fauxhai/pull/13) ([nikhil2611](https://github.com/nikhil2611)) <!-- 9.3.7 -->
-- Add Rocky Linux 9 data [#9](https://github.com/chef/fauxhai/pull/9) ([vkarve-chef](https://github.com/vkarve-chef)) <!-- 9.3.6 -->
+<!-- release_rollup -->
 <!-- release_rollup -->
 
 <!-- latest_stable_release -->
+## [v9.3.8](https://github.com/chef/fauxhai/tree/v9.3.8) (2023-05-05)
+
+#### Merged Pull Requests
+- Add Rocky Linux 9 data [#9](https://github.com/chef/fauxhai/pull/9) ([vkarve-chef](https://github.com/vkarve-chef))
+- Added the SonarQube configuration [#13](https://github.com/chef/fauxhai/pull/13) ([nikhil2611](https://github.com/nikhil2611))
+- Update fetcher to pull from correct repository [#14](https://github.com/chef/fauxhai/pull/14) ([ramereth](https://github.com/ramereth))
+<!-- latest_stable_release -->
+
 ## [v9.3.5](https://github.com/chef/fauxhai/tree/v9.3.5) (2023-02-03)
 
 #### Merged Pull Requests
 - Add AlmaLinux 9 data [#8](https://github.com/chef/fauxhai/pull/8) ([vkarve-chef](https://github.com/vkarve-chef))
 - CentOS Stream 8 &amp; 9 data [#10](https://github.com/chef/fauxhai/pull/10) ([ramereth](https://github.com/ramereth))
 - Add Oracle 7 / 8 / 9 [#12](https://github.com/chef/fauxhai/pull/12) ([davidjkling](https://github.com/davidjkling))
-<!-- latest_stable_release -->
 
 ## [v9.3.2](https://github.com/chef/fauxhai/tree/v9.3.2) (2022-06-13)
 
