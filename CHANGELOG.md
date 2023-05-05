@@ -378,7 +378,7 @@ Note: Going forward we won't be shipping the point releases for each distro. Ins
   - Solaris 5.10
   - Windows 7
 
-For a list of currently support platform releases see https://github.com/chefspec/fauxhai/blob/master/PLATFORMS.md
+For a list of currently support platform releases see https://github.com/chef/fauxhai/blob/master/PLATFORMS.md
 
 ## v6.11.0 (2018-01-30)
 
