@@ -126,6 +126,7 @@ This file lists each platform known to Fauxhai and the available versions for ea
 - 16.04
 - 18.04
 - 20.04
+- 22.04
 
 ### windows
 
