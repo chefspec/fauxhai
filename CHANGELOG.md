@@ -1,7 +1,15 @@
-<!-- latest_release -->
+<!-- latest_release 9.3.9 -->
+## [v9.3.9](https://github.com/chef/fauxhai/tree/v9.3.9) (2023-07-27)
+
+#### Merged Pull Requests
+- Add Debian 12 support [#17](https://github.com/chef/fauxhai/pull/17) ([Justin-Fernbaugh](https://github.com/Justin-Fernbaugh))
 <!-- latest_release -->
 
-<!-- release_rollup -->
+<!-- release_rollup since=9.3.8 -->
+### Changes not yet released to rubygems.org
+
+#### Merged Pull Requests
+- Add Debian 12 support [#17](https://github.com/chef/fauxhai/pull/17) ([Justin-Fernbaugh](https://github.com/Justin-Fernbaugh)) <!-- 9.3.9 -->
 <!-- release_rollup -->
 
 <!-- latest_stable_release -->
