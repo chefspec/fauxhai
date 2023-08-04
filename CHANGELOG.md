@@ -1,7 +1,16 @@
-<!-- latest_release -->
+<!-- latest_release 9.3.10 -->
+## [v9.3.10](https://github.com/chef/fauxhai/tree/v9.3.10) (2023-08-04)
+
+#### Merged Pull Requests
+- Add .buildkite folder to make pipeline_protection happy [#18](https://github.com/chef/fauxhai/pull/18) ([tpowell-progress](https://github.com/tpowell-progress))
 <!-- latest_release -->
 
-<!-- release_rollup -->
+<!-- release_rollup since=9.3.8 -->
+### Changes not yet released to rubygems.org
+
+#### Merged Pull Requests
+- Add .buildkite folder to make pipeline_protection happy [#18](https://github.com/chef/fauxhai/pull/18) ([tpowell-progress](https://github.com/tpowell-progress)) <!-- 9.3.10 -->
+- Add Debian 12 support [#17](https://github.com/chef/fauxhai/pull/17) ([Justin-Fernbaugh](https://github.com/Justin-Fernbaugh)) <!-- 9.3.9 -->
 <!-- release_rollup -->
 
 <!-- latest_stable_release -->
