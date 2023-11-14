@@ -49,7 +49,8 @@ Fauxhai is community-maintained and updated. Aside from the initial files, all o
 
   ```
   bundle console
-  Fauxhai.mock(platform: '[os]', version: '[version]') # e.g. Fauxhai.mock(platform: 'ubuntu', version: '12.04')
+  requiure "fauxhai"
+  Fauxhai.mock(platform: '[os]', version: '[version]') # e.g. Fauxhai.mock(platform: 'ubuntu', version: '12.04').data
   ```
 
   As long as that does not throw an error, you're good to go!
