@@ -10,6 +10,7 @@ This file lists each platform known to Fauxhai and the available versions for ea
 ### almalinux
 
 - 8
+- 9
 
 ### amazon
 
@@ -107,6 +108,7 @@ This file lists each platform known to Fauxhai and the available versions for ea
 ### rocky
 
 - 8
+- 9
 
 ### smartos
 
@@ -136,4 +138,5 @@ This file lists each platform known to Fauxhai and the available versions for ea
 - 2012R2
 - 2016
 - 2019
+- 2022
 - 8.1

@@ -1,6 +1,6 @@
 # Contributing to Fauxhai
 
-Fauxhai is community-maintained and updated. Aside from the initial files, all of the ohai system mocks have been created by the community. If you have a system that you think would benefit the community, here's how you get it into [fauxhai](https://github.com/chef/fauxhai):
+Fauxhai is community-maintained and updated. Aside from the initial files, all of the ohai system mocks have been created by the community. If you have a system that you think would benefit the community, here's how you get it into [fauxhai](https://github.com/chefspec/fauxhai):
 
 1. Build a system to your liking (on a virtual machine, for example)
 2. Install chef, ohai, and fauxhai
@@ -49,7 +49,8 @@ Fauxhai is community-maintained and updated. Aside from the initial files, all o
 
   ```
   bundle console
-  Fauxhai.mock(platform: '[os]', version: '[version]') # e.g. Fauxhai.mock(platform: 'ubuntu', version: '12.04')
+  requiure "fauxhai"
+  Fauxhai.mock(platform: '[os]', version: '[version]') # e.g. Fauxhai.mock(platform: 'ubuntu', version: '12.04').data
   ```
 
   As long as that does not throw an error, you're good to go!
