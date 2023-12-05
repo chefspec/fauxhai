@@ -139,4 +139,5 @@ This file lists each platform known to Fauxhai and the available versions for ea
 - 2012R2
 - 2016
 - 2019
+- 2022
 - 8.1
