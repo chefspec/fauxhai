@@ -1,14 +1,15 @@
-<!-- latest_release 9.3.12 -->
-## [v9.3.12](https://github.com/chef/fauxhai/tree/v9.3.12) (2023-11-21)
+<!-- latest_release 9.3.13 -->
+## [v9.3.13](https://github.com/chef/fauxhai/tree/v9.3.13) (2023-12-05)
 
 #### Merged Pull Requests
-- Added RedHat 9 [#21](https://github.com/chef/fauxhai/pull/21) ([jjperry](https://github.com/jjperry))
+- Added WIndows 2022 and Updated CONTRIBUTING.md [#24](https://github.com/chef/fauxhai/pull/24) ([jjperry](https://github.com/jjperry))
 <!-- latest_release -->
 
 <!-- release_rollup since=9.3.8 -->
 ### Changes not yet released to rubygems.org
 
 #### Merged Pull Requests
+- Added WIndows 2022 and Updated CONTRIBUTING.md [#24](https://github.com/chef/fauxhai/pull/24) ([jjperry](https://github.com/jjperry)) <!-- 9.3.13 -->
 - Added RedHat 9 [#21](https://github.com/chef/fauxhai/pull/21) ([jjperry](https://github.com/jjperry)) <!-- 9.3.12 -->
 - Add Ubuntu 22.04 (jammy) support [#16](https://github.com/chef/fauxhai/pull/16) ([dtseiler](https://github.com/dtseiler)) <!-- 9.3.11 -->
 - Add .buildkite folder to make pipeline_protection happy [#18](https://github.com/chef/fauxhai/pull/18) ([tpowell-progress](https://github.com/tpowell-progress)) <!-- 9.3.10 -->
