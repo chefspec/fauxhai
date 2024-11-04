@@ -24,5 +24,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "ohai", ">= 13.0"
   spec.add_development_dependency "rake"
   spec.add_development_dependency "rspec", "~> 3.7"
-  spec.add_development_dependency "rspec-its", "~> 1.2"
+  spec.add_development_dependency "rspec-its", "~> 2.0"
 end
