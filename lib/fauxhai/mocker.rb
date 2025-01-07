@@ -4,10 +4,10 @@ require "pathname" unless defined?(Pathname)
 module Fauxhai
   class Mocker
     # The base URL for the GitHub project (raw)
-    RAW_BASE = "https://raw.githubusercontent.com/chefspec/fauxhai/master".freeze
+    RAW_BASE = "https://raw.githubusercontent.com/chef/fauxhai/main".freeze
 
     # A message about where to find a list of platforms
-    PLATFORM_LIST_MESSAGE = "A list of available platforms is available at https://github.com/chefspec/fauxhai/blob/master/PLATFORMS.md".freeze
+    PLATFORM_LIST_MESSAGE = "A list of available platforms is available at https://github.com/chef/fauxhai/blob/main/PLATFORMS.md".freeze
 
     # Create a new Ohai Mock with fauxhai.
     #
