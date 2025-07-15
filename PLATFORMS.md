@@ -10,11 +10,14 @@ This file lists each platform known to Fauxhai and the available versions for ea
 ### almalinux
 
 - 8
+- 9
+- 10
 
 ### amazon
 
 - 2
 - 2018.03 (deprecated)
+- 2023
 
 ### arch
 
@@ -27,6 +30,11 @@ This file lists each platform known to Fauxhai and the available versions for ea
 - 7.8.2003
 - 8
 
+### centos-stream
+
+- 8
+- 9
+
 ### clearos
 
 - 7.4
@@ -38,6 +46,7 @@ This file lists each platform known to Fauxhai and the available versions for ea
 - 9.13
 - 10
 - 11
+- 12
 
 ### dragonfly4
 
@@ -80,8 +89,11 @@ This file lists each platform known to Fauxhai and the available versions for ea
 ### oracle
 
 - 6.10
+- 7
 - 7.5 (deprecated)
 - 7.6
+- 8
+- 9
 
 ### raspbian
 
@@ -94,10 +106,12 @@ This file lists each platform known to Fauxhai and the available versions for ea
 - 7.8
 - 7.9
 - 8
+- 9
 
 ### rocky
 
 - 8
+- 9
 
 ### smartos
 
@@ -118,6 +132,7 @@ This file lists each platform known to Fauxhai and the available versions for ea
 - 16.04
 - 18.04
 - 20.04
+- 22.04
 
 ### windows
 
@@ -126,4 +141,5 @@ This file lists each platform known to Fauxhai and the available versions for ea
 - 2012R2
 - 2016
 - 2019
+- 2022
 - 8.1

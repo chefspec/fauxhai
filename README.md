@@ -1,6 +1,6 @@
 # Fauxhai-ng
 
-![CI](https://github.com/chefspec/fauxhai/workflows/CI/badge.svg) [![Gem Version](https://badge.fury.io/rb/fauxhai-ng.svg)](https://badge.fury.io/rb/fauxhai-ng)
+![CI](https://github.com/chef/fauxhai/workflows/CI/badge.svg) [![Gem Version](https://badge.fury.io/rb/fauxhai-ng.svg)](https://badge.fury.io/rb/fauxhai-ng)
 
 Note: fauxhai-ng is an updated version of the original fauxhai gem. The CLI and library namespaces have not changed, but you will want to update to use the new gem.
 
@@ -51,7 +51,7 @@ Fauxhai ships with a command line tool - `fauxhai`. This is **not** the same as 
 
 ## Platform and Versions
 
-For a complete list of platforms and versions available for mocking via Fauxhai see [PLATFORMS.MD](https://github.com/chefspec/fauxhai/blob/master/PLATFORMS.md) in this repository.
+For a complete list of platforms and versions available for mocking via Fauxhai see [PLATFORMS.MD](https://github.com/chef/fauxhai/blob/master/PLATFORMS.md) in this repository.
 
 ## Usage
 
@@ -195,4 +195,4 @@ end
 
 ## Contributing
 
-See [CONTRIBUTING.md](https://github.com/chefspec/fauxhai/blob/master/CONTRIBUTING.md).
+See [CONTRIBUTING.md](https://github.com/chef/fauxhai/blob/master/CONTRIBUTING.md).

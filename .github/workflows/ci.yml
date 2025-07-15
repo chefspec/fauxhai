@@ -4,14 +4,17 @@ on:
   pull_request:
   push:
     branches:
-      - master
+      - main
+
+permissions:
+  contents: read
 
 jobs:
   test:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        ruby: [ '2.4', '2.5', '2.6', '2.7', '3.0']
+        ruby: ['3.1', '3.2', '3.4']
     name: Validate JSON on Ruby ${{ matrix.ruby }}
     steps:
       - uses: actions/checkout@v2

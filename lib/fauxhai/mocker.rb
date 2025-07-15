@@ -4,10 +4,10 @@ require "pathname" unless defined?(Pathname)
 module Fauxhai
   class Mocker
     # The base URL for the GitHub project (raw)
-    RAW_BASE = "https://raw.githubusercontent.com/chefspec/fauxhai/master".freeze
+    RAW_BASE = "https://raw.githubusercontent.com/chef/fauxhai/main".freeze
 
     # A message about where to find a list of platforms
-    PLATFORM_LIST_MESSAGE = "A list of available platforms is available at https://github.com/chefspec/fauxhai/blob/master/PLATFORMS.md".freeze
+    PLATFORM_LIST_MESSAGE = "A list of available platforms is available at https://github.com/chef/fauxhai/blob/main/PLATFORMS.md".freeze
 
     # Create a new Ohai Mock with fauxhai.
     #
@@ -45,15 +45,16 @@ module Fauxhai
         elsif @options[:github_fetching]
           # Try loading from github (in case someone submitted a PR with a new file, but we haven't
           # yet updated the gem version). Cache the response locally so it's faster next time.
-          require "open-uri" unless defined?(OpenURI)
+          require "net/http" unless defined?(Net::HTTP)
           begin
-            response = URI.open("#{RAW_BASE}/lib/fauxhai/platforms/#{platform}/#{version}.json")
-          rescue OpenURI::HTTPError
+            uri = URI("#{RAW_BASE}/lib/fauxhai/platforms/#{platform}/#{version}.json")
+            response = Net::HTTP.get_response(uri)
+          rescue StandardError
             raise Fauxhai::Exception::InvalidPlatform.new("Could not find platform '#{platform}/#{version}' on the local disk and an HTTP error was encountered when fetching from Github. #{PLATFORM_LIST_MESSAGE}")
           end
 
-          if response.status.first.to_i == 200
-            response_body = response.read
+          if response.code.to_i == 200
+            response_body = response.body
             path = Pathname.new(filepath)
             FileUtils.mkdir_p(path.dirname)
 

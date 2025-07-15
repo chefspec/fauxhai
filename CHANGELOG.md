@@ -1,4 +1,67 @@
-# Fauxhai-ng Changelog
+<!-- latest_release 9.4.5 -->
+## [v9.4.5](https://github.com/chef/fauxhai/tree/v9.4.5) (2025-07-14)
+
+#### Merged Pull Requests
+- Fixing habitat test builds by declaring HAB_ORIGIN after habitat install [#73](https://github.com/chef/fauxhai/pull/73) ([nikhil2611](https://github.com/nikhil2611))
+<!-- latest_release -->
+
+<!-- release_rollup since=9.3.26 -->
+### Changes not yet released to rubygems.org
+
+#### Merged Pull Requests
+- Fixing habitat test builds by declaring HAB_ORIGIN after habitat install [#73](https://github.com/chef/fauxhai/pull/73) ([nikhil2611](https://github.com/nikhil2611)) <!-- 9.4.5 -->
+- CHEF-21185 - Ruby 3.4 update in Fauxhai Hab package [#72](https://github.com/chef/fauxhai/pull/72) ([nikhil2611](https://github.com/nikhil2611)) <!-- 9.4.4 -->
+- Add AlmaLinux 10 [#70](https://github.com/chef/fauxhai/pull/70) ([ramereth](https://github.com/ramereth)) <!-- 9.4.3 -->
+- Habitat authentication token [#68](https://github.com/chef/fauxhai/pull/68) ([borisicbs](https://github.com/borisicbs)) <!-- 9.4.2 -->
+- Adding myself to CODEOWNERS [#67](https://github.com/chef/fauxhai/pull/67) ([jaymzh](https://github.com/jaymzh)) <!-- 9.4.1 -->
+- CHEF-19102 - support for ruby 3.4 [#63](https://github.com/chef/fauxhai/pull/63) ([sanjain-progress](https://github.com/sanjain-progress)) <!-- 9.4.0 -->
+<!-- release_rollup -->
+
+<!-- latest_stable_release -->
+## [v9.3.26](https://github.com/chef/fauxhai/tree/v9.3.26) (2025-05-14)
+
+#### Merged Pull Requests
+- [CI] Drop EOL rubies [#33](https://github.com/chef/fauxhai/pull/33) ([dafyddcrosby](https://github.com/dafyddcrosby))
+- Package fauxhai as a hab package [#31](https://github.com/chef/fauxhai/pull/31) ([sanjain-progress](https://github.com/sanjain-progress))
+- Added the  release branch [#40](https://github.com/chef/fauxhai/pull/40) ([nikhil2611](https://github.com/nikhil2611))
+- Updating configuration for a symantec version promote and publish [#60](https://github.com/chef/fauxhai/pull/60) ([nikhil2611](https://github.com/nikhil2611))
+- make pipelines public: habitat/test [#61](https://github.com/chef/fauxhai/pull/61) ([jaymzh](https://github.com/jaymzh))
+- Potential fix for code scanning alert no. 1: Use of `Kernel.open` or `IO.read` or similar sinks with a non-constant value [#64](https://github.com/chef/fauxhai/pull/64) ([ashiqueps](https://github.com/ashiqueps))
+- Updated the codeowners and fixed the security issue with the workflows [#65](https://github.com/chef/fauxhai/pull/65) ([ashiqueps](https://github.com/ashiqueps))
+- Commenting out Habitat package promotion to publish fauxhai gem first [#66](https://github.com/chef/fauxhai/pull/66) ([nikhil2611](https://github.com/nikhil2611))
+<!-- latest_stable_release -->
+
+## [v9.3.16](https://github.com/chef/fauxhai/tree/v9.3.16) (2024-03-27)
+
+#### Merged Pull Requests
+- Add Debian 12 support [#17](https://github.com/chef/fauxhai/pull/17) ([Justin-Fernbaugh](https://github.com/Justin-Fernbaugh))
+- Add .buildkite folder to make pipeline_protection happy [#18](https://github.com/chef/fauxhai/pull/18) ([tpowell-progress](https://github.com/tpowell-progress))
+- Add Ubuntu 22.04 (jammy) support [#16](https://github.com/chef/fauxhai/pull/16) ([dtseiler](https://github.com/dtseiler))
+- Added RedHat 9 [#21](https://github.com/chef/fauxhai/pull/21) ([jjperry](https://github.com/jjperry))
+- Added WIndows 2022 and Updated CONTRIBUTING.md [#24](https://github.com/chef/fauxhai/pull/24) ([jjperry](https://github.com/jjperry))
+- Add code owners for reviews [#28](https://github.com/chef/fauxhai/pull/28) ([tpowell-progress](https://github.com/tpowell-progress))
+- add_amazon_2023 [#26](https://github.com/chef/fauxhai/pull/26) ([jjperry](https://github.com/jjperry))
+- Add Ubuntu 24.04 [#27](https://github.com/chef/fauxhai/pull/27) ([nickpegg](https://github.com/nickpegg))
+
+## [v9.3.8](https://github.com/chef/fauxhai/tree/v9.3.8) (2023-05-05)
+
+#### Merged Pull Requests
+- Add Rocky Linux 9 data [#9](https://github.com/chef/fauxhai/pull/9) ([vkarve-chef](https://github.com/vkarve-chef))
+- Added the SonarQube configuration [#13](https://github.com/chef/fauxhai/pull/13) ([nikhil2611](https://github.com/nikhil2611))
+- Update fetcher to pull from correct repository [#14](https://github.com/chef/fauxhai/pull/14) ([ramereth](https://github.com/ramereth))
+
+## [v9.3.5](https://github.com/chef/fauxhai/tree/v9.3.5) (2023-02-03)
+
+#### Merged Pull Requests
+- Add AlmaLinux 9 data [#8](https://github.com/chef/fauxhai/pull/8) ([vkarve-chef](https://github.com/vkarve-chef))
+- CentOS Stream 8 &amp; 9 data [#10](https://github.com/chef/fauxhai/pull/10) ([ramereth](https://github.com/ramereth))
+- Add Oracle 7 / 8 / 9 [#12](https://github.com/chef/fauxhai/pull/12) ([davidjkling](https://github.com/davidjkling))
+
+## [v9.3.2](https://github.com/chef/fauxhai/tree/v9.3.2) (2022-06-13)
+
+#### Merged Pull Requests
+- Mimaslanka/dummy [#6](https://github.com/chef/fauxhai/pull/6) ([mimaslanka](https://github.com/mimaslanka))
+- Force action [#7](https://github.com/chef/fauxhai/pull/7) ([mimaslanka](https://github.com/mimaslanka))
 
 ## 9.3.0 (2022-01-26)
 
@@ -350,7 +413,7 @@ Note: Going forward we won't be shipping the point releases for each distro. Ins
   - Solaris 5.10
   - Windows 7
 
-For a list of currently support platform releases see https://github.com/chefspec/fauxhai/blob/master/PLATFORMS.md
+For a list of currently support platform releases see https://github.com/chef/fauxhai/blob/master/PLATFORMS.md
 
 ## v6.11.0 (2018-01-30)
 
